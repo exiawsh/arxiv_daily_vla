@@ -1,0 +1,476 @@
+[
+    {
+        "title": "InstructVLA: Vision-Language-Action Instruction Tuning from Understanding to Manipulation",
+        "summary": "To operate effectively in the real world, robots must integrate multimodal\nreasoning with precise action generation. However, existing\nvision-language-action (VLA) models often sacrifice one for the other, narrow\ntheir abilities to task-specific manipulation data, and suffer catastrophic\nforgetting of pre-trained vision-language capabilities. To bridge this gap, we\nintroduce InstructVLA, an end-to-end VLA model that preserves the flexible\nreasoning of large vision-language models (VLMs) while delivering leading\nmanipulation performance. InstructVLA introduces a novel training paradigm,\nVision-Language-Action Instruction Tuning (VLA-IT), which employs multimodal\ntraining with mixture-of-experts adaptation to jointly optimize textual\nreasoning and action generation on both standard VLM corpora and a curated\n650K-sample VLA-IT dataset. On in-domain SimplerEnv tasks, InstructVLA achieves\n30.5% improvement over SpatialVLA. To evaluate generalization, we introduce\nSimplerEnv-Instruct, an 80-task benchmark requiring closed-loop control and\nhigh-level instruction understanding, where it outperforms a fine-tuned OpenVLA\nby 92% and an action expert aided by GPT-4o by 29%. Additionally, InstructVLA\nsurpasses baseline VLMs on multimodal tasks and exhibits inference-time scaling\nby leveraging textual reasoning to boost manipulation performance in both\nsimulated and real-world settings. These results demonstrate InstructVLA's\npotential for bridging intuitive and steerable human-robot interaction with\nefficient policy learning.",
+        "url": "http://arxiv.org/abs/2507.17520v1",
+        "published_date": "2025-07-23T13:57:06+00:00",
+        "updated_date": "2025-07-23T13:57:06+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Shuai Yang",
+            "Hao Li",
+            "Yilun Chen",
+            "Bin Wang",
+            "Yang Tian",
+            "Tai Wang",
+            "Hanqing Wang",
+            "Feng Zhao",
+            "Yiyi Liao",
+            "Jiangmiao Pang"
+        ],
+        "tldr": "InstructVLA introduces a novel Vision-Language-Action Instruction Tuning (VLA-IT) paradigm, achieving state-of-the-art manipulation performance while preserving VLM reasoning capabilities, demonstrating significant improvements on simulated and real-world tasks.",
+        "tldr_zh": "InstructVLA 引入了一种新的视觉-语言-动作指令调整 (VLA-IT) 范式，在保持 VLM 推理能力的同时，实现了最先进的操作性能，并在模拟和真实世界任务中取得了显著的改进。",
+        "relevance_score": 10,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "DeMo++: Motion Decoupling for Autonomous Driving",
+        "summary": "Motion forecasting and planning are tasked with estimating the trajectories\nof traffic agents and the ego vehicle, respectively, to ensure the safety and\nefficiency of autonomous driving systems in dynamically changing environments.\nState-of-the-art methods typically adopt a one-query-one-trajectory paradigm,\nwhere each query corresponds to a unique trajectory for predicting multi-mode\ntrajectories. While this paradigm can produce diverse motion intentions, it\noften falls short in modeling the intricate spatiotemporal evolution of\ntrajectories, which can lead to collisions or suboptimal outcomes. To overcome\nthis limitation, we propose DeMo++, a framework that decouples motion\nestimation into two distinct components: holistic motion intentions to capture\nthe diverse potential directions of movement, and fine spatiotemporal states to\ntrack the agent's dynamic progress within the scene and enable a\nself-refinement capability. Further, we introduce a cross-scene trajectory\ninteraction mechanism to explore the relationships between motions in adjacent\nscenes. This allows DeMo++ to comprehensively model both the diversity of\nmotion intentions and the spatiotemporal evolution of each trajectory. To\neffectively implement this framework, we developed a hybrid model combining\nAttention and Mamba. This architecture leverages the strengths of both\nmechanisms for efficient scene information aggregation and precise trajectory\nstate sequence modeling. Extensive experiments demonstrate that DeMo++ achieves\nstate-of-the-art performance across various benchmarks, including motion\nforecasting (Argoverse 2 and nuScenes), motion planning (nuPlan), and\nend-to-end planning (NAVSIM).",
+        "url": "http://arxiv.org/abs/2507.17342v1",
+        "published_date": "2025-07-23T09:11:25+00:00",
+        "updated_date": "2025-07-23T09:11:25+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Bozhou Zhang",
+            "Nan Song",
+            "Xiatian Zhu",
+            "Li Zhang"
+        ],
+        "tldr": "DeMo++ decouples motion estimation into holistic intentions and fine-grained spatiotemporal states, using a hybrid Attention-Mamba model with cross-scene interaction, achieving SOTA results across multiple autonomous driving benchmarks.",
+        "tldr_zh": "DeMo++将运动估计解耦为整体意图和精细的时空状态，使用混合的Attention-Mamba模型与跨场景交互，在多个自动驾驶基准测试中实现了SOTA结果。",
+        "relevance_score": 10,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "BetterCheck: Towards Safeguarding VLMs for Automotive Perception Systems",
+        "summary": "Large language models (LLMs) are growingly extended to process multimodal\ndata such as text and video simultaneously. Their remarkable performance in\nunderstanding what is shown in images is surpassing specialized neural networks\n(NNs) such as Yolo that is supporting only a well-formed but very limited\nvocabulary, ie., objects that they are able to detect. When being\nnon-restricted, LLMs and in particular state-of-the-art vision language models\n(VLMs) show impressive performance to describe even complex traffic situations.\nThis is making them potentially suitable components for automotive perception\nsystems to support the understanding of complex traffic situations or edge case\nsituation. However, LLMs and VLMs are prone to hallucination, which mean to\neither potentially not seeing traffic agents such as vulnerable road users who\nare present in a situation, or to seeing traffic agents who are not there in\nreality. While the latter is unwanted making an ADAS or autonomous driving\nsystems (ADS) to unnecessarily slow down, the former could lead to disastrous\ndecisions from an ADS. In our work, we are systematically assessing the\nperformance of 3 state-of-the-art VLMs on a diverse subset of traffic\nsituations sampled from the Waymo Open Dataset to support safety guardrails for\ncapturing such hallucinations in VLM-supported perception systems. We observe\nthat both, proprietary and open VLMs exhibit remarkable image understanding\ncapabilities even paying thorough attention to fine details sometimes difficult\nto spot for us humans. However, they are also still prone to making up elements\nin their descriptions to date requiring hallucination detection strategies such\nas BetterCheck that we propose in our work.",
+        "url": "http://arxiv.org/abs/2507.17722v1",
+        "published_date": "2025-07-23T17:32:17+00:00",
+        "updated_date": "2025-07-23T17:32:17+00:00",
+        "categories": [
+            "cs.CV",
+            "I.4.m"
+        ],
+        "authors": [
+            "Malsha Ashani Mahawatta Dona",
+            "Beatriz Cabrero-Daniel",
+            "Yinan Yu",
+            "Christian Berger"
+        ],
+        "tldr": "This paper evaluates the performance of state-of-the-art Vision Language Models (VLMs) on traffic scenarios from the Waymo Open Dataset, highlighting their potential for automotive perception but also their susceptibility to hallucinations, motivating the need for methods like BetterCheck.",
+        "tldr_zh": "本文评估了最先进的视觉语言模型（VLM）在Waymo开放数据集中的交通场景中的性能，强调了它们在汽车感知方面的潜力，但也强调了它们容易产生幻觉，从而激发了对BetterCheck等方法的需求。",
+        "relevance_score": 9,
+        "novelty_claim_score": 6,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Perspective-Invariant 3D Object Detection",
+        "summary": "With the rise of robotics, LiDAR-based 3D object detection has garnered\nsignificant attention in both academia and industry. However, existing datasets\nand methods predominantly focus on vehicle-mounted platforms, leaving other\nautonomous platforms underexplored. To bridge this gap, we introduce Pi3DET,\nthe first benchmark featuring LiDAR data and 3D bounding box annotations\ncollected from multiple platforms: vehicle, quadruped, and drone, thereby\nfacilitating research in 3D object detection for non-vehicle platforms as well\nas cross-platform 3D detection. Based on Pi3DET, we propose a novel\ncross-platform adaptation framework that transfers knowledge from the\nwell-studied vehicle platform to other platforms. This framework achieves\nperspective-invariant 3D detection through robust alignment at both geometric\nand feature levels. Additionally, we establish a benchmark to evaluate the\nresilience and robustness of current 3D detectors in cross-platform scenarios,\nproviding valuable insights for developing adaptive 3D perception systems.\nExtensive experiments validate the effectiveness of our approach on challenging\ncross-platform tasks, demonstrating substantial gains over existing adaptation\nmethods. We hope this work paves the way for generalizable and unified 3D\nperception systems across diverse and complex environments. Our Pi3DET dataset,\ncross-platform benchmark suite, and annotation toolkit have been made publicly\navailable.",
+        "url": "http://arxiv.org/abs/2507.17665v1",
+        "published_date": "2025-07-23T16:29:57+00:00",
+        "updated_date": "2025-07-23T16:29:57+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Ao Liang",
+            "Lingdong Kong",
+            "Dongyue Lu",
+            "Youquan Liu",
+            "Jian Fang",
+            "Huaici Zhao",
+            "Wei Tsang Ooi"
+        ],
+        "tldr": "This paper introduces Pi3DET, a new benchmark dataset for cross-platform 3D object detection using LiDAR data from vehicles, quadrupeds, and drones, along with a cross-platform adaptation framework that achieves perspective-invariant detection.",
+        "tldr_zh": "本文介绍了Pi3DET，一个新的跨平台3D目标检测基准数据集，使用来自车辆、四足机器人和无人机的激光雷达数据，以及一个实现视角不变检测的跨平台自适应框架。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Talk2Event: Grounded Understanding of Dynamic Scenes from Event Cameras",
+        "summary": "Event cameras offer microsecond-level latency and robustness to motion blur,\nmaking them ideal for understanding dynamic environments. Yet, connecting these\nasynchronous streams to human language remains an open challenge. We introduce\nTalk2Event, the first large-scale benchmark for language-driven object\ngrounding in event-based perception. Built from real-world driving data, we\nprovide over 30,000 validated referring expressions, each enriched with four\ngrounding attributes -- appearance, status, relation to viewer, and relation to\nother objects -- bridging spatial, temporal, and relational reasoning. To fully\nexploit these cues, we propose EventRefer, an attribute-aware grounding\nframework that dynamically fuses multi-attribute representations through a\nMixture of Event-Attribute Experts (MoEE). Our method adapts to different\nmodalities and scene dynamics, achieving consistent gains over state-of-the-art\nbaselines in event-only, frame-only, and event-frame fusion settings. We hope\nour dataset and approach will establish a foundation for advancing multimodal,\ntemporally-aware, and language-driven perception in real-world robotics and\nautonomy.",
+        "url": "http://arxiv.org/abs/2507.17664v1",
+        "published_date": "2025-07-23T16:29:52+00:00",
+        "updated_date": "2025-07-23T16:29:52+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Lingdong Kong",
+            "Dongyue Lu",
+            "Ao Liang",
+            "Rong Li",
+            "Yuhao Dong",
+            "Tianshuai Hu",
+            "Lai Xing Ng",
+            "Wei Tsang Ooi",
+            "Benoit R. Cottereau"
+        ],
+        "tldr": "The paper introduces Talk2Event, a large-scale benchmark dataset for language-driven object grounding in event cameras, and proposes EventRefer, an attribute-aware grounding framework, demonstrating improved performance in event-based perception.",
+        "tldr_zh": "该论文介绍了一个名为Talk2Event的大规模基准数据集，用于事件相机中语言驱动的物体定位，并提出了EventRefer，一个属性感知的定位框架，展示了在基于事件的感知方面的性能改进。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Monocular Semantic Scene Completion via Masked Recurrent Networks",
+        "summary": "Monocular Semantic Scene Completion (MSSC) aims to predict the voxel-wise\noccupancy and semantic category from a single-view RGB image. Existing methods\nadopt a single-stage framework that aims to simultaneously achieve visible\nregion segmentation and occluded region hallucination, while also being\naffected by inaccurate depth estimation. Such methods often achieve suboptimal\nperformance, especially in complex scenes. We propose a novel two-stage\nframework that decomposes MSSC into coarse MSSC followed by the Masked\nRecurrent Network. Specifically, we propose the Masked Sparse Gated Recurrent\nUnit (MS-GRU) which concentrates on the occupied regions by the proposed mask\nupdating mechanism, and a sparse GRU design is proposed to reduce the\ncomputation cost. Additionally, we propose the distance attention projection to\nreduce projection errors by assigning different attention scores according to\nthe distance to the observed surface. Experimental results demonstrate that our\nproposed unified framework, MonoMRN, effectively supports both indoor and\noutdoor scenes and achieves state-of-the-art performance on the NYUv2 and\nSemanticKITTI datasets. Furthermore, we conduct robustness analysis under\nvarious disturbances, highlighting the role of the Masked Recurrent Network in\nenhancing the model's resilience to such challenges. The source code is\npublicly available.",
+        "url": "http://arxiv.org/abs/2507.17661v1",
+        "published_date": "2025-07-23T16:29:45+00:00",
+        "updated_date": "2025-07-23T16:29:45+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Xuzhi Wang",
+            "Xinran Wu",
+            "Song Wang",
+            "Lingdong Kong",
+            "Ziping Zhao"
+        ],
+        "tldr": "The paper proposes a novel two-stage framework, MonoMRN, for monocular semantic scene completion using a Masked Recurrent Network (MRN) with a Masked Sparse GRU and distance attention projection, achieving state-of-the-art performance on NYUv2 and SemanticKITTI datasets.",
+        "tldr_zh": "该论文提出了一种新的两阶段框架MonoMRN，用于单目语义场景补全，该框架使用带有掩码稀疏GRU和距离注意力投影的掩码循环网络(MRN)，在NYUv2和SemanticKITTI数据集上实现了最先进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Reusing Attention for One-stage Lane Topology Understanding",
+        "summary": "Understanding lane toplogy relationships accurately is critical for safe\nautonomous driving. However, existing two-stage methods suffer from\ninefficiencies due to error propagations and increased computational overheads.\nTo address these challenges, we propose a one-stage architecture that\nsimultaneously predicts traffic elements, lane centerlines and topology\nrelationship, improving both the accuracy and inference speed of lane topology\nunderstanding for autonomous driving. Our key innovation lies in reusing\nintermediate attention resources within distinct transformer decoders. This\napproach effectively leverages the inherent relational knowledge within the\nelement detection module to enable the modeling of topology relationships among\ntraffic elements and lanes without requiring additional computationally\nexpensive graph networks. Furthermore, we are the first to demonstrate that\nknowledge can be distilled from models that utilize standard definition (SD)\nmaps to those operates without using SD maps, enabling superior performance\neven in the absence of SD maps. Extensive experiments on the OpenLane-V2\ndataset show that our approach outperforms baseline methods in both accuracy\nand efficiency, achieving superior results in lane detection, traffic element\nidentification, and topology reasoning. Our code is available at\nhttps://github.com/Yang-Li-2000/one-stage.git.",
+        "url": "http://arxiv.org/abs/2507.17617v1",
+        "published_date": "2025-07-23T15:48:16+00:00",
+        "updated_date": "2025-07-23T15:48:16+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yang Li",
+            "Zongzheng Zhang",
+            "Xuchong Qiu",
+            "Xinrun Li",
+            "Ziming Liu",
+            "Leichen Wang",
+            "Ruikai Li",
+            "Zhenxin Zhu",
+            "Huan-ang Gao",
+            "Xiaojian Lin",
+            "Zhiyong Cui",
+            "Hang Zhao",
+            "Hao Zhao"
+        ],
+        "tldr": "The paper introduces a one-stage architecture for lane topology understanding in autonomous driving, reusing attention mechanisms and distilling knowledge from SD map-based models to improve accuracy and efficiency, even without SD maps.",
+        "tldr_zh": "该论文介绍了一种用于自动驾驶中车道拓扑理解的单阶段架构，通过重用注意力机制并从基于高清地图的模型中提取知识，从而提高准确性和效率，即使在没有高清地图的情况下也是如此。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "InvRGB+L: Inverse Rendering of Complex Scenes with Unified Color and LiDAR Reflectance Modeling",
+        "summary": "We present InvRGB+L, a novel inverse rendering model that reconstructs large,\nrelightable, and dynamic scenes from a single RGB+LiDAR sequence. Conventional\ninverse graphics methods rely primarily on RGB observations and use LiDAR\nmainly for geometric information, often resulting in suboptimal material\nestimates due to visible light interference. We find that LiDAR's intensity\nvalues-captured with active illumination in a different spectral range-offer\ncomplementary cues for robust material estimation under variable lighting.\nInspired by this, InvRGB+L leverages LiDAR intensity cues to overcome\nchallenges inherent in RGB-centric inverse graphics through two key\ninnovations: (1) a novel physics-based LiDAR shading model and (2) RGB-LiDAR\nmaterial consistency losses. The model produces novel-view RGB and LiDAR\nrenderings of urban and indoor scenes and supports relighting, night\nsimulations, and dynamic object insertions, achieving results that surpass\ncurrent state-of-the-art methods in both scene-level urban inverse rendering\nand LiDAR simulation.",
+        "url": "http://arxiv.org/abs/2507.17613v1",
+        "published_date": "2025-07-23T15:46:09+00:00",
+        "updated_date": "2025-07-23T15:46:09+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Xiaoxue Chen",
+            "Bhargav Chandaka",
+            "Chih-Hao Lin",
+            "Ya-Qin Zhang",
+            "David Forsyth",
+            "Hao Zhao",
+            "Shenlong Wang"
+        ],
+        "tldr": "InvRGB+L is a novel inverse rendering model that leverages both RGB images and LiDAR reflectance to reconstruct relightable and dynamic scenes, achieving state-of-the-art results in urban inverse rendering and LiDAR simulation.",
+        "tldr_zh": "InvRGB+L 是一种新型逆渲染模型，利用 RGB 图像和 LiDAR 反射率来重建可重新照明的动态场景，在城市逆渲染和 LiDAR 模拟方面取得了最先进的结果。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "PRIX: Learning to Plan from Raw Pixels for End-to-End Autonomous Driving",
+        "summary": "While end-to-end autonomous driving models show promising results, their\npractical deployment is often hindered by large model sizes, a reliance on\nexpensive LiDAR sensors and computationally intensive BEV feature\nrepresentations. This limits their scalability, especially for mass-market\nvehicles equipped only with cameras. To address these challenges, we propose\nPRIX (Plan from Raw Pixels). Our novel and efficient end-to-end driving\narchitecture operates using only camera data, without explicit BEV\nrepresentation and forgoing the need for LiDAR. PRIX leverages a visual feature\nextractor coupled with a generative planning head to predict safe trajectories\nfrom raw pixel inputs directly. A core component of our architecture is the\nContext-aware Recalibration Transformer (CaRT), a novel module designed to\neffectively enhance multi-level visual features for more robust planning. We\ndemonstrate through comprehensive experiments that PRIX achieves\nstate-of-the-art performance on the NavSim and nuScenes benchmarks, matching\nthe capabilities of larger, multimodal diffusion planners while being\nsignificantly more efficient in terms of inference speed and model size, making\nit a practical solution for real-world deployment. Our work is open-source and\nthe code will be at https://maxiuw.github.io/prix.",
+        "url": "http://arxiv.org/abs/2507.17596v2",
+        "published_date": "2025-07-23T15:28:23+00:00",
+        "updated_date": "2025-07-24T11:04:42+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG",
+            "cs.RO"
+        ],
+        "authors": [
+            "Maciej K. Wozniak",
+            "Lianhang Liu",
+            "Yixi Cai",
+            "Patric Jensfelt"
+        ],
+        "tldr": "The paper introduces PRIX, a camera-only end-to-end autonomous driving architecture that achieves state-of-the-art performance on benchmarks with improved efficiency and reduced model size by using a novel Context-aware Recalibration Transformer (CaRT).",
+        "tldr_zh": "该论文介绍了PRIX，一个仅使用摄像头的端到端自动驾驶架构，通过使用一种新颖的上下文感知重校准Transformer (CaRT)，在基准测试中实现了最先进的性能，同时提高了效率并减小了模型尺寸。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "From Scan to Action: Leveraging Realistic Scans for Embodied Scene Understanding",
+        "summary": "Real-world 3D scene-level scans offer realism and can enable better\nreal-world generalizability for downstream applications. However, challenges\nsuch as data volume, diverse annotation formats, and tool compatibility limit\ntheir use. This paper demonstrates a methodology to effectively leverage these\nscans and their annotations. We propose a unified annotation integration using\nUSD, with application-specific USD flavors. We identify challenges in utilizing\nholistic real-world scan datasets and present mitigation strategies. The\nefficacy of our approach is demonstrated through two downstream applications:\nLLM-based scene editing, enabling effective LLM understanding and adaptation of\nthe data (80% success), and robotic simulation, achieving an 87% success rate\nin policy learning.",
+        "url": "http://arxiv.org/abs/2507.17585v1",
+        "published_date": "2025-07-23T15:20:31+00:00",
+        "updated_date": "2025-07-23T15:20:31+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Anna-Maria Halacheva",
+            "Jan-Nico Zaech",
+            "Sombit Dey",
+            "Luc Van Gool",
+            "Danda Pani Paudel"
+        ],
+        "tldr": "This paper presents a methodology for leveraging real-world 3D scene scans using USD for annotation integration, demonstrating its effectiveness in LLM-based scene editing and robotic simulation.",
+        "tldr_zh": "本文提出了一种利用USD进行注释集成的真实世界3D场景扫描方法，并展示了其在基于LLM的场景编辑和机器人仿真中的有效性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "SRMambaV2: Biomimetic Attention for Sparse Point Cloud Upsampling in Autonomous Driving",
+        "summary": "Upsampling LiDAR point clouds in autonomous driving scenarios remains a\nsignificant challenge due to the inherent sparsity and complex 3D structures of\nthe data. Recent studies have attempted to address this problem by converting\nthe complex 3D spatial scenes into 2D image super-resolution tasks. However,\ndue to the sparse and blurry feature representation of range images, accurately\nreconstructing detailed and complex spatial topologies remains a major\ndifficulty. To tackle this, we propose a novel sparse point cloud upsampling\nmethod named SRMambaV2, which enhances the upsampling accuracy in long-range\nsparse regions while preserving the overall geometric reconstruction quality.\nSpecifically, inspired by human driver visual perception, we design a\nbiomimetic 2D selective scanning self-attention (2DSSA) mechanism to model the\nfeature distribution in distant sparse areas. Meanwhile, we introduce a\ndual-branch network architecture to enhance the representation of sparse\nfeatures. In addition, we introduce a progressive adaptive loss (PAL) function\nto further refine the reconstruction of fine-grained details during the\nupsampling process. Experimental results demonstrate that SRMambaV2 achieves\nsuperior performance in both qualitative and quantitative evaluations,\nhighlighting its effectiveness and practical value in automotive sparse point\ncloud upsampling tasks.",
+        "url": "http://arxiv.org/abs/2507.17479v1",
+        "published_date": "2025-07-23T13:01:19+00:00",
+        "updated_date": "2025-07-23T13:01:19+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Chuang Chen",
+            "Xiaolin Qin",
+            "Jing Hu",
+            "Wenyi Ge"
+        ],
+        "tldr": "SRMambaV2 addresses LiDAR point cloud upsampling in autonomous driving by using a biomimetic attention mechanism and a dual-branch network, achieving improved accuracy and geometric reconstruction.",
+        "tldr_zh": "SRMambaV2通过使用仿生注意力机制和双分支网络解决了自动驾驶中LiDAR点云上采样的问题，实现了更高的精度和几何重建质量。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "ERMV: Editing 4D Robotic Multi-view images to enhance embodied agents",
+        "summary": "Robot imitation learning relies on 4D multi-view sequential images. However,\nthe high cost of data collection and the scarcity of high-quality data severely\nconstrain the generalization and application of embodied intelligence policies\nlike Vision-Language-Action (VLA) models. Data augmentation is a powerful\nstrategy to overcome data scarcity, but methods for editing 4D multi-view\nsequential images for manipulation tasks are currently lacking. Thus, we\npropose ERMV (Editing Robotic Multi-View 4D data), a novel data augmentation\nframework that efficiently edits an entire multi-view sequence based on\nsingle-frame editing and robot state conditions. This task presents three core\nchallenges: (1) maintaining geometric and appearance consistency across dynamic\nviews and long time horizons; (2) expanding the working window with low\ncomputational costs; and (3) ensuring the semantic integrity of critical\nobjects like the robot arm. ERMV addresses these challenges through a series of\ninnovations. First, to ensure spatio-temporal consistency in motion blur, we\nintroduce a novel Epipolar Motion-Aware Attention (EMA-Attn) mechanism that\nlearns pixel shift caused by movement before applying geometric constraints.\nSecond, to maximize the editing working window, ERMV pioneers a Sparse\nSpatio-Temporal (STT) module, which decouples the temporal and spatial views\nand remodels a single-frame multi-view problem through sparse sampling of the\nviews to reduce computational demands. Third, to alleviate error accumulation,\nwe incorporate a feedback intervention Mechanism, which uses a Multimodal Large\nLanguage Model (MLLM) to check editing inconsistencies and request targeted\nexpert guidance only when necessary. Extensive experiments demonstrate that\nERMV-augmented data significantly boosts the robustness and generalization of\nVLA models in both simulated and real-world environments.",
+        "url": "http://arxiv.org/abs/2507.17462v1",
+        "published_date": "2025-07-23T12:41:11+00:00",
+        "updated_date": "2025-07-23T12:41:11+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Chang Nie",
+            "Guangming Wang",
+            "Zhe Lie",
+            "Hesheng Wang"
+        ],
+        "tldr": "The paper introduces ERMV, a novel data augmentation framework for 4D robotic multi-view images, addressing the challenge of data scarcity in robot imitation learning by editing sequences while maintaining spatio-temporal consistency using Epipolar Motion-Aware Attention, a Sparse Spatio-Temporal module, and MLLM-based feedback.",
+        "tldr_zh": "本文介绍了一种名为ERMV的新型数据增强框架，用于处理4D机器人多视角图像。该框架通过编辑图像序列，同时利用Epipolar Motion-Aware Attention、稀疏时空模块和基于MLLM的反馈来维护时空一致性，从而解决机器人模仿学习中数据稀缺的挑战。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "VLM-Guided Visual Place Recognition for Planet-Scale Geo-Localization",
+        "summary": "Geo-localization from a single image at planet scale (essentially an advanced\nor extreme version of the kidnapped robot problem) is a fundamental and\nchallenging task in applications such as navigation, autonomous driving and\ndisaster response due to the vast diversity of locations, environmental\nconditions, and scene variations. Traditional retrieval-based methods for\ngeo-localization struggle with scalability and perceptual aliasing, while\nclassification-based approaches lack generalization and require extensive\ntraining data. Recent advances in vision-language models (VLMs) offer a\npromising alternative by leveraging contextual understanding and reasoning.\nHowever, while VLMs achieve high accuracy, they are often prone to\nhallucinations and lack interpretability, making them unreliable as standalone\nsolutions. In this work, we propose a novel hybrid geo-localization framework\nthat combines the strengths of VLMs with retrieval-based visual place\nrecognition (VPR) methods. Our approach first leverages a VLM to generate a\nprior, effectively guiding and constraining the retrieval search space. We then\nemploy a retrieval step, followed by a re-ranking mechanism that selects the\nmost geographically plausible matches based on feature similarity and proximity\nto the initially estimated coordinates. We evaluate our approach on multiple\ngeo-localization benchmarks and show that it consistently outperforms prior\nstate-of-the-art methods, particularly at street (up to 4.51%) and city level\n(up to 13.52%). Our results demonstrate that VLM-generated geographic priors in\ncombination with VPR lead to scalable, robust, and accurate geo-localization\nsystems.",
+        "url": "http://arxiv.org/abs/2507.17455v1",
+        "published_date": "2025-07-23T12:23:03+00:00",
+        "updated_date": "2025-07-23T12:23:03+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Sania Waheed",
+            "Na Min An",
+            "Michael Milford",
+            "Sarvapali D. Ramchurn",
+            "Shoaib Ehsan"
+        ],
+        "tldr": "This paper introduces a hybrid geo-localization framework that combines Vision-Language Models (VLMs) with retrieval-based Visual Place Recognition (VPR) to improve accuracy and robustness at planet-scale, outperforming state-of-the-art methods.",
+        "tldr_zh": "本文介绍了一种混合地理定位框架，它结合了视觉语言模型（VLM）与基于检索的视觉地点识别（VPR），以提高行星尺度下的准确性和鲁棒性，并且优于当前最先进的方法。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "PIG-Nav: Key Insights for Pretrained Image Goal Navigation Models",
+        "summary": "Recent studies have explored pretrained (foundation) models for vision-based\nrobotic navigation, aiming to achieve generalizable navigation and positive\ntransfer across diverse environments while enhancing zero-shot performance in\nunseen settings. In this work, we introduce PIG-Nav (Pretrained Image-Goal\nNavigation), a new approach that further investigates pretraining strategies\nfor vision-based navigation models and contributes in two key areas.\nModel-wise, we identify two critical design choices that consistently improve\nthe performance of pretrained navigation models: (1) integrating an\nearly-fusion network structure to combine visual observations and goal images\nvia appropriately pretrained Vision Transformer (ViT) image encoder, and (2)\nintroducing suitable auxiliary tasks to enhance global navigation\nrepresentation learning, thus further improving navigation performance.\nDataset-wise, we propose a novel data preprocessing pipeline for efficiently\nlabeling large-scale game video datasets for navigation model training. We\ndemonstrate that augmenting existing open navigation datasets with diverse\ngameplay videos improves model performance. Our model achieves an average\nimprovement of 22.6% in zero-shot settings and a 37.5% improvement in\nfine-tuning settings over existing visual navigation foundation models in two\ncomplex simulated environments and one real-world environment. These results\nadvance the state-of-the-art in pretrained image-goal navigation models.\nNotably, our model maintains competitive performance while requiring\nsignificantly less fine-tuning data, highlighting its potential for real-world\ndeployment with minimal labeled supervision.",
+        "url": "http://arxiv.org/abs/2507.17220v1",
+        "published_date": "2025-07-23T05:34:20+00:00",
+        "updated_date": "2025-07-23T05:34:20+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Jiansong Wan",
+            "Chengming Zhou",
+            "Jinkua Liu",
+            "Xiangge Huang",
+            "Xiaoyu Chen",
+            "Xiaohan Yi",
+            "Qisen Yang",
+            "Baiting Zhu",
+            "Xin-Qiang Cai",
+            "Lixing Liu",
+            "Rushuai Yang",
+            "Chuheng Zhang",
+            "Sherif Abdelfattah",
+            "Hayong Shin",
+            "Pushi Zhang",
+            "Li Zhao",
+            "Jiang Bian"
+        ],
+        "tldr": "The paper introduces PIG-Nav, a new approach to pretrained image-goal navigation models that improves performance through early-fusion network structure, auxiliary tasks for global representation learning, and a novel data preprocessing pipeline for game video datasets, achieving significant improvements in zero-shot and fine-tuning settings.",
+        "tldr_zh": "该论文介绍了PIG-Nav，一种新的预训练图像目标导航模型方法，通过早期融合网络结构、用于全局表示学习的辅助任务以及用于游戏视频数据集的新型数据预处理流程来提高性能，在零样本和微调设置中取得了显著改进。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "SDGOCC: Semantic and Depth-Guided Bird's-Eye View Transformation for 3D Multimodal Occupancy Prediction",
+        "summary": "Multimodal 3D occupancy prediction has garnered significant attention for its\npotential in autonomous driving. However, most existing approaches are\nsingle-modality: camera-based methods lack depth information, while LiDAR-based\nmethods struggle with occlusions. Current lightweight methods primarily rely on\nthe Lift-Splat-Shoot (LSS) pipeline, which suffers from inaccurate depth\nestimation and fails to fully exploit the geometric and semantic information of\n3D LiDAR points. Therefore, we propose a novel multimodal occupancy prediction\nnetwork called SDG-OCC, which incorporates a joint semantic and depth-guided\nview transformation coupled with a fusion-to-occupancy-driven active\ndistillation. The enhanced view transformation constructs accurate depth\ndistributions by integrating pixel semantics and co-point depth through\ndiffusion and bilinear discretization. The fusion-to-occupancy-driven active\ndistillation extracts rich semantic information from multimodal data and\nselectively transfers knowledge to image features based on LiDAR-identified\nregions. Finally, for optimal performance, we introduce SDG-Fusion, which uses\nfusion alone, and SDG-KL, which integrates both fusion and distillation for\nfaster inference. Our method achieves state-of-the-art (SOTA) performance with\nreal-time processing on the Occ3D-nuScenes dataset and shows comparable\nperformance on the more challenging SurroundOcc-nuScenes dataset, demonstrating\nits effectiveness and robustness. The code will be released at\nhttps://github.com/DzpLab/SDGOCC.",
+        "url": "http://arxiv.org/abs/2507.17083v1",
+        "published_date": "2025-07-22T23:49:40+00:00",
+        "updated_date": "2025-07-22T23:49:40+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Zaipeng Duan",
+            "Chenxu Dang",
+            "Xuzhong Hu",
+            "Pei An",
+            "Junfeng Ding",
+            "Jie Zhan",
+            "Yunbiao Xu",
+            "Jie Ma"
+        ],
+        "tldr": "The paper introduces SDG-OCC, a novel multimodal occupancy prediction network that enhances depth estimation and leverages semantic information from both camera and LiDAR data, achieving state-of-the-art performance on occupancy prediction benchmarks with real-time processing capabilities.",
+        "tldr_zh": "该论文介绍了SDG-OCC，一种新颖的多模态占据预测网络，通过结合相机和激光雷达数据，增强了深度估计并利用了语义信息，在占据预测基准上实现了最先进的性能，并具有实时处理能力。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Few-Shot Learning in Video and 3D Object Detection: A Survey",
+        "summary": "Few-shot learning (FSL) enables object detection models to recognize novel\nclasses given only a few annotated examples, thereby reducing expensive manual\ndata labeling. This survey examines recent FSL advances for video and 3D object\ndetection. For video, FSL is especially valuable since annotating objects\nacross frames is more laborious than for static images. By propagating\ninformation across frames, techniques like tube proposals and temporal matching\nnetworks can detect new classes from a couple examples, efficiently leveraging\nspatiotemporal structure. FSL for 3D detection from LiDAR or depth data faces\nchallenges like sparsity and lack of texture. Solutions integrate FSL with\nspecialized point cloud networks and losses tailored for class imbalance.\nFew-shot 3D detection enables practical autonomous driving deployment by\nminimizing costly 3D annotation needs. Core issues in both domains include\nbalancing generalization and overfitting, integrating prototype matching, and\nhandling data modality properties. In summary, FSL shows promise for reducing\nannotation requirements and enabling real-world video, 3D, and other\napplications by efficiently leveraging information across feature, temporal,\nand data modalities. By comprehensively surveying recent advancements, this\npaper illuminates FSL's potential to minimize supervision needs and enable\ndeployment across video, 3D, and other real-world applications.",
+        "url": "http://arxiv.org/abs/2507.17079v1",
+        "published_date": "2025-07-22T23:37:20+00:00",
+        "updated_date": "2025-07-22T23:37:20+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Md Meftahul Ferdaus",
+            "Kendall N. Niles",
+            "Joe Tom",
+            "Mahdi Abdelguerfi",
+            "Elias Ioup"
+        ],
+        "tldr": "This survey paper examines recent advances in few-shot learning (FSL) for video and 3D object detection, highlighting its potential to reduce annotation costs in autonomous driving and other applications by leveraging spatiotemporal structure and specialized point cloud networks.",
+        "tldr_zh": "这篇综述论文探讨了视频和3D目标检测中少样本学习（FSL）的最新进展，强调了其通过利用时空结构和专门的点云网络来降低自动驾驶和其他应用中的标注成本的潜力。",
+        "relevance_score": 9,
+        "novelty_claim_score": 6,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "ShrinkBox: Backdoor Attack on Object Detection to Disrupt Collision Avoidance in Machine Learning-based Advanced Driver Assistance Systems",
+        "summary": "Advanced Driver Assistance Systems (ADAS) significantly enhance road safety\nby detecting potential collisions and alerting drivers. However, their reliance\non expensive sensor technologies such as LiDAR and radar limits accessibility,\nparticularly in low- and middle-income countries. Machine learning-based ADAS\n(ML-ADAS), leveraging deep neural networks (DNNs) with only standard camera\ninput, offers a cost-effective alternative. Critical to ML-ADAS is the\ncollision avoidance feature, which requires the ability to detect objects and\nestimate their distances accurately. This is achieved with specialized DNNs\nlike YOLO, which provides real-time object detection, and a lightweight,\ndetection-wise distance estimation approach that relies on key features\nextracted from the detections like bounding box dimensions and size. However,\nthe robustness of these systems is undermined by security vulnerabilities in\nobject detectors. In this paper, we introduce ShrinkBox, a novel backdoor\nattack targeting object detection in collision avoidance ML-ADAS. Unlike\nexisting attacks that manipulate object class labels or presence, ShrinkBox\nsubtly shrinks ground truth bounding boxes. This attack remains undetected in\ndataset inspections and standard benchmarks while severely disrupting\ndownstream distance estimation. We demonstrate that ShrinkBox can be realized\nin the YOLOv9m object detector at an Attack Success Rate (ASR) of 96%, with\nonly a 4% poisoning ratio in the training instances of the KITTI dataset.\nFurthermore, given the low error targets introduced in our relaxed poisoning\nstrategy, we find that ShrinkBox increases the Mean Absolute Error (MAE) in\ndownstream distance estimation by more than 3x on poisoned samples, potentially\nresulting in delays or prevention of collision warnings altogether.",
+        "url": "http://arxiv.org/abs/2507.18656v1",
+        "published_date": "2025-07-22T20:04:29+00:00",
+        "updated_date": "2025-07-22T20:04:29+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Muhammad Zaeem Shahzad",
+            "Muhammad Abdullah Hanif",
+            "Bassem Ouni",
+            "Muhammad Shafique"
+        ],
+        "tldr": "The paper introduces ShrinkBox, a novel backdoor attack on object detectors in ML-ADAS that subtly shrinks bounding boxes, disrupting distance estimation and collision avoidance systems.",
+        "tldr_zh": "该论文介绍了一种名为ShrinkBox的新型后门攻击，该攻击针对ML-ADAS中的目标检测器，通过微妙地缩小边界框来破坏距离估计和防撞系统。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "CA-Cut: Crop-Aligned Cutout for Data Augmentation to Learn More Robust Under-Canopy Navigation",
+        "summary": "State-of-the-art visual under-canopy navigation methods are designed with\ndeep learning-based perception models to distinguish traversable space from\ncrop rows. While these models have demonstrated successful performance, they\nrequire large amounts of training data to ensure reliability in real-world\nfield deployment. However, data collection is costly, demanding significant\nhuman resources for in-field sampling and annotation. To address this\nchallenge, various data augmentation techniques are commonly employed during\nmodel training, such as color jittering, Gaussian blur, and horizontal flip, to\ndiversify training data and enhance model robustness. In this paper, we\nhypothesize that utilizing only these augmentation techniques may lead to\nsuboptimal performance, particularly in complex under-canopy environments with\nfrequent occlusions, debris, and non-uniform spacing of crops. Instead, we\npropose a novel augmentation method, so-called Crop-Aligned Cutout (CA-Cut)\nwhich masks random regions out in input images that are spatially distributed\naround crop rows on the sides to encourage trained models to capture high-level\ncontextual features even when fine-grained information is obstructed. Our\nextensive experiments with a public cornfield dataset demonstrate that\nmasking-based augmentations are effective for simulating occlusions and\nsignificantly improving robustness in semantic keypoint predictions for visual\nnavigation. In particular, we show that biasing the mask distribution toward\ncrop rows in CA-Cut is critical for enhancing both prediction accuracy and\ngeneralizability across diverse environments achieving up to a 36.9% reduction\nin prediction error. In addition, we conduct ablation studies to determine the\nnumber of masks, the size of each mask, and the spatial distribution of masks\nto maximize overall performance.",
+        "url": "http://arxiv.org/abs/2507.17727v2",
+        "published_date": "2025-07-23T17:41:55+00:00",
+        "updated_date": "2025-07-24T13:55:49+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Robel Mamo",
+            "Taeyeong Choi"
+        ],
+        "tldr": "The paper introduces Crop-Aligned Cutout (CA-Cut), a novel data augmentation technique for under-canopy navigation that masks regions spatially distributed around crop rows to improve robustness in semantic keypoint predictions. Experiments show CA-Cut reduces prediction error significantly.",
+        "tldr_zh": "本文介绍了一种名为Crop-Aligned Cutout (CA-Cut) 的新型数据增强技术，用于作物下导航，通过遮盖作物行周围的区域，提高语义关键点预测的鲁棒性。实验表明 CA-Cut 显著降低了预测误差。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]

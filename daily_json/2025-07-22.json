@@ -1,0 +1,229 @@
+[
+    {
+        "title": "Being-H0: Vision-Language-Action Pretraining from Large-Scale Human Videos",
+        "summary": "We introduce Being-H0, a dexterous Vision-Language-Action model (VLA) trained\non large-scale human videos. Existing VLAs struggle with complex manipulation\ntasks requiring high dexterity and generalize poorly to novel scenarios and\ntasks, primarily due to their reliance on synthetic data with significant\nsim-to-real gaps or teleoperated demonstrations lacking scale and diversity. To\naddress this data bottleneck, we propose leveraging human hands as a foundation\nmanipulator, capitalizing on the rich dexterity and scalability present in web\ndata. Our approach centers on physical instruction tuning, a novel training\nparadigm that combines large-scale VLA pretraining from human videos, physical\nspace alignment for 3D reasoning, and post-training adaptation for robotic\ntasks. Additionally, we introduce a part-level motion tokenization method which\nachieves millimeter-level reconstruction accuracy to model precise hand\ntrajectories for action learning. To support our proposed paradigm, we further\ndevelop a comprehensive data curation pipeline that integrates heterogeneous\nsources -- including motion capture, VR, and RGB-only videos -- into a\nlarge-scale dataset with millions of motion-based instructional instances. We\nempirically show the excellence of Being-H0 in hand motion generation and\ninstruction following, and it also scales well with model and data sizes.\nImportantly, we observe the expected gains of Being-H0 in real-world robotic\nmanipulation as physical instruction tuning is applied. More details are\navailable at https://beingbeyond.github.io/Being-H0.",
+        "url": "http://arxiv.org/abs/2507.15597v1",
+        "published_date": "2025-07-21T13:19:09+00:00",
+        "updated_date": "2025-07-21T13:19:09+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG",
+            "cs.RO"
+        ],
+        "authors": [
+            "Hao Luo",
+            "Yicheng Feng",
+            "Wanpeng Zhang",
+            "Sipeng Zheng",
+            "Ye Wang",
+            "Haoqi Yuan",
+            "Jiazheng Liu",
+            "Chaoyi Xu",
+            "Qin Jin",
+            "Zongqing Lu"
+        ],
+        "tldr": "Being-H0 is a Vision-Language-Action model pretrained on a large-scale dataset of human videos, using physical instruction tuning and part-level motion tokenization to improve dexterity and generalization in robotic manipulation tasks. The model shows promising results in both hand motion generation and real-world robotic tasks.",
+        "tldr_zh": "Being-H0是一个视觉-语言-动作模型，通过在大型人类视频数据集上进行预训练，并采用物理指令微调和零件级运动标记化来提高机器人操作任务中的灵巧性和泛化能力。该模型在手部运动生成和现实世界机器人任务中都显示出有希望的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "GR-3 Technical Report",
+        "summary": "We report our recent progress towards building generalist robot policies, the\ndevelopment of GR-3. GR-3 is a large-scale vision-language-action (VLA) model.\nIt showcases exceptional capabilities in generalizing to novel objects,\nenvironments, and instructions involving abstract concepts. Furthermore, it can\nbe efficiently fine-tuned with minimal human trajectory data, enabling rapid\nand cost-effective adaptation to new settings. GR-3 also excels in handling\nlong-horizon and dexterous tasks, including those requiring bi-manual\nmanipulation and mobile movement, showcasing robust and reliable performance.\nThese capabilities are achieved through a multi-faceted training recipe that\nincludes co-training with web-scale vision-language data, efficient fine-tuning\nfrom human trajectory data collected via VR devices, and effective imitation\nlearning with robot trajectory data. In addition, we introduce ByteMini, a\nversatile bi-manual mobile robot designed with exceptional flexibility and\nreliability, capable of accomplishing a wide range of tasks when integrated\nwith GR-3. Through extensive real-world experiments, we show GR-3 surpasses the\nstate-of-the-art baseline method, $\\pi_0$, on a wide variety of challenging\ntasks. We hope GR-3 can serve as a step towards building generalist robots\ncapable of assisting humans in daily life.",
+        "url": "http://arxiv.org/abs/2507.15493v2",
+        "published_date": "2025-07-21T10:54:13+00:00",
+        "updated_date": "2025-07-22T15:04:37+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Chilam Cheang",
+            "Sijin Chen",
+            "Zhongren Cui",
+            "Yingdong Hu",
+            "Liqun Huang",
+            "Tao Kong",
+            "Hang Li",
+            "Yifeng Li",
+            "Yuxiao Liu",
+            "Xiao Ma",
+            "Hao Niu",
+            "Wenxuan Ou",
+            "Wanli Peng",
+            "Zeyu Ren",
+            "Haixin Shi",
+            "Jiawen Tian",
+            "Hongtao Wu",
+            "Xin Xiao",
+            "Yuyang Xiao",
+            "Jiafeng Xu",
+            "Yichu Yang"
+        ],
+        "tldr": "The paper introduces GR-3, a vision-language-action model for generalist robot policies, demonstrating strong generalization, efficient fine-tuning, and proficiency in long-horizon tasks with a new bi-manual mobile robot, ByteMini.",
+        "tldr_zh": "该论文介绍了GR-3，一种用于通用机器人策略的视觉-语言-动作模型，展示了强大的泛化能力、高效的微调能力以及在长时程任务中的熟练度，并配备了新型双手动移动机器人ByteMini。",
+        "relevance_score": 10,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "BenchDepth: Are We on the Right Way to Evaluate Depth Foundation Models?",
+        "summary": "Depth estimation is a fundamental task in computer vision with diverse\napplications. Recent advancements in deep learning have led to powerful depth\nfoundation models (DFMs), yet their evaluation remains challenging due to\ninconsistencies in existing protocols. Traditional benchmarks rely on\nalignment-based metrics that introduce biases, favor certain depth\nrepresentations, and complicate fair comparisons. In this work, we propose\nBenchDepth, a new benchmark that evaluates DFMs through five carefully selected\ndownstream proxy tasks: depth completion, stereo matching, monocular\nfeed-forward 3D scene reconstruction, SLAM, and vision-language spatial\nunderstanding. Unlike conventional evaluation protocols, our approach assesses\nDFMs based on their practical utility in real-world applications, bypassing\nproblematic alignment procedures. We benchmark eight state-of-the-art DFMs and\nprovide an in-depth analysis of key findings and observations. We hope our work\nsparks further discussion in the community on best practices for depth model\nevaluation and paves the way for future research and advancements in depth\nestimation.",
+        "url": "http://arxiv.org/abs/2507.15321v1",
+        "published_date": "2025-07-21T07:23:14+00:00",
+        "updated_date": "2025-07-21T07:23:14+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zhenyu Li",
+            "Haotong Lin",
+            "Jiashi Feng",
+            "Peter Wonka",
+            "Bingyi Kang"
+        ],
+        "tldr": "The paper introduces BenchDepth, a new benchmark for evaluating depth foundation models based on downstream proxy tasks, addressing limitations in traditional alignment-based evaluation methods.",
+        "tldr_zh": "该论文介绍了BenchDepth，一种新的深度基础模型评估基准，它基于下游代理任务，解决了传统基于对齐评估方法的局限性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Look, Focus, Act: Efficient and Robust Robot Learning via Human Gaze and Foveated Vision Transformers",
+        "summary": "Human vision is a highly active process driven by gaze, which directs\nattention and fixation to task-relevant regions and dramatically reduces visual\nprocessing. In contrast, robot learning systems typically rely on passive,\nuniform processing of raw camera images. In this work, we explore how\nincorporating human-like active gaze into robotic policies can enhance both\nefficiency and performance. We build on recent advances in foveated image\nprocessing and apply them to an Active Vision robot system that emulates both\nhuman head movement and eye tracking. Extending prior work on the AV-ALOHA\nrobot simulation platform, we introduce a framework for simultaneously\ncollecting eye-tracking data and robot demonstrations from a human operator as\nwell as a simulation benchmark and dataset for training robot policies that\nincorporate human gaze. Given the widespread use of Vision Transformers (ViTs)\nin robot learning, we integrate gaze information into ViTs using a foveated\npatch tokenization scheme inspired by recent work in image segmentation.\nCompared to uniform patch tokenization, this significantly reduces the number\nof tokens-and thus computation-without sacrificing visual fidelity near regions\nof interest. We also explore two approaches to gaze imitation and prediction\nfrom human data. The first is a two-stage model that predicts gaze to guide\nfoveation and action; the second integrates gaze into the action space,\nallowing the policy to jointly predict gaze and actions end-to-end. Our results\nshow that our method for foveated robot vision not only drastically reduces\ncomputational overhead, but also improves performance for high precision tasks\nand robustness to unseen distractors. Together, these findings suggest that\nhuman-inspired visual processing offers a useful inductive bias for robotic\nvision systems. https://ian-chuang.github.io/gaze-av-aloha/",
+        "url": "http://arxiv.org/abs/2507.15833v1",
+        "published_date": "2025-07-21T17:44:10+00:00",
+        "updated_date": "2025-07-21T17:44:10+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Ian Chuang",
+            "Andrew Lee",
+            "Dechen Gao",
+            "Jinyu Zou",
+            "Iman Soltani"
+        ],
+        "tldr": "This paper introduces a novel approach to robot learning by incorporating human-like active gaze and foveated vision transformers, demonstrating improved efficiency, performance, and robustness in robotic tasks.",
+        "tldr_zh": "本文介绍了一种新的机器人学习方法，该方法结合了类人主动注视和中央凹视觉Transformer，展示了机器人任务中更高的效率、性能和鲁棒性。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Dense-depth map guided deep Lidar-Visual Odometry with Sparse Point Clouds and Images",
+        "summary": "Odometry is a critical task for autonomous systems for self-localization and\nnavigation. We propose a novel LiDAR-Visual odometry framework that integrates\nLiDAR point clouds and images for accurate and robust pose estimation. Our\nmethod utilizes a dense-depth map estimated from point clouds and images\nthrough depth completion, and incorporates a multi-scale feature extraction\nnetwork with attention mechanisms, enabling adaptive depth-aware\nrepresentations. Furthermore, we leverage dense depth information to refine\nflow estimation and mitigate errors in occlusion-prone regions. Our\nhierarchical pose refinement module optimizes motion estimation progressively,\nensuring robust predictions against dynamic environments and scale ambiguities.\nComprehensive experiments on the KITTI odometry benchmark demonstrate that our\napproach achieves similar or superior accuracy and robustness compared to\nstate-of-the-art visual and LiDAR odometry methods.",
+        "url": "http://arxiv.org/abs/2507.15496v1",
+        "published_date": "2025-07-21T10:58:10+00:00",
+        "updated_date": "2025-07-21T10:58:10+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG",
+            "cs.RO"
+        ],
+        "authors": [
+            "JunYing Huang",
+            "Ao Xu",
+            "DongSun Yong",
+            "KeRen Li",
+            "YuanFeng Wang",
+            "Qi Qin"
+        ],
+        "tldr": "This paper presents a novel LiDAR-Visual odometry framework using dense depth maps and attention mechanisms for improved pose estimation, demonstrating competitive results on the KITTI dataset.",
+        "tldr_zh": "本文提出了一种新的激光雷达-视觉里程计框架，该框架使用密集深度图和注意力机制来提高姿态估计的准确性，并在 KITTI 数据集上展示了具有竞争力的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "ObjectGS: Object-aware Scene Reconstruction and Scene Understanding via Gaussian Splatting",
+        "summary": "3D Gaussian Splatting is renowned for its high-fidelity reconstructions and\nreal-time novel view synthesis, yet its lack of semantic understanding limits\nobject-level perception. In this work, we propose ObjectGS, an object-aware\nframework that unifies 3D scene reconstruction with semantic understanding.\nInstead of treating the scene as a unified whole, ObjectGS models individual\nobjects as local anchors that generate neural Gaussians and share object IDs,\nenabling precise object-level reconstruction. During training, we dynamically\ngrow or prune these anchors and optimize their features, while a one-hot ID\nencoding with a classification loss enforces clear semantic constraints. We\nshow through extensive experiments that ObjectGS not only outperforms\nstate-of-the-art methods on open-vocabulary and panoptic segmentation tasks,\nbut also integrates seamlessly with applications like mesh extraction and scene\nediting. Project page: https://ruijiezhu94.github.io/ObjectGS_page",
+        "url": "http://arxiv.org/abs/2507.15454v1",
+        "published_date": "2025-07-21T10:06:23+00:00",
+        "updated_date": "2025-07-21T10:06:23+00:00",
+        "categories": [
+            "cs.GR",
+            "cs.AI",
+            "cs.CV",
+            "cs.HC"
+        ],
+        "authors": [
+            "Ruijie Zhu",
+            "Mulin Yu",
+            "Linning Xu",
+            "Lihan Jiang",
+            "Yixuan Li",
+            "Tianzhu Zhang",
+            "Jiangmiao Pang",
+            "Bo Dai"
+        ],
+        "tldr": "ObjectGS introduces an object-aware 3D scene reconstruction framework using Gaussian Splatting, enabling object-level perception and outperforming state-of-the-art methods in segmentation and scene editing.",
+        "tldr_zh": "ObjectGS 提出了一种使用高斯溅射的对象感知 3D 场景重建框架，实现了对象级别的感知，并在分割和场景编辑方面优于最先进的方法。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Low-Latency Event-Based Velocimetry for Quadrotor Control in a Narrow Pipe",
+        "summary": "Autonomous quadrotor flight in confined spaces such as pipes and tunnels\npresents significant challenges due to unsteady, self-induced aerodynamic\ndisturbances. Very recent advances have enabled flight in such conditions, but\nthey either rely on constant motion through the pipe to mitigate airflow\nrecirculation effects or suffer from limited stability during hovering. In this\nwork, we present the first closed-loop control system for quadrotors for\nhovering in narrow pipes that leverages real-time flow field measurements. We\ndevelop a low-latency, event-based smoke velocimetry method that estimates\nlocal airflow at high temporal resolution. This flow information is used by a\ndisturbance estimator based on a recurrent convolutional neural network, which\ninfers force and torque disturbances in real time. The estimated disturbances\nare integrated into a learning-based controller trained via reinforcement\nlearning. The flow-feedback control proves particularly effective during\nlateral translation maneuvers in the pipe cross-section. There, the real-time\ndisturbance information enables the controller to effectively counteract\ntransient aerodynamic effects, thereby preventing collisions with the pipe\nwall. To the best of our knowledge, this work represents the first\ndemonstration of an aerial robot with closed-loop control informed by real-time\nflow field measurements. This opens new directions for research on flight in\naerodynamically complex environments. In addition, our work also sheds light on\nthe characteristic flow structures that emerge during flight in narrow,\ncircular pipes, providing new insights at the intersection of robotics and\nfluid dynamics.",
+        "url": "http://arxiv.org/abs/2507.15444v1",
+        "published_date": "2025-07-21T09:53:42+00:00",
+        "updated_date": "2025-07-21T09:53:42+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Leonard Bauersfeld",
+            "Davide Scaramuzza"
+        ],
+        "tldr": "This paper presents a novel closed-loop control system for quadrotor hovering in narrow pipes using real-time flow field measurements from an event-based velocimetry method, enhancing stability and collision avoidance.",
+        "tldr_zh": "本文提出了一种新颖的闭环控制系统，用于四旋翼飞行器在狭窄管道中悬停，该系统利用基于事件的测速方法获取的实时流场测量数据，从而提高稳定性和避免碰撞。",
+        "relevance_score": 7,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "EgoPrune: Efficient Token Pruning for Egomotion Video Reasoning in Embodied Agent",
+        "summary": "Egomotion videos are first-person recordings where the view changes\ncontinuously due to the agent's movement. As they serve as the primary visual\ninput for embodied AI agents, making egomotion video reasoning more efficient\nis therefore essential for real-world deployment. Recent advances in\nvision-language models have enabled strong multimodal reasoning capabilities,\nbut their computational cost remains prohibitive for long, redundant video\ninputs. Existing token pruning methods, typically designed for third-person\nvideos, fail to leverage the spatiotemporal continuity and motion constraints\ninherent in egomotion settings. To address this, we propose EgoPrune, a\ntraining-free token pruning method tailored for egomotion video reasoning.\nEgoPrune comprises three components: a keyframe selector adapted from EmbodiedR\nfor temporally efficient sampling; Perspective-Aware Redundancy Filtering\n(PARF), which aligns visual tokens using perspective transformations and\nremoves redundant tokens; and a Maximal Marginal Relevance (MMR)-based token\nselector that jointly considers visual-text relevance and intra-frame\ndiversity. Experiments on two egomotion video benchmarks show that EgoPrune\nconsistently outperforms prior training-free methods across various pruning\nratios while significantly reducing FLOPs, memory usage, and latency. Moreover,\nwe deploy EgoPrune on an embodied agent equipped with a Jetson Orin NX 16GB\nedge device, demonstrating its real-world efficiency and suitability for\non-device egomotion video reasoning.",
+        "url": "http://arxiv.org/abs/2507.15428v1",
+        "published_date": "2025-07-21T09:27:45+00:00",
+        "updated_date": "2025-07-21T09:27:45+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Jiaao Li",
+            "Kaiyuan Li",
+            "Chen Gao",
+            "Yong Li",
+            "Xinlei Chen"
+        ],
+        "tldr": "The paper introduces EgoPrune, a training-free token pruning method for efficient egomotion video reasoning, designed to reduce computational costs for embodied agents by leveraging spatiotemporal continuity and motion constraints. It demonstrates improved performance and efficiency on egomotion video benchmarks and on-device deployment.",
+        "tldr_zh": "该论文介绍了EgoPrune，一种无需训练的令牌修剪方法，旨在提高自运动视频推理的效率，并通过利用时空连续性和运动约束来降低具身代理的计算成本。它展示了在自运动视频基准测试和设备部署中改进的性能和效率。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    }
+]
