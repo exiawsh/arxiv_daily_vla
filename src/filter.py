@@ -117,7 +117,7 @@ Paper Title: %s
 Paper Abstract: %s
 
 # My Research Interests
-Personalized VLM, Distributed VLM, VLM, Federated Learning, Vision Language Model
+Autonomous Driving, VLA, 3D Understanding, Robotics
 
 # Output Requirements
 Output should always be in JSON format, strictly compliant with RFC8259.
