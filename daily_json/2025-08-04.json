@@ -1,0 +1,183 @@
+[
+    {
+        "title": "DiffSemanticFusion: Semantic Raster BEV Fusion for Autonomous Driving via Online HD Map Diffusion",
+        "summary": "Autonomous driving requires accurate scene understanding, including road\ngeometry, traffic agents, and their semantic relationships. In online HD map\ngeneration scenarios, raster-based representations are well-suited to vision\nmodels but lack geometric precision, while graph-based representations retain\nstructural detail but become unstable without precise maps. To harness the\ncomplementary strengths of both, we propose DiffSemanticFusion -- a fusion\nframework for multimodal trajectory prediction and planning. Our approach\nreasons over a semantic raster-fused BEV space, enhanced by a map diffusion\nmodule that improves both the stability and expressiveness of online HD map\nrepresentations. We validate our framework on two downstream tasks: trajectory\nprediction and planning-oriented end-to-end autonomous driving. Experiments on\nreal-world autonomous driving benchmarks, nuScenes and NAVSIM, demonstrate\nimproved performance over several state-of-the-art methods. For the prediction\ntask on nuScenes, we integrate DiffSemanticFusion with the online HD map\ninformed QCNet, achieving a 5.1\\% performance improvement. For end-to-end\nautonomous driving in NAVSIM, DiffSemanticFusion achieves state-of-the-art\nresults, with a 15\\% performance gain in NavHard scenarios. In addition,\nextensive ablation and sensitivity studies show that our map diffusion module\ncan be seamlessly integrated into other vector-based approaches to enhance\nperformance. All artifacts are available at\nhttps://github.com/SunZhigang7/DiffSemanticFusion.",
+        "url": "http://arxiv.org/abs/2508.01778v1",
+        "published_date": "2025-08-03T14:32:05+00:00",
+        "updated_date": "2025-08-03T14:32:05+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Zhigang Sun",
+            "Yiru Wang",
+            "Anqing Jiang",
+            "Shuo Wang",
+            "Yu Gao",
+            "Yuwen Heng",
+            "Shouyi Zhang",
+            "An He",
+            "Hao Jiang",
+            "Jinhao Chai",
+            "Zichong Gu",
+            "Wang Jijun",
+            "Shichen Tang",
+            "Lavdim Halilaj",
+            "Juergen Luettin",
+            "Hao Sun"
+        ],
+        "tldr": "The paper introduces DiffSemanticFusion, a framework that fuses raster and graph-based representations for online HD map generation in autonomous driving, using a map diffusion module to enhance map stability and expressiveness, demonstrating improved performance in trajectory prediction and end-to-end autonomous driving.",
+        "tldr_zh": "该论文介绍了DiffSemanticFusion，一个融合了栅格和图表示的框架，用于自动驾驶中的在线高清地图生成。它使用地图扩散模块来增强地图的稳定性和表达能力，并在轨迹预测和端到端自动驾驶方面表现出改进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "AG$^2$aussian: Anchor-Graph Structured Gaussian Splatting for Instance-Level 3D Scene Understanding and Editing",
+        "summary": "3D Gaussian Splatting (3DGS) has witnessed exponential adoption across\ndiverse applications, driving a critical need for semantic-aware 3D Gaussian\nrepresentations to enable scene understanding and editing tasks. Existing\napproaches typically attach semantic features to a collection of free Gaussians\nand distill the features via differentiable rendering, leading to noisy\nsegmentation and a messy selection of Gaussians. In this paper, we introduce\nAG$^2$aussian, a novel framework that leverages an anchor-graph structure to\norganize semantic features and regulate Gaussian primitives. Our anchor-graph\nstructure not only promotes compact and instance-aware Gaussian distributions,\nbut also facilitates graph-based propagation, achieving a clean and accurate\ninstance-level Gaussian selection. Extensive validation across four\napplications, i.e. interactive click-based query, open-vocabulary text-driven\nquery, object removal editing, and physics simulation, demonstrates the\nadvantages of our approach and its benefits to various applications. The\nexperiments and ablation studies further evaluate the effectiveness of the key\ndesigns of our approach.",
+        "url": "http://arxiv.org/abs/2508.01740v1",
+        "published_date": "2025-08-03T12:47:30+00:00",
+        "updated_date": "2025-08-03T12:47:30+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zhaonan Wang",
+            "Manyi Li",
+            "Changhe Tu"
+        ],
+        "tldr": "The paper introduces AG$^2$aussian, a novel framework that uses an anchor-graph structure to organize semantic features and regulate Gaussian primitives in 3D Gaussian Splatting, enabling instance-level 3D scene understanding and editing.",
+        "tldr_zh": "该论文介绍了一种名为AG$^2$aussian的新框架，它使用锚图结构来组织语义特征并规范3D高斯溅射中的高斯基元，从而实现实例级别的3D场景理解和编辑。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "LT-Gaussian: Long-Term Map Update Using 3D Gaussian Splatting for Autonomous Driving",
+        "summary": "Maps play an important role in autonomous driving systems. The recently\nproposed 3D Gaussian Splatting (3D-GS) produces rendering-quality explicit\nscene reconstruction results, demonstrating the potential for map construction\nin autonomous driving scenarios. However, because of the time and computational\ncosts involved in generating Gaussian scenes, how to update the map becomes a\nsignificant challenge. In this paper, we propose LT-Gaussian, a map update\nmethod for 3D-GS-based maps. LT-Gaussian consists of three main components:\nMultimodal Gaussian Splatting, Structural Change Detection Module, and\nGaussian-Map Update Module. Firstly, the Gaussian map of the old scene is\ngenerated using our proposed Multimodal Gaussian Splatting. Subsequently,\nduring the map update process, we compare the outdated Gaussian map with the\ncurrent LiDAR data stream to identify structural changes. Finally, we perform\ntargeted updates to the Gaussian-map to generate an up-to-date map. We\nestablish a benchmark for map updating on the nuScenes dataset to\nquantitatively evaluate our method. The experimental results show that\nLT-Gaussian can effectively and efficiently update the Gaussian-map, handling\ncommon environmental changes in autonomous driving scenarios. Furthermore, by\ntaking full advantage of information from both new and old scenes, LT-Gaussian\nis able to produce higher quality reconstruction results compared to map update\nstrategies that reconstruct maps from scratch. Our open-source code is\navailable at https://github.com/ChengLuqi/LT-gaussian.",
+        "url": "http://arxiv.org/abs/2508.01704v1",
+        "published_date": "2025-08-03T10:15:13+00:00",
+        "updated_date": "2025-08-03T10:15:13+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Luqi Cheng",
+            "Zhangshuo Qi",
+            "Zijie Zhou",
+            "Chao Lu",
+            "Guangming Xiong"
+        ],
+        "tldr": "The paper introduces LT-Gaussian, a method for updating 3D Gaussian Splatting maps for autonomous driving by detecting structural changes and performing targeted updates, achieving efficient and high-quality map reconstruction compared to rebuilding from scratch.",
+        "tldr_zh": "该论文介绍了LT-Gaussian，一种用于更新自动驾驶三维高斯溅射地图的方法，通过检测结构变化并进行有针对性的更新，与从头重建相比，实现了高效和高质量的地图重建。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "DMTrack: Spatio-Temporal Multimodal Tracking via Dual-Adapter",
+        "summary": "In this paper, we explore adapter tuning and introduce a novel dual-adapter\narchitecture for spatio-temporal multimodal tracking, dubbed DMTrack. The key\nof our DMTrack lies in two simple yet effective modules, including a\nspatio-temporal modality adapter (STMA) and a progressive modality\ncomplementary adapter (PMCA) module. The former, applied to each modality\nalone, aims to adjust spatio-temporal features extracted from a frozen backbone\nby self-prompting, which to some extent can bridge the gap between different\nmodalities and thus allows better cross-modality fusion. The latter seeks to\nfacilitate cross-modality prompting progressively with two specially designed\npixel-wise shallow and deep adapters. The shallow adapter employs shared\nparameters between the two modalities, aiming to bridge the information flow\nbetween the two modality branches, thereby laying the foundation for following\nmodality fusion, while the deep adapter modulates the preliminarily fused\ninformation flow with pixel-wise inner-modal attention and further generates\nmodality-aware prompts through pixel-wise inter-modal attention. With such\ndesigns, DMTrack achieves promising spatio-temporal multimodal tracking\nperformance with merely \\textbf{0.93M} trainable parameters. Extensive\nexperiments on five benchmarks show that DMTrack achieves state-of-the-art\nresults. Code will be available.",
+        "url": "http://arxiv.org/abs/2508.01592v1",
+        "published_date": "2025-08-03T05:13:27+00:00",
+        "updated_date": "2025-08-03T05:13:27+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Weihong Li",
+            "Shaohua Dong",
+            "Haonan Lu",
+            "Yanhao Zhang",
+            "Heng Fan",
+            "Libo Zhang"
+        ],
+        "tldr": "DMTrack introduces a dual-adapter architecture (STMA and PMCA) for spatio-temporal multimodal tracking, achieving SOTA results on five benchmarks with only 0.93M trainable parameters.",
+        "tldr_zh": "DMTrack 提出了一种用于时空多模态跟踪的双适配器架构（STMA 和 PMCA），仅使用 0.93M 可训练参数，在五个基准测试中实现了 SOTA 结果。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Adaptive LiDAR Scanning: Harnessing Temporal Cues for Efficient 3D Object Detection via Multi-Modal Fusion",
+        "summary": "Multi-sensor fusion using LiDAR and RGB cameras significantly enhances 3D\nobject detection task. However, conventional LiDAR sensors perform dense,\nstateless scans, ignoring the strong temporal continuity in real-world scenes.\nThis leads to substantial sensing redundancy and excessive power consumption,\nlimiting their practicality on resource-constrained platforms. To address this\ninefficiency, we propose a predictive, history-aware adaptive scanning\nframework that anticipates informative regions of interest (ROI) based on past\nobservations. Our approach introduces a lightweight predictor network that\ndistills historical spatial and temporal contexts into refined query\nembeddings. These embeddings guide a differentiable Mask Generator network,\nwhich leverages Gumbel-Softmax sampling to produce binary masks identifying\ncritical ROIs for the upcoming frame. Our method significantly reduces\nunnecessary data acquisition by concentrating dense LiDAR scanning only within\nthese ROIs and sparsely sampling elsewhere. Experiments on nuScenes and Lyft\nbenchmarks demonstrate that our adaptive scanning strategy reduces LiDAR energy\nconsumption by over 65% while maintaining competitive or even superior 3D\nobject detection performance compared to traditional LiDAR-camera fusion\nmethods with dense LiDAR scanning.",
+        "url": "http://arxiv.org/abs/2508.01562v1",
+        "published_date": "2025-08-03T03:20:36+00:00",
+        "updated_date": "2025-08-03T03:20:36+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Sara Shoouri",
+            "Morteza Tavakoli Taba",
+            "Hun-Seok Kim"
+        ],
+        "tldr": "This paper introduces an adaptive LiDAR scanning framework that uses historical data to predict regions of interest, enabling significant energy savings while maintaining or improving 3D object detection performance in autonomous driving scenarios.",
+        "tldr_zh": "本文介绍了一种自适应激光雷达扫描框架，该框架利用历史数据预测感兴趣区域，从而在自动驾驶场景中显著节省能源，同时保持或提高3D物体检测性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "VPN: Visual Prompt Navigation",
+        "summary": "While natural language is commonly used to guide embodied agents, the\ninherent ambiguity and verbosity of language often hinder the effectiveness of\nlanguage-guided navigation in complex environments. To this end, we propose\nVisual Prompt Navigation (VPN), a novel paradigm that guides agents to navigate\nusing only user-provided visual prompts within 2D top-view maps. This visual\nprompt primarily focuses on marking the visual navigation trajectory on a\ntop-down view of a scene, offering intuitive and spatially grounded guidance\nwithout relying on language instructions. It is more friendly for non-expert\nusers and reduces interpretive ambiguity. We build VPN tasks in both discrete\nand continuous navigation settings, constructing two new datasets, R2R-VP and\nR2R-CE-VP, by extending existing R2R and R2R-CE episodes with corresponding\nvisual prompts. Furthermore, we introduce VPNet, a dedicated baseline network\nto handle the VPN tasks, with two data augmentation strategies: view-level\naugmentation (altering initial headings and prompt orientations) and\ntrajectory-level augmentation (incorporating diverse trajectories from\nlarge-scale 3D scenes), to enhance navigation performance. Extensive\nexperiments evaluate how visual prompt forms, top-view map formats, and data\naugmentation strategies affect the performance of visual prompt navigation. The\ncode is available at https://github.com/farlit/VPN.",
+        "url": "http://arxiv.org/abs/2508.01766v1",
+        "published_date": "2025-08-03T14:07:45+00:00",
+        "updated_date": "2025-08-03T14:07:45+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Shuo Feng",
+            "Zihan Wang",
+            "Yuchen Li",
+            "Rui Kong",
+            "Hengyi Cai",
+            "Shuaiqiang Wang",
+            "Gim Hee Lee",
+            "Piji Li",
+            "Shuqiang Jiang"
+        ],
+        "tldr": "The paper introduces Visual Prompt Navigation (VPN), a novel approach for guiding embodied agents using visual prompts on top-down maps, creating new datasets and a baseline network (VPNet) to demonstrate its effectiveness in discrete and continuous navigation.",
+        "tldr_zh": "该论文介绍了视觉提示导航 (VPN)，一种使用顶视图地图上的视觉提示引导具身智能体的新方法，创建了新的数据集和一个基线网络 (VPNet)，以证明其在离散和连续导航中的有效性。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "DisCo3D: Distilling Multi-View Consistency for 3D Scene Editing",
+        "summary": "While diffusion models have demonstrated remarkable progress in 2D image\ngeneration and editing, extending these capabilities to 3D editing remains\nchallenging, particularly in maintaining multi-view consistency. Classical\napproaches typically update 3D representations through iterative refinement\nbased on a single editing view. However, these methods often suffer from slow\nconvergence and blurry artifacts caused by cross-view inconsistencies. Recent\nmethods improve efficiency by propagating 2D editing attention features, yet\nstill exhibit fine-grained inconsistencies and failure modes in complex scenes\ndue to insufficient constraints. To address this, we propose \\textbf{DisCo3D},\na novel framework that distills 3D consistency priors into a 2D editor. Our\nmethod first fine-tunes a 3D generator using multi-view inputs for scene\nadaptation, then trains a 2D editor through consistency distillation. The\nedited multi-view outputs are finally optimized into 3D representations via\nGaussian Splatting. Experimental results show DisCo3D achieves stable\nmulti-view consistency and outperforms state-of-the-art methods in editing\nquality.",
+        "url": "http://arxiv.org/abs/2508.01684v1",
+        "published_date": "2025-08-03T09:27:41+00:00",
+        "updated_date": "2025-08-03T09:27:41+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yufeng Chi",
+            "Huimin Ma",
+            "Kafeng Wang",
+            "Jianmin Li"
+        ],
+        "tldr": "DisCo3D distills 3D consistency priors into a 2D editor for 3D scene editing, achieving stable multi-view consistency and improved editing quality by fine-tuning a 3D generator with multi-view inputs and training a 2D editor via consistency distillation.",
+        "tldr_zh": "DisCo3D将3D一致性先验知识提炼到2D编辑器中，用于3D场景编辑。通过使用多视角输入微调3D生成器，并通过一致性蒸馏训练2D编辑器，从而实现稳定的多视角一致性和改进的编辑质量。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
