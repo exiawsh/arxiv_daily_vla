@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Autonomous Driving, VLA, 3D Understanding, Robotics) - July 27, 2025</title>
+    <title>ArXiv CS.CV Papers (Autonomous Driving, VLA, 3D Understanding, Robotics) - August 07, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>VLM Daily Papers</h1>
         <p>Daily papers related to VLA/AV/3D Understanding from cs.CV</p>
         
-            <p>July 27, 2025</p>
+            <p>August 07, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,31 +215,32 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">FROSS: Faster-than-Real-Time Online 3D Semantic Scene Graph Generation from RGB-D Images</h2>
+            <h2 class="paper-title">RiemanLine: Riemannian Manifold Representation of 3D Lines for Factor Graph Optimization</h2>
             
-            <p class="paper-summary">The ability to abstract complex 3D environments into simplified and
-structured representations is crucial across various domains. 3D semantic scene
-graphs (SSGs) achieve this by representing objects as nodes and their
-interrelationships as edges, facilitating high-level scene understanding.
-Existing methods for 3D SSG generation, however, face significant challenges,
-including high computational demands and non-incremental processing that hinder
-their suitability for real-time open-world applications. To address this issue,
-we propose FROSS (Faster-than-Real-Time Online 3D Semantic Scene Graph
-Generation), an innovative approach for online and faster-than-real-time 3D SSG
-generation that leverages the direct lifting of 2D scene graphs to 3D space and
-represents objects as 3D Gaussian distributions. This framework eliminates the
-dependency on precise and computationally-intensive point cloud processing.
-Furthermore, we extend the Replica dataset with inter-object relationship
-annotations, creating the ReplicaSSG dataset for comprehensive evaluation of
-FROSS. The experimental results from evaluations on ReplicaSSG and 3DSSG
-datasets show that FROSS can achieve superior performance while operating
-significantly faster than prior 3D SSG generation methods. Our implementation
-and dataset are publicly available at https://github.com/Howardkhh/FROSS.</p>
+            <p class="paper-summary">Minimal parametrization of 3D lines plays a critical role in camera
+localization and structural mapping. Existing representations in robotics and
+computer vision predominantly handle independent lines, overlooking structural
+regularities such as sets of parallel lines that are pervasive in man-made
+environments. This paper introduces \textbf{RiemanLine}, a unified minimal
+representation for 3D lines formulated on Riemannian manifolds that jointly
+accommodates both individual lines and parallel-line groups. Our key idea is to
+decouple each line landmark into global and local components: a shared
+vanishing direction optimized on the unit sphere $\mathcal{S}^2$, and scaled
+normal vectors constrained on orthogonal subspaces, enabling compact encoding
+of structural regularities. For $n$ parallel lines, the proposed representation
+reduces the parameter space from $4n$ (orthonormal form) to $2n+2$, naturally
+embedding parallelism without explicit constraints. We further integrate this
+parameterization into a factor graph framework, allowing global direction
+alignment and local reprojection optimization within a unified manifold-based
+bundle adjustment. Extensive experiments on ICL-NUIM, TartanAir, and synthetic
+benchmarks demonstrate that our method achieves significantly more accurate
+pose estimation and line reconstruction, while reducing parameter
+dimensionality and improving convergence stability.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces FROSS, a faster-than-real-time method for online 3D Semantic Scene Graph generation from RGB-D images by lifting 2D scene graphs to 3D space using 3D Gaussian distributions, and presents a new dataset, ReplicaSSG, for evaluation.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces RiemanLine, a novel Riemannian manifold representation for 3D lines that efficiently encodes both individual and parallel line groups, improving pose estimation and line reconstruction in factor graph optimization.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种名为FROSS的实时性更快的在线3D语义场景图生成方法，该方法通过使用3D高斯分布将2D场景图提升到3D空间来实现，并提出了一个新的数据集ReplicaSSG用于评估。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了RiemanLine，一种新的黎曼流形3D线表示方法，可以有效地编码单个和平行线组，从而提高因子图优化中的姿态估计和线重建。</p>
             
 
             
@@ -303,18 +304,18 @@ and dataset are publicly available at https://github.com/Howardkhh/FROSS.</p>
                     
                 
                     
-                        <i class="far fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(9/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2507.19993v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.04335v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Hao-Yu Hou, Chun-Yi Lee, Motoharu Sonogashira, Yasutomo Kawanishi</p>
+            <p class="paper-authors">Authors: Yanyan Li, Ze Yang, Keisuke Tateno, Federico Tombari Liang Zhao, Gim Hee Lee</p>
             
         </motion.div>
         
@@ -326,30 +327,38 @@ and dataset are publicly available at https://github.com/Howardkhh/FROSS.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">UniCT Depth: Event-Image Fusion Based Monocular Depth Estimation with Convolution-Compensated ViT Dual SA Block</h2>
+            <h2 class="paper-title">Segment Any Vehicle: Semantic and Visual Context Driven SAM and A Benchmark</h2>
             
-            <p class="paper-summary">Depth estimation plays a crucial role in 3D scene understanding and is
-extensively used in a wide range of vision tasks. Image-based methods struggle
-in challenging scenarios, while event cameras offer high dynamic range and
-temporal resolution but face difficulties with sparse data. Combining event and
-image data provides significant advantages, yet effective integration remains
-challenging. Existing CNN-based fusion methods struggle with occlusions and
-depth disparities due to limited receptive fields, while Transformer-based
-fusion methods often lack deep modality interaction. To address these issues,
-we propose UniCT Depth, an event-image fusion method that unifies CNNs and
-Transformers to model local and global features. We propose the
-Convolution-compensated ViT Dual SA (CcViT-DA) Block, designed for the encoder,
-which integrates Context Modeling Self-Attention (CMSA) to capture spatial
-dependencies and Modal Fusion Self-Attention (MFSA) for effective cross-modal
-fusion. Furthermore, we design the tailored Detail Compensation Convolution
-(DCC) Block to improve texture details and enhances edge representations.
-Experiments show that UniCT Depth outperforms existing image, event, and
-fusion-based monocular depth estimation methods across key metrics.</p>
+            <p class="paper-summary">With the rapid advancement of autonomous driving, vehicle perception,
+particularly detection and segmentation, has placed increasingly higher demands
+on algorithmic performance. Pre-trained large segmentation models, especially
+Segment Anything Model (SAM), have sparked significant interest and inspired
+new research directions in artificial intelligence. However, SAM cannot be
+directly applied to the fine-grained task of vehicle part segmentation, as its
+text-prompted segmentation functionality is not publicly accessible, and the
+mask regions generated by its default mode lack semantic labels, limiting its
+utility in structured, category-specific segmentation tasks. To address these
+limitations, we propose SAV, a novel framework comprising three core
+components: a SAM-based encoder-decoder, a vehicle part knowledge graph, and a
+context sample retrieval encoding module. The knowledge graph explicitly models
+the spatial and geometric relationships among vehicle parts through a
+structured ontology, effectively encoding prior structural knowledge.
+Meanwhile, the context retrieval module enhances segmentation by identifying
+and leveraging visually similar vehicle instances from training data, providing
+rich contextual priors for improved generalization. Furthermore, we introduce a
+new large-scale benchmark dataset for vehicle part segmentation, named
+VehicleSeg10K, which contains 11,665 high-quality pixel-level annotations
+across diverse scenes and viewpoints. We conduct comprehensive experiments on
+this dataset and two other datasets, benchmarking multiple representative
+baselines to establish a solid foundation for future research and comparison. %
+Both the dataset and source code of this paper will be released upon
+acceptance. Both the dataset and source code of this paper will be released on
+https://github.com/Event-AHU/SAV</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces UniCT Depth, a novel event-image fusion method for monocular depth estimation using a hybrid CNN-Transformer architecture with attention mechanisms and detail compensation, achieving state-of-the-art performance.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces SAV, a framework leveraging SAM, a vehicle part knowledge graph, and context retrieval for fine-grained vehicle part segmentation, along with a new large-scale benchmark dataset (VehicleSeg10K). This addresses SAM's limitations for structured vehicle part segmentation.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种名为UniCT Depth的新型事件-图像融合方法，用于单目深度估计，它采用混合CNN-Transformer架构，结合注意力机制和细节补偿，实现了最先进的性能。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了SAV框架，利用SAM、车辆部件知识图谱和上下文检索进行细粒度的车辆部件分割，并发布了一个新的大型基准数据集（VehicleSeg10K）。这解决了SAM在结构化车辆部件分割中的局限性。</p>
             
 
             
@@ -413,18 +422,18 @@ fusion-based monocular depth estimation methods across key metrics.</p>
                     
                 
                     
-                        <i class="far fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(9/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2507.19948v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.04260v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Luoxi Jing, Dianxi Shi, Zhe Liu, Songchang Jin, Chunping Qiu, Ziteng Qiao, Yuxian Li, Jianqiang Xia</p>
+            <p class="paper-authors">Authors: Xiao Wang, Ziwen Wang, Wentao Wu, Anjie Wang, Jiashu Wu, Yantao Pan, Chenglong Li</p>
             
         </motion.div>
         
@@ -436,26 +445,29 @@ fusion-based monocular depth estimation methods across key metrics.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">DriveIndia: An Object Detection Dataset for Diverse Indian Traffic Scenes</h2>
+            <h2 class="paper-title">Occupancy Learning with Spatiotemporal Memory</h2>
             
-            <p class="paper-summary">We introduce DriveIndia, a large-scale object detection dataset purpose-built
-to capture the complexity and unpredictability of Indian traffic environments.
-The dataset contains 66,986 high-resolution images annotated in YOLO format
-across 24 traffic-relevant object categories, encompassing diverse conditions
-such as varied weather (fog, rain), illumination changes, heterogeneous road
-infrastructure, and dense, mixed traffic patterns and collected over 120+ hours
-and covering 3,400+ kilometers across urban, rural, and highway routes.
-DriveIndia offers a comprehensive benchmark for real-world autonomous driving
-challenges. We provide baseline results using state-of-the-art YOLO family
-models, with the top-performing variant achieving a mAP50 of 78.7\%. Designed
-to support research in robust, generalizable object detection under uncertain
-road conditions, DriveIndia will be publicly available via the TiHAN-IIT
-Hyderabad dataset repository (https://tihan.iith.ac.in/tiand-datasets/).</p>
+            <p class="paper-summary">3D occupancy becomes a promising perception representation for autonomous
+driving to model the surrounding environment at a fine-grained scale. However,
+it remains challenging to efficiently aggregate 3D occupancy over time across
+multiple input frames due to the high processing cost and the uncertainty and
+dynamics of voxels. To address this issue, we propose ST-Occ, a scene-level
+occupancy representation learning framework that effectively learns the
+spatiotemporal feature with temporal consistency. ST-Occ consists of two core
+designs: a spatiotemporal memory that captures comprehensive historical
+information and stores it efficiently through a scene-level representation and
+a memory attention that conditions the current occupancy representation on the
+spatiotemporal memory with a model of uncertainty and dynamic awareness. Our
+method significantly enhances the spatiotemporal representation learned for 3D
+occupancy prediction tasks by exploiting the temporal dependency between
+multi-frame inputs. Experiments show that our approach outperforms the
+state-of-the-art methods by a margin of 3 mIoU and reduces the temporal
+inconsistency by 29%.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces DriveIndia, a large-scale object detection dataset with diverse Indian traffic scenes, offering a benchmark for autonomous driving and featuring baseline YOLO results.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces ST-Occ, a framework for 3D occupancy prediction in autonomous driving that uses a spatiotemporal memory and attention mechanism to improve temporal consistency and accuracy compared to state-of-the-art methods.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了 DriveIndia，一个大规模的目标检测数据集，包含多样化的印度交通场景，为自动驾驶提供基准，并提供 YOLO 基线结果。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了ST-Occ，一个用于自动驾驶中3D occupancy预测的框架。该框架利用时空记忆和注意力机制来提高时间一致性和准确性，优于现有最佳方法。</p>
             
 
             
@@ -473,16 +485,16 @@ Hyderabad dataset repository (https://tihan.iith.ac.in/tiand-datasets/).</p>
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -526,11 +538,11 @@ Hyderabad dataset repository (https://tihan.iith.ac.in/tiand-datasets/).</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2507.19912v2" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.04705v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Rishav Kumar, D. Santhosh Reddy, P. Rajalakshmi</p>
+            <p class="paper-authors">Authors: Ziyang Leng, Jiawei Yang, Wenlong Yi, Bolei Zhou</p>
             
         </motion.div>
         
@@ -542,32 +554,29 @@ Hyderabad dataset repository (https://tihan.iith.ac.in/tiand-datasets/).</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">TrackAny3D: Transferring Pretrained 3D Models for Category-unified 3D Point Cloud Tracking</h2>
+            <h2 class="paper-title">BEVCon: Advancing Bird's Eye View Perception with Contrastive Learning</h2>
             
-            <p class="paper-summary">3D LiDAR-based single object tracking (SOT) relies on sparse and irregular
-point clouds, posing challenges from geometric variations in scale, motion
-patterns, and structural complexity across object categories. Current
-category-specific approaches achieve good accuracy but are impractical for
-real-world use, requiring separate models for each category and showing limited
-generalization. To tackle these issues, we propose TrackAny3D, the first
-framework to transfer large-scale pretrained 3D models for category-agnostic 3D
-SOT. We first integrate parameter-efficient adapters to bridge the gap between
-pretraining and tracking tasks while preserving geometric priors. Then, we
-introduce a Mixture-of-Geometry-Experts (MoGE) architecture that adaptively
-activates specialized subnetworks based on distinct geometric characteristics.
-Additionally, we design a temporal context optimization strategy that
-incorporates learnable temporal tokens and a dynamic mask weighting module to
-propagate historical information and mitigate temporal drift. Experiments on
-three commonly-used benchmarks show that TrackAny3D establishes new
-state-of-the-art performance on category-agnostic 3D SOT, demonstrating strong
-generalization and competitiveness. We hope this work will enlighten the
-community on the importance of unified models and further expand the use of
-large-scale pretrained models in this field.</p>
+            <p class="paper-summary">We present BEVCon, a simple yet effective contrastive learning framework
+designed to improve Bird's Eye View (BEV) perception in autonomous driving. BEV
+perception offers a top-down-view representation of the surrounding
+environment, making it crucial for 3D object detection, segmentation, and
+trajectory prediction tasks. While prior work has primarily focused on
+enhancing BEV encoders and task-specific heads, we address the underexplored
+potential of representation learning in BEV models. BEVCon introduces two
+contrastive learning modules: an instance feature contrast module for refining
+BEV features and a perspective view contrast module that enhances the image
+backbone. The dense contrastive learning designed on top of detection losses
+leads to improved feature representations across both the BEV encoder and the
+backbone. Extensive experiments on the nuScenes dataset demonstrate that BEVCon
+achieves consistent performance gains, achieving up to +2.4% mAP improvement
+over state-of-the-art baselines. Our results highlight the critical role of
+representation learning in BEV perception and offer a complementary avenue to
+conventional task-specific optimizations.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces TrackAny3D, a novel framework for category-agnostic 3D single object tracking using transferred pretrained 3D models and a Mixture-of-Geometry-Experts architecture, achieving state-of-the-art performance on standard benchmarks.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: BEVCon introduces a contrastive learning framework for improving Bird's Eye View perception in autonomous driving, achieving significant mAP improvements on the nuScenes dataset by enhancing both BEV features and image backbone representations.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了TrackAny3D，一个新颖的类别无关的3D单物体跟踪框架，它利用迁移学习的预训练3D模型和一个几何专家混合（MoGE）架构，在标准基准测试上实现了最先进的性能。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: BEVCon 提出了一个对比学习框架，用于提升自动驾驶中的鸟瞰图视角感知能力。通过增强鸟瞰图特征和图像骨干网络的表示，在 nuScenes 数据集上实现了显著的 mAP 提升。</p>
             
 
             
@@ -585,8 +594,8 @@ large-scale pretrained models in this field.</p>
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
@@ -638,11 +647,11 @@ large-scale pretrained models in this field.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2507.19908v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.04702v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Mengmeng Wang, Haonan Wang, Yulong Li, Xiangjie Kong, Jiaxin Du, Guojiang Shen, Feng Xia</p>
+            <p class="paper-authors">Authors: Ziyang Leng, Jiawei Yang, Zhicheng Ren, Bolei Zhou</p>
             
         </motion.div>
         
@@ -654,28 +663,29 @@ large-scale pretrained models in this field.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">FedS2R: One-Shot Federated Domain Generalization for Synthetic-to-Real Semantic Segmentation in Autonomous Driving</h2>
+            <h2 class="paper-title">TurboTrain: Towards Efficient and Balanced Multi-Task Learning for Multi-Agent Perception and Prediction</h2>
             
-            <p class="paper-summary">Federated domain generalization has shown promising progress in image
-classification by enabling collaborative training across multiple clients
-without sharing raw data. However, its potential in the semantic segmentation
-of autonomous driving remains underexplored. In this paper, we propose FedS2R,
-the first one-shot federated domain generalization framework for
-synthetic-to-real semantic segmentation in autonomous driving. FedS2R comprises
-two components: an inconsistency-driven data augmentation strategy that
-generates images for unstable classes, and a multi-client knowledge
-distillation scheme with feature fusion that distills a global model from
-multiple client models. Experiments on five real-world datasets, Cityscapes,
-BDD100K, Mapillary, IDD, and ACDC, show that the global model significantly
-outperforms individual client models and is only 2 mIoU points behind the model
-trained with simultaneous access to all client data. These results demonstrate
-the effectiveness of FedS2R in synthetic-to-real semantic segmentation for
-autonomous driving under federated learning</p>
+            <p class="paper-summary">End-to-end training of multi-agent systems offers significant advantages in
+improving multi-task performance. However, training such models remains
+challenging and requires extensive manual design and monitoring. In this work,
+we introduce TurboTrain, a novel and efficient training framework for
+multi-agent perception and prediction. TurboTrain comprises two key components:
+a multi-agent spatiotemporal pretraining scheme based on masked reconstruction
+learning and a balanced multi-task learning strategy based on gradient conflict
+suppression. By streamlining the training process, our framework eliminates the
+need for manually designing and tuning complex multi-stage training pipelines,
+substantially reducing training time and improving performance. We evaluate
+TurboTrain on a real-world cooperative driving dataset, V2XPnP-Seq, and
+demonstrate that it further improves the performance of state-of-the-art
+multi-agent perception and prediction models. Our results highlight that
+pretraining effectively captures spatiotemporal multi-agent features and
+significantly benefits downstream tasks. Moreover, the proposed balanced
+multi-task learning strategy enhances detection and prediction.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces FedS2R, a federated domain generalization framework for synthetic-to-real semantic segmentation in autonomous driving, utilizing inconsistency-driven data augmentation and multi-client knowledge distillation. It achieves performance close to centralized training without sharing raw data.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: TurboTrain is a new training framework for multi-agent perception and prediction that uses spatiotemporal pretraining and gradient conflict suppression for balanced multi-task learning, improving performance and reducing training time.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了FedS2R，一个用于自动驾驶中合成到真实语义分割的联邦域泛化框架。它利用不一致驱动的数据增强和多客户端知识蒸馏，在不共享原始数据的情况下，实现了接近集中式训练的性能。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: TurboTrain是一个新的多智能体感知和预测训练框架，它使用时空预训练和梯度冲突抑制来实现平衡的多任务学习，从而提高性能并减少训练时间。</p>
             
 
             
@@ -746,11 +756,11 @@ autonomous driving under federated learning</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2507.19881v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.04682v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Tao Lian, Jose L. Gómez, Antonio M. López</p>
+            <p class="paper-authors">Authors: Zewei Zhou, Seth Z. Zhao, Tianhui Cai, Zhiyu Huang, Bolei Zhou, Jiaqi Ma</p>
             
         </motion.div>
         
@@ -762,34 +772,140 @@ autonomous driving under federated learning</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Efficient Self-Supervised Neuro-Analytic Visual Servoing for Real-time Quadrotor Control</h2>
+            <h2 class="paper-title">RoboTron-Sim: Improving Real-World Driving via Simulated Hard-Case</h2>
             
-            <p class="paper-summary">This work introduces a self-supervised neuro-analytical, cost efficient,
-model for visual-based quadrotor control in which a small 1.7M parameters
-student ConvNet learns automatically from an analytical teacher, an improved
-image-based visual servoing (IBVS) controller. Our IBVS system solves numerical
-instabilities by reducing the classical visual servoing equations and enabling
-efficient stable image feature detection. Through knowledge distillation, the
-student model achieves 11x faster inference compared to the teacher IBVS
-pipeline, while demonstrating similar control accuracy at a significantly lower
-computational and memory cost. Our vision-only self-supervised neuro-analytic
-control, enables quadrotor orientation and movement without requiring explicit
-geometric models or fiducial markers. The proposed methodology leverages
-simulation-to-reality transfer learning and is validated on a small drone
-platform in GPS-denied indoor environments. Our key contributions include: (1)
-an analytical IBVS teacher that solves numerical instabilities inherent in
-classical approaches, (2) a two-stage segmentation pipeline combining YOLOv11
-with a U-Net-based mask splitter for robust anterior-posterior vehicle
-segmentation to correctly estimate the orientation of the target, and (3) an
-efficient knowledge distillation dual-path system, which transfers geometric
-visual servoing capabilities from the analytical IBVS teacher to a compact and
-small student neural network that outperforms the teacher, while being suitable
-for real-time onboard deployment.</p>
+            <p class="paper-summary">Collecting real-world data for rare high-risk scenarios, long-tailed driving
+events, and complex interactions remains challenging, leading to poor
+performance of existing autonomous driving systems in these critical
+situations. In this paper, we propose RoboTron-Sim that improves real-world
+driving in critical situations by utilizing simulated hard cases. First, we
+develop a simulated dataset called Hard-case Augmented Synthetic Scenarios
+(HASS), which covers 13 high-risk edge-case categories, as well as balanced
+environmental conditions such as day/night and sunny/rainy. Second, we
+introduce Scenario-aware Prompt Engineering (SPE) and an Image-to-Ego Encoder
+(I2E Encoder) to enable multimodal large language models to effectively learn
+real-world challenging driving skills from HASS, via adapting to environmental
+deviations and hardware differences between real-world and simulated scenarios.
+Extensive experiments on nuScenes show that RoboTron-Sim improves driving
+performance in challenging scenarios by around 50%, achieving state-of-the-art
+results in real-world open-loop planning. Qualitative results further
+demonstrate the effectiveness of RoboTron-Sim in better managing rare high-risk
+driving scenarios. Project page: https://stars79689.github.io/RoboTron-Sim/</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper presents a self-supervised neuro-analytic approach for visual servoing of quadrotors, using knowledge distillation to transfer control capabilities from an analytical IBVS teacher to a compact student network for real-time onboard deployment in GPS-denied environments.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: RoboTron-Sim improves real-world autonomous driving in challenging situations by using a simulated dataset (HASS) and techniques like Scenario-aware Prompt Engineering and an Image-to-Ego Encoder to bridge the sim-to-real gap, achieving a 50% performance improvement on nuScenes.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种自监督神经分析方法，用于四旋翼飞行器的视觉伺服，通过知识蒸馏将控制能力从分析 IBVS 教师转移到紧凑的学生网络，用于在无 GPS 环境中进行实时机载部署。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: RoboTron-Sim通过使用模拟数据集(HASS)以及情景感知提示工程和图像到自我编码器等技术来弥合模拟到现实的差距，从而改善了现实世界中具有挑战性场景下的自动驾驶性能，在nuScenes上实现了50%的性能提升。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2508.04642v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Baihui Xiao, Chengjian Feng, Zhijian Huang, Feng yan, Yujie Zhong, Lin Ma</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.30000000000000004, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">Pseudo Depth Meets Gaussian: A Feed-forward RGB SLAM Baseline</h2>
+            
+            <p class="paper-summary">Incrementally recovering real-sized 3D geometry from a pose-free RGB stream
+is a challenging task in 3D reconstruction, requiring minimal assumptions on
+input data. Existing methods can be broadly categorized into end-to-end and
+visual SLAM-based approaches, both of which either struggle with long sequences
+or depend on slow test-time optimization and depth sensors. To address this, we
+first integrate a depth estimator into an RGB-D SLAM system, but this approach
+is hindered by inaccurate geometric details in predicted depth. Through further
+investigation, we find that 3D Gaussian mapping can effectively solve this
+problem. Building on this, we propose an online 3D reconstruction method using
+3D Gaussian-based SLAM, combined with a feed-forward recurrent prediction
+module to directly infer camera pose from optical flow. This approach replaces
+slow test-time optimization with fast network inference, significantly
+improving tracking speed. Additionally, we introduce a local graph rendering
+technique to enhance robustness in feed-forward pose prediction. Experimental
+results on the Replica and TUM-RGBD datasets, along with a real-world
+deployment demonstration, show that our method achieves performance on par with
+the state-of-the-art SplaTAM, while reducing tracking time by more than 90\%.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a feed-forward RGB SLAM baseline using 3D Gaussian mapping and a recurrent prediction module for fast and robust pose estimation, achieving comparable performance to SplaTAM with significantly reduced tracking time.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种前馈RGB SLAM基线，它使用3D高斯映射和一个循环预测模块来实现快速而鲁棒的姿态估计。该方法在性能上与SplaTAM相当，但显著降低了跟踪时间。</p>
             
 
             
@@ -807,8 +923,341 @@ for real-time onboard deployment.</p>
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
                     <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2508.04597v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Linqing Zhao, Xiuwei Xu, Yirui Wang, Hao Wang, Wenzhao Zheng, Yansong Tang, Haibin Yan, Jiwen Lu</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.35000000000000003, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">SplitGaussian: Reconstructing Dynamic Scenes via Visual Geometry Decomposition</h2>
+            
+            <p class="paper-summary">Reconstructing dynamic 3D scenes from monocular video remains fundamentally
+challenging due to the need to jointly infer motion, structure, and appearance
+from limited observations. Existing dynamic scene reconstruction methods based
+on Gaussian Splatting often entangle static and dynamic elements in a shared
+representation, leading to motion leakage, geometric distortions, and temporal
+flickering. We identify that the root cause lies in the coupled modeling of
+geometry and appearance across time, which hampers both stability and
+interpretability. To address this, we propose \textbf{SplitGaussian}, a novel
+framework that explicitly decomposes scene representations into static and
+dynamic components. By decoupling motion modeling from background geometry and
+allowing only the dynamic branch to deform over time, our method prevents
+motion artifacts in static regions while supporting view- and time-dependent
+appearance refinement. This disentangled design not only enhances temporal
+consistency and reconstruction fidelity but also accelerates convergence.
+Extensive experiments demonstrate that SplitGaussian outperforms prior
+state-of-the-art methods in rendering quality, geometric stability, and motion
+separation.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces SplitGaussian, a novel method for dynamic scene reconstruction from monocular video that decomposes scene representations into static and dynamic components, improving rendering quality and geometric stability.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了SplitGaussian，一种从单目视频重建动态场景的新方法，它将场景表示分解为静态和动态组件，从而提高渲染质量和几何稳定性。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2508.04224v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Jiahui Li, Shengeng Tang, Jingxuan He, Gang Huang, Zhangye Wang, Yantao Pan, Lechao Cheng</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.4, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">IDCNet: Guided Video Diffusion for Metric-Consistent RGBD Scene Generation with Precise Camera Control</h2>
+            
+            <p class="paper-summary">We present IDC-Net (Image-Depth Consistency Network), a novel framework
+designed to generate RGB-D video sequences under explicit camera trajectory
+control. Unlike approaches that treat RGB and depth generation separately,
+IDC-Net jointly synthesizes both RGB images and corresponding depth maps within
+a unified geometry-aware diffusion model. The joint learning framework
+strengthens spatial and geometric alignment across frames, enabling more
+precise camera control in the generated sequences. To support the training of
+this camera-conditioned model and ensure high geometric fidelity, we construct
+a camera-image-depth consistent dataset with metric-aligned RGB videos, depth
+maps, and accurate camera poses, which provides precise geometric supervision
+with notably improved inter-frame geometric consistency. Moreover, we introduce
+a geometry-aware transformer block that enables fine-grained camera control,
+enhancing control over the generated sequences. Extensive experiments show that
+IDC-Net achieves improvements over state-of-the-art approaches in both visual
+quality and geometric consistency of generated scene sequences. Notably, the
+generated RGB-D sequences can be directly feed for downstream 3D Scene
+reconstruction tasks without extra post-processing steps, showcasing the
+practical benefits of our joint learning framework. See more at
+https://idcnet-scene.github.io.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: IDC-Net is a novel diffusion model that jointly generates metric-consistent RGB-D video sequences with precise camera trajectory control, demonstrating improvements in visual quality, geometric consistency, and downstream 3D reconstruction tasks.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: IDC-Net是一种新型扩散模型，可以联合生成具有精确相机轨迹控制的、度量一致的RGB-D视频序列，在视觉质量、几何一致性和下游3D重建任务方面均有改进。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2508.04147v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Lijuan Liu, Wenfa Li, Dongbo Zhang, Shuo Wang, Shaohui Jiao</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.45, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">Intention Enhanced Diffusion Model for Multimodal Pedestrian Trajectory Prediction</h2>
+            
+            <p class="paper-summary">Predicting pedestrian motion trajectories is critical for path planning and
+motion control of autonomous vehicles. However, accurately forecasting crowd
+trajectories remains a challenging task due to the inherently multimodal and
+uncertain nature of human motion. Recent diffusion-based models have shown
+promising results in capturing the stochasticity of pedestrian behavior for
+trajectory prediction. However, few diffusion-based approaches explicitly
+incorporate the underlying motion intentions of pedestrians, which can limit
+the interpretability and precision of prediction models. In this work, we
+propose a diffusion-based multimodal trajectory prediction model that
+incorporates pedestrians' motion intentions into the prediction framework. The
+motion intentions are decomposed into lateral and longitudinal components, and
+a pedestrian intention recognition module is introduced to enable the model to
+effectively capture these intentions. Furthermore, we adopt an efficient
+guidance mechanism that facilitates the generation of interpretable
+trajectories. The proposed framework is evaluated on two widely used human
+trajectory prediction benchmarks, ETH and UCY, on which it is compared against
+state-of-the-art methods. The experimental results demonstrate that our method
+achieves competitive performance.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a diffusion-based multimodal trajectory prediction model that incorporates pedestrian motion intentions, decomposed into lateral and longitudinal components, achieving competitive performance on ETH and UCY datasets.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种基于扩散的多模态轨迹预测模型，该模型结合了行人运动意图（分解为横向和纵向分量），并在 ETH 和 UCY 数据集上取得了有竞争力的性能。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
@@ -849,469 +1298,29 @@ for real-time onboard deployment.</p>
                     
                 
                     
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
                     
                 
                     
                         <i class="far fa-star"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2507.19878v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.04229v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Sebastian Mocanu, Sebastian-Ion Nae, Mihai-Eugen Barbu, Marius Leordeanu</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.30000000000000004, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">RaGS: Unleashing 3D Gaussian Splatting from 4D Radar and Monocular Cues for 3D Object Detection</h2>
-            
-            <p class="paper-summary">4D millimeter-wave radar has emerged as a promising sensor for autonomous
-driving, but effective 3D object detection from both 4D radar and monocular
-images remains a challenge. Existing fusion approaches typically rely on either
-instance-based proposals or dense BEV grids, which either lack holistic scene
-understanding or are limited by rigid grid structures. To address these, we
-propose RaGS, the first framework to leverage 3D Gaussian Splatting (GS) as
-representation for fusing 4D radar and monocular cues in 3D object detection.
-3D GS naturally suits 3D object detection by modeling the scene as a field of
-Gaussians, dynamically allocating resources on foreground objects and providing
-a flexible, resource-efficient solution. RaGS uses a cascaded pipeline to
-construct and refine the Gaussian field. It starts with the Frustum-based
-Localization Initiation (FLI), which unprojects foreground pixels to initialize
-coarse 3D Gaussians positions. Then, the Iterative Multimodal Aggregation (IMA)
-fuses semantics and geometry, refining the limited Gaussians to the regions of
-interest. Finally, the Multi-level Gaussian Fusion (MGF) renders the Gaussians
-into multi-level BEV features for 3D object detection. By dynamically focusing
-on sparse objects within scenes, RaGS enable object concentrating while
-offering comprehensive scene perception. Extensive experiments on
-View-of-Delft, TJ4DRadSet, and OmniHD-Scenes benchmarks demonstrate its
-state-of-the-art performance. Code will be released.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces RaGS, a novel 3D object detection framework that leverages 3D Gaussian Splatting to fuse 4D radar and monocular image data, achieving state-of-the-art results on several benchmarks.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了 RaGS，一种新颖的 3D 对象检测框架，它利用 3D 高斯溅射融合 4D 雷达和单目图像数据，并在多个基准测试中取得了最先进的结果。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2507.19856v2" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Xiaokai Bai, Chenxu Zhou, Lianqing Zheng, Si-Yuan Cao, Jianan Liu, Xiaohan Zhang, Zhengzhuang Zhang, Hui-liang Shen</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.35000000000000003, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">HydraMamba: Multi-Head State Space Model for Global Point Cloud Learning</h2>
-            
-            <p class="paper-summary">The attention mechanism has become a dominant operator in point cloud
-learning, but its quadratic complexity leads to limited inter-point
-interactions, hindering long-range dependency modeling between objects. Due to
-excellent long-range modeling capability with linear complexity, the selective
-state space model (S6), as the core of Mamba, has been exploited in point cloud
-learning for long-range dependency interactions over the entire point cloud.
-Despite some significant progress, related works still suffer from imperfect
-point cloud serialization and lack of locality learning. To this end, we
-explore a state space model-based point cloud network termed HydraMamba to
-address the above challenges. Specifically, we design a shuffle serialization
-strategy, making unordered point sets better adapted to the causal nature of
-S6. Meanwhile, to overcome the deficiency of existing techniques in locality
-learning, we propose a ConvBiS6 layer, which is capable of capturing local
-geometries and global context dependencies synergistically. Besides, we propose
-MHS6 by extending the multi-head design to S6, further enhancing its modeling
-capability. HydraMamba achieves state-of-the-art results on various tasks at
-both object-level and scene-level. The code is available at
-https://github.com/Point-Cloud-Learning/HydraMamba.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: HydraMamba introduces a novel state space model-based point cloud network utilizing shuffle serialization, ConvBiS6 layer, and MHS6 to enhance both local and global point cloud learning, achieving state-of-the-art results.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: HydraMamba 提出了一种新的基于状态空间模型的点云网络，它利用 shuffle 序列化、ConvBiS6 层和 MHS6 来增强局部和全局点云学习，并取得了最先进的结果。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2507.19778v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Kanglin Qu, Pan Gao, Qun Dai, Yuanhao Sun</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.4, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">Leveraging Sparse LiDAR for RAFT-Stereo: A Depth Pre-Fill Perspective</h2>
-            
-            <p class="paper-summary">We investigate LiDAR guidance within the RAFT-Stereo framework, aiming to
-improve stereo matching accuracy by injecting precise LiDAR depth into the
-initial disparity map. We find that the effectiveness of LiDAR guidance
-drastically degrades when the LiDAR points become sparse (e.g., a few hundred
-points per frame), and we offer a novel explanation from a signal processing
-perspective. This insight leads to a surprisingly simple solution that enables
-LiDAR-guided RAFT-Stereo to thrive: pre-filling the sparse initial disparity
-map with interpolation. Interestingly, we find that pre-filling is also
-effective when injecting LiDAR depth into image features via early fusion, but
-for a fundamentally different reason, necessitating a distinct pre-filling
-approach. By combining both solutions, the proposed Guided RAFT-Stereo
-(GRAFT-Stereo) significantly outperforms existing LiDAR-guided methods under
-sparse LiDAR conditions across various datasets. We hope this study inspires
-more effective LiDAR-guided stereo methods.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces GRAFT-Stereo, a method that improves RAFT-Stereo by effectively incorporating sparse LiDAR data through a novel pre-filling approach for both initial disparity maps and image features, leading to significant performance gains.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了GRAFT-Stereo，该方法通过一种新颖的预填充方法，有效地将稀疏激光雷达数据整合到初始视差图和图像特征中，从而改进了RAFT-Stereo，并带来了显著的性能提升。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2507.19738v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Jinsu Yoo, Sooyoung Jeon, Zanming Huang, Tai-Yu Pan, Wei-Lun Chao</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.45, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">Co-Win: Joint Object Detection and Instance Segmentation in LiDAR Point Clouds via Collaborative Window Processing</h2>
-            
-            <p class="paper-summary">Accurate perception and scene understanding in complex urban environments is
-a critical challenge for ensuring safe and efficient autonomous navigation. In
-this paper, we present Co-Win, a novel bird's eye view (BEV) perception
-framework that integrates point cloud encoding with efficient parallel
-window-based feature extraction to address the multi-modality inherent in
-environmental understanding. Our method employs a hierarchical architecture
-comprising a specialized encoder, a window-based backbone, and a query-based
-decoder head to effectively capture diverse spatial features and object
-relationships. Unlike prior approaches that treat perception as a simple
-regression task, our framework incorporates a variational approach with
-mask-based instance segmentation, enabling fine-grained scene decomposition and
-understanding. The Co-Win architecture processes point cloud data through
-progressive feature extraction stages, ensuring that predicted masks are both
-data-consistent and contextually relevant. Furthermore, our method produces
-interpretable and diverse instance predictions, enabling enhanced downstream
-decision-making and planning in autonomous driving systems.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Co-Win, a novel BEV perception framework for LiDAR point clouds using window-based feature extraction and variational instance segmentation for improved scene understanding in autonomous driving.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了Co-Win，一种新颖的BEV感知框架，用于LiDAR点云，它使用基于窗口的特征提取和变分实例分割，以提高自动驾驶中的场景理解能力。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2507.19691v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Haichuan Li, Tomi Westerlund</p>
+            <p class="paper-authors">Authors: Yu Liu, Zhijie Liu, Xiao Ren, You-Fu Li, He Kong</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-08-07 03:04:04 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-08-07 03:07:19 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>
