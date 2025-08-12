@@ -1,0 +1,249 @@
+[
+    {
+        "title": "ReferSplat: Referring Segmentation in 3D Gaussian Splatting",
+        "summary": "We introduce Referring 3D Gaussian Splatting Segmentation (R3DGS), a new task\nthat aims to segment target objects in a 3D Gaussian scene based on natural\nlanguage descriptions, which often contain spatial relationships or object\nattributes. This task requires the model to identify newly described objects\nthat may be occluded or not directly visible in a novel view, posing a\nsignificant challenge for 3D multi-modal understanding. Developing this\ncapability is crucial for advancing embodied AI. To support research in this\narea, we construct the first R3DGS dataset, Ref-LERF. Our analysis reveals that\n3D multi-modal understanding and spatial relationship modeling are key\nchallenges for R3DGS. To address these challenges, we propose ReferSplat, a\nframework that explicitly models 3D Gaussian points with natural language\nexpressions in a spatially aware paradigm. ReferSplat achieves state-of-the-art\nperformance on both the newly proposed R3DGS task and 3D open-vocabulary\nsegmentation benchmarks. Dataset and code are available at\nhttps://github.com/heshuting555/ReferSplat.",
+        "url": "http://arxiv.org/abs/2508.08252v1",
+        "published_date": "2025-08-11T17:59:30+00:00",
+        "updated_date": "2025-08-11T17:59:30+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Shuting He",
+            "Guangquan Jie",
+            "Changshuo Wang",
+            "Yun Zhou",
+            "Shuming Hu",
+            "Guanbin Li",
+            "Henghui Ding"
+        ],
+        "tldr": "The paper introduces a new task, Referring 3D Gaussian Splatting Segmentation (R3DGS), a dataset (Ref-LERF) and a novel framework (ReferSplat) for segmenting objects in 3D Gaussian scenes based on natural language descriptions, achieving state-of-the-art performance.",
+        "tldr_zh": "该论文介绍了一项新任务：基于自然语言描述的3D高斯溅射分割（R3DGS），一个数据集（Ref-LERF）和一个新的框架（ReferSplat），用于在3D高斯场景中分割对象，并实现了最先进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "ODYSSEY: Open-World Quadrupeds Exploration and Manipulation for Long-Horizon Tasks",
+        "summary": "Language-guided long-horizon mobile manipulation has long been a grand\nchallenge in embodied semantic reasoning, generalizable manipulation, and\nadaptive locomotion. Three fundamental limitations hinder progress: First,\nalthough large language models have improved spatial reasoning and task\nplanning through semantic priors, existing implementations remain confined to\ntabletop scenarios, failing to address the constrained perception and limited\nactuation ranges of mobile platforms. Second, current manipulation strategies\nexhibit insufficient generalization when confronted with the diverse object\nconfigurations encountered in open-world environments. Third, while crucial for\npractical deployment, the dual requirement of maintaining high platform\nmaneuverability alongside precise end-effector control in unstructured settings\nremains understudied.\n  In this work, we present ODYSSEY, a unified mobile manipulation framework for\nagile quadruped robots equipped with manipulators, which seamlessly integrates\nhigh-level task planning with low-level whole-body control. To address the\nchallenge of egocentric perception in language-conditioned tasks, we introduce\na hierarchical planner powered by a vision-language model, enabling\nlong-horizon instruction decomposition and precise action execution. At the\ncontrol level, our novel whole-body policy achieves robust coordination across\nchallenging terrains. We further present the first benchmark for long-horizon\nmobile manipulation, evaluating diverse indoor and outdoor scenarios. Through\nsuccessful sim-to-real transfer, we demonstrate the system's generalization and\nrobustness in real-world deployments, underscoring the practicality of legged\nmanipulators in unstructured environments. Our work advances the feasibility of\ngeneralized robotic assistants capable of complex, dynamic tasks. Our project\npage: https://kaijwang.github.io/odyssey.github.io/",
+        "url": "http://arxiv.org/abs/2508.08240v1",
+        "published_date": "2025-08-11T17:54:31+00:00",
+        "updated_date": "2025-08-11T17:54:31+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Kaijun Wang",
+            "Liqin Lu",
+            "Mingyu Liu",
+            "Jianuo Jiang",
+            "Zeju Li",
+            "Bolin Zhang",
+            "Wancai Zheng",
+            "Xinyi Yu",
+            "Hao Chen",
+            "Chunhua Shen"
+        ],
+        "tldr": "The paper introduces ODYSSEY, a framework for quadruped robots with manipulators to perform long-horizon, language-guided tasks in unstructured environments, featuring hierarchical planning and whole-body control validated through sim-to-real transfer.",
+        "tldr_zh": "该论文介绍了ODYSSEY，一个用于四足机器人配备机械臂在非结构化环境中执行长时程、语言引导任务的框架，具有分层规划和全身控制，并通过模拟到真实的迁移进行了验证。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "ReconDreamer-RL: Enhancing Reinforcement Learning via Diffusion-based Scene Reconstruction",
+        "summary": "Reinforcement learning for training end-to-end autonomous driving models in\nclosed-loop simulations is gaining growing attention. However, most simulation\nenvironments differ significantly from real-world conditions, creating a\nsubstantial simulation-to-reality (sim2real) gap. To bridge this gap, some\napproaches utilize scene reconstruction techniques to create photorealistic\nenvironments as a simulator. While this improves realistic sensor simulation,\nthese methods are inherently constrained by the distribution of the training\ndata, making it difficult to render high-quality sensor data for novel\ntrajectories or corner case scenarios. Therefore, we propose ReconDreamer-RL, a\nframework designed to integrate video diffusion priors into scene\nreconstruction to aid reinforcement learning, thereby enhancing end-to-end\nautonomous driving training. Specifically, in ReconDreamer-RL, we introduce\nReconSimulator, which combines the video diffusion prior for appearance\nmodeling and incorporates a kinematic model for physical modeling, thereby\nreconstructing driving scenarios from real-world data. This narrows the\nsim2real gap for closed-loop evaluation and reinforcement learning. To cover\nmore corner-case scenarios, we introduce the Dynamic Adversary Agent (DAA),\nwhich adjusts the trajectories of surrounding vehicles relative to the ego\nvehicle, autonomously generating corner-case traffic scenarios (e.g., cut-in).\nFinally, the Cousin Trajectory Generator (CTG) is proposed to address the issue\nof training data distribution, which is often biased toward simple\nstraight-line movements. Experiments show that ReconDreamer-RL improves\nend-to-end autonomous driving training, outperforming imitation learning\nmethods with a 5x reduction in the Collision Ratio.",
+        "url": "http://arxiv.org/abs/2508.08170v1",
+        "published_date": "2025-08-11T16:45:55+00:00",
+        "updated_date": "2025-08-11T16:45:55+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Chaojun Ni",
+            "Guosheng Zhao",
+            "Xiaofeng Wang",
+            "Zheng Zhu",
+            "Wenkang Qin",
+            "Xinze Chen",
+            "Guanghong Jia",
+            "Guan Huang",
+            "Wenjun Mei"
+        ],
+        "tldr": "ReconDreamer-RL uses video diffusion priors and a dynamic adversary agent within a reconstructed scene simulator to improve reinforcement learning for end-to-end autonomous driving, achieving a 5x reduction in collision ratio compared to imitation learning.",
+        "tldr_zh": "ReconDreamer-RL利用视频扩散先验和动态对抗代理在一个重建的场景模拟器中，改进了端到端自动驾驶的强化学习，与模仿学习相比，碰撞率降低了5倍。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "GRASPTrack: Geometry-Reasoned Association via Segmentation and Projection for Multi-Object Tracking",
+        "summary": "Multi-object tracking (MOT) in monocular videos is fundamentally challenged\nby occlusions and depth ambiguity, issues that conventional\ntracking-by-detection (TBD) methods struggle to resolve owing to a lack of\ngeometric awareness. To address these limitations, we introduce GRASPTrack, a\nnovel depth-aware MOT framework that integrates monocular depth estimation and\ninstance segmentation into a standard TBD pipeline to generate high-fidelity 3D\npoint clouds from 2D detections, thereby enabling explicit 3D geometric\nreasoning. These 3D point clouds are then voxelized to enable a precise and\nrobust Voxel-Based 3D Intersection-over-Union (IoU) for spatial association. To\nfurther enhance tracking robustness, our approach incorporates Depth-aware\nAdaptive Noise Compensation, which dynamically adjusts the Kalman filter\nprocess noise based on occlusion severity for more reliable state estimation.\nAdditionally, we propose a Depth-enhanced Observation-Centric Momentum, which\nextends the motion direction consistency from the image plane into 3D space to\nimprove motion-based association cues, particularly for objects with complex\ntrajectories. Extensive experiments on the MOT17, MOT20, and DanceTrack\nbenchmarks demonstrate that our method achieves competitive performance,\nsignificantly improving tracking robustness in complex scenes with frequent\nocclusions and intricate motion patterns.",
+        "url": "http://arxiv.org/abs/2508.08117v1",
+        "published_date": "2025-08-11T15:56:21+00:00",
+        "updated_date": "2025-08-11T15:56:21+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Xudong Han",
+            "Pengcheng Fang",
+            "Yueying Tian",
+            "Jianhui Yu",
+            "Xiaohao Cai",
+            "Daniel Roggen",
+            "Philip Birch"
+        ],
+        "tldr": "GRASPTrack is a novel monocular multi-object tracking framework that leverages depth estimation and instance segmentation to achieve robust 3D geometric reasoning and improved tracking performance in complex, occluded scenes.",
+        "tldr_zh": "GRASPTrack 是一种新颖的单目多目标跟踪框架，它利用深度估计和实例分割来实现稳健的 3D 几何推理，并提高在复杂、遮挡场景中的跟踪性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "TRIDE: A Text-assisted Radar-Image weather-aware fusion network for Depth Estimation",
+        "summary": "Depth estimation, essential for autonomous driving, seeks to interpret the 3D\nenvironment surrounding vehicles. The development of radar sensors, known for\ntheir cost-efficiency and robustness, has spurred interest in radar-camera\nfusion-based solutions. However, existing algorithms fuse features from these\nmodalities without accounting for weather conditions, despite radars being\nknown to be more robust than cameras under adverse weather. Additionally, while\nVision-Language models have seen rapid advancement, utilizing language\ndescriptions alongside other modalities for depth estimation remains an open\nchallenge. This paper first introduces a text-generation strategy along with\nfeature extraction and fusion techniques that can assist monocular depth\nestimation pipelines, leading to improved accuracy across different algorithms\non the KITTI dataset. Building on this, we propose TRIDE, a radar-camera fusion\nalgorithm that enhances text feature extraction by incorporating radar point\ninformation. To address the impact of weather on sensor performance, we\nintroduce a weather-aware fusion block that adaptively adjusts radar weighting\nbased on current weather conditions. Our method, benchmarked on the nuScenes\ndataset, demonstrates performance gains over the state-of-the-art, achieving a\n12.87% improvement in MAE and a 9.08% improvement in RMSE. Code:\nhttps://github.com/harborsarah/TRIDE",
+        "url": "http://arxiv.org/abs/2508.08038v1",
+        "published_date": "2025-08-11T14:39:41+00:00",
+        "updated_date": "2025-08-11T14:39:41+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Huawei Sun",
+            "Zixu Wang",
+            "Hao Feng",
+            "Julius Ott",
+            "Lorenzo Servadei",
+            "Robert Wille"
+        ],
+        "tldr": "The paper introduces TRIDE, a radar-camera fusion network for depth estimation that incorporates text descriptions and weather awareness, achieving state-of-the-art performance on nuScenes dataset.",
+        "tldr_zh": "该论文介绍了TRIDE，一个用于深度估计的雷达-相机融合网络，结合了文本描述和天气感知，在nuScenes数据集上实现了最先进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Autonomous Navigation of Cloud-Controlled Quadcopters in Confined Spaces Using Multi-Modal Perception and LLM-Driven High Semantic Reasoning",
+        "summary": "This paper introduces an advanced AI-driven perception system for autonomous\nquadcopter navigation in GPS-denied indoor environments. The proposed framework\nleverages cloud computing to offload computationally intensive tasks and\nincorporates a custom-designed printed circuit board (PCB) for efficient sensor\ndata acquisition, enabling robust navigation in confined spaces. The system\nintegrates YOLOv11 for object detection, Depth Anything V2 for monocular depth\nestimation, a PCB equipped with Time-of-Flight (ToF) sensors and an Inertial\nMeasurement Unit (IMU), and a cloud-based Large Language Model (LLM) for\ncontext-aware decision-making. A virtual safety envelope, enforced by\ncalibrated sensor offsets, ensures collision avoidance, while a multithreaded\narchitecture achieves low-latency processing. Enhanced spatial awareness is\nfacilitated by 3D bounding box estimation with Kalman filtering. Experimental\nresults in an indoor testbed demonstrate strong performance, with object\ndetection achieving a mean Average Precision (mAP50) of 0.6, depth estimation\nMean Absolute Error (MAE) of 7.2 cm, only 16 safety envelope breaches across 42\ntrials over approximately 11 minutes, and end-to-end system latency below 1\nsecond. This cloud-supported, high-intelligence framework serves as an\nauxiliary perception and navigation system, complementing state-of-the-art\ndrone autonomy for GPS-denied confined spaces.",
+        "url": "http://arxiv.org/abs/2508.07885v1",
+        "published_date": "2025-08-11T12:00:03+00:00",
+        "updated_date": "2025-08-11T12:00:03+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV",
+            "cs.SY",
+            "eess.SY"
+        ],
+        "authors": [
+            "Shoaib Ahmmad",
+            "Zubayer Ahmed Aditto",
+            "Md Mehrab Hossain",
+            "Noushin Yeasmin",
+            "Shorower Hossain"
+        ],
+        "tldr": "This paper presents an AI-driven cloud-supported system for autonomous quadcopter navigation in GPS-denied indoor environments, using multi-modal perception (YOLOv11, Depth Anything V2, ToF, IMU) and LLM-based high semantic reasoning to achieve robust navigation in confined spaces. Experimental results demonstrate strong performance in an indoor testbed.",
+        "tldr_zh": "本文介绍了一种AI驱动的云支持系统，用于在GPS受限的室内环境中实现自主四旋翼飞行器导航。该系统利用多模态感知（YOLOv11、Depth Anything V2、ToF、IMU）和基于LLM的高语义推理，实现了在狭小空间中的稳健导航。室内测试平台的实验结果表明该系统具有良好的性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "CBDES MoE: Hierarchically Decoupled Mixture-of-Experts for Functional Modules in Autonomous Driving",
+        "summary": "Bird's Eye View (BEV) perception systems based on multi-sensor feature fusion\nhave become a fundamental cornerstone for end-to-end autonomous driving.\nHowever, existing multi-modal BEV methods commonly suffer from limited input\nadaptability, constrained modeling capacity, and suboptimal generalization. To\naddress these challenges, we propose a hierarchically decoupled\nMixture-of-Experts architecture at the functional module level, termed\nComputing Brain DEvelopment System Mixture-of-Experts (CBDES MoE). CBDES MoE\nintegrates multiple structurally heterogeneous expert networks with a\nlightweight Self-Attention Router (SAR) gating mechanism, enabling dynamic\nexpert path selection and sparse, input-aware efficient inference. To the best\nof our knowledge, this is the first modular Mixture-of-Experts framework\nconstructed at the functional module granularity within the autonomous driving\ndomain. Extensive evaluations on the real-world nuScenes dataset demonstrate\nthat CBDES MoE consistently outperforms fixed single-expert baselines in 3D\nobject detection. Compared to the strongest single-expert model, CBDES MoE\nachieves a 1.6-point increase in mAP and a 4.1-point improvement in NDS,\ndemonstrating the effectiveness and practical advantages of the proposed\napproach.",
+        "url": "http://arxiv.org/abs/2508.07838v1",
+        "published_date": "2025-08-11T10:44:25+00:00",
+        "updated_date": "2025-08-11T10:44:25+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Qi Xiang",
+            "Kunsong Shi",
+            "Zhigui Lin",
+            "Lei He"
+        ],
+        "tldr": "The paper introduces CBDES MoE, a novel hierarchically decoupled Mixture-of-Experts architecture for BEV perception in autonomous driving, achieving improved performance in 3D object detection on the nuScenes dataset compared to single-expert baselines.",
+        "tldr_zh": "该论文介绍了一种新的分层解耦混合专家架构 CBDES MoE，用于自动驾驶中的 BEV 感知，与单专家基线相比，在 nuScenes 数据集上的 3D 目标检测方面取得了更好的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Progressive Bird's Eye View Perception for Safety-Critical Autonomous Driving: A Comprehensive Survey",
+        "summary": "Bird's-Eye-View (BEV) perception has become a foundational paradigm in\nautonomous driving, enabling unified spatial representations that support\nrobust multi-sensor fusion and multi-agent collaboration. As autonomous\nvehicles transition from controlled environments to real-world deployment,\nensuring the safety and reliability of BEV perception in complex scenarios -\nsuch as occlusions, adverse weather, and dynamic traffic - remains a critical\nchallenge. This survey provides the first comprehensive review of BEV\nperception from a safety-critical perspective, systematically analyzing\nstate-of-the-art frameworks and implementation strategies across three\nprogressive stages: single-modality vehicle-side, multimodal vehicle-side, and\nmulti-agent collaborative perception. Furthermore, we examine public datasets\nencompassing vehicle-side, roadside, and collaborative settings, evaluating\ntheir relevance to safety and robustness. We also identify key open-world\nchallenges - including open-set recognition, large-scale unlabeled data, sensor\ndegradation, and inter-agent communication latency - and outline future\nresearch directions, such as integration with end-to-end autonomous driving\nsystems, embodied intelligence, and large language models.",
+        "url": "http://arxiv.org/abs/2508.07560v1",
+        "published_date": "2025-08-11T02:40:46+00:00",
+        "updated_date": "2025-08-11T02:40:46+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Yan Gong",
+            "Naibang Wang",
+            "Jianli Lu",
+            "Xinyu Zhang",
+            "Yongsheng Gao",
+            "Jie Zhao",
+            "Zifan Huang",
+            "Haozhi Bai",
+            "Nanxin Zeng",
+            "Nayu Su",
+            "Lei Yang",
+            "Ziying Song",
+            "Xiaoxi Hu",
+            "Xinmin Jiang",
+            "Xiaojuan Zhang",
+            "Susanto Rahardja"
+        ],
+        "tldr": "This survey paper comprehensively reviews Bird's-Eye-View perception in autonomous driving from a safety-critical perspective, covering single-modality, multimodal, and multi-agent collaborative approaches while highlighting open challenges and future research directions.",
+        "tldr_zh": "该综述论文全面回顾了自动驾驶中鸟瞰视图感知技术，从安全关键的角度出发，涵盖了单模态、多模态和多智能体协作方法，并强调了开放性挑战和未来研究方向。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Decoupled Functional Evaluation of Autonomous Driving Models via Feature Map Quality Scoring",
+        "summary": "End-to-end models are emerging as the mainstream in autonomous driving\nperception and planning. However, the lack of explicit supervision signals for\nintermediate functional modules leads to opaque operational mechanisms and\nlimited interpretability, making it challenging for traditional methods to\nindependently evaluate and train these modules. Pioneering in the issue, this\nstudy builds upon the feature map-truth representation similarity-based\nevaluation framework and proposes an independent evaluation method based on\nFeature Map Convergence Score (FMCS). A Dual-Granularity Dynamic Weighted\nScoring System (DG-DWSS) is constructed, formulating a unified quantitative\nmetric - Feature Map Quality Score - to enable comprehensive evaluation of the\nquality of feature maps generated by functional modules. A CLIP-based Feature\nMap Quality Evaluation Network (CLIP-FMQE-Net) is further developed, combining\nfeature-truth encoders and quality score prediction heads to enable real-time\nquality analysis of feature maps generated by functional modules. Experimental\nresults on the NuScenes dataset demonstrate that integrating our evaluation\nmodule into the training improves 3D object detection performance, achieving a\n3.89 percent gain in NDS. These results verify the effectiveness of our method\nin enhancing feature representation quality and overall model performance.",
+        "url": "http://arxiv.org/abs/2508.07552v1",
+        "published_date": "2025-08-11T02:24:08+00:00",
+        "updated_date": "2025-08-11T02:24:08+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ludan Zhang",
+            "Sihan Wang",
+            "Yuqi Dai",
+            "Shuofei Qiao",
+            "Lei He"
+        ],
+        "tldr": "This paper proposes a Feature Map Convergence Score (FMCS) and a CLIP-based network (CLIP-FMQE-Net) to evaluate and improve the quality of feature maps in autonomous driving models, demonstrating improved 3D object detection performance.",
+        "tldr_zh": "该论文提出了一种特征图收敛评分 (FMCS) 和一个基于 CLIP 的网络 (CLIP-FMQE-Net) 来评估和提高自动驾驶模型中特征图的质量，实验结果表明其能提高 3D 目标检测性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    }
+]
