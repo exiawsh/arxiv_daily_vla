@@ -1,0 +1,230 @@
+[
+    {
+        "title": "PTQAT: A Hybrid Parameter-Efficient Quantization Algorithm for 3D Perception Tasks",
+        "summary": "Post-Training Quantization (PTQ) and Quantization-Aware Training (QAT)\nrepresent two mainstream model quantization approaches. However, PTQ often\nleads to unacceptable performance degradation in quantized models, while QAT\nimposes substantial GPU memory requirements and extended training time due to\nweight fine-tuning.In this paper, we propose PTQAT, a novel general hybrid\nquantization algorithm for the efficient deployment of 3D perception networks.\nTo address the speed accuracy trade-off between PTQ and QAT, our method selects\ncritical layers for QAT fine-tuning and performs PTQ on the remaining layers.\nContrary to intuition, fine-tuning the layers with smaller output discrepancies\nbefore and after quantization, rather than those with larger discrepancies,\nactually leads to greater improvements in the model's quantization accuracy.\nThis means we better compensate for quantization errors during their\npropagation, rather than addressing them at the point where they occur. The\nproposed PTQAT achieves similar performance to QAT with more efficiency by\nfreezing nearly 50% of quantifiable layers. Additionally, PTQAT is a universal\nquantization method that supports various quantization bit widths (4 bits) as\nwell as different model architectures, including CNNs and Transformers. The\nexperimental results on nuScenes across diverse 3D perception tasks, including\nobject detection, semantic segmentation, and occupancy prediction, show that\nour method consistently outperforms QAT-only baselines. Notably, it achieves\n0.2%-0.9% NDS and 0.3%-1.0% mAP gains in object detection, 0.3%-2.0% mIoU gains\nin semantic segmentation and occupancy prediction while fine-tuning fewer\nweights.",
+        "url": "http://arxiv.org/abs/2508.10557v1",
+        "published_date": "2025-08-14T11:55:21+00:00",
+        "updated_date": "2025-08-14T11:55:21+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Xinhao Wang",
+            "Zhiwei Lin",
+            "Zhongyu Xia",
+            "Yongtao Wang"
+        ],
+        "tldr": "The paper introduces PTQAT, a hybrid quantization method that combines PTQ and QAT for efficient 3D perception. It selectively fine-tunes layers based on output discrepancies, achieving better accuracy than QAT with less computational cost.",
+        "tldr_zh": "该论文介绍了一种混合量化方法PTQAT，它结合了PTQ和QAT，以实现高效的3D感知。该方法基于输出差异有选择地微调层，与QAT相比，以更少的计算成本实现了更好的精度。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "STRIDE-QA: Visual Question Answering Dataset for Spatiotemporal Reasoning in Urban Driving Scenes",
+        "summary": "Vision-Language Models (VLMs) have been applied to autonomous driving to\nsupport decision-making in complex real-world scenarios. However, their\ntraining on static, web-sourced image-text pairs fundamentally limits the\nprecise spatiotemporal reasoning required to understand and predict dynamic\ntraffic scenes. We address this critical gap with STRIDE-QA, a large-scale\nvisual question answering (VQA) dataset for physically grounded reasoning from\nan ego-centric perspective. Constructed from 100 hours of multi-sensor driving\ndata in Tokyo, capturing diverse and challenging conditions, STRIDE-QA is the\nlargest VQA dataset for spatiotemporal reasoning in urban driving, offering 16\nmillion QA pairs over 285K frames. Grounded by dense, automatically generated\nannotations including 3D bounding boxes, segmentation masks, and multi-object\ntracks, the dataset uniquely supports both object-centric and ego-centric\nreasoning through three novel QA tasks that require spatial localization and\ntemporal prediction. Our benchmarks demonstrate that existing VLMs struggle\nsignificantly, achieving near-zero scores on prediction consistency. In\ncontrast, VLMs fine-tuned on STRIDE-QA exhibit dramatic performance gains,\nachieving 55% success in spatial localization and 28% consistency in future\nmotion prediction, compared to near-zero scores from general-purpose VLMs.\nTherefore, STRIDE-QA establishes a comprehensive foundation for developing more\nreliable VLMs for safety-critical autonomous systems.",
+        "url": "http://arxiv.org/abs/2508.10427v1",
+        "published_date": "2025-08-14T07:57:06+00:00",
+        "updated_date": "2025-08-14T07:57:06+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Keishi Ishihara",
+            "Kento Sasaki",
+            "Tsubasa Takahashi",
+            "Daiki Shiono",
+            "Yu Yamaguchi"
+        ],
+        "tldr": "The paper introduces STRIDE-QA, a large-scale VQA dataset for spatiotemporal reasoning in autonomous driving scenarios, showing that fine-tuning VLMs on this dataset significantly improves their performance in spatial localization and future motion prediction.",
+        "tldr_zh": "该论文介绍了STRIDE-QA，一个大规模的VQA数据集，用于自动驾驶场景中的时空推理。实验表明，在该数据集上微调视觉语言模型（VLMs）可以显著提高其在空间定位和未来运动预测方面的性能。",
+        "relevance_score": 10,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Beyond conventional vision: RGB-event fusion for robust object detection in dynamic traffic scenarios",
+        "summary": "The dynamic range limitation of conventional RGB cameras reduces global\ncontrast and causes loss of high-frequency details such as textures and edges\nin complex traffic environments (e.g., nighttime driving, tunnels), hindering\ndiscriminative feature extraction and degrading frame-based object detection.\nTo address this, we integrate a bio-inspired event camera with an RGB camera to\nprovide high dynamic range information and propose a motion cue fusion network\n(MCFNet), which achieves optimal spatiotemporal alignment and adaptive\ncross-modal feature fusion under challenging lighting. Specifically, an event\ncorrection module (ECM) temporally aligns asynchronous event streams with image\nframes via optical-flow-based warping, jointly optimized with the detection\nnetwork to learn task-aware event representations. The event dynamic upsampling\nmodule (EDUM) enhances spatial resolution of event frames to match image\nstructures, ensuring precise spatiotemporal alignment. The cross-modal mamba\nfusion module (CMM) uses adaptive feature fusion with a novel interlaced\nscanning mechanism, effectively integrating complementary information for\nrobust detection. Experiments conducted on the DSEC-Det and PKU-DAVIS-SOD\ndatasets demonstrate that MCFNet significantly outperforms existing methods in\nvarious poor lighting and fast moving traffic scenarios. Notably, on the\nDSEC-Det dataset, MCFNet achieves a remarkable improvement, surpassing the best\nexisting methods by 7.4% in mAP50 and 1.7% in mAP metrics, respectively. The\ncode is available at https://github.com/Charm11492/MCFNet.",
+        "url": "http://arxiv.org/abs/2508.10704v1",
+        "published_date": "2025-08-14T14:48:21+00:00",
+        "updated_date": "2025-08-14T14:48:21+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zhanwen Liu",
+            "Yujing Sun",
+            "Yang Wang",
+            "Nan Yang",
+            "Shengbo Eben Li",
+            "Xiangmo Zhao"
+        ],
+        "tldr": "This paper introduces MCFNet, a novel RGB-event fusion network that integrates an event camera with an RGB camera to improve object detection in challenging lighting and fast-moving traffic scenarios. The network demonstrates significant performance improvements on DSEC-Det and PKU-DAVIS-SOD datasets.",
+        "tldr_zh": "该论文介绍了一种名为MCFNet的新型RGB事件融合网络，该网络将事件相机与RGB相机相结合，以改善在具有挑战性的光照和快速移动的交通场景中的物体检测。该网络在DSEC-Det和PKU-DAVIS-SOD数据集上表现出显著的性能提升。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Towards Powerful and Practical Patch Attacks for 2D Object Detection in Autonomous Driving",
+        "summary": "Learning-based autonomous driving systems remain critically vulnerable to\nadversarial patches, posing serious safety and security risks in their\nreal-world deployment. Black-box attacks, notable for their high attack success\nrate without model knowledge, are especially concerning, with their\ntransferability extensively studied to reduce computational costs compared to\nquery-based attacks. Previous transferability-based black-box attacks typically\nadopt mean Average Precision (mAP) as the evaluation metric and design training\nloss accordingly. However, due to the presence of multiple detected bounding\nboxes and the relatively lenient Intersection over Union (IoU) thresholds, the\nattack effectiveness of these approaches is often overestimated, resulting in\nreduced success rates in practical attacking scenarios. Furthermore, patches\ntrained on low-resolution data often fail to maintain effectiveness on\nhigh-resolution images, limiting their transferability to autonomous driving\ndatasets. To fill this gap, we propose P$^3$A, a Powerful and Practical Patch\nAttack framework for 2D object detection in autonomous driving, specifically\noptimized for high-resolution datasets. First, we introduce a novel metric,\nPractical Attack Success Rate (PASR), to more accurately quantify attack\neffectiveness with greater relevance for pedestrian safety. Second, we present\na tailored Localization-Confidence Suppression Loss (LCSL) to improve attack\ntransferability under PASR. Finally, to maintain the transferability for\nhigh-resolution datasets, we further incorporate the Probabilistic\nScale-Preserving Padding (PSPP) into the patch attack pipeline as a data\npreprocessing step. Extensive experiments show that P$^3$A outperforms\nstate-of-the-art attacks on unseen models and unseen high-resolution datasets,\nboth under the proposed practical IoU-based evaluation metric and the previous\nmAP-based metrics.",
+        "url": "http://arxiv.org/abs/2508.10600v1",
+        "published_date": "2025-08-14T12:41:32+00:00",
+        "updated_date": "2025-08-14T12:41:32+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yuxin Cao",
+            "Yedi Zhang",
+            "Wentao He",
+            "Yifan Liao",
+            "Yan Xiao",
+            "Chang Li",
+            "Zhiyong Huang",
+            "Jin Song Dong"
+        ],
+        "tldr": "The paper proposes a novel patch attack framework (P$^3$A) targeting 2D object detection in autonomous driving, specifically designed for high-resolution datasets and evaluated with a more practical metric (PASR) for pedestrian safety.",
+        "tldr_zh": "该论文提出了一种新的补丁攻击框架 (P$^3$A)，针对自动驾驶中的 2D 目标检测，专门为高分辨率数据集设计，并使用更实用的指标 (PASR) 评估行人安全。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "SpaRC-AD: A Baseline for Radar-Camera Fusion in End-to-End Autonomous Driving",
+        "summary": "End-to-end autonomous driving systems promise stronger performance through\nunified optimization of perception, motion forecasting, and planning. However,\nvision-based approaches face fundamental limitations in adverse weather\nconditions, partial occlusions, and precise velocity estimation - critical\nchallenges in safety-sensitive scenarios where accurate motion understanding\nand long-horizon trajectory prediction are essential for collision avoidance.\nTo address these limitations, we propose SpaRC-AD, a query-based end-to-end\ncamera-radar fusion framework for planning-oriented autonomous driving. Through\nsparse 3D feature alignment, and doppler-based velocity estimation, we achieve\nstrong 3D scene representations for refinement of agent anchors, map polylines\nand motion modelling. Our method achieves strong improvements over the\nstate-of-the-art vision-only baselines across multiple autonomous driving\ntasks, including 3D detection (+4.8% mAP), multi-object tracking (+8.3% AMOTA),\nonline mapping (+1.8% mAP), motion prediction (-4.0% mADE), and trajectory\nplanning (-0.1m L2 and -9% TPC). We achieve both spatial coherence and temporal\nconsistency on multiple challenging benchmarks, including real-world open-loop\nnuScenes, long-horizon T-nuScenes, and closed-loop simulator Bench2Drive. We\nshow the effectiveness of radar-based fusion in safety-critical scenarios where\naccurate motion understanding and long-horizon trajectory prediction are\nessential for collision avoidance. The source code of all experiments is\navailable at https://phi-wol.github.io/sparcad/",
+        "url": "http://arxiv.org/abs/2508.10567v1",
+        "published_date": "2025-08-14T12:02:41+00:00",
+        "updated_date": "2025-08-14T12:02:41+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Philipp Wolters",
+            "Johannes Gilg",
+            "Torben Teepe",
+            "Gerhard Rigoll"
+        ],
+        "tldr": "The paper presents SpaRC-AD, a novel camera-radar fusion framework for end-to-end autonomous driving, demonstrating improved performance in various tasks and safety-critical scenarios compared to vision-only baselines.",
+        "tldr_zh": "该论文提出了SpaRC-AD，一种用于端到端自动驾驶的新型摄像头-雷达融合框架，与仅使用视觉的基线相比，在各种任务和安全关键场景中表现出更高的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "CorrectNav: Self-Correction Flywheel Empowers Vision-Language-Action Navigation Model",
+        "summary": "Existing vision-and-language navigation models often deviate from the correct\ntrajectory when executing instructions. However, these models lack effective\nerror correction capability, hindering their recovery from errors. To address\nthis challenge, we propose Self-correction Flywheel, a novel post-training\nparadigm. Instead of considering the model's error trajectories on the training\nset as a drawback, our paradigm emphasizes their significance as a valuable\ndata source. We have developed a method to identify deviations in these error\ntrajectories and devised innovative techniques to automatically generate\nself-correction data for perception and action. These self-correction data\nserve as fuel to power the model's continued training. The brilliance of our\nparadigm is revealed when we re-evaluate the model on the training set,\nuncovering new error trajectories. At this time, the self-correction flywheel\nbegins to spin. Through multiple flywheel iterations, we progressively enhance\nour monocular RGB-based VLA navigation model CorrectNav. Experiments on R2R-CE\nand RxR-CE benchmarks show CorrectNav achieves new state-of-the-art success\nrates of 65.1% and 69.3%, surpassing prior best VLA navigation models by 8.2%\nand 16.4%. Real robot tests in various indoor and outdoor environments\ndemonstrate \\method's superior capability of error correction, dynamic obstacle\navoidance, and long instruction following.",
+        "url": "http://arxiv.org/abs/2508.10416v1",
+        "published_date": "2025-08-14T07:39:26+00:00",
+        "updated_date": "2025-08-14T07:39:26+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CL",
+            "cs.CV"
+        ],
+        "authors": [
+            "Zhuoyuan Yu",
+            "Yuxing Long",
+            "Zihan Yang",
+            "Chengyan Zeng",
+            "Hongwei Fan",
+            "Jiyao Zhang",
+            "Hao Dong"
+        ],
+        "tldr": "The paper introduces CorrectNav, a post-training paradigm called Self-correction Flywheel, to improve vision-language-action navigation models by iteratively training on automatically generated self-correction data from error trajectories, achieving state-of-the-art results on R2R-CE and RxR-CE.",
+        "tldr_zh": "该论文介绍了一种名为Self-correction Flywheel的后训练范式CorrectNav，通过迭代训练来自错误轨迹自动生成的自校正数据，来改进视觉-语言-动作导航模型，并在R2R-CE和RxR-CE上取得了最新的state-of-the-art结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "SC-Lane: Slope-aware and Consistent Road Height Estimation Framework for 3D Lane Detection",
+        "summary": "In this paper, we introduce SC-Lane, a novel slope-aware and temporally\nconsistent heightmap estimation framework for 3D lane detection. Unlike\nprevious approaches that rely on fixed slope anchors, SC-Lane adaptively\ndetermines the fusion of slope-specific height features, improving robustness\nto diverse road geometries. To achieve this, we propose a Slope-Aware Adaptive\nFeature module that dynamically predicts the appropriate weights from image\ncues for integrating multi-slope representations into a unified heightmap.\nAdditionally, a Height Consistency Module enforces temporal coherence, ensuring\nstable and accurate height estimation across consecutive frames, which is\ncrucial for real-world driving scenarios. To evaluate the effectiveness of\nSC-Lane, we employ three standardized metrics-Mean Absolute Error(MAE), Root\nMean Squared Error (RMSE), and threshold-based accuracy-which, although common\nin surface and depth estimation, have been underutilized for road height\nassessment. Using the LiDAR-derived heightmap dataset introduced in prior work\n[20], we benchmark our method under these metrics, thereby establishing a\nrigorous standard for future comparisons. Extensive experiments on the OpenLane\nbenchmark demonstrate that SC-Lane significantly improves both height\nestimation and 3D lane detection, achieving state-of-the-art performance with\nan F-score of 64.3%, outperforming existing methods by a notable margin. For\ndetailed results and a demonstration video, please refer to our project\npage:https://parkchaesong.github.io/sclane/",
+        "url": "http://arxiv.org/abs/2508.10411v1",
+        "published_date": "2025-08-14T07:34:56+00:00",
+        "updated_date": "2025-08-14T07:34:56+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Chaesong Park",
+            "Eunbin Seo",
+            "Jihyeon Hwang",
+            "Jongwoo Lim"
+        ],
+        "tldr": "The paper introduces SC-Lane, a novel framework for 3D lane detection that improves heightmap estimation by adaptively fusing slope-specific features and enforcing temporal consistency, achieving state-of-the-art performance on the OpenLane benchmark.",
+        "tldr_zh": "该论文介绍了SC-Lane，一种用于3D车道检测的新型框架，通过自适应融合特定斜率的特征并强制时间一致性来改进高度图估计，并在OpenLane基准测试中实现了最先进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "ReconVLA: Reconstructive Vision-Language-Action Model as Effective Robot Perceiver",
+        "summary": "Recent advances in Vision-Language-Action (VLA) models have enabled robotic\nagents to integrate multimodal understanding with action execution. However,\nour empirical analysis reveals that current VLAs struggle to allocate visual\nattention to target regions. Instead, visual attention is always dispersed. To\nguide the visual attention grounding on the correct target, we propose\nReconVLA, a reconstructive VLA model with an implicit grounding paradigm.\nConditioned on the model's visual outputs, a diffusion transformer aims to\nreconstruct the gaze region of the image, which corresponds to the target\nmanipulated objects. This process prompts the VLA model to learn fine-grained\nrepresentations and accurately allocate visual attention, thus effectively\nleveraging task-specific visual information and conducting precise\nmanipulation. Moreover, we curate a large-scale pretraining dataset comprising\nover 100k trajectories and 2 million data samples from open-source robotic\ndatasets, further boosting the model's generalization in visual reconstruction.\nExtensive experiments in simulation and the real world demonstrate the\nsuperiority of our implicit grounding method, showcasing its capabilities of\nprecise manipulation and generalization. Our project page is\nhttps://zionchow.github.io/ReconVLA/.",
+        "url": "http://arxiv.org/abs/2508.10333v1",
+        "published_date": "2025-08-14T04:20:19+00:00",
+        "updated_date": "2025-08-14T04:20:19+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Wenxuan Song",
+            "Ziyang Zhou",
+            "Han Zhao",
+            "Jiayi Chen",
+            "Pengxiang Ding",
+            "Haodong Yan",
+            "Yuxin Huang",
+            "Feilong Tang",
+            "Donglin Wang",
+            "Haoang Li"
+        ],
+        "tldr": "The paper introduces ReconVLA, a reconstructive Vision-Language-Action model that improves visual attention grounding for robotic manipulation by using a diffusion transformer to reconstruct the gaze region. It demonstrates improved performance on manipulation tasks in simulation and real-world scenarios.",
+        "tldr_zh": "该论文介绍了ReconVLA，一种重建式的视觉-语言-动作模型，通过使用扩散变换器重建注视区域，提高了机器人操作的视觉注意力定位。实验表明，该模型在模拟和现实环境中的操作任务中表现更优。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "From Pixel to Mask: A Survey of Out-of-Distribution Segmentation",
+        "summary": "Out-of-distribution (OoD) detection and segmentation have attracted growing\nattention as concerns about AI security rise. Conventional OoD detection\nmethods identify the existence of OoD objects but lack spatial localization,\nlimiting their usefulness in downstream tasks. OoD segmentation addresses this\nlimitation by localizing anomalous objects at pixel-level granularity. This\ncapability is crucial for safety-critical applications such as autonomous\ndriving, where perception modules must not only detect but also precisely\nsegment OoD objects, enabling targeted control actions and enhancing overall\nsystem robustness. In this survey, we group current OoD segmentation approaches\ninto four categories: (i) test-time OoD segmentation, (ii) outlier exposure for\nsupervised training, (iii) reconstruction-based methods, (iv) and approaches\nthat leverage powerful models. We systematically review recent advances in OoD\nsegmentation for autonomous-driving scenarios, identify emerging challenges,\nand discuss promising future research directions.",
+        "url": "http://arxiv.org/abs/2508.10309v1",
+        "published_date": "2025-08-14T03:26:56+00:00",
+        "updated_date": "2025-08-14T03:26:56+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Wenjie Zhao",
+            "Jia Li",
+            "Yunhui Guo"
+        ],
+        "tldr": "This paper surveys recent advances in out-of-distribution (OoD) segmentation, particularly in autonomous driving, categorizing methods and highlighting challenges and future directions. It focuses on localizing anomalous objects at the pixel level.",
+        "tldr_zh": "本文综述了异常检测分割(OoD)的最新进展，尤其是在自动驾驶领域，对方法进行了分类，并强调了挑战和未来的研究方向。重点在于以像素级精度定位异常对象。",
+        "relevance_score": 9,
+        "novelty_claim_score": 6,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    }
+]
