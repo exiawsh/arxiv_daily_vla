@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Autonomous Driving, VLA, 3D Understanding, Robotics) - August 07, 2025</title>
+    <title>ArXiv CS.CV Papers (Autonomous Driving, VLA, 3D Understanding, Robotics) - August 16, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>VLM Daily Papers</h1>
         <p>Daily papers related to VLA/AV/3D Understanding from cs.CV</p>
         
-            <p>August 07, 2025</p>
+            <p>August 16, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,32 +215,36 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">RiemanLine: Riemannian Manifold Representation of 3D Lines for Factor Graph Optimization</h2>
+            <h2 class="paper-title">Visual Perception Engine: Fast and Flexible Multi-Head Inference for Robotic Vision Tasks</h2>
             
-            <p class="paper-summary">Minimal parametrization of 3D lines plays a critical role in camera
-localization and structural mapping. Existing representations in robotics and
-computer vision predominantly handle independent lines, overlooking structural
-regularities such as sets of parallel lines that are pervasive in man-made
-environments. This paper introduces \textbf{RiemanLine}, a unified minimal
-representation for 3D lines formulated on Riemannian manifolds that jointly
-accommodates both individual lines and parallel-line groups. Our key idea is to
-decouple each line landmark into global and local components: a shared
-vanishing direction optimized on the unit sphere $\mathcal{S}^2$, and scaled
-normal vectors constrained on orthogonal subspaces, enabling compact encoding
-of structural regularities. For $n$ parallel lines, the proposed representation
-reduces the parameter space from $4n$ (orthonormal form) to $2n+2$, naturally
-embedding parallelism without explicit constraints. We further integrate this
-parameterization into a factor graph framework, allowing global direction
-alignment and local reprojection optimization within a unified manifold-based
-bundle adjustment. Extensive experiments on ICL-NUIM, TartanAir, and synthetic
-benchmarks demonstrate that our method achieves significantly more accurate
-pose estimation and line reconstruction, while reducing parameter
-dimensionality and improving convergence stability.</p>
+            <p class="paper-summary">Deploying multiple machine learning models on resource-constrained robotic
+platforms for different perception tasks often results in redundant
+computations, large memory footprints, and complex integration challenges. In
+response, this work presents Visual Perception Engine (VPEngine), a modular
+framework designed to enable efficient GPU usage for visual multitasking while
+maintaining extensibility and developer accessibility. Our framework
+architecture leverages a shared foundation model backbone that extracts image
+representations, which are efficiently shared, without any unnecessary GPU-CPU
+memory transfers, across multiple specialized task-specific model heads running
+in parallel. This design eliminates the computational redundancy inherent in
+feature extraction component when deploying traditional sequential models while
+enabling dynamic task prioritization based on application demands. We
+demonstrate our framework's capabilities through an example implementation
+using DINOv2 as the foundation model with multiple task (depth, object
+detection and semantic segmentation) heads, achieving up to 3x speedup compared
+to sequential execution. Building on CUDA Multi-Process Service (MPS), VPEngine
+offers efficient GPU utilization and maintains a constant memory footprint
+while allowing per-task inference frequencies to be adjusted dynamically during
+runtime. The framework is written in Python and is open source with ROS2 C++
+(Humble) bindings for ease of use by the robotics community across diverse
+robotic platforms. Our example implementation demonstrates end-to-end real-time
+performance at $\geq$50 Hz on NVIDIA Jetson Orin AGX for TensorRT optimized
+models.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces RiemanLine, a novel Riemannian manifold representation for 3D lines that efficiently encodes both individual and parallel line groups, improving pose estimation and line reconstruction in factor graph optimization.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces VPEngine, a modular framework for efficient multi-task visual perception on robots, leveraging a shared foundation model backbone and dynamic task prioritization to achieve significant speedups and efficient GPU utilization.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了RiemanLine，一种新的黎曼流形3D线表示方法，可以有效地编码单个和平行线组，从而提高因子图优化中的姿态估计和线重建。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了VPEngine，一个用于机器人高效多任务视觉感知的模块化框架，它利用共享的基础模型骨干和动态任务优先级来实现显著的加速和高效的GPU利用率。</p>
             
 
             
@@ -304,18 +308,18 @@ dimensionality and improving convergence stability.</p>
                     
                 
                     
-                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.04335v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.11584v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Yanyan Li, Ze Yang, Keisuke Tateno, Federico Tombari Liang Zhao, Gim Hee Lee</p>
+            <p class="paper-authors">Authors: Jakub Łucki, Jonathan Becktor, Georgios Georgakis, Robert Royce, Shehryar Khattak</p>
             
         </motion.div>
         
@@ -327,38 +331,33 @@ dimensionality and improving convergence stability.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Segment Any Vehicle: Semantic and Visual Context Driven SAM and A Benchmark</h2>
+            <h2 class="paper-title">Relative Position Matters: Trajectory Prediction and Planning with Polar Representation</h2>
             
-            <p class="paper-summary">With the rapid advancement of autonomous driving, vehicle perception,
-particularly detection and segmentation, has placed increasingly higher demands
-on algorithmic performance. Pre-trained large segmentation models, especially
-Segment Anything Model (SAM), have sparked significant interest and inspired
-new research directions in artificial intelligence. However, SAM cannot be
-directly applied to the fine-grained task of vehicle part segmentation, as its
-text-prompted segmentation functionality is not publicly accessible, and the
-mask regions generated by its default mode lack semantic labels, limiting its
-utility in structured, category-specific segmentation tasks. To address these
-limitations, we propose SAV, a novel framework comprising three core
-components: a SAM-based encoder-decoder, a vehicle part knowledge graph, and a
-context sample retrieval encoding module. The knowledge graph explicitly models
-the spatial and geometric relationships among vehicle parts through a
-structured ontology, effectively encoding prior structural knowledge.
-Meanwhile, the context retrieval module enhances segmentation by identifying
-and leveraging visually similar vehicle instances from training data, providing
-rich contextual priors for improved generalization. Furthermore, we introduce a
-new large-scale benchmark dataset for vehicle part segmentation, named
-VehicleSeg10K, which contains 11,665 high-quality pixel-level annotations
-across diverse scenes and viewpoints. We conduct comprehensive experiments on
-this dataset and two other datasets, benchmarking multiple representative
-baselines to establish a solid foundation for future research and comparison. %
-Both the dataset and source code of this paper will be released upon
-acceptance. Both the dataset and source code of this paper will be released on
-https://github.com/Event-AHU/SAV</p>
+            <p class="paper-summary">Trajectory prediction and planning in autonomous driving are highly
+challenging due to the complexity of predicting surrounding agents' movements
+and planning the ego agent's actions in dynamic environments. Existing methods
+encode map and agent positions and decode future trajectories in Cartesian
+coordinates. However, modeling the relationships between the ego vehicle and
+surrounding traffic elements in Cartesian space can be suboptimal, as it does
+not naturally capture the varying influence of different elements based on
+their relative distances and directions. To address this limitation, we adopt
+the Polar coordinate system, where positions are represented by radius and
+angle. This representation provides a more intuitive and effective way to model
+spatial changes and relative relationships, especially in terms of distance and
+directional influence. Based on this insight, we propose Polaris, a novel
+method that operates entirely in Polar coordinates, distinguishing itself from
+conventional Cartesian-based approaches. By leveraging the Polar
+representation, this method explicitly models distance and direction variations
+and captures relative relationships through dedicated encoding and refinement
+modules, enabling more structured and spatially aware trajectory prediction and
+planning. Extensive experiments on the challenging prediction (Argoverse 2) and
+planning benchmarks (nuPlan) demonstrate that Polaris achieves state-of-the-art
+performance.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces SAV, a framework leveraging SAM, a vehicle part knowledge graph, and context retrieval for fine-grained vehicle part segmentation, along with a new large-scale benchmark dataset (VehicleSeg10K). This addresses SAM's limitations for structured vehicle part segmentation.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Polaris, a novel trajectory prediction and planning method for autonomous driving that leverages Polar coordinates to explicitly model distance and direction variations, achieving state-of-the-art performance on Argoverse 2 and nuPlan benchmarks.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了SAV框架，利用SAM、车辆部件知识图谱和上下文检索进行细粒度的车辆部件分割，并发布了一个新的大型基准数据集（VehicleSeg10K）。这解决了SAM在结构化车辆部件分割中的局限性。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为Polaris的新型自动驾驶轨迹预测和规划方法，该方法利用极坐标来显式地建模距离和方向的变化，在Argoverse 2和nuPlan基准测试中实现了最先进的性能。</p>
             
 
             
@@ -368,16 +367,16 @@ https://github.com/Event-AHU/SAV</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
@@ -422,18 +421,18 @@ https://github.com/Event-AHU/SAV</p>
                     
                 
                     
-                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.04260v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.11492v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Xiao Wang, Ziwen Wang, Wentao Wu, Anjie Wang, Jiashu Wu, Yantao Pan, Chenglong Li</p>
+            <p class="paper-authors">Authors: Bozhou Zhang, Nan Song, Bingzhao Gao, Li Zhang</p>
             
         </motion.div>
         
@@ -445,29 +444,33 @@ https://github.com/Event-AHU/SAV</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Occupancy Learning with Spatiotemporal Memory</h2>
+            <h2 class="paper-title">Perception in Plan: Coupled Perception and Planning for End-to-End Autonomous Driving</h2>
             
-            <p class="paper-summary">3D occupancy becomes a promising perception representation for autonomous
-driving to model the surrounding environment at a fine-grained scale. However,
-it remains challenging to efficiently aggregate 3D occupancy over time across
-multiple input frames due to the high processing cost and the uncertainty and
-dynamics of voxels. To address this issue, we propose ST-Occ, a scene-level
-occupancy representation learning framework that effectively learns the
-spatiotemporal feature with temporal consistency. ST-Occ consists of two core
-designs: a spatiotemporal memory that captures comprehensive historical
-information and stores it efficiently through a scene-level representation and
-a memory attention that conditions the current occupancy representation on the
-spatiotemporal memory with a model of uncertainty and dynamic awareness. Our
-method significantly enhances the spatiotemporal representation learned for 3D
-occupancy prediction tasks by exploiting the temporal dependency between
-multi-frame inputs. Experiments show that our approach outperforms the
-state-of-the-art methods by a margin of 3 mIoU and reduces the temporal
-inconsistency by 29%.</p>
+            <p class="paper-summary">End-to-end autonomous driving has achieved remarkable advancements in recent
+years. Existing methods primarily follow a perception-planning paradigm, where
+perception and planning are executed sequentially within a fully differentiable
+framework for planning-oriented optimization. We further advance this paradigm
+through a perception-in-plan framework design, which integrates perception into
+the planning process. This design facilitates targeted perception guided by
+evolving planning objectives over time, ultimately enhancing planning
+performance. Building on this insight, we introduce VeteranAD, a coupled
+perception and planning framework for end-to-end autonomous driving. By
+incorporating multi-mode anchored trajectories as planning priors, the
+perception module is specifically designed to gather traffic elements along
+these trajectories, enabling comprehensive and targeted perception. Planning
+trajectories are then generated based on both the perception results and the
+planning priors. To make perception fully serve planning, we adopt an
+autoregressive strategy that progressively predicts future trajectories while
+focusing on relevant regions for targeted perception at each step. With this
+simple yet effective design, VeteranAD fully unleashes the potential of
+planning-oriented end-to-end methods, leading to more accurate and reliable
+driving behavior. Extensive experiments on the NAVSIM and Bench2Drive datasets
+demonstrate that our VeteranAD achieves state-of-the-art performance.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces ST-Occ, a framework for 3D occupancy prediction in autonomous driving that uses a spatiotemporal memory and attention mechanism to improve temporal consistency and accuracy compared to state-of-the-art methods.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces VeteranAD, a novel end-to-end autonomous driving framework that integrates perception into the planning process using an autoregressive strategy for targeted perception, achieving state-of-the-art results.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了ST-Occ，一个用于自动驾驶中3D occupancy预测的框架。该框架利用时空记忆和注意力机制来提高时间一致性和准确性，优于现有最佳方法。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了VeteranAD，一种新颖的端到端自动驾驶框架，它通过使用自回归策略进行有针对性的感知，将感知整合到规划过程中，从而实现了最先进的结果。</p>
             
 
             
@@ -493,8 +496,8 @@ inconsistency by 29%.</p>
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -538,11 +541,11 @@ inconsistency by 29%.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.04705v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.11488v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Ziyang Leng, Jiawei Yang, Wenlong Yi, Bolei Zhou</p>
+            <p class="paper-authors">Authors: Bozhou Zhang, Jingyu Li, Nan Song, Li Zhang</p>
             
         </motion.div>
         
@@ -554,29 +557,37 @@ inconsistency by 29%.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">BEVCon: Advancing Bird's Eye View Perception with Contrastive Learning</h2>
+            <h2 class="paper-title">ImagiDrive: A Unified Imagination-and-Planning Framework for Autonomous Driving</h2>
             
-            <p class="paper-summary">We present BEVCon, a simple yet effective contrastive learning framework
-designed to improve Bird's Eye View (BEV) perception in autonomous driving. BEV
-perception offers a top-down-view representation of the surrounding
-environment, making it crucial for 3D object detection, segmentation, and
-trajectory prediction tasks. While prior work has primarily focused on
-enhancing BEV encoders and task-specific heads, we address the underexplored
-potential of representation learning in BEV models. BEVCon introduces two
-contrastive learning modules: an instance feature contrast module for refining
-BEV features and a perspective view contrast module that enhances the image
-backbone. The dense contrastive learning designed on top of detection losses
-leads to improved feature representations across both the BEV encoder and the
-backbone. Extensive experiments on the nuScenes dataset demonstrate that BEVCon
-achieves consistent performance gains, achieving up to +2.4% mAP improvement
-over state-of-the-art baselines. Our results highlight the critical role of
-representation learning in BEV perception and offer a complementary avenue to
-conventional task-specific optimizations.</p>
+            <p class="paper-summary">Autonomous driving requires rich contextual comprehension and precise
+predictive reasoning to navigate dynamic and complex environments safely.
+Vision-Language Models (VLMs) and Driving World Models (DWMs) have
+independently emerged as powerful recipes addressing different aspects of this
+challenge. VLMs provide interpretability and robust action prediction through
+their ability to understand multi-modal context, while DWMs excel in generating
+detailed and plausible future driving scenarios essential for proactive
+planning. Integrating VLMs with DWMs is an intuitive, promising, yet
+understudied strategy to exploit the complementary strengths of accurate
+behavioral prediction and realistic scene generation. Nevertheless, this
+integration presents notable challenges, particularly in effectively connecting
+action-level decisions with high-fidelity pixel-level predictions and
+maintaining computational efficiency. In this paper, we propose ImagiDrive, a
+novel end-to-end autonomous driving framework that integrates a VLM-based
+driving agent with a DWM-based scene imaginer to form a unified
+imagination-and-planning loop. The driving agent predicts initial driving
+trajectories based on multi-modal inputs, guiding the scene imaginer to
+generate corresponding future scenarios. These imagined scenarios are
+subsequently utilized to iteratively refine the driving agent's planning
+decisions. To address efficiency and predictive accuracy challenges inherent in
+this integration, we introduce an early stopping mechanism and a trajectory
+selection strategy. Extensive experimental validation on the nuScenes and
+NAVSIM datasets demonstrates the robustness and superiority of ImagiDrive over
+previous alternatives under both open-loop and closed-loop conditions.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: BEVCon introduces a contrastive learning framework for improving Bird's Eye View perception in autonomous driving, achieving significant mAP improvements on the nuScenes dataset by enhancing both BEV features and image backbone representations.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: ImagiDrive is a novel autonomous driving framework integrating a VLM-based driving agent with a DWM-based scene imaginer for improved planning and robustness, validated on nuScenes and NAVSIM datasets.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: BEVCon 提出了一个对比学习框架，用于提升自动驾驶中的鸟瞰图视角感知能力。通过增强鸟瞰图特征和图像骨干网络的表示，在 nuScenes 数据集上实现了显著的 mAP 提升。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: ImagiDrive是一个新的自动驾驶框架，它集成了基于VLM的驾驶代理和基于DWM的场景想象器，以提高规划和鲁棒性，并在nuScenes和NAVSIM数据集上进行了验证。</p>
             
 
             
@@ -594,8 +605,8 @@ conventional task-specific optimizations.</p>
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -647,11 +658,11 @@ conventional task-specific optimizations.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.04702v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.11428v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Ziyang Leng, Jiawei Yang, Zhicheng Ren, Bolei Zhou</p>
+            <p class="paper-authors">Authors: Jingyu Li, Bozhou Zhang, Xin Jin, Jiankang Deng, Xiatian Zhu, Li Zhang</p>
             
         </motion.div>
         
@@ -663,29 +674,29 @@ conventional task-specific optimizations.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">TurboTrain: Towards Efficient and Balanced Multi-Task Learning for Multi-Agent Perception and Prediction</h2>
+            <h2 class="paper-title">HOID-R1: Reinforcement Learning for Open-World Human-Object Interaction Detection Reasoning with Multimodal Large Language Model</h2>
             
-            <p class="paper-summary">End-to-end training of multi-agent systems offers significant advantages in
-improving multi-task performance. However, training such models remains
-challenging and requires extensive manual design and monitoring. In this work,
-we introduce TurboTrain, a novel and efficient training framework for
-multi-agent perception and prediction. TurboTrain comprises two key components:
-a multi-agent spatiotemporal pretraining scheme based on masked reconstruction
-learning and a balanced multi-task learning strategy based on gradient conflict
-suppression. By streamlining the training process, our framework eliminates the
-need for manually designing and tuning complex multi-stage training pipelines,
-substantially reducing training time and improving performance. We evaluate
-TurboTrain on a real-world cooperative driving dataset, V2XPnP-Seq, and
-demonstrate that it further improves the performance of state-of-the-art
-multi-agent perception and prediction models. Our results highlight that
-pretraining effectively captures spatiotemporal multi-agent features and
-significantly benefits downstream tasks. Moreover, the proposed balanced
-multi-task learning strategy enhances detection and prediction.</p>
+            <p class="paper-summary">Understanding and recognizing human-object interaction (HOI) is a pivotal
+application in AR/VR and robotics. Recent open-vocabulary HOI detection
+approaches depend exclusively on large language models for richer textual
+prompts, neglecting their inherent 3D spatial understanding capabilities. To
+address this shortcoming, we introduce HOID-R1, the first HOI detection
+framework that integrates chain-of-thought (CoT) guided supervised fine-tuning
+(SFT) with group relative policy optimization (GRPO) within a reinforcement
+learning (RL) paradigm. Specifically, we initially apply SFT to imbue the model
+with essential reasoning capabilities, forcing the model to articulate its
+thought process in the output. Subsequently, we integrate GRPO to leverage
+multi-reward signals for policy optimization, thereby enhancing alignment
+across diverse modalities. To mitigate hallucinations in the CoT reasoning, we
+introduce an "MLLM-as-a-judge" mechanism that supervises the CoT outputs,
+further improving generalization. Extensive experiments show that HOID-R1
+achieves state-of-the-art performance on HOI detection benchmarks and
+outperforms existing methods in open-world generalization to novel scenarios.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: TurboTrain is a new training framework for multi-agent perception and prediction that uses spatiotemporal pretraining and gradient conflict suppression for balanced multi-task learning, improving performance and reducing training time.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces HOID-R1, a reinforcement learning framework for open-world human-object interaction detection that integrates supervised fine-tuning with group relative policy optimization, leveraging multimodal large language models for improved reasoning and generalization.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: TurboTrain是一个新的多智能体感知和预测训练框架，它使用时空预训练和梯度冲突抑制来实现平衡的多任务学习，从而提高性能并减少训练时间。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了HOID-R1，一个用于开放世界人-物交互检测的强化学习框架，它结合了监督式微调与群体相对策略优化，利用多模态大型语言模型来提高推理和泛化能力。</p>
             
 
             
@@ -695,24 +706,24 @@ multi-task learning strategy enhances detection and prediction.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
                     <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
+                    <span class="rating-label">Novelty:</span>
                     
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                     <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -756,11 +767,11 @@ multi-task learning strategy enhances detection and prediction.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.04682v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.11350v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Zewei Zhou, Seth Z. Zhao, Tianhui Cai, Zhiyu Huang, Bolei Zhou, Jiaqi Ma</p>
+            <p class="paper-authors">Authors: Zhenhao Zhang, Hanqing Wang, Xiangyu Zeng, Ziyu Cheng, Jiaxin Liu, Haoyu Yan, Zhirui Liu, Kaiyang Ji, Tianxiang Gui, Ke Hu, Kangyi Chen, Yahao Fan, Mokai Pan</p>
             
         </motion.div>
         
@@ -772,30 +783,34 @@ multi-task learning strategy enhances detection and prediction.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">RoboTron-Sim: Improving Real-World Driving via Simulated Hard-Case</h2>
+            <h2 class="paper-title">Delving into Dynamic Scene Cue-Consistency for Robust 3D Multi-Object Tracking</h2>
             
-            <p class="paper-summary">Collecting real-world data for rare high-risk scenarios, long-tailed driving
-events, and complex interactions remains challenging, leading to poor
-performance of existing autonomous driving systems in these critical
-situations. In this paper, we propose RoboTron-Sim that improves real-world
-driving in critical situations by utilizing simulated hard cases. First, we
-develop a simulated dataset called Hard-case Augmented Synthetic Scenarios
-(HASS), which covers 13 high-risk edge-case categories, as well as balanced
-environmental conditions such as day/night and sunny/rainy. Second, we
-introduce Scenario-aware Prompt Engineering (SPE) and an Image-to-Ego Encoder
-(I2E Encoder) to enable multimodal large language models to effectively learn
-real-world challenging driving skills from HASS, via adapting to environmental
-deviations and hardware differences between real-world and simulated scenarios.
-Extensive experiments on nuScenes show that RoboTron-Sim improves driving
-performance in challenging scenarios by around 50%, achieving state-of-the-art
-results in real-world open-loop planning. Qualitative results further
-demonstrate the effectiveness of RoboTron-Sim in better managing rare high-risk
-driving scenarios. Project page: https://stars79689.github.io/RoboTron-Sim/</p>
+            <p class="paper-summary">3D multi-object tracking is a critical and challenging task in the field of
+autonomous driving. A common paradigm relies on modeling individual object
+motion, e.g., Kalman filters, to predict trajectories. While effective in
+simple scenarios, this approach often struggles in crowded environments or with
+inaccurate detections, as it overlooks the rich geometric relationships between
+objects. This highlights the need to leverage spatial cues. However, existing
+geometry-aware methods can be susceptible to interference from irrelevant
+objects, leading to ambiguous features and incorrect associations. To address
+this, we propose focusing on cue-consistency: identifying and matching stable
+spatial patterns over time. We introduce the Dynamic Scene Cue-Consistency
+Tracker (DSC-Track) to implement this principle. Firstly, we design a unified
+spatiotemporal encoder using Point Pair Features (PPF) to learn discriminative
+trajectory embeddings while suppressing interference. Secondly, our
+cue-consistency transformer module explicitly aligns consistent feature
+representations between historical tracks and current detections. Finally, a
+dynamic update mechanism preserves salient spatiotemporal information for
+stable online tracking. Extensive experiments on the nuScenes and Waymo Open
+Datasets validate the effectiveness and robustness of our approach. On the
+nuScenes benchmark, for instance, our method achieves state-of-the-art
+performance, reaching 73.2% and 70.3% AMOTA on the validation and test sets,
+respectively.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: RoboTron-Sim improves real-world autonomous driving in challenging situations by using a simulated dataset (HASS) and techniques like Scenario-aware Prompt Engineering and an Image-to-Ego Encoder to bridge the sim-to-real gap, achieving a 50% performance improvement on nuScenes.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces DSC-Track, a novel 3D multi-object tracking method that leverages dynamic scene cue-consistency by using Point Pair Features, a cue-consistency transformer, and a dynamic update mechanism to achieve state-of-the-art performance on nuScenes and Waymo datasets.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: RoboTron-Sim通过使用模拟数据集(HASS)以及情景感知提示工程和图像到自我编码器等技术来弥合模拟到现实的差距，从而改善了现实世界中具有挑战性场景下的自动驾驶性能，在nuScenes上实现了50%的性能提升。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了DSC-Track，一种新颖的3D多目标跟踪方法，通过利用动态场景线索一致性，使用点对特征、线索一致性变换器和动态更新机制，在nuScenes和Waymo数据集上实现了最先进的性能。</p>
             
 
             
@@ -866,11 +881,11 @@ driving scenarios. Project page: https://stars79689.github.io/RoboTron-Sim/</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.04642v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.11323v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Baihui Xiao, Chengjian Feng, Zhijian Huang, Feng yan, Yujie Zhong, Lin Ma</p>
+            <p class="paper-authors">Authors: Haonan Zhang, Xinyao Wang, Boxi Wu, Tu Zheng, Wang Yunhua, Zheng Yang</p>
             
         </motion.div>
         
@@ -882,30 +897,32 @@ driving scenarios. Project page: https://stars79689.github.io/RoboTron-Sim/</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Pseudo Depth Meets Gaussian: A Feed-forward RGB SLAM Baseline</h2>
+            <h2 class="paper-title">Scene Graph-Guided Proactive Replanning for Failure-Resilient Embodied Agent</h2>
             
-            <p class="paper-summary">Incrementally recovering real-sized 3D geometry from a pose-free RGB stream
-is a challenging task in 3D reconstruction, requiring minimal assumptions on
-input data. Existing methods can be broadly categorized into end-to-end and
-visual SLAM-based approaches, both of which either struggle with long sequences
-or depend on slow test-time optimization and depth sensors. To address this, we
-first integrate a depth estimator into an RGB-D SLAM system, but this approach
-is hindered by inaccurate geometric details in predicted depth. Through further
-investigation, we find that 3D Gaussian mapping can effectively solve this
-problem. Building on this, we propose an online 3D reconstruction method using
-3D Gaussian-based SLAM, combined with a feed-forward recurrent prediction
-module to directly infer camera pose from optical flow. This approach replaces
-slow test-time optimization with fast network inference, significantly
-improving tracking speed. Additionally, we introduce a local graph rendering
-technique to enhance robustness in feed-forward pose prediction. Experimental
-results on the Replica and TUM-RGBD datasets, along with a real-world
-deployment demonstration, show that our method achieves performance on par with
-the state-of-the-art SplaTAM, while reducing tracking time by more than 90\%.</p>
+            <p class="paper-summary">When humans perform everyday tasks, we naturally adjust our actions based on
+the current state of the environment. For instance, if we intend to put
+something into a drawer but notice it is closed, we open it first. However,
+many autonomous robots lack this adaptive awareness. They often follow
+pre-planned actions that may overlook subtle yet critical changes in the scene,
+which can result in actions being executed under outdated assumptions and
+eventual failure. While replanning is critical for robust autonomy, most
+existing methods respond only after failures occur, when recovery may be
+inefficient or infeasible. While proactive replanning holds promise for
+preventing failures in advance, current solutions often rely on manually
+designed rules and extensive supervision. In this work, we present a proactive
+replanning framework that detects and corrects failures at subtask boundaries
+by comparing scene graphs constructed from current RGB-D observations against
+reference graphs extracted from successful demonstrations. When the current
+scene fails to align with reference trajectories, a lightweight reasoning
+module is activated to diagnose the mismatch and adjust the plan. Experiments
+in the AI2-THOR simulator demonstrate that our approach detects semantic and
+spatial mismatches before execution failures occur, significantly improving
+task success and robustness.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a feed-forward RGB SLAM baseline using 3D Gaussian mapping and a recurrent prediction module for fast and robust pose estimation, achieving comparable performance to SplaTAM with significantly reduced tracking time.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces a scene graph-guided proactive replanning framework for embodied agents that detects and corrects potential failures by comparing current RGB-D observations with reference scene graphs from successful demonstrations, improving task success and robustness.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种前馈RGB SLAM基线，它使用3D高斯映射和一个循环预测模块来实现快速而鲁棒的姿态估计。该方法在性能上与SplaTAM相当，但显著降低了跟踪时间。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一个场景图引导的主动重规划框架，用于具身智能体，通过比较当前的 RGB-D 观测与来自成功演示的参考场景图，检测并纠正潜在的失败，从而提高任务的成功率和鲁棒性。</p>
             
 
             
@@ -976,11 +993,11 @@ the state-of-the-art SplaTAM, while reducing tracking time by more than 90\%.</p
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.04597v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.11286v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Linqing Zhao, Xiuwei Xu, Yirui Wang, Hao Wang, Wenzhao Zheng, Yansong Tang, Haibin Yan, Jiwen Lu</p>
+            <p class="paper-authors">Authors: Che Rin Yu, Daewon Chae, Dabin Seo, Sangwon Lee, Hyeongwoo Im, Jinkyu Kim</p>
             
         </motion.div>
         
@@ -992,253 +1009,29 @@ the state-of-the-art SplaTAM, while reducing tracking time by more than 90\%.</p
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">SplitGaussian: Reconstructing Dynamic Scenes via Visual Geometry Decomposition</h2>
+            <h2 class="paper-title">Domain-aware Category-level Geometry Learning Segmentation for 3D Point Clouds</h2>
             
-            <p class="paper-summary">Reconstructing dynamic 3D scenes from monocular video remains fundamentally
-challenging due to the need to jointly infer motion, structure, and appearance
-from limited observations. Existing dynamic scene reconstruction methods based
-on Gaussian Splatting often entangle static and dynamic elements in a shared
-representation, leading to motion leakage, geometric distortions, and temporal
-flickering. We identify that the root cause lies in the coupled modeling of
-geometry and appearance across time, which hampers both stability and
-interpretability. To address this, we propose \textbf{SplitGaussian}, a novel
-framework that explicitly decomposes scene representations into static and
-dynamic components. By decoupling motion modeling from background geometry and
-allowing only the dynamic branch to deform over time, our method prevents
-motion artifacts in static regions while supporting view- and time-dependent
-appearance refinement. This disentangled design not only enhances temporal
-consistency and reconstruction fidelity but also accelerates convergence.
-Extensive experiments demonstrate that SplitGaussian outperforms prior
-state-of-the-art methods in rendering quality, geometric stability, and motion
-separation.</p>
+            <p class="paper-summary">Domain generalization in 3D segmentation is a critical challenge in deploying
+models to unseen environments. Current methods mitigate the domain shift by
+augmenting the data distribution of point clouds. However, the model learns
+global geometric patterns in point clouds while ignoring the category-level
+distribution and alignment. In this paper, a category-level geometry learning
+framework is proposed to explore the domain-invariant geometric features for
+domain generalized 3D semantic segmentation. Specifically, Category-level
+Geometry Embedding (CGE) is proposed to perceive the fine-grained geometric
+properties of point cloud features, which constructs the geometric properties
+of each class and couples geometric embedding to semantic learning. Secondly,
+Geometric Consistent Learning (GCL) is proposed to simulate the latent 3D
+distribution and align the category-level geometric embeddings, allowing the
+model to focus on the geometric invariant information to improve
+generalization. Experimental results verify the effectiveness of the proposed
+method, which has very competitive segmentation accuracy compared with the
+state-of-the-art domain generalized point cloud methods.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces SplitGaussian, a novel method for dynamic scene reconstruction from monocular video that decomposes scene representations into static and dynamic components, improving rendering quality and geometric stability.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了SplitGaussian，一种从单目视频重建动态场景的新方法，它将场景表示分解为静态和动态组件，从而提高渲染质量和几何稳定性。</p>
-            
-
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper proposes a category-level geometry learning framework for domain generalization in 3D point cloud segmentation, aiming to improve accuracy in unseen environments by focusing on domain-invariant geometric features.</p>
             
             
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2508.04224v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Jiahui Li, Shengeng Tang, Jingxuan He, Gang Huang, Zhangye Wang, Yantao Pan, Lechao Cheng</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.4, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">IDCNet: Guided Video Diffusion for Metric-Consistent RGBD Scene Generation with Precise Camera Control</h2>
-            
-            <p class="paper-summary">We present IDC-Net (Image-Depth Consistency Network), a novel framework
-designed to generate RGB-D video sequences under explicit camera trajectory
-control. Unlike approaches that treat RGB and depth generation separately,
-IDC-Net jointly synthesizes both RGB images and corresponding depth maps within
-a unified geometry-aware diffusion model. The joint learning framework
-strengthens spatial and geometric alignment across frames, enabling more
-precise camera control in the generated sequences. To support the training of
-this camera-conditioned model and ensure high geometric fidelity, we construct
-a camera-image-depth consistent dataset with metric-aligned RGB videos, depth
-maps, and accurate camera poses, which provides precise geometric supervision
-with notably improved inter-frame geometric consistency. Moreover, we introduce
-a geometry-aware transformer block that enables fine-grained camera control,
-enhancing control over the generated sequences. Extensive experiments show that
-IDC-Net achieves improvements over state-of-the-art approaches in both visual
-quality and geometric consistency of generated scene sequences. Notably, the
-generated RGB-D sequences can be directly feed for downstream 3D Scene
-reconstruction tasks without extra post-processing steps, showcasing the
-practical benefits of our joint learning framework. See more at
-https://idcnet-scene.github.io.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: IDC-Net is a novel diffusion model that jointly generates metric-consistent RGB-D video sequences with precise camera trajectory control, demonstrating improvements in visual quality, geometric consistency, and downstream 3D reconstruction tasks.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: IDC-Net是一种新型扩散模型，可以联合生成具有精确相机轨迹控制的、度量一致的RGB-D视频序列，在视觉质量、几何一致性和下游3D重建任务方面均有改进。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2508.04147v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Lijuan Liu, Wenfa Li, Dongbo Zhang, Shuo Wang, Shaohui Jiao</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.45, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">Intention Enhanced Diffusion Model for Multimodal Pedestrian Trajectory Prediction</h2>
-            
-            <p class="paper-summary">Predicting pedestrian motion trajectories is critical for path planning and
-motion control of autonomous vehicles. However, accurately forecasting crowd
-trajectories remains a challenging task due to the inherently multimodal and
-uncertain nature of human motion. Recent diffusion-based models have shown
-promising results in capturing the stochasticity of pedestrian behavior for
-trajectory prediction. However, few diffusion-based approaches explicitly
-incorporate the underlying motion intentions of pedestrians, which can limit
-the interpretability and precision of prediction models. In this work, we
-propose a diffusion-based multimodal trajectory prediction model that
-incorporates pedestrians' motion intentions into the prediction framework. The
-motion intentions are decomposed into lateral and longitudinal components, and
-a pedestrian intention recognition module is introduced to enable the model to
-effectively capture these intentions. Furthermore, we adopt an efficient
-guidance mechanism that facilitates the generation of interpretable
-trajectories. The proposed framework is evaluated on two widely used human
-trajectory prediction benchmarks, ETH and UCY, on which it is compared against
-state-of-the-art methods. The experimental results demonstrate that our method
-achieves competitive performance.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a diffusion-based multimodal trajectory prediction model that incorporates pedestrian motion intentions, decomposed into lateral and longitudinal components, achieving competitive performance on ETH and UCY datasets.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种基于扩散的多模态轨迹预测模型，该模型结合了行人运动意图（分解为横向和纵向分量），并在 ETH 和 UCY 数据集上取得了有竞争力的性能。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种类别级别的几何学习框架，用于三维点云分割中的领域泛化，旨在通过关注领域不变的几何特征来提高在未见环境中的准确性。</p>
             
 
             
@@ -1258,6 +1051,446 @@ achieves competitive performance.</p>
                     
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
                     <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2508.11265v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Pei He, Lingling Li, Licheng Jiao, Ronghua Shang, Fang Liu, Shuang Wang, Xu Liu, Wenping Ma</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.4, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">A CLIP-based Uncertainty Modal Modeling (UMM) Framework for Pedestrian Re-Identification in Autonomous Driving</h2>
+            
+            <p class="paper-summary">Re-Identification (ReID) is a critical technology in intelligent perception
+systems, especially within autonomous driving, where onboard cameras must
+identify pedestrians across views and time in real-time to support safe
+navigation and trajectory prediction. However, the presence of uncertain or
+missing input modalities--such as RGB, infrared, sketches, or textual
+descriptions--poses significant challenges to conventional ReID approaches.
+While large-scale pre-trained models offer strong multimodal semantic modeling
+capabilities, their computational overhead limits practical deployment in
+resource-constrained environments. To address these challenges, we propose a
+lightweight Uncertainty Modal Modeling (UMM) framework, which integrates a
+multimodal token mapper, synthetic modality augmentation strategy, and
+cross-modal cue interactive learner. Together, these components enable unified
+feature representation, mitigate the impact of missing modalities, and extract
+complementary information across different data types. Additionally, UMM
+leverages CLIP's vision-language alignment ability to fuse multimodal inputs
+efficiently without extensive finetuning. Experimental results demonstrate that
+UMM achieves strong robustness, generalization, and computational efficiency
+under uncertain modality conditions, offering a scalable and practical solution
+for pedestrian re-identification in autonomous driving scenarios.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces a lightweight CLIP-based Uncertainty Modal Modeling (UMM) framework for pedestrian re-identification in autonomous driving, addressing the challenge of missing or uncertain input modalities and computational constraints.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种轻量级的基于CLIP的不确定性模态建模(UMM)框架，用于自动驾驶中的行人重识别，解决了输入模态缺失或不确定以及计算约束的挑战。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2508.11218v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Jialin Li, Shuqi Wu, Ning Wang</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.45, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">CHARM3R: Towards Unseen Camera Height Robust Monocular 3D Detector</h2>
+            
+            <p class="paper-summary">Monocular 3D object detectors, while effective on data from one ego camera
+height, struggle with unseen or out-of-distribution camera heights. Existing
+methods often rely on Plucker embeddings, image transformations or data
+augmentation. This paper takes a step towards this understudied problem by
+first investigating the impact of camera height variations on state-of-the-art
+(SoTA) Mono3D models. With a systematic analysis on the extended CARLA dataset
+with multiple camera heights, we observe that depth estimation is a primary
+factor influencing performance under height variations. We mathematically prove
+and also empirically observe consistent negative and positive trends in mean
+depth error of regressed and ground-based depth models, respectively, under
+camera height changes. To mitigate this, we propose Camera Height Robust
+Monocular 3D Detector (CHARM3R), which averages both depth estimates within the
+model. CHARM3R improves generalization to unseen camera heights by more than
+$45\%$, achieving SoTA performance on the CARLA dataset. Codes and Models at
+https://github.com/abhi1kumar/CHARM3R</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper addresses the problem of monocular 3D object detection performance degradation under varying camera heights by analyzing depth estimation errors and proposing CHARM3R, a method that averages regressed and ground-based depth estimates to improve generalization. The method achieves SoTA performance on the CARLA dataset.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文解决了单目3D物体检测在不同相机高度下性能下降的问题，通过分析深度估计误差，提出了CHARM3R，一种平均回归和基于地面的深度估计的方法，以提高泛化能力。该方法在CARLA数据集上取得了SoTA性能。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2508.11185v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Abhinav Kumar, Yuliang Guo, Zhihao Zhang, Xinyu Huang, Liu Ren, Xiaoming Liu</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.5, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">GenFlowRL: Shaping Rewards with Generative Object-Centric Flow in Visual Reinforcement Learning</h2>
+            
+            <p class="paper-summary">Recent advances have shown that video generation models can enhance robot
+learning by deriving effective robot actions through inverse dynamics. However,
+these methods heavily depend on the quality of generated data and struggle with
+fine-grained manipulation due to the lack of environment feedback. While
+video-based reinforcement learning improves policy robustness, it remains
+constrained by the uncertainty of video generation and the challenges of
+collecting large-scale robot datasets for training diffusion models. To address
+these limitations, we propose GenFlowRL, which derives shaped rewards from
+generated flow trained from diverse cross-embodiment datasets. This enables
+learning generalizable and robust policies from diverse demonstrations using
+low-dimensional, object-centric features. Experiments on 10 manipulation tasks,
+both in simulation and real-world cross-embodiment evaluations, demonstrate
+that GenFlowRL effectively leverages manipulation features extracted from
+generated object-centric flow, consistently achieving superior performance
+across diverse and challenging scenarios. Our Project Page:
+https://colinyu1.github.io/genflowrl</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: GenFlowRL improves visual reinforcement learning by deriving shaped rewards from generated object-centric flow trained on diverse cross-embodiment datasets, achieving superior performance in manipulation tasks.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: GenFlowRL通过从各种跨具身数据集中训练的生成对象中心流中获得塑造的奖励，从而改进了视觉强化学习，并在操作任务中实现了卓越的性能。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2508.11049v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Kelin Yu, Sheng Zhang, Harshit Soora, Furong Huang, Heng Huang, Pratap Tokekar, Ruohan Gao</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.55, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">Hyperspectral vs. RGB for Pedestrian Segmentation in Urban Driving Scenes: A Comparative Study</h2>
+            
+            <p class="paper-summary">Pedestrian segmentation in automotive perception systems faces critical
+safety challenges due to metamerism in RGB imaging, where pedestrians and
+backgrounds appear visually indistinguishable.. This study investigates the
+potential of hyperspectral imaging (HSI) for enhanced pedestrian segmentation
+in urban driving scenarios using the Hyperspectral City v2 (H-City) dataset. We
+compared standard RGB against two dimensionality-reduction approaches by
+converting 128-channel HSI data into three-channel representations: Principal
+Component Analysis (PCA) and optimal band selection using Contrast
+Signal-to-Noise Ratio with Joint Mutual Information Maximization (CSNR-JMIM).
+Three semantic segmentation models were evaluated: U-Net, DeepLabV3+, and
+SegFormer. CSNR-JMIM consistently outperformed RGB with an average improvements
+of 1.44% in Intersection over Union (IoU) and 2.18% in F1-score for pedestrian
+segmentation. Rider segmentation showed similar gains with 1.43% IoU and 2.25%
+F1-score improvements. These improved performance results from enhanced
+spectral discrimination of optimally selected HSI bands effectively reducing
+false positives. This study demonstrates robust pedestrian segmentation through
+optimal HSI band selection, showing significant potential for safety-critical
+automotive applications.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper compares hyperspectral imaging (HSI) with RGB for pedestrian and rider segmentation in urban driving, finding that dimensionality-reduced HSI using CSNR-JMIM outperforms RGB, improving IoU and F1-score.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文比较了高光谱成像 (HSI) 和 RGB 在城市驾驶中行人及骑行者分割方面的性能，发现使用 CSNR-JMIM 降维的 HSI 优于 RGB，提高了 IoU 和 F1 分数。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(6/10)</span>
                 </div>
                 
                 
@@ -1309,18 +1542,18 @@ achieves competitive performance.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.04229v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.11301v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Yu Liu, Zhijie Liu, Xiao Ren, You-Fu Li, He Kong</p>
+            <p class="paper-authors">Authors: Jiarong Li, Imad Ali Shah, Enda Ward, Martin Glavin, Edward Jones, Brian Deegan</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-08-18 04:04:46 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-08-18 04:13:43 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>
