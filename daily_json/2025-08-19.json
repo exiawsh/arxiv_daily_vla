@@ -1,0 +1,233 @@
+[
+    {
+        "title": "Grounding Actions in Camera Space: Observation-Centric Vision-Language-Action Policy",
+        "summary": "Vision-Language-Action (VLA) models frequently encounter challenges in\ngeneralizing to real-world environments due to inherent discrepancies between\nobservation and action spaces. Although training data are collected from\ndiverse camera perspectives, the models typically predict end-effector poses\nwithin the robot base coordinate frame, resulting in spatial inconsistencies.\nTo mitigate this limitation, we introduce the Observation-Centric VLA (OC-VLA)\nframework, which grounds action predictions directly in the camera observation\nspace. Leveraging the camera's extrinsic calibration matrix, OC-VLA transforms\nend-effector poses from the robot base coordinate system into the camera\ncoordinate system, thereby unifying prediction targets across heterogeneous\nviewpoints. This lightweight, plug-and-play strategy ensures robust alignment\nbetween perception and action, substantially improving model resilience to\ncamera viewpoint variations. The proposed approach is readily compatible with\nexisting VLA architectures, requiring no substantial modifications.\nComprehensive evaluations on both simulated and real-world robotic manipulation\ntasks demonstrate that OC-VLA accelerates convergence, enhances task success\nrates, and improves cross-view generalization. The code will be publicly\navailable.",
+        "url": "http://arxiv.org/abs/2508.13103v1",
+        "published_date": "2025-08-18T17:10:45+00:00",
+        "updated_date": "2025-08-18T17:10:45+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Tianyi Zhang",
+            "Haonan Duan",
+            "Haoran Hao",
+            "Yu Qiao",
+            "Jifeng Dai",
+            "Zhi Hou"
+        ],
+        "tldr": "The paper introduces Observation-Centric VLA (OC-VLA), a framework that grounds action predictions in camera space to improve generalization of vision-language-action models in robotic manipulation, particularly across different viewpoints.",
+        "tldr_zh": "该论文介绍了以观察为中心的视觉-语言-动作 (OC-VLA) 框架，该框架将动作预测定位在相机空间中，以提高视觉-语言-动作模型在机器人操作中的泛化能力，尤其是在不同视角下。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "SlimComm: Doppler-Guided Sparse Queries for Bandwidth-Efficient Cooperative 3-D Perception",
+        "summary": "Collaborative perception allows connected autonomous vehicles (CAVs) to\novercome occlusion and limited sensor range by sharing intermediate features.\nYet transmitting dense Bird's-Eye-View (BEV) feature maps can overwhelm the\nbandwidth available for inter-vehicle communication. We present SlimComm, a\ncommunication-efficient framework that integrates 4D radar Doppler with a\nquery-driven sparse scheme. SlimComm builds a motion-centric dynamic map to\ndistinguish moving from static objects and generates two query types: (i)\nreference queries on dynamic and high-confidence regions, and (ii) exploratory\nqueries probing occluded areas via a two-stage offset. Only query-specific BEV\nfeatures are exchanged and fused through multi-scale gated deformable\nattention, reducing payload while preserving accuracy. For evaluation, we\nrelease OPV2V-R and Adver-City-R, CARLA-based datasets with per-point Doppler\nradar. SlimComm achieves up to 90% lower bandwidth than full-map sharing while\nmatching or surpassing prior baselines across varied traffic densities and\nocclusions. Dataset and code will be available at: https://url.fzi.de/SlimComm.",
+        "url": "http://arxiv.org/abs/2508.13007v1",
+        "published_date": "2025-08-18T15:27:44+00:00",
+        "updated_date": "2025-08-18T15:27:44+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Melih Yazgan",
+            "Qiyuan Wu",
+            "Iramm Hamdard",
+            "Shiqi Li",
+            "J. Marius Zoellner"
+        ],
+        "tldr": "SlimComm is a communication-efficient framework for collaborative perception in autonomous vehicles that uses Doppler radar to guide sparse feature queries, significantly reducing bandwidth usage while maintaining accuracy. The paper also releases new datasets with per-point Doppler radar.",
+        "tldr_zh": "SlimComm是一个用于自动驾驶车辆协作感知的通信高效框架，它利用多普勒雷达引导稀疏特征查询，显著降低带宽使用，同时保持准确性。该论文还发布了带有逐点多普勒雷达的新数据集。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "CMF-IoU: Multi-Stage Cross-Modal Fusion 3D Object Detection with IoU Joint Prediction",
+        "summary": "Multi-modal methods based on camera and LiDAR sensors have garnered\nsignificant attention in the field of 3D detection. However, many prevalent\nworks focus on single or partial stage fusion, leading to insufficient feature\nextraction and suboptimal performance. In this paper, we introduce a\nmulti-stage cross-modal fusion 3D detection framework, termed CMF-IOU, to\neffectively address the challenge of aligning 3D spatial and 2D semantic\ninformation. Specifically, we first project the pixel information into 3D space\nvia a depth completion network to get the pseudo points, which unifies the\nrepresentation of the LiDAR and camera information. Then, a bilateral\ncross-view enhancement 3D backbone is designed to encode LiDAR points and\npseudo points. The first sparse-to-distant (S2D) branch utilizes an\nencoder-decoder structure to reinforce the representation of sparse LiDAR\npoints. The second residual view consistency (ResVC) branch is proposed to\nmitigate the influence of inaccurate pseudo points via both the 3D and 2D\nconvolution processes. Subsequently, we introduce an iterative voxel-point\naware fine grained pooling module, which captures the spatial information from\nLiDAR points and textural information from pseudo points in the proposal\nrefinement stage. To achieve more precise refinement during iteration, an\nintersection over union (IoU) joint prediction branch integrated with a novel\nproposals generation technique is designed to preserve the bounding boxes with\nboth high IoU and classification scores. Extensive experiments show the\nsuperior performance of our method on the KITTI, nuScenes and Waymo datasets.",
+        "url": "http://arxiv.org/abs/2508.12917v1",
+        "published_date": "2025-08-18T13:32:07+00:00",
+        "updated_date": "2025-08-18T13:32:07+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zhiwei Ning",
+            "Zhaojiang Liu",
+            "Xuanang Gao",
+            "Yifan Zuo",
+            "Jie Yang",
+            "Yuming Fang",
+            "Wei Liu"
+        ],
+        "tldr": "This paper presents CMF-IoU, a multi-stage cross-modal fusion 3D object detection framework that enhances feature extraction and performance by unifying LiDAR and camera data, using novel techniques like S2D, ResVC, and IoU joint prediction. Experiments show superior results on KITTI, nuScenes, and Waymo datasets.",
+        "tldr_zh": "本文提出了CMF-IoU，一个多阶段跨模态融合的三维物体检测框架，通过统一激光雷达和相机数据，并采用S2D、ResVC和IoU联合预测等新技术，增强了特征提取和性能。实验表明，该方法在KITTI、nuScenes和Waymo数据集上表现出色。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Argos: A Decentralized Federated System for Detection of Traffic Signs in CAVs",
+        "summary": "Connected and automated vehicles generate vast amounts of sensor data daily,\nraising significant privacy and communication challenges for centralized\nmachine learning approaches in perception tasks. This study presents a\ndecentralized, federated learning framework tailored for traffic sign detection\nin vehicular networks to enable collaborative model training without sharing\nraw data. The framework partitioned traffic sign classes across vehicles for\nspecialized local training using lightweight object detectors, aggregated model\nparameters via algorithms like FedProx, FedAdam and FedAVG in a simulated\nenvironment with the Flower framework, and evaluated multiple configurations\nincluding varying server rounds, local epochs, client participation fractions,\nand data distributions. Experiments demonstrated that increasing server rounds\nfrom 2 to 20 boosted accuracy from below 0.1 to over 0.8, moderate local epochs\n(8-10) provided optimal efficiency with accuracies around 0.67, higher client\nparticipation fractions enhanced generalization up to 0.83, FedProx\noutperformed other aggregators in handling heterogeneity, non-IID data\ndistributions reduced performance compared to IID, and training duration\nprimarily scaled with the number of rounds rather than aggregation strategy. We\nconclude that this federated approach may offer a scalable, privacy-preserving\nsolution for real-world vehicular deployments, potentially guiding future\nintegrations of robust aggregation and communication optimizations to advance\nintelligent transportation systems.",
+        "url": "http://arxiv.org/abs/2508.12712v1",
+        "published_date": "2025-08-18T08:22:57+00:00",
+        "updated_date": "2025-08-18T08:22:57+00:00",
+        "categories": [
+            "cs.LG",
+            "cs.CV",
+            "I.2.6; I.4.8"
+        ],
+        "authors": [
+            "Seyed Mahdi Haji Seyed Hossein",
+            "Alireza Hosseini",
+            "Soheil Hajian Manesh",
+            "Amirali Shahriary"
+        ],
+        "tldr": "This paper proposes a decentralized federated learning framework (Argos) for traffic sign detection in connected and automated vehicles, demonstrating the feasibility of collaborative model training without sharing raw data.",
+        "tldr_zh": "本文提出了一种分散式联邦学习框架（Argos），用于互联自动驾驶车辆中的交通标志检测，展示了在不共享原始数据的情况下进行协同模型训练的可行性。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Neural Rendering for Sensor Adaptation in 3D Object Detection",
+        "summary": "Autonomous vehicles often have varying camera sensor setups, which is\ninevitable due to restricted placement options for different vehicle types.\nTraining a perception model on one particular setup and evaluating it on a new,\ndifferent sensor setup reveals the so-called cross-sensor domain gap, typically\nleading to a degradation in accuracy. In this paper, we investigate the impact\nof the cross-sensor domain gap on state-of-the-art 3D object detectors. To this\nend, we introduce CamShift, a dataset inspired by nuScenes and created in CARLA\nto specifically simulate the domain gap between subcompact vehicles and sport\nutility vehicles (SUVs). Using CamShift, we demonstrate significant\ncross-sensor performance degradation, identify robustness dependencies on model\narchitecture, and propose a data-driven solution to mitigate the effect. On the\none hand, we show that model architectures based on a dense Bird's Eye View\n(BEV) representation with backward projection, such as BEVFormer, are the most\nrobust against varying sensor configurations. On the other hand, we propose a\nnovel data-driven sensor adaptation pipeline based on neural rendering, which\ncan transform entire datasets to match different camera sensor setups. Applying\nthis approach improves performance across all investigated 3D object detectors,\nmitigating the cross-sensor domain gap by a large margin and reducing the need\nfor new data collection by enabling efficient data reusability across vehicles\nwith different sensor setups. The CamShift dataset and the sensor adaptation\nbenchmark are available at https://dmholtz.github.io/camshift/.",
+        "url": "http://arxiv.org/abs/2508.12695v1",
+        "published_date": "2025-08-18T07:53:45+00:00",
+        "updated_date": "2025-08-18T07:53:45+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Felix Embacher",
+            "David Holtz",
+            "Jonas Uhrig",
+            "Marius Cordts",
+            "Markus Enzweiler"
+        ],
+        "tldr": "This paper introduces CamShift, a dataset for studying the cross-sensor domain gap in 3D object detection, and proposes a neural rendering-based sensor adaptation method to mitigate performance degradation across different vehicle sensor setups.",
+        "tldr_zh": "本文介绍了CamShift数据集，用于研究3D目标检测中跨传感器域的差距，并提出了一种基于神经渲染的传感器自适应方法，以减轻不同车辆传感器设置下的性能下降。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "TTA-DAME: Test-Time Adaptation with Domain Augmentation and Model Ensemble for Dynamic Driving Conditions",
+        "summary": "Test-time Adaptation (TTA) poses a challenge, requiring models to dynamically\nadapt and perform optimally on shifting target domains. This task is\nparticularly emphasized in real-world driving scenes, where weather domain\nshifts occur frequently. To address such dynamic changes, our proposed method,\nTTA-DAME, leverages source domain data augmentation into target domains.\nAdditionally, we introduce a domain discriminator and a specialized domain\ndetector to mitigate drastic domain shifts, especially from daytime to\nnighttime conditions. To further improve adaptability, we train multiple\ndetectors and consolidate their predictions through Non-Maximum Suppression\n(NMS). Our empirical validation demonstrates the effectiveness of our method,\nshowing significant performance enhancements on the SHIFT Benchmark.",
+        "url": "http://arxiv.org/abs/2508.12690v1",
+        "published_date": "2025-08-18T07:48:35+00:00",
+        "updated_date": "2025-08-18T07:48:35+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG"
+        ],
+        "authors": [
+            "Dongjae Jeon",
+            "Taeheon Kim",
+            "Seongwon Cho",
+            "Minhyuk Seo",
+            "Jonghyun Choi"
+        ],
+        "tldr": "The paper introduces TTA-DAME, a test-time adaptation method for autonomous driving that uses domain augmentation, a domain discriminator, and model ensembling to handle dynamic driving conditions and improve performance on the SHIFT Benchmark.",
+        "tldr_zh": "该论文介绍了TTA-DAME，一种用于自动驾驶的测试时自适应方法，该方法利用域增强、域判别器和模型集成来处理动态驾驶条件，并提高在SHIFT Benchmark上的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Refine-and-Contrast: Adaptive Instance-Aware BEV Representations for Multi-UAV Collaborative Object Detection",
+        "summary": "Multi-UAV collaborative 3D detection enables accurate and robust perception\nby fusing multi-view observations from aerial platforms, offering significant\nadvantages in coverage and occlusion handling, while posing new challenges for\ncomputation on resource-constrained UAV platforms. In this paper, we present\nAdaBEV, a novel framework that learns adaptive instance-aware BEV\nrepresentations through a refine-and-contrast paradigm. Unlike existing methods\nthat treat all BEV grids equally, AdaBEV introduces a Box-Guided Refinement\nModule (BG-RM) and an Instance-Background Contrastive Learning (IBCL) to\nenhance semantic awareness and feature discriminability. BG-RM refines only BEV\ngrids associated with foreground instances using 2D supervision and spatial\nsubdivision, while IBCL promotes stronger separation between foreground and\nbackground features via contrastive learning in BEV space. Extensive\nexperiments on the Air-Co-Pred dataset demonstrate that AdaBEV achieves\nsuperior accuracy-computation trade-offs across model scales, outperforming\nother state-of-the-art methods at low resolutions and approaching upper bound\nperformance while maintaining low-resolution BEV inputs and negligible\noverhead.",
+        "url": "http://arxiv.org/abs/2508.12684v1",
+        "published_date": "2025-08-18T07:37:14+00:00",
+        "updated_date": "2025-08-18T07:37:14+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zhongyao Li",
+            "Peirui Cheng",
+            "Liangjin Zhao",
+            "Chen Chen",
+            "Yundu Li",
+            "Zhechao Wang",
+            "Xue Yang",
+            "Xian Sun",
+            "Zhirui Wang"
+        ],
+        "tldr": "The paper introduces AdaBEV, a novel framework using a refine-and-contrast paradigm for multi-UAV collaborative object detection, achieving better accuracy-computation trade-offs on resource-constrained platforms by adaptively refining BEV representations.",
+        "tldr_zh": "该论文介绍了一种名为AdaBEV的新框架，该框架采用精炼和对比范式进行多无人机协同目标检测，通过自适应地精炼BEV表示，在资源受限的平台上实现了更好的精度-计算权衡。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "SpotVLM: Cloud-edge Collaborative Real-time VLM based on Context Transfer",
+        "summary": "Vision-Language Models (VLMs) are increasingly deployed in real-time\napplications such as autonomous driving and human-computer interaction, which\ndemand fast and reliable responses based on accurate perception. To meet these\nrequirements, existing systems commonly employ cloud-edge collaborative\narchitectures, such as partitioned Large Vision-Language Models (LVLMs) or task\noffloading strategies between Large and Small Vision-Language Models (SVLMs).\nHowever, these methods fail to accommodate cloud latency fluctuations and\noverlook the full potential of delayed but accurate LVLM responses. In this\nwork, we propose a novel cloud-edge collaborative paradigm for VLMs, termed\nContext Transfer, which treats the delayed outputs of LVLMs as historical\ncontext to provide real-time guidance for SVLMs inference. Based on this\nparadigm, we design SpotVLM, which incorporates both context replacement and\nvisual focus modules to refine historical textual input and enhance visual\ngrounding consistency. Extensive experiments on three real-time vision tasks\nacross four datasets demonstrate the effectiveness of the proposed framework.\nThe new paradigm lays the groundwork for more effective and latency-aware\ncollaboration strategies in future VLM systems.",
+        "url": "http://arxiv.org/abs/2508.12638v1",
+        "published_date": "2025-08-18T05:51:41+00:00",
+        "updated_date": "2025-08-18T05:51:41+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Chen Qian",
+            "Xinran Yu",
+            "Zewen Huang",
+            "Danyang Li",
+            "Qiang Ma",
+            "Fan Dang",
+            "Xuan Ding",
+            "Guangyong Shang",
+            "Zheng Yang"
+        ],
+        "tldr": "The paper introduces SpotVLM, a cloud-edge collaborative VLM framework leveraging 'Context Transfer' to improve real-time performance by using delayed LVLM outputs to guide SVLM inference, demonstrating effectiveness on real-time vision tasks.",
+        "tldr_zh": "该论文介绍了SpotVLM，一个云边协作的VLM框架，利用“上下文转移”来提升实时性能，它通过使用延迟的LVLM输出来指导SVLM的推理，并在实时视觉任务上展示了有效性。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "An Initial Study of Bird's-Eye View Generation for Autonomous Vehicles using Cross-View Transformers",
+        "summary": "Bird's-Eye View (BEV) maps provide a structured, top-down abstraction that is\ncrucial for autonomous-driving perception. In this work, we employ Cross-View\nTransformers (CVT) for learning to map camera images to three BEV's channels -\nroad, lane markings, and planned trajectory - using a realistic simulator for\nurban driving. Our study examines generalization to unseen towns, the effect of\ndifferent camera layouts, and two loss formulations (focal and L1). Using\ntraining data from only a town, a four-camera CVT trained with the L1 loss\ndelivers the most robust test performance, evaluated in a new town. Overall,\nour results underscore CVT's promise for mapping camera inputs to reasonably\naccurate BEV maps.",
+        "url": "http://arxiv.org/abs/2508.12520v1",
+        "published_date": "2025-08-17T23:05:00+00:00",
+        "updated_date": "2025-08-17T23:05:00+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Felipe Carlos dos Santos",
+            "Eric Aislan Antonelo",
+            "Gustavo Claudio Karl Couto"
+        ],
+        "tldr": "This paper explores using Cross-View Transformers (CVT) to generate Bird's-Eye View (BEV) maps from camera images for autonomous driving, focusing on generalization and different camera layouts.",
+        "tldr_zh": "本文探讨了使用跨视角Transformer (CVT) 从相机图像生成鸟瞰图 (BEV) 地图，用于自动驾驶，重点关注泛化能力和不同的相机布局。",
+        "relevance_score": 9,
+        "novelty_claim_score": 6,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    }
+]

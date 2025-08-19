@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Autonomous Driving, VLA, 3D Understanding, Robotics) - August 15, 2025</title>
+    <title>ArXiv CS.CV Papers (Autonomous Driving, VLA, 3D Understanding, Robotics) - August 19, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>VLM Daily Papers</h1>
         <p>Daily papers related to VLA/AV/3D Understanding from cs.CV</p>
         
-            <p>August 15, 2025</p>
+            <p>August 19, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,36 +215,31 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">PTQAT: A Hybrid Parameter-Efficient Quantization Algorithm for 3D Perception Tasks</h2>
+            <h2 class="paper-title">Grounding Actions in Camera Space: Observation-Centric Vision-Language-Action Policy</h2>
             
-            <p class="paper-summary">Post-Training Quantization (PTQ) and Quantization-Aware Training (QAT)
-represent two mainstream model quantization approaches. However, PTQ often
-leads to unacceptable performance degradation in quantized models, while QAT
-imposes substantial GPU memory requirements and extended training time due to
-weight fine-tuning.In this paper, we propose PTQAT, a novel general hybrid
-quantization algorithm for the efficient deployment of 3D perception networks.
-To address the speed accuracy trade-off between PTQ and QAT, our method selects
-critical layers for QAT fine-tuning and performs PTQ on the remaining layers.
-Contrary to intuition, fine-tuning the layers with smaller output discrepancies
-before and after quantization, rather than those with larger discrepancies,
-actually leads to greater improvements in the model's quantization accuracy.
-This means we better compensate for quantization errors during their
-propagation, rather than addressing them at the point where they occur. The
-proposed PTQAT achieves similar performance to QAT with more efficiency by
-freezing nearly 50% of quantifiable layers. Additionally, PTQAT is a universal
-quantization method that supports various quantization bit widths (4 bits) as
-well as different model architectures, including CNNs and Transformers. The
-experimental results on nuScenes across diverse 3D perception tasks, including
-object detection, semantic segmentation, and occupancy prediction, show that
-our method consistently outperforms QAT-only baselines. Notably, it achieves
-0.2%-0.9% NDS and 0.3%-1.0% mAP gains in object detection, 0.3%-2.0% mIoU gains
-in semantic segmentation and occupancy prediction while fine-tuning fewer
-weights.</p>
+            <p class="paper-summary">Vision-Language-Action (VLA) models frequently encounter challenges in
+generalizing to real-world environments due to inherent discrepancies between
+observation and action spaces. Although training data are collected from
+diverse camera perspectives, the models typically predict end-effector poses
+within the robot base coordinate frame, resulting in spatial inconsistencies.
+To mitigate this limitation, we introduce the Observation-Centric VLA (OC-VLA)
+framework, which grounds action predictions directly in the camera observation
+space. Leveraging the camera's extrinsic calibration matrix, OC-VLA transforms
+end-effector poses from the robot base coordinate system into the camera
+coordinate system, thereby unifying prediction targets across heterogeneous
+viewpoints. This lightweight, plug-and-play strategy ensures robust alignment
+between perception and action, substantially improving model resilience to
+camera viewpoint variations. The proposed approach is readily compatible with
+existing VLA architectures, requiring no substantial modifications.
+Comprehensive evaluations on both simulated and real-world robotic manipulation
+tasks demonstrate that OC-VLA accelerates convergence, enhances task success
+rates, and improves cross-view generalization. The code will be publicly
+available.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces PTQAT, a hybrid quantization method that combines PTQ and QAT for efficient 3D perception. It selectively fine-tunes layers based on output discrepancies, achieving better accuracy than QAT with less computational cost.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Observation-Centric VLA (OC-VLA), a framework that grounds action predictions in camera space to improve generalization of vision-language-action models in robotic manipulation, particularly across different viewpoints.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种混合量化方法PTQAT，它结合了PTQ和QAT，以实现高效的3D感知。该方法基于输出差异有选择地微调层，与QAT相比，以更少的计算成本实现了更好的精度。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了以观察为中心的视觉-语言-动作 (OC-VLA) 框架，该框架将动作预测定位在相机空间中，以提高视觉-语言-动作模型在机器人操作中的泛化能力，尤其是在不同视角下。</p>
             
 
             
@@ -262,8 +257,8 @@ weights.</p>
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
@@ -308,18 +303,18 @@ weights.</p>
                     
                 
                     
-                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.10557v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.13103v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Xinhao Wang, Zhiwei Lin, Zhongyu Xia, Yongtao Wang</p>
+            <p class="paper-authors">Authors: Tianyi Zhang, Haonan Duan, Haoran Hao, Yu Qiao, Jifeng Dai, Zhi Hou</p>
             
         </motion.div>
         
@@ -331,33 +326,28 @@ weights.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">STRIDE-QA: Visual Question Answering Dataset for Spatiotemporal Reasoning in Urban Driving Scenes</h2>
+            <h2 class="paper-title">SlimComm: Doppler-Guided Sparse Queries for Bandwidth-Efficient Cooperative 3-D Perception</h2>
             
-            <p class="paper-summary">Vision-Language Models (VLMs) have been applied to autonomous driving to
-support decision-making in complex real-world scenarios. However, their
-training on static, web-sourced image-text pairs fundamentally limits the
-precise spatiotemporal reasoning required to understand and predict dynamic
-traffic scenes. We address this critical gap with STRIDE-QA, a large-scale
-visual question answering (VQA) dataset for physically grounded reasoning from
-an ego-centric perspective. Constructed from 100 hours of multi-sensor driving
-data in Tokyo, capturing diverse and challenging conditions, STRIDE-QA is the
-largest VQA dataset for spatiotemporal reasoning in urban driving, offering 16
-million QA pairs over 285K frames. Grounded by dense, automatically generated
-annotations including 3D bounding boxes, segmentation masks, and multi-object
-tracks, the dataset uniquely supports both object-centric and ego-centric
-reasoning through three novel QA tasks that require spatial localization and
-temporal prediction. Our benchmarks demonstrate that existing VLMs struggle
-significantly, achieving near-zero scores on prediction consistency. In
-contrast, VLMs fine-tuned on STRIDE-QA exhibit dramatic performance gains,
-achieving 55% success in spatial localization and 28% consistency in future
-motion prediction, compared to near-zero scores from general-purpose VLMs.
-Therefore, STRIDE-QA establishes a comprehensive foundation for developing more
-reliable VLMs for safety-critical autonomous systems.</p>
+            <p class="paper-summary">Collaborative perception allows connected autonomous vehicles (CAVs) to
+overcome occlusion and limited sensor range by sharing intermediate features.
+Yet transmitting dense Bird's-Eye-View (BEV) feature maps can overwhelm the
+bandwidth available for inter-vehicle communication. We present SlimComm, a
+communication-efficient framework that integrates 4D radar Doppler with a
+query-driven sparse scheme. SlimComm builds a motion-centric dynamic map to
+distinguish moving from static objects and generates two query types: (i)
+reference queries on dynamic and high-confidence regions, and (ii) exploratory
+queries probing occluded areas via a two-stage offset. Only query-specific BEV
+features are exchanged and fused through multi-scale gated deformable
+attention, reducing payload while preserving accuracy. For evaluation, we
+release OPV2V-R and Adver-City-R, CARLA-based datasets with per-point Doppler
+radar. SlimComm achieves up to 90% lower bandwidth than full-map sharing while
+matching or surpassing prior baselines across varied traffic densities and
+occlusions. Dataset and code will be available at: https://url.fzi.de/SlimComm.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces STRIDE-QA, a large-scale VQA dataset for spatiotemporal reasoning in autonomous driving scenarios, showing that fine-tuning VLMs on this dataset significantly improves their performance in spatial localization and future motion prediction.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: SlimComm is a communication-efficient framework for collaborative perception in autonomous vehicles that uses Doppler radar to guide sparse feature queries, significantly reducing bandwidth usage while maintaining accuracy. The paper also releases new datasets with per-point Doppler radar.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了STRIDE-QA，一个大规模的VQA数据集，用于自动驾驶场景中的时空推理。实验表明，在该数据集上微调视觉语言模型（VLMs）可以显著提高其在空间定位和未来运动预测方面的性能。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: SlimComm是一个用于自动驾驶车辆协作感知的通信高效框架，它利用多普勒雷达引导稀疏特征查询，显著降低带宽使用，同时保持准确性。该论文还发布了带有逐点多普勒雷达的新数据集。</p>
             
 
             
@@ -367,16 +357,16 @@ reliable VLMs for safety-critical autonomous systems.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(10/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -391,8 +381,8 @@ reliable VLMs for safety-critical autonomous systems.</p>
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
             </div>
@@ -421,18 +411,18 @@ reliable VLMs for safety-critical autonomous systems.</p>
                     
                 
                     
-                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.10427v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.13007v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Keishi Ishihara, Kento Sasaki, Tsubasa Takahashi, Daiki Shiono, Yu Yamaguchi</p>
+            <p class="paper-authors">Authors: Melih Yazgan, Qiyuan Wu, Iramm Hamdard, Shiqi Li, J. Marius Zoellner</p>
             
         </motion.div>
         
@@ -444,34 +434,149 @@ reliable VLMs for safety-critical autonomous systems.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Beyond conventional vision: RGB-event fusion for robust object detection in dynamic traffic scenarios</h2>
+            <h2 class="paper-title">CMF-IoU: Multi-Stage Cross-Modal Fusion 3D Object Detection with IoU Joint Prediction</h2>
             
-            <p class="paper-summary">The dynamic range limitation of conventional RGB cameras reduces global
-contrast and causes loss of high-frequency details such as textures and edges
-in complex traffic environments (e.g., nighttime driving, tunnels), hindering
-discriminative feature extraction and degrading frame-based object detection.
-To address this, we integrate a bio-inspired event camera with an RGB camera to
-provide high dynamic range information and propose a motion cue fusion network
-(MCFNet), which achieves optimal spatiotemporal alignment and adaptive
-cross-modal feature fusion under challenging lighting. Specifically, an event
-correction module (ECM) temporally aligns asynchronous event streams with image
-frames via optical-flow-based warping, jointly optimized with the detection
-network to learn task-aware event representations. The event dynamic upsampling
-module (EDUM) enhances spatial resolution of event frames to match image
-structures, ensuring precise spatiotemporal alignment. The cross-modal mamba
-fusion module (CMM) uses adaptive feature fusion with a novel interlaced
-scanning mechanism, effectively integrating complementary information for
-robust detection. Experiments conducted on the DSEC-Det and PKU-DAVIS-SOD
-datasets demonstrate that MCFNet significantly outperforms existing methods in
-various poor lighting and fast moving traffic scenarios. Notably, on the
-DSEC-Det dataset, MCFNet achieves a remarkable improvement, surpassing the best
-existing methods by 7.4% in mAP50 and 1.7% in mAP metrics, respectively. The
-code is available at https://github.com/Charm11492/MCFNet.</p>
+            <p class="paper-summary">Multi-modal methods based on camera and LiDAR sensors have garnered
+significant attention in the field of 3D detection. However, many prevalent
+works focus on single or partial stage fusion, leading to insufficient feature
+extraction and suboptimal performance. In this paper, we introduce a
+multi-stage cross-modal fusion 3D detection framework, termed CMF-IOU, to
+effectively address the challenge of aligning 3D spatial and 2D semantic
+information. Specifically, we first project the pixel information into 3D space
+via a depth completion network to get the pseudo points, which unifies the
+representation of the LiDAR and camera information. Then, a bilateral
+cross-view enhancement 3D backbone is designed to encode LiDAR points and
+pseudo points. The first sparse-to-distant (S2D) branch utilizes an
+encoder-decoder structure to reinforce the representation of sparse LiDAR
+points. The second residual view consistency (ResVC) branch is proposed to
+mitigate the influence of inaccurate pseudo points via both the 3D and 2D
+convolution processes. Subsequently, we introduce an iterative voxel-point
+aware fine grained pooling module, which captures the spatial information from
+LiDAR points and textural information from pseudo points in the proposal
+refinement stage. To achieve more precise refinement during iteration, an
+intersection over union (IoU) joint prediction branch integrated with a novel
+proposals generation technique is designed to preserve the bounding boxes with
+both high IoU and classification scores. Extensive experiments show the
+superior performance of our method on the KITTI, nuScenes and Waymo datasets.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces MCFNet, a novel RGB-event fusion network that integrates an event camera with an RGB camera to improve object detection in challenging lighting and fast-moving traffic scenarios. The network demonstrates significant performance improvements on DSEC-Det and PKU-DAVIS-SOD datasets.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper presents CMF-IoU, a multi-stage cross-modal fusion 3D object detection framework that enhances feature extraction and performance by unifying LiDAR and camera data, using novel techniques like S2D, ResVC, and IoU joint prediction. Experiments show superior results on KITTI, nuScenes, and Waymo datasets.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为MCFNet的新型RGB事件融合网络，该网络将事件相机与RGB相机相结合，以改善在具有挑战性的光照和快速移动的交通场景中的物体检测。该网络在DSEC-Det和PKU-DAVIS-SOD数据集上表现出显著的性能提升。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了CMF-IoU，一个多阶段跨模态融合的三维物体检测框架，通过统一激光雷达和相机数据，并采用S2D、ResVC和IoU联合预测等新技术，增强了特征提取和性能。实验表明，该方法在KITTI、nuScenes和Waymo数据集上表现出色。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2508.12917v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Zhiwei Ning, Zhaojiang Liu, Xuanang Gao, Yifan Zuo, Jie Yang, Yuming Fang, Wei Liu</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.15000000000000002, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">Argos: A Decentralized Federated System for Detection of Traffic Signs in CAVs</h2>
+            
+            <p class="paper-summary">Connected and automated vehicles generate vast amounts of sensor data daily,
+raising significant privacy and communication challenges for centralized
+machine learning approaches in perception tasks. This study presents a
+decentralized, federated learning framework tailored for traffic sign detection
+in vehicular networks to enable collaborative model training without sharing
+raw data. The framework partitioned traffic sign classes across vehicles for
+specialized local training using lightweight object detectors, aggregated model
+parameters via algorithms like FedProx, FedAdam and FedAVG in a simulated
+environment with the Flower framework, and evaluated multiple configurations
+including varying server rounds, local epochs, client participation fractions,
+and data distributions. Experiments demonstrated that increasing server rounds
+from 2 to 20 boosted accuracy from below 0.1 to over 0.8, moderate local epochs
+(8-10) provided optimal efficiency with accuracies around 0.67, higher client
+participation fractions enhanced generalization up to 0.83, FedProx
+outperformed other aggregators in handling heterogeneity, non-IID data
+distributions reduced performance compared to IID, and training duration
+primarily scaled with the number of rounds rather than aggregation strategy. We
+conclude that this federated approach may offer a scalable, privacy-preserving
+solution for real-world vehicular deployments, potentially guiding future
+integrations of robust aggregation and communication optimizations to advance
+intelligent transportation systems.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper proposes a decentralized federated learning framework (Argos) for traffic sign detection in connected and automated vehicles, demonstrating the feasibility of collaborative model training without sharing raw data.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种分散式联邦学习框架（Argos），用于互联自动驾驶车辆中的交通标志检测，展示了在不共享原始数据的情况下进行协同模型训练的可行性。</p>
             
 
             
@@ -489,8 +594,8 @@ code is available at https://github.com/Charm11492/MCFNet.</p>
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
@@ -542,130 +647,11 @@ code is available at https://github.com/Charm11492/MCFNet.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.10704v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.12712v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Zhanwen Liu, Yujing Sun, Yang Wang, Nan Yang, Shengbo Eben Li, Xiangmo Zhao</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.15000000000000002, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">Towards Powerful and Practical Patch Attacks for 2D Object Detection in Autonomous Driving</h2>
-            
-            <p class="paper-summary">Learning-based autonomous driving systems remain critically vulnerable to
-adversarial patches, posing serious safety and security risks in their
-real-world deployment. Black-box attacks, notable for their high attack success
-rate without model knowledge, are especially concerning, with their
-transferability extensively studied to reduce computational costs compared to
-query-based attacks. Previous transferability-based black-box attacks typically
-adopt mean Average Precision (mAP) as the evaluation metric and design training
-loss accordingly. However, due to the presence of multiple detected bounding
-boxes and the relatively lenient Intersection over Union (IoU) thresholds, the
-attack effectiveness of these approaches is often overestimated, resulting in
-reduced success rates in practical attacking scenarios. Furthermore, patches
-trained on low-resolution data often fail to maintain effectiveness on
-high-resolution images, limiting their transferability to autonomous driving
-datasets. To fill this gap, we propose P$^3$A, a Powerful and Practical Patch
-Attack framework for 2D object detection in autonomous driving, specifically
-optimized for high-resolution datasets. First, we introduce a novel metric,
-Practical Attack Success Rate (PASR), to more accurately quantify attack
-effectiveness with greater relevance for pedestrian safety. Second, we present
-a tailored Localization-Confidence Suppression Loss (LCSL) to improve attack
-transferability under PASR. Finally, to maintain the transferability for
-high-resolution datasets, we further incorporate the Probabilistic
-Scale-Preserving Padding (PSPP) into the patch attack pipeline as a data
-preprocessing step. Extensive experiments show that P$^3$A outperforms
-state-of-the-art attacks on unseen models and unseen high-resolution datasets,
-both under the proposed practical IoU-based evaluation metric and the previous
-mAP-based metrics.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper proposes a novel patch attack framework (P$^3$A) targeting 2D object detection in autonomous driving, specifically designed for high-resolution datasets and evaluated with a more practical metric (PASR) for pedestrian safety.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了一种新的补丁攻击框架 (P$^3$A)，针对自动驾驶中的 2D 目标检测，专门为高分辨率数据集设计，并使用更实用的指标 (PASR) 评估行人安全。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2508.10600v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Yuxin Cao, Yedi Zhang, Wentao He, Yifan Liao, Yan Xiao, Chang Li, Zhiyong Huang, Jin Song Dong</p>
+            <p class="paper-authors">Authors: Seyed Mahdi Haji Seyed Hossein, Alireza Hosseini, Soheil Hajian Manesh, Amirali Shahriary</p>
             
         </motion.div>
         
@@ -677,34 +663,34 @@ mAP-based metrics.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">SpaRC-AD: A Baseline for Radar-Camera Fusion in End-to-End Autonomous Driving</h2>
+            <h2 class="paper-title">Neural Rendering for Sensor Adaptation in 3D Object Detection</h2>
             
-            <p class="paper-summary">End-to-end autonomous driving systems promise stronger performance through
-unified optimization of perception, motion forecasting, and planning. However,
-vision-based approaches face fundamental limitations in adverse weather
-conditions, partial occlusions, and precise velocity estimation - critical
-challenges in safety-sensitive scenarios where accurate motion understanding
-and long-horizon trajectory prediction are essential for collision avoidance.
-To address these limitations, we propose SpaRC-AD, a query-based end-to-end
-camera-radar fusion framework for planning-oriented autonomous driving. Through
-sparse 3D feature alignment, and doppler-based velocity estimation, we achieve
-strong 3D scene representations for refinement of agent anchors, map polylines
-and motion modelling. Our method achieves strong improvements over the
-state-of-the-art vision-only baselines across multiple autonomous driving
-tasks, including 3D detection (+4.8% mAP), multi-object tracking (+8.3% AMOTA),
-online mapping (+1.8% mAP), motion prediction (-4.0% mADE), and trajectory
-planning (-0.1m L2 and -9% TPC). We achieve both spatial coherence and temporal
-consistency on multiple challenging benchmarks, including real-world open-loop
-nuScenes, long-horizon T-nuScenes, and closed-loop simulator Bench2Drive. We
-show the effectiveness of radar-based fusion in safety-critical scenarios where
-accurate motion understanding and long-horizon trajectory prediction are
-essential for collision avoidance. The source code of all experiments is
-available at https://phi-wol.github.io/sparcad/</p>
+            <p class="paper-summary">Autonomous vehicles often have varying camera sensor setups, which is
+inevitable due to restricted placement options for different vehicle types.
+Training a perception model on one particular setup and evaluating it on a new,
+different sensor setup reveals the so-called cross-sensor domain gap, typically
+leading to a degradation in accuracy. In this paper, we investigate the impact
+of the cross-sensor domain gap on state-of-the-art 3D object detectors. To this
+end, we introduce CamShift, a dataset inspired by nuScenes and created in CARLA
+to specifically simulate the domain gap between subcompact vehicles and sport
+utility vehicles (SUVs). Using CamShift, we demonstrate significant
+cross-sensor performance degradation, identify robustness dependencies on model
+architecture, and propose a data-driven solution to mitigate the effect. On the
+one hand, we show that model architectures based on a dense Bird's Eye View
+(BEV) representation with backward projection, such as BEVFormer, are the most
+robust against varying sensor configurations. On the other hand, we propose a
+novel data-driven sensor adaptation pipeline based on neural rendering, which
+can transform entire datasets to match different camera sensor setups. Applying
+this approach improves performance across all investigated 3D object detectors,
+mitigating the cross-sensor domain gap by a large margin and reducing the need
+for new data collection by enabling efficient data reusability across vehicles
+with different sensor setups. The CamShift dataset and the sensor adaptation
+benchmark are available at https://dmholtz.github.io/camshift/.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper presents SpaRC-AD, a novel camera-radar fusion framework for end-to-end autonomous driving, demonstrating improved performance in various tasks and safety-critical scenarios compared to vision-only baselines.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces CamShift, a dataset for studying the cross-sensor domain gap in 3D object detection, and proposes a neural rendering-based sensor adaptation method to mitigate performance degradation across different vehicle sensor setups.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了SpaRC-AD，一种用于端到端自动驾驶的新型摄像头-雷达融合框架，与仅使用视觉的基线相比，在各种任务和安全关键场景中表现出更高的性能。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了CamShift数据集，用于研究3D目标检测中跨传感器域的差距，并提出了一种基于神经渲染的传感器自适应方法，以减轻不同车辆传感器设置下的性能下降。</p>
             
 
             
@@ -775,11 +761,11 @@ available at https://phi-wol.github.io/sparcad/</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.10567v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.12695v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Philipp Wolters, Johannes Gilg, Torben Teepe, Gerhard Rigoll</p>
+            <p class="paper-authors">Authors: Felix Embacher, David Holtz, Jonas Uhrig, Marius Cordts, Markus Enzweiler</p>
             
         </motion.div>
         
@@ -791,32 +777,24 @@ available at https://phi-wol.github.io/sparcad/</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">CorrectNav: Self-Correction Flywheel Empowers Vision-Language-Action Navigation Model</h2>
+            <h2 class="paper-title">TTA-DAME: Test-Time Adaptation with Domain Augmentation and Model Ensemble for Dynamic Driving Conditions</h2>
             
-            <p class="paper-summary">Existing vision-and-language navigation models often deviate from the correct
-trajectory when executing instructions. However, these models lack effective
-error correction capability, hindering their recovery from errors. To address
-this challenge, we propose Self-correction Flywheel, a novel post-training
-paradigm. Instead of considering the model's error trajectories on the training
-set as a drawback, our paradigm emphasizes their significance as a valuable
-data source. We have developed a method to identify deviations in these error
-trajectories and devised innovative techniques to automatically generate
-self-correction data for perception and action. These self-correction data
-serve as fuel to power the model's continued training. The brilliance of our
-paradigm is revealed when we re-evaluate the model on the training set,
-uncovering new error trajectories. At this time, the self-correction flywheel
-begins to spin. Through multiple flywheel iterations, we progressively enhance
-our monocular RGB-based VLA navigation model CorrectNav. Experiments on R2R-CE
-and RxR-CE benchmarks show CorrectNav achieves new state-of-the-art success
-rates of 65.1% and 69.3%, surpassing prior best VLA navigation models by 8.2%
-and 16.4%. Real robot tests in various indoor and outdoor environments
-demonstrate \method's superior capability of error correction, dynamic obstacle
-avoidance, and long instruction following.</p>
+            <p class="paper-summary">Test-time Adaptation (TTA) poses a challenge, requiring models to dynamically
+adapt and perform optimally on shifting target domains. This task is
+particularly emphasized in real-world driving scenes, where weather domain
+shifts occur frequently. To address such dynamic changes, our proposed method,
+TTA-DAME, leverages source domain data augmentation into target domains.
+Additionally, we introduce a domain discriminator and a specialized domain
+detector to mitigate drastic domain shifts, especially from daytime to
+nighttime conditions. To further improve adaptability, we train multiple
+detectors and consolidate their predictions through Non-Maximum Suppression
+(NMS). Our empirical validation demonstrates the effectiveness of our method,
+showing significant performance enhancements on the SHIFT Benchmark.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces CorrectNav, a post-training paradigm called Self-correction Flywheel, to improve vision-language-action navigation models by iteratively training on automatically generated self-correction data from error trajectories, achieving state-of-the-art results on R2R-CE and RxR-CE.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces TTA-DAME, a test-time adaptation method for autonomous driving that uses domain augmentation, a domain discriminator, and model ensembling to handle dynamic driving conditions and improve performance on the SHIFT Benchmark.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为Self-correction Flywheel的后训练范式CorrectNav，通过迭代训练来自错误轨迹自动生成的自校正数据，来改进视觉-语言-动作导航模型，并在R2R-CE和RxR-CE上取得了最新的state-of-the-art结果。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了TTA-DAME，一种用于自动驾驶的测试时自适应方法，该方法利用域增强、域判别器和模型集成来处理动态驾驶条件，并提高在SHIFT Benchmark上的性能。</p>
             
 
             
@@ -834,16 +812,16 @@ avoidance, and long instruction following.</p>
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -887,11 +865,11 @@ avoidance, and long instruction following.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.10416v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.12690v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Zhuoyuan Yu, Yuxing Long, Zihan Yang, Chengyan Zeng, Hongwei Fan, Jiyao Zhang, Hao Dong</p>
+            <p class="paper-authors">Authors: Dongjae Jeon, Taeheon Kim, Seongwon Cho, Minhyuk Seo, Jonghyun Choi</p>
             
         </motion.div>
         
@@ -903,34 +881,30 @@ avoidance, and long instruction following.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">SC-Lane: Slope-aware and Consistent Road Height Estimation Framework for 3D Lane Detection</h2>
+            <h2 class="paper-title">Refine-and-Contrast: Adaptive Instance-Aware BEV Representations for Multi-UAV Collaborative Object Detection</h2>
             
-            <p class="paper-summary">In this paper, we introduce SC-Lane, a novel slope-aware and temporally
-consistent heightmap estimation framework for 3D lane detection. Unlike
-previous approaches that rely on fixed slope anchors, SC-Lane adaptively
-determines the fusion of slope-specific height features, improving robustness
-to diverse road geometries. To achieve this, we propose a Slope-Aware Adaptive
-Feature module that dynamically predicts the appropriate weights from image
-cues for integrating multi-slope representations into a unified heightmap.
-Additionally, a Height Consistency Module enforces temporal coherence, ensuring
-stable and accurate height estimation across consecutive frames, which is
-crucial for real-world driving scenarios. To evaluate the effectiveness of
-SC-Lane, we employ three standardized metrics-Mean Absolute Error(MAE), Root
-Mean Squared Error (RMSE), and threshold-based accuracy-which, although common
-in surface and depth estimation, have been underutilized for road height
-assessment. Using the LiDAR-derived heightmap dataset introduced in prior work
-[20], we benchmark our method under these metrics, thereby establishing a
-rigorous standard for future comparisons. Extensive experiments on the OpenLane
-benchmark demonstrate that SC-Lane significantly improves both height
-estimation and 3D lane detection, achieving state-of-the-art performance with
-an F-score of 64.3%, outperforming existing methods by a notable margin. For
-detailed results and a demonstration video, please refer to our project
-page:https://parkchaesong.github.io/sclane/</p>
+            <p class="paper-summary">Multi-UAV collaborative 3D detection enables accurate and robust perception
+by fusing multi-view observations from aerial platforms, offering significant
+advantages in coverage and occlusion handling, while posing new challenges for
+computation on resource-constrained UAV platforms. In this paper, we present
+AdaBEV, a novel framework that learns adaptive instance-aware BEV
+representations through a refine-and-contrast paradigm. Unlike existing methods
+that treat all BEV grids equally, AdaBEV introduces a Box-Guided Refinement
+Module (BG-RM) and an Instance-Background Contrastive Learning (IBCL) to
+enhance semantic awareness and feature discriminability. BG-RM refines only BEV
+grids associated with foreground instances using 2D supervision and spatial
+subdivision, while IBCL promotes stronger separation between foreground and
+background features via contrastive learning in BEV space. Extensive
+experiments on the Air-Co-Pred dataset demonstrate that AdaBEV achieves
+superior accuracy-computation trade-offs across model scales, outperforming
+other state-of-the-art methods at low resolutions and approaching upper bound
+performance while maintaining low-resolution BEV inputs and negligible
+overhead.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces SC-Lane, a novel framework for 3D lane detection that improves heightmap estimation by adaptively fusing slope-specific features and enforcing temporal consistency, achieving state-of-the-art performance on the OpenLane benchmark.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces AdaBEV, a novel framework using a refine-and-contrast paradigm for multi-UAV collaborative object detection, achieving better accuracy-computation trade-offs on resource-constrained platforms by adaptively refining BEV representations.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了SC-Lane，一种用于3D车道检测的新型框架，通过自适应融合特定斜率的特征并强制时间一致性来改进高度图估计，并在OpenLane基准测试中实现了最先进的性能。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为AdaBEV的新框架，该框架采用精炼和对比范式进行多无人机协同目标检测，通过自适应地精炼BEV表示，在资源受限的平台上实现了更好的精度-计算权衡。</p>
             
 
             
@@ -1001,11 +975,11 @@ page:https://parkchaesong.github.io/sclane/</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.10411v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.12684v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Chaesong Park, Eunbin Seo, Jihyeon Hwang, Jongwoo Lim</p>
+            <p class="paper-authors">Authors: Zhongyao Li, Peirui Cheng, Liangjin Zhao, Chen Chen, Yundu Li, Zhechao Wang, Xue Yang, Xian Sun, Zhirui Wang</p>
             
         </motion.div>
         
@@ -1017,31 +991,30 @@ page:https://parkchaesong.github.io/sclane/</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">ReconVLA: Reconstructive Vision-Language-Action Model as Effective Robot Perceiver</h2>
+            <h2 class="paper-title">SpotVLM: Cloud-edge Collaborative Real-time VLM based on Context Transfer</h2>
             
-            <p class="paper-summary">Recent advances in Vision-Language-Action (VLA) models have enabled robotic
-agents to integrate multimodal understanding with action execution. However,
-our empirical analysis reveals that current VLAs struggle to allocate visual
-attention to target regions. Instead, visual attention is always dispersed. To
-guide the visual attention grounding on the correct target, we propose
-ReconVLA, a reconstructive VLA model with an implicit grounding paradigm.
-Conditioned on the model's visual outputs, a diffusion transformer aims to
-reconstruct the gaze region of the image, which corresponds to the target
-manipulated objects. This process prompts the VLA model to learn fine-grained
-representations and accurately allocate visual attention, thus effectively
-leveraging task-specific visual information and conducting precise
-manipulation. Moreover, we curate a large-scale pretraining dataset comprising
-over 100k trajectories and 2 million data samples from open-source robotic
-datasets, further boosting the model's generalization in visual reconstruction.
-Extensive experiments in simulation and the real world demonstrate the
-superiority of our implicit grounding method, showcasing its capabilities of
-precise manipulation and generalization. Our project page is
-https://zionchow.github.io/ReconVLA/.</p>
+            <p class="paper-summary">Vision-Language Models (VLMs) are increasingly deployed in real-time
+applications such as autonomous driving and human-computer interaction, which
+demand fast and reliable responses based on accurate perception. To meet these
+requirements, existing systems commonly employ cloud-edge collaborative
+architectures, such as partitioned Large Vision-Language Models (LVLMs) or task
+offloading strategies between Large and Small Vision-Language Models (SVLMs).
+However, these methods fail to accommodate cloud latency fluctuations and
+overlook the full potential of delayed but accurate LVLM responses. In this
+work, we propose a novel cloud-edge collaborative paradigm for VLMs, termed
+Context Transfer, which treats the delayed outputs of LVLMs as historical
+context to provide real-time guidance for SVLMs inference. Based on this
+paradigm, we design SpotVLM, which incorporates both context replacement and
+visual focus modules to refine historical textual input and enhance visual
+grounding consistency. Extensive experiments on three real-time vision tasks
+across four datasets demonstrate the effectiveness of the proposed framework.
+The new paradigm lays the groundwork for more effective and latency-aware
+collaboration strategies in future VLM systems.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces ReconVLA, a reconstructive Vision-Language-Action model that improves visual attention grounding for robotic manipulation by using a diffusion transformer to reconstruct the gaze region. It demonstrates improved performance on manipulation tasks in simulation and real-world scenarios.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces SpotVLM, a cloud-edge collaborative VLM framework leveraging 'Context Transfer' to improve real-time performance by using delayed LVLM outputs to guide SVLM inference, demonstrating effectiveness on real-time vision tasks.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了ReconVLA，一种重建式的视觉-语言-动作模型，通过使用扩散变换器重建注视区域，提高了机器人操作的视觉注意力定位。实验表明，该模型在模拟和现实环境中的操作任务中表现更优。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了SpotVLM，一个云边协作的VLM框架，利用“上下文转移”来提升实时性能，它通过使用延迟的LVLM输出来指导SVLM的推理，并在实时视觉任务上展示了有效性。</p>
             
 
             
@@ -1051,16 +1024,16 @@ https://zionchow.github.io/ReconVLA/.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
@@ -1112,11 +1085,11 @@ https://zionchow.github.io/ReconVLA/.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.10333v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.12638v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Wenxuan Song, Ziyang Zhou, Han Zhao, Jiayi Chen, Pengxiang Ding, Haodong Yan, Yuxin Huang, Feilong Tang, Donglin Wang, Haoang Li</p>
+            <p class="paper-authors">Authors: Chen Qian, Xinran Yu, Zewen Huang, Danyang Li, Qiang Ma, Fan Dang, Xuan Ding, Guangyong Shang, Zheng Yang</p>
             
         </motion.div>
         
@@ -1128,27 +1101,23 @@ https://zionchow.github.io/ReconVLA/.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">From Pixel to Mask: A Survey of Out-of-Distribution Segmentation</h2>
+            <h2 class="paper-title">An Initial Study of Bird's-Eye View Generation for Autonomous Vehicles using Cross-View Transformers</h2>
             
-            <p class="paper-summary">Out-of-distribution (OoD) detection and segmentation have attracted growing
-attention as concerns about AI security rise. Conventional OoD detection
-methods identify the existence of OoD objects but lack spatial localization,
-limiting their usefulness in downstream tasks. OoD segmentation addresses this
-limitation by localizing anomalous objects at pixel-level granularity. This
-capability is crucial for safety-critical applications such as autonomous
-driving, where perception modules must not only detect but also precisely
-segment OoD objects, enabling targeted control actions and enhancing overall
-system robustness. In this survey, we group current OoD segmentation approaches
-into four categories: (i) test-time OoD segmentation, (ii) outlier exposure for
-supervised training, (iii) reconstruction-based methods, (iv) and approaches
-that leverage powerful models. We systematically review recent advances in OoD
-segmentation for autonomous-driving scenarios, identify emerging challenges,
-and discuss promising future research directions.</p>
+            <p class="paper-summary">Bird's-Eye View (BEV) maps provide a structured, top-down abstraction that is
+crucial for autonomous-driving perception. In this work, we employ Cross-View
+Transformers (CVT) for learning to map camera images to three BEV's channels -
+road, lane markings, and planned trajectory - using a realistic simulator for
+urban driving. Our study examines generalization to unseen towns, the effect of
+different camera layouts, and two loss formulations (focal and L1). Using
+training data from only a town, a four-camera CVT trained with the L1 loss
+delivers the most robust test performance, evaluated in a new town. Overall,
+our results underscore CVT's promise for mapping camera inputs to reasonably
+accurate BEV maps.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper surveys recent advances in out-of-distribution (OoD) segmentation, particularly in autonomous driving, categorizing methods and highlighting challenges and future directions. It focuses on localizing anomalous objects at the pixel level.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper explores using Cross-View Transformers (CVT) to generate Bird's-Eye View (BEV) maps from camera images for autonomous driving, focusing on generalization and different camera layouts.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文综述了异常检测分割(OoD)的最新进展，尤其是在自动驾驶领域，对方法进行了分类，并强调了挑战和未来的研究方向。重点在于以像素级精度定位异常对象。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文探讨了使用跨视角Transformer (CVT) 从相机图像生成鸟瞰图 (BEV) 地图，用于自动驾驶，重点关注泛化能力和不同的相机布局。</p>
             
 
             
@@ -1219,18 +1188,18 @@ and discuss promising future research directions.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.10309v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.12520v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Wenjie Zhao, Jia Li, Yunhui Guo</p>
+            <p class="paper-authors">Authors: Felipe Carlos dos Santos, Eric Aislan Antonelo, Gustavo Claudio Karl Couto</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-08-19 02:41:29 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-08-19 03:07:31 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>

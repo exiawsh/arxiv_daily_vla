@@ -1,0 +1,193 @@
+[
+    {
+        "title": "DynamicPose: Real-time and Robust 6D Object Pose Tracking for Fast-Moving Cameras and Objects",
+        "summary": "We present DynamicPose, a retraining-free 6D pose tracking framework that\nimproves tracking robustness in fast-moving camera and object scenarios.\nPrevious work is mainly applicable to static or quasi-static scenes, and its\nperformance significantly deteriorates when both the object and the camera move\nrapidly. To overcome these challenges, we propose three synergistic components:\n(1) A visual-inertial odometry compensates for the shift in the Region of\nInterest (ROI) caused by camera motion; (2) A depth-informed 2D tracker\ncorrects ROI deviations caused by large object translation; (3) A VIO-guided\nKalman filter predicts object rotation, generates multiple candidate poses, and\nthen obtains the final pose by hierarchical refinement. The 6D pose tracking\nresults guide subsequent 2D tracking and Kalman filter updates, forming a\nclosed-loop system that ensures accurate pose initialization and precise pose\ntracking. Simulation and real-world experiments demonstrate the effectiveness\nof our method, achieving real-time and robust 6D pose tracking for fast-moving\ncameras and objects.",
+        "url": "http://arxiv.org/abs/2508.11950v1",
+        "published_date": "2025-08-16T07:25:08+00:00",
+        "updated_date": "2025-08-16T07:25:08+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Tingbang Liang",
+            "Yixin Zeng",
+            "Jiatong Xie",
+            "Boyu Zhou"
+        ],
+        "tldr": "The paper introduces DynamicPose, a retraining-free 6D pose tracking framework designed for fast-moving camera and object scenarios, utilizing visual-inertial odometry, depth-informed 2D tracking, and a VIO-guided Kalman filter.",
+        "tldr_zh": "该论文介绍了一种名为DynamicPose的无需重新训练的6D位姿跟踪框架，专为快速移动的相机和物体场景设计，它利用视觉惯性里程计、深度感知的2D跟踪和VIO引导的卡尔曼滤波器。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "ComplicitSplat: Downstream Models are Vulnerable to Blackbox Attacks by 3D Gaussian Splat Camouflages",
+        "summary": "As 3D Gaussian Splatting (3DGS) gains rapid adoption in safety-critical tasks\nfor efficient novel-view synthesis from static images, how might an adversary\ntamper images to cause harm? We introduce ComplicitSplat, the first attack that\nexploits standard 3DGS shading methods to create viewpoint-specific camouflage\n- colors and textures that change with viewing angle - to embed adversarial\ncontent in scene objects that are visible only from specific viewpoints and\nwithout requiring access to model architecture or weights. Our extensive\nexperiments show that ComplicitSplat generalizes to successfully attack a\nvariety of popular detector - both single-stage, multi-stage, and\ntransformer-based models on both real-world capture of physical objects and\nsynthetic scenes. To our knowledge, this is the first black-box attack on\ndownstream object detectors using 3DGS, exposing a novel safety risk for\napplications like autonomous navigation and other mission-critical robotic\nsystems.",
+        "url": "http://arxiv.org/abs/2508.11854v1",
+        "published_date": "2025-08-16T00:38:34+00:00",
+        "updated_date": "2025-08-16T00:38:34+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Matthew Hull",
+            "Haoyang Yang",
+            "Pratham Mehta",
+            "Mansi Phute",
+            "Aeree Cho",
+            "Haorang Wang",
+            "Matthew Lau",
+            "Wenke Lee",
+            "Wilian Lunardi",
+            "Martin Andreoni",
+            "Polo Chau"
+        ],
+        "tldr": "This paper introduces ComplicitSplat, a black-box attack using 3D Gaussian Splatting to embed viewpoint-specific adversarial content that can fool downstream object detectors, posing a safety risk for autonomous navigation and robotic systems.",
+        "tldr_zh": "本文介绍了 ComplicitSplat，一种使用 3D 高斯溅射的黑盒攻击，用于嵌入特定视点的对抗性内容，可以欺骗下游目标检测器，对自动导航和机器人系统构成安全风险。",
+        "relevance_score": 9,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "InstDrive: Instance-Aware 3D Gaussian Splatting for Driving Scenes",
+        "summary": "Reconstructing dynamic driving scenes from dashcam videos has attracted\nincreasing attention due to its significance in autonomous driving and scene\nunderstanding. While recent advances have made impressive progress, most\nmethods still unify all background elements into a single representation,\nhindering both instance-level understanding and flexible scene editing. Some\napproaches attempt to lift 2D segmentation into 3D space, but often rely on\npre-processed instance IDs or complex pipelines to map continuous features to\ndiscrete identities. Moreover, these methods are typically designed for indoor\nscenes with rich viewpoints, making them less applicable to outdoor driving\nscenarios. In this paper, we present InstDrive, an instance-aware 3D Gaussian\nSplatting framework tailored for the interactive reconstruction of dynamic\ndriving scene. We use masks generated by SAM as pseudo ground-truth to guide 2D\nfeature learning via contrastive loss and pseudo-supervised objectives. At the\n3D level, we introduce regularization to implicitly encode instance identities\nand enforce consistency through a voxel-based loss. A lightweight static\ncodebook further bridges continuous features and discrete identities without\nrequiring data pre-processing or complex optimization. Quantitative and\nqualitative experiments demonstrate the effectiveness of InstDrive, and to the\nbest of our knowledge, it is the first framework to achieve 3D instance\nsegmentation in dynamic, open-world driving scenes.More visualizations are\navailable at our project page.",
+        "url": "http://arxiv.org/abs/2508.12015v1",
+        "published_date": "2025-08-16T11:17:31+00:00",
+        "updated_date": "2025-08-16T11:17:31+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Hongyuan Liu",
+            "Haochen Yu",
+            "Jianfei Jiang",
+            "Qiankun Liu",
+            "Jiansheng Chen",
+            "Huimin Ma"
+        ],
+        "tldr": "InstDrive introduces an instance-aware 3D Gaussian Splatting framework for reconstructing dynamic driving scenes from dashcam videos, using SAM masks and a static codebook for instance segmentation.",
+        "tldr_zh": "InstDrive 提出了一个实例感知的 3D 高斯溅射框架，用于从行车记录仪视频重建动态驾驶场景，使用 SAM masks 和一个静态码本进行实例分割。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "UniUGG: Unified 3D Understanding and Generation via Geometric-Semantic Encoding",
+        "summary": "Despite the impressive progress on understanding and generating images shown\nby the recent unified architectures, the integration of 3D tasks remains\nchallenging and largely unexplored. In this paper, we introduce UniUGG, the\nfirst unified understanding and generation framework for 3D modalities. Our\nunified framework employs an LLM to comprehend and decode sentences and 3D\nrepresentations. At its core, we propose a spatial decoder leveraging a latent\ndiffusion model to generate high-quality 3D representations. This allows for\nthe generation and imagination of 3D scenes based on a reference image and an\narbitrary view transformation, while remaining supports for spatial visual\nquestion answering (VQA) tasks. Additionally, we propose a geometric-semantic\nlearning strategy to pretrain the vision encoder. This design jointly captures\nthe input's semantic and geometric cues, enhancing both spatial understanding\nand generation. Extensive experimental results demonstrate the superiority of\nour method in visual representation, spatial understanding, and 3D generation.\nThe source code will be released upon paper acceptance.",
+        "url": "http://arxiv.org/abs/2508.11952v1",
+        "published_date": "2025-08-16T07:27:31+00:00",
+        "updated_date": "2025-08-16T07:27:31+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yueming Xu",
+            "Jiahui Zhang",
+            "Ze Huang",
+            "Yurui Chen",
+            "Yanpeng Zhou",
+            "Zhenyu Chen",
+            "Yu-Jie Yuan",
+            "Pengxiang Xia",
+            "Guowei Huang",
+            "Xinyue Cai",
+            "Zhongang Qi",
+            "Xingyue Quan",
+            "Jianye Hao",
+            "Hang Xu",
+            "Li Zhang"
+        ],
+        "tldr": "This paper introduces UniUGG, a unified framework leveraging LLMs and latent diffusion for 3D understanding and generation tasks like spatial VQA and novel view synthesis, enhanced by geometric-semantic pretraining.",
+        "tldr_zh": "本文介绍了UniUGG，一个统一的框架，利用LLM和潜在扩散模型进行三维理解和生成任务，如空间视觉问答和新视角合成，并通过几何语义预训练进行增强。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "VimoRAG: Video-based Retrieval-augmented 3D Motion Generation for Motion Language Models",
+        "summary": "This paper introduces VimoRAG, a novel video-based retrieval-augmented motion\ngeneration framework for motion large language models (LLMs). As motion LLMs\nface severe out-of-domain/out-of-vocabulary issues due to limited annotated\ndata, VimoRAG leverages large-scale in-the-wild video databases to enhance 3D\nmotion generation by retrieving relevant 2D human motion signals. While\nvideo-based motion RAG is nontrivial, we address two key bottlenecks: (1)\ndeveloping an effective motion-centered video retrieval model that\ndistinguishes human poses and actions, and (2) mitigating the issue of error\npropagation caused by suboptimal retrieval results. We design the Gemini Motion\nVideo Retriever mechanism and the Motion-centric Dual-alignment DPO Trainer,\nenabling effective retrieval and generation processes. Experimental results\nshow that VimoRAG significantly boosts the performance of motion LLMs\nconstrained to text-only input.",
+        "url": "http://arxiv.org/abs/2508.12081v1",
+        "published_date": "2025-08-16T15:31:14+00:00",
+        "updated_date": "2025-08-16T15:31:14+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.CL"
+        ],
+        "authors": [
+            "Haidong Xu",
+            "Guangwei Xu",
+            "Zhedong Zheng",
+            "Xiatian Zhu",
+            "Wei Ji",
+            "Xiangtai Li",
+            "Ruijie Guo",
+            "Meishan Zhang",
+            "Min zhang",
+            "Hao Fei"
+        ],
+        "tldr": "VimoRAG enhances motion LLMs by using video-based retrieval to augment 3D motion generation, addressing out-of-domain issues through a motion-centered video retrieval model and a dual-alignment training approach.",
+        "tldr_zh": "VimoRAG 通过视频检索增强运动 LLM，以提高 3D 运动生成能力。它利用基于运动的视频检索模型和双重对齐训练方法，解决领域外问题。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Transferable Class Statistics and Multi-scale Feature Approximation for 3D Object Detection",
+        "summary": "This paper investigates multi-scale feature approximation and transferable\nfeatures for object detection from point clouds. Multi-scale features are\ncritical for object detection from point clouds. However, multi-scale feature\nlearning usually involves multiple neighborhood searches and scale-aware\nlayers, which can hinder efforts to achieve lightweight models and may not be\nconducive to research constrained by limited computational resources. This\npaper approximates point-based multi-scale features from a single neighborhood\nbased on knowledge distillation. To compensate for the loss of constructive\ndiversity in a single neighborhood, this paper designs a transferable feature\nembedding mechanism. Specifically, class-aware statistics are employed as\ntransferable features given the small computational cost. In addition, this\npaper introduces the central weighted intersection over union for localization\nto alleviate the misalignment brought by the center offset in optimization.\nNote that the method presented in this paper saves computational costs.\nExtensive experiments on public datasets demonstrate the effectiveness of the\nproposed method.",
+        "url": "http://arxiv.org/abs/2508.11951v1",
+        "published_date": "2025-08-16T07:27:01+00:00",
+        "updated_date": "2025-08-16T07:27:01+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Hao Peng",
+            "Hong Sang",
+            "Yajing Ma",
+            "Ping Qiu",
+            "Chao Ji"
+        ],
+        "tldr": "This paper proposes a method to approximate multi-scale features for 3D object detection from point clouds using a single neighborhood and knowledge distillation, employing class-aware statistics as transferable features for efficiency and performance.",
+        "tldr_zh": "本文提出了一种从点云中近似多尺度特征的方法，用于3D物体检测，该方法使用单邻域和知识蒸馏，并采用类感知统计作为可转移特征，以提高效率和性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Data Shift of Object Detection in Autonomous Driving",
+        "summary": "With the widespread adoption of machine learning technologies in autonomous\ndriving systems, their role in addressing complex environmental perception\nchallenges has become increasingly crucial. However, existing machine learning\nmodels exhibit significant vulnerability, as their performance critically\ndepends on the fundamental assumption that training and testing data satisfy\nthe independent and identically distributed condition, which is difficult to\nguarantee in real-world applications. Dynamic variations in data distribution\ncaused by seasonal changes, weather fluctuations lead to data shift problems in\nautonomous driving systems. This study investigates the data shift problem in\nautonomous driving object detection tasks, systematically analyzing its\ncomplexity and diverse manifestations. We conduct a comprehensive review of\ndata shift detection methods and employ shift detection analysis techniques to\nperform dataset categorization and balancing. Building upon this foundation, we\nconstruct an object detection model. To validate our approach, we optimize the\nmodel by integrating CycleGAN-based data augmentation techniques with the\nYOLOv5 framework. Experimental results demonstrate that our method achieves\nsuperior performance compared to baseline models on the BDD100K dataset.",
+        "url": "http://arxiv.org/abs/2508.11868v1",
+        "published_date": "2025-08-16T01:52:31+00:00",
+        "updated_date": "2025-08-16T01:52:31+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Lida Xu"
+        ],
+        "tldr": "This paper addresses the data shift problem in autonomous driving object detection by analyzing its complexities, reviewing detection methods, and optimizing a YOLOv5 model with CycleGAN-based data augmentation, showing performance improvements on BDD100K.",
+        "tldr_zh": "本文研究了自动驾驶目标检测中的数据偏移问题，通过分析其复杂性，回顾检测方法，并利用基于CycleGAN的数据增强优化了YOLOv5模型，在BDD100K数据集上表现出性能提升。",
+        "relevance_score": 8,
+        "novelty_claim_score": 6,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
