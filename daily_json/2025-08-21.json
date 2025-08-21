@@ -1,0 +1,252 @@
+[
+    {
+        "title": "Multiscale Video Transformers for Class Agnostic Segmentation in Autonomous Driving",
+        "summary": "Ensuring safety in autonomous driving is a complex challenge requiring\nhandling unknown objects and unforeseen driving scenarios. We develop\nmultiscale video transformers capable of detecting unknown objects using only\nmotion cues. Video semantic and panoptic segmentation often relies on known\nclasses seen during training, overlooking novel categories. Recent visual\ngrounding with large language models is computationally expensive, especially\nfor pixel-level output. We propose an efficient video transformer trained\nend-to-end for class-agnostic segmentation without optical flow. Our method\nuses multi-stage multiscale query-memory decoding and a scale-specific random\ndrop-token to ensure efficiency and accuracy, maintaining detailed\nspatiotemporal features with a shared, learnable memory module. Unlike\nconventional decoders that compress features, our memory-centric design\npreserves high-resolution information at multiple scales. We evaluate on\nDAVIS'16, KITTI, and Cityscapes. Our method consistently outperforms multiscale\nbaselines while being efficient in GPU memory and run-time, demonstrating a\npromising direction for real-time, robust dense prediction in safety-critical\nrobotics.",
+        "url": "http://arxiv.org/abs/2508.14729v1",
+        "published_date": "2025-08-20T14:23:11+00:00",
+        "updated_date": "2025-08-20T14:23:11+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Leila Cheshmi",
+            "Mennatullah Siam"
+        ],
+        "tldr": "This paper introduces a multiscale video transformer for class-agnostic segmentation in autonomous driving, focusing on detecting unknown objects using motion cues and preserving high-resolution spatiotemporal features with a memory-centric design. It outperforms baselines on standard datasets.",
+        "tldr_zh": "本文提出了一种用于自动驾驶中类无关分割的多尺度视频Transformer，侧重于使用运动线索检测未知物体，并通过以内存为中心的设计来保留高分辨率的时空特征。该方法在标准数据集上优于基线方法。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Adversarial Generation and Collaborative Evolution of Safety-Critical Scenarios for Autonomous Vehicles",
+        "summary": "The generation of safety-critical scenarios in simulation has become\nincreasingly crucial for safety evaluation in autonomous vehicles prior to road\ndeployment in society. However, current approaches largely rely on predefined\nthreat patterns or rule-based strategies, which limit their ability to expose\ndiverse and unforeseen failure modes. To overcome these, we propose ScenGE, a\nframework that can generate plentiful safety-critical scenarios by reasoning\nnovel adversarial cases and then amplifying them with complex traffic flows.\nGiven a simple prompt of a benign scene, it first performs Meta-Scenario\nGeneration, where a large language model, grounded in structured driving\nknowledge, infers an adversarial agent whose behavior poses a threat that is\nboth plausible and deliberately challenging. This meta-scenario is then\nspecified in executable code for precise in-simulator control. Subsequently,\nComplex Scenario Evolution uses background vehicles to amplify the core threat\nintroduced by Meta-Scenario. It builds an adversarial collaborator graph to\nidentify key agent trajectories for optimization. These perturbations are\ndesigned to simultaneously reduce the ego vehicle's maneuvering space and\ncreate critical occlusions. Extensive experiments conducted on multiple\nreinforcement learning based AV models show that ScenGE uncovers more severe\ncollision cases (+31.96%) on average than SoTA baselines. Additionally, our\nScenGE can be applied to large model based AV systems and deployed on different\nsimulators; we further observe that adversarial training on our scenarios\nimproves the model robustness. Finally, we validate our framework through\nreal-world vehicle tests and human evaluation, confirming that the generated\nscenarios are both plausible and critical. We hope our paper can build up a\ncritical step towards building public trust and ensuring their safe deployment.",
+        "url": "http://arxiv.org/abs/2508.14527v1",
+        "published_date": "2025-08-20T08:36:57+00:00",
+        "updated_date": "2025-08-20T08:36:57+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jiangfan Liu",
+            "Yongkang Guo",
+            "Fangzhi Zhong",
+            "Tianyuan Zhang",
+            "Zonglei Jing",
+            "Siyuan Liang",
+            "Jiakai Wang",
+            "Mingchuan Zhang",
+            "Aishan Liu",
+            "Xianglong Liu"
+        ],
+        "tldr": "This paper introduces ScenGE, a framework for generating safety-critical scenarios for autonomous vehicles using LLMs and adversarial optimization, demonstrating improved collision detection and model robustness compared to existing methods.",
+        "tldr_zh": "本文介绍了一个名为ScenGE的框架，该框架利用大型语言模型和对抗优化为自动驾驶汽车生成安全关键场景，与现有方法相比，在碰撞检测和模型鲁棒性方面表现出改进。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "EventSSEG: Event-driven Self-Supervised Segmentation with Probabilistic Attention",
+        "summary": "Road segmentation is pivotal for autonomous vehicles, yet achieving low\nlatency and low compute solutions using frame based cameras remains a\nchallenge. Event cameras offer a promising alternative. To leverage their low\npower sensing, we introduce EventSSEG, a method for road segmentation that uses\nevent only computing and a probabilistic attention mechanism. Event only\ncomputing poses a challenge in transferring pretrained weights from the\nconventional camera domain, requiring abundant labeled data, which is scarce.\nTo overcome this, EventSSEG employs event-based self supervised learning,\neliminating the need for extensive labeled data. Experiments on DSEC-Semantic\nand DDD17 show that EventSSEG achieves state of the art performance with\nminimal labeled events. This approach maximizes event cameras capabilities and\naddresses the lack of labeled events.",
+        "url": "http://arxiv.org/abs/2508.14856v1",
+        "published_date": "2025-08-20T17:08:59+00:00",
+        "updated_date": "2025-08-20T17:08:59+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Lakshmi Annamalai",
+            "Chetan Singh Thakur"
+        ],
+        "tldr": "EventSSEG introduces a self-supervised road segmentation method using event cameras and probabilistic attention to address the scarcity of labeled event data for autonomous driving.",
+        "tldr_zh": "EventSSEG 提出了一种使用事件相机和概率注意力机制的自监督道路分割方法，旨在解决自动驾驶中标记事件数据稀缺的问题。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "6-DoF Object Tracking with Event-based Optical Flow and Frames",
+        "summary": "Tracking the position and orientation of objects in space (i.e., in 6-DoF) in\nreal time is a fundamental problem in robotics for environment interaction. It\nbecomes more challenging when objects move at high-speed due to frame rate\nlimitations in conventional cameras and motion blur. Event cameras are\ncharacterized by high temporal resolution, low latency and high dynamic range,\nthat can potentially overcome the impacts of motion blur. Traditional RGB\ncameras provide rich visual information that is more suitable for the\nchallenging task of single-shot object pose estimation. In this work, we\npropose using event-based optical flow combined with an RGB based global object\npose estimator for 6-DoF pose tracking of objects at high-speed, exploiting the\ncore advantages of both types of vision sensors. Specifically, we propose an\nevent-based optical flow algorithm for object motion measurement to implement\nan object 6-DoF velocity tracker. By integrating the tracked object 6-DoF\nvelocity with low frequency estimated pose from the global pose estimator, the\nmethod can track pose when objects move at high-speed. The proposed algorithm\nis tested and validated on both synthetic and real world data, demonstrating\nits effectiveness, especially in high-speed motion scenarios.",
+        "url": "http://arxiv.org/abs/2508.14776v1",
+        "published_date": "2025-08-20T15:22:51+00:00",
+        "updated_date": "2025-08-20T15:22:51+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zhichao Li",
+            "Arren Glover",
+            "Chiara Bartolozzi",
+            "Lorenzo Natale"
+        ],
+        "tldr": "This paper presents a 6-DoF object tracking method combining event-based optical flow with an RGB-based pose estimator to track objects moving at high speeds, leveraging the strengths of both event cameras and traditional cameras.",
+        "tldr_zh": "本文提出了一种结合基于事件的光流和基于RGB的姿态估计器的6自由度物体跟踪方法，利用事件相机和传统相机的优势，跟踪高速运动的物体。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Safety-Critical Learning for Long-Tail Events: The TUM Traffic Accident Dataset",
+        "summary": "Even though a significant amount of work has been done to increase the safety\nof transportation networks, accidents still occur regularly. They must be\nunderstood as an unavoidable and sporadic outcome of traffic networks. We\npresent the TUM Traffic Accident (TUMTraf-A) dataset, a collection of\nreal-world highway accidents. It contains ten sequences of vehicle crashes at\nhigh-speed driving with 294,924 labeled 2D and 93,012 labeled 3D boxes and\ntrack IDs within 48,144 labeled frames recorded from four roadside cameras and\nLiDARs at 10 Hz. The dataset contains ten object classes and is provided in the\nOpenLABEL format. We propose Accid3nD, an accident detection model that\ncombines a rule-based approach with a learning-based one. Experiments and\nablation studies on our dataset show the robustness of our proposed method. The\ndataset, model, and code are available on our project website:\nhttps://tum-traffic-dataset.github.io/tumtraf-a.",
+        "url": "http://arxiv.org/abs/2508.14567v1",
+        "published_date": "2025-08-20T09:38:50+00:00",
+        "updated_date": "2025-08-20T09:38:50+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Walter Zimmer",
+            "Ross Greer",
+            "Xingcheng Zhou",
+            "Rui Song",
+            "Marc Pavel",
+            "Daniel Lehmberg",
+            "Ahmed Ghita",
+            "Akshay Gopalkrishnan",
+            "Mohan Trivedi",
+            "Alois Knoll"
+        ],
+        "tldr": "The paper introduces TUMTraf-A, a new dataset of real-world highway accidents captured with cameras and LiDARs, and proposes Accid3nD, an accident detection model. The dataset and model are publicly available.",
+        "tldr_zh": "该论文介绍了一个名为TUMTraf-A的真实高速公路交通事故数据集，该数据集由相机和激光雷达捕获，并提出了Accid3nD，一个事故检测模型。数据集和模型均已公开。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "LookOut: Real-World Humanoid Egocentric Navigation",
+        "summary": "The ability to predict collision-free future trajectories from egocentric\nobservations is crucial in applications such as humanoid robotics, VR / AR, and\nassistive navigation. In this work, we introduce the challenging problem of\npredicting a sequence of future 6D head poses from an egocentric video. In\nparticular, we predict both head translations and rotations to learn the active\ninformation-gathering behavior expressed through head-turning events. To solve\nthis task, we propose a framework that reasons over temporally aggregated 3D\nlatent features, which models the geometric and semantic constraints for both\nthe static and dynamic parts of the environment. Motivated by the lack of\ntraining data in this space, we further contribute a data collection pipeline\nusing the Project Aria glasses, and present a dataset collected through this\napproach. Our dataset, dubbed Aria Navigation Dataset (AND), consists of 4\nhours of recording of users navigating in real-world scenarios. It includes\ndiverse situations and navigation behaviors, providing a valuable resource for\nlearning real-world egocentric navigation policies. Extensive experiments show\nthat our model learns human-like navigation behaviors such as waiting / slowing\ndown, rerouting, and looking around for traffic while generalizing to unseen\nenvironments. Check out our project webpage at\nhttps://sites.google.com/stanford.edu/lookout.",
+        "url": "http://arxiv.org/abs/2508.14466v1",
+        "published_date": "2025-08-20T06:43:36+00:00",
+        "updated_date": "2025-08-20T06:43:36+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Boxiao Pan",
+            "Adam W. Harley",
+            "C. Karen Liu",
+            "Leonidas J. Guibas"
+        ],
+        "tldr": "This paper introduces a method for predicting future 6D head poses from egocentric video for humanoid navigation, along with a new dataset (Aria Navigation Dataset - AND) collected using Project Aria glasses.",
+        "tldr_zh": "本文介绍了一种预测人形机器人导航中，基于第一人称视角视频的未来6D头部姿态的方法，并发布了一个使用Project Aria眼镜收集的新数据集（Aria Navigation Dataset - AND）。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Learning Point Cloud Representations with Pose Continuity for Depth-Based Category-Level 6D Object Pose Estimation",
+        "summary": "Category-level object pose estimation aims to predict the 6D pose and 3D size\nof objects within given categories. Existing approaches for this task rely\nsolely on 6D poses as supervisory signals without explicitly capturing the\nintrinsic continuity of poses, leading to inconsistencies in predictions and\nreduced generalization to unseen poses. To address this limitation, we propose\nHRC-Pose, a novel depth-only framework for category-level object pose\nestimation, which leverages contrastive learning to learn point cloud\nrepresentations that preserve the continuity of 6D poses. HRC-Pose decouples\nobject pose into rotation and translation components, which are separately\nencoded and leveraged throughout the network. Specifically, we introduce a\ncontrastive learning strategy for multi-task, multi-category scenarios based on\nour 6D pose-aware hierarchical ranking scheme, which contrasts point clouds\nfrom multiple categories by considering rotational and translational\ndifferences as well as categorical information. We further design pose\nestimation modules that separately process the learned rotation-aware and\ntranslation-aware embeddings. Our experiments demonstrate that HRC-Pose\nsuccessfully learns continuous feature spaces. Results on REAL275 and CAMERA25\nbenchmarks show that our method consistently outperforms existing depth-only\nstate-of-the-art methods and runs in real-time, demonstrating its effectiveness\nand potential for real-world applications. Our code is at\nhttps://github.com/zhujunli1993/HRC-Pose.",
+        "url": "http://arxiv.org/abs/2508.14358v1",
+        "published_date": "2025-08-20T02:09:02+00:00",
+        "updated_date": "2025-08-20T02:09:02+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.RO"
+        ],
+        "authors": [
+            "Zhujun Li",
+            "Shuo Zhang",
+            "Ioannis Stamos"
+        ],
+        "tldr": "The paper introduces HRC-Pose, a depth-only framework that uses contrastive learning with a hierarchical ranking scheme to learn continuous point cloud representations for category-level 6D object pose estimation, outperforming existing state-of-the-art methods.",
+        "tldr_zh": "该论文介绍了 HRC-Pose，一个仅使用深度信息的框架，它使用对比学习和分层排序方案来学习连续点云表示，用于类别级别的 6D 物体姿态估计，优于现有的最先进方法。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "MoVieDrive: Multi-Modal Multi-View Urban Scene Video Generation",
+        "summary": "Video generation has recently shown superiority in urban scene synthesis for\nautonomous driving. Existing video generation approaches to autonomous driving\nprimarily focus on RGB video generation and lack the ability to support\nmulti-modal video generation. However, multi-modal data, such as depth maps and\nsemantic maps, are crucial for holistic urban scene understanding in autonomous\ndriving. Although it is feasible to use multiple models to generate different\nmodalities, this increases the difficulty of model deployment and does not\nleverage complementary cues for multi-modal data generation. To address this\nproblem, in this work, we propose a novel multi-modal multi-view video\ngeneration approach to autonomous driving. Specifically, we construct a unified\ndiffusion transformer model composed of modal-shared components and\nmodal-specific components. Then, we leverage diverse conditioning inputs to\nencode controllable scene structure and content cues into the unified diffusion\nmodel for multi-modal multi-view video generation. In this way, our approach is\ncapable of generating multi-modal multi-view driving scene videos in a unified\nframework. Our experiments on the challenging real-world autonomous driving\ndataset, nuScenes, show that our approach can generate multi-modal multi-view\nurban scene videos with high fidelity and controllability, surpassing the\nstate-of-the-art methods.",
+        "url": "http://arxiv.org/abs/2508.14327v1",
+        "published_date": "2025-08-20T00:51:36+00:00",
+        "updated_date": "2025-08-20T00:51:36+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Guile Wu",
+            "David Huang",
+            "Dongfeng Bai",
+            "Bingbing Liu"
+        ],
+        "tldr": "The paper introduces a novel multi-modal multi-view video generation approach for autonomous driving using a unified diffusion transformer model, achieving state-of-the-art results on the nuScenes dataset.",
+        "tldr_zh": "本文提出了一种新颖的多模态多视角视频生成方法，用于自动驾驶，该方法使用统一的扩散Transformer模型，并在nuScenes数据集上取得了最先进的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "RynnEC: Bringing MLLMs into Embodied World",
+        "summary": "We introduce RynnEC, a video multimodal large language model designed for\nembodied cognition. Built upon a general-purpose vision-language foundation\nmodel, RynnEC incorporates a region encoder and a mask decoder, enabling\nflexible region-level video interaction. Despite its compact architecture,\nRynnEC achieves state-of-the-art performance in object property understanding,\nobject segmentation, and spatial reasoning. Conceptually, it offers a\nregion-centric video paradigm for the brain of embodied agents, providing\nfine-grained perception of the physical world and enabling more precise\ninteractions. To mitigate the scarcity of annotated 3D datasets, we propose an\negocentric video based pipeline for generating embodied cognition data.\nFurthermore, we introduce RynnEC-Bench, a region-centered benchmark for\nevaluating embodied cognitive capabilities. We anticipate that RynnEC will\nadvance the development of general-purpose cognitive cores for embodied agents\nand facilitate generalization across diverse embodied tasks. The code, model\ncheckpoints, and benchmark are available at:\nhttps://github.com/alibaba-damo-academy/RynnEC",
+        "url": "http://arxiv.org/abs/2508.14160v1",
+        "published_date": "2025-08-19T18:00:01+00:00",
+        "updated_date": "2025-08-19T18:00:01+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.RO"
+        ],
+        "authors": [
+            "Ronghao Dang",
+            "Yuqian Yuan",
+            "Yunxuan Mao",
+            "Kehan Li",
+            "Jiangpin Liu",
+            "Zhikai Wang",
+            "Xin Li",
+            "Fan Wang",
+            "Deli Zhao"
+        ],
+        "tldr": "RynnEC is a video multimodal large language model for embodied cognition, featuring a region encoder and mask decoder for fine-grained video interaction and achieving SOTA performance in relevant tasks. They also introduce a new benchmark and data generation pipeline.",
+        "tldr_zh": "RynnEC是一个用于具身认知的视频多模态大型语言模型，具有区域编码器和掩码解码器，可实现细粒度的视频交互，并在相关任务中实现了SOTA性能。他们还介绍了一个新的基准和数据生成管线。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Pixels to Play: A Foundation Model for 3D Gameplay",
+        "summary": "We introduce Pixels2Play-0.1 (P2P0.1), a foundation model that learns to play\na wide range of 3D video games with recognizable human-like behavior. Motivated\nby emerging consumer and developer use cases - AI teammates, controllable NPCs,\npersonalized live-streamers, assistive testers - we argue that an agent must\nrely on the same pixel stream available to players and generalize to new titles\nwith minimal game-specific engineering. P2P0.1 is trained end-to-end with\nbehavior cloning: labeled demonstrations collected from instrumented human\ngame-play are complemented by unlabeled public videos, to which we impute\nactions via an inverse-dynamics model. A decoder-only transformer with\nauto-regressive action output handles the large action space while remaining\nlatency-friendly on a single consumer GPU. We report qualitative results\nshowing competent play across simple Roblox and classic MS-DOS titles,\nablations on unlabeled data, and outline the scaling and evaluation steps\nrequired to reach expert-level, text-conditioned control.",
+        "url": "http://arxiv.org/abs/2508.14295v1",
+        "published_date": "2025-08-19T22:24:50+00:00",
+        "updated_date": "2025-08-19T22:24:50+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG"
+        ],
+        "authors": [
+            "Yuguang Yue",
+            "Chris Green",
+            "Samuel Hunt",
+            "Irakli Salia",
+            "Wenzhe Shi",
+            "Jonathan J Hunt"
+        ],
+        "tldr": "The paper introduces Pixels2Play-0.1, a foundation model trained via behavior cloning to play 3D video games using only pixel input, aiming for human-like behavior and generalization to new games.",
+        "tldr_zh": "该论文介绍了Pixels2Play-0.1，一个通过行为克隆训练的基础模型，仅使用像素输入来玩3D视频游戏，目标是实现类人行为并泛化到新的游戏。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
