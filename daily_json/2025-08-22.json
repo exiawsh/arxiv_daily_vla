@@ -1,0 +1,317 @@
+[
+    {
+        "title": "MapKD: Unlocking Prior Knowledge with Cross-Modal Distillation for Efficient Online HD Map Construction",
+        "summary": "Online HD map construction is a fundamental task in autonomous driving\nsystems, aiming to acquire semantic information of map elements around the ego\nvehicle based on real-time sensor inputs. Recently, several approaches have\nachieved promising results by incorporating offline priors such as SD maps and\nHD maps or by fusing multi-modal data. However, these methods depend on stale\noffline maps and multi-modal sensor suites, resulting in avoidable\ncomputational overhead at inference. To address these limitations, we employ a\nknowledge distillation strategy to transfer knowledge from multimodal models\nwith prior knowledge to an efficient, low-cost, and vision-centric student\nmodel. Specifically, we propose MapKD, a novel multi-level cross-modal\nknowledge distillation framework with an innovative Teacher-Coach-Student (TCS)\nparadigm. This framework consists of: (1) a camera-LiDAR fusion model with\nSD/HD map priors serving as the teacher; (2) a vision-centric coach model with\nprior knowledge and simulated LiDAR to bridge the cross-modal knowledge\ntransfer gap; and (3) a lightweight vision-based student model. Additionally,\nwe introduce two targeted knowledge distillation strategies: Token-Guided 2D\nPatch Distillation (TGPD) for bird's eye view feature alignment and Masked\nSemantic Response Distillation (MSRD) for semantic learning guidance. Extensive\nexperiments on the challenging nuScenes dataset demonstrate that MapKD improves\nthe student model by +6.68 mIoU and +10.94 mAP while simultaneously\naccelerating inference speed. The code is available\nat:https://github.com/2004yan/MapKD2026.",
+        "url": "http://arxiv.org/abs/2508.15653v1",
+        "published_date": "2025-08-21T15:37:18+00:00",
+        "updated_date": "2025-08-21T15:37:18+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ziyang Yan",
+            "Ruikai Li",
+            "Zhiyong Cui",
+            "Bohan Li",
+            "Han Jiang",
+            "Yilong Ren",
+            "Aoyong Li",
+            "Zhenning Li",
+            "Sijia Wen",
+            "Haiyang Yu"
+        ],
+        "tldr": "The paper introduces MapKD, a knowledge distillation framework for efficient online HD map construction, using a Teacher-Coach-Student paradigm to transfer knowledge from multimodal models to a lightweight, vision-centric student model.",
+        "tldr_zh": "该论文介绍了MapKD，一个用于高效在线高清地图构建的知识蒸馏框架。它采用教师-教练-学生范式，将知识从多模态模型传递到一个轻量级的、以视觉为中心的学生模型。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "ExtraGS: Geometric-Aware Trajectory Extrapolation with Uncertainty-Guided Generative Priors",
+        "summary": "Synthesizing extrapolated views from recorded driving logs is critical for\nsimulating driving scenes for autonomous driving vehicles, yet it remains a\nchallenging task. Recent methods leverage generative priors as pseudo ground\ntruth, but often lead to poor geometric consistency and over-smoothed\nrenderings. To address these limitations, we propose ExtraGS, a holistic\nframework for trajectory extrapolation that integrates both geometric and\ngenerative priors. At the core of ExtraGS is a novel Road Surface Gaussian(RSG)\nrepresentation based on a hybrid Gaussian-Signed Distance Function (SDF)\ndesign, and Far Field Gaussians (FFG) that use learnable scaling factors to\nefficiently handle distant objects. Furthermore, we develop a self-supervised\nuncertainty estimation framework based on spherical harmonics that enables\nselective integration of generative priors only where extrapolation artifacts\noccur. Extensive experiments on multiple datasets, diverse multi-camera setups,\nand various generative priors demonstrate that ExtraGS significantly enhances\nthe realism and geometric consistency of extrapolated views, while preserving\nhigh fidelity along the original trajectory.",
+        "url": "http://arxiv.org/abs/2508.15529v1",
+        "published_date": "2025-08-21T13:03:01+00:00",
+        "updated_date": "2025-08-21T13:03:01+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Kaiyuan Tan",
+            "Yingying Shen",
+            "Haohui Zhu",
+            "Zhiwei Zhan",
+            "Shan Zhao",
+            "Mingfei Tu",
+            "Hongcheng Luo",
+            "Haiyang Sun",
+            "Bing Wang",
+            "Guang Chen",
+            "Hangjun Ye"
+        ],
+        "tldr": "ExtraGS improves trajectory extrapolation for autonomous driving simulation by combining geometric and generative priors, using a novel Gaussian-SDF representation and uncertainty-guided generative prior integration.",
+        "tldr_zh": "ExtraGS通过结合几何和生成先验，利用新型高斯-SDF表示和不确定性引导的生成先验集成，改进了自动驾驶模拟的轨迹外推。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Lang2Lift: A Framework for Language-Guided Pallet Detection and Pose Estimation Integrated in Autonomous Outdoor Forklift Operation",
+        "summary": "The logistics and construction industries face persistent challenges in\nautomating pallet handling, especially in outdoor environments with variable\npayloads, inconsistencies in pallet quality and dimensions, and unstructured\nsurroundings. In this paper, we tackle automation of a critical step in pallet\ntransport: the pallet pick-up operation. Our work is motivated by labor\nshortages, safety concerns, and inefficiencies in manually locating and\nretrieving pallets under such conditions. We present Lang2Lift, a framework\nthat leverages foundation models for natural language-guided pallet detection\nand 6D pose estimation, enabling operators to specify targets through intuitive\ncommands such as \"pick up the steel beam pallet near the crane.\" The perception\npipeline integrates Florence-2 and SAM-2 for language-grounded segmentation\nwith FoundationPose for robust pose estimation in cluttered, multi-pallet\noutdoor scenes under variable lighting. The resulting poses feed into a motion\nplanning module for fully autonomous forklift operation. We validate Lang2Lift\non the ADAPT autonomous forklift platform, achieving 0.76 mIoU pallet\nsegmentation accuracy on a real-world test dataset. Timing and error analysis\ndemonstrate the system's robustness and confirm its feasibility for deployment\nin operational logistics and construction environments. Video demonstrations\nare available at https://eric-nguyen1402.github.io/lang2lift.github.io/",
+        "url": "http://arxiv.org/abs/2508.15427v1",
+        "published_date": "2025-08-21T10:28:39+00:00",
+        "updated_date": "2025-08-21T10:28:39+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Huy Hoang Nguyen",
+            "Johannes Huemer",
+            "Markus Murschitz",
+            "Tobias Glueck",
+            "Minh Nhat Vu",
+            "Andreas Kugi"
+        ],
+        "tldr": "The paper introduces Lang2Lift, a framework using foundation models for language-guided pallet detection and pose estimation, enabling autonomous forklift operation in challenging outdoor environments. It leverages models like Florence-2, SAM-2, and FoundationPose.",
+        "tldr_zh": "该论文介绍了Lang2Lift，一个利用基础模型进行语言引导的托盘检测和姿态估计的框架，可在具有挑战性的户外环境中实现自主叉车操作。它利用了 Florence-2、SAM-2 和 FoundationPose 等模型。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "DriveSplat: Decoupled Driving Scene Reconstruction with Geometry-enhanced Partitioned Neural Gaussians",
+        "summary": "In the realm of driving scenarios, the presence of rapidly moving vehicles,\npedestrians in motion, and large-scale static backgrounds poses significant\nchallenges for 3D scene reconstruction. Recent methods based on 3D Gaussian\nSplatting address the motion blur problem by decoupling dynamic and static\ncomponents within the scene. However, these decoupling strategies overlook\nbackground optimization with adequate geometry relationships and rely solely on\nfitting each training view by adding Gaussians. Therefore, these models exhibit\nlimited robustness in rendering novel views and lack an accurate geometric\nrepresentation. To address the above issues, we introduce DriveSplat, a\nhigh-quality reconstruction method for driving scenarios based on neural\nGaussian representations with dynamic-static decoupling. To better accommodate\nthe predominantly linear motion patterns of driving viewpoints, a region-wise\nvoxel initialization scheme is employed, which partitions the scene into near,\nmiddle, and far regions to enhance close-range detail representation.\nDeformable neural Gaussians are introduced to model non-rigid dynamic actors,\nwhose parameters are temporally adjusted by a learnable deformation network.\nThe entire framework is further supervised by depth and normal priors from\npre-trained models, improving the accuracy of geometric structures. Our method\nhas been rigorously evaluated on the Waymo and KITTI datasets, demonstrating\nstate-of-the-art performance in novel-view synthesis for driving scenarios.",
+        "url": "http://arxiv.org/abs/2508.15376v1",
+        "published_date": "2025-08-21T09:14:50+00:00",
+        "updated_date": "2025-08-21T09:14:50+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Cong Wang",
+            "Xianda Guo",
+            "Wenbo Xu",
+            "Wei Tian",
+            "Ruiqi Song",
+            "Chenming Zhang",
+            "Lingxi Li",
+            "Long Chen"
+        ],
+        "tldr": "DriveSplat introduces a novel neural Gaussian Splatting method for 3D scene reconstruction in driving scenarios, using dynamic-static decoupling, region-wise voxel initialization, and deformable Gaussians supervised by depth and normal priors to achieve state-of-the-art novel view synthesis.",
+        "tldr_zh": "DriveSplat 提出了一种用于驾驶场景 3D 重建的新型神经高斯溅射方法，该方法利用动态-静态解耦、区域式体素初始化以及由深度和法线先验监督的可变形高斯函数，以实现最先进的新视角合成。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "RCDINO: Enhancing Radar-Camera 3D Object Detection with DINOv2 Semantic Features",
+        "summary": "Three-dimensional object detection is essential for autonomous driving and\nrobotics, relying on effective fusion of multimodal data from cameras and\nradar. This work proposes RCDINO, a multimodal transformer-based model that\nenhances visual backbone features by fusing them with semantically rich\nrepresentations from the pretrained DINOv2 foundation model. This approach\nenriches visual representations and improves the model's detection performance\nwhile preserving compatibility with the baseline architecture. Experiments on\nthe nuScenes dataset demonstrate that RCDINO achieves state-of-the-art\nperformance among radar-camera models, with 56.4 NDS and 48.1 mAP. Our\nimplementation is available at https://github.com/OlgaMatykina/RCDINO.",
+        "url": "http://arxiv.org/abs/2508.15353v1",
+        "published_date": "2025-08-21T08:33:36+00:00",
+        "updated_date": "2025-08-21T08:33:36+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Olga Matykina",
+            "Dmitry Yudin"
+        ],
+        "tldr": "RCDINO is a radar-camera fusion model that enhances 3D object detection using DINOv2 semantic features, achieving state-of-the-art performance on nuScenes.",
+        "tldr_zh": "RCDINO是一种雷达-相机融合模型，它利用DINOv2语义特征增强3D物体检测，并在nuScenes数据集上实现了最先进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "AeroDuo: Aerial Duo for UAV-based Vision and Language Navigation",
+        "summary": "Aerial Vision-and-Language Navigation (VLN) is an emerging task that enables\nUnmanned Aerial Vehicles (UAVs) to navigate outdoor environments using natural\nlanguage instructions and visual cues. However, due to the extended\ntrajectories and complex maneuverability of UAVs, achieving reliable UAV-VLN\nperformance is challenging and often requires human intervention or overly\ndetailed instructions. To harness the advantages of UAVs' high mobility, which\ncould provide multi-grained perspectives, while maintaining a manageable motion\nspace for learning, we introduce a novel task called Dual-Altitude UAV\nCollaborative VLN (DuAl-VLN). In this task, two UAVs operate at distinct\naltitudes: a high-altitude UAV responsible for broad environmental reasoning,\nand a low-altitude UAV tasked with precise navigation. To support the training\nand evaluation of the DuAl-VLN, we construct the HaL-13k, a dataset comprising\n13,838 collaborative high-low UAV demonstration trajectories, each paired with\ntarget-oriented language instructions. This dataset includes both unseen maps\nand an unseen object validation set to systematically evaluate the model's\ngeneralization capabilities across novel environments and unfamiliar targets.\nTo consolidate their complementary strengths, we propose a dual-UAV\ncollaborative VLN framework, AeroDuo, where the high-altitude UAV integrates a\nmultimodal large language model (Pilot-LLM) for target reasoning, while the\nlow-altitude UAV employs a lightweight multi-stage policy for navigation and\ntarget grounding. The two UAVs work collaboratively and only exchange minimal\ncoordinate information to ensure efficiency.",
+        "url": "http://arxiv.org/abs/2508.15232v1",
+        "published_date": "2025-08-21T04:43:35+00:00",
+        "updated_date": "2025-08-21T04:43:35+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ruipu Wu",
+            "Yige Zhang",
+            "Jinyu Chen",
+            "Linjiang Huang",
+            "Shifeng Zhang",
+            "Xu Zhou",
+            "Liang Wang",
+            "Si Liu"
+        ],
+        "tldr": "The paper introduces a new task, Dual-Altitude UAV Collaborative VLN, and a corresponding dataset (HaL-13k) and framework (AeroDuo) to improve UAV-based Vision-and-Language Navigation by using two UAVs at different altitudes with complementary roles.",
+        "tldr_zh": "该论文介绍了一种新的任务，双高度无人机协同视觉-语言导航，以及一个对应的数据集(HaL-13k)和框架(AeroDuo)，通过使用两个不同高度且具有互补作用的无人机来改进基于无人机的视觉-语言导航。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "STAGNet: A Spatio-Temporal Graph and LSTM Framework for Accident Anticipation",
+        "summary": "Accident prediction and timely warnings play a key role in improving road\nsafety by reducing the risk of injury to road users and minimizing property\ndamage. Advanced Driver Assistance Systems (ADAS) are designed to support human\ndrivers and are especially useful when they can anticipate potential accidents\nbefore they happen. While many existing systems depend on a range of sensors\nsuch as LiDAR, radar, and GPS, relying solely on dash-cam video input presents\na more challenging but a more cost-effective and easily deployable solution. In\nthis work, we incorporate better spatio-temporal features and aggregate them\nthrough a recurrent network to improve upon state-of-the-art graph neural\nnetworks for predicting accidents from dash-cam videos. Experiments using three\npublicly available datasets show that our proposed STAGNet model achieves\nhigher average precision and mean time-to-collision values than previous\nmethods, both when cross-validated on a given dataset and when trained and\ntested on different datasets.",
+        "url": "http://arxiv.org/abs/2508.15216v1",
+        "published_date": "2025-08-21T04:02:22+00:00",
+        "updated_date": "2025-08-21T04:02:22+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Vipooshan Vipulananthan",
+            "Kumudu Mohottala",
+            "Kavindu Chinthana",
+            "Nimsara Paramulla",
+            "Charith D Chitraranjan"
+        ],
+        "tldr": "The paper proposes STAGNet, a spatio-temporal graph and LSTM framework, to predict traffic accidents from dash-cam videos, achieving improved performance on public datasets compared to existing graph neural networks.",
+        "tldr_zh": "该论文提出了STAGNet，一个时空图和LSTM框架，用于从行车记录仪视频中预测交通事故，与现有的图神经网络相比，在公共数据集上取得了更好的性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Adversarial Agent Behavior Learning in Autonomous Driving Using Deep Reinforcement Learning",
+        "summary": "Existing approaches in reinforcement learning train an agent to learn desired\noptimal behavior in an environment with rule based surrounding agents. In\nsafety critical applications such as autonomous driving it is crucial that the\nrule based agents are modelled properly. Several behavior modelling strategies\nand IDM models are used currently to model the surrounding agents. We present a\nlearning based method to derive the adversarial behavior for the rule based\nagents to cause failure scenarios. We evaluate our adversarial agent against\nall the rule based agents and show the decrease in cumulative reward.",
+        "url": "http://arxiv.org/abs/2508.15207v1",
+        "published_date": "2025-08-21T03:38:33+00:00",
+        "updated_date": "2025-08-21T03:38:33+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Arjun Srinivasan",
+            "Anubhav Paras",
+            "Aniket Bera"
+        ],
+        "tldr": "This paper proposes a reinforcement learning-based method to generate adversarial behaviors for rule-based agents in autonomous driving simulations, aiming to identify failure scenarios.",
+        "tldr_zh": "该论文提出了一种基于强化学习的方法，用于在自动驾驶模拟中为基于规则的智能体生成对抗行为，旨在识别故障场景。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "MeSS: City Mesh-Guided Outdoor Scene Generation with Cross-View Consistent Diffusion",
+        "summary": "Mesh models have become increasingly accessible for numerous cities; however,\nthe lack of realistic textures restricts their application in virtual urban\nnavigation and autonomous driving. To address this, this paper proposes MeSS\n(Meshbased Scene Synthesis) for generating high-quality, styleconsistent\noutdoor scenes with city mesh models serving as the geometric prior. While\nimage and video diffusion models can leverage spatial layouts (such as depth\nmaps or HD maps) as control conditions to generate street-level perspective\nviews, they are not directly applicable to 3D scene generation. Video diffusion\nmodels excel at synthesizing consistent view sequences that depict scenes but\noften struggle to adhere to predefined camera paths or align accurately with\nrendered control videos. In contrast, image diffusion models, though unable to\nguarantee cross-view visual consistency, can produce more geometry-aligned\nresults when combined with ControlNet. Building on this insight, our approach\nenhances image diffusion models by improving cross-view consistency. The\npipeline comprises three key stages: first, we generate geometrically\nconsistent sparse views using Cascaded Outpainting ControlNets; second, we\npropagate denser intermediate views via a component dubbed AGInpaint; and\nthird, we globally eliminate visual inconsistencies (e.g., varying exposure)\nusing the GCAlign module. Concurrently with generation, a 3D Gaussian Splatting\n(3DGS) scene is reconstructed by initializing Gaussian balls on the mesh\nsurface. Our method outperforms existing approaches in both geometric alignment\nand generation quality. Once synthesized, the scene can be rendered in diverse\nstyles through relighting and style transfer techniques.",
+        "url": "http://arxiv.org/abs/2508.15169v1",
+        "published_date": "2025-08-21T02:16:15+00:00",
+        "updated_date": "2025-08-21T02:16:15+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Xuyang Chen",
+            "Zhijun Zhai",
+            "Kaixuan Zhou",
+            "Zengmao Wang",
+            "Jianan He",
+            "Dong Wang",
+            "Yanfeng Zhang",
+            "mingwei Sun",
+            "Rüdiger Westermann",
+            "Konrad Schindler",
+            "Liqiu Meng"
+        ],
+        "tldr": "The paper introduces MeSS, a method for generating high-quality, cross-view consistent outdoor scenes from city mesh models using a cascaded diffusion pipeline, reconstructing a 3D Gaussian Splatting scene concurrently.",
+        "tldr_zh": "该论文介绍了 MeSS，一种利用级联扩散管道从城市网格模型生成高质量、跨视角一致的户外场景的方法，并同时重建3D高斯溅射场景。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "You Only Pose Once: A Minimalist's Detection Transformer for Monocular RGB Category-level 9D Multi-Object Pose Estimation",
+        "summary": "Accurately recovering the full 9-DoF pose of unseen instances within specific\ncategories from a single RGB image remains a core challenge for robotics and\nautomation. Most existing solutions still rely on pseudo-depth, CAD models, or\nmulti-stage cascades that separate 2D detection from pose estimation. Motivated\nby the need for a simpler, RGB-only alternative that learns directly at the\ncategory level, we revisit a longstanding question: Can object detection and\n9-DoF pose estimation be unified with high performance, without any additional\ndata? We show that they can with our method, YOPO, a single-stage, query-based\nframework that treats category-level 9-DoF estimation as a natural extension of\n2D detection. YOPO augments a transformer detector with a lightweight pose\nhead, a bounding-box-conditioned translation module, and a 6D-aware Hungarian\nmatching cost. The model is trained end-to-end only with RGB images and\ncategory-level pose labels. Despite its minimalist design, YOPO sets a new\nstate of the art on three benchmarks. On the REAL275 dataset, it achieves 79.6%\n$\\rm{IoU}_{50}$ and 54.1% under the $10^\\circ$$10{\\rm{cm}}$ metric, surpassing\nprior RGB-only methods and closing much of the gap to RGB-D systems. The code,\nmodels, and additional qualitative results can be found on our project.",
+        "url": "http://arxiv.org/abs/2508.14965v1",
+        "published_date": "2025-08-20T18:00:01+00:00",
+        "updated_date": "2025-08-20T18:00:01+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Hakjin Lee",
+            "Junghoon Seo",
+            "Jaehoon Sim"
+        ],
+        "tldr": "This paper introduces YOPO, a single-stage transformer-based method for category-level 9D object pose estimation from monocular RGB images, achieving state-of-the-art results on multiple benchmarks without relying on pseudo-depth, CAD models, or multi-stage cascades.",
+        "tldr_zh": "本文介绍了一种名为YOPO的单阶段基于Transformer的方法，用于从单目RGB图像中进行类别级9D物体姿态估计，在多个基准测试中取得了最先进的结果，且不依赖于伪深度、CAD模型或多阶段级联。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Predicting Road Crossing Behaviour using Pose Detection and Sequence Modelling",
+        "summary": "The world is constantly moving towards AI based systems and autonomous\nvehicles are now reality in different parts of the world. These vehicles\nrequire sensors and cameras to detect objects and maneuver according to that.\nIt becomes important to for such vehicles to also predict from a distant if a\nperson is about to cross a road or not. The current study focused on predicting\nthe intent of crossing the road by pedestrians in an experimental setup. The\nstudy involved working with deep learning models to predict poses and sequence\nmodelling for temporal predictions. The study analysed three different sequence\nmodelling to understand the prediction behaviour and it was found out that GRU\nwas better in predicting the intent compared to LSTM model but 1D CNN was the\nbest model in terms of speed. The study involved video analysis, and the output\nof pose detection model was integrated later on to sequence modelling\ntechniques for an end-to-end deep learning framework for predicting road\ncrossing intents.",
+        "url": "http://arxiv.org/abs/2508.15336v1",
+        "published_date": "2025-08-21T08:08:50+00:00",
+        "updated_date": "2025-08-21T08:08:50+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Subhasis Dasgupta",
+            "Preetam Saha",
+            "Agniva Roy",
+            "Jaydip Sen"
+        ],
+        "tldr": "This paper presents an end-to-end deep learning framework for predicting pedestrian road crossing intent using pose detection and sequence modeling, comparing GRU, LSTM, and 1D CNN models. GRU performed best in accuracy, while 1D CNN was fastest.",
+        "tldr_zh": "本文提出了一个端到端的深度学习框架，利用姿态检测和序列建模来预测行人过马路的意图，并比较了GRU、LSTM和1D CNN模型。GRU在准确性方面表现最佳，而1D CNN速度最快。",
+        "relevance_score": 8,
+        "novelty_claim_score": 6,
+        "clarity_score": 7,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Decentralized Vision-Based Autonomous Aerial Wildlife Monitoring",
+        "summary": "Wildlife field operations demand efficient parallel deployment methods to\nidentify and interact with specific individuals, enabling simultaneous\ncollective behavioral analysis, and health and safety interventions. Previous\nrobotics solutions approach the problem from the herd perspective, or are\nmanually operated and limited in scale. We propose a decentralized vision-based\nmulti-quadrotor system for wildlife monitoring that is scalable, low-bandwidth,\nand sensor-minimal (single onboard RGB camera). Our approach enables robust\nidentification and tracking of large species in their natural habitat. We\ndevelop novel vision-based coordination and tracking algorithms designed for\ndynamic, unstructured environments without reliance on centralized\ncommunication or control. We validate our system through real-world\nexperiments, demonstrating reliable deployment in diverse field conditions.",
+        "url": "http://arxiv.org/abs/2508.15038v1",
+        "published_date": "2025-08-20T20:05:05+00:00",
+        "updated_date": "2025-08-20T20:05:05+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV",
+            "cs.MA",
+            "I.2.9"
+        ],
+        "authors": [
+            "Makram Chahine",
+            "William Yang",
+            "Alaa Maalouf",
+            "Justin Siriska",
+            "Ninad Jadhav",
+            "Daniel Vogt",
+            "Stephanie Gil",
+            "Robert Wood",
+            "Daniela Rus"
+        ],
+        "tldr": "This paper presents a decentralized, vision-based multi-quadrotor system for autonomous wildlife monitoring, enabling scalable and robust identification and tracking of large species in their natural habitat.",
+        "tldr_zh": "本文提出了一种去中心化的、基于视觉的多旋翼飞行器系统，用于自主野生动物监测，从而能够在自然栖息地中实现大型物种的可扩展和鲁棒的识别与追踪。",
+        "relevance_score": 7,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
