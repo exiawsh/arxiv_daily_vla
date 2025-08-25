@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Autonomous Driving, VLA, 3D Understanding, Robotics) - August 18, 2025</title>
+    <title>ArXiv CS.CV Papers (Autonomous Driving, VLA, 3D Understanding, Robotics) - August 23, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>VLM Daily Papers</h1>
         <p>Daily papers related to VLA/AV/3D Understanding from cs.CV</p>
         
-            <p>August 18, 2025</p>
+            <p>August 23, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,30 +215,32 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">LMAD: Integrated End-to-End Vision-Language Model for Explainable Autonomous Driving</h2>
+            <h2 class="paper-title">SAMFusion: Sensor-Adaptive Multimodal Fusion for 3D Object Detection in Adverse Weather</h2>
             
-            <p class="paper-summary">Large vision-language models (VLMs) have shown promising capabilities in
-scene understanding, enhancing the explainability of driving behaviors and
-interactivity with users. Existing methods primarily fine-tune VLMs on on-board
-multi-view images and scene reasoning text, but this approach often lacks the
-holistic and nuanced scene recognition and powerful spatial awareness required
-for autonomous driving, especially in complex situations. To address this gap,
-we propose a novel vision-language framework tailored for autonomous driving,
-called LMAD. Our framework emulates modern end-to-end driving paradigms by
-incorporating comprehensive scene understanding and a task-specialized
-structure with VLMs. In particular, we introduce preliminary scene interaction
-and specialized expert adapters within the same driving task structure, which
-better align VLMs with autonomous driving scenarios. Furthermore, our approach
-is designed to be fully compatible with existing VLMs while seamlessly
-integrating with planning-oriented driving systems. Extensive experiments on
-the DriveLM and nuScenes-QA datasets demonstrate that LMAD significantly boosts
-the performance of existing VLMs on driving reasoning tasks,setting a new
-standard in explainable autonomous driving.</p>
+            <p class="paper-summary">Multimodal sensor fusion is an essential capability for autonomous robots,
+enabling object detection and decision-making in the presence of failing or
+uncertain inputs. While recent fusion methods excel in normal environmental
+conditions, these approaches fail in adverse weather, e.g., heavy fog, snow, or
+obstructions due to soiling. We introduce a novel multi-sensor fusion approach
+tailored to adverse weather conditions. In addition to fusing RGB and LiDAR
+sensors, which are employed in recent autonomous driving literature, our sensor
+fusion stack is also capable of learning from NIR gated camera and radar
+modalities to tackle low light and inclement weather. We fuse multimodal sensor
+data through attentive, depth-based blending schemes, with learned refinement
+on the Bird's Eye View (BEV) plane to combine image and range features
+effectively. Our detections are predicted by a transformer decoder that weighs
+modalities based on distance and visibility. We demonstrate that our method
+improves the reliability of multimodal sensor fusion in autonomous vehicles
+under challenging weather conditions, bridging the gap between ideal conditions
+and real-world edge cases. Our approach improves average precision by 17.2 AP
+compared to the next best method for vulnerable pedestrians in long distances
+and challenging foggy scenes. Our project page is available at
+https://light.princeton.edu/samfusion/</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces LMAD, a novel vision-language framework that enhances scene understanding and explainability in autonomous driving by integrating comprehensive scene understanding and task-specialized structures with VLMs, demonstrating significant performance improvements on driving reasoning tasks.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces SAMFusion, a novel multi-sensor fusion approach using RGB, LiDAR, NIR gated camera and radar to improve 3D object detection for autonomous vehicles in adverse weather conditions, demonstrating a significant improvement in average precision compared to existing methods.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了 LMAD，一种新颖的视觉-语言框架，通过将全面的场景理解和任务专业结构与 VLM 集成，增强了自动驾驶中的场景理解和可解释性，并在驾驶推理任务中展示了显著的性能提升。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了 SAMFusion，一种新型多传感器融合方法，它使用 RGB、LiDAR、NIR 门控相机和雷达来提高自动驾驶车辆在恶劣天气条件下的 3D 对象检测能力，与现有方法相比，平均精度有了显著提高。</p>
             
 
             
@@ -309,11 +311,11 @@ standard in explainable autonomous driving.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.12404v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.16408v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Nan Song, Bozhou Zhang, Xiatian Zhu, Jiankang Deng, Li Zhang</p>
+            <p class="paper-authors">Authors: Edoardo Palladin, Roland Dietze, Praveen Narayanan, Mario Bijelic, Felix Heide</p>
             
         </motion.div>
         
@@ -325,27 +327,139 @@ standard in explainable autonomous driving.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">DoppDrive: Doppler-Driven Temporal Aggregation for Improved Radar Object Detection</h2>
+            <h2 class="paper-title">Seeing Clearly, Forgetting Deeply: Revisiting Fine-Tuned Video Generators for Driving Simulation</h2>
             
-            <p class="paper-summary">Radar-based object detection is essential for autonomous driving due to
-radar's long detection range. However, the sparsity of radar point clouds,
-especially at long range, poses challenges for accurate detection. Existing
-methods increase point density through temporal aggregation with ego-motion
-compensation, but this approach introduces scatter from dynamic objects,
-degrading detection performance. We propose DoppDrive, a novel Doppler-Driven
-temporal aggregation method that enhances radar point cloud density while
-minimizing scatter. Points from previous frames are shifted radially according
-to their dynamic Doppler component to eliminate radial scatter, with each point
-assigned a unique aggregation duration based on its Doppler and angle to
-minimize tangential scatter. DoppDrive is a point cloud density enhancement
-step applied before detection, compatible with any detector, and we demonstrate
-that it significantly improves object detection performance across various
-detectors and datasets.</p>
+            <p class="paper-summary">Recent advancements in video generation have substantially improved visual
+quality and temporal coherence, making these models increasingly appealing for
+applications such as autonomous driving, particularly in the context of driving
+simulation and so-called "world models". In this work, we investigate the
+effects of existing fine-tuning video generation approaches on structured
+driving datasets and uncover a potential trade-off: although visual fidelity
+improves, spatial accuracy in modeling dynamic elements may degrade. We
+attribute this degradation to a shift in the alignment between visual quality
+and dynamic understanding objectives. In datasets with diverse scene structures
+within temporal space, where objects or perspective shift in varied ways, these
+objectives tend to highly correlated. However, the very regular and repetitive
+nature of driving scenes allows visual quality to improve by modeling dominant
+scene motion patterns, without necessarily preserving fine-grained dynamic
+behavior. As a result, fine-tuning encourages the model to prioritize
+surface-level realism over dynamic accuracy. To further examine this
+phenomenon, we show that simple continual learning strategies, such as replay
+from diverse domains, can offer a balanced alternative by preserving spatial
+accuracy while maintaining strong visual quality.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: DoppDrive is a novel radar point cloud enhancement method that uses Doppler information to minimize scatter during temporal aggregation, improving object detection performance for autonomous driving.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper investigates the trade-off between visual fidelity and spatial accuracy when fine-tuning video generation models for driving simulation, finding that fine-tuning can degrade dynamic element modeling and proposing continual learning as a solution.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: DoppDrive 是一种新型雷达点云增强方法，它利用多普勒信息来最大限度地减少时间聚合期间的散射，从而提高自动驾驶的物体检测性能。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文研究了在微调用于驾驶模拟的视频生成模型时，视觉保真度和空间精度之间的权衡。研究发现微调会降低动态元素建模的性能，并提出了持续学习作为解决方案。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2508.16512v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Chun-Peng Chang, Chen-Yu Wang, Julian Schmidt, Holger Caesar, Alain Pagani</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.1, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">CoVeRaP: Cooperative Vehicular Perception through mmWave FMCW Radars</h2>
+            
+            <p class="paper-summary">Automotive FMCW radars remain reliable in rain and glare, yet their sparse,
+noisy point clouds constrain 3-D object detection. We therefore release
+CoVeRaP, a 21 k-frame cooperative dataset that time-aligns radar, camera, and
+GPS streams from multiple vehicles across diverse manoeuvres. Built on this
+data, we propose a unified cooperative-perception framework with middle- and
+late-fusion options. Its baseline network employs a multi-branch PointNet-style
+encoder enhanced with self-attention to fuse spatial, Doppler, and intensity
+cues into a common latent space, which a decoder converts into 3-D bounding
+boxes and per-point depth confidence. Experiments show that middle fusion with
+intensity encoding boosts mean Average Precision by up to 9x at IoU 0.9 and
+consistently outperforms single-vehicle baselines. CoVeRaP thus establishes the
+first reproducible benchmark for multi-vehicle FMCW-radar perception and
+demonstrates that affordable radar sharing markedly improves detection
+robustness. Dataset and code are publicly available to encourage further
+research.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces CoVeRaP, a multi-vehicle radar and camera dataset for cooperative perception, and a baseline framework demonstrating improved 3D object detection through radar sharing, especially with intensity encoding.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了CoVeRaP，一个用于协同感知的多车辆雷达和相机数据集，以及一个基线框架，该框架展示了通过雷达共享改进的3D物体检测，尤其是在强度编码方面。</p>
             
 
             
@@ -416,18 +530,18 @@ detectors and datasets.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.12330v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.16030v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Yuval Haitman, Oded Bialer</p>
+            <p class="paper-authors">Authors: Jinyue Song, Hansol Ku, Jayneel Vora, Nelson Lee, Ahmad Kamari, Prasant Mohapatra, Parth Pathak</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-08-25 02:45:23 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-08-25 03:03:47 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>
