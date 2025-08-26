@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Autonomous Driving, VLA, 3D Understanding, Robotics) - August 12, 2025</title>
+    <title>ArXiv CS.CV Papers (Autonomous Driving, VLA, 3D Understanding, Robotics) - August 26, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>VLM Daily Papers</h1>
         <p>Daily papers related to VLA/AV/3D Understanding from cs.CV</p>
         
-            <p>August 12, 2025</p>
+            <p>August 26, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,28 +215,36 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">ReferSplat: Referring Segmentation in 3D Gaussian Splatting</h2>
+            <h2 class="paper-title">EventTracer: Fast Path Tracing-based Event Stream Rendering</h2>
             
-            <p class="paper-summary">We introduce Referring 3D Gaussian Splatting Segmentation (R3DGS), a new task
-that aims to segment target objects in a 3D Gaussian scene based on natural
-language descriptions, which often contain spatial relationships or object
-attributes. This task requires the model to identify newly described objects
-that may be occluded or not directly visible in a novel view, posing a
-significant challenge for 3D multi-modal understanding. Developing this
-capability is crucial for advancing embodied AI. To support research in this
-area, we construct the first R3DGS dataset, Ref-LERF. Our analysis reveals that
-3D multi-modal understanding and spatial relationship modeling are key
-challenges for R3DGS. To address these challenges, we propose ReferSplat, a
-framework that explicitly models 3D Gaussian points with natural language
-expressions in a spatially aware paradigm. ReferSplat achieves state-of-the-art
-performance on both the newly proposed R3DGS task and 3D open-vocabulary
-segmentation benchmarks. Dataset and code are available at
-https://github.com/heshuting555/ReferSplat.</p>
+            <p class="paper-summary">Simulating event streams from 3D scenes has become a common practice in
+event-based vision research, as it meets the demand for large-scale, high
+temporal frequency data without setting up expensive hardware devices or
+undertaking extensive data collections. Yet existing methods in this direction
+typically work with noiseless RGB frames that are costly to render, and
+therefore they can only achieve a temporal resolution equivalent to 100-300
+FPS, far lower than that of real-world event data. In this work, we propose
+EventTracer, a path tracing-based rendering pipeline that simulates
+high-fidelity event sequences from complex 3D scenes in an efficient and
+physics-aware manner. Specifically, we speed up the rendering process via low
+sample-per-pixel (SPP) path tracing, and train a lightweight event spiking
+network to denoise the resulting RGB videos into realistic event sequences. To
+capture the physical properties of event streams, the network is equipped with
+a bipolar leaky integrate-and-fired (BiLIF) spiking unit and trained with a
+bidirectional earth mover distance (EMD) loss. Our EventTracer pipeline runs at
+a speed of about 4 minutes per second of 720p video, and it inherits the merit
+of accurate spatiotemporal modeling from its path tracing backbone. We show in
+two downstream tasks that EventTracer captures better scene details and
+demonstrates a greater similarity to real-world event data than other event
+simulators, which establishes it as a promising tool for creating large-scale
+event-RGB datasets at a low cost, narrowing the sim-to-real gap in event-based
+vision, and boosting various application scenarios such as robotics, autonomous
+driving, and VRAR.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces a new task, Referring 3D Gaussian Splatting Segmentation (R3DGS), a dataset (Ref-LERF) and a novel framework (ReferSplat) for segmenting objects in 3D Gaussian scenes based on natural language descriptions, achieving state-of-the-art performance.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: EventTracer is a path tracing-based pipeline for efficiently simulating high-fidelity event streams from 3D scenes by combining low-SPP path tracing with a spiking network for denoising, achieving superior results in downstream tasks compared to existing simulators.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一项新任务：基于自然语言描述的3D高斯溅射分割（R3DGS），一个数据集（Ref-LERF）和一个新的框架（ReferSplat），用于在3D高斯场景中分割对象，并实现了最先进的性能。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: EventTracer是一种基于路径追踪的管道，通过将低SPP路径追踪与用于降噪的脉冲神经网络相结合，可以有效地从3D场景中模拟高保真事件流。与现有的模拟器相比，该方法在下游任务中取得了更好的结果。</p>
             
 
             
@@ -270,8 +278,8 @@ https://github.com/heshuting555/ReferSplat.</p>
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
             </div>
@@ -300,18 +308,18 @@ https://github.com/heshuting555/ReferSplat.</p>
                     
                 
                     
-                        <i class="far fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(9/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.08252v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.18071v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Shuting He, Guangquan Jie, Changshuo Wang, Yun Zhou, Shuming Hu, Guanbin Li, Henghui Ding</p>
+            <p class="paper-authors">Authors: Zhenyang Li, Xiaoyang Bai, Jinfan Lu, Pengfei Shen, Edmund Y. Lam, Yifan Peng</p>
             
         </motion.div>
         
@@ -323,39 +331,34 @@ https://github.com/heshuting555/ReferSplat.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">ODYSSEY: Open-World Quadrupeds Exploration and Manipulation for Long-Horizon Tasks</h2>
+            <h2 class="paper-title">Scene-Agnostic Traversability Labeling and Estimation via a Multimodal Self-supervised Framework</h2>
             
-            <p class="paper-summary">Language-guided long-horizon mobile manipulation has long been a grand
-challenge in embodied semantic reasoning, generalizable manipulation, and
-adaptive locomotion. Three fundamental limitations hinder progress: First,
-although large language models have improved spatial reasoning and task
-planning through semantic priors, existing implementations remain confined to
-tabletop scenarios, failing to address the constrained perception and limited
-actuation ranges of mobile platforms. Second, current manipulation strategies
-exhibit insufficient generalization when confronted with the diverse object
-configurations encountered in open-world environments. Third, while crucial for
-practical deployment, the dual requirement of maintaining high platform
-maneuverability alongside precise end-effector control in unstructured settings
-remains understudied.
-  In this work, we present ODYSSEY, a unified mobile manipulation framework for
-agile quadruped robots equipped with manipulators, which seamlessly integrates
-high-level task planning with low-level whole-body control. To address the
-challenge of egocentric perception in language-conditioned tasks, we introduce
-a hierarchical planner powered by a vision-language model, enabling
-long-horizon instruction decomposition and precise action execution. At the
-control level, our novel whole-body policy achieves robust coordination across
-challenging terrains. We further present the first benchmark for long-horizon
-mobile manipulation, evaluating diverse indoor and outdoor scenarios. Through
-successful sim-to-real transfer, we demonstrate the system's generalization and
-robustness in real-world deployments, underscoring the practicality of legged
-manipulators in unstructured environments. Our work advances the feasibility of
-generalized robotic assistants capable of complex, dynamic tasks. Our project
-page: https://kaijwang.github.io/odyssey.github.io/</p>
+            <p class="paper-summary">Traversability estimation is critical for enabling robots to navigate across
+diverse terrains and environments. While recent self-supervised learning
+methods achieve promising results, they often fail to capture the
+characteristics of non-traversable regions. Moreover, most prior works
+concentrate on a single modality, overlooking the complementary strengths
+offered by integrating heterogeneous sensory modalities for more robust
+traversability estimation. To address these limitations, we propose a
+multimodal self-supervised framework for traversability labeling and
+estimation. First, our annotation pipeline integrates footprint, LiDAR, and
+camera data as prompts for a vision foundation model, generating traversability
+labels that account for both semantic and geometric cues. Then, leveraging
+these labels, we train a dual-stream network that jointly learns from different
+modalities in a decoupled manner, enhancing its capacity to recognize diverse
+traversability patterns. In addition, we incorporate sparse LiDAR-based
+supervision to mitigate the noise introduced by pseudo labels. Finally,
+extensive experiments conducted across urban, off-road, and campus environments
+demonstrate the effectiveness of our approach. The proposed automatic labeling
+method consistently achieves around 88% IoU across diverse datasets. Compared
+to existing self-supervised state-of-the-art methods, our multimodal
+traversability estimation network yields consistently higher IoU, improving by
+1.6-3.5% on all evaluated datasets.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces ODYSSEY, a framework for quadruped robots with manipulators to perform long-horizon, language-guided tasks in unstructured environments, featuring hierarchical planning and whole-body control validated through sim-to-real transfer.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper proposes a multimodal self-supervised framework for traversability estimation, using a vision foundation model to generate labels from footprint, LiDAR, and camera data, and then training a dual-stream network. It demonstrates improved IoU compared to existing methods across diverse datasets.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了ODYSSEY，一个用于四足机器人配备机械臂在非结构化环境中执行长时程、语言引导任务的框架，具有分层规划和全身控制，并通过模拟到真实的迁移进行了验证。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种用于可通行性估计的多模态自监督框架，该框架使用视觉基础模型从足迹、激光雷达和相机数据生成标签，然后训练一个双流网络。实验表明，与现有方法相比，该方法在各种数据集上都提高了 IoU。</p>
             
 
             
@@ -426,11 +429,11 @@ page: https://kaijwang.github.io/odyssey.github.io/</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.08240v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.18249v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Kaijun Wang, Liqin Lu, Mingyu Liu, Jianuo Jiang, Zeju Li, Bolin Zhang, Wancai Zheng, Xinyi Yu, Hao Chen, Chunhua Shen</p>
+            <p class="paper-authors">Authors: Zipeng Fang, Yanbo Wang, Lei Zhao, Weidong Chen</p>
             
         </motion.div>
         
@@ -442,37 +445,29 @@ page: https://kaijwang.github.io/odyssey.github.io/</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">ReconDreamer-RL: Enhancing Reinforcement Learning via Diffusion-based Scene Reconstruction</h2>
+            <h2 class="paper-title">Enhanced Drift-Aware Computer Vision Architecture for Autonomous Driving</h2>
             
-            <p class="paper-summary">Reinforcement learning for training end-to-end autonomous driving models in
-closed-loop simulations is gaining growing attention. However, most simulation
-environments differ significantly from real-world conditions, creating a
-substantial simulation-to-reality (sim2real) gap. To bridge this gap, some
-approaches utilize scene reconstruction techniques to create photorealistic
-environments as a simulator. While this improves realistic sensor simulation,
-these methods are inherently constrained by the distribution of the training
-data, making it difficult to render high-quality sensor data for novel
-trajectories or corner case scenarios. Therefore, we propose ReconDreamer-RL, a
-framework designed to integrate video diffusion priors into scene
-reconstruction to aid reinforcement learning, thereby enhancing end-to-end
-autonomous driving training. Specifically, in ReconDreamer-RL, we introduce
-ReconSimulator, which combines the video diffusion prior for appearance
-modeling and incorporates a kinematic model for physical modeling, thereby
-reconstructing driving scenarios from real-world data. This narrows the
-sim2real gap for closed-loop evaluation and reinforcement learning. To cover
-more corner-case scenarios, we introduce the Dynamic Adversary Agent (DAA),
-which adjusts the trajectories of surrounding vehicles relative to the ego
-vehicle, autonomously generating corner-case traffic scenarios (e.g., cut-in).
-Finally, the Cousin Trajectory Generator (CTG) is proposed to address the issue
-of training data distribution, which is often biased toward simple
-straight-line movements. Experiments show that ReconDreamer-RL improves
-end-to-end autonomous driving training, outperforming imitation learning
-methods with a 5x reduction in the Collision Ratio.</p>
+            <p class="paper-summary">The use of computer vision in automotive is a trending research in which
+safety and security are a primary concern. In particular, for autonomous
+driving, preventing road accidents requires highly accurate object detection
+under diverse conditions. To address this issue, recently the International
+Organization for Standardization (ISO) released the 8800 norm, providing
+structured frameworks for managing associated AI relevant risks. However,
+challenging scenarios such as adverse weather or low lighting often introduce
+data drift, leading to degraded model performance and potential safety
+violations. In this work, we present a novel hybrid computer vision
+architecture trained with thousands of synthetic image data from the road
+environment to improve robustness in unseen drifted environments. Our dual mode
+framework utilized YOLO version 8 for swift detection and incorporated a
+five-layer CNN for verification. The system functioned in sequence and improved
+the detection accuracy by more than 90\% when tested with drift-augmented road
+images. The focus was to demonstrate how such a hybrid model can provide better
+road safety when working together in a hybrid structure.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: ReconDreamer-RL uses video diffusion priors and a dynamic adversary agent within a reconstructed scene simulator to improve reinforcement learning for end-to-end autonomous driving, achieving a 5x reduction in collision ratio compared to imitation learning.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a hybrid computer vision architecture using YOLOv8 and a CNN for improved object detection accuracy in autonomous driving scenarios with data drift, achieving over 90% accuracy on drift-augmented images.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: ReconDreamer-RL利用视频扩散先验和动态对抗代理在一个重建的场景模拟器中，改进了端到端自动驾驶的强化学习，与模仿学习相比，碰撞率降低了5倍。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种混合计算机视觉架构，使用YOLOv8和一个CNN来提高自动驾驶场景中数据漂移时的目标检测精度，在漂移增强图像上实现了超过90%的精度。</p>
             
 
             
@@ -490,16 +485,16 @@ methods with a 5x reduction in the Collision Ratio.</p>
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -543,11 +538,11 @@ methods with a 5x reduction in the Collision Ratio.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.08170v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.17975v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Chaojun Ni, Guosheng Zhao, Xiaofeng Wang, Zheng Zhu, Wenkang Qin, Xinze Chen, Guanghong Jia, Guan Huang, Wenjun Mei</p>
+            <p class="paper-authors">Authors: Md Shahi Amran Hossain, Abu Shad Ahammed, Sayeri Mukherjee, Roman Obermaisser</p>
             
         </motion.div>
         
@@ -559,32 +554,31 @@ methods with a 5x reduction in the Collision Ratio.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">GRASPTrack: Geometry-Reasoned Association via Segmentation and Projection for Multi-Object Tracking</h2>
+            <h2 class="paper-title">A holistic perception system of internal and external monitoring for ground autonomous vehicles: AutoTRUST paradigm</h2>
             
-            <p class="paper-summary">Multi-object tracking (MOT) in monocular videos is fundamentally challenged
-by occlusions and depth ambiguity, issues that conventional
-tracking-by-detection (TBD) methods struggle to resolve owing to a lack of
-geometric awareness. To address these limitations, we introduce GRASPTrack, a
-novel depth-aware MOT framework that integrates monocular depth estimation and
-instance segmentation into a standard TBD pipeline to generate high-fidelity 3D
-point clouds from 2D detections, thereby enabling explicit 3D geometric
-reasoning. These 3D point clouds are then voxelized to enable a precise and
-robust Voxel-Based 3D Intersection-over-Union (IoU) for spatial association. To
-further enhance tracking robustness, our approach incorporates Depth-aware
-Adaptive Noise Compensation, which dynamically adjusts the Kalman filter
-process noise based on occlusion severity for more reliable state estimation.
-Additionally, we propose a Depth-enhanced Observation-Centric Momentum, which
-extends the motion direction consistency from the image plane into 3D space to
-improve motion-based association cues, particularly for objects with complex
-trajectories. Extensive experiments on the MOT17, MOT20, and DanceTrack
-benchmarks demonstrate that our method achieves competitive performance,
-significantly improving tracking robustness in complex scenes with frequent
-occlusions and intricate motion patterns.</p>
+            <p class="paper-summary">This paper introduces a holistic perception system for internal and external
+monitoring of autonomous vehicles, with the aim of demonstrating a novel
+AI-leveraged self-adaptive framework of advanced vehicle technologies and
+solutions that optimize perception and experience on-board. Internal monitoring
+system relies on a multi-camera setup designed for predicting and identifying
+driver and occupant behavior through facial recognition, exploiting in addition
+a large language model as virtual assistant. Moreover, the in-cabin monitoring
+system includes AI-empowered smart sensors that measure air-quality and perform
+thermal comfort analysis for efficient on and off-boarding. On the other hand,
+external monitoring system perceives the surrounding environment of vehicle,
+through a LiDAR-based cost-efficient semantic segmentation approach, that
+performs highly accurate and efficient super-resolution on low-quality raw 3D
+point clouds. The holistic perception framework is developed in the context of
+EU's Horizon Europe programm AutoTRUST, and has been integrated and deployed on
+a real electric vehicle provided by ALKE. Experimental validation and
+evaluation at the integration site of Joint Research Centre at Ispra, Italy,
+highlights increased performance and efficiency of the modular blocks of the
+proposed perception architecture.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: GRASPTrack is a novel monocular multi-object tracking framework that leverages depth estimation and instance segmentation to achieve robust 3D geometric reasoning and improved tracking performance in complex, occluded scenes.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper presents a holistic perception system (AutoTRUST) for autonomous vehicles, integrating internal (driver/occupant monitoring with LLM assistant) and external (LiDAR-based semantic segmentation) monitoring, and validated on a real electric vehicle.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: GRASPTrack 是一种新颖的单目多目标跟踪框架，它利用深度估计和实例分割来实现稳健的 3D 几何推理，并提高在复杂、遮挡场景中的跟踪性能。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一个用于自动驾驶汽车的整体感知系统（AutoTRUST），集成了内部（驾驶员/乘客监控与LLM助手）和外部（基于LiDAR的语义分割）监控，并在真实的电动汽车上进行了验证。</p>
             
 
             
@@ -602,16 +596,16 @@ occlusions and intricate motion patterns.</p>
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -655,11 +649,11 @@ occlusions and intricate motion patterns.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.08117v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.17969v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Xudong Han, Pengcheng Fang, Yueying Tian, Jianhui Yu, Xiaohao Cai, Daniel Roggen, Philip Birch</p>
+            <p class="paper-authors">Authors: Alexandros Gkillas, Christos Anagnostopoulos, Nikos Piperigkos, Dimitris Tsiktsiris, Theofilos Christodoulou, Theofanis Siamatras, Dimitrios Triantafyllou, Christos Basdekis, Theoktisti Marinopoulou, Panagiotis Lepentsiotis, Elefterios Blitsis, Aggeliki Zacharaki, Nearchos Stylianidis, Leonidas Katelaris, Lamberto Salvan, Aris S. Lalos, Christos Laoudias, Antonios Lalas, Konstantinos Votis</p>
             
         </motion.div>
         
@@ -671,32 +665,33 @@ occlusions and intricate motion patterns.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">TRIDE: A Text-assisted Radar-Image weather-aware fusion network for Depth Estimation</h2>
+            <h2 class="paper-title">SEBVS: Synthetic Event-based Visual Servoing for Robot Navigation and Manipulation</h2>
             
-            <p class="paper-summary">Depth estimation, essential for autonomous driving, seeks to interpret the 3D
-environment surrounding vehicles. The development of radar sensors, known for
-their cost-efficiency and robustness, has spurred interest in radar-camera
-fusion-based solutions. However, existing algorithms fuse features from these
-modalities without accounting for weather conditions, despite radars being
-known to be more robust than cameras under adverse weather. Additionally, while
-Vision-Language models have seen rapid advancement, utilizing language
-descriptions alongside other modalities for depth estimation remains an open
-challenge. This paper first introduces a text-generation strategy along with
-feature extraction and fusion techniques that can assist monocular depth
-estimation pipelines, leading to improved accuracy across different algorithms
-on the KITTI dataset. Building on this, we propose TRIDE, a radar-camera fusion
-algorithm that enhances text feature extraction by incorporating radar point
-information. To address the impact of weather on sensor performance, we
-introduce a weather-aware fusion block that adaptively adjusts radar weighting
-based on current weather conditions. Our method, benchmarked on the nuScenes
-dataset, demonstrates performance gains over the state-of-the-art, achieving a
-12.87% improvement in MAE and a 9.08% improvement in RMSE. Code:
-https://github.com/harborsarah/TRIDE</p>
+            <p class="paper-summary">Event cameras offer microsecond latency, high dynamic range, and low power
+consumption, making them ideal for real-time robotic perception under
+challenging conditions such as motion blur, occlusion, and illumination
+changes. However, despite their advantages, synthetic event-based vision
+remains largely unexplored in mainstream robotics simulators. This lack of
+simulation setup hinders the evaluation of event-driven approaches for robotic
+manipulation and navigation tasks. This work presents an open-source,
+user-friendly v2e robotics operating system (ROS) package for Gazebo simulation
+that enables seamless event stream generation from RGB camera feeds. The
+package is used to investigate event-based robotic policies (ERP) for real-time
+navigation and manipulation. Two representative scenarios are evaluated: (1)
+object following with a mobile robot and (2) object detection and grasping with
+a robotic manipulator. Transformer-based ERPs are trained by behavior cloning
+and compared to RGB-based counterparts under various operating conditions.
+Experimental results show that event-guided policies consistently deliver
+competitive advantages. The results highlight the potential of event-driven
+perception to improve real-time robotic navigation and manipulation, providing
+a foundation for broader integration of event cameras into robotic policy
+learning. The GitHub repo for the dataset and code:
+https://eventbasedvision.github.io/SEBVS/</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces TRIDE, a radar-camera fusion network for depth estimation that incorporates text descriptions and weather awareness, achieving state-of-the-art performance on nuScenes dataset.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces an open-source ROS package for simulating event cameras in Gazebo, enabling the development and evaluation of event-based robotic policies for navigation and manipulation, demonstrating performance advantages over RGB-based approaches. It also provides a dataset and code.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了TRIDE，一个用于深度估计的雷达-相机融合网络，结合了文本描述和天气感知，在nuScenes数据集上实现了最先进的性能。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一个开源的ROS软件包，用于在Gazebo中模拟事件相机，从而能够开发和评估基于事件的机器人导航和操作策略，并展示了相对于基于RGB的方法的性能优势。同时，它还提供了一个数据集和代码。</p>
             
 
             
@@ -706,16 +701,16 @@ https://github.com/harborsarah/TRIDE</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
@@ -730,8 +725,8 @@ https://github.com/harborsarah/TRIDE</p>
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
             </div>
@@ -767,11 +762,11 @@ https://github.com/harborsarah/TRIDE</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.08038v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.17643v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Huawei Sun, Zixu Wang, Hao Feng, Julius Ott, Lorenzo Servadei, Robert Wille</p>
+            <p class="paper-authors">Authors: Krishna Vinod, Prithvi Jai Ramesh, Pavan Kumar B N, Bharatesh Chakravarthi</p>
             
         </motion.div>
         
@@ -783,32 +778,27 @@ https://github.com/harborsarah/TRIDE</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Autonomous Navigation of Cloud-Controlled Quadcopters in Confined Spaces Using Multi-Modal Perception and LLM-Driven High Semantic Reasoning</h2>
+            <h2 class="paper-title">Finding Outliers in a Haystack: Anomaly Detection for Large Pointcloud Scenes</h2>
             
-            <p class="paper-summary">This paper introduces an advanced AI-driven perception system for autonomous
-quadcopter navigation in GPS-denied indoor environments. The proposed framework
-leverages cloud computing to offload computationally intensive tasks and
-incorporates a custom-designed printed circuit board (PCB) for efficient sensor
-data acquisition, enabling robust navigation in confined spaces. The system
-integrates YOLOv11 for object detection, Depth Anything V2 for monocular depth
-estimation, a PCB equipped with Time-of-Flight (ToF) sensors and an Inertial
-Measurement Unit (IMU), and a cloud-based Large Language Model (LLM) for
-context-aware decision-making. A virtual safety envelope, enforced by
-calibrated sensor offsets, ensures collision avoidance, while a multithreaded
-architecture achieves low-latency processing. Enhanced spatial awareness is
-facilitated by 3D bounding box estimation with Kalman filtering. Experimental
-results in an indoor testbed demonstrate strong performance, with object
-detection achieving a mean Average Precision (mAP50) of 0.6, depth estimation
-Mean Absolute Error (MAE) of 7.2 cm, only 16 safety envelope breaches across 42
-trials over approximately 11 minutes, and end-to-end system latency below 1
-second. This cloud-supported, high-intelligence framework serves as an
-auxiliary perception and navigation system, complementing state-of-the-art
-drone autonomy for GPS-denied confined spaces.</p>
+            <p class="paper-summary">LiDAR scanning in outdoor scenes acquires accurate distance measurements over
+wide areas, producing large-scale point clouds. Application examples for this
+data include robotics, automotive vehicles, and land surveillance. During such
+applications, outlier objects from outside the training data will inevitably
+appear. Our research contributes a novel approach to open-set segmentation,
+leveraging the learnings of object defect-detection research. We also draw on
+the Mamba architecture's strong performance in utilising long-range
+dependencies and scalability to large data. Combining both, we create a
+reconstruction based approach for the task of outdoor scene open-set
+segmentation. We show that our approach improves performance not only when
+applied to our our own open-set segmentation method, but also when applied to
+existing methods. Furthermore we contribute a Mamba based architecture which is
+competitive with existing voxel-convolution based methods on challenging,
+large-scale pointclouds.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper presents an AI-driven cloud-supported system for autonomous quadcopter navigation in GPS-denied indoor environments, using multi-modal perception (YOLOv11, Depth Anything V2, ToF, IMU) and LLM-based high semantic reasoning to achieve robust navigation in confined spaces. Experimental results demonstrate strong performance in an indoor testbed.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a Mamba-based reconstruction approach for open-set segmentation in large-scale outdoor point clouds, demonstrating improved performance in anomaly detection compared to existing methods.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种AI驱动的云支持系统，用于在GPS受限的室内环境中实现自主四旋翼飞行器导航。该系统利用多模态感知（YOLOv11、Depth Anything V2、ToF、IMU）和基于LLM的高语义推理，实现了在狭小空间中的稳健导航。室内测试平台的实验结果表明该系统具有良好的性能。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了一种基于 Mamba 的重建方法，用于大规模室外点云中的开放集分割，并在异常检测方面表现出比现有方法更好的性能。</p>
             
 
             
@@ -818,32 +808,32 @@ drone autonomy for GPS-denied confined spaces.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                     <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
             </div>
@@ -879,11 +869,11 @@ drone autonomy for GPS-denied confined spaces.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.07885v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.17634v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Shoaib Ahmmad, Zubayer Ahmed Aditto, Md Mehrab Hossain, Noushin Yeasmin, Shorower Hossain</p>
+            <p class="paper-authors">Authors: Ryan Faulkner, Ian Reid, Simon Ratcliffe, Tat-Jun Chin</p>
             
         </motion.div>
         
@@ -895,31 +885,31 @@ drone autonomy for GPS-denied confined spaces.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">CBDES MoE: Hierarchically Decoupled Mixture-of-Experts for Functional Modules in Autonomous Driving</h2>
+            <h2 class="paper-title">GWM: Towards Scalable Gaussian World Models for Robotic Manipulation</h2>
             
-            <p class="paper-summary">Bird's Eye View (BEV) perception systems based on multi-sensor feature fusion
-have become a fundamental cornerstone for end-to-end autonomous driving.
-However, existing multi-modal BEV methods commonly suffer from limited input
-adaptability, constrained modeling capacity, and suboptimal generalization. To
-address these challenges, we propose a hierarchically decoupled
-Mixture-of-Experts architecture at the functional module level, termed
-Computing Brain DEvelopment System Mixture-of-Experts (CBDES MoE). CBDES MoE
-integrates multiple structurally heterogeneous expert networks with a
-lightweight Self-Attention Router (SAR) gating mechanism, enabling dynamic
-expert path selection and sparse, input-aware efficient inference. To the best
-of our knowledge, this is the first modular Mixture-of-Experts framework
-constructed at the functional module granularity within the autonomous driving
-domain. Extensive evaluations on the real-world nuScenes dataset demonstrate
-that CBDES MoE consistently outperforms fixed single-expert baselines in 3D
-object detection. Compared to the strongest single-expert model, CBDES MoE
-achieves a 1.6-point increase in mAP and a 4.1-point improvement in NDS,
-demonstrating the effectiveness and practical advantages of the proposed
-approach.</p>
+            <p class="paper-summary">Training robot policies within a learned world model is trending due to the
+inefficiency of real-world interactions. The established image-based world
+models and policies have shown prior success, but lack robust geometric
+information that requires consistent spatial and physical understanding of the
+three-dimensional world, even pre-trained on internet-scale video sources. To
+this end, we propose a novel branch of world model named Gaussian World Model
+(GWM) for robotic manipulation, which reconstructs the future state by
+inferring the propagation of Gaussian primitives under the effect of robot
+actions. At its core is a latent Diffusion Transformer (DiT) combined with a 3D
+variational autoencoder, enabling fine-grained scene-level future state
+reconstruction with Gaussian Splatting. GWM can not only enhance the visual
+representation for imitation learning agent by self-supervised future
+prediction training, but can serve as a neural simulator that supports
+model-based reinforcement learning. Both simulated and real-world experiments
+depict that GWM can precisely predict future scenes conditioned on diverse
+robot actions, and can be further utilized to train policies that outperform
+the state-of-the-art by impressive margins, showcasing the initial data scaling
+potential of 3D world model.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces CBDES MoE, a novel hierarchically decoupled Mixture-of-Experts architecture for BEV perception in autonomous driving, achieving improved performance in 3D object detection on the nuScenes dataset compared to single-expert baselines.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces Gaussian World Model (GWM), a novel world model for robotic manipulation that reconstructs future states by inferring the propagation of Gaussian primitives using a latent Diffusion Transformer and a 3D variational autoencoder, enabling fine-grained scene-level future state reconstruction. It shows improved performance over state-of-the-art methods.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种新的分层解耦混合专家架构 CBDES MoE，用于自动驾驶中的 BEV 感知，与单专家基线相比，在 nuScenes 数据集上的 3D 目标检测方面取得了更好的性能。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种名为高斯世界模型(GWM)的新型机器人操作世界模型，它通过推断高斯基元的传播来重建未来状态，使用潜在扩散转换器和3D变分自动编码器，实现精细的场景级未来状态重建。结果表明，该方法优于最先进的方法。</p>
             
 
             
@@ -945,8 +935,8 @@ approach.</p>
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -990,11 +980,11 @@ approach.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.07838v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.17600v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Qi Xiang, Kunsong Shi, Zhigui Lin, Lei He</p>
+            <p class="paper-authors">Authors: Guanxing Lu, Baoxiong Jia, Puhao Li, Yixin Chen, Ziwei Wang, Yansong Tang, Siyuan Huang</p>
             
         </motion.div>
         
@@ -1006,30 +996,33 @@ approach.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Progressive Bird's Eye View Perception for Safety-Critical Autonomous Driving: A Comprehensive Survey</h2>
+            <h2 class="paper-title">TinyGiantVLM: A Lightweight Vision-Language Architecture for Spatial Reasoning under Resource Constraints</h2>
             
-            <p class="paper-summary">Bird's-Eye-View (BEV) perception has become a foundational paradigm in
-autonomous driving, enabling unified spatial representations that support
-robust multi-sensor fusion and multi-agent collaboration. As autonomous
-vehicles transition from controlled environments to real-world deployment,
-ensuring the safety and reliability of BEV perception in complex scenarios -
-such as occlusions, adverse weather, and dynamic traffic - remains a critical
-challenge. This survey provides the first comprehensive review of BEV
-perception from a safety-critical perspective, systematically analyzing
-state-of-the-art frameworks and implementation strategies across three
-progressive stages: single-modality vehicle-side, multimodal vehicle-side, and
-multi-agent collaborative perception. Furthermore, we examine public datasets
-encompassing vehicle-side, roadside, and collaborative settings, evaluating
-their relevance to safety and robustness. We also identify key open-world
-challenges - including open-set recognition, large-scale unlabeled data, sensor
-degradation, and inter-agent communication latency - and outline future
-research directions, such as integration with end-to-end autonomous driving
-systems, embodied intelligence, and large language models.</p>
+            <p class="paper-summary">Reasoning about fine-grained spatial relationships in warehouse-scale
+environments poses a significant challenge for existing vision-language models
+(VLMs), which often struggle to comprehend 3D layouts, object arrangements, and
+multimodal cues in real-world industrial settings. In this paper, we present
+TinyGiantVLM, a lightweight and modular two-stage framework designed for
+physical spatial reasoning, distinguishing itself from traditional geographic
+reasoning in complex logistics scenes. Our approach encodes both global and
+region-level features from RGB and depth modalities using pretrained visual
+backbones. To effectively handle the complexity of high-modality inputs and
+diverse question types, we incorporate a Mixture-of-Experts (MoE) fusion
+module, which dynamically combines spatial representations to support
+downstream reasoning tasks and improve convergence. Training is conducted in a
+two-phase strategy: the first phase focuses on generating free-form answers to
+enhance spatial reasoning ability, while the second phase uses normalized
+answers for evaluation. Evaluated on Track 3 of the AI City Challenge 2025, our
+64M-parameter base model achieved 5th place on the leaderboard with a score of
+66.8861, demonstrating strong performance in bridging visual perception and
+spatial understanding in industrial environments. We further present an
+80M-parameter variant with expanded MoE capacity, which demonstrates improved
+performance on spatial reasoning tasks.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This survey paper comprehensively reviews Bird's-Eye-View perception in autonomous driving from a safety-critical perspective, covering single-modality, multimodal, and multi-agent collaborative approaches while highlighting open challenges and future research directions.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces TinyGiantVLM, a lightweight vision-language model for spatial reasoning in industrial settings, achieving competitive results on the AI City Challenge 2025. It leverages a two-stage training approach and a Mixture-of-Experts (MoE) fusion module to handle multimodal data and complex question types.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该综述论文全面回顾了自动驾驶中鸟瞰视图感知技术，从安全关键的角度出发，涵盖了单模态、多模态和多智能体协作方法，并强调了开放性挑战和未来研究方向。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了 TinyGiantVLM，一种用于工业环境中空间推理的轻量级视觉语言模型，在 AI City Challenge 2025 中取得了有竞争力的结果。它利用两阶段训练方法和混合专家（MoE）融合模块来处理多模态数据和复杂的问题类型。</p>
             
 
             
@@ -1055,16 +1048,16 @@ systems, embodied intelligence, and large language models.</p>
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
             </div>
@@ -1100,129 +1093,18 @@ systems, embodied intelligence, and large language models.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.07560v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2508.17595v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Yan Gong, Naibang Wang, Jianli Lu, Xinyu Zhang, Yongsheng Gao, Jie Zhao, Zifan Huang, Haozhi Bai, Nanxin Zeng, Nayu Su, Lei Yang, Ziying Song, Xiaoxi Hu, Xinmin Jiang, Xiaojuan Zhang, Susanto Rahardja</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.4, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">Decoupled Functional Evaluation of Autonomous Driving Models via Feature Map Quality Scoring</h2>
-            
-            <p class="paper-summary">End-to-end models are emerging as the mainstream in autonomous driving
-perception and planning. However, the lack of explicit supervision signals for
-intermediate functional modules leads to opaque operational mechanisms and
-limited interpretability, making it challenging for traditional methods to
-independently evaluate and train these modules. Pioneering in the issue, this
-study builds upon the feature map-truth representation similarity-based
-evaluation framework and proposes an independent evaluation method based on
-Feature Map Convergence Score (FMCS). A Dual-Granularity Dynamic Weighted
-Scoring System (DG-DWSS) is constructed, formulating a unified quantitative
-metric - Feature Map Quality Score - to enable comprehensive evaluation of the
-quality of feature maps generated by functional modules. A CLIP-based Feature
-Map Quality Evaluation Network (CLIP-FMQE-Net) is further developed, combining
-feature-truth encoders and quality score prediction heads to enable real-time
-quality analysis of feature maps generated by functional modules. Experimental
-results on the NuScenes dataset demonstrate that integrating our evaluation
-module into the training improves 3D object detection performance, achieving a
-3.89 percent gain in NDS. These results verify the effectiveness of our method
-in enhancing feature representation quality and overall model performance.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper proposes a Feature Map Convergence Score (FMCS) and a CLIP-based network (CLIP-FMQE-Net) to evaluate and improve the quality of feature maps in autonomous driving models, demonstrating improved 3D object detection performance.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了一种特征图收敛评分 (FMCS) 和一个基于 CLIP 的网络 (CLIP-FMQE-Net) 来评估和提高自动驾驶模型中特征图的质量，实验结果表明其能提高 3D 目标检测性能。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2508.07552v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Ludan Zhang, Sihan Wang, Yuqi Dai, Shuofei Qiao, Lei He</p>
+            <p class="paper-authors">Authors: Vinh-Thuan Ly, Hoang M. Truong, Xuan-Huong Nguyen</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-08-26 02:40:39 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-08-26 02:47:16 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>

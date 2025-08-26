@@ -1,0 +1,175 @@
+[
+    {
+        "title": "DeltaFlow: An Efficient Multi-frame Scene Flow Estimation Method",
+        "summary": "Previous dominant methods for scene flow estimation focus mainly on input\nfrom two consecutive frames, neglecting valuable information in the temporal\ndomain. While recent trends shift towards multi-frame reasoning, they suffer\nfrom rapidly escalating computational costs as the number of frames grows. To\nleverage temporal information more efficiently, we propose DeltaFlow\n($\\Delta$Flow), a lightweight 3D framework that captures motion cues via a\n$\\Delta$ scheme, extracting temporal features with minimal computational cost,\nregardless of the number of frames. Additionally, scene flow estimation faces\nchallenges such as imbalanced object class distributions and motion\ninconsistency. To tackle these issues, we introduce a Category-Balanced Loss to\nenhance learning across underrepresented classes and an Instance Consistency\nLoss to enforce coherent object motion, improving flow accuracy. Extensive\nevaluations on the Argoverse 2 and Waymo datasets show that $\\Delta$Flow\nachieves state-of-the-art performance with up to 22% lower error and $2\\times$\nfaster inference compared to the next-best multi-frame supervised method, while\nalso demonstrating a strong cross-domain generalization ability. The code is\nopen-sourced at https://github.com/Kin-Zhang/DeltaFlow along with trained model\nweights.",
+        "url": "http://arxiv.org/abs/2508.17054v1",
+        "published_date": "2025-08-23T15:06:59+00:00",
+        "updated_date": "2025-08-23T15:06:59+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Qingwen Zhang",
+            "Xiaomeng Zhu",
+            "Yushan Zhang",
+            "Yixi Cai",
+            "Olov Andersson",
+            "Patric Jensfelt"
+        ],
+        "tldr": "The paper introduces DeltaFlow, a novel and efficient multi-frame scene flow estimation method. It uses a delta scheme for temporal feature extraction and introduces two new loss functions for improved accuracy and consistency, achieving state-of-the-art performance on Argoverse 2 and Waymo datasets.",
+        "tldr_zh": "该论文介绍了一种名为 DeltaFlow 的新型高效多帧场景流估计方法。它采用 delta 方案进行时间特征提取，并引入了两个新的损失函数以提高准确性和一致性，在 Argoverse 2 和 Waymo 数据集上实现了最先进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "PVNet: Point-Voxel Interaction LiDAR Scene Upsampling Via Diffusion Models",
+        "summary": "Accurate 3D scene understanding in outdoor environments heavily relies on\nhigh-quality point clouds. However, LiDAR-scanned data often suffer from\nextreme sparsity, severely hindering downstream 3D perception tasks. Existing\npoint cloud upsampling methods primarily focus on individual objects, thus\ndemonstrating limited generalization capability for complex outdoor scenes. To\naddress this issue, we propose PVNet, a diffusion model-based point-voxel\ninteraction framework to perform LiDAR point cloud upsampling without dense\nsupervision. Specifically, we adopt the classifier-free guidance-based DDPMs to\nguide the generation, in which we employ a sparse point cloud as the guiding\ncondition and the synthesized point clouds derived from its nearby frames as\nthe input. Moreover, we design a voxel completion module to refine and complete\nthe coarse voxel features for enriching the feature representation. In\naddition, we propose a point-voxel interaction module to integrate features\nfrom both points and voxels, which efficiently improves the environmental\nperception capability of each upsampled point. To the best of our knowledge,\nour approach is the first scene-level point cloud upsampling method supporting\narbitrary upsampling rates. Extensive experiments on various benchmarks\ndemonstrate that our method achieves state-of-the-art performance. The source\ncode will be available at https://github.com/chengxianjing/PVNet.",
+        "url": "http://arxiv.org/abs/2508.17050v1",
+        "published_date": "2025-08-23T14:55:03+00:00",
+        "updated_date": "2025-08-23T14:55:03+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Xianjing Cheng",
+            "Lintai Wu",
+            "Zuowen Wang",
+            "Junhui Hou",
+            "Jie Wen",
+            "Yong Xu"
+        ],
+        "tldr": "This paper introduces PVNet, a diffusion model-based point-voxel interaction framework for LiDAR point cloud upsampling in complex outdoor scenes, achieving state-of-the-art performance without dense supervision.",
+        "tldr_zh": "本文介绍了一种名为PVNet的基于扩散模型的点-体素交互框架，用于复杂室外场景中LiDAR点云上采样，无需密集监督即可实现最先进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "M3DMap: Object-aware Multimodal 3D Mapping for Dynamic Environments",
+        "summary": "3D mapping in dynamic environments poses a challenge for modern researchers\nin robotics and autonomous transportation. There are no universal\nrepresentations for dynamic 3D scenes that incorporate multimodal data such as\nimages, point clouds, and text. This article takes a step toward solving this\nproblem. It proposes a taxonomy of methods for constructing multimodal 3D maps,\nclassifying contemporary approaches based on scene types and representations,\nlearning methods, and practical applications. Using this taxonomy, a brief\nstructured analysis of recent methods is provided. The article also describes\nan original modular method called M3DMap, designed for object-aware\nconstruction of multimodal 3D maps for both static and dynamic scenes. It\nconsists of several interconnected components: a neural multimodal object\nsegmentation and tracking module; an odometry estimation module, including\ntrainable algorithms; a module for 3D map construction and updating with\nvarious implementations depending on the desired scene representation; and a\nmultimodal data retrieval module. The article highlights original\nimplementations of these modules and their advantages in solving various\npractical tasks, from 3D object grounding to mobile manipulation. Additionally,\nit presents theoretical propositions demonstrating the positive effect of using\nmultimodal data and modern foundational models in 3D mapping methods. Details\nof the taxonomy and method implementation are available at\nhttps://yuddim.github.io/M3DMap.",
+        "url": "http://arxiv.org/abs/2508.17044v1",
+        "published_date": "2025-08-23T14:45:48+00:00",
+        "updated_date": "2025-08-23T14:45:48+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Dmitry Yudin"
+        ],
+        "tldr": "The paper introduces M3DMap, a modular method for object-aware multimodal 3D mapping in dynamic environments, using neural segmentation, odometry, and map construction modules. It also proposes a taxonomy for multimodal 3D mapping methods.",
+        "tldr_zh": "本文介绍了一种名为M3DMap的模块化方法，用于在动态环境中进行对象感知的多模态3D地图构建，它利用神经分割、里程计和地图构建模块。此外，还提出了一种多模态3D地图构建方法的分类法。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Fiducial Marker Splatting for High-Fidelity Robotics Simulations",
+        "summary": "High-fidelity 3D simulation is critical for training mobile robots, but its\ntraditional reliance on mesh-based representations often struggle in complex\nenvironments, such as densely packed greenhouses featuring occlusions and\nrepetitive structures. Recent neural rendering methods, like Gaussian Splatting\n(GS), achieve remarkable visual realism but lack flexibility to incorporate\nfiducial markers, which are essential for robotic localization and control. We\npropose a hybrid framework that combines the photorealism of GS with structured\nmarker representations. Our core contribution is a novel algorithm for\nefficiently generating GS-based fiducial markers (e.g., AprilTags) within\ncluttered scenes. Experiments show that our approach outperforms traditional\nimage-fitting techniques in both efficiency and pose-estimation accuracy. We\nfurther demonstrate the framework's potential in a greenhouse simulation. This\nagricultural setting serves as a challenging testbed, as its combination of\ndense foliage, similar-looking elements, and occlusions pushes the limits of\nperception, thereby highlighting the framework's value for real-world\napplications.",
+        "url": "http://arxiv.org/abs/2508.17012v1",
+        "published_date": "2025-08-23T12:53:51+00:00",
+        "updated_date": "2025-08-23T12:53:51+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Diram Tabaa",
+            "Gianni Di Caro"
+        ],
+        "tldr": "This paper presents a novel method for incorporating fiducial markers into Gaussian Splatting-based simulations, enhancing their utility for robotics, particularly in complex, occluded environments like greenhouses.",
+        "tldr_zh": "该论文提出了一种将基准标记整合到基于高斯溅射的仿真中的新方法，从而增强了它们在机器人技术中的实用性，尤其是在复杂、遮挡的环境（如温室）中。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "A Survey of Deep Learning-based Point Cloud Denoising",
+        "summary": "Accurate 3D geometry acquisition is essential for a wide range of\napplications, such as computer graphics, autonomous driving, robotics, and\naugmented reality. However, raw point clouds acquired in real-world\nenvironments are often corrupted with noise due to various factors such as\nsensor, lighting, material, environment etc, which reduces geometric fidelity\nand degrades downstream performance. Point cloud denoising is a fundamental\nproblem, aiming to recover clean point sets while preserving underlying\nstructures. Classical optimization-based methods, guided by hand-crafted\nfilters or geometric priors, have been extensively studied but struggle to\nhandle diverse and complex noise patterns. Recent deep learning approaches\nleverage neural network architectures to learn distinctive representations and\ndemonstrate strong outcomes, particularly on complex and large-scale point\nclouds. Provided these significant advances, this survey provides a\ncomprehensive and up-to-date review of deep learning-based point cloud\ndenoising methods up to August 2025. We organize the literature from two\nperspectives: (1) supervision level (supervised vs. unsupervised), and (2)\nmodeling perspective, proposing a functional taxonomy that unifies diverse\napproaches by their denoising principles. We further analyze architectural\ntrends both structurally and chronologically, establish a unified benchmark\nwith consistent training settings, and evaluate methods in terms of denoising\nquality, surface fidelity, point distribution, and computational efficiency.\nFinally, we discuss open challenges and outline directions for future research\nin this rapidly evolving field.",
+        "url": "http://arxiv.org/abs/2508.17011v1",
+        "published_date": "2025-08-23T12:53:24+00:00",
+        "updated_date": "2025-08-23T12:53:24+00:00",
+        "categories": [
+            "cs.GR",
+            "cs.CV"
+        ],
+        "authors": [
+            "Jinxi Wang",
+            "Ben Fei",
+            "Dasith de Silva Edirimuni",
+            "Zheng Liu",
+            "Ying He",
+            "Xuequan Lu"
+        ],
+        "tldr": "This survey paper comprehensively reviews deep learning-based point cloud denoising methods, categorizing them by supervision level and modeling perspective, and provides a unified benchmark for evaluation, discussing open challenges and future research directions.",
+        "tldr_zh": "该综述论文全面回顾了基于深度学习的点云去噪方法，按监督级别和建模视角对其进行分类，并提供了一个统一的评估基准，讨论了开放性挑战和未来研究方向。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "NinA: Normalizing Flows in Action. Training VLA Models with Normalizing Flows",
+        "summary": "Recent advances in Vision-Language-Action (VLA) models have established a\ntwo-component architecture, where a pre-trained Vision-Language Model (VLM)\nencodes visual observations and task descriptions, and an action decoder maps\nthese representations to continuous actions. Diffusion models have been widely\nadopted as action decoders due to their ability to model complex, multimodal\naction distributions. However, they require multiple iterative denoising steps\nat inference time or downstream techniques to speed up sampling, limiting their\npracticality in real-world settings where high-frequency control is crucial. In\nthis work, we present NinA (Normalizing Flows in Action), a fast and expressive\nalter- native to diffusion-based decoders for VLAs. NinA replaces the diffusion\naction decoder with a Normalizing Flow (NF) that enables one-shot sampling\nthrough an invertible transformation, significantly reducing inference time. We\nintegrate NinA into the FLOWER VLA architecture and fine-tune on the LIBERO\nbenchmark. Our experiments show that NinA matches the performance of its\ndiffusion-based counterpart under the same training regime, while achieving\nsubstantially faster inference. These results suggest that NinA offers a\npromising path toward efficient, high-frequency VLA control without\ncompromising performance.",
+        "url": "http://arxiv.org/abs/2508.16845v1",
+        "published_date": "2025-08-23T00:02:15+00:00",
+        "updated_date": "2025-08-23T00:02:15+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG"
+        ],
+        "authors": [
+            "Denis Tarasov",
+            "Alexander Nikulin",
+            "Ilya Zisman",
+            "Albina Klepach",
+            "Nikita Lyubaykin",
+            "Andrei Polubarov",
+            "Alexander Derevyagin",
+            "Vladislav Kurenkov"
+        ],
+        "tldr": "This paper introduces NinA, a Normalizing Flow-based action decoder for VLA models, offering faster inference than diffusion models while maintaining comparable performance on the LIBERO benchmark.",
+        "tldr_zh": "本文介绍了NinA，一种基于Normalizing Flow的VLA模型动作解码器，相比扩散模型，它在LIBERO基准测试上保持了相当的性能，同时提供了更快的推理速度。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Towards Open-Vocabulary Multimodal 3D Object Detection with Attributes",
+        "summary": "3D object detection plays a crucial role in autonomous systems, yet existing\nmethods are limited by closed-set assumptions and struggle to recognize novel\nobjects and their attributes in real-world scenarios. We propose OVODA, a novel\nframework enabling both open-vocabulary 3D object and attribute detection with\nno need to know the novel class anchor size. OVODA uses foundation models to\nbridge the semantic gap between 3D features and texts while jointly detecting\nattributes, e.g., spatial relationships, motion states, etc. To facilitate such\nresearch direction, we propose OVAD, a new dataset that supplements existing 3D\nobject detection benchmarks with comprehensive attribute annotations. OVODA\nincorporates several key innovations, including foundation model feature\nconcatenation, prompt tuning strategies, and specialized techniques for\nattribute detection, including perspective-specified prompts and horizontal\nflip augmentation. Our results on both the nuScenes and Argoverse 2 datasets\nshow that under the condition of no given anchor sizes of novel classes, OVODA\noutperforms the state-of-the-art methods in open-vocabulary 3D object detection\nwhile successfully recognizing object attributes. Our OVAD dataset is released\nhere: https://doi.org/10.5281/zenodo.16904069 .",
+        "url": "http://arxiv.org/abs/2508.16812v1",
+        "published_date": "2025-08-22T22:02:49+00:00",
+        "updated_date": "2025-08-22T22:02:49+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Xinhao Xiang",
+            "Kuan-Chuan Peng",
+            "Suhas Lohit",
+            "Michael J. Jones",
+            "Jiawei Zhang"
+        ],
+        "tldr": "The paper introduces OVODA, a novel framework and OVAD dataset for open-vocabulary 3D object and attribute detection, leveraging foundation models and specialized attribute detection techniques, outperforming state-of-the-art methods without prior knowledge of novel class anchor sizes.",
+        "tldr_zh": "该论文介绍了OVODA，一个用于开放词汇三维物体和属性检测的新框架和OVAD数据集，利用基础模型和专门的属性检测技术，在没有先验新类别锚框大小的情况下，优于最先进的方法。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    }
+]
