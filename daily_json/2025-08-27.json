@@ -1,0 +1,185 @@
+[
+    {
+        "title": "Interpretable Decision-Making for End-to-End Autonomous Driving",
+        "summary": "Trustworthy AI is mandatory for the broad deployment of autonomous vehicles.\nAlthough end-to-end approaches derive control commands directly from raw data,\ninterpreting these decisions remains challenging, especially in complex urban\nscenarios. This is mainly attributed to very deep neural networks with\nnon-linear decision boundaries, making it challenging to grasp the logic behind\nAI-driven decisions. This paper presents a method to enhance interpretability\nwhile optimizing control commands in autonomous driving. To address this, we\npropose loss functions that promote the interpretability of our model by\ngenerating sparse and localized feature maps. The feature activations allow us\nto explain which image regions contribute to the predicted control command. We\nconduct comprehensive ablation studies on the feature extraction step and\nvalidate our method on the CARLA benchmarks. We also demonstrate that our\napproach improves interpretability, which correlates with reducing infractions,\nyielding a safer, high-performance driving model. Notably, our monocular,\nnon-ensemble model surpasses the top-performing approaches from the CARLA\nLeaderboard by achieving lower infraction scores and the highest route\ncompletion rate, all while ensuring interpretability.",
+        "url": "http://arxiv.org/abs/2508.18898v1",
+        "published_date": "2025-08-26T10:14:16+00:00",
+        "updated_date": "2025-08-26T10:14:16+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG",
+            "cs.RO"
+        ],
+        "authors": [
+            "Mona Mirzaie",
+            "Bodo Rosenhahn"
+        ],
+        "tldr": "This paper introduces a method to improve the interpretability of end-to-end autonomous driving models by using loss functions that generate sparse and localized feature maps. The proposed approach achieves state-of-the-art performance on the CARLA leaderboard while also improving driving safety.",
+        "tldr_zh": "本文提出了一种通过使用生成稀疏和局部化特征图的损失函数来提高端到端自动驾驶模型可解释性的方法。该方法在CARLA排行榜上取得了最先进的性能，同时也提高了驾驶安全性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "PseudoMapTrainer: Learning Online Mapping without HD Maps",
+        "summary": "Online mapping models show remarkable results in predicting vectorized maps\nfrom multi-view camera images only. However, all existing approaches still rely\non ground-truth high-definition maps during training, which are expensive to\nobtain and often not geographically diverse enough for reliable generalization.\nIn this work, we propose PseudoMapTrainer, a novel approach to online mapping\nthat uses pseudo-labels generated from unlabeled sensor data. We derive those\npseudo-labels by reconstructing the road surface from multi-camera imagery\nusing Gaussian splatting and semantics of a pre-trained 2D segmentation\nnetwork. In addition, we introduce a mask-aware assignment algorithm and loss\nfunction to handle partially masked pseudo-labels, allowing for the first time\nthe training of online mapping models without any ground-truth maps.\nFurthermore, our pseudo-labels can be effectively used to pre-train an online\nmodel in a semi-supervised manner to leverage large-scale unlabeled\ncrowdsourced data. The code is available at\ngithub.com/boschresearch/PseudoMapTrainer.",
+        "url": "http://arxiv.org/abs/2508.18788v1",
+        "published_date": "2025-08-26T08:13:30+00:00",
+        "updated_date": "2025-08-26T08:13:30+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG",
+            "cs.RO"
+        ],
+        "authors": [
+            "Christian Löwens",
+            "Thorben Funke",
+            "Jingchao Xie",
+            "Alexandru Paul Condurache"
+        ],
+        "tldr": "The paper introduces PseudoMapTrainer, a novel approach for training online mapping models without relying on expensive and geographically limited HD maps by using pseudo-labels generated from unlabeled sensor data and Gaussian splatting.",
+        "tldr_zh": "该论文介绍了 PseudoMapTrainer，一种新颖的在线地图模型训练方法，它不依赖昂贵且地理覆盖受限的高精地图，而是使用从无标签传感器数据和高斯溅射生成的伪标签。",
+        "relevance_score": 9,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "DoGFlow: Self-Supervised LiDAR Scene Flow via Cross-Modal Doppler Guidance",
+        "summary": "Accurate 3D scene flow estimation is critical for autonomous systems to\nnavigate dynamic environments safely, but creating the necessary large-scale,\nmanually annotated datasets remains a significant bottleneck for developing\nrobust perception models. Current self-supervised methods struggle to match the\nperformance of fully supervised approaches, especially in challenging\nlong-range and adverse weather scenarios, while supervised methods are not\nscalable due to their reliance on expensive human labeling. We introduce\nDoGFlow, a novel self-supervised framework that recovers full 3D object motions\nfor LiDAR scene flow estimation without requiring any manual ground truth\nannotations. This paper presents our cross-modal label transfer approach, where\nDoGFlow computes motion pseudo-labels in real-time directly from 4D radar\nDoppler measurements and transfers them to the LiDAR domain using dynamic-aware\nassociation and ambiguity-resolved propagation. On the challenging MAN\nTruckScenes dataset, DoGFlow substantially outperforms existing self-supervised\nmethods and improves label efficiency by enabling LiDAR backbones to achieve\nover 90% of fully supervised performance with only 10% of the ground truth\ndata. For more details, please visit https://ajinkyakhoche.github.io/DogFlow/",
+        "url": "http://arxiv.org/abs/2508.18506v1",
+        "published_date": "2025-08-25T21:26:32+00:00",
+        "updated_date": "2025-08-25T21:26:32+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ajinkya Khoche",
+            "Qingwen Zhang",
+            "Yixi Cai",
+            "Sina Sharif Mansouri",
+            "Patric Jensfelt"
+        ],
+        "tldr": "DoGFlow is a novel self-supervised LiDAR scene flow estimation framework that leverages radar Doppler measurements as pseudo-labels, significantly improving performance and label efficiency compared to existing self-supervised methods, achieving near supervised performance with much less labeled data.",
+        "tldr_zh": "DoGFlow 是一种新颖的自监督 LiDAR 场景流估计框架，它利用雷达多普勒测量作为伪标签，与现有的自监督方法相比，显着提高了性能和标签效率，用更少的标记数据实现了接近监督的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "MemoryVLA: Perceptual-Cognitive Memory in Vision-Language-Action Models for Robotic Manipulation",
+        "summary": "Temporal context is essential for robotic manipulation because such tasks are\ninherently non-Markovian, yet mainstream VLA models typically overlook it and\nstruggle with long-horizon, temporally dependent tasks. Cognitive science\nsuggests that humans rely on working memory to buffer short-lived\nrepresentations for immediate control, while the hippocampal system preserves\nverbatim episodic details and semantic gist of past experience for long-term\nmemory. Inspired by these mechanisms, we propose MemoryVLA, a\nCognition-Memory-Action framework for long-horizon robotic manipulation. A\npretrained VLM encodes the observation into perceptual and cognitive tokens\nthat form working memory, while a Perceptual-Cognitive Memory Bank stores\nlow-level details and high-level semantics consolidated from it. Working memory\nretrieves decision-relevant entries from the bank, adaptively fuses them with\ncurrent tokens, and updates the bank by merging redundancies. Using these\ntokens, a memory-conditioned diffusion action expert yields temporally aware\naction sequences. We evaluate MemoryVLA on 150+ simulation and real-world tasks\nacross three robots. On SimplerEnv-Bridge, Fractal, and LIBERO-5 suites, it\nachieves 71.9%, 72.7%, and 96.5% success rates, respectively, all outperforming\nstate-of-the-art baselines CogACT and pi-0, with a notable +14.6 gain on\nBridge. On 12 real-world tasks spanning general skills and long-horizon\ntemporal dependencies, MemoryVLA achieves 84.0% success rate, with long-horizon\ntasks showing a +26 improvement over state-of-the-art baseline. Project Page:\nhttps://shihao1895.github.io/MemoryVLA",
+        "url": "http://arxiv.org/abs/2508.19236v1",
+        "published_date": "2025-08-26T17:57:16+00:00",
+        "updated_date": "2025-08-26T17:57:16+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Hao Shi",
+            "Bin Xie",
+            "Yingfei Liu",
+            "Lin Sun",
+            "Fengrong Liu",
+            "Tiancai Wang",
+            "Erjin Zhou",
+            "Haoqiang Fan",
+            "Xiangyu Zhang",
+            "Gao Huang"
+        ],
+        "tldr": "MemoryVLA, a new Vision-Language-Action framework inspired by cognitive science, uses working memory and a memory bank to improve long-horizon robotic manipulation, outperforming SOTA baselines in simulation and real-world tasks.",
+        "tldr_zh": "MemoryVLA是一个新的视觉-语言-动作框架，灵感来自认知科学，它使用工作记忆和记忆库来改进长时程机器人操作，在模拟和真实世界任务中优于SOTA基线。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "LSD-3D: Large-Scale 3D Driving Scene Generation with Geometry Grounding",
+        "summary": "Large-scale scene data is essential for training and testing in robot\nlearning. Neural reconstruction methods have promised the capability of\nreconstructing large physically-grounded outdoor scenes from captured sensor\ndata. However, these methods have baked-in static environments and only allow\nfor limited scene control -- they are functionally constrained in scene and\ntrajectory diversity by the captures from which they are reconstructed. In\ncontrast, generating driving data with recent image or video diffusion models\noffers control, however, at the cost of geometry grounding and causality. In\nthis work, we aim to bridge this gap and present a method that directly\ngenerates large-scale 3D driving scenes with accurate geometry, allowing for\ncausal novel view synthesis with object permanence and explicit 3D geometry\nestimation. The proposed method combines the generation of a proxy geometry and\nenvironment representation with score distillation from learned 2D image\npriors. We find that this approach allows for high controllability, enabling\nthe prompt-guided geometry and high-fidelity texture and structure that can be\nconditioned on map layouts -- producing realistic and geometrically consistent\n3D generations of complex driving scenes.",
+        "url": "http://arxiv.org/abs/2508.19204v1",
+        "published_date": "2025-08-26T17:04:49+00:00",
+        "updated_date": "2025-08-26T17:04:49+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.GR"
+        ],
+        "authors": [
+            "Julian Ost",
+            "Andrea Ramazzina",
+            "Amogh Joshi",
+            "Maximilian Bömer",
+            "Mario Bijelic",
+            "Felix Heide"
+        ],
+        "tldr": "This paper introduces a method, LSD-3D, for generating large-scale, geometrically accurate 3D driving scenes by combining proxy geometry generation with score distillation from 2D image priors, bridging the gap between controllable image diffusion and geometry grounding.",
+        "tldr_zh": "本文介绍了一种名为LSD-3D的方法，通过结合代理几何生成和2D图像先验的score distillation，生成大规模、几何精确的3D驾驶场景，弥合了可控图像扩散和几何基础之间的差距。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Dual Enhancement on 3D Vision-Language Perception for Monocular 3D Visual Grounding",
+        "summary": "Monocular 3D visual grounding is a novel task that aims to locate 3D objects\nin RGB images using text descriptions with explicit geometry information.\nDespite the inclusion of geometry details in the text, we observe that the text\nembeddings are sensitive to the magnitude of numerical values but largely\nignore the associated measurement units. For example, simply equidistant\nmapping the length with unit \"meter\" to \"decimeters\" or \"centimeters\" leads to\nsevere performance degradation, even though the physical length remains\nequivalent. This observation signifies the weak 3D comprehension of pre-trained\nlanguage model, which generates misguiding text features to hinder 3D\nperception. Therefore, we propose to enhance the 3D perception of model on text\nembeddings and geometry features with two simple and effective methods.\nFirstly, we introduce a pre-processing method named 3D-text Enhancement (3DTE),\nwhich enhances the comprehension of mapping relationships between different\nunits by augmenting the diversity of distance descriptors in text queries.\nNext, we propose a Text-Guided Geometry Enhancement (TGE) module to further\nenhance the 3D-text information by projecting the basic text features into\ngeometrically consistent space. These 3D-enhanced text features are then\nleveraged to precisely guide the attention of geometry features. We evaluate\nthe proposed method through extensive comparisons and ablation studies on the\nMono3DRefer dataset. Experimental results demonstrate substantial improvements\nover previous methods, achieving new state-of-the-art results with a notable\naccuracy gain of 11.94\\% in the \"Far\" scenario. Our code will be made publicly\navailable.",
+        "url": "http://arxiv.org/abs/2508.19165v1",
+        "published_date": "2025-08-26T16:13:18+00:00",
+        "updated_date": "2025-08-26T16:13:18+00:00",
+        "categories": [
+            "cs.CV",
+            "Information systems~Multimedia and multimodal retrieval"
+        ],
+        "authors": [
+            "Yuzhen Li",
+            "Min Liu",
+            "Yuan Bian",
+            "Xueping Wang",
+            "Zhaoyang Li",
+            "Gen Li",
+            "Yaonan Wang"
+        ],
+        "tldr": "This paper addresses the problem of weak 3D comprehension in monocular 3D visual grounding by enhancing both text embeddings and geometry features using 3D-text Enhancement (3DTE) and Text-Guided Geometry Enhancement (TGE) modules, achieving state-of-the-art results on the Mono3DRefer dataset.",
+        "tldr_zh": "本文通过使用3D文本增强（3DTE）和文本引导的几何增强（TGE）模块来增强文本嵌入和几何特征，从而解决了单目3D视觉基础中的3D理解能力不足的问题，并在Mono3DRefer数据集上取得了最先进的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "ZeST: an LLM-based Zero-Shot Traversability Navigation for Unknown Environments",
+        "summary": "The advancement of robotics and autonomous navigation systems hinges on the\nability to accurately predict terrain traversability. Traditional methods for\ngenerating datasets to train these prediction models often involve putting\nrobots into potentially hazardous environments, posing risks to equipment and\nsafety. To solve this problem, we present ZeST, a novel approach leveraging\nvisual reasoning capabilities of Large Language Models (LLMs) to create a\ntraversability map in real-time without exposing robots to danger. Our approach\nnot only performs zero-shot traversability and mitigates the risks associated\nwith real-world data collection but also accelerates the development of\nadvanced navigation systems, offering a cost-effective and scalable solution.\nTo support our findings, we present navigation results, in both controlled\nindoor and unstructured outdoor environments. As shown in the experiments, our\nmethod provides safer navigation when compared to other state-of-the-art\nmethods, constantly reaching the final goal.",
+        "url": "http://arxiv.org/abs/2508.19131v1",
+        "published_date": "2025-08-26T15:30:19+00:00",
+        "updated_date": "2025-08-26T15:30:19+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Shreya Gummadi",
+            "Mateus V. Gasparino",
+            "Gianluca Capezzuto",
+            "Marcelo Becker",
+            "Girish Chowdhary"
+        ],
+        "tldr": "This paper introduces ZeST, a method using LLMs for zero-shot traversability mapping in unknown environments, aiming to improve robot navigation safety and reduce data collection risks.",
+        "tldr_zh": "本文介绍了一种名为ZeST的方法，该方法利用大型语言模型（LLM）在未知环境中进行零样本可通行性地图构建，旨在提高机器人导航的安全性并降低数据收集的风险。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    }
+]
