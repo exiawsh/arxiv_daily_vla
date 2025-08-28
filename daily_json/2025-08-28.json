@@ -1,0 +1,250 @@
+[
+    {
+        "title": "Streamlining the Development of Active Learning Methods in Real-World Object Detection",
+        "summary": "Active learning (AL) for real-world object detection faces computational and\nreliability challenges that limit practical deployment. Developing new AL\nmethods requires training multiple detectors across iterations to compare\nagainst existing approaches. This creates high costs for autonomous driving\ndatasets where the training of one detector requires up to 282 GPU hours.\nAdditionally, AL method rankings vary substantially across validation sets,\ncompromising reliability in safety-critical transportation systems. We\nintroduce object-based set similarity ($\\mathrm{OSS}$), a metric that addresses\nthese challenges. $\\mathrm{OSS}$ (1) quantifies AL method effectiveness without\nrequiring detector training by measuring similarity between training sets and\ntarget domains using object-level features. This enables the elimination of\nineffective AL methods before training. Furthermore, $\\mathrm{OSS}$ (2) enables\nthe selection of representative validation sets for robust evaluation. We\nvalidate our similarity-based approach on three autonomous driving datasets\n(KITTI, BDD100K, CODA) using uncertainty-based AL methods as a case study with\ntwo detector architectures (EfficientDet, YOLOv3). This work is the first to\nunify AL training and evaluation strategies in object detection based on object\nsimilarity. $\\mathrm{OSS}$ is detector-agnostic, requires only labeled object\ncrops, and integrates with existing AL pipelines. This provides a practical\nframework for deploying AL in real-world applications where computational\nefficiency and evaluation reliability are critical. Code is available at\nhttps://mos-ks.github.io/publications/.",
+        "url": "http://arxiv.org/abs/2508.19906v1",
+        "published_date": "2025-08-27T14:10:16+00:00",
+        "updated_date": "2025-08-27T14:10:16+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Moussa Kassem Sbeyti",
+            "Nadja Klein",
+            "Michelle Karg",
+            "Christian Wirth",
+            "Sahin Albayrak"
+        ],
+        "tldr": "The paper introduces object-based set similarity (OSS) to streamline active learning for object detection by reducing computational costs and improving evaluation reliability, especially in autonomous driving datasets.",
+        "tldr_zh": "本文提出了一种基于对象的集合相似度（OSS）方法，以简化目标检测的主动学习流程，通过减少计算成本和提高评估可靠性，尤其是在自动驾驶数据集中。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "TrajFusionNet: Pedestrian Crossing Intention Prediction via Fusion of Sequential and Visual Trajectory Representations",
+        "summary": "With the introduction of vehicles with autonomous capabilities on public\nroads, predicting pedestrian crossing intention has emerged as an active area\nof research. The task of predicting pedestrian crossing intention involves\ndetermining whether pedestrians in the scene are likely to cross the road or\nnot. In this work, we propose TrajFusionNet, a novel transformer-based model\nthat combines future pedestrian trajectory and vehicle speed predictions as\npriors for predicting crossing intention. TrajFusionNet comprises two branches:\na Sequence Attention Module (SAM) and a Visual Attention Module (VAM). The SAM\nbranch learns from a sequential representation of the observed and predicted\npedestrian trajectory and vehicle speed. Complementarily, the VAM branch\nenables learning from a visual representation of the predicted pedestrian\ntrajectory by overlaying predicted pedestrian bounding boxes onto scene images.\nBy utilizing a small number of lightweight modalities, TrajFusionNet achieves\nthe lowest total inference time (including model runtime and data\npreprocessing) among current state-of-the-art approaches. In terms of\nperformance, it achieves state-of-the-art results across the three most\ncommonly used datasets for pedestrian crossing intention prediction.",
+        "url": "http://arxiv.org/abs/2508.19866v1",
+        "published_date": "2025-08-27T13:29:15+00:00",
+        "updated_date": "2025-08-27T13:29:15+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "François G. Landry",
+            "Moulay A. Akhloufi"
+        ],
+        "tldr": "TrajFusionNet is a novel transformer-based model for predicting pedestrian crossing intention by fusing sequential trajectory and visual trajectory representations, achieving state-of-the-art results with low inference time.",
+        "tldr_zh": "TrajFusionNet 是一种新颖的基于Transformer的模型，用于通过融合序列轨迹和视觉轨迹表示来预测行人穿越意图，以低推理时间实现了最先进的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Generalizing Monocular 3D Object Detection",
+        "summary": "Monocular 3D object detection (Mono3D) is a fundamental computer vision task\nthat estimates an object's class, 3D position, dimensions, and orientation from\na single image. Its applications, including autonomous driving, augmented\nreality, and robotics, critically rely on accurate 3D environmental\nunderstanding. This thesis addresses the challenge of generalizing Mono3D\nmodels to diverse scenarios, including occlusions, datasets, object sizes, and\ncamera parameters. To enhance occlusion robustness, we propose a mathematically\ndifferentiable NMS (GrooMeD-NMS). To improve generalization to new datasets, we\nexplore depth equivariant (DEVIANT) backbones. We address the issue of large\nobject detection, demonstrating that it's not solely a data imbalance or\nreceptive field problem but also a noise sensitivity issue. To mitigate this,\nwe introduce a segmentation-based approach in bird's-eye view with dice loss\n(SeaBird). Finally, we mathematically analyze the extrapolation of Mono3D\nmodels to unseen camera heights and improve Mono3D generalization in such\nout-of-distribution settings.",
+        "url": "http://arxiv.org/abs/2508.19593v1",
+        "published_date": "2025-08-27T06:06:18+00:00",
+        "updated_date": "2025-08-27T06:06:18+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Abhinav Kumar"
+        ],
+        "tldr": "This paper tackles the challenge of generalizing monocular 3D object detection to diverse scenarios by proposing several improvements, including robust NMS, depth equivariant backbones, segmentation-based bird's-eye view, and camera height generalization.",
+        "tldr_zh": "本文通过提出多项改进，解决了单目3D目标检测在各种场景下的泛化难题，包括鲁棒的NMS、深度等变骨干网络、基于分割的鸟瞰图以及相机高度泛化。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Seam360GS: Seamless 360° Gaussian Splatting from Real-World Omnidirectional Images",
+        "summary": "360-degree visual content is widely shared on platforms such as YouTube and\nplays a central role in virtual reality, robotics, and autonomous navigation.\nHowever, consumer-grade dual-fisheye systems consistently yield imperfect\npanoramas due to inherent lens separation and angular distortions. In this\nwork, we introduce a novel calibration framework that incorporates a\ndual-fisheye camera model into the 3D Gaussian splatting pipeline. Our approach\nnot only simulates the realistic visual artifacts produced by dual-fisheye\ncameras but also enables the synthesis of seamlessly rendered 360-degree\nimages. By jointly optimizing 3D Gaussian parameters alongside calibration\nvariables that emulate lens gaps and angular distortions, our framework\ntransforms imperfect omnidirectional inputs into flawless novel view synthesis.\nExtensive evaluations on real-world datasets confirm that our method produces\nseamless renderings-even from imperfect images-and outperforms existing\n360-degree rendering models.",
+        "url": "http://arxiv.org/abs/2508.20080v1",
+        "published_date": "2025-08-27T17:46:46+00:00",
+        "updated_date": "2025-08-27T17:46:46+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.GR"
+        ],
+        "authors": [
+            "Changha Shin",
+            "Woong Oh Cho",
+            "Seon Joo Kim"
+        ],
+        "tldr": "The paper presents a new calibration framework that integrates a dual-fisheye camera model into 3D Gaussian splatting, enabling seamless 360-degree image synthesis from real-world, imperfect omnidirectional images. It jointly optimizes 3D Gaussian parameters and calibration variables, surpassing existing 360-degree rendering models.",
+        "tldr_zh": "该论文提出了一种新的校准框架，将双鱼眼相机模型集成到3D高斯溅射中，从而可以从真实世界的、不完美的全向图像中合成无缝的360度图像。 它联合优化了3D高斯参数和校准变量，超越了现有的360度渲染模型。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Discrete Diffusion VLA: Bringing Discrete Diffusion to Action Decoding in Vision-Language-Action Policies",
+        "summary": "Vision-Language-Action (VLA) models adapt large vision-language backbones to\nmap images and instructions to robot actions. However, prevailing VLA decoders\neither generate actions autoregressively in a fixed left-to-right order or\nattach continuous diffusion or flow matching heads outside the backbone,\ndemanding specialized training and iterative sampling that hinder a unified,\nscalable architecture. We present Discrete Diffusion VLA, a single-transformer\npolicy that models discretized action chunks with discrete diffusion and is\ntrained with the same cross-entropy objective as the VLM backbone. The design\nretains diffusion's progressive refinement paradigm while remaining natively\ncompatible with the discrete token interface of VLMs. Our method achieves an\nadaptive decoding order that resolves easy action elements before harder ones\nand uses secondary remasking to revisit uncertain predictions across refinement\nrounds, which improves consistency and enables robust error correction. This\nunified decoder preserves pretrained vision language priors, supports parallel\ndecoding, breaks the autoregressive bottleneck, and reduces the number of\nfunction evaluations. Discrete Diffusion VLA achieves 96.3% avg. SR on LIBERO,\n71.2% visual matching on SimplerEnv Fractal and 49.3% overall on SimplerEnv\nBridge, improving over both autoregressive and continuous diffusion baselines.\nThese findings indicate that discrete-diffusion action decoder supports precise\naction modeling and consistent training, laying groundwork for scaling VLA to\nlarger models and datasets.",
+        "url": "http://arxiv.org/abs/2508.20072v1",
+        "published_date": "2025-08-27T17:39:11+00:00",
+        "updated_date": "2025-08-27T17:39:11+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG",
+            "cs.RO"
+        ],
+        "authors": [
+            "Zhixuan Liang",
+            "Yizhuo Li",
+            "Tianshuo Yang",
+            "Chengyue Wu",
+            "Sitong Mao",
+            "Liuao Pei",
+            "Xiaokang Yang",
+            "Jiangmiao Pang",
+            "Yao Mu",
+            "Ping Luo"
+        ],
+        "tldr": "This paper introduces Discrete Diffusion VLA, a novel approach to action decoding in Vision-Language-Action models using discrete diffusion, achieving improved performance and efficiency compared to autoregressive and continuous diffusion methods.",
+        "tldr_zh": "本文介绍了 Discrete Diffusion VLA，一种新颖的视觉-语言-动作模型中的动作解码方法，它使用离散扩散，与自回归和连续扩散方法相比，实现了更高的性能和效率。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Integrating SAM Supervision for 3D Weakly Supervised Point Cloud Segmentation",
+        "summary": "Current methods for 3D semantic segmentation propose training models with\nlimited annotations to address the difficulty of annotating large, irregular,\nand unordered 3D point cloud data. They usually focus on the 3D domain only,\nwithout leveraging the complementary nature of 2D and 3D data. Besides, some\nmethods extend original labels or generate pseudo labels to guide the training,\nbut they often fail to fully use these labels or address the noise within them.\nMeanwhile, the emergence of comprehensive and adaptable foundation models has\noffered effective solutions for segmenting 2D data. Leveraging this\nadvancement, we present a novel approach that maximizes the utility of sparsely\navailable 3D annotations by incorporating segmentation masks generated by 2D\nfoundation models. We further propagate the 2D segmentation masks into the 3D\nspace by establishing geometric correspondences between 3D scenes and 2D views.\nWe extend the highly sparse annotations to encompass the areas delineated by 3D\nmasks, thereby substantially augmenting the pool of available labels.\nFurthermore, we apply confidence- and uncertainty-based consistency\nregularization on augmentations of the 3D point cloud and select the reliable\npseudo labels, which are further spread on the 3D masks to generate more\nlabels. This innovative strategy bridges the gap between limited 3D annotations\nand the powerful capabilities of 2D foundation models, ultimately improving the\nperformance of 3D weakly supervised segmentation.",
+        "url": "http://arxiv.org/abs/2508.19909v1",
+        "published_date": "2025-08-27T14:13:01+00:00",
+        "updated_date": "2025-08-27T14:13:01+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Lechun You",
+            "Zhonghua Wu",
+            "Weide Liu",
+            "Xulei Yang",
+            "Jun Cheng",
+            "Wei Zhou",
+            "Bharadwaj Veeravalli",
+            "Guosheng Lin"
+        ],
+        "tldr": "This paper introduces a weakly supervised 3D point cloud segmentation method that leverages 2D foundation models (like SAM) to generate segmentation masks, propagate them into 3D space, and refine them with consistency regularization for improved performance.",
+        "tldr_zh": "本文提出了一种弱监督的3D点云分割方法，该方法利用2D基础模型（如SAM）生成分割掩码，将其传播到3D空间，并通过一致性正则化进行细化，以提高性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Hyperspectral Sensors and Autonomous Driving: Technologies, Limitations, and Opportunities",
+        "summary": "Hyperspectral imaging (HSI) offers a transformative sensing modality for\nAdvanced Driver Assistance Systems (ADAS) and autonomous driving (AD)\napplications, enabling material-level scene understanding through fine spectral\nresolution beyond the capabilities of traditional RGB imaging. This paper\npresents the first comprehensive review of HSI for automotive applications,\nexamining the strengths, limitations, and suitability of current HSI\ntechnologies in the context of ADAS/AD. In addition to this qualitative review,\nwe analyze 216 commercially available HSI and multispectral imaging cameras,\nbenchmarking them against key automotive criteria: frame rate, spatial\nresolution, spectral dimensionality, and compliance with AEC-Q100 temperature\nstandards. Our analysis reveals a significant gap between HSI's demonstrated\nresearch potential and its commercial readiness. Only four cameras meet the\ndefined performance thresholds, and none comply with AEC-Q100 requirements. In\naddition, the paper reviews recent HSI datasets and applications, including\nsemantic segmentation for road surface classification, pedestrian separability,\nand adverse weather perception. Our review shows that current HSI datasets are\nlimited in terms of scale, spectral consistency, the number of spectral\nchannels, and environmental diversity, posing challenges for the development of\nperception algorithms and the adequate validation of HSI's true potential in\nADAS/AD applications. This review paper establishes the current state of HSI in\nautomotive contexts as of 2025 and outlines key research directions toward\npractical integration of spectral imaging in ADAS and autonomous systems.",
+        "url": "http://arxiv.org/abs/2508.19905v1",
+        "published_date": "2025-08-27T14:09:53+00:00",
+        "updated_date": "2025-08-27T14:09:53+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.ET"
+        ],
+        "authors": [
+            "Imad Ali Shah",
+            "Jiarong Li",
+            "Roshan George",
+            "Tim Brophy",
+            "Enda Ward",
+            "Martin Glavin",
+            "Edward Jones",
+            "Brian Deegan"
+        ],
+        "tldr": "This paper reviews the current state of hyperspectral imaging (HSI) for autonomous driving, highlighting limitations in commercial readiness, datasets, and compliance with automotive standards, while outlining key research directions.",
+        "tldr_zh": "本文综述了高光谱成像（HSI）在自动驾驶领域的现状，强调了商业就绪度、数据集以及符合汽车标准的局限性，并概述了关键的研究方向。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Ego-centric Predictive Model Conditioned on Hand Trajectories",
+        "summary": "In egocentric scenarios, anticipating both the next action and its visual\noutcome is essential for understanding human-object interactions and for\nenabling robotic planning. However, existing paradigms fall short of jointly\nmodeling these aspects. Vision-Language-Action (VLA) models focus on action\nprediction but lack explicit modeling of how actions influence the visual\nscene, while video prediction models generate future frames without\nconditioning on specific actions, often resulting in implausible or\ncontextually inconsistent outcomes. To bridge this gap, we propose a unified\ntwo-stage predictive framework that jointly models action and visual future in\negocentric scenarios, conditioned on hand trajectories. In the first stage, we\nperform consecutive state modeling to process heterogeneous inputs (visual\nobservations, language, and action history) and explicitly predict future hand\ntrajectories. In the second stage, we introduce causal cross-attention to fuse\nmulti-modal cues, leveraging inferred action signals to guide an image-based\nLatent Diffusion Model (LDM) for frame-by-frame future video generation. Our\napproach is the first unified model designed to handle both egocentric human\nactivity understanding and robotic manipulation tasks, providing explicit\npredictions of both upcoming actions and their visual consequences. Extensive\nexperiments on Ego4D, BridgeData, and RLBench demonstrate that our method\noutperforms state-of-the-art baselines in both action prediction and future\nvideo synthesis.",
+        "url": "http://arxiv.org/abs/2508.19852v1",
+        "published_date": "2025-08-27T13:09:55+00:00",
+        "updated_date": "2025-08-27T13:09:55+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Binjie Zhang",
+            "Mike Zheng Shou"
+        ],
+        "tldr": "This paper presents a two-stage framework for egocentric video prediction conditioned on hand trajectories, jointly modeling action and visual future for human activity understanding and robotic manipulation.",
+        "tldr_zh": "本文提出了一种基于手部轨迹的以自我为中心的视频预测的两阶段框架，该框架联合建模了动作和视觉未来，用于理解人类活动和机器人操作。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Scalable Object Detection in the Car Interior With Vision Foundation Models",
+        "summary": "AI tasks in the car interior like identifying and localizing externally\nintroduced objects is crucial for response quality of personal assistants.\nHowever, computational resources of on-board systems remain highly constrained,\nrestricting the deployment of such solutions directly within the vehicle. To\naddress this limitation, we propose the novel Object Detection and Localization\n(ODAL) framework for interior scene understanding. Our approach leverages\nvision foundation models through a distributed architecture, splitting\ncomputational tasks between on-board and cloud. This design overcomes the\nresource constraints of running foundation models directly in the car. To\nbenchmark model performance, we introduce ODALbench, a new metric for\ncomprehensive assessment of detection and localization.Our analysis\ndemonstrates the framework's potential to establish new standards in this\ndomain. We compare the state-of-the-art GPT-4o vision foundation model with the\nlightweight LLaVA 1.5 7B model and explore how fine-tuning enhances the\nlightweight models performance. Remarkably, our fine-tuned ODAL-LLaVA model\nachieves an ODAL$_{score}$ of 89%, representing a 71% improvement over its\nbaseline performance and outperforming GPT-4o by nearly 20%. Furthermore, the\nfine-tuned model maintains high detection accuracy while significantly reducing\nhallucinations, achieving an ODAL$_{SNR}$ three times higher than GPT-4o.",
+        "url": "http://arxiv.org/abs/2508.19651v1",
+        "published_date": "2025-08-27T07:58:57+00:00",
+        "updated_date": "2025-08-27T07:58:57+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Bálint Mészáros",
+            "Ahmet Firintepe",
+            "Sebastian Schmidt",
+            "Stephan Günnemann"
+        ],
+        "tldr": "This paper introduces ODAL, a distributed object detection framework for car interiors using vision foundation models, achieving significant performance improvements over GPT-4o with a fine-tuned LLaVA model while addressing on-board resource constraints.",
+        "tldr_zh": "本文介绍了ODAL，一个使用视觉基础模型进行汽车内饰物体检测的分布式框架，通过微调的LLaVA模型，在解决车载资源限制的同时，实现了比GPT-4o显著的性能提升。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Beyond BEV: Optimizing Point-Level Tokens for Collaborative Perception",
+        "summary": "Collaborative perception allows agents to enhance their perceptual\ncapabilities by exchanging intermediate features. Existing methods typically\norganize these intermediate features as 2D bird's-eye-view (BEV)\nrepresentations, which discard critical fine-grained 3D structural cues\nessential for accurate object recognition and localization. To this end, we\nfirst introduce point-level tokens as intermediate representations for\ncollaborative perception. However, point-cloud data are inherently unordered,\nmassive, and position-sensitive, making it challenging to produce compact and\naligned point-level token sequences that preserve detailed structural\ninformation. Therefore, we present CoPLOT, a novel Collaborative perception\nframework that utilizes Point-Level Optimized Tokens. It incorporates a\npoint-native processing pipeline, including token reordering, sequence\nmodeling, and multi-agent spatial alignment. A semantic-aware token reordering\nmodule generates adaptive 1D reorderings by leveraging scene-level and\ntoken-level semantic information. A frequency-enhanced state space model\ncaptures long-range sequence dependencies across both spatial and spectral\ndomains, improving the differentiation between foreground tokens and background\nclutter. Lastly, a neighbor-to-ego alignment module applies a closed-loop\nprocess, combining global agent-level correction with local token-level\nrefinement to mitigate localization noise. Extensive experiments on both\nsimulated and real-world datasets show that CoPLOT outperforms state-of-the-art\nmodels, with even lower communication and computation overhead. Code will be\navailable at https://github.com/CheeryLeeyy/CoPLOT.",
+        "url": "http://arxiv.org/abs/2508.19638v1",
+        "published_date": "2025-08-27T07:27:42+00:00",
+        "updated_date": "2025-08-27T07:27:42+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Yang Li",
+            "Quan Yuan",
+            "Guiyang Luo",
+            "Xiaoyuan Fu",
+            "Rui Pan",
+            "Yujia Yang",
+            "Congzhang Shao",
+            "Yuewen Liu",
+            "Jinglin Li"
+        ],
+        "tldr": "The paper introduces CoPLOT, a collaborative perception framework that uses point-level optimized tokens, achieving state-of-the-art performance with lower communication and computation overhead by incorporating point-native processing, semantic-aware reordering, and spatial alignment.",
+        "tldr_zh": "该论文介绍了CoPLOT，一种协作感知框架，它使用点级优化令牌，通过结合点原生处理、语义感知重排序和空间对齐，以更低的通信和计算开销实现了最先进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    }
+]
