@@ -1,0 +1,229 @@
+[
+    {
+        "title": "CogVLA: Cognition-Aligned Vision-Language-Action Model via Instruction-Driven Routing & Sparsification",
+        "summary": "Recent Vision-Language-Action (VLA) models built on pre-trained\nVision-Language Models (VLMs) require extensive post-training, resulting in\nhigh computational overhead that limits scalability and deployment.We propose\nCogVLA, a Cognition-Aligned Vision-Language-Action framework that leverages\ninstruction-driven routing and sparsification to improve both efficiency and\nperformance. CogVLA draws inspiration from human multimodal coordination and\nintroduces a 3-stage progressive architecture. 1) Encoder-FiLM based\nAggregation Routing (EFA-Routing) injects instruction information into the\nvision encoder to selectively aggregate and compress dual-stream visual tokens,\nforming a instruction-aware latent representation. 2) Building upon this\ncompact visual encoding, LLM-FiLM based Pruning Routing (LFP-Routing)\nintroduces action intent into the language model by pruning\ninstruction-irrelevant visually grounded tokens, thereby achieving token-level\nsparsity. 3) To ensure that compressed perception inputs can still support\naccurate and coherent action generation, we introduce V-L-A Coupled Attention\n(CAtten), which combines causal vision-language attention with bidirectional\naction parallel decoding. Extensive experiments on the LIBERO benchmark and\nreal-world robotic tasks demonstrate that CogVLA achieves state-of-the-art\nperformance with success rates of 97.4% and 70.0%, respectively, while reducing\ntraining costs by 2.5-fold and decreasing inference latency by 2.8-fold\ncompared to OpenVLA. CogVLA is open-sourced and publicly available at\nhttps://github.com/JiuTian-VL/CogVLA.",
+        "url": "http://arxiv.org/abs/2508.21046v1",
+        "published_date": "2025-08-28T17:50:58+00:00",
+        "updated_date": "2025-08-28T17:50:58+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Wei Li",
+            "Renshan Zhang",
+            "Rui Shao",
+            "Jie He",
+            "Liqiang Nie"
+        ],
+        "tldr": "CogVLA introduces a cognition-aligned VLA framework with instruction-driven routing and sparsification, achieving state-of-the-art performance on VLA tasks with significant efficiency improvements compared to existing methods like OpenVLA.",
+        "tldr_zh": "CogVLA 提出了一个认知对齐的 VLA 框架，通过指令驱动的路由和稀疏化，在 VLA 任务上实现了最先进的性能，并且相比 OpenVLA 等现有方法显著提高了效率。",
+        "relevance_score": 10,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Multi-View 3D Point Tracking",
+        "summary": "We introduce the first data-driven multi-view 3D point tracker, designed to\ntrack arbitrary points in dynamic scenes using multiple camera views. Unlike\nexisting monocular trackers, which struggle with depth ambiguities and\nocclusion, or prior multi-camera methods that require over 20 cameras and\ntedious per-sequence optimization, our feed-forward model directly predicts 3D\ncorrespondences using a practical number of cameras (e.g., four), enabling\nrobust and accurate online tracking. Given known camera poses and either\nsensor-based or estimated multi-view depth, our tracker fuses multi-view\nfeatures into a unified point cloud and applies k-nearest-neighbors correlation\nalongside a transformer-based update to reliably estimate long-range 3D\ncorrespondences, even under occlusion. We train on 5K synthetic multi-view\nKubric sequences and evaluate on two real-world benchmarks: Panoptic Studio and\nDexYCB, achieving median trajectory errors of 3.1 cm and 2.0 cm, respectively.\nOur method generalizes well to diverse camera setups of 1-8 views with varying\nvantage points and video lengths of 24-150 frames. By releasing our tracker\nalongside training and evaluation datasets, we aim to set a new standard for\nmulti-view 3D tracking research and provide a practical tool for real-world\napplications. Project page available at https://ethz-vlg.github.io/mvtracker.",
+        "url": "http://arxiv.org/abs/2508.21060v1",
+        "published_date": "2025-08-28T17:58:20+00:00",
+        "updated_date": "2025-08-28T17:58:20+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Frano Rajič",
+            "Haofei Xu",
+            "Marko Mihajlovic",
+            "Siyuan Li",
+            "Irem Demir",
+            "Emircan Gündoğdu",
+            "Lei Ke",
+            "Sergey Prokudin",
+            "Marc Pollefeys",
+            "Siyu Tang"
+        ],
+        "tldr": "This paper introduces a data-driven multi-view 3D point tracker that uses a practical number of cameras to accurately track points in dynamic scenes, even under occlusion, achieving state-of-the-art results on real-world benchmarks.",
+        "tldr_zh": "本文介绍了一种数据驱动的多视角3D点追踪器，它使用实用数量的相机来准确追踪动态场景中的点，即使在遮挡的情况下也能实现最先进的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "ActLoc: Learning to Localize on the Move via Active Viewpoint Selection",
+        "summary": "Reliable localization is critical for robot navigation, yet most existing\nsystems implicitly assume that all viewing directions at a location are equally\ninformative. In practice, localization becomes unreliable when the robot\nobserves unmapped, ambiguous, or uninformative regions. To address this, we\npresent ActLoc, an active viewpoint-aware planning framework for enhancing\nlocalization accuracy for general robot navigation tasks. At its core, ActLoc\nemploys a largescale trained attention-based model for viewpoint selection. The\nmodel encodes a metric map and the camera poses used during map construction,\nand predicts localization accuracy across yaw and pitch directions at arbitrary\n3D locations. These per-point accuracy distributions are incorporated into a\npath planner, enabling the robot to actively select camera orientations that\nmaximize localization robustness while respecting task and motion constraints.\nActLoc achieves stateof-the-art results on single-viewpoint selection and\ngeneralizes effectively to fulltrajectory planning. Its modular design makes it\nreadily applicable to diverse robot navigation and inspection tasks.",
+        "url": "http://arxiv.org/abs/2508.20981v1",
+        "published_date": "2025-08-28T16:36:02+00:00",
+        "updated_date": "2025-08-28T16:36:02+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Jiajie Li",
+            "Boyang Sun",
+            "Luca Di Giammarino",
+            "Hermann Blum",
+            "Marc Pollefeys"
+        ],
+        "tldr": "ActLoc is a framework that enhances robot localization accuracy by actively selecting viewpoints using an attention-based model, improving robustness during navigation tasks.",
+        "tldr_zh": "ActLoc是一个框架，它通过使用基于注意力的模型主动选择视点来提高机器人定位的准确性，从而提高导航任务期间的鲁棒性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "DrivingGaussian++: Towards Realistic Reconstruction and Editable Simulation for Surrounding Dynamic Driving Scenes",
+        "summary": "We present DrivingGaussian++, an efficient and effective framework for\nrealistic reconstructing and controllable editing of surrounding dynamic\nautonomous driving scenes. DrivingGaussian++ models the static background using\nincremental 3D Gaussians and reconstructs moving objects with a composite\ndynamic Gaussian graph, ensuring accurate positions and occlusions. By\nintegrating a LiDAR prior, it achieves detailed and consistent scene\nreconstruction, outperforming existing methods in dynamic scene reconstruction\nand photorealistic surround-view synthesis. DrivingGaussian++ supports\ntraining-free controllable editing for dynamic driving scenes, including\ntexture modification, weather simulation, and object manipulation, leveraging\nmulti-view images and depth priors. By integrating large language models (LLMs)\nand controllable editing, our method can automatically generate dynamic object\nmotion trajectories and enhance their realism during the optimization process.\nDrivingGaussian++ demonstrates consistent and realistic editing results and\ngenerates dynamic multi-view driving scenarios, while significantly enhancing\nscene diversity. More results and code can be found at the project site:\nhttps://xiong-creator.github.io/DrivingGaussian_plus.github.io",
+        "url": "http://arxiv.org/abs/2508.20965v1",
+        "published_date": "2025-08-28T16:22:54+00:00",
+        "updated_date": "2025-08-28T16:22:54+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yajiao Xiong",
+            "Xiaoyu Zhou",
+            "Yongtao Wan",
+            "Deqing Sun",
+            "Ming-Hsuan Yang"
+        ],
+        "tldr": "DrivingGaussian++ enables realistic reconstruction and controllable editing of dynamic driving scenes using 3D Gaussians and LiDAR priors, allowing for applications like weather simulation and object manipulation.",
+        "tldr_zh": "DrivingGaussian++ 利用 3D 高斯分布和激光雷达先验，实现了动态驾驶场景的逼真重建和可控编辑，可应用于天气模拟和物体操作等。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "SKGE-SWIN: End-To-End Autonomous Vehicle Waypoint Prediction and Navigation Using Skip Stage Swin Transformer",
+        "summary": "Focusing on the development of an end-to-end autonomous vehicle model with\npixel-to-pixel context awareness, this research proposes the SKGE-Swin\narchitecture. This architecture utilizes the Swin Transformer with a skip-stage\nmechanism to broaden feature representation globally and at various network\nlevels. This approach enables the model to extract information from distant\npixels by leveraging the Swin Transformer's Shifted Window-based Multi-head\nSelf-Attention (SW-MSA) mechanism and to retain critical information from the\ninitial to the final stages of feature extraction, thereby enhancing its\ncapability to comprehend complex patterns in the vehicle's surroundings. The\nmodel is evaluated on the CARLA platform using adversarial scenarios to\nsimulate real-world conditions. Experimental results demonstrate that the\nSKGE-Swin architecture achieves a superior Driving Score compared to previous\nmethods. Furthermore, an ablation study will be conducted to evaluate the\ncontribution of each architectural component, including the influence of skip\nconnections and the use of the Swin Transformer, in improving model\nperformance.",
+        "url": "http://arxiv.org/abs/2508.20762v1",
+        "published_date": "2025-08-28T13:17:35+00:00",
+        "updated_date": "2025-08-28T13:17:35+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG",
+            "cs.RO"
+        ],
+        "authors": [
+            "Fachri Najm Noer Kartiman",
+            "Rasim",
+            "Yaya Wihardi",
+            "Nurul Hasanah",
+            "Oskar Natan",
+            "Bambang Wahono",
+            "Taufik Ibnu Salim"
+        ],
+        "tldr": "This paper introduces SKGE-Swin, an end-to-end autonomous vehicle waypoint prediction model leveraging a skip-stage Swin Transformer for improved feature representation and navigation in complex environments, validated on CARLA.",
+        "tldr_zh": "本文提出了一种名为SKGE-Swin的端到端自动驾驶车辆航点预测模型，该模型利用跳跃阶段的Swin Transformer来改进特征表示，从而在复杂的环境中进行导航，并在CARLA平台上进行了验证。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "SPGrasp: Spatiotemporal Prompt-driven Grasp Synthesis in Dynamic Scenes",
+        "summary": "Real-time interactive grasp synthesis for dynamic objects remains challenging\nas existing methods fail to achieve low-latency inference while maintaining\npromptability. To bridge this gap, we propose SPGrasp (spatiotemporal\nprompt-driven dynamic grasp synthesis), a novel framework extending segment\nanything model v2 (SAMv2) for video stream grasp estimation. Our core\ninnovation integrates user prompts with spatiotemporal context, enabling\nreal-time interaction with end-to-end latency as low as 59 ms while ensuring\ntemporal consistency for dynamic objects. In benchmark evaluations, SPGrasp\nachieves instance-level grasp accuracies of 90.6% on OCID and 93.8% on\nJacquard. On the challenging GraspNet-1Billion dataset under continuous\ntracking, SPGrasp achieves 92.0% accuracy with 73.1 ms per-frame latency,\nrepresenting a 58.5% reduction compared to the prior state-of-the-art\npromptable method RoG-SAM while maintaining competitive accuracy. Real-world\nexperiments involving 13 moving objects demonstrate a 94.8% success rate in\ninteractive grasping scenarios. These results confirm SPGrasp effectively\nresolves the latency-interactivity trade-off in dynamic grasp synthesis. Code\nis available at https://github.com/sejmoonwei/SPGrasp.",
+        "url": "http://arxiv.org/abs/2508.20547v1",
+        "published_date": "2025-08-28T08:38:50+00:00",
+        "updated_date": "2025-08-28T08:38:50+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Yunpeng Mei",
+            "Hongjie Cao",
+            "Yinqiu Xia",
+            "Wei Xiao",
+            "Zhaohan Feng",
+            "Gang Wang",
+            "Jie Chen"
+        ],
+        "tldr": "SPGrasp introduces a novel spatiotemporal prompt-driven framework for real-time interactive grasp synthesis of dynamic objects, achieving high accuracy and low latency by extending SAMv2 with spatiotemporal context and user prompts.",
+        "tldr_zh": "SPGrasp 提出了一种新的时空提示驱动框架，用于动态物体的实时交互式抓取合成，通过使用时空上下文和用户提示扩展 SAMv2，实现了高精度和低延迟。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Enhancing Pseudo-Boxes via Data-Level LiDAR-Camera Fusion for Unsupervised 3D Object Detection",
+        "summary": "Existing LiDAR-based 3D object detectors typically rely on manually annotated\nlabels for training to achieve good performance. However, obtaining\nhigh-quality 3D labels is time-consuming and labor-intensive. To address this\nissue, recent works explore unsupervised 3D object detection by introducing RGB\nimages as an auxiliary modal to assist pseudo-box generation. However, these\nmethods simply integrate pseudo-boxes generated by LiDAR point clouds and RGB\nimages. Yet, such a label-level fusion strategy brings limited improvements to\nthe quality of pseudo-boxes, as it overlooks the complementary nature in terms\nof LiDAR and RGB image data. To overcome the above limitations, we propose a\nnovel data-level fusion framework that integrates RGB images and LiDAR data at\nan early stage. Specifically, we utilize vision foundation models for instance\nsegmentation and depth estimation on images and introduce a bi-directional\nfusion method, where real points acquire category labels from the 2D space,\nwhile 2D pixels are projected onto 3D to enhance real point density. To\nmitigate noise from depth and segmentation estimations, we propose a local and\nglobal filtering method, which applies local radius filtering to suppress depth\nestimation errors and global statistical filtering to remove\nsegmentation-induced outliers. Furthermore, we propose a data-level fusion\nbased dynamic self-evolution strategy, which iteratively refines pseudo-boxes\nunder a dense representation, significantly improving localization accuracy.\nExtensive experiments on the nuScenes dataset demonstrate that the detector\ntrained by our method significantly outperforms that trained by previous\nstate-of-the-art methods with 28.4$\\%$ mAP on the nuScenes validation\nbenchmark.",
+        "url": "http://arxiv.org/abs/2508.20530v1",
+        "published_date": "2025-08-28T08:15:23+00:00",
+        "updated_date": "2025-08-28T08:15:23+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Mingqian Ji",
+            "Jian Yang",
+            "Shanshan Zhang"
+        ],
+        "tldr": "This paper proposes a novel data-level LiDAR-camera fusion framework for unsupervised 3D object detection, achieving significant performance improvements by integrating vision foundation models and a dynamic self-evolution strategy.",
+        "tldr_zh": "本文提出了一种新颖的数据级激光雷达-相机融合框架，用于无监督的3D目标检测，通过整合视觉基础模型和动态自演化策略，实现了显著的性能提升。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Adaptive Dual Uncertainty Optimization: Boosting Monocular 3D Object Detection under Test-Time Shifts",
+        "summary": "Accurate monocular 3D object detection (M3OD) is pivotal for safety-critical\napplications like autonomous driving, yet its reliability deteriorates\nsignificantly under real-world domain shifts caused by environmental or sensor\nvariations. To address these shifts, Test-Time Adaptation (TTA) methods have\nemerged, enabling models to adapt to target distributions during inference.\nWhile prior TTA approaches recognize the positive correlation between low\nuncertainty and high generalization ability, they fail to address the dual\nuncertainty inherent to M3OD: semantic uncertainty (ambiguous class\npredictions) and geometric uncertainty (unstable spatial localization). To\nbridge this gap, we propose Dual Uncertainty Optimization (DUO), the first TTA\nframework designed to jointly minimize both uncertainties for robust M3OD.\nThrough a convex optimization lens, we introduce an innovative convex structure\nof the focal loss and further derive a novel unsupervised version, enabling\nlabel-agnostic uncertainty weighting and balanced learning for high-uncertainty\nobjects. In parallel, we design a semantic-aware normal field constraint that\npreserves geometric coherence in regions with clear semantic cues, reducing\nuncertainty from the unstable 3D representation. This dual-branch mechanism\nforms a complementary loop: enhanced spatial perception improves semantic\nclassification, and robust semantic predictions further refine spatial\nunderstanding. Extensive experiments demonstrate the superiority of DUO over\nexisting methods across various datasets and domain shift types.",
+        "url": "http://arxiv.org/abs/2508.20488v1",
+        "published_date": "2025-08-28T07:09:21+00:00",
+        "updated_date": "2025-08-28T07:09:21+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zixuan Hu",
+            "Dongxiao Li",
+            "Xinzhu Ma",
+            "Shixiang Tang",
+            "Xiaotong Li",
+            "Wenhan Yang",
+            "Ling-Yu Duan"
+        ]
+    },
+    {
+        "title": "Realistic and Controllable 3D Gaussian-Guided Object Editing for Driving Video Generation",
+        "summary": "Corner cases are crucial for training and validating autonomous driving\nsystems, yet collecting them from the real world is often costly and hazardous.\nEditing objects within captured sensor data offers an effective alternative for\ngenerating diverse scenarios, commonly achieved through 3D Gaussian Splatting\nor image generative models. However, these approaches often suffer from limited\nvisual fidelity or imprecise pose control. To address these issues, we propose\nG^2Editor, a framework designed for photorealistic and precise object editing\nin driving videos. Our method leverages a 3D Gaussian representation of the\nedited object as a dense prior, injected into the denoising process to ensure\naccurate pose control and spatial consistency. A scene-level 3D bounding box\nlayout is employed to reconstruct occluded areas of non-target objects.\nFurthermore, to guide the appearance details of the edited object, we\nincorporate hierarchical fine-grained features as additional conditions during\ngeneration. Experiments on the Waymo Open Dataset demonstrate that G^2Editor\neffectively supports object repositioning, insertion, and deletion within a\nunified framework, outperforming existing methods in both pose controllability\nand visual quality, while also benefiting downstream data-driven tasks.",
+        "url": "http://arxiv.org/abs/2508.20471v1",
+        "published_date": "2025-08-28T06:39:53+00:00",
+        "updated_date": "2025-08-28T06:39:53+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jiusi Li",
+            "Jackson Jiang",
+            "Jinyu Miao",
+            "Miao Long",
+            "Tuopu Wen",
+            "Peijin Jia",
+            "Shengxiang Liu",
+            "Chunlei Yu",
+            "Maolin Liu",
+            "Yuzhan Cai",
+            "Kun Jiang",
+            "Mengmeng Yang",
+            "Diange Yang"
+        ]
+    }
+]
