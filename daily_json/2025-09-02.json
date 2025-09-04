@@ -1,0 +1,150 @@
+[
+    {
+        "title": "Robix: A Unified Model for Robot Interaction, Reasoning and Planning",
+        "summary": "We introduce Robix, a unified model that integrates robot reasoning, task\nplanning, and natural language interaction within a single vision-language\narchitecture. Acting as the high-level cognitive layer in a hierarchical robot\nsystem, Robix dynamically generates atomic commands for the low-level\ncontroller and verbal responses for human interaction, enabling robots to\nfollow complex instructions, plan long-horizon tasks, and interact naturally\nwith human within an end-to-end framework. Robix further introduces novel\ncapabilities such as proactive dialogue, real-time interruption handling, and\ncontext-aware commonsense reasoning during task execution. At its core, Robix\nleverages chain-of-thought reasoning and adopts a three-stage training\nstrategy: (1) continued pretraining to enhance foundational embodied reasoning\nabilities including 3D spatial understanding, visual grounding, and\ntask-centric reasoning; (2) supervised finetuning to model human-robot\ninteraction and task planning as a unified reasoning-action sequence; and (3)\nreinforcement learning to improve reasoning-action consistency and long-horizon\ntask coherence. Extensive experiments demonstrate that Robix outperforms both\nopen-source and commercial baselines (e.g., GPT-4o and Gemini 2.5 Pro) in\ninteractive task execution, demonstrating strong generalization across diverse\ninstruction types (e.g., open-ended, multi-stage, constrained, invalid, and\ninterrupted) and various user-involved tasks such as table bussing, grocery\nshopping, and dietary filtering.",
+        "url": "http://arxiv.org/abs/2509.01106v1",
+        "published_date": "2025-09-01T03:53:47+00:00",
+        "updated_date": "2025-09-01T03:53:47+00:00",
+        "categories": [
+            "cs.AI",
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Huang Fang",
+            "Mengxi Zhang",
+            "Heng Dong",
+            "Wei Li",
+            "Zixuan Wang",
+            "Qifeng Zhang",
+            "Xueyun Tian",
+            "Yucheng Hu",
+            "Hang Li"
+        ],
+        "tldr": "Robix is a unified vision-language architecture for robots that integrates reasoning, planning, and natural language interaction, demonstrating superior performance compared to GPT-4o and Gemini 2.5 Pro in interactive task execution.",
+        "tldr_zh": "Robix是一个统一的视觉-语言机器人架构，集成了推理、规划和自然语言交互，并在交互式任务执行方面表现出优于GPT-4o和Gemini 2.5 Pro的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Aleatoric Uncertainty from AI-based 6D Object Pose Predictors for Object-relative State Estimation",
+        "summary": "Deep Learning (DL) has become essential in various robotics applications due\nto excelling at processing raw sensory data to extract task specific\ninformation from semantic objects. For example, vision-based object-relative\nnavigation relies on a DL-based 6D object pose predictor to provide the\nrelative pose between the object and the robot as measurements to the robot's\nstate estimator. Accurately knowing the uncertainty inherent in such Deep\nNeural Network (DNN) based measurements is essential for probabilistic state\nestimators subsequently guiding the robot's tasks. Thus, in this letter, we\nshow that we can extend any existing DL-based object-relative pose predictor\nfor aleatoric uncertainty inference simply by including two multi-layer\nperceptrons detached from the translational and rotational part of the DL\npredictor. This allows for efficient training while freezing the existing\npre-trained predictor. We then use the inferred 6D pose and its uncertainty as\na measurement and corresponding noise covariance matrix in an extended Kalman\nfilter (EKF). Our approach induces minimal computational overhead such that the\nstate estimator can be deployed on edge devices while benefiting from the\ndynamically inferred measurement uncertainty. This increases the performance of\nthe object-relative state estimation task compared to a fix-covariance\napproach. We conduct evaluations on synthetic data and real-world data to\nunderline the benefits of aleatoric uncertainty inference for the\nobject-relative state estimation task.",
+        "url": "http://arxiv.org/abs/2509.01583v1",
+        "published_date": "2025-09-01T16:12:10+00:00",
+        "updated_date": "2025-09-01T16:12:10+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Thomas Jantos",
+            "Stephan Weiss",
+            "Jan Steinbrener"
+        ],
+        "tldr": "This paper proposes a method to estimate aleatoric uncertainty for 6D object pose predictions from deep learning models, integrating it into an EKF for improved object-relative state estimation, with edge device deployment potential.",
+        "tldr_zh": "本文提出了一种方法来估计深度学习模型中 6D 物体姿态预测的偶然不确定性，并将其集成到 EKF 中，以改进物体相对状态估计，并具有边缘设备部署潜力。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "A Continuous-Time Consistency Model for 3D Point Cloud Generation",
+        "summary": "Fast and accurate 3D shape generation from point clouds is essential for\napplications in robotics, AR/VR, and digital content creation. We introduce\nConTiCoM-3D, a continuous-time consistency model that synthesizes 3D shapes\ndirectly in point space, without discretized diffusion steps, pre-trained\nteacher models, or latent-space encodings. The method integrates a\nTrigFlow-inspired continuous noise schedule with a Chamfer Distance-based\ngeometric loss, enabling stable training on high-dimensional point sets while\navoiding expensive Jacobian-vector products. This design supports efficient\none- to two-step inference with high geometric fidelity. In contrast to\nprevious approaches that rely on iterative denoising or latent decoders,\nConTiCoM-3D employs a time-conditioned neural network operating entirely in\ncontinuous time, thereby achieving fast generation. Experiments on the ShapeNet\nbenchmark show that ConTiCoM-3D matches or outperforms state-of-the-art\ndiffusion and latent consistency models in both quality and efficiency,\nestablishing it as a practical framework for scalable 3D shape generation.",
+        "url": "http://arxiv.org/abs/2509.01492v1",
+        "published_date": "2025-09-01T14:11:59+00:00",
+        "updated_date": "2025-09-01T14:11:59+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Sebastian Eilermann",
+            "René Heesch",
+            "Oliver Niggemann"
+        ],
+        "tldr": "The paper introduces ConTiCoM-3D, a novel continuous-time consistency model for efficient and high-quality 3D point cloud generation, outperforming existing diffusion and latent consistency models on ShapeNet.",
+        "tldr_zh": "该论文介绍了ConTiCoM-3D，一种新型的连续时间一致性模型，用于高效高质量的3D点云生成，并在ShapeNet上优于现有的扩散模型和潜在一致性模型。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "PointSlice: Accurate and Efficient Slice-Based Representation for 3D Object Detection from Point Clouds",
+        "summary": "3D object detection from point clouds plays a critical role in autonomous\ndriving. Currently, the primary methods for point cloud processing are\nvoxel-based and pillarbased approaches. Voxel-based methods offer high accuracy\nthrough fine-grained spatial segmentation but suffer from slower inference\nspeeds. Pillar-based methods enhance inference speed but still fall short of\nvoxel-based methods in accuracy. To address these issues, we propose a novel\npoint cloud processing method, PointSlice, which slices point clouds along the\nhorizontal plane and includes a dedicated detection network. The main\ncontributions of PointSlice are: (1) A new point cloud processing technique\nthat converts 3D point clouds into multiple sets of 2D (x-y) data slices. The\nmodel only learns 2D data distributions, treating the 3D point cloud as\nseparate batches of 2D data, which reduces the number of model parameters and\nenhances inference speed; (2) The introduction of a Slice Interaction Network\n(SIN). To maintain vertical relationships across slices, we incorporate SIN\ninto the 2D backbone network, which improves the model's 3D object perception\ncapability. Extensive experiments demonstrate that PointSlice achieves high\ndetection accuracy and inference speed. On the Waymo dataset, PointSlice is\n1.13x faster and has 0.79x fewer parameters than the state-of-the-art\nvoxel-based method (SAFDNet), with only a 1.2 mAPH accuracy reduction. On the\nnuScenes dataset, we achieve a state-of-the-art detection result of 66.74 mAP.\nOn the Argoverse 2 dataset, PointSlice is 1.10x faster, with 0.66x fewer\nparameters and a 1.0 mAP accuracy reduction. The code will be available at\nhttps://github.com/qifeng22/PointSlice2.",
+        "url": "http://arxiv.org/abs/2509.01487v1",
+        "published_date": "2025-09-01T14:08:21+00:00",
+        "updated_date": "2025-09-01T14:08:21+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Liu Qifeng",
+            "Zhao Dawei",
+            "Dong Yabo",
+            "Xiao Liang",
+            "Wang Juan",
+            "Min Chen",
+            "Li Fuyang",
+            "Jiang Weizhong",
+            "Lu Dongming",
+            "Nie Yiming"
+        ],
+        "tldr": "PointSlice is a novel point cloud processing technique for 3D object detection that slices point clouds horizontally into 2D data slices, using a Slice Interaction Network (SIN) to maintain vertical relationships, achieving competitive accuracy and improved inference speed compared to existing methods.",
+        "tldr_zh": "PointSlice是一种用于3D物体检测的新颖点云处理技术，它将点云水平切片为2D数据切片，并使用切片交互网络（SIN）来维持垂直关系，与现有方法相比，实现了具有竞争力的精度和更高的推理速度。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Guided Model-based LiDAR Super-Resolution for Resource-Efficient Automotive scene Segmentation",
+        "summary": "High-resolution LiDAR data plays a critical role in 3D semantic segmentation\nfor autonomous driving, but the high cost of advanced sensors limits\nlarge-scale deployment. In contrast, low-cost sensors such as 16-channel LiDAR\nproduce sparse point clouds that degrade segmentation accuracy. To overcome\nthis, we introduce the first end-to-end framework that jointly addresses LiDAR\nsuper-resolution (SR) and semantic segmentation. The framework employs joint\noptimization during training, allowing the SR module to incorporate semantic\ncues and preserve fine details, particularly for smaller object classes. A new\nSR loss function further directs the network to focus on regions of interest.\nThe proposed lightweight, model-based SR architecture uses significantly fewer\nparameters than existing LiDAR SR approaches, while remaining easily compatible\nwith segmentation networks. Experiments show that our method achieves\nsegmentation performance comparable to models operating on high-resolution and\ncostly 64-channel LiDAR data.",
+        "url": "http://arxiv.org/abs/2509.01317v1",
+        "published_date": "2025-09-01T10:01:40+00:00",
+        "updated_date": "2025-09-01T10:01:40+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Alexandros Gkillas",
+            "Nikos Piperigkos",
+            "Aris S. Lalos"
+        ],
+        "tldr": "This paper introduces an end-to-end framework for LiDAR super-resolution and semantic segmentation, achieving performance comparable to high-resolution LiDAR using a lightweight, model-based SR architecture optimized with semantic cues.",
+        "tldr_zh": "本文提出了一个端到端的激光雷达超分辨率和语义分割框架，通过轻量级的基于模型的超分辨率架构并结合语义线索进行优化，实现了与高分辨率激光雷达相当的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Multi-Representation Adapter with Neural Architecture Search for Efficient Range-Doppler Radar Object Detection",
+        "summary": "Detecting objects efficiently from radar sensors has recently become a\npopular trend due to their robustness against adverse lighting and weather\nconditions compared with cameras. This paper presents an efficient object\ndetection model for Range-Doppler (RD) radar maps. Specifically, we first\nrepresent RD radar maps with multi-representation, i.e., heatmaps and grayscale\nimages, to gather high-level object and fine-grained texture features. Then, we\ndesign an additional Adapter branch, an Exchanger Module with two modes, and a\nPrimary-Auxiliary Fusion Module to effectively extract, exchange, and fuse\nfeatures from the multi-representation inputs, respectively. Furthermore, we\nconstruct a supernet with various width and fusion operations in the Adapter\nbranch for the proposed model and employ a One-Shot Neural Architecture Search\nmethod to further improve the model's efficiency while maintaining high\nperformance. Experimental results demonstrate that our model obtains favorable\naccuracy and efficiency trade-off. Moreover, we achieve new state-of-the-art\nperformance on RADDet and CARRADA datasets with mAP@50 of 71.9 and 57.1,\nrespectively.",
+        "url": "http://arxiv.org/abs/2509.01280v1",
+        "published_date": "2025-09-01T09:06:53+00:00",
+        "updated_date": "2025-09-01T09:06:53+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zhiwei Lin",
+            "Weicheng Zheng",
+            "Yongtao Wang"
+        ],
+        "tldr": "This paper proposes an efficient object detection model for Range-Doppler radar maps using multi-representation and neural architecture search, achieving state-of-the-art results on RADDet and CARRADA datasets.",
+        "tldr_zh": "本文提出了一种高效的Range-Doppler雷达地图物体检测模型，该模型采用多重表示和神经架构搜索，并在RADDet和CARRADA数据集上取得了最先进的结果。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    }
+]

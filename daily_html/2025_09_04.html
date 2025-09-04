@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Autonomous Driving, VLA, 3D Understanding, Robotics) - August 29, 2025</title>
+    <title>ArXiv CS.CV Papers (Autonomous Driving, VLA, 3D Understanding, Robotics) - September 04, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>VLM Daily Papers</h1>
         <p>Daily papers related to VLA/AV/3D Understanding from cs.CV</p>
         
-            <p>August 29, 2025</p>
+            <p>September 04, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,35 +215,33 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">CogVLA: Cognition-Aligned Vision-Language-Action Model via Instruction-Driven Routing & Sparsification</h2>
+            <h2 class="paper-title">Efficient Active Training for Deep LiDAR Odometry</h2>
             
-            <p class="paper-summary">Recent Vision-Language-Action (VLA) models built on pre-trained
-Vision-Language Models (VLMs) require extensive post-training, resulting in
-high computational overhead that limits scalability and deployment.We propose
-CogVLA, a Cognition-Aligned Vision-Language-Action framework that leverages
-instruction-driven routing and sparsification to improve both efficiency and
-performance. CogVLA draws inspiration from human multimodal coordination and
-introduces a 3-stage progressive architecture. 1) Encoder-FiLM based
-Aggregation Routing (EFA-Routing) injects instruction information into the
-vision encoder to selectively aggregate and compress dual-stream visual tokens,
-forming a instruction-aware latent representation. 2) Building upon this
-compact visual encoding, LLM-FiLM based Pruning Routing (LFP-Routing)
-introduces action intent into the language model by pruning
-instruction-irrelevant visually grounded tokens, thereby achieving token-level
-sparsity. 3) To ensure that compressed perception inputs can still support
-accurate and coherent action generation, we introduce V-L-A Coupled Attention
-(CAtten), which combines causal vision-language attention with bidirectional
-action parallel decoding. Extensive experiments on the LIBERO benchmark and
-real-world robotic tasks demonstrate that CogVLA achieves state-of-the-art
-performance with success rates of 97.4% and 70.0%, respectively, while reducing
-training costs by 2.5-fold and decreasing inference latency by 2.8-fold
-compared to OpenVLA. CogVLA is open-sourced and publicly available at
-https://github.com/JiuTian-VL/CogVLA.</p>
+            <p class="paper-summary">Robust and efficient deep LiDAR odometry models are crucial for accurate
+localization and 3D reconstruction, but typically require extensive and diverse
+training data to adapt to diverse environments, leading to inefficiencies. To
+tackle this, we introduce an active training framework designed to selectively
+extract training data from diverse environments, thereby reducing the training
+load and enhancing model generalization. Our framework is based on two key
+strategies: Initial Training Set Selection (ITSS) and Active Incremental
+Selection (AIS). ITSS begins by breaking down motion sequences from general
+weather into nodes and edges for detailed trajectory analysis, prioritizing
+diverse sequences to form a rich initial training dataset for training the base
+model. For complex sequences that are difficult to analyze, especially under
+challenging snowy weather conditions, AIS uses scene reconstruction and
+prediction inconsistency to iteratively select training samples, refining the
+model to handle a wide range of real-world scenarios. Experiments across
+datasets and weather conditions validate our approach's effectiveness. Notably,
+our method matches the performance of full-dataset training with just 52\% of
+the sequence volume, demonstrating the training efficiency and robustness of
+our active training paradigm. By optimizing the training process, our approach
+sets the stage for more agile and reliable LiDAR odometry systems, capable of
+navigating diverse environmental conditions with greater precision.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: CogVLA introduces a cognition-aligned VLA framework with instruction-driven routing and sparsification, achieving state-of-the-art performance on VLA tasks with significant efficiency improvements compared to existing methods like OpenVLA.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces an active training framework (ITSS & AIS) for deep LiDAR odometry, achieving comparable performance to full-dataset training with significantly less data by intelligently selecting training samples.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: CogVLA 提出了一个认知对齐的 VLA 框架，通过指令驱动的路由和稀疏化，在 VLA 任务上实现了最先进的性能，并且相比 OpenVLA 等现有方法显著提高了效率。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种用于深度激光雷达里程计的主动训练框架（ITSS & AIS），通过智能选择训练样本，以显著减少的数据量实现了与完整数据集训练相当的性能。</p>
             
 
             
@@ -253,21 +251,13 @@ https://github.com/JiuTian-VL/CogVLA.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(10/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                     <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
+                    <span class="rating-label">Novelty:</span>
                     
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
                     <span class="text-xs text-gray-500 ml-1">(8/10)</span>
@@ -275,10 +265,18 @@ https://github.com/JiuTian-VL/CogVLA.</p>
                 
                 
                 <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
+                    <span class="rating-label">Clarity:</span>
                     
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                     <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
             </div>
@@ -314,11 +312,11 @@ https://github.com/JiuTian-VL/CogVLA.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.21046v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2509.03211v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Wei Li, Renshan Zhang, Rui Shao, Jie He, Liqiang Nie</p>
+            <p class="paper-authors">Authors: Beibei Zhou, Zhiyuan Zhang, Zhenbo Song, Jianhui Guo, Hui Kong</p>
             
         </motion.div>
         
@@ -330,31 +328,29 @@ https://github.com/JiuTian-VL/CogVLA.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Multi-View 3D Point Tracking</h2>
+            <h2 class="paper-title">sam-llm: interpretable lane change trajectoryprediction via parametric finetuning</h2>
             
-            <p class="paper-summary">We introduce the first data-driven multi-view 3D point tracker, designed to
-track arbitrary points in dynamic scenes using multiple camera views. Unlike
-existing monocular trackers, which struggle with depth ambiguities and
-occlusion, or prior multi-camera methods that require over 20 cameras and
-tedious per-sequence optimization, our feed-forward model directly predicts 3D
-correspondences using a practical number of cameras (e.g., four), enabling
-robust and accurate online tracking. Given known camera poses and either
-sensor-based or estimated multi-view depth, our tracker fuses multi-view
-features into a unified point cloud and applies k-nearest-neighbors correlation
-alongside a transformer-based update to reliably estimate long-range 3D
-correspondences, even under occlusion. We train on 5K synthetic multi-view
-Kubric sequences and evaluate on two real-world benchmarks: Panoptic Studio and
-DexYCB, achieving median trajectory errors of 3.1 cm and 2.0 cm, respectively.
-Our method generalizes well to diverse camera setups of 1-8 views with varying
-vantage points and video lengths of 24-150 frames. By releasing our tracker
-alongside training and evaluation datasets, we aim to set a new standard for
-multi-view 3D tracking research and provide a practical tool for real-world
-applications. Project page available at https://ethz-vlg.github.io/mvtracker.</p>
+            <p class="paper-summary">This work introduces SAM-LLM, a novel hybrid architecture that bridges the
+gap between the contextual reasoning of Large Language Models (LLMs) and the
+physical precision of kinematic lane change models for autonomous driving. The
+system is designed for interpretable lane change trajectory prediction by
+finetuning an LLM to output the core physical parameters of a trajectory model
+instead of raw coordinates. For lane-keeping scenarios, the model predicts
+discrete coordinates, but for lane change maneuvers, it generates the
+parameters for an enhanced Sinusoidal Acceleration Model (SAM), including
+lateral displacement, maneuver duration, initial lateral velocity, and
+longitudinal velocity change. This parametric approach yields a complete,
+continuous, and physically plausible trajectory model that is inherently
+interpretable and computationally efficient, achieving an 80% reduction in
+output size compared to coordinate-based methods. The SAM-LLM achieves a
+state-of-the-art overall intention prediction accuracy of 98.73%, demonstrating
+performance equivalent to traditional LLM predictors while offering significant
+advantages in explainability and resource efficiency.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a data-driven multi-view 3D point tracker that uses a practical number of cameras to accurately track points in dynamic scenes, even under occlusion, achieving state-of-the-art results on real-world benchmarks.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces SAM-LLM, a hybrid architecture combining LLMs and kinematic models for interpretable and efficient lane change trajectory prediction by predicting parameters of a sinusoidal acceleration model, achieving high intention prediction accuracy with reduced output size.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种数据驱动的多视角3D点追踪器，它使用实用数量的相机来准确追踪动态场景中的点，即使在遮挡的情况下也能实现最先进的结果。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种混合架构SAM-LLM，它结合了LLM和运动学模型，通过预测正弦加速度模型的参数来实现可解释且高效的车道变换轨迹预测，在高精度意图预测的同时，减少了输出规模。</p>
             
 
             
@@ -425,11 +421,11 @@ applications. Project page available at https://ethz-vlg.github.io/mvtracker.</p
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.21060v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2509.03462v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Frano Rajič, Haofei Xu, Marko Mihajlovic, Siyuan Li, Irem Demir, Emircan Gündoğdu, Lei Ke, Sergey Prokudin, Marc Pollefeys, Siyu Tang</p>
+            <p class="paper-authors">Authors: Zhuo Cao, Yunxiao Shi, Min Xu</p>
             
         </motion.div>
         
@@ -441,28 +437,25 @@ applications. Project page available at https://ethz-vlg.github.io/mvtracker.</p
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">ActLoc: Learning to Localize on the Move via Active Viewpoint Selection</h2>
+            <h2 class="paper-title">PI3DETR: Parametric Instance Detection of 3D Point Cloud Edges with a Geometry-Aware 3DETR</h2>
             
-            <p class="paper-summary">Reliable localization is critical for robot navigation, yet most existing
-systems implicitly assume that all viewing directions at a location are equally
-informative. In practice, localization becomes unreliable when the robot
-observes unmapped, ambiguous, or uninformative regions. To address this, we
-present ActLoc, an active viewpoint-aware planning framework for enhancing
-localization accuracy for general robot navigation tasks. At its core, ActLoc
-employs a largescale trained attention-based model for viewpoint selection. The
-model encodes a metric map and the camera poses used during map construction,
-and predicts localization accuracy across yaw and pitch directions at arbitrary
-3D locations. These per-point accuracy distributions are incorporated into a
-path planner, enabling the robot to actively select camera orientations that
-maximize localization robustness while respecting task and motion constraints.
-ActLoc achieves stateof-the-art results on single-viewpoint selection and
-generalizes effectively to fulltrajectory planning. Its modular design makes it
-readily applicable to diverse robot navigation and inspection tasks.</p>
+            <p class="paper-summary">We present PI3DETR, an end-to-end framework that directly predicts 3D
+parametric curve instances from raw point clouds, avoiding the intermediate
+representations and multi-stage processing common in prior work. Extending
+3DETR, our model introduces a geometry-aware matching strategy and specialized
+loss functions that enable unified detection of differently parameterized curve
+types, including cubic B\'ezier curves, line segments, circles, and arcs, in a
+single forward pass. Optional post-processing steps further refine predictions
+without adding complexity. This streamlined design improves robustness to noise
+and varying sampling densities, addressing critical challenges in real world
+LiDAR and 3D sensing scenarios. PI3DETR sets a new state-of-the-art on the ABC
+dataset and generalizes effectively to real sensor data, offering a simple yet
+powerful solution for 3D edge and curve estimation.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: ActLoc is a framework that enhances robot localization accuracy by actively selecting viewpoints using an attention-based model, improving robustness during navigation tasks.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: PI3DETR is a novel end-to-end framework extending 3DETR for direct prediction of 3D parametric curve instances from point clouds, achieving state-of-the-art results on the ABC dataset and generalizing well to real sensor data.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: ActLoc是一个框架，它通过使用基于注意力的模型主动选择视点来提高机器人定位的准确性，从而提高导航任务期间的鲁棒性。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: PI3DETR是一个新的端到端框架，扩展了3DETR，用于直接从点云预测3D参数曲线实例，在ABC数据集上实现了最先进的结果，并能很好地推广到真实传感器数据。</p>
             
 
             
@@ -533,11 +526,11 @@ readily applicable to diverse robot navigation and inspection tasks.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.20981v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2509.03262v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Jiajie Li, Boyang Sun, Luca Di Giammarino, Hermann Blum, Marc Pollefeys</p>
+            <p class="paper-authors">Authors: Fabio F. Oberweger, Michael Schwingshackl, Vanessa Staderini</p>
             
         </motion.div>
         
@@ -549,30 +542,35 @@ readily applicable to diverse robot navigation and inspection tasks.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">DrivingGaussian++: Towards Realistic Reconstruction and Editable Simulation for Surrounding Dynamic Driving Scenes</h2>
+            <h2 class="paper-title">Uncertainty-aware Test-Time Training (UT$^3$) for Efficient On-the-fly Domain Adaptive Dense Regression</h2>
             
-            <p class="paper-summary">We present DrivingGaussian++, an efficient and effective framework for
-realistic reconstructing and controllable editing of surrounding dynamic
-autonomous driving scenes. DrivingGaussian++ models the static background using
-incremental 3D Gaussians and reconstructs moving objects with a composite
-dynamic Gaussian graph, ensuring accurate positions and occlusions. By
-integrating a LiDAR prior, it achieves detailed and consistent scene
-reconstruction, outperforming existing methods in dynamic scene reconstruction
-and photorealistic surround-view synthesis. DrivingGaussian++ supports
-training-free controllable editing for dynamic driving scenes, including
-texture modification, weather simulation, and object manipulation, leveraging
-multi-view images and depth priors. By integrating large language models (LLMs)
-and controllable editing, our method can automatically generate dynamic object
-motion trajectories and enhance their realism during the optimization process.
-DrivingGaussian++ demonstrates consistent and realistic editing results and
-generates dynamic multi-view driving scenarios, while significantly enhancing
-scene diversity. More results and code can be found at the project site:
-https://xiong-creator.github.io/DrivingGaussian_plus.github.io</p>
+            <p class="paper-summary">Deep neural networks (DNNs) are increasingly being used in autonomous
+systems. However, DNNs do not generalize well to domain shift. Adapting to a
+continuously evolving environment is a safety-critical challenge inevitably
+faced by all autonomous systems deployed to the real world. Recent work on
+test-time training proposes methods that adapt to a new test distribution on
+the fly by optimizing the DNN model for each test input using self-supervision.
+However, these techniques result in a sharp increase in inference time as
+multiple forward and backward passes are required for a single test sample (for
+test-time training) before finally making the prediction based on the
+fine-tuned features. This is undesirable for real-world robotics applications
+where these models may be deployed to resource constraint hardware with strong
+latency requirements. In this work, we propose a new framework (called UT$^3$)
+that leverages test-time training for improved performance in the presence of
+continuous domain shift while also decreasing the inference time, making it
+suitable for real-world applications. Our method proposes an uncertainty-aware
+self-supervision task for efficient test-time training that leverages the
+quantified uncertainty to selectively apply the training leading to sharp
+improvements in the inference time while performing comparably to standard
+test-time training protocol. Our proposed protocol offers a continuous setting
+to identify the selected keyframes, allowing the end-user to control how often
+to apply test-time training. We demonstrate the efficacy of our method on a
+dense regression task - monocular depth estimation.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: DrivingGaussian++ enables realistic reconstruction and controllable editing of dynamic driving scenes using 3D Gaussians and LiDAR priors, allowing for applications like weather simulation and object manipulation.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces Uncertainty-aware Test-Time Training (UT$^3$), a method for efficient online domain adaptation in dense regression tasks, specifically addressing the inference time overhead of existing test-time training approaches by using uncertainty to selectively apply training.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: DrivingGaussian++ 利用 3D 高斯分布和激光雷达先验，实现了动态驾驶场景的逼真重建和可控编辑，可应用于天气模拟和物体操作等。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种不确定性感知测试时训练（UT$^3$）方法，用于密集回归任务中高效的在线领域自适应，通过利用不确定性来选择性地应用训练，从而解决了现有测试时训练方法的推理时间开销问题。</p>
             
 
             
@@ -643,11 +641,11 @@ https://xiong-creator.github.io/DrivingGaussian_plus.github.io</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.20965v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2509.03012v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Yajiao Xiong, Xiaoyu Zhou, Yongtao Wan, Deqing Sun, Ming-Hsuan Yang</p>
+            <p class="paper-authors">Authors: Uddeshya Upadhyay</p>
             
         </motion.div>
         
@@ -659,29 +657,260 @@ https://xiong-creator.github.io/DrivingGaussian_plus.github.io</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">SKGE-SWIN: End-To-End Autonomous Vehicle Waypoint Prediction and Navigation Using Skip Stage Swin Transformer</h2>
+            <h2 class="paper-title">DUViN: Diffusion-Based Underwater Visual Navigation via Knowledge-Transferred Depth Features</h2>
             
-            <p class="paper-summary">Focusing on the development of an end-to-end autonomous vehicle model with
-pixel-to-pixel context awareness, this research proposes the SKGE-Swin
-architecture. This architecture utilizes the Swin Transformer with a skip-stage
-mechanism to broaden feature representation globally and at various network
-levels. This approach enables the model to extract information from distant
-pixels by leveraging the Swin Transformer's Shifted Window-based Multi-head
-Self-Attention (SW-MSA) mechanism and to retain critical information from the
-initial to the final stages of feature extraction, thereby enhancing its
-capability to comprehend complex patterns in the vehicle's surroundings. The
-model is evaluated on the CARLA platform using adversarial scenarios to
-simulate real-world conditions. Experimental results demonstrate that the
-SKGE-Swin architecture achieves a superior Driving Score compared to previous
-methods. Furthermore, an ablation study will be conducted to evaluate the
-contribution of each architectural component, including the influence of skip
-connections and the use of the Swin Transformer, in improving model
-performance.</p>
+            <p class="paper-summary">Autonomous underwater navigation remains a challenging problem due to limited
+sensing capabilities and the difficulty of constructing accurate maps in
+underwater environments. In this paper, we propose a Diffusion-based Underwater
+Visual Navigation policy via knowledge-transferred depth features, named DUViN,
+which enables vision-based end-to-end 4-DoF motion control for underwater
+vehicles in unknown environments. DUViN guides the vehicle to avoid obstacles
+and maintain a safe and perception awareness altitude relative to the terrain
+without relying on pre-built maps. To address the difficulty of collecting
+large-scale underwater navigation datasets, we propose a method that ensures
+robust generalization under domain shifts from in-air to underwater
+environments by leveraging depth features and introducing a novel model
+transfer strategy. Specifically, our training framework consists of two phases:
+we first train the diffusion-based visual navigation policy on in-air datasets
+using a pre-trained depth feature extractor. Secondly, we retrain the extractor
+on an underwater depth estimation task and integrate the adapted extractor into
+the trained navigation policy from the first step. Experiments in both
+simulated and real-world underwater environments demonstrate the effectiveness
+and generalization of our approach. The experimental videos are available at
+https://www.youtube.com/playlist?list=PLqt2s-RyCf1gfXJgFzKjmwIqYhrP4I-7Y.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces SKGE-Swin, an end-to-end autonomous vehicle waypoint prediction model leveraging a skip-stage Swin Transformer for improved feature representation and navigation in complex environments, validated on CARLA.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces DUViN, a diffusion-based visual navigation policy for underwater vehicles that uses knowledge-transferred depth features to enable end-to-end 4-DoF motion control in unknown environments, addressing the challenges of limited underwater sensing and dataset scarcity through a two-phase training approach.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种名为SKGE-Swin的端到端自动驾驶车辆航点预测模型，该模型利用跳跃阶段的Swin Transformer来改进特征表示，从而在复杂的环境中进行导航，并在CARLA平台上进行了验证。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了DUViN，一种基于扩散的水下视觉导航策略，它利用知识迁移的深度特征，在未知环境中实现水下车辆的端到端4自由度运动控制。该方法通过两阶段训练方法，解决了水下感知能力有限和数据集稀缺的挑战。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2509.02983v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Jinghe Yang, Minh-Quan Le, Mingming Gong, Ye Pu</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.25, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">KEPT: Knowledge-Enhanced Prediction of Trajectories from Consecutive Driving Frames with Vision-Language Models</h2>
+            
+            <p class="paper-summary">Accurate short-horizon trajectory prediction is pivotal for safe and reliable
+autonomous driving, yet existing vision-language models (VLMs) often fail to
+effectively ground their reasoning in scene dynamics and domain knowledge. To
+address this challenge, this paper introduces KEPT, a knowledge-enhanced VLM
+framework that predicts ego trajectories directly from consecutive front-view
+driving frames. KEPT couples a temporal frequency-spatial fusion (TFSF) video
+encoder, trained via self-supervised learning with hard-negative mining, with a
+scalable k-means + HNSW retrieval stack that supplies scene-aligned exemplars.
+Retrieved priors are embedded into chain-of-thought (CoT) prompts with explicit
+planning constraints, while a triple-stage fine-tuning schedule incrementally
+aligns the language head to metric spatial cues, physically feasible motion,
+and temporally conditioned front-view planning. Evaluated on nuScenes dataset,
+KEPT achieves state-of-the-art performance across open-loop protocols: under
+NoAvg, it achieves 0.70m average L2 with a 0.21\% collision rate; under TemAvg
+with lightweight ego status, it attains 0.31m average L2 and a 0.07\% collision
+rate. Ablation studies show that all three fine-tuning stages contribute
+complementary benefits, and that using Top-2 retrieved exemplars yields the
+best accuracy-safety trade-off. The k-means-clustered HNSW index delivers
+sub-millisecond retrieval latency, supporting practical deployment. These
+results indicate that retrieval-augmented, CoT-guided VLMs offer a promising,
+data-efficient pathway toward interpretable and trustworthy autonomous driving.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: KEPT is a knowledge-enhanced vision-language model (VLM) framework for predicting ego-trajectories from driving frames, using retrieved scene exemplars and chain-of-thought prompting to achieve state-of-the-art performance on nuScenes.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: KEPT是一个知识增强的视觉语言模型框架，用于从驾驶帧预测自我轨迹，它使用检索到的场景示例和思维链提示，在nuScenes数据集上实现了最先进的性能。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2509.02966v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Yujin Wang, Tianyi Wang, Quanfeng Liu, Wenxian Fan, Junfeng Jiao, Christian Claudel, Yunbing Yan, Bingzhao Gao, Jianqiang Wang, Hong Chen</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.30000000000000004, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">High-Fidelity Digital Twins for Bridging the Sim2Real Gap in LiDAR-Based ITS Perception</h2>
+            
+            <p class="paper-summary">Sim2Real domain transfer offers a cost-effective and scalable approach for
+developing LiDAR-based perception (e.g., object detection, tracking,
+segmentation) in Intelligent Transportation Systems (ITS). However, perception
+models trained in simulation often under perform on real-world data due to
+distributional shifts. To address this Sim2Real gap, this paper proposes a
+high-fidelity digital twin (HiFi DT) framework that incorporates real-world
+background geometry, lane-level road topology, and sensor-specific
+specifications and placement. We formalize the domain adaptation challenge
+underlying Sim2Real learning and present a systematic method for constructing
+simulation environments that yield in-domain synthetic data. An off-the-shelf
+3D object detector is trained on HiFi DT-generated synthetic data and evaluated
+on real data. Our experiments show that the DT-trained model outperforms the
+equivalent model trained on real data by 4.8%. To understand this gain, we
+quantify distributional alignment between synthetic and real data using
+multiple metrics, including Chamfer Distance (CD), Maximum Mean Discrepancy
+(MMD), Earth Mover's Distance (EMD), and Fr'echet Distance (FD), at both
+raw-input and latent-feature levels. Results demonstrate that HiFi DTs
+substantially reduce domain shift and improve generalization across diverse
+evaluation scenarios. These findings underscore the significant role of digital
+twins in enabling reliable, simulation-based LiDAR perception for real-world
+ITS applications.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper proposes a high-fidelity digital twin framework to bridge the Sim2Real gap for LiDAR-based perception in ITS, showing improved performance compared to training on real data by reducing domain shift.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了一个高保真数字孪生框架，用于弥合智能交通系统中基于激光雷达感知的Sim2Real差距，通过减少领域转移，展示了相比于在真实数据上训练的性能提升。</p>
             
 
             
@@ -752,238 +981,11 @@ performance.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2508.20762v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2509.02904v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Fachri Najm Noer Kartiman, Rasim, Yaya Wihardi, Nurul Hasanah, Oskar Natan, Bambang Wahono, Taufik Ibnu Salim</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.25, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">SPGrasp: Spatiotemporal Prompt-driven Grasp Synthesis in Dynamic Scenes</h2>
-            
-            <p class="paper-summary">Real-time interactive grasp synthesis for dynamic objects remains challenging
-as existing methods fail to achieve low-latency inference while maintaining
-promptability. To bridge this gap, we propose SPGrasp (spatiotemporal
-prompt-driven dynamic grasp synthesis), a novel framework extending segment
-anything model v2 (SAMv2) for video stream grasp estimation. Our core
-innovation integrates user prompts with spatiotemporal context, enabling
-real-time interaction with end-to-end latency as low as 59 ms while ensuring
-temporal consistency for dynamic objects. In benchmark evaluations, SPGrasp
-achieves instance-level grasp accuracies of 90.6% on OCID and 93.8% on
-Jacquard. On the challenging GraspNet-1Billion dataset under continuous
-tracking, SPGrasp achieves 92.0% accuracy with 73.1 ms per-frame latency,
-representing a 58.5% reduction compared to the prior state-of-the-art
-promptable method RoG-SAM while maintaining competitive accuracy. Real-world
-experiments involving 13 moving objects demonstrate a 94.8% success rate in
-interactive grasping scenarios. These results confirm SPGrasp effectively
-resolves the latency-interactivity trade-off in dynamic grasp synthesis. Code
-is available at https://github.com/sejmoonwei/SPGrasp.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: SPGrasp introduces a novel spatiotemporal prompt-driven framework for real-time interactive grasp synthesis of dynamic objects, achieving high accuracy and low latency by extending SAMv2 with spatiotemporal context and user prompts.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: SPGrasp 提出了一种新的时空提示驱动框架，用于动态物体的实时交互式抓取合成，通过使用时空上下文和用户提示扩展 SAMv2，实现了高精度和低延迟。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2508.20547v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Yunpeng Mei, Hongjie Cao, Yinqiu Xia, Wei Xiao, Zhaohan Feng, Gang Wang, Jie Chen</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.30000000000000004, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">Enhancing Pseudo-Boxes via Data-Level LiDAR-Camera Fusion for Unsupervised 3D Object Detection</h2>
-            
-            <p class="paper-summary">Existing LiDAR-based 3D object detectors typically rely on manually annotated
-labels for training to achieve good performance. However, obtaining
-high-quality 3D labels is time-consuming and labor-intensive. To address this
-issue, recent works explore unsupervised 3D object detection by introducing RGB
-images as an auxiliary modal to assist pseudo-box generation. However, these
-methods simply integrate pseudo-boxes generated by LiDAR point clouds and RGB
-images. Yet, such a label-level fusion strategy brings limited improvements to
-the quality of pseudo-boxes, as it overlooks the complementary nature in terms
-of LiDAR and RGB image data. To overcome the above limitations, we propose a
-novel data-level fusion framework that integrates RGB images and LiDAR data at
-an early stage. Specifically, we utilize vision foundation models for instance
-segmentation and depth estimation on images and introduce a bi-directional
-fusion method, where real points acquire category labels from the 2D space,
-while 2D pixels are projected onto 3D to enhance real point density. To
-mitigate noise from depth and segmentation estimations, we propose a local and
-global filtering method, which applies local radius filtering to suppress depth
-estimation errors and global statistical filtering to remove
-segmentation-induced outliers. Furthermore, we propose a data-level fusion
-based dynamic self-evolution strategy, which iteratively refines pseudo-boxes
-under a dense representation, significantly improving localization accuracy.
-Extensive experiments on the nuScenes dataset demonstrate that the detector
-trained by our method significantly outperforms that trained by previous
-state-of-the-art methods with 28.4$\%$ mAP on the nuScenes validation
-benchmark.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper proposes a novel data-level LiDAR-camera fusion framework for unsupervised 3D object detection, achieving significant performance improvements by integrating vision foundation models and a dynamic self-evolution strategy.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种新颖的数据级激光雷达-相机融合框架，用于无监督的3D目标检测，通过整合视觉基础模型和动态自演化策略，实现了显著的性能提升。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2508.20530v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Mingqian Ji, Jian Yang, Shanshan Zhang</p>
+            <p class="paper-authors">Authors: Muhammad Shahbaz, Shaurya Agarwal</p>
             
         </motion.div>
         
@@ -995,43 +997,109 @@ benchmark.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Adaptive Dual Uncertainty Optimization: Boosting Monocular 3D Object Detection under Test-Time Shifts</h2>
+            <h2 class="paper-title">PercepTwin: Modeling High-Fidelity Digital Twins for Sim2Real LiDAR-based Perception for Intelligent Transportation Systems</h2>
             
-            <p class="paper-summary">Accurate monocular 3D object detection (M3OD) is pivotal for safety-critical
-applications like autonomous driving, yet its reliability deteriorates
-significantly under real-world domain shifts caused by environmental or sensor
-variations. To address these shifts, Test-Time Adaptation (TTA) methods have
-emerged, enabling models to adapt to target distributions during inference.
-While prior TTA approaches recognize the positive correlation between low
-uncertainty and high generalization ability, they fail to address the dual
-uncertainty inherent to M3OD: semantic uncertainty (ambiguous class
-predictions) and geometric uncertainty (unstable spatial localization). To
-bridge this gap, we propose Dual Uncertainty Optimization (DUO), the first TTA
-framework designed to jointly minimize both uncertainties for robust M3OD.
-Through a convex optimization lens, we introduce an innovative convex structure
-of the focal loss and further derive a novel unsupervised version, enabling
-label-agnostic uncertainty weighting and balanced learning for high-uncertainty
-objects. In parallel, we design a semantic-aware normal field constraint that
-preserves geometric coherence in regions with clear semantic cues, reducing
-uncertainty from the unstable 3D representation. This dual-branch mechanism
-forms a complementary loop: enhanced spatial perception improves semantic
-classification, and robust semantic predictions further refine spatial
-understanding. Extensive experiments demonstrate the superiority of DUO over
-existing methods across various datasets and domain shift types.</p>
+            <p class="paper-summary">LiDAR-based perception in intelligent transportation systems (ITS), for tasks
+such as object detection, tracking, and semantic and instance segmentation, is
+predominantly solved by deep neural network models which often require
+large-scale labeled datasets during training to achieve generalization.
+However, creating these datasets is costly. time consuming and require human
+labor before the datasets are ready for training models. This hinders
+scalability of the LiDAR-based perception systems in ITS. Sim2Real learning
+offers scalable alternative, however, its effectiveness is dependent on the
+fidelity of the source simulation(s) to real-world, in terms of environment
+structure, actor dynamics, and sensor emulations. In response, this paper
+introduces a rigorous and reproducible methodology for creating large-scale,
+high-quality synthetic datasets using High-Fidelity Digital Twins (HiFi DTs).
+The proposed workflow outlines the steps, tools, and best practices for
+digitally replicating real-world environments, encompassing static geometry
+modeling, road infrastructure replication, and dynamic traffic scenario
+generation. Leveraging open-source and readily available resources such as
+satellite imagery and OpenStreetMap data, alongside specific sensor
+configurations, this paper provides practical, detailed guidance for
+constructing robust synthetic environments. These environments subsequently
+facilitate scalable, cost-effective, and diverse dataset generation, forming a
+reliable foundation for robust Sim2Real learning.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a methodology for creating high-fidelity digital twins to generate synthetic LiDAR datasets for Sim2Real learning in intelligent transportation systems, aiming to address the challenge of costly data annotation.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种创建高保真数字孪生的方法，用于为智能交通系统中的Sim2Real学习生成合成LiDAR数据集，旨在解决数据标注成本高昂的问题。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+            </div>
             
             
 
             
-            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
             
 
-            
-
-            <a href="http://arxiv.org/abs/2508.20488v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2509.02903v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Zixuan Hu, Dongxiao Li, Xinzhu Ma, Shixiang Tang, Xiaotong Li, Wenhan Yang, Ling-Yu Duan</p>
+            <p class="paper-authors">Authors: Muhammad Shahbaz, Shaurya Agarwal</p>
             
         </motion.div>
         
@@ -1043,46 +1111,112 @@ existing methods across various datasets and domain shift types.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Realistic and Controllable 3D Gaussian-Guided Object Editing for Driving Video Generation</h2>
+            <h2 class="paper-title">LiGuard: A Streamlined Open-Source Framework for Rapid & Interactive Lidar Research</h2>
             
-            <p class="paper-summary">Corner cases are crucial for training and validating autonomous driving
-systems, yet collecting them from the real world is often costly and hazardous.
-Editing objects within captured sensor data offers an effective alternative for
-generating diverse scenarios, commonly achieved through 3D Gaussian Splatting
-or image generative models. However, these approaches often suffer from limited
-visual fidelity or imprecise pose control. To address these issues, we propose
-G^2Editor, a framework designed for photorealistic and precise object editing
-in driving videos. Our method leverages a 3D Gaussian representation of the
-edited object as a dense prior, injected into the denoising process to ensure
-accurate pose control and spatial consistency. A scene-level 3D bounding box
-layout is employed to reconstruct occluded areas of non-target objects.
-Furthermore, to guide the appearance details of the edited object, we
-incorporate hierarchical fine-grained features as additional conditions during
-generation. Experiments on the Waymo Open Dataset demonstrate that G^2Editor
-effectively supports object repositioning, insertion, and deletion within a
-unified framework, outperforming existing methods in both pose controllability
-and visual quality, while also benefiting downstream data-driven tasks.</p>
+            <p class="paper-summary">There is a growing interest in the development of lidar-based autonomous
+mobility and Intelligent Transportation Systems (ITS). To operate and research
+on lidar data, researchers often develop code specific to application niche.
+This approach leads to duplication of efforts across studies that, in many
+cases, share multiple methodological steps such as data input/output (I/O),
+pre/post processing, and common algorithms in multi-stage solutions. Moreover,
+slight changes in data, algorithms, and/or research focus may force major
+revisions in the code. To address these challenges, we present LiGuard, an
+open-source software framework that allows researchers to: 1) rapidly develop
+code for their lidar-based projects by providing built-in support for data I/O,
+pre/post processing, and commonly used algorithms, 2) interactively
+add/remove/reorder custom algorithms and adjust their parameters, and 3)
+visualize results for classification, detection, segmentation, and tracking
+tasks. Moreover, because it creates all the code files in structured
+directories, it allows easy sharing of entire projects or even the individual
+components to be reused by other researchers. The effectiveness of LiGuard is
+demonstrated via case studies.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: LiGuard is an open-source framework designed to streamline lidar-based research by providing built-in functionalities for data I/O, processing, and common algorithms, enabling rapid development, interactive modification, and result visualization.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: LiGuard是一个开源框架，旨在通过提供内置的数据输入/输出、处理和常用算法功能来简化基于激光雷达的研究，从而实现快速开发、交互式修改和结果可视化。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+            </div>
             
             
 
             
-            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
             
 
-            
-
-            <a href="http://arxiv.org/abs/2508.20471v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2509.02902v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Jiusi Li, Jackson Jiang, Jinyu Miao, Miao Long, Tuopu Wen, Peijin Jia, Shengxiang Liu, Chunlei Yu, Maolin Liu, Yuzhan Cai, Kun Jiang, Mengmeng Yang, Diange Yang</p>
+            <p class="paper-authors">Authors: Muhammad Shahbaz, Shaurya Agarwal</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-09-04 03:29:19 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-09-04 04:03:38 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>
