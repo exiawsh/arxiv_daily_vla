@@ -1,0 +1,73 @@
+[
+    {
+        "title": "StripDet: Strip Attention-Based Lightweight 3D Object Detection from Point Cloud",
+        "summary": "The deployment of high-accuracy 3D object detection models from point cloud\nremains a significant challenge due to their substantial computational and\nmemory requirements. To address this, we introduce StripDet, a novel\nlightweight framework designed for on-device efficiency. First, we propose the\nnovel Strip Attention Block (SAB), a highly efficient module designed to\ncapture long-range spatial dependencies. By decomposing standard 2D\nconvolutions into asymmetric strip convolutions, SAB efficiently extracts\ndirectional features while reducing computational complexity from quadratic to\nlinear. Second, we design a hardware-friendly hierarchical backbone that\nintegrates SAB with depthwise separable convolutions and a simple multiscale\nfusion strategy, achieving end-to-end efficiency. Extensive experiments on the\nKITTI dataset validate StripDet's superiority. With only 0.65M parameters, our\nmodel achieves a 79.97% mAP for car detection, surpassing the baseline\nPointPillars with a 7x parameter reduction. Furthermore, StripDet outperforms\nrecent lightweight and knowledge distillation-based methods, achieving a\nsuperior accuracy-efficiency trade-off while establishing itself as a practical\nsolution for real-world 3D detection on edge devices.",
+        "url": "http://arxiv.org/abs/2509.05954v1",
+        "published_date": "2025-09-07T07:32:31+00:00",
+        "updated_date": "2025-09-07T07:32:31+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Weichao Wang",
+            "Wendong Mao",
+            "Zhongfeng Wang"
+        ],
+        "tldr": "StripDet is a lightweight 3D object detection framework using a novel Strip Attention Block (SAB) and a hardware-friendly backbone to achieve high accuracy with significantly reduced parameters, making it suitable for edge devices.",
+        "tldr_zh": "StripDet是一个轻量级的3D目标检测框架，它使用一种新的条带注意力块（SAB）和一个对硬件友好的骨干网络，以显著减少的参数实现高精度，使其适用于边缘设备。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "DVLO4D: Deep Visual-Lidar Odometry with Sparse Spatial-temporal Fusion",
+        "summary": "Visual-LiDAR odometry is a critical component for autonomous system\nlocalization, yet achieving high accuracy and strong robustness remains a\nchallenge. Traditional approaches commonly struggle with sensor misalignment,\nfail to fully leverage temporal information, and require extensive manual\ntuning to handle diverse sensor configurations. To address these problems, we\nintroduce DVLO4D, a novel visual-LiDAR odometry framework that leverages sparse\nspatial-temporal fusion to enhance accuracy and robustness. Our approach\nproposes three key innovations: (1) Sparse Query Fusion, which utilizes sparse\nLiDAR queries for effective multi-modal data fusion; (2) a Temporal Interaction\nand Update module that integrates temporally-predicted positions with current\nframe data, providing better initialization values for pose estimation and\nenhancing model's robustness against accumulative errors; and (3) a Temporal\nClip Training strategy combined with a Collective Average Loss mechanism that\naggregates losses across multiple frames, enabling global optimization and\nreducing the scale drift over long sequences. Extensive experiments on the\nKITTI and Argoverse Odometry dataset demonstrate the superiority of our\nproposed DVLO4D, which achieves state-of-the-art performance in terms of both\npose accuracy and robustness. Additionally, our method has high efficiency,\nwith an inference time of 82 ms, possessing the potential for the real-time\ndeployment.",
+        "url": "http://arxiv.org/abs/2509.06023v1",
+        "published_date": "2025-09-07T11:43:11+00:00",
+        "updated_date": "2025-09-07T11:43:11+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Mengmeng Liu",
+            "Michael Ying Yang",
+            "Jiuming Liu",
+            "Yunpeng Zhang",
+            "Jiangtao Li",
+            "Sander Oude Elberink",
+            "George Vosselman",
+            "Hao Cheng"
+        ],
+        "tldr": "The paper introduces DVLO4D, a novel visual-LiDAR odometry framework that uses sparse spatial-temporal fusion and a temporal clip training strategy to achieve state-of-the-art performance on KITTI and Argoverse datasets with high efficiency.",
+        "tldr_zh": "本文介绍了DVLO4D，一种新颖的视觉-激光雷达里程计框架，它使用稀疏时空融合和时间片段训练策略，在KITTI和Argoverse数据集上实现了最先进的性能，并且具有很高的效率。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "S-LAM3D: Segmentation-Guided Monocular 3D Object Detection via Feature Space Fusion",
+        "summary": "Monocular 3D Object Detection represents a challenging Computer Vision task\ndue to the nature of the input used, which is a single 2D image, lacking in any\ndepth cues and placing the depth estimation problem as an ill-posed one.\nExisting solutions leverage the information extracted from the input by using\nConvolutional Neural Networks or Transformer architectures as feature\nextraction backbones, followed by specific detection heads for 3D parameters\nprediction. In this paper, we introduce a decoupled strategy based on injecting\nprecomputed segmentation information priors and fusing them directly into the\nfeature space for guiding the detection, without expanding the detection model\nor jointly learning the priors. The focus is on evaluating the impact of\nadditional segmentation information on existing detection pipelines without\nadding additional prediction branches. The proposed method is evaluated on the\nKITTI 3D Object Detection Benchmark, outperforming the equivalent architecture\nthat relies only on RGB image features for small objects in the scene:\npedestrians and cyclists, and proving that understanding the input data can\nbalance the need for additional sensors or training data.",
+        "url": "http://arxiv.org/abs/2509.05999v1",
+        "published_date": "2025-09-07T10:14:56+00:00",
+        "updated_date": "2025-09-07T10:14:56+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Diana-Alexandra Sas",
+            "Florin Oniga"
+        ],
+        "tldr": "This paper introduces a segmentation-guided monocular 3D object detection method, S-LAM3D, that fuses precomputed segmentation priors into the feature space of existing detection pipelines, improving performance on small objects (pedestrians and cyclists) on the KITTI dataset.",
+        "tldr_zh": "本文提出了一种分割引导的单目3D目标检测方法S-LAM3D，该方法将预先计算的分割先验信息融合到现有检测流程的特征空间中，从而提高了在KITTI数据集上对小型目标（行人和自行车）的检测性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 6,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]

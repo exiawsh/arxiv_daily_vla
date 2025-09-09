@@ -1,0 +1,155 @@
+[
+    {
+        "title": "3DPillars: Pillar-based two-stage 3D object detection",
+        "summary": "PointPillars is the fastest 3D object detector that exploits pseudo image\nrepresentations to encode features for 3D objects in a scene. Albeit efficient,\nPointPillars is typically outperformed by state-of-the-art 3D detection methods\ndue to the following limitations: 1) The pseudo image representations fail to\npreserve precise 3D structures, and 2) they make it difficult to adopt a\ntwo-stage detection pipeline using 3D object proposals that typically shows\nbetter performance than a single-stage approach. We introduce in this paper the\nfirst two-stage 3D detection framework exploiting pseudo image representations,\nnarrowing the performance gaps between PointPillars and state-of-the-art\nmethods, while retaining its efficiency. Our framework consists of two novel\ncomponents that overcome the aforementioned limitations of PointPillars: First,\nwe introduce a new CNN architecture, dubbed 3DPillars, that enables learning 3D\nvoxel-based features from the pseudo image representation efficiently using 2D\nconvolutions. The basic idea behind 3DPillars is that 3D features from voxels\ncan be viewed as a stack of pseudo images. To implement this idea, we propose a\nseparable voxel feature module that extracts voxel-based features without using\n3D convolutions. Second, we introduce an RoI head with a sparse scene context\nfeature module that aggregates multi-scale features from 3DPillars to obtain a\nsparse scene feature. This enables adopting a two-stage pipeline effectively,\nand fully leveraging contextual information of a scene to refine 3D object\nproposals. Experimental results on the KITTI and Waymo Open datasets\ndemonstrate the effectiveness and efficiency of our approach, achieving a good\ncompromise in terms of speed and accuracy.",
+        "url": "http://arxiv.org/abs/2509.05780v1",
+        "published_date": "2025-09-06T17:23:01+00:00",
+        "updated_date": "2025-09-06T17:23:01+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jongyoun Noh",
+            "Junghyup Lee",
+            "Hyekang Park",
+            "Bumsub Ham"
+        ],
+        "tldr": "The paper introduces 3DPillars, a two-stage 3D object detection framework built upon PointPillars, addressing its limitations in preserving 3D structures and enabling two-stage detection through a novel CNN architecture and RoI head with sparse scene context, demonstrating improved performance on KITTI and Waymo datasets.",
+        "tldr_zh": "本文介绍了3DPillars，一个基于PointPillars的两阶段3D物体检测框架，通过一种新的CNN架构和带有稀疏场景上下文的RoI头，解决了PointPillars在保留3D结构和实现两阶段检测方面的局限性，并在KITTI和Waymo数据集上展示了改进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "SpecPrune-VLA: Accelerating Vision-Language-Action Models via Action-Aware Self-Speculative Pruning",
+        "summary": "Pruning accelerates compute-bound models by reducing computation. Recently\napplied to Vision-Language-Action (VLA) models, existing methods prune tokens\nusing only local info from current action, ignoring global context from prior\nactions, causing >20% success rate drop and limited speedup. We observe high\nsimilarity across consecutive actions and propose leveraging both local\n(current) and global (past) info for smarter token selection. We introduce\nSpecPrune-VLA, a training-free method with two-level pruning and heuristic\ncontrol: (1) Static pruning at action level: uses global history and local\ncontext to reduce visual tokens per action; (2) Dynamic pruning at layer level:\nprunes tokens per layer based on layer-specific importance; (3) Lightweight\naction-aware controller: classifies actions as coarse/fine-grained (by speed),\nadjusting pruning aggressiveness since fine-grained actions are\npruning-sensitive. Experiments on LIBERO show SpecPrune-VLA achieves 1.46 times\nspeedup on NVIDIA A800 and 1.57 times on NVIDIA GeForce RTX 3090 vs.\nOpenVLA-OFT, with negligible success rate loss.",
+        "url": "http://arxiv.org/abs/2509.05614v1",
+        "published_date": "2025-09-06T06:22:19+00:00",
+        "updated_date": "2025-09-06T06:22:19+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.RO"
+        ],
+        "authors": [
+            "Hanzhen Wang",
+            "Jiaming Xu",
+            "Jiayi Pan",
+            "Yongkang Zhou",
+            "Guohao Dai"
+        ],
+        "tldr": "The paper introduces SpecPrune-VLA, a training-free pruning method for Vision-Language-Action models that leverages both global (past) and local (current) action context to improve speedup with negligible success rate loss, achieving 1.46x-1.57x speedup.",
+        "tldr_zh": "本文提出了一种名为SpecPrune-VLA的免训练剪枝方法，用于视觉-语言-动作模型。该方法利用全局（过去）和局部（当前）动作上下文，以提高速度，且成功率损失可忽略不计，实现了1.46倍-1.57倍的加速。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "CRAB: Camera-Radar Fusion for Reducing Depth Ambiguity in Backward Projection based View Transformation",
+        "summary": "Recently, camera-radar fusion-based 3D object detection methods in bird's eye\nview (BEV) have gained attention due to the complementary characteristics and\ncost-effectiveness of these sensors. Previous approaches using forward\nprojection struggle with sparse BEV feature generation, while those employing\nbackward projection overlook depth ambiguity, leading to false positives. In\nthis paper, to address the aforementioned limitations, we propose a novel\ncamera-radar fusion-based 3D object detection and segmentation model named CRAB\n(Camera-Radar fusion for reducing depth Ambiguity in Backward projection-based\nview transformation), using a backward projection that leverages radar to\nmitigate depth ambiguity. During the view transformation, CRAB aggregates\nperspective view image context features into BEV queries. It improves depth\ndistinction among queries along the same ray by combining the dense but\nunreliable depth distribution from images with the sparse yet precise depth\ninformation from radar occupancy. We further introduce spatial cross-attention\nwith a feature map containing radar context information to enhance the\ncomprehension of the 3D scene. When evaluated on the nuScenes open dataset, our\nproposed approach achieves a state-of-the-art performance among backward\nprojection-based camera-radar fusion methods with 62.4\\% NDS and 54.0\\% mAP in\n3D object detection.",
+        "url": "http://arxiv.org/abs/2509.05785v1",
+        "published_date": "2025-09-06T17:39:30+00:00",
+        "updated_date": "2025-09-06T17:39:30+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "In-Jae Lee",
+            "Sihwan Hwang",
+            "Youngseok Kim",
+            "Wonjune Kim",
+            "Sanmin Kim",
+            "Dongsuk Kum"
+        ],
+        "tldr": "CRAB addresses depth ambiguity in backward projection-based camera-radar fusion for 3D object detection by combining dense image depth information with sparse radar data and introducing spatial cross-attention, achieving state-of-the-art results on nuScenes.",
+        "tldr_zh": "CRAB通过结合稠密的图像深度信息和稀疏的雷达数据，并引入空间交叉注意力，解决了基于后向投影的相机-雷达融合3D目标检测中的深度模糊问题，并在nuScenes数据集上取得了最先进的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "LiDAR-BIND-T: Improving SLAM with Temporally Consistent Cross-Modal LiDAR Reconstruction",
+        "summary": "This paper extends LiDAR-BIND, a modular multi-modal fusion framework that\nbinds heterogeneous sensors (radar, sonar) to a LiDAR-defined latent space,\nwith mechanisms that explicitly enforce temporal consistency. We introduce\nthree contributions: (i) temporal embedding similarity that aligns consecutive\nlatents, (ii) a motion-aligned transformation loss that matches displacement\nbetween predictions and ground truth LiDAR, and (iii) windows temporal fusion\nusing a specialised temporal module. We further update the model architecture\nto better preserve spatial structure. Evaluations on radar/sonar-to-LiDAR\ntranslation demonstrate improved temporal and spatial coherence, yielding lower\nabsolute trajectory error and better occupancy map accuracy in\nCartographer-based SLAM (Simultaneous Localisation and Mapping). We propose\ndifferent metrics based on the Fr\\'echet Video Motion Distance (FVMD) and a\ncorrelation-peak distance metric providing practical temporal quality\nindicators to evaluate SLAM performance. The proposed temporal LiDAR-BIND, or\nLiDAR-BIND-T, maintains plug-and-play modality fusion while substantially\nenhancing temporal stability, resulting in improved robustness and performance\nfor downstream SLAM.",
+        "url": "http://arxiv.org/abs/2509.05728v1",
+        "published_date": "2025-09-06T14:21:27+00:00",
+        "updated_date": "2025-09-06T14:21:27+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG",
+            "cs.RO"
+        ],
+        "authors": [
+            "Niels Balemans",
+            "Ali Anwar",
+            "Jan Steckel",
+            "Siegfried Mercelis"
+        ],
+        "tldr": "LiDAR-BIND-T improves SLAM by enforcing temporal consistency in cross-modal LiDAR reconstruction through temporal embedding similarity, motion-aligned transformation loss, and windowed temporal fusion, resulting in improved accuracy and robustness.",
+        "tldr_zh": "LiDAR-BIND-T通过在跨模态LiDAR重建中强制时间一致性来改进SLAM，具体方法包括时间嵌入相似性、运动对齐变换损失和窗口化时间融合，从而提高准确性和鲁棒性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Stereovision Image Processing for Planetary Navigation Maps with Semi-Global Matching and Superpixel Segmentation",
+        "summary": "Mars exploration requires precise and reliable terrain models to ensure safe\nrover navigation across its unpredictable and often hazardous landscapes.\nStereoscopic vision serves a critical role in the rover's perception, allowing\nscene reconstruction by generating precise depth maps through stereo matching.\nState-of-the-art Martian planetary exploration uses traditional local\nblock-matching, aggregates cost over square windows, and refines disparities\nvia smoothness constraints. However, this method often struggles with\nlow-texture images, occlusion, and repetitive patterns because it considers\nonly limited neighbouring pixels and lacks a wider understanding of scene\ncontext. This paper uses Semi-Global Matching (SGM) with superpixel-based\nrefinement to mitigate the inherent block artefacts and recover lost details.\nThe approach balances the efficiency and accuracy of SGM and adds context-aware\nsegmentation to support more coherent depth inference. The proposed method has\nbeen evaluated in three datasets with successful results: In a Mars analogue,\nthe terrain maps obtained show improved structural consistency, particularly in\nsloped or occlusion-prone regions. Large gaps behind rocks, which are common in\nraw disparity outputs, are reduced, and surface details like small rocks and\nedges are captured more accurately. Another two datasets, evaluated to test the\nmethod's general robustness and adaptability, show more precise disparity maps\nand more consistent terrain models, better suited for the demands of autonomous\nnavigation on Mars, and competitive accuracy across both non-occluded and\nfull-image error metrics. This paper outlines the entire terrain modelling\nprocess, from finding corresponding features to generating the final 2D\nnavigation maps, offering a complete pipeline suitable for integration in\nfuture planetary exploration missions.",
+        "url": "http://arxiv.org/abs/2509.05645v1",
+        "published_date": "2025-09-06T08:53:10+00:00",
+        "updated_date": "2025-09-06T08:53:10+00:00",
+        "categories": [
+            "astro-ph.IM",
+            "astro-ph.EP",
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Yan-Shan Lu",
+            "Miguel Arana-Catania",
+            "Saurabh Upadhyay",
+            "Leonard Felicetti"
+        ],
+        "tldr": "This paper presents a stereovision image processing pipeline using Semi-Global Matching (SGM) with superpixel refinement for generating accurate terrain models for Mars rover navigation, demonstrating improved performance in challenging conditions.",
+        "tldr_zh": "本文提出了一种使用半全局匹配（SGM）与超像素细化的立体视觉图像处理流程，用于生成精确的火星探测车导航地形模型，并在具有挑战性的条件下展示了改进的性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Evaluating YOLO Architectures: Implications for Real-Time Vehicle Detection in Urban Environments of Bangladesh",
+        "summary": "Vehicle detection systems trained on Non-Bangladeshi datasets struggle to\naccurately identify local vehicle types in Bangladesh's unique road\nenvironments, creating critical gaps in autonomous driving technology for\ndeveloping regions. This study evaluates six YOLO model variants on a custom\ndataset featuring 29 distinct vehicle classes, including region-specific\nvehicles such as ``Desi Nosimon'', ``Leguna'', ``Battery Rickshaw'', and\n``CNG''. The dataset comprises high-resolution images (1920x1080) captured\nacross various Bangladeshi roads using mobile phone cameras and manually\nannotated using LabelImg with YOLO format bounding boxes. Performance\nevaluation revealed YOLOv11x as the top performer, achieving 63.7\\% mAP@0.5,\n43.8\\% mAP@0.5:0.95, 61.4\\% recall, and 61.6\\% F1-score, though requiring 45.8\nmilliseconds per image for inference. Medium variants (YOLOv8m, YOLOv11m)\nstruck an optimal balance, delivering robust detection performance with mAP@0.5\nvalues of 62.5\\% and 61.8\\% respectively, while maintaining moderate inference\ntimes around 14-15 milliseconds. The study identified significant detection\nchallenges for rare vehicle classes, with Construction Vehicles and Desi\nNosimons showing near-zero accuracy due to dataset imbalances and insufficient\ntraining samples. Confusion matrices revealed frequent misclassifications\nbetween visually similar vehicles, particularly Mini Trucks versus Mini Covered\nVans. This research provides a foundation for developing robust object\ndetection systems specifically adapted to Bangladesh traffic conditions,\naddressing critical needs in autonomous vehicle technology advancement for\ndeveloping regions where conventional generic-trained models fail to perform\nadequately.",
+        "url": "http://arxiv.org/abs/2509.05652v1",
+        "published_date": "2025-09-06T09:11:44+00:00",
+        "updated_date": "2025-09-06T09:11:44+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ha Meem Hossain",
+            "Pritam Nath",
+            "Mahitun Nesa Mahi",
+            "Imtiaz Uddin",
+            "Ishrat Jahan Eiste",
+            "Syed Nasibur Rahman Ratul",
+            "Md Naim Uddin Mozumdar",
+            "Asif Mohammed Saad"
+        ],
+        "tldr": "This paper evaluates YOLO variants for vehicle detection in Bangladesh, highlighting the need for region-specific datasets and models due to the unique vehicle types and traffic conditions. YOLOv11x showed the best performance, while medium variants struck a balance between accuracy and speed.",
+        "tldr_zh": "本文评估了YOLO变体在孟加拉国车辆检测中的表现，强调了由于独特的车辆类型和交通状况，需要针对特定区域的数据集和模型。YOLOv11x表现最佳，而中等变体在准确性和速度之间取得了平衡。",
+        "relevance_score": 7,
+        "novelty_claim_score": 6,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
