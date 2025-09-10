@@ -1,0 +1,78 @@
+[
+    {
+        "title": "One View, Many Worlds: Single-Image to 3D Object Meets Generative Domain Randomization for One-Shot 6D Pose Estimation",
+        "summary": "Estimating the 6D pose of arbitrary unseen objects from a single reference\nimage is critical for robotics operating in the long-tail of real-world\ninstances. However, this setting is notoriously challenging: 3D models are\nrarely available, single-view reconstructions lack metric scale, and domain\ngaps between generated models and real-world images undermine robustness. We\npropose OnePoseViaGen, a pipeline that tackles these challenges through two key\ncomponents. First, a coarse-to-fine alignment module jointly refines scale and\npose by combining multi-view feature matching with render-and-compare\nrefinement. Second, a text-guided generative domain randomization strategy\ndiversifies textures, enabling effective fine-tuning of pose estimators with\nsynthetic data. Together, these steps allow high-fidelity single-view 3D\ngeneration to support reliable one-shot 6D pose estimation. On challenging\nbenchmarks (YCBInEOAT, Toyota-Light, LM-O), OnePoseViaGen achieves\nstate-of-the-art performance far surpassing prior approaches. We further\ndemonstrate robust dexterous grasping with a real robot hand, validating the\npracticality of our method in real-world manipulation. Project page:\nhttps://gzwsama.github.io/OnePoseviaGen.github.io/",
+        "url": "http://arxiv.org/abs/2509.07978v1",
+        "published_date": "2025-09-09T17:59:02+00:00",
+        "updated_date": "2025-09-09T17:59:02+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zheng Geng",
+            "Nan Wang",
+            "Shaocong Xu",
+            "Chongjie Ye",
+            "Bohan Li",
+            "Zhaoxi Chen",
+            "Sida Peng",
+            "Hao Zhao"
+        ],
+        "tldr": "The paper introduces OnePoseViaGen, a pipeline for one-shot 6D pose estimation of unseen objects from a single image, using coarse-to-fine alignment and text-guided generative domain randomization, achieving state-of-the-art results and demonstrating real-world robotic grasping.",
+        "tldr_zh": "本文介绍了一种名为OnePoseViaGen的流程，用于从单个图像中对未见过的物体进行单次6D姿态估计，通过粗到精对齐和文本引导的生成域随机化，实现了最先进的结果，并展示了真实的机器人抓取。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Point Linguist Model: Segment Any Object via Bridged Large 3D-Language Model",
+        "summary": "3D object segmentation with Large Language Models (LLMs) has become a\nprevailing paradigm due to its broad semantics, task flexibility, and strong\ngeneralization. However, this paradigm is hindered by representation\nmisalignment: LLMs process high-level semantic tokens, whereas 3D point clouds\nconvey only dense geometric structures. In prior methods, misalignment limits\nboth input and output. At the input stage, dense point patches require heavy\npre-alignment, weakening object-level semantics and confusing similar\ndistractors. At the output stage, predictions depend only on dense features\nwithout explicit geometric cues, leading to a loss of fine-grained accuracy. To\naddress these limitations, we present the Point Linguist Model (PLM), a general\nframework that bridges the representation gap between LLMs and dense 3D point\nclouds without requiring large-scale pre-alignment between 3D-text or\n3D-images. Specifically, we introduce Object-centric Discriminative\nRepresentation (OcDR), which learns object-centric tokens that capture target\nsemantics and scene relations under a hard negative-aware training objective.\nThis mitigates the misalignment between LLM tokens and 3D points, enhances\nresilience to distractors, and facilitates semantic-level reasoning within\nLLMs. For accurate segmentation, we introduce the Geometric Reactivation\nDecoder (GRD), which predicts masks by combining OcDR tokens carrying\nLLM-inferred geometry with corresponding dense features, preserving\ncomprehensive dense features throughout the pipeline. Extensive experiments\nshow that PLM achieves significant improvements of +7.3 mIoU on ScanNetv2 and\n+6.0 mIoU on Multi3DRefer for 3D referring segmentation, with consistent gains\nacross 7 benchmarks spanning 4 different tasks, demonstrating the effectiveness\nof comprehensive object-centric reasoning for robust 3D understanding.",
+        "url": "http://arxiv.org/abs/2509.07825v1",
+        "published_date": "2025-09-09T15:01:28+00:00",
+        "updated_date": "2025-09-09T15:01:28+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zhuoxu Huang",
+            "Mingqi Gao",
+            "Jungong Han"
+        ],
+        "tldr": "The paper introduces Point Linguist Model (PLM) to bridge the gap between LLMs and 3D point clouds for improved 3D object segmentation, using Object-centric Discriminative Representation (OcDR) and Geometric Reactivation Decoder (GRD). PLM achieves significant improvements on multiple 3D segmentation benchmarks.",
+        "tldr_zh": "本文提出了点语言学家模型 (PLM)，旨在弥合 LLM 和 3D 点云之间的差距，以改善 3D 对象分割。该模型使用面向对象的判别表示 (OcDR) 和几何激活解码器 (GRD)，并在多个 3D 分割基准测试中取得了显著改进。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Can SSD-Mamba2 Unlock Reinforcement Learning for End-to-End Motion Control?",
+        "summary": "End-to-end reinforcement learning for motion control promises unified\nperception-action policies that scale across embodiments and tasks, yet most\ndeployed controllers are either blind (proprioception-only) or rely on fusion\nbackbones with unfavorable compute-memory trade-offs. Recurrent controllers\nstruggle with long-horizon credit assignment, and Transformer-based fusion\nincurs quadratic cost in token length, limiting temporal and spatial context.\nWe present a vision-driven cross-modal RL framework built on SSD-Mamba2, a\nselective state-space backbone that applies state-space duality (SSD) to enable\nboth recurrent and convolutional scanning with hardware-aware streaming and\nnear-linear scaling. Proprioceptive states and exteroceptive observations\n(e.g., depth tokens) are encoded into compact tokens and fused by stacked\nSSD-Mamba2 layers. The selective state-space updates retain long-range\ndependencies with markedly lower latency and memory use than quadratic\nself-attention, enabling longer look-ahead, higher token resolution, and stable\ntraining under limited compute. Policies are trained end-to-end under curricula\nthat randomize terrain and appearance and progressively increase scene\ncomplexity. A compact, state-centric reward balances task progress, energy\nefficiency, and safety. Across diverse motion-control scenarios, our approach\nconsistently surpasses strong state-of-the-art baselines in return, safety\n(collisions and falls), and sample efficiency, while converging faster at the\nsame compute budget. These results suggest that SSD-Mamba2 provides a practical\nfusion backbone for scalable, foresightful, and efficient end-to-end motion\ncontrol.",
+        "url": "http://arxiv.org/abs/2509.07593v1",
+        "published_date": "2025-09-09T11:05:44+00:00",
+        "updated_date": "2025-09-09T11:05:44+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV",
+            "cs.SY",
+            "eess.IV",
+            "eess.SY"
+        ],
+        "authors": [
+            "Gavin Tao",
+            "Yinuo Wang",
+            "Jinzhao Zhou"
+        ],
+        "tldr": "This paper introduces a vision-driven, end-to-end reinforcement learning framework using SSD-Mamba2 for motion control, achieving state-of-the-art performance with improved efficiency and safety across diverse scenarios.",
+        "tldr_zh": "本文介绍了一种基于 SSD-Mamba2 的视觉驱动的端到端强化学习框架，用于运动控制，在各种场景中实现了最先进的性能，并提高了效率和安全性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    }
+]
