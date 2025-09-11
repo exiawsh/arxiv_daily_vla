@@ -1,0 +1,215 @@
+[
+    {
+        "title": "SocialNav-SUB: Benchmarking VLMs for Scene Understanding in Social Robot Navigation",
+        "summary": "Robot navigation in dynamic, human-centered environments requires\nsocially-compliant decisions grounded in robust scene understanding. Recent\nVision-Language Models (VLMs) exhibit promising capabilities such as object\nrecognition, common-sense reasoning, and contextual understanding-capabilities\nthat align with the nuanced requirements of social robot navigation. However,\nit remains unclear whether VLMs can accurately understand complex social\nnavigation scenes (e.g., inferring the spatial-temporal relations among agents\nand human intentions), which is essential for safe and socially compliant robot\nnavigation. While some recent works have explored the use of VLMs in social\nrobot navigation, no existing work systematically evaluates their ability to\nmeet these necessary conditions. In this paper, we introduce the Social\nNavigation Scene Understanding Benchmark (SocialNav-SUB), a Visual Question\nAnswering (VQA) dataset and benchmark designed to evaluate VLMs for scene\nunderstanding in real-world social robot navigation scenarios. SocialNav-SUB\nprovides a unified framework for evaluating VLMs against human and rule-based\nbaselines across VQA tasks requiring spatial, spatiotemporal, and social\nreasoning in social robot navigation. Through experiments with state-of-the-art\nVLMs, we find that while the best-performing VLM achieves an encouraging\nprobability of agreeing with human answers, it still underperforms simpler\nrule-based approach and human consensus baselines, indicating critical gaps in\nsocial scene understanding of current VLMs. Our benchmark sets the stage for\nfurther research on foundation models for social robot navigation, offering a\nframework to explore how VLMs can be tailored to meet real-world social robot\nnavigation needs. An overview of this paper along with the code and data can be\nfound at https://larg.github.io/socialnav-sub .",
+        "url": "http://arxiv.org/abs/2509.08757v1",
+        "published_date": "2025-09-10T16:47:00+00:00",
+        "updated_date": "2025-09-10T16:47:00+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Michael J. Munje",
+            "Chen Tang",
+            "Shuijing Liu",
+            "Zichao Hu",
+            "Yifeng Zhu",
+            "Jiaxun Cui",
+            "Garrett Warnell",
+            "Joydeep Biswas",
+            "Peter Stone"
+        ],
+        "tldr": "The paper introduces SocialNav-SUB, a new VQA benchmark for evaluating VLMs' scene understanding capabilities in social robot navigation. Experiments show that existing VLMs underperform compared to rule-based and human baselines, highlighting gaps in social scene understanding.",
+        "tldr_zh": "该论文介绍了SocialNav-SUB，一个新的VQA基准，用于评估VLMs在社交机器人导航中的场景理解能力。实验表明，现有的VLMs的性能不如基于规则的方法和人类基线，突出了社交场景理解方面的差距。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "ArgoTweak: Towards Self-Updating HD Maps through Structured Priors",
+        "summary": "Reliable integration of prior information is crucial for self-verifying and\nself-updating HD maps. However, no public dataset includes the required triplet\nof prior maps, current maps, and sensor data. As a result, existing methods\nmust rely on synthetic priors, which create inconsistencies and lead to a\nsignificant sim2real gap. To address this, we introduce ArgoTweak, the first\ndataset to complete the triplet with realistic map priors. At its core,\nArgoTweak employs a bijective mapping framework, breaking down large-scale\nmodifications into fine-grained atomic changes at the map element level, thus\nensuring interpretability. This paradigm shift enables accurate change\ndetection and integration while preserving unchanged elements with high\nfidelity. Experiments show that training models on ArgoTweak significantly\nreduces the sim2real gap compared to synthetic priors. Extensive ablations\nfurther highlight the impact of structured priors and detailed change\nannotations. By establishing a benchmark for explainable, prior-aided HD\nmapping, ArgoTweak advances scalable, self-improving mapping solutions. The\ndataset, baselines, map modification toolbox, and further resources are\navailable at https://kth-rpl.github.io/ArgoTweak/.",
+        "url": "http://arxiv.org/abs/2509.08764v1",
+        "published_date": "2025-09-10T16:53:29+00:00",
+        "updated_date": "2025-09-10T16:53:29+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Lena Wild",
+            "Rafael Valencia",
+            "Patric Jensfelt"
+        ],
+        "tldr": "The paper introduces ArgoTweak, a novel dataset comprising realistic map priors, current maps, and sensor data for training self-updating HD map systems, addressing the sim2real gap. It facilitates accurate change detection and integration by breaking down modifications into interpretable atomic changes.",
+        "tldr_zh": "该论文介绍了ArgoTweak，这是一个新的数据集，包含真实的地图先验、当前地图和传感器数据，用于训练自更新HD地图系统，解决了sim2real差距。它通过将修改分解为可解释的原子变化，促进了准确的变化检测和集成。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Semantic Causality-Aware Vision-Based 3D Occupancy Prediction",
+        "summary": "Vision-based 3D semantic occupancy prediction is a critical task in 3D vision\nthat integrates volumetric 3D reconstruction with semantic understanding.\nExisting methods, however, often rely on modular pipelines. These modules are\ntypically optimized independently or use pre-configured inputs, leading to\ncascading errors. In this paper, we address this limitation by designing a\nnovel causal loss that enables holistic, end-to-end supervision of the modular\n2D-to-3D transformation pipeline. Grounded in the principle of 2D-to-3D\nsemantic causality, this loss regulates the gradient flow from 3D voxel\nrepresentations back to the 2D features. Consequently, it renders the entire\npipeline differentiable, unifying the learning process and making previously\nnon-trainable components fully learnable. Building on this principle, we\npropose the Semantic Causality-Aware 2D-to-3D Transformation, which comprises\nthree components guided by our causal loss: Channel-Grouped Lifting for\nadaptive semantic mapping, Learnable Camera Offsets for enhanced robustness\nagainst camera perturbations, and Normalized Convolution for effective feature\npropagation. Extensive experiments demonstrate that our method achieves\nstate-of-the-art performance on the Occ3D benchmark, demonstrating significant\nrobustness to camera perturbations and improved 2D-to-3D semantic consistency.",
+        "url": "http://arxiv.org/abs/2509.08388v1",
+        "published_date": "2025-09-10T08:29:22+00:00",
+        "updated_date": "2025-09-10T08:29:22+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Dubing Chen",
+            "Huan Zheng",
+            "Yucheng Zhou",
+            "Xianfei Li",
+            "Wenlong Liao",
+            "Tao He",
+            "Pai Peng",
+            "Jianbing Shen"
+        ],
+        "tldr": "This paper introduces a novel causal loss for end-to-end training of vision-based 3D semantic occupancy prediction, addressing cascading errors in modular pipelines and achieving state-of-the-art performance with improved robustness and semantic consistency.",
+        "tldr_zh": "本文提出了一种新的因果损失，用于端到端训练基于视觉的3D语义占用预测，解决了模块化流程中的级联误差，并在鲁棒性和语义一致性方面取得了最先进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "InsFusion: Rethink Instance-level LiDAR-Camera Fusion for 3D Object Detection",
+        "summary": "Three-dimensional Object Detection from multi-view cameras and LiDAR is a\ncrucial component for autonomous driving and smart transportation. However, in\nthe process of basic feature extraction, perspective transformation, and\nfeature fusion, noise and error will gradually accumulate. To address this\nissue, we propose InsFusion, which can extract proposals from both raw and\nfused features and utilizes these proposals to query the raw features, thereby\nmitigating the impact of accumulated errors. Additionally, by incorporating\nattention mechanisms applied to the raw features, it thereby mitigates the\nimpact of accumulated errors. Experiments on the nuScenes dataset demonstrate\nthat InsFusion is compatible with various advanced baseline methods and\ndelivers new state-of-the-art performance for 3D object detection.",
+        "url": "http://arxiv.org/abs/2509.08374v1",
+        "published_date": "2025-09-10T08:12:15+00:00",
+        "updated_date": "2025-09-10T08:12:15+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zhongyu Xia",
+            "Hansong Yang",
+            "Yongtao Wang"
+        ],
+        "tldr": "The paper introduces InsFusion, a novel instance-level LiDAR-camera fusion method for 3D object detection that mitigates accumulated errors by extracting proposals from raw and fused features and applying attention mechanisms, achieving state-of-the-art performance on nuScenes.",
+        "tldr_zh": "该论文介绍了InsFusion，一种新颖的实例级LiDAR-相机融合方法，用于三维物体检测。该方法通过从原始和融合特征中提取提案，并应用注意力机制来减轻累积误差，并在nuScenes数据集上实现了最先进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Foundation Models for Autonomous Driving Perception: A Survey Through Core Capabilities",
+        "summary": "Foundation models are revolutionizing autonomous driving perception,\ntransitioning the field from narrow, task-specific deep learning models to\nversatile, general-purpose architectures trained on vast, diverse datasets.\nThis survey examines how these models address critical challenges in autonomous\nperception, including limitations in generalization, scalability, and\nrobustness to distributional shifts. The survey introduces a novel taxonomy\nstructured around four essential capabilities for robust performance in dynamic\ndriving environments: generalized knowledge, spatial understanding,\nmulti-sensor robustness, and temporal reasoning. For each capability, the\nsurvey elucidates its significance and comprehensively reviews cutting-edge\napproaches. Diverging from traditional method-centric surveys, our unique\nframework prioritizes conceptual design principles, providing a\ncapability-driven guide for model development and clearer insights into\nfoundational aspects. We conclude by discussing key challenges, particularly\nthose associated with the integration of these capabilities into real-time,\nscalable systems, and broader deployment challenges related to computational\ndemands and ensuring model reliability against issues like hallucinations and\nout-of-distribution failures. The survey also outlines crucial future research\ndirections to enable the safe and effective deployment of foundation models in\nautonomous driving systems.",
+        "url": "http://arxiv.org/abs/2509.08302v1",
+        "published_date": "2025-09-10T05:45:49+00:00",
+        "updated_date": "2025-09-10T05:45:49+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Rajendramayavan Sathyam",
+            "Yueqi Li"
+        ],
+        "tldr": "This survey paper categorizes and analyzes foundation models for autonomous driving perception based on four core capabilities: generalized knowledge, spatial understanding, multi-sensor robustness, and temporal reasoning, highlighting key challenges and future directions.",
+        "tldr_zh": "这篇综述论文基于四个核心能力（通用知识、空间理解、多传感器鲁棒性和时间推理）对自动驾驶感知的基础模型进行分类和分析，强调了关键挑战和未来方向。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Generalized Zero-Shot Learning for Point Cloud Segmentation with Evidence-Based Dynamic Calibration",
+        "summary": "Generalized zero-shot semantic segmentation of 3D point clouds aims to\nclassify each point into both seen and unseen classes. A significant challenge\nwith these models is their tendency to make biased predictions, often favoring\nthe classes encountered during training. This problem is more pronounced in 3D\napplications, where the scale of the training data is typically smaller than in\nimage-based tasks. To address this problem, we propose a novel method called\nE3DPC-GZSL, which reduces overconfident predictions towards seen classes\nwithout relying on separate classifiers for seen and unseen data. E3DPC-GZSL\ntackles the overconfidence problem by integrating an evidence-based uncertainty\nestimator into a classifier. This estimator is then used to adjust prediction\nprobabilities using a dynamic calibrated stacking factor that accounts for\npointwise prediction uncertainty. In addition, E3DPC-GZSL introduces a novel\ntraining strategy that improves uncertainty estimation by refining the semantic\nspace. This is achieved by merging learnable parameters with text-derived\nfeatures, thereby improving model optimization for unseen data. Extensive\nexperiments demonstrate that the proposed approach achieves state-of-the-art\nperformance on generalized zero-shot semantic segmentation datasets, including\nScanNet v2 and S3DIS.",
+        "url": "http://arxiv.org/abs/2509.08280v1",
+        "published_date": "2025-09-10T04:37:00+00:00",
+        "updated_date": "2025-09-10T04:37:00+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Hyeonseok Kim",
+            "Byeongkeun Kang",
+            "Yeejin Lee"
+        ],
+        "tldr": "This paper introduces E3DPC-GZSL, a novel method for generalized zero-shot semantic segmentation of 3D point clouds that uses an evidence-based uncertainty estimator and a dynamic calibrated stacking factor to reduce biased predictions, achieving state-of-the-art performance on ScanNet v2 and S3DIS datasets.",
+        "tldr_zh": "本文介绍了一种名为 E3DPC-GZSL 的新型方法，用于 3D 点云的广义零样本语义分割，该方法使用基于证据的不确定性估计器和动态校准的堆叠因子来减少有偏见的预测，并在 ScanNet v2 和 S3DIS 数据集上实现了最先进的性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Quadrotor Navigation using Reinforcement Learning with Privileged Information",
+        "summary": "This paper presents a reinforcement learning-based quadrotor navigation\nmethod that leverages efficient differentiable simulation, novel loss\nfunctions, and privileged information to navigate around large obstacles. Prior\nlearning-based methods perform well in scenes that exhibit narrow obstacles,\nbut struggle when the goal location is blocked by large walls or terrain. In\ncontrast, the proposed method utilizes time-of-arrival (ToA) maps as privileged\ninformation and a yaw alignment loss to guide the robot around large obstacles.\nThe policy is evaluated in photo-realistic simulation environments containing\nlarge obstacles, sharp corners, and dead-ends. Our approach achieves an 86%\nsuccess rate and outperforms baseline strategies by 34%. We deploy the policy\nonboard a custom quadrotor in outdoor cluttered environments both during the\nday and night. The policy is validated across 20 flights, covering 589 meters\nwithout collisions at speeds up to 4 m/s.",
+        "url": "http://arxiv.org/abs/2509.08177v1",
+        "published_date": "2025-09-09T22:56:35+00:00",
+        "updated_date": "2025-09-09T22:56:35+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Jonathan Lee",
+            "Abhishek Rathod",
+            "Kshitij Goel",
+            "John Stecklein",
+            "Wennie Tabib"
+        ],
+        "tldr": "This paper proposes a reinforcement learning method for quadrotor navigation that uses time-of-arrival maps as privileged information and a yaw alignment loss function to navigate complex environments with large obstacles, achieving impressive simulation and real-world results.",
+        "tldr_zh": "本文提出了一种基于强化学习的四旋翼导航方法，该方法使用到达时间图作为特权信息和偏航对齐损失函数，以在具有大型障碍物的复杂环境中导航，并在仿真和现实世界中取得了令人印象深刻的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "TANGO: Traversability-Aware Navigation with Local Metric Control for Topological Goals",
+        "summary": "Visual navigation in robotics traditionally relies on globally-consistent 3D\nmaps or learned controllers, which can be computationally expensive and\ndifficult to generalize across diverse environments. In this work, we present a\nnovel RGB-only, object-level topometric navigation pipeline that enables\nzero-shot, long-horizon robot navigation without requiring 3D maps or\npre-trained controllers. Our approach integrates global topological path\nplanning with local metric trajectory control, allowing the robot to navigate\ntowards object-level sub-goals while avoiding obstacles. We address key\nlimitations of previous methods by continuously predicting local trajectory\nusing monocular depth and traversability estimation, and incorporating an\nauto-switching mechanism that falls back to a baseline controller when\nnecessary. The system operates using foundational models, ensuring open-set\napplicability without the need for domain-specific fine-tuning. We demonstrate\nthe effectiveness of our method in both simulated environments and real-world\ntests, highlighting its robustness and deployability. Our approach outperforms\nexisting state-of-the-art methods, offering a more adaptable and effective\nsolution for visual navigation in open-set environments. The source code is\nmade publicly available: https://github.com/podgorki/TANGO.",
+        "url": "http://arxiv.org/abs/2509.08699v1",
+        "published_date": "2025-09-10T15:43:32+00:00",
+        "updated_date": "2025-09-10T15:43:32+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV",
+            "cs.LG",
+            "cs.SY",
+            "eess.SY"
+        ],
+        "authors": [
+            "Stefan Podgorski",
+            "Sourav Garg",
+            "Mehdi Hosseinzadeh",
+            "Lachlan Mares",
+            "Feras Dayoub",
+            "Ian Reid"
+        ]
+    },
+    {
+        "title": "Sparse BEV Fusion with Self-View Consistency for Multi-View Detection and Tracking",
+        "summary": "Multi-View Multi-Object Tracking (MVMOT) is essential for applications such\nas surveillance, autonomous driving, and sports analytics. However, maintaining\nconsistent object identities across multiple cameras remains challenging due to\nviewpoint changes, lighting variations, and occlusions, which often lead to\ntracking errors.Recent methods project features from multiple cameras into a\nunified Bird's-Eye-View (BEV) space to improve robustness against occlusion.\nHowever, this projection introduces feature distortion and non-uniform density\ncaused by variations in object scale with distance. These issues degrade the\nquality of the fused representation and reduce detection and tracking\naccuracy.To address these problems, we propose SCFusion, a framework that\ncombines three techniques to improve multi-view feature integration. First, it\napplies a sparse transformation to avoid unnatural interpolation during\nprojection. Next, it performs density-aware weighting to adaptively fuse\nfeatures based on spatial confidence and camera distance. Finally, it\nintroduces a multi-view consistency loss that encourages each camera to learn\ndiscriminative features independently before fusion.Experiments show that\nSCFusion achieves state-of-the-art performance, reaching an IDF1 score of 95.9%\non WildTrack and a MODP of 89.2% on MultiviewX, outperforming the baseline\nmethod TrackTacular. These results demonstrate that SCFusion effectively\nmitigates the limitations of conventional BEV projection and provides a robust\nand accurate solution for multi-view object detection and tracking.",
+        "url": "http://arxiv.org/abs/2509.08421v1",
+        "published_date": "2025-09-10T09:06:41+00:00",
+        "updated_date": "2025-09-10T09:06:41+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Keisuke Toida",
+            "Taigo Sakai",
+            "Naoki Kato",
+            "Kazutoyo Yokota",
+            "Takeshi Nakamura",
+            "Kazuhiro Hotta"
+        ]
+    }
+]
