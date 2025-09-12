@@ -1,0 +1,194 @@
+[
+    {
+        "title": "Visual Grounding from Event Cameras",
+        "summary": "Event cameras capture changes in brightness with microsecond precision and\nremain reliable under motion blur and challenging illumination, offering clear\nadvantages for modeling highly dynamic scenes. Yet, their integration with\nnatural language understanding has received little attention, leaving a gap in\nmultimodal perception. To address this, we introduce Talk2Event, the first\nlarge-scale benchmark for language-driven object grounding using event data.\nBuilt on real-world driving scenarios, Talk2Event comprises 5,567 scenes,\n13,458 annotated objects, and more than 30,000 carefully validated referring\nexpressions. Each expression is enriched with four structured attributes --\nappearance, status, relation to the viewer, and relation to surrounding objects\n-- that explicitly capture spatial, temporal, and relational cues. This\nattribute-centric design supports interpretable and compositional grounding,\nenabling analysis that moves beyond simple object recognition to contextual\nreasoning in dynamic environments. We envision Talk2Event as a foundation for\nadvancing multimodal and temporally-aware perception, with applications\nspanning robotics, human-AI interaction, and so on.",
+        "url": "http://arxiv.org/abs/2509.09584v1",
+        "published_date": "2025-09-11T16:21:59+00:00",
+        "updated_date": "2025-09-11T16:21:59+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Lingdong Kong",
+            "Dongyue Lu",
+            "Ao Liang",
+            "Rong Li",
+            "Yuhao Dong",
+            "Tianshuai Hu",
+            "Lai Xing Ng",
+            "Wei Tsang Ooi",
+            "Benoit R. Cottereau"
+        ],
+        "tldr": "The paper introduces Talk2Event, a large-scale benchmark dataset for language-driven object grounding using event cameras in driving scenarios, designed to foster multimodal and temporally-aware perception research.",
+        "tldr_zh": "该论文介绍了Talk2Event，一个大规模的基准数据集，用于在驾驶场景中使用事件相机进行语言驱动的物体定位，旨在促进多模态和时间感知感知研究。",
+        "relevance_score": 9,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "OmniEVA: Embodied Versatile Planner via Task-Adaptive 3D-Grounded and Embodiment-aware Reasoning",
+        "summary": "Recent advances in multimodal large language models (MLLMs) have opened new\nopportunities for embodied intelligence, enabling multimodal understanding,\nreasoning, and interaction, as well as continuous spatial decision-making.\nNevertheless, current MLLM-based embodied systems face two critical\nlimitations. First, Geometric Adaptability Gap: models trained solely on 2D\ninputs or with hard-coded 3D geometry injection suffer from either insufficient\nspatial information or restricted 2D generalization, leading to poor\nadaptability across tasks with diverse spatial demands. Second, Embodiment\nConstraint Gap: prior work often neglects the physical constraints and\ncapacities of real robots, resulting in task plans that are theoretically valid\nbut practically infeasible.To address these gaps, we introduce OmniEVA -- an\nembodied versatile planner that enables advanced embodied reasoning and task\nplanning through two pivotal innovations: (1) a Task-Adaptive 3D Grounding\nmechanism, which introduces a gated router to perform explicit selective\nregulation of 3D fusion based on contextual requirements, enabling\ncontext-aware 3D grounding for diverse embodied tasks. (2) an Embodiment-Aware\nReasoning framework that jointly incorporates task goals and embodiment\nconstraints into the reasoning loop, resulting in planning decisions that are\nboth goal-directed and executable. Extensive experimental results demonstrate\nthat OmniEVA not only achieves state-of-the-art general embodied reasoning\nperformance, but also exhibits a strong ability across a wide range of\ndownstream scenarios. Evaluations of a suite of proposed embodied benchmarks,\nincluding both primitive and composite tasks, confirm its robust and versatile\nplanning capabilities. Project page: https://omnieva.github.io",
+        "url": "http://arxiv.org/abs/2509.09332v1",
+        "published_date": "2025-09-11T10:32:22+00:00",
+        "updated_date": "2025-09-11T10:32:22+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CL",
+            "cs.CV"
+        ],
+        "authors": [
+            "Yuecheng Liu",
+            "Dafeng Chi",
+            "Shiguang Wu",
+            "Zhanguang Zhang",
+            "Yuzheng Zhuang",
+            "Bowen Yang",
+            "He Zhu",
+            "Lingfeng Zhang",
+            "Pengwei Xie",
+            "David Gamaliel Arcos Bravo",
+            "Yingxue Zhang",
+            "Jianye Hao",
+            "Xingyue Quan"
+        ],
+        "tldr": "OmniEVA introduces a novel embodied versatile planner that bridges the geometric adaptability and embodiment constraint gaps in MLLM-based embodied systems via task-adaptive 3D grounding and embodiment-aware reasoning, achieving state-of-the-art performance across various embodied benchmarks.",
+        "tldr_zh": "OmniEVA 提出了一种新的具身多功能规划器，通过任务自适应的 3D 接地和具身感知推理，弥合了基于 MLLM 的具身系统中几何适应性和具身约束的差距，并在各种具身基准测试中实现了最先进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "You Share Beliefs, I Adapt: Progressive Heterogeneous Collaborative Perception",
+        "summary": "Collaborative perception enables vehicles to overcome individual perception\nlimitations by sharing information, allowing them to see further and through\nocclusions. In real-world scenarios, models on different vehicles are often\nheterogeneous due to manufacturer variations. Existing methods for\nheterogeneous collaborative perception address this challenge by fine-tuning\nadapters or the entire network to bridge the domain gap. However, these methods\nare impractical in real-world applications, as each new collaborator must\nundergo joint training with the ego vehicle on a dataset before inference, or\nthe ego vehicle stores models for all potential collaborators in advance.\nTherefore, we pose a new question: Can we tackle this challenge directly during\ninference, eliminating the need for joint training? To answer this, we\nintroduce Progressive Heterogeneous Collaborative Perception (PHCP), a novel\nframework that formulates the problem as few-shot unsupervised domain\nadaptation. Unlike previous work, PHCP dynamically aligns features by\nself-training an adapter during inference, eliminating the need for labeled\ndata and joint training. Extensive experiments on the OPV2V dataset demonstrate\nthat PHCP achieves strong performance across diverse heterogeneous scenarios.\nNotably, PHCP achieves performance comparable to SOTA methods trained on the\nentire dataset while using only a small amount of unlabeled data.",
+        "url": "http://arxiv.org/abs/2509.09310v1",
+        "published_date": "2025-09-11T09:53:20+00:00",
+        "updated_date": "2025-09-11T09:53:20+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Hao Si",
+            "Ehsan Javanmardi",
+            "Manabu Tsukada"
+        ],
+        "tldr": "The paper introduces Progressive Heterogeneous Collaborative Perception (PHCP), a novel framework that enables collaborative perception between heterogeneous vehicles without requiring joint training, by dynamically aligning features through self-training during inference.",
+        "tldr_zh": "本文介绍了一种新的渐进式异构协作感知框架（PHCP），该框架通过在推理过程中通过自训练动态对齐特征，实现了异构车辆之间的协作感知，而无需联合训练。",
+        "relevance_score": 9,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "ObjectReact: Learning Object-Relative Control for Visual Navigation",
+        "summary": "Visual navigation using only a single camera and a topological map has\nrecently become an appealing alternative to methods that require additional\nsensors and 3D maps. This is typically achieved through an \"image-relative\"\napproach to estimating control from a given pair of current observation and\nsubgoal image. However, image-level representations of the world have\nlimitations because images are strictly tied to the agent's pose and\nembodiment. In contrast, objects, being a property of the map, offer an\nembodiment- and trajectory-invariant world representation. In this work, we\npresent a new paradigm of learning \"object-relative\" control that exhibits\nseveral desirable characteristics: a) new routes can be traversed without\nstrictly requiring to imitate prior experience, b) the control prediction\nproblem can be decoupled from solving the image matching problem, and c) high\ninvariance can be achieved in cross-embodiment deployment for variations across\nboth training-testing and mapping-execution settings. We propose a topometric\nmap representation in the form of a \"relative\" 3D scene graph, which is used to\nobtain more informative object-level global path planning costs. We train a\nlocal controller, dubbed \"ObjectReact\", conditioned directly on a high-level\n\"WayObject Costmap\" representation that eliminates the need for an explicit RGB\ninput. We demonstrate the advantages of learning object-relative control over\nits image-relative counterpart across sensor height variations and multiple\nnavigation tasks that challenge the underlying spatial understanding\ncapability, e.g., navigating a map trajectory in the reverse direction. We\nfurther show that our sim-only policy is able to generalize well to real-world\nindoor environments. Code and supplementary material are accessible via project\npage: https://object-react.github.io/",
+        "url": "http://arxiv.org/abs/2509.09594v1",
+        "published_date": "2025-09-11T16:34:17+00:00",
+        "updated_date": "2025-09-11T16:34:17+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV",
+            "cs.LG",
+            "cs.SY",
+            "eess.SY"
+        ],
+        "authors": [
+            "Sourav Garg",
+            "Dustin Craggs",
+            "Vineeth Bhat",
+            "Lachlan Mares",
+            "Stefan Podgorski",
+            "Madhava Krishna",
+            "Feras Dayoub",
+            "Ian Reid"
+        ],
+        "tldr": "The paper introduces ObjectReact, a novel object-relative control method for visual navigation using a single camera and topological map. It leverages a relative 3D scene graph and object-level costmaps to improve navigation performance, especially in cross-embodiment and reverse-trajectory scenarios, and demonstrates sim-to-real transfer.",
+        "tldr_zh": "该论文介绍了ObjectReact，一种新颖的物体相对控制方法，用于仅使用单个摄像头和拓扑地图的视觉导航。它利用相对3D场景图和物体级别的成本图来提高导航性能，尤其是在跨embodiment和反向轨迹场景中，并展示了从模拟到现实的迁移。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Model-Agnostic Open-Set Air-to-Air Visual Object Detection for Reliable UAV Perception",
+        "summary": "Open-set detection is crucial for robust UAV autonomy in air-to-air object\ndetection under real-world conditions. Traditional closed-set detectors degrade\nsignificantly under domain shifts and flight data corruption, posing risks to\nsafety-critical applications. We propose a novel, model-agnostic open-set\ndetection framework designed specifically for embedding-based detectors. The\nmethod explicitly handles unknown object rejection while maintaining robustness\nagainst corrupted flight data. It estimates semantic uncertainty via entropy\nmodeling in the embedding space and incorporates spectral normalization and\ntemperature scaling to enhance open-set discrimination. We validate our\napproach on the challenging AOT aerial benchmark and through extensive\nreal-world flight tests. Comprehensive ablation studies demonstrate consistent\nimprovements over baseline methods, achieving up to a 10\\% relative AUROC gain\ncompared to standard YOLO-based detectors. Additionally, we show that\nbackground rejection further strengthens robustness without compromising\ndetection accuracy, making our solution particularly well-suited for reliable\nUAV perception in dynamic air-to-air environments.",
+        "url": "http://arxiv.org/abs/2509.09297v1",
+        "published_date": "2025-09-11T09:40:06+00:00",
+        "updated_date": "2025-09-11T09:40:06+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG",
+            "cs.RO"
+        ],
+        "authors": [
+            "Spyridon Loukovitis",
+            "Anastasios Arsenos",
+            "Vasileios Karampinis",
+            "Athanasios Voulodimos"
+        ],
+        "tldr": "The paper introduces a model-agnostic open-set object detection framework for UAVs, improving robustness against unknown objects and data corruption in air-to-air scenarios. It enhances semantic uncertainty estimation using entropy modeling, spectral normalization, and temperature scaling, validated on the AOT benchmark and real-world flight tests.",
+        "tldr_zh": "该论文介绍了一种用于无人机的模型无关的开放集目标检测框架，提高了在空对空场景中对未知目标和数据损坏的鲁棒性。它通过使用熵建模、谱归一化和温度缩放来增强语义不确定性估计，并在 AOT 基准和真实飞行测试中进行了验证。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "MGTraj: Multi-Granularity Goal-Guided Human Trajectory Prediction with Recursive Refinement Network",
+        "summary": "Accurate human trajectory prediction is crucial for robotics navigation and\nautonomous driving. Recent research has demonstrated that incorporating goal\nguidance significantly enhances prediction accuracy by reducing uncertainty and\nleveraging prior knowledge. Most goal-guided approaches decouple the prediction\ntask into two stages: goal prediction and subsequent trajectory completion\nbased on the predicted goal, which operate at extreme granularities:\ncoarse-grained goal prediction forecasts the overall intention, while\nfine-grained trajectory completion needs to generate the positions for all\nfuture timesteps. The potential utility of intermediate temporal granularity\nremains largely unexplored, which motivates multi-granularity trajectory\nmodeling. While prior work has shown that multi-granularity representations\ncapture diverse scales of human dynamics and motion patterns, effectively\nintegrating this concept into goal-guided frameworks remains challenging. In\nthis paper, we propose MGTraj, a novel Multi-Granularity goal-guided model for\nhuman Trajectory prediction. MGTraj recursively encodes trajectory proposals\nfrom coarse to fine granularity levels. At each level, a transformer-based\nrecursive refinement network (RRN) captures features and predicts progressive\nrefinements. Features across different granularities are integrated using a\nweight-sharing strategy, and velocity prediction is employed as an auxiliary\ntask to further enhance performance. Comprehensive experimental results in\nEHT/UCY and Stanford Drone Dataset indicate that MGTraj outperforms baseline\nmethods and achieves state-of-the-art performance among goal-guided methods.",
+        "url": "http://arxiv.org/abs/2509.09200v1",
+        "published_date": "2025-09-11T07:13:57+00:00",
+        "updated_date": "2025-09-11T07:13:57+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ge Sun",
+            "Jun Ma"
+        ],
+        "tldr": "This paper introduces MGTraj, a novel goal-guided human trajectory prediction model using a multi-granularity approach with a recursive refinement network, achieving state-of-the-art performance on standard datasets.",
+        "tldr_zh": "该论文介绍了MGTraj，一种新颖的基于多粒度方法的、使用递归细化网络的目标引导人类轨迹预测模型，在标准数据集上取得了最先进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "S-BEVLoc: BEV-based Self-supervised Framework for Large-scale LiDAR Global Localization",
+        "summary": "LiDAR-based global localization is an essential component of simultaneous\nlocalization and mapping (SLAM), which helps loop closure and re-localization.\nCurrent approaches rely on ground-truth poses obtained from GPS or SLAM\nodometry to supervise network training. Despite the great success of these\nsupervised approaches, substantial cost and effort are required for\nhigh-precision ground-truth pose acquisition. In this work, we propose\nS-BEVLoc, a novel self-supervised framework based on bird's-eye view (BEV) for\nLiDAR global localization, which eliminates the need for ground-truth poses and\nis highly scalable. We construct training triplets from single BEV images by\nleveraging the known geographic distances between keypoint-centered BEV\npatches. Convolutional neural network (CNN) is used to extract local features,\nand NetVLAD is employed to aggregate global descriptors. Moreover, we introduce\nSoftCos loss to enhance learning from the generated triplets. Experimental\nresults on the large-scale KITTI and NCLT datasets show that S-BEVLoc achieves\nstate-of-the-art performance in place recognition, loop closure, and global\nlocalization tasks, while offering scalability that would require extra effort\nfor supervised approaches.",
+        "url": "http://arxiv.org/abs/2509.09110v1",
+        "published_date": "2025-09-11T02:48:06+00:00",
+        "updated_date": "2025-09-11T02:48:06+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Chenghao Zhang",
+            "Lun Luo",
+            "Si-Yuan Cao",
+            "Xiaokai Bai",
+            "Yuncheng Jin",
+            "Zhu Yu",
+            "Beinan Yu",
+            "Yisen Wang",
+            "Hui-Liang Shen"
+        ],
+        "tldr": "The paper introduces S-BEVLoc, a self-supervised LiDAR global localization framework using BEV images and triplet loss, achieving SOTA performance on KITTI and NCLT datasets without requiring ground-truth poses.",
+        "tldr_zh": "该论文介绍了S-BEVLoc，一个基于BEV图像和三重损失的自监督激光雷达全局定位框架，在KITTI和NCLT数据集上实现了SOTA性能，且无需地面真实姿态。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    }
+]
