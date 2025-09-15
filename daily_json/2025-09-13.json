@@ -1,0 +1,122 @@
+[
+    {
+        "title": "GC-VLN: Instruction as Graph Constraints for Training-free Vision-and-Language Navigation",
+        "summary": "In this paper, we propose a training-free framework for vision-and-language\nnavigation (VLN). Existing zero-shot VLN methods are mainly designed for\ndiscrete environments or involve unsupervised training in continuous simulator\nenvironments, which makes it challenging to generalize and deploy them in\nreal-world scenarios. To achieve a training-free framework in continuous\nenvironments, our framework formulates navigation guidance as graph constraint\noptimization by decomposing instructions into explicit spatial constraints. The\nconstraint-driven paradigm decodes spatial semantics through constraint\nsolving, enabling zero-shot adaptation to unseen environments. Specifically, we\nconstruct a spatial constraint library covering all types of spatial\nrelationship mentioned in VLN instructions. The human instruction is decomposed\ninto a directed acyclic graph, with waypoint nodes, object nodes and edges,\nwhich are used as queries to retrieve the library to build the graph\nconstraints. The graph constraint optimization is solved by the constraint\nsolver to determine the positions of waypoints, obtaining the robot's\nnavigation path and final goal. To handle cases of no solution or multiple\nsolutions, we construct a navigation tree and the backtracking mechanism.\nExtensive experiments on standard benchmarks demonstrate significant\nimprovements in success rate and navigation efficiency compared to\nstate-of-the-art zero-shot VLN methods. We further conduct real-world\nexperiments to show that our framework can effectively generalize to new\nenvironments and instruction sets, paving the way for a more robust and\nautonomous navigation framework.",
+        "url": "http://arxiv.org/abs/2509.10454v1",
+        "published_date": "2025-09-12T17:59:58+00:00",
+        "updated_date": "2025-09-12T17:59:58+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Hang Yin",
+            "Haoyu Wei",
+            "Xiuwei Xu",
+            "Wenxuan Guo",
+            "Jie Zhou",
+            "Jiwen Lu"
+        ],
+        "tldr": "The paper presents a training-free vision-and-language navigation (VLN) framework that formulates navigation guidance as graph constraint optimization, achieving zero-shot adaptation to unseen environments. It demonstrates significant improvements over existing zero-shot VLN methods and shows effective generalization in real-world experiments.",
+        "tldr_zh": "本文提出了一种无需训练的视觉语言导航(VLN)框架，该框架将导航指导建模为图约束优化，实现了对未见环境的零样本适应。该框架在标准benchmark上表现出优于现有零样本VLN方法的性能，并在真实世界的实验中展示了有效的泛化能力。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Multimodal SAM-adapter for Semantic Segmentation",
+        "summary": "Semantic segmentation, a key task in computer vision with broad applications\nin autonomous driving, medical imaging, and robotics, has advanced\nsubstantially with deep learning. Nevertheless, current approaches remain\nvulnerable to challenging conditions such as poor lighting, occlusions, and\nadverse weather. To address these limitations, multimodal methods that\nintegrate auxiliary sensor data (e.g., LiDAR, infrared) have recently emerged,\nproviding complementary information that enhances robustness. In this work, we\npresent MM SAM-adapter, a novel framework that extends the capabilities of the\nSegment Anything Model (SAM) for multimodal semantic segmentation. The proposed\nmethod employs an adapter network that injects fused multimodal features into\nSAM's rich RGB features. This design enables the model to retain the strong\ngeneralization ability of RGB features while selectively incorporating\nauxiliary modalities only when they contribute additional cues. As a result, MM\nSAM-adapter achieves a balanced and efficient use of multimodal information. We\nevaluate our approach on three challenging benchmarks, DeLiVER, FMB, and MUSES,\nwhere MM SAM-adapter delivers state-of-the-art performance. To further analyze\nmodality contributions, we partition DeLiVER and FMB into RGB-easy and RGB-hard\nsubsets. Results consistently demonstrate that our framework outperforms\ncompeting methods in both favorable and adverse conditions, highlighting the\neffectiveness of multimodal adaptation for robust scene understanding. The code\nis available at the following link:\nhttps://github.com/iacopo97/Multimodal-SAM-Adapter.",
+        "url": "http://arxiv.org/abs/2509.10408v1",
+        "published_date": "2025-09-12T16:58:51+00:00",
+        "updated_date": "2025-09-12T16:58:51+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Iacopo Curti",
+            "Pierluigi Zama Ramirez",
+            "Alioscia Petrelli",
+            "Luigi Di Stefano"
+        ],
+        "tldr": "This paper introduces MM SAM-adapter, a novel multimodal semantic segmentation framework that extends SAM using an adapter network to fuse auxiliary sensor data with RGB features, achieving state-of-the-art performance on challenging benchmarks.",
+        "tldr_zh": "本文介绍了一种名为 MM SAM-adapter 的新型多模态语义分割框架，该框架使用适配器网络将辅助传感器数据与 RGB 特征融合，从而扩展了 SAM，并在具有挑战性的基准测试中实现了最先进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "BEVTraj: Map-Free End-to-End Trajectory Prediction in Bird's-Eye View with Deformable Attention and Sparse Goal Proposals",
+        "summary": "In autonomous driving, trajectory prediction is essential for ensuring safe\nand efficient navigation. To improve prediction accuracy, recent approaches\noften rely on pre-built high-definition (HD) maps or real-time local map\nconstruction modules to incorporate static environmental information. However,\npre-built HD maps are limited to specific regions and cannot adapt to transient\nchanges. In addition, local map construction modules, which recognize only\npredefined elements, may fail to capture critical scene details or introduce\nerrors that degrade prediction performance. To overcome these limitations, we\npropose Bird's-Eye View Trajectory Prediction (BEVTraj), a novel trajectory\nprediction framework that operates directly in the bird's-eye view (BEV) space\nutilizing real-time sensor data without relying on any pre-built maps. The\nBEVTraj leverages deformable attention to efficiently extract relevant context\nfrom dense BEV features. Furthermore, we introduce a Sparse Goal Candidate\nProposal (SGCP) module, which enables full end-to-end prediction without\nrequiring any post-processing steps. Extensive experiments demonstrate that the\nBEVTraj achieves performance comparable to state-of-the-art HD map-based models\nwhile offering greater flexibility by eliminating the dependency on pre-built\nmaps. The source code is available at https://github.com/Kongminsang/bevtraj.",
+        "url": "http://arxiv.org/abs/2509.10080v1",
+        "published_date": "2025-09-12T09:17:54+00:00",
+        "updated_date": "2025-09-12T09:17:54+00:00",
+        "categories": [
+            "cs.CV",
+            "I.2.9; I.4.8"
+        ],
+        "authors": [
+            "Minsang Kong",
+            "Myeongjun Kim",
+            "Sang Gu Kang",
+            "Sang Hun Lee"
+        ],
+        "tldr": "BEVTraj is a novel map-free trajectory prediction framework using deformable attention and sparse goal proposals in bird's-eye view, achieving comparable performance to HD map-based methods.",
+        "tldr_zh": "BEVTraj是一个新颖的无地图轨迹预测框架，它使用鸟瞰图中的可变形注意力和稀疏目标提议，实现了与基于高清地图的方法相当的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "TUNI: Real-time RGB-T Semantic Segmentation with Unified Multi-Modal Feature Extraction and Cross-Modal Feature Fusion",
+        "summary": "RGB-thermal (RGB-T) semantic segmentation improves the environmental\nperception of autonomous platforms in challenging conditions. Prevailing models\nemploy encoders pre-trained on RGB images to extract features from both RGB and\ninfrared inputs, and design additional modules to achieve cross-modal feature\nfusion. This results in limited thermal feature extraction and suboptimal\ncross-modal fusion, while the redundant encoders further compromises the\nmodel's real-time efficiency. To address the above issues, we propose TUNI,\nwith an RGB-T encoder consisting of multiple stacked blocks that simultaneously\nperform multi-modal feature extraction and cross-modal fusion. By leveraging\nlarge-scale pre-training with RGB and pseudo-thermal data, the RGB-T encoder\nlearns to integrate feature extraction and fusion in a unified manner. By\nslimming down the thermal branch, the encoder achieves a more compact\narchitecture. Moreover, we introduce an RGB-T local module to strengthen the\nencoder's capacity for cross-modal local feature fusion. The RGB-T local module\nemploys adaptive cosine similarity to selectively emphasize salient consistent\nand distinct local features across RGB-T modalities. Experimental results show\nthat TUNI achieves competitive performance with state-of-the-art models on FMB,\nPST900 and CART, with fewer parameters and lower computational cost. Meanwhile,\nit achieves an inference speed of 27 FPS on a Jetson Orin NX, demonstrating its\nreal-time capability in deployment. Codes are available at\nhttps://github.com/xiaodonguo/TUNI.",
+        "url": "http://arxiv.org/abs/2509.10005v1",
+        "published_date": "2025-09-12T07:02:45+00:00",
+        "updated_date": "2025-09-12T07:02:45+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Xiaodong Guo",
+            "Tong Liu",
+            "Yike Li",
+            "Zi'ang Lin",
+            "Zhihong Deng"
+        ],
+        "tldr": "The paper introduces TUNI, a real-time RGB-T semantic segmentation network with a unified multi-modal feature extraction and cross-modal fusion approach, achieving competitive performance with fewer parameters and real-time inference on an embedded platform.",
+        "tldr_zh": "该论文介绍了一种名为TUNI的实时RGB-T语义分割网络，它采用统一的多模态特征提取和跨模态特征融合方法，以更少的参数实现了具有竞争力的性能，并在嵌入式平台上实现了实时推理。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "On the Geometric Accuracy of Implicit and Primitive-based Representations Derived from View Rendering Constraints",
+        "summary": "We present the first systematic comparison of implicit and explicit Novel\nView Synthesis methods for space-based 3D object reconstruction, evaluating the\nrole of appearance embeddings. While embeddings improve photometric fidelity by\nmodeling lighting variation, we show they do not translate into meaningful\ngains in geometric accuracy - a critical requirement for space robotics\napplications. Using the SPEED+ dataset, we compare K-Planes, Gaussian\nSplatting, and Convex Splatting, and demonstrate that embeddings primarily\nreduce the number of primitives needed for explicit methods rather than\nenhancing geometric fidelity. Moreover, convex splatting achieves more compact\nand clutter-free representations than Gaussian splatting, offering advantages\nfor safety-critical applications such as interaction and collision avoidance.\nOur findings clarify the limits of appearance embeddings for geometry-centric\ntasks and highlight trade-offs between reconstruction quality and\nrepresentation efficiency in space scenarios.",
+        "url": "http://arxiv.org/abs/2509.10241v1",
+        "published_date": "2025-09-12T13:37:18+00:00",
+        "updated_date": "2025-09-12T13:37:18+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Elias De Smijter",
+            "Renaud Detry",
+            "Christophe De Vleeschouwer"
+        ],
+        "tldr": "This paper compares implicit and explicit Novel View Synthesis methods for 3D object reconstruction in space, finding that appearance embeddings improve photometric fidelity but not geometric accuracy, a key requirement for space robotics. Convex splatting offers advantages for safety-critical applications due to more compact representations.",
+        "tldr_zh": "该论文比较了用于空间3D物体重建的隐式和显式新型视图合成方法，发现外观嵌入提高了光度保真度，但没有提高几何精度，而几何精度是空间机器人技术的一项关键要求。凸溅射由于其更紧凑的表示，为安全关键型应用提供了优势。",
+        "relevance_score": 7,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 6,
+        "overall_priority_score": 7
+    }
+]
