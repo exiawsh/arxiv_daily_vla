@@ -1,0 +1,103 @@
+[
+    {
+        "title": "UnLoc: Leveraging Depth Uncertainties for Floorplan Localization",
+        "summary": "We propose UnLoc, an efficient data-driven solution for sequential camera\nlocalization within floorplans. Floorplan data is readily available, long-term\npersistent, and robust to changes in visual appearance. We address key\nlimitations of recent methods, such as the lack of uncertainty modeling in\ndepth predictions and the necessity for custom depth networks trained for each\nenvironment. We introduce a novel probabilistic model that incorporates\nuncertainty estimation, modeling depth predictions as explicit probability\ndistributions. By leveraging off-the-shelf pre-trained monocular depth models,\nwe eliminate the need to rely on per-environment-trained depth networks,\nenhancing generalization to unseen spaces. We evaluate UnLoc on large-scale\nsynthetic and real-world datasets, demonstrating significant improvements over\nexisting methods in terms of accuracy and robustness. Notably, we achieve $2.7$\ntimes higher localization recall on long sequences (100 frames) and $16.7$\ntimes higher on short ones (15 frames) than the state of the art on the\nchallenging LaMAR HGE dataset.",
+        "url": "http://arxiv.org/abs/2509.11301v1",
+        "published_date": "2025-09-14T14:45:43+00:00",
+        "updated_date": "2025-09-14T14:45:43+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Matthias Wüest",
+            "Francis Engelmann",
+            "Ondrej Miksik",
+            "Marc Pollefeys",
+            "Daniel Barath"
+        ],
+        "tldr": "The paper introduces UnLoc, a novel floorplan localization method that incorporates depth uncertainty and leverages pre-trained monocular depth models, achieving significant improvements in accuracy and robustness compared to existing methods, especially on long and short sequences.",
+        "tldr_zh": "该论文介绍了一种新的室内平面图定位方法 UnLoc，该方法结合了深度不确定性并利用了预训练的单目深度模型，与现有方法相比，在准确性和鲁棒性方面取得了显著的改进，尤其是在长序列和短序列上。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "End-to-End Visual Autonomous Parking via Control-Aided Attention",
+        "summary": "Precise parking requires an end-to-end system where perception adaptively\nprovides policy-relevant details-especially in critical areas where fine\ncontrol decisions are essential. End-to-end learning offers a unified framework\nby directly mapping sensor inputs to control actions, but existing approaches\nlack effective synergy between perception and control. We find that\ntransformer-based self-attention, when used alone, tends to produce unstable\nand temporally inconsistent spatial attention, which undermines the reliability\nof downstream policy decisions over time. Instead, we propose CAA-Policy, an\nend-to-end imitation learning system that allows control signal to guide the\nlearning of visual attention via a novel Control-Aided Attention (CAA)\nmechanism. For the first time, we train such an attention module in a\nself-supervised manner, using backpropagated gradients from the control outputs\ninstead of from the training loss. This strategy encourages the attention to\nfocus on visual features that induce high variance in action outputs, rather\nthan merely minimizing the training loss-a shift we demonstrate leads to a more\nrobust and generalizable policy. To further enhance stability, CAA-Policy\nintegrates short-horizon waypoint prediction as an auxiliary task, and\nintroduces a separately trained motion prediction module to robustly track the\ntarget spot over time. Extensive experiments in the CARLA simulator show that\n\\titlevariable~consistently surpasses both the end-to-end learning baseline and\nthe modular BEV segmentation + hybrid A* pipeline, achieving superior accuracy,\nrobustness, and interpretability. Code is released at\nhttps://github.com/Joechencc/CAAPolicy.",
+        "url": "http://arxiv.org/abs/2509.11090v1",
+        "published_date": "2025-09-14T04:51:19+00:00",
+        "updated_date": "2025-09-14T04:51:19+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Chao Chen",
+            "Shunyu Yao",
+            "Yuanwu He",
+            "Tao Feng",
+            "Ruojing Song",
+            "Yuliang Guo",
+            "Xinyu Huang",
+            "Chenxu Wu",
+            "Ren Liu",
+            "Chen Feng"
+        ],
+        "tldr": "This paper introduces CAA-Policy, an end-to-end imitation learning system for autonomous parking that uses control signals to guide visual attention, resulting in improved robustness and generalization compared to existing methods. The method includes a novel control-aided attention mechanism and uses backpropagation from control outputs for self-supervised attention training.",
+        "tldr_zh": "本文介绍了一种名为CAA-Policy的端到端模仿学习系统，用于自动泊车。该系统利用控制信号引导视觉注意力，从而提高了鲁棒性和泛化能力，优于现有方法。该方法包括一种新颖的控制辅助注意力机制，并使用来自控制输出的反向传播进行自监督注意力训练。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Multispectral-NeRF:a multispectral modeling approach based on neural radiance fields",
+        "summary": "3D reconstruction technology generates three-dimensional representations of\nreal-world objects, scenes, or environments using sensor data such as 2D\nimages, with extensive applications in robotics, autonomous vehicles, and\nvirtual reality systems. Traditional 3D reconstruction techniques based on 2D\nimages typically relies on RGB spectral information. With advances in sensor\ntechnology, additional spectral bands beyond RGB have been increasingly\nincorporated into 3D reconstruction workflows. Existing methods that integrate\nthese expanded spectral data often suffer from expensive scheme prices, low\naccuracy and poor geometric features. Three - dimensional reconstruction based\non NeRF can effectively address the various issues in current multispectral 3D\nreconstruction methods, producing high - precision and high - quality\nreconstruction results. However, currently, NeRF and some improved models such\nas NeRFacto are trained on three - band data and cannot take into account the\nmulti - band information. To address this problem, we propose\nMultispectral-NeRF, an enhanced neural architecture derived from NeRF that can\neffectively integrates multispectral information. Our technical contributions\ncomprise threefold modifications: Expanding hidden layer dimensionality to\naccommodate 6-band spectral inputs; Redesigning residual functions to optimize\nspectral discrepancy calculations between reconstructed and reference images;\nAdapting data compression modules to address the increased bit-depth\nrequirements of multispectral imagery. Experimental results confirm that\nMultispectral-NeRF successfully processes multi-band spectral features while\naccurately preserving the original scenes' spectral characteristics.",
+        "url": "http://arxiv.org/abs/2509.11169v1",
+        "published_date": "2025-09-14T09:04:35+00:00",
+        "updated_date": "2025-09-14T09:04:35+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Hong Zhang",
+            "Fei Guo",
+            "Zihan Xie",
+            "Dizhao Yao"
+        ],
+        "tldr": "The paper introduces Multispectral-NeRF, an extension of NeRF that incorporates multi-band spectral information for improved 3D reconstruction, addressing limitations of existing multispectral 3D reconstruction methods and standard NeRF implementations.",
+        "tldr_zh": "该论文介绍了Multispectral-NeRF，它是NeRF的扩展，结合了多波段光谱信息以改进3D重建，解决了现有多光谱3D重建方法和标准NeRF实现的局限性。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Mars Traversability Prediction: A Multi-modal Self-supervised Approach for Costmap Generation",
+        "summary": "We present a robust multi-modal framework for predicting traversability\ncostmaps for planetary rovers. Our model fuses camera and LiDAR data to produce\na bird's-eye-view (BEV) terrain costmap, trained self-supervised using\nIMU-derived labels. Key updates include a DINOv3-based image encoder,\nFiLM-based sensor fusion, and an optimization loss combining Huber and\nsmoothness terms. Experimental ablations (removing image color, occluding\ninputs, adding noise) show only minor changes in MAE/MSE (e.g. MAE increases\nfrom ~0.0775 to 0.0915 when LiDAR is sparsified), indicating that geometry\ndominates the learned cost and the model is highly robust. We attribute the\nsmall performance differences to the IMU labeling primarily reflecting terrain\ngeometry rather than semantics and to limited data diversity. Unlike prior work\nclaiming large gains, we emphasize our contributions: (1) a high-fidelity,\nreproducible simulation environment; (2) a self-supervised IMU-based labeling\npipeline; and (3) a strong multi-modal BEV costmap prediction model. We discuss\nlimitations and future work such as domain generalization and dataset\nexpansion.",
+        "url": "http://arxiv.org/abs/2509.11082v1",
+        "published_date": "2025-09-14T04:19:52+00:00",
+        "updated_date": "2025-09-14T04:19:52+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Zongwu Xie",
+            "Kaijie Yun",
+            "Yang Liu",
+            "Yiming Ji",
+            "Han Li"
+        ],
+        "tldr": "This paper presents a multi-modal, self-supervised approach for generating traversability costmaps for planetary rovers using camera and LiDAR data, emphasizing robustness and a reproducible simulation environment.",
+        "tldr_zh": "本文提出了一种多模态自监督方法，利用相机和激光雷达数据生成行星漫游车的可通行性成本图，强调了鲁棒性和可重复的仿真环境。",
+        "relevance_score": 8,
+        "novelty_claim_score": 6,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
