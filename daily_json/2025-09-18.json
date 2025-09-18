@@ -1,0 +1,253 @@
+[
+    {
+        "title": "AdaThinkDrive: Adaptive Thinking via Reinforcement Learning for Autonomous Driving",
+        "summary": "While reasoning technology like Chain of Thought (CoT) has been widely\nadopted in Vision Language Action (VLA) models, it demonstrates promising\ncapabilities in end to end autonomous driving. However, recent efforts to\nintegrate CoT reasoning often fall short in simple scenarios, introducing\nunnecessary computational overhead without improving decision quality. To\naddress this, we propose AdaThinkDrive, a novel VLA framework with a dual mode\nreasoning mechanism inspired by fast and slow thinking. First, our framework is\npretrained on large scale autonomous driving (AD) scenarios using both question\nanswering (QA) and trajectory datasets to acquire world knowledge and driving\ncommonsense. During supervised fine tuning (SFT), we introduce a two mode\ndataset, fast answering (w/o CoT) and slow thinking (with CoT), enabling the\nmodel to distinguish between scenarios that require reasoning. Furthermore, an\nAdaptive Think Reward strategy is proposed in conjunction with the Group\nRelative Policy Optimization (GRPO), which rewards the model for selectively\napplying CoT by comparing trajectory quality across different reasoning modes.\nExtensive experiments on the Navsim benchmark show that AdaThinkDrive achieves\na PDMS of 90.3, surpassing the best vision only baseline by 1.7 points.\nMoreover, ablations show that AdaThinkDrive surpasses both the never Think and\nalways Think baselines, improving PDMS by 2.0 and 1.4, respectively. It also\nreduces inference time by 14% compared to the always Think baseline,\ndemonstrating its ability to balance accuracy and efficiency through adaptive\nreasoning.",
+        "url": "http://arxiv.org/abs/2509.13769v1",
+        "published_date": "2025-09-17T07:35:39+00:00",
+        "updated_date": "2025-09-17T07:35:39+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yuechen Luo",
+            "Fang Li",
+            "Shaoqing Xu",
+            "Zhiyi Lai",
+            "Lei Yang",
+            "Qimao Chen",
+            "Ziang Luo",
+            "Zixun Xie",
+            "Shengyin Jiang",
+            "Jiaxin Liu",
+            "Long Chen",
+            "Bing Wang",
+            "Zhi-xin Yang"
+        ],
+        "tldr": "AdaThinkDrive introduces a novel VLA framework for autonomous driving that adaptively applies Chain of Thought reasoning based on scenario complexity, achieving improved performance and efficiency compared to always-on or always-off reasoning approaches.",
+        "tldr_zh": "AdaThinkDrive 提出了一种新颖的 VLA 框架用于自动驾驶，该框架基于场景的复杂性自适应地应用思维链推理，与始终开启或始终关闭的推理方法相比，实现了更高的性能和效率。",
+        "relevance_score": 10,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "MCGS-SLAM: A Multi-Camera SLAM Framework Using Gaussian Splatting for High-Fidelity Mapping",
+        "summary": "Recent progress in dense SLAM has primarily targeted monocular setups, often\nat the expense of robustness and geometric coverage. We present MCGS-SLAM, the\nfirst purely RGB-based multi-camera SLAM system built on 3D Gaussian Splatting\n(3DGS). Unlike prior methods relying on sparse maps or inertial data, MCGS-SLAM\nfuses dense RGB inputs from multiple viewpoints into a unified, continuously\noptimized Gaussian map. A multi-camera bundle adjustment (MCBA) jointly refines\nposes and depths via dense photometric and geometric residuals, while a scale\nconsistency module enforces metric alignment across views using low-rank\npriors. The system supports RGB input and maintains real-time performance at\nlarge scale. Experiments on synthetic and real-world datasets show that\nMCGS-SLAM consistently yields accurate trajectories and photorealistic\nreconstructions, usually outperforming monocular baselines. Notably, the wide\nfield of view from multi-camera input enables reconstruction of side-view\nregions that monocular setups miss, critical for safe autonomous operation.\nThese results highlight the promise of multi-camera Gaussian Splatting SLAM for\nhigh-fidelity mapping in robotics and autonomous driving.",
+        "url": "http://arxiv.org/abs/2509.14191v1",
+        "published_date": "2025-09-17T17:27:53+00:00",
+        "updated_date": "2025-09-17T17:27:53+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Zhihao Cao",
+            "Hanyu Wu",
+            "Li Wa Tang",
+            "Zizhou Luo",
+            "Zihan Zhu",
+            "Wei Zhang",
+            "Marc Pollefeys",
+            "Martin R. Oswald"
+        ],
+        "tldr": "MCGS-SLAM introduces a novel multi-camera SLAM system using 3D Gaussian Splatting for high-fidelity mapping, outperforming monocular methods by leveraging dense RGB inputs and multi-camera bundle adjustment.",
+        "tldr_zh": "MCGS-SLAM 提出了一种新的多相机 SLAM 系统，使用 3D Gaussian Splatting 进行高保真地图构建。该系统利用密集 RGB 输入和多相机捆绑调整，优于单目方法。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "BEVUDA++: Geometric-aware Unsupervised Domain Adaptation for Multi-View 3D Object Detection",
+        "summary": "Vision-centric Bird's Eye View (BEV) perception holds considerable promise\nfor autonomous driving. Recent studies have prioritized efficiency or accuracy\nenhancements, yet the issue of domain shift has been overlooked, leading to\nsubstantial performance degradation upon transfer. We identify major domain\ngaps in real-world cross-domain scenarios and initiate the first effort to\naddress the Domain Adaptation (DA) challenge in multi-view 3D object detection\nfor BEV perception. Given the complexity of BEV perception approaches with\ntheir multiple components, domain shift accumulation across multi-geometric\nspaces (e.g., 2D, 3D Voxel, BEV) poses a significant challenge for BEV domain\nadaptation. In this paper, we introduce an innovative geometric-aware\nteacher-student framework, BEVUDA++, to diminish this issue, comprising a\nReliable Depth Teacher (RDT) and a Geometric Consistent Student (GCS) model.\nSpecifically, RDT effectively blends target LiDAR with dependable depth\npredictions to generate depth-aware information based on uncertainty\nestimation, enhancing the extraction of Voxel and BEV features that are\nessential for understanding the target domain. To collaboratively reduce the\ndomain shift, GCS maps features from multiple spaces into a unified geometric\nembedding space, thereby narrowing the gap in data distribution between the two\ndomains. Additionally, we introduce a novel Uncertainty-guided Exponential\nMoving Average (UEMA) to further reduce error accumulation due to domain shifts\ninformed by previously obtained uncertainty guidance. To demonstrate the\nsuperiority of our proposed method, we execute comprehensive experiments in\nfour cross-domain scenarios, securing state-of-the-art performance in BEV 3D\nobject detection tasks, e.g., 12.9\\% NDS and 9.5\\% mAP enhancement on Day-Night\nadaptation.",
+        "url": "http://arxiv.org/abs/2509.14151v1",
+        "published_date": "2025-09-17T16:31:40+00:00",
+        "updated_date": "2025-09-17T16:31:40+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Rongyu Zhang",
+            "Jiaming Liu",
+            "Xiaoqi Li",
+            "Xiaowei Chi",
+            "Dan Wang",
+            "Li Du",
+            "Yuan Du",
+            "Shanghang Zhang"
+        ],
+        "tldr": "The paper introduces BEVUDA++, a geometric-aware teacher-student framework for unsupervised domain adaptation in multi-view 3D object detection, achieving state-of-the-art performance in cross-domain scenarios.",
+        "tldr_zh": "该论文介绍了BEVUDA++，一种几何感知的师生框架，用于多视图3D目标检测中的无监督域自适应，在跨域场景中实现了最先进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "MetricNet: Recovering Metric Scale in Generative Navigation Policies",
+        "summary": "Generative navigation policies have made rapid progress in improving\nend-to-end learned navigation. Despite their promising results, this paradigm\nhas two structural problems. First, the sampled trajectories exist in an\nabstract, unscaled space without metric grounding. Second, the control strategy\ndiscards the full path, instead moving directly towards a single waypoint. This\nleads to short-sighted and unsafe actions, moving the robot towards obstacles\nthat a complete and correctly scaled path would circumvent. To address these\nissues, we propose MetricNet, an effective add-on for generative navigation\nthat predicts the metric distance between waypoints, grounding policy outputs\nin real-world coordinates. We evaluate our method in simulation with a new\nbenchmarking framework and show that executing MetricNet-scaled waypoints\nsignificantly improves both navigation and exploration performance. Beyond\nsimulation, we further validate our approach in real-world experiments.\nFinally, we propose MetricNav, which integrates MetricNet into a navigation\npolicy to guide the robot away from obstacles while still moving towards the\ngoal.",
+        "url": "http://arxiv.org/abs/2509.13965v1",
+        "published_date": "2025-09-17T13:37:13+00:00",
+        "updated_date": "2025-09-17T13:37:13+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Abhijeet Nayak",
+            "Débora N. P. Oliveira",
+            "Samiran Gode",
+            "Cordelia Schmid",
+            "Wolfram Burgard"
+        ],
+        "tldr": "The paper introduces MetricNet, an add-on module for generative navigation policies that predicts metric distances between waypoints to improve navigation safety and exploration performance in both simulation and real-world environments.",
+        "tldr_zh": "该论文介绍了 MetricNet，这是一个用于生成式导航策略的附加模块，用于预测航路点之间的实际距离，从而提高在模拟和现实环境中导航的安全性和探索性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "MAP: End-to-End Autonomous Driving with Map-Assisted Planning",
+        "summary": "In recent years, end-to-end autonomous driving has attracted increasing\nattention for its ability to jointly model perception, prediction, and planning\nwithin a unified framework. However, most existing approaches underutilize the\nonline mapping module, leaving its potential to enhance trajectory planning\nlargely untapped. This paper proposes MAP (Map-Assisted Planning), a novel\nmap-assisted end-to-end trajectory planning framework. MAP explicitly\nintegrates segmentation-based map features and the current ego status through a\nPlan-enhancing Online Mapping module, an Ego-status-guided Planning module, and\na Weight Adapter based on current ego status. Experiments conducted on the\nDAIR-V2X-seq-SPD dataset demonstrate that the proposed method achieves a 16.6%\nreduction in L2 displacement error, a 56.2% reduction in off-road rate, and a\n44.5% improvement in overall score compared to the UniV2X baseline, even\nwithout post-processing. Furthermore, it achieves top ranking in Track 2 of the\nEnd-to-End Autonomous Driving through V2X Cooperation Challenge of MEIS\nWorkshop @CVPR2025, outperforming the second-best model by 39.5% in terms of\noverall score. These results highlight the effectiveness of explicitly\nleveraging semantic map features in planning and suggest new directions for\nimproving structure design in end-to-end autonomous driving systems. Our code\nis available at https://gitee.com/kymkym/map.git",
+        "url": "http://arxiv.org/abs/2509.13926v1",
+        "published_date": "2025-09-17T11:40:46+00:00",
+        "updated_date": "2025-09-17T11:40:46+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV",
+            "I.2.9; I.2.10"
+        ],
+        "authors": [
+            "Huilin Yin",
+            "Yiming Kan",
+            "Daniel Watzenig"
+        ],
+        "tldr": "The paper introduces MAP, a novel end-to-end autonomous driving framework that leverages online mapping and ego-status information for improved trajectory planning, demonstrating significant performance gains on the DAIR-V2X dataset and a top ranking in a CVPR2025 challenge.",
+        "tldr_zh": "该论文介绍了一种名为MAP的新型端到端自动驾驶框架，该框架利用在线地图和自我状态信息来改进轨迹规划，并在DAIR-V2X数据集上展示了显着的性能提升，并在CVPR2025挑战赛中名列前茅。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "UM-Depth : Uncertainty Masked Self-Supervised Monocular Depth Estimation with Visual Odometry",
+        "summary": "Monocular depth estimation has been increasingly adopted in robotics and\nautonomous driving for its ability to infer scene geometry from a single\ncamera. In self-supervised monocular depth estimation frameworks, the network\njointly generates and exploits depth and pose estimates during training,\nthereby eliminating the need for depth labels. However, these methods remain\nchallenged by uncertainty in the input data, such as low-texture or dynamic\nregions, which can cause reduced depth accuracy. To address this, we introduce\nUM-Depth, a framework that combines motion- and uncertainty-aware refinement to\nenhance depth accuracy at dynamic object boundaries and in textureless regions.\nSpecifically, we develop a teacherstudent training strategy that embeds\nuncertainty estimation into both the training pipeline and network\narchitecture, thereby strengthening supervision where photometric signals are\nweak. Unlike prior motion-aware approaches that incur inference-time overhead\nand rely on additional labels or auxiliary networks for real-time generation,\nour method uses optical flow exclusively within the teacher network during\ntraining, which eliminating extra labeling demands and any runtime cost.\nExtensive experiments on the KITTI and Cityscapes datasets demonstrate the\neffectiveness of our uncertainty-aware refinement. Overall, UM-Depth achieves\nstate-of-the-art results in both self-supervised depth and pose estimation on\nthe KITTI datasets.",
+        "url": "http://arxiv.org/abs/2509.13713v1",
+        "published_date": "2025-09-17T05:51:07+00:00",
+        "updated_date": "2025-09-17T05:51:07+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Tae-Wook Um",
+            "Ki-Hyeon Kim",
+            "Hyun-Duck Choi",
+            "Hyo-Sung Ahn"
+        ],
+        "tldr": "This paper introduces UM-Depth, a self-supervised monocular depth estimation framework that uses uncertainty masking and a teacher-student training strategy with optical flow to improve depth accuracy in challenging regions, achieving state-of-the-art results on KITTI.",
+        "tldr_zh": "本文介绍了UM-Depth，一种自监督单目深度估计框架，该框架使用不确定性掩码和带有光流的师生训练策略，以提高具有挑战性区域的深度精度，并在KITTI上实现了最先进的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Dynamic Aware: Adaptive Multi-Mode Out-of-Distribution Detection for Trajectory Prediction in Autonomous Vehicles",
+        "summary": "Trajectory prediction is central to the safe and seamless operation of\nautonomous vehicles (AVs). In deployment, however, prediction models inevitably\nface distribution shifts between training data and real-world conditions, where\nrare or underrepresented traffic scenarios induce out-of-distribution (OOD)\ncases. While most prior OOD detection research in AVs has concentrated on\ncomputer vision tasks such as object detection and segmentation,\ntrajectory-level OOD detection remains largely underexplored. A recent study\nformulated this problem as a quickest change detection (QCD) task, providing\nformal guarantees on the trade-off between detection delay and false alarms\n[1]. Building on this foundation, we propose a new framework that introduces\nadaptive mechanisms to achieve robust detection in complex driving\nenvironments. Empirical analysis across multiple real-world datasets reveals\nthat prediction errors -- even on in-distribution samples -- exhibit\nmode-dependent distributions that evolve over time with dataset-specific\ndynamics. By explicitly modeling these error modes, our method achieves\nsubstantial improvements in both detection delay and false alarm rates.\nComprehensive experiments on established trajectory prediction benchmarks show\nthat our framework significantly outperforms prior UQ- and vision-based OOD\napproaches in both accuracy and computational efficiency, offering a practical\npath toward reliable, driving-aware autonomy.",
+        "url": "http://arxiv.org/abs/2509.13577v1",
+        "published_date": "2025-09-16T22:37:21+00:00",
+        "updated_date": "2025-09-16T22:37:21+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG",
+            "cs.RO"
+        ],
+        "authors": [
+            "Tongfei Guo",
+            "Lili Su"
+        ],
+        "tldr": "This paper proposes a dynamic-aware, adaptive method for out-of-distribution detection in autonomous vehicle trajectory prediction, demonstrating improvements in detection delay and false alarm rates compared to existing methods.",
+        "tldr_zh": "本文提出了一种动态感知的自适应方法，用于自动驾驶车辆轨迹预测中的异常检测，与现有方法相比，该方法在检测延迟和误报率方面均有所改进。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Adversarial Appearance Learning in Augmented Cityscapes for Pedestrian Recognition in Autonomous Driving",
+        "summary": "In the autonomous driving area synthetic data is crucial for cover specific\ntraffic scenarios which autonomous vehicle must handle. This data commonly\nintroduces domain gap between synthetic and real domains. In this paper we\ndeploy data augmentation to generate custom traffic scenarios with VRUs in\norder to improve pedestrian recognition. We provide a pipeline for augmentation\nof the Cityscapes dataset with virtual pedestrians. In order to improve\naugmentation realism of the pipeline we reveal a novel generative network\narchitecture for adversarial learning of the data-set lighting conditions. We\nalso evaluate our approach on the tasks of semantic and instance segmentation.",
+        "url": "http://arxiv.org/abs/2509.13507v1",
+        "published_date": "2025-09-16T20:12:33+00:00",
+        "updated_date": "2025-09-16T20:12:33+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Artem Savkin",
+            "Thomas Lapotre",
+            "Kevin Strauss",
+            "Uzair Akbar",
+            "Federico Tombari"
+        ],
+        "tldr": "This paper introduces a pipeline for augmenting the Cityscapes dataset with virtual pedestrians, using a novel generative network to improve lighting realism through adversarial learning, and evaluates the approach on semantic and instance segmentation tasks.",
+        "tldr_zh": "本文介绍了一种使用虚拟行人增强Cityscapes数据集的流程，通过一种新的生成网络，利用对抗学习来提高光照真实性，并在语义和实例分割任务上评估了该方法。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Semantic-Enhanced Cross-Modal Place Recognition for Robust Robot Localization",
+        "summary": "Ensuring accurate localization of robots in environments without GPS\ncapability is a challenging task. Visual Place Recognition (VPR) techniques can\npotentially achieve this goal, but existing RGB-based methods are sensitive to\nchanges in illumination, weather, and other seasonal changes. Existing\ncross-modal localization methods leverage the geometric properties of RGB\nimages and 3D LiDAR maps to reduce the sensitivity issues highlighted above.\nCurrently, state-of-the-art methods struggle in complex scenes, fine-grained or\nhigh-resolution matching, and situations where changes can occur in viewpoint.\nIn this work, we introduce a framework we call Semantic-Enhanced Cross-Modal\nPlace Recognition (SCM-PR) that combines high-level semantics utilizing RGB\nimages for robust localization in LiDAR maps. Our proposed method introduces: a\nVMamba backbone for feature extraction of RGB images; a Semantic-Aware Feature\nFusion (SAFF) module for using both place descriptors and segmentation masks;\nLiDAR descriptors that incorporate both semantics and geometry; and a\ncross-modal semantic attention mechanism in NetVLAD to improve matching.\nIncorporating the semantic information also was instrumental in designing a\nMulti-View Semantic-Geometric Matching and a Semantic Consistency Loss, both in\na contrastive learning framework. Our experimental work on the KITTI and\nKITTI-360 datasets show that SCM-PR achieves state-of-the-art performance\ncompared to other cross-modal place recognition methods.",
+        "url": "http://arxiv.org/abs/2509.13474v1",
+        "published_date": "2025-09-16T19:17:54+00:00",
+        "updated_date": "2025-09-16T19:17:54+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yujia Lin",
+            "Nicholas Evans"
+        ],
+        "tldr": "This paper introduces SCM-PR, a novel cross-modal place recognition framework leveraging semantics from RGB images and LiDAR data, achieving state-of-the-art performance on KITTI and KITTI-360 datasets.",
+        "tldr_zh": "本文介绍了一种名为SCM-PR的新型跨模态地点识别框架，该框架利用RGB图像和激光雷达数据的语义信息，并在KITTI和KITTI-360数据集上实现了最先进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Data-Efficient Spectral Classification of Hyperspectral Data Using MiniROCKET and HDC-MiniROCKET",
+        "summary": "The classification of pixel spectra of hyperspectral images, i.e. spectral\nclassification, is used in many fields ranging from agricultural, over medical\nto remote sensing applications and is currently also expanding to areas such as\nautonomous driving. Even though for full hyperspectral images the\nbest-performing methods exploit spatial-spectral information, performing\nclassification solely on spectral information has its own advantages, e.g.\nsmaller model size and thus less data required for training. Moreover, spectral\ninformation is complementary to spatial information and improvements on either\npart can be used to improve spatial-spectral approaches in the future.\nRecently, 1D-Justo-LiuNet was proposed as a particularly efficient model with\nvery few parameters, which currently defines the state of the art in spectral\nclassification. However, we show that with limited training data the model\nperformance deteriorates. Therefore, we investigate MiniROCKET and\nHDC-MiniROCKET for spectral classification to mitigate that problem. The model\nextracts well-engineered features without trainable parameters in the feature\nextraction part and is therefore less vulnerable to limited training data. We\nshow that even though MiniROCKET has more parameters it outperforms\n1D-Justo-LiuNet in limited data scenarios and is mostly on par with it in the\ngeneral case",
+        "url": "http://arxiv.org/abs/2509.13809v1",
+        "published_date": "2025-09-17T08:22:23+00:00",
+        "updated_date": "2025-09-17T08:22:23+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Nick Theisen",
+            "Kenny Schlegel",
+            "Dietrich Paulus",
+            "Peer Neubert"
+        ],
+        "tldr": "This paper explores MiniROCKET and HDC-MiniROCKET for data-efficient spectral classification of hyperspectral images, demonstrating improved performance over 1D-Justo-LiuNet, especially with limited training data.",
+        "tldr_zh": "本文探讨了MiniROCKET和HDC-MiniROCKET在低数据量下对高光谱图像进行数据高效光谱分类的应用，证明了它们在训练数据有限的情况下比1D-Justo-LiuNet表现更好。",
+        "relevance_score": 4,
+        "novelty_claim_score": 6,
+        "clarity_score": 8,
+        "potential_impact_score": 5,
+        "overall_priority_score": 5
+    }
+]
