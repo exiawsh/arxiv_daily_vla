@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArXiv CS.CV Papers (Autonomous Driving, VLA, 3D Understanding, Robotics) - September 20, 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
+    <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+        :root {
+            /* New Palette: Light, Clean, Futuristic with Teal/Aqua accents */
+            --bg-color: #f8fafc; /* Tailwind slate-50 (Very Light Gray) */
+            --card-bg-color: #ffffff; /* White */
+            --text-color: #1e293b; /* Tailwind slate-800 (Dark Gray-Blue) */
+            --text-muted-color: #64748b; /* Tailwind slate-500 (Medium Gray-Blue) */
+            --header-color: #0f172a; /* Tailwind slate-900 (Very Dark Blue) */
+            --highlight-primary: #14b8a6; /* Tailwind teal-500 */
+            --highlight-secondary: #67e8f9; /* Tailwind cyan-300 */
+            --border-color: #e2e8f0; /* Tailwind slate-200 (Light Gray) */
+            --shadow-color: rgba(15, 23, 42, 0.08); /* Subtle shadow based on slate-900 */
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+            line-height: 1.6;
+        }
+
+        .bento-grid {
+            display: grid;
+            gap: 1.5rem; /* Tailwind gap-6 */
+            grid-template-columns: 1fr; /* Force single column */
+            padding-bottom: 4rem; /* Add padding at the bottom */
+        }
+
+        .bento-item {
+            /* Apply semi-transparent white background and blur */
+            background-color: rgba(255, 255, 255, 0.7); /* White with 70% opacity */
+            backdrop-filter: blur(10px); /* Apply blur effect */
+            -webkit-backdrop-filter: blur(10px); /* Safari prefix */
+            border-radius: 1rem; /* Slightly larger radius */
+            padding: 1.75rem; /* Slightly more padding */
+            border: 1px solid rgba(226, 232, 240, 0.5); /* Lighter border with transparency */
+            box-shadow: 0 4px 12px var(--shadow-color);
+            transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, background-color 0.3s ease-out;
+            overflow: hidden; /* Ensure content doesn't overflow */
+            position: relative; /* For potential pseudo-elements */
+        }
+
+        /* Removed ::before pseudo-element for a cleaner look */
+
+
+        .bento-item:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 20px var(--shadow-color), 0 4px 8px rgba(15, 23, 42, 0.06); /* Adjusted hover shadow */
+        }
+
+        .paper-title {
+            font-size: 1.125rem; /* Tailwind text-lg */
+            font-weight: 600; /* Tailwind font-semibold */
+            color: var(--highlight-primary); /* Use new primary highlight */
+            margin-bottom: 0.75rem; /* Tailwind mb-3 */
+            line-height: 1.4;
+        }
+
+        .paper-summary {
+            font-size: 0.875rem; /* Tailwind text-sm */
+            color: var(--text-muted-color);
+            margin-bottom: 1.25rem; /* Tailwind mb-5 */
+            line-height: 1.6;
+        }
+
+        .paper-link {
+            display: inline-flex; /* Use flex for icon alignment */
+            align-items: center;
+            font-size: 0.875rem; /* Tailwind text-sm */
+            font-weight: 600;
+            color: var(--highlight-primary);
+            text-decoration: none;
+            padding: 0.5rem 1rem; /* Add padding */
+            border-radius: 0.5rem; /* Slightly rounder */
+            background-color: rgba(20, 184, 166, 0.08); /* Subtle teal background */
+            border: 1px solid rgba(20, 184, 166, 0.2);
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+        }
+
+        .paper-link i {
+            margin-right: 0.5rem; /* Tailwind mr-2 */
+            transition: transform 0.3s ease;
+        }
+
+        .paper-link:hover {
+            background-color: rgba(20, 184, 166, 0.15);
+            color: #0d9488; /* Darker teal on hover */
+            transform: translateY(-1px);
+        }
+        .paper-link:hover i {
+             transform: translateX(2px);
+        }
+
+        .paper-authors {
+            font-size: 0.75rem; /* Tailwind text-xs */
+            color: var(--text-muted-color);
+            margin-top: 1rem; /* Tailwind mt-4 */
+            font-style: italic;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem; /* Tailwind mb-12 */
+            padding-top: 3rem; /* Tailwind pt-12 */
+        }
+
+        .header h1 {
+            font-size: 2.5rem; /* Tailwind text-4xl or 5xl */
+            font-weight: 700; /* Tailwind font-bold */
+            color: var(--header-color);
+            letter-spacing: -0.025em; /* Tailwind tracking-tight */
+            margin-bottom: 0.5rem;
+            /* Optional: Add a subtle text gradient */
+            /* background: linear-gradient(90deg, var(--highlight-primary), var(--highlight-secondary)); */
+            /* -webkit-background-clip: text; */
+            /* -webkit-text-fill-color: transparent; */
+        }
+
+        .header p {
+            font-size: 1.125rem; /* Tailwind text-lg */
+            color: var(--text-muted-color);
+            margin-top: 0.5rem; /* Tailwind mt-2 */
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .footer {
+            text-align: center;
+            color: var(--text-muted-color);
+            font-size: 0.875rem; /* Tailwind text-sm */
+            padding-top: 2rem;
+            padding-bottom: 2rem; /* Tailwind py-8 */
+            border-top: 1px solid var(--border-color);
+            margin-top: 4rem;
+        }
+
+        /* Simple line graphic element (optional) */
+        .line-graphic {
+            height: 1px; /* Thinner line */
+            background: linear-gradient(90deg, rgba(20, 184, 166, 0), var(--highlight-primary), rgba(20, 184, 166, 0));
+            opacity: 0.6;
+            margin: 1.5rem 0; /* Adjust margin */
+        }
+
+        /* Framer Motion requires the script, styles enhance appearance */
+        [data-motion-element] {
+             /* Base styles for elements animated by Framer Motion */
+        }
+
+        .paper-tldr {
+            font-size: 0.95rem; /* Slightly bigger than summary */
+            color: #475569; /* Changed to Tailwind slate-600 (slightly darker than summary) */
+            margin-top: 0.75rem; /* Tailwind mt-3 */
+            margin-bottom: 0.75rem; /* Tailwind mb-2 */
+            /* font-style: italic; */
+            font-weight: bold;
+        }
+
+        .paper-rating {
+            margin-top: 1rem; /* Tailwind mt-4 */
+            margin-bottom: 1rem; /* Tailwind mb-4 */
+            color: #f59e0b; /* Tailwind amber-500 */
+        }
+
+        .paper-rating i {
+            margin-right: 0.125rem; /* Tailwind mr-0.5 */
+        }
+
+        /* Apply consistent star color to sub-ratings */
+        .paper-sub-ratings .rating-item i {
+            color: #f59e0b; /* Match overall rating star color (amber-500) */
+            margin-right: 0.125rem; /* Consistent spacing */
+        }
+
+    </style>
+</head>
+<body class="container mx-auto px-4 antialiased">
+
+    <motion.div
+        initial="{ opacity: 0, y: -30 }"
+        animate="{ opacity: 1, y: 0 }"
+        transition="{ duration: 0.6, ease: 'easeOut' }"
+        class="header"
+        data-motion-element
+    >
+        <h1>VLM Daily Papers</h1>
+        <p>Daily papers related to VLA/AV/3D Understanding from cs.CV</p>
+        
+            <p>September 20, 2025</p>
+        
+        <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
+    </motion.div>
+
+    <div class="bento-grid" id="paper-grid">
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.0, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">SegDINO3D: 3D Instance Segmentation Empowered by Both Image-Level and Object-Level 2D Features</h2>
+            
+            <p class="paper-summary">In this paper, we present SegDINO3D, a novel Transformer encoder-decoder
+framework for 3D instance segmentation. As 3D training data is generally not as
+sufficient as 2D training images, SegDINO3D is designed to fully leverage 2D
+representation from a pre-trained 2D detection model, including both
+image-level and object-level features, for improving 3D representation.
+SegDINO3D takes both a point cloud and its associated 2D images as input. In
+the encoder stage, it first enriches each 3D point by retrieving 2D image
+features from its corresponding image views and then leverages a 3D encoder for
+3D context fusion. In the decoder stage, it formulates 3D object queries as 3D
+anchor boxes and performs cross-attention from 3D queries to 2D object queries
+obtained from 2D images using the 2D detection model. These 2D object queries
+serve as a compact object-level representation of 2D images, effectively
+avoiding the challenge of keeping thousands of image feature maps in the memory
+while faithfully preserving the knowledge of the pre-trained 2D model. The
+introducing of 3D box queries also enables the model to modulate
+cross-attention using the predicted boxes for more precise querying. SegDINO3D
+achieves the state-of-the-art performance on the ScanNetV2 and ScanNet200 3D
+instance segmentation benchmarks. Notably, on the challenging ScanNet200
+dataset, SegDINO3D significantly outperforms prior methods by +8.7 and +6.8 mAP
+on the validation and hidden test sets, respectively, demonstrating its
+superiority.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: SegDINO3D is a novel Transformer-based framework for 3D instance segmentation that leverages both image-level and object-level 2D features from pre-trained 2D detection models to improve 3D representation, achieving SOTA results on ScanNet datasets.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: SegDINO3D是一个新颖的基于Transformer的3D实例分割框架，它利用来自预训练2D检测模型的图像级和对象级2D特征来改进3D表示，并在ScanNet数据集上实现了SOTA结果。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2509.16098v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Jinyuan Qu, Hongyang Li, Xingyu Chen, Shilong Liu, Yukai Shi, Tianhe Ren, Ruitao Jing, Lei Zhang</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.05, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">See&Trek: Training-Free Spatial Prompting for Multimodal Large Language Model</h2>
+            
+            <p class="paper-summary">We introduce SEE&TREK, the first training-free prompting framework tailored
+to enhance the spatial understanding of Multimodal Large Language Models
+(MLLMS) under vision-only constraints. While prior efforts have incorporated
+modalities like depth or point clouds to improve spatial reasoning, purely
+visualspatial understanding remains underexplored. SEE&TREK addresses this gap
+by focusing on two core principles: increasing visual diversity and motion
+reconstruction. For visual diversity, we conduct Maximum Semantic Richness
+Sampling, which employs an off-the-shell perception model to extract
+semantically rich keyframes that capture scene structure. For motion
+reconstruction, we simulate visual trajectories and encode relative spatial
+positions into keyframes to preserve both spatial relations and temporal
+coherence. Our method is training&GPU-free, requiring only a single forward
+pass, and can be seamlessly integrated into existing MLLM'S. Extensive
+experiments on the VSI-B ENCH and STI-B ENCH show that S EE &T REK consistently
+boosts various MLLM S performance across diverse spatial reasoning tasks with
+the most +3.5% improvement, offering a promising path toward stronger spatial
+intelligence.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces SEE&TREK, a training-free spatial prompting framework that enhances the spatial understanding of MLLMs by increasing visual diversity and reconstructing motion from vision-only input, achieving performance improvements on spatial reasoning benchmarks.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了SEE&TREK，一个无需训练的空间提示框架，通过增加视觉多样性和重建视觉输入中的运动来增强MLLM的空间理解能力，并在空间推理基准测试中取得了性能提升。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2509.16087v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Pengteng Li, Pinhao Song, Wuyang Li, Weiyu Guo, Huizai Yao, Yijie Xu, Dugang Liu, Hui Xiong</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.1, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">PAN: Pillars-Attention-Based Network for 3D Object Detection</h2>
+            
+            <p class="paper-summary">Camera-radar fusion offers a robust and low-cost alternative to Camera-lidar
+fusion for the 3D object detection task in real-time under adverse weather and
+lighting conditions. However, currently, in the literature, it is possible to
+find few works focusing on this modality and, most importantly, developing new
+architectures to explore the advantages of the radar point cloud, such as
+accurate distance estimation and speed information. Therefore, this work
+presents a novel and efficient 3D object detection algorithm using cameras and
+radars in the bird's-eye-view (BEV). Our algorithm exploits the advantages of
+radar before fusing the features into a detection head. A new backbone is
+introduced, which maps the radar pillar features into an embedded dimension. A
+self-attention mechanism allows the backbone to model the dependencies between
+the radar points. We are using a simplified convolutional layer to replace the
+FPN-based convolutional layers used in the PointPillars-based architectures
+with the main goal of reducing inference time. Our results show that with this
+modification, our approach achieves the new state-of-the-art in the 3D object
+detection problem, reaching 58.2 of the NDS metric for the use of ResNet-50,
+while also setting a new benchmark for inference time on the nuScenes dataset
+for the same category.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a novel camera-radar fusion approach for 3D object detection, utilizing a pillars-attention-based network (PAN) that achieves state-of-the-art performance and improved inference time on the nuScenes dataset.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种新颖的相机-雷达融合方法用于3D物体检测，利用基于柱状注意力机制的网络（PAN），在nuScenes数据集上实现了最先进的性能并提高了推理速度。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2509.15935v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Ruan Bispo, Dane Mitrev, Letizia Mariotti, Clément Botty, Denver Humphrey, Anthony Scanlan, Ciarán Eising</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.15000000000000002, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">Sparse Multiview Open-Vocabulary 3D Detection</h2>
+            
+            <p class="paper-summary">The ability to interpret and comprehend a 3D scene is essential for many
+vision and robotics systems. In numerous applications, this involves 3D object
+detection, i.e.~identifying the location and dimensions of objects belonging to
+a specific category, typically represented as bounding boxes. This has
+traditionally been solved by training to detect a fixed set of categories,
+which limits its use. In this work, we investigate open-vocabulary 3D object
+detection in the challenging yet practical sparse-view setting, where only a
+limited number of posed RGB images are available as input. Our approach is
+training-free, relying on pre-trained, off-the-shelf 2D foundation models
+instead of employing computationally expensive 3D feature fusion or requiring
+3D-specific learning. By lifting 2D detections and directly optimizing 3D
+proposals for featuremetric consistency across views, we fully leverage the
+extensive training data available in 2D compared to 3D. Through standard
+benchmarks, we demonstrate that this simple pipeline establishes a powerful
+baseline, performing competitively with state-of-the-art techniques in densely
+sampled scenarios while significantly outperforming them in the sparse-view
+setting.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a training-free approach for open-vocabulary 3D object detection in sparse-view settings, leveraging 2D foundation models and featuremetric consistency to outperform existing methods, especially with limited viewpoints.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种无需训练的开放词汇三维物体检测方法，该方法适用于稀疏视角环境，利用二维基础模型和特征度量一致性，在有限视角下优于现有方法。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2509.15924v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Olivier Moliner, Viktor Larsson, Kalle Åström</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.2, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">RangeSAM: Leveraging Visual Foundation Models for Range-View repesented LiDAR segmentation</h2>
+            
+            <p class="paper-summary">Point cloud segmentation is central to autonomous driving and 3D scene
+understanding. While voxel- and point-based methods dominate recent research
+due to their compatibility with deep architectures and ability to capture
+fine-grained geometry, they often incur high computational cost, irregular
+memory access, and limited real-time efficiency. In contrast, range-view
+methods, though relatively underexplored - can leverage mature 2D semantic
+segmentation techniques for fast and accurate predictions. Motivated by the
+rapid progress in Visual Foundation Models (VFMs) for captioning, zero-shot
+recognition, and multimodal tasks, we investigate whether SAM2, the current
+state-of-the-art VFM for segmentation tasks, can serve as a strong backbone for
+LiDAR point cloud segmentation in the range view. We present , to our
+knowledge, the first range-view framework that adapts SAM2 to 3D segmentation,
+coupling efficient 2D feature extraction with standard
+projection/back-projection to operate on point clouds. To optimize SAM2 for
+range-view representations, we implement several architectural modifications to
+the encoder: (1) a novel module that emphasizes horizontal spatial dependencies
+inherent in LiDAR range images, (2) a customized configuration of tailored to
+the geometric properties of spherical projections, and (3) an adapted mechanism
+in the encoder backbone specifically designed to capture the unique spatial
+patterns and discontinuities present in range-view pseudo-images. Our approach
+achieves competitive performance on SemanticKITTI while benefiting from the
+speed, scalability, and deployment simplicity of 2D-centric pipelines. This
+work highlights the viability of VFMs as general-purpose backbones for 3D
+perception and opens a path toward unified, foundation-model-driven LiDAR
+segmentation. Results lets us conclude that range-view segmentation methods
+using VFMs leads to promising results.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper explores adapting Visual Foundation Models (VFMs), specifically SAM2, for LiDAR point cloud segmentation in the range view, achieving competitive performance on SemanticKITTI with a 2D-centric pipeline optimized for range-view representations.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文探索了将视觉基础模型（VFMs），特别是SAM2，应用于Range View的激光雷达点云分割，通过针对Range View优化的2D中心流程在SemanticKITTI上实现了具有竞争力的性能。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2509.15886v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Paul Julius Kühn, Duc Anh Nguyen, Arjan Kuijper, Holger Graf, Dieter Fellner, Saptarshi Neil Sinha</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.25, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">CoReVLA: A Dual-Stage End-to-End Autonomous Driving Framework for Long-Tail Scenarios via Collect-and-Refine</h2>
+            
+            <p class="paper-summary">Autonomous Driving (AD) systems have made notable progress, but their
+performance in long-tail, safety-critical scenarios remains limited. These rare
+cases contribute a disproportionate number of accidents. Vision-Language Action
+(VLA) models have strong reasoning abilities and offer a potential solution,
+but their effectiveness is limited by the lack of high-quality data and
+inefficient learning in such conditions. To address these challenges, we
+propose CoReVLA, a continual learning end-to-end autonomous driving framework
+that improves the performance in long-tail scenarios through a dual-stage
+process of data Collection and behavior Refinement. First, the model is jointly
+fine-tuned on a mixture of open-source driving QA datasets, allowing it to
+acquire a foundational understanding of driving scenarios. Next, CoReVLA is
+deployed within the Cave Automatic Virtual Environment (CAVE) simulation
+platform, where driver takeover data is collected from real-time interactions.
+Each takeover indicates a long-tail scenario that CoReVLA fails to handle
+reliably. Finally, the model is refined via Direct Preference Optimization
+(DPO), allowing it to learn directly from human preferences and thereby avoid
+reward hacking caused by manually designed rewards. Extensive open-loop and
+closed-loop experiments demonstrate that the proposed CoReVLA model can
+accurately perceive driving scenarios and make appropriate decisions. On the
+Bench2Drive benchmark, CoReVLA achieves a Driving Score (DS) of 72.18 and a
+Success Rate (SR) of 50%, outperforming state-of-the-art methods by 7.96 DS and
+15% SR under long-tail, safety-critical scenarios. Furthermore, case studies
+demonstrate the model's ability to continually improve its performance in
+similar failure-prone scenarios by leveraging past takeover experiences. All
+codea and preprocessed datasets are available at:
+https://github.com/FanGShiYuu/CoReVLA</p>
+            
+            
+
+            
+            
+            
+
+            
+
+            <a href="http://arxiv.org/abs/2509.15968v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Shiyu Fang, Yiming Cui, Haoyang Liang, Chen Lv, Peng Hang, Jian Sun</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.30000000000000004, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">SmolRGPT: Efficient Spatial Reasoning for Warehouse Environments with 600M Parameters</h2>
+            
+            <p class="paper-summary">Recent advances in vision-language models (VLMs) have enabled powerful
+multimodal reasoning, but state-of-the-art approaches typically rely on
+extremely large models with prohibitive computational and memory requirements.
+This makes their deployment challenging in resource-constrained environments
+such as warehouses, robotics, and industrial applications, where both
+efficiency and robust spatial understanding are critical. In this work, we
+present SmolRGPT, a compact vision-language architecture that explicitly
+incorporates region-level spatial reasoning by integrating both RGB and depth
+cues. SmolRGPT employs a three-stage curriculum that progressively align visual
+and language features, enables spatial relationship understanding, and adapts
+to task-specific datasets. We demonstrate that with only 600M parameters,
+SmolRGPT achieves competitive results on challenging warehouse spatial
+reasoning benchmarks, matching or exceeding the performance of much larger
+alternatives. These findings highlight the potential for efficient, deployable
+multimodal intelligence in real-world settings without sacrificing core spatial
+reasoning capabilities. The code of the experimentation will be available at:
+https://github.com/abtraore/SmolRGPT</p>
+            
+            
+
+            
+            
+            
+
+            
+
+            <a href="http://arxiv.org/abs/2509.15490v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Abdarahmane Traore, Éric Hervet, Andy Couturier</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.35000000000000003, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">OpenViGA: Video Generation for Automotive Driving Scenes by Streamlining and Fine-Tuning Open Source Models with Public Data</h2>
+            
+            <p class="paper-summary">Recent successful video generation systems that predict and create realistic
+automotive driving scenes from short video inputs assign tokenization, future
+state prediction (world model), and video decoding to dedicated models. These
+approaches often utilize large models that require significant training
+resources, offer limited insight into design choices, and lack publicly
+available code and datasets. In this work, we address these deficiencies and
+present OpenViGA, an open video generation system for automotive driving
+scenes. Our contributions are: Unlike several earlier works for video
+generation, such as GAIA-1, we provide a deep analysis of the three components
+of our system by separate quantitative and qualitative evaluation: Image
+tokenizer, world model, video decoder. Second, we purely build upon powerful
+pre-trained open source models from various domains, which we fine-tune by
+publicly available automotive data (BDD100K) on GPU hardware at academic scale.
+Third, we build a coherent video generation system by streamlining interfaces
+of our components. Fourth, due to public availability of the underlying models
+and data, we allow full reproducibility. Finally, we also publish our code and
+models on Github. For an image size of 256x256 at 4 fps we are able to predict
+realistic driving scene videos frame-by-frame with only one frame of
+algorithmic latency.</p>
+            
+            
+
+            
+            
+            
+
+            
+
+            <a href="http://arxiv.org/abs/2509.15479v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Björn Möller, Zhengyang Li, Malte Stelzer, Thomas Graave, Fabian Bettels, Muaaz Ataya, Tim Fingscheidt</p>
+            
+        </motion.div>
+        
+    </div>
+
+    <footer class="footer">
+        Generated on 2025-09-22 03:15:45 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+    </footer>
+
+</body>
+</html>

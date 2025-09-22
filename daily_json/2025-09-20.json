@@ -1,0 +1,184 @@
+[
+    {
+        "title": "SegDINO3D: 3D Instance Segmentation Empowered by Both Image-Level and Object-Level 2D Features",
+        "summary": "In this paper, we present SegDINO3D, a novel Transformer encoder-decoder\nframework for 3D instance segmentation. As 3D training data is generally not as\nsufficient as 2D training images, SegDINO3D is designed to fully leverage 2D\nrepresentation from a pre-trained 2D detection model, including both\nimage-level and object-level features, for improving 3D representation.\nSegDINO3D takes both a point cloud and its associated 2D images as input. In\nthe encoder stage, it first enriches each 3D point by retrieving 2D image\nfeatures from its corresponding image views and then leverages a 3D encoder for\n3D context fusion. In the decoder stage, it formulates 3D object queries as 3D\nanchor boxes and performs cross-attention from 3D queries to 2D object queries\nobtained from 2D images using the 2D detection model. These 2D object queries\nserve as a compact object-level representation of 2D images, effectively\navoiding the challenge of keeping thousands of image feature maps in the memory\nwhile faithfully preserving the knowledge of the pre-trained 2D model. The\nintroducing of 3D box queries also enables the model to modulate\ncross-attention using the predicted boxes for more precise querying. SegDINO3D\nachieves the state-of-the-art performance on the ScanNetV2 and ScanNet200 3D\ninstance segmentation benchmarks. Notably, on the challenging ScanNet200\ndataset, SegDINO3D significantly outperforms prior methods by +8.7 and +6.8 mAP\non the validation and hidden test sets, respectively, demonstrating its\nsuperiority.",
+        "url": "http://arxiv.org/abs/2509.16098v1",
+        "published_date": "2025-09-19T15:41:10+00:00",
+        "updated_date": "2025-09-19T15:41:10+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jinyuan Qu",
+            "Hongyang Li",
+            "Xingyu Chen",
+            "Shilong Liu",
+            "Yukai Shi",
+            "Tianhe Ren",
+            "Ruitao Jing",
+            "Lei Zhang"
+        ],
+        "tldr": "SegDINO3D is a novel Transformer-based framework for 3D instance segmentation that leverages both image-level and object-level 2D features from pre-trained 2D detection models to improve 3D representation, achieving SOTA results on ScanNet datasets.",
+        "tldr_zh": "SegDINO3D是一个新颖的基于Transformer的3D实例分割框架，它利用来自预训练2D检测模型的图像级和对象级2D特征来改进3D表示，并在ScanNet数据集上实现了SOTA结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "See&Trek: Training-Free Spatial Prompting for Multimodal Large Language Model",
+        "summary": "We introduce SEE&TREK, the first training-free prompting framework tailored\nto enhance the spatial understanding of Multimodal Large Language Models\n(MLLMS) under vision-only constraints. While prior efforts have incorporated\nmodalities like depth or point clouds to improve spatial reasoning, purely\nvisualspatial understanding remains underexplored. SEE&TREK addresses this gap\nby focusing on two core principles: increasing visual diversity and motion\nreconstruction. For visual diversity, we conduct Maximum Semantic Richness\nSampling, which employs an off-the-shell perception model to extract\nsemantically rich keyframes that capture scene structure. For motion\nreconstruction, we simulate visual trajectories and encode relative spatial\npositions into keyframes to preserve both spatial relations and temporal\ncoherence. Our method is training&GPU-free, requiring only a single forward\npass, and can be seamlessly integrated into existing MLLM'S. Extensive\nexperiments on the VSI-B ENCH and STI-B ENCH show that S EE &T REK consistently\nboosts various MLLM S performance across diverse spatial reasoning tasks with\nthe most +3.5% improvement, offering a promising path toward stronger spatial\nintelligence.",
+        "url": "http://arxiv.org/abs/2509.16087v1",
+        "published_date": "2025-09-19T15:30:26+00:00",
+        "updated_date": "2025-09-19T15:30:26+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Pengteng Li",
+            "Pinhao Song",
+            "Wuyang Li",
+            "Weiyu Guo",
+            "Huizai Yao",
+            "Yijie Xu",
+            "Dugang Liu",
+            "Hui Xiong"
+        ],
+        "tldr": "The paper introduces SEE&TREK, a training-free spatial prompting framework that enhances the spatial understanding of MLLMs by increasing visual diversity and reconstructing motion from vision-only input, achieving performance improvements on spatial reasoning benchmarks.",
+        "tldr_zh": "该论文介绍了SEE&TREK，一个无需训练的空间提示框架，通过增加视觉多样性和重建视觉输入中的运动来增强MLLM的空间理解能力，并在空间推理基准测试中取得了性能提升。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "PAN: Pillars-Attention-Based Network for 3D Object Detection",
+        "summary": "Camera-radar fusion offers a robust and low-cost alternative to Camera-lidar\nfusion for the 3D object detection task in real-time under adverse weather and\nlighting conditions. However, currently, in the literature, it is possible to\nfind few works focusing on this modality and, most importantly, developing new\narchitectures to explore the advantages of the radar point cloud, such as\naccurate distance estimation and speed information. Therefore, this work\npresents a novel and efficient 3D object detection algorithm using cameras and\nradars in the bird's-eye-view (BEV). Our algorithm exploits the advantages of\nradar before fusing the features into a detection head. A new backbone is\nintroduced, which maps the radar pillar features into an embedded dimension. A\nself-attention mechanism allows the backbone to model the dependencies between\nthe radar points. We are using a simplified convolutional layer to replace the\nFPN-based convolutional layers used in the PointPillars-based architectures\nwith the main goal of reducing inference time. Our results show that with this\nmodification, our approach achieves the new state-of-the-art in the 3D object\ndetection problem, reaching 58.2 of the NDS metric for the use of ResNet-50,\nwhile also setting a new benchmark for inference time on the nuScenes dataset\nfor the same category.",
+        "url": "http://arxiv.org/abs/2509.15935v1",
+        "published_date": "2025-09-19T12:40:49+00:00",
+        "updated_date": "2025-09-19T12:40:49+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ruan Bispo",
+            "Dane Mitrev",
+            "Letizia Mariotti",
+            "Clément Botty",
+            "Denver Humphrey",
+            "Anthony Scanlan",
+            "Ciarán Eising"
+        ],
+        "tldr": "This paper introduces a novel camera-radar fusion approach for 3D object detection, utilizing a pillars-attention-based network (PAN) that achieves state-of-the-art performance and improved inference time on the nuScenes dataset.",
+        "tldr_zh": "本文提出了一种新颖的相机-雷达融合方法用于3D物体检测，利用基于柱状注意力机制的网络（PAN），在nuScenes数据集上实现了最先进的性能并提高了推理速度。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Sparse Multiview Open-Vocabulary 3D Detection",
+        "summary": "The ability to interpret and comprehend a 3D scene is essential for many\nvision and robotics systems. In numerous applications, this involves 3D object\ndetection, i.e.~identifying the location and dimensions of objects belonging to\na specific category, typically represented as bounding boxes. This has\ntraditionally been solved by training to detect a fixed set of categories,\nwhich limits its use. In this work, we investigate open-vocabulary 3D object\ndetection in the challenging yet practical sparse-view setting, where only a\nlimited number of posed RGB images are available as input. Our approach is\ntraining-free, relying on pre-trained, off-the-shelf 2D foundation models\ninstead of employing computationally expensive 3D feature fusion or requiring\n3D-specific learning. By lifting 2D detections and directly optimizing 3D\nproposals for featuremetric consistency across views, we fully leverage the\nextensive training data available in 2D compared to 3D. Through standard\nbenchmarks, we demonstrate that this simple pipeline establishes a powerful\nbaseline, performing competitively with state-of-the-art techniques in densely\nsampled scenarios while significantly outperforming them in the sparse-view\nsetting.",
+        "url": "http://arxiv.org/abs/2509.15924v1",
+        "published_date": "2025-09-19T12:22:24+00:00",
+        "updated_date": "2025-09-19T12:22:24+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Olivier Moliner",
+            "Viktor Larsson",
+            "Kalle Åström"
+        ],
+        "tldr": "This paper introduces a training-free approach for open-vocabulary 3D object detection in sparse-view settings, leveraging 2D foundation models and featuremetric consistency to outperform existing methods, especially with limited viewpoints.",
+        "tldr_zh": "本文提出了一种无需训练的开放词汇三维物体检测方法，该方法适用于稀疏视角环境，利用二维基础模型和特征度量一致性，在有限视角下优于现有方法。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "RangeSAM: Leveraging Visual Foundation Models for Range-View repesented LiDAR segmentation",
+        "summary": "Point cloud segmentation is central to autonomous driving and 3D scene\nunderstanding. While voxel- and point-based methods dominate recent research\ndue to their compatibility with deep architectures and ability to capture\nfine-grained geometry, they often incur high computational cost, irregular\nmemory access, and limited real-time efficiency. In contrast, range-view\nmethods, though relatively underexplored - can leverage mature 2D semantic\nsegmentation techniques for fast and accurate predictions. Motivated by the\nrapid progress in Visual Foundation Models (VFMs) for captioning, zero-shot\nrecognition, and multimodal tasks, we investigate whether SAM2, the current\nstate-of-the-art VFM for segmentation tasks, can serve as a strong backbone for\nLiDAR point cloud segmentation in the range view. We present , to our\nknowledge, the first range-view framework that adapts SAM2 to 3D segmentation,\ncoupling efficient 2D feature extraction with standard\nprojection/back-projection to operate on point clouds. To optimize SAM2 for\nrange-view representations, we implement several architectural modifications to\nthe encoder: (1) a novel module that emphasizes horizontal spatial dependencies\ninherent in LiDAR range images, (2) a customized configuration of tailored to\nthe geometric properties of spherical projections, and (3) an adapted mechanism\nin the encoder backbone specifically designed to capture the unique spatial\npatterns and discontinuities present in range-view pseudo-images. Our approach\nachieves competitive performance on SemanticKITTI while benefiting from the\nspeed, scalability, and deployment simplicity of 2D-centric pipelines. This\nwork highlights the viability of VFMs as general-purpose backbones for 3D\nperception and opens a path toward unified, foundation-model-driven LiDAR\nsegmentation. Results lets us conclude that range-view segmentation methods\nusing VFMs leads to promising results.",
+        "url": "http://arxiv.org/abs/2509.15886v1",
+        "published_date": "2025-09-19T11:33:10+00:00",
+        "updated_date": "2025-09-19T11:33:10+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Paul Julius Kühn",
+            "Duc Anh Nguyen",
+            "Arjan Kuijper",
+            "Holger Graf",
+            "Dieter Fellner",
+            "Saptarshi Neil Sinha"
+        ],
+        "tldr": "This paper explores adapting Visual Foundation Models (VFMs), specifically SAM2, for LiDAR point cloud segmentation in the range view, achieving competitive performance on SemanticKITTI with a 2D-centric pipeline optimized for range-view representations.",
+        "tldr_zh": "本文探索了将视觉基础模型（VFMs），特别是SAM2，应用于Range View的激光雷达点云分割，通过针对Range View优化的2D中心流程在SemanticKITTI上实现了具有竞争力的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "CoReVLA: A Dual-Stage End-to-End Autonomous Driving Framework for Long-Tail Scenarios via Collect-and-Refine",
+        "summary": "Autonomous Driving (AD) systems have made notable progress, but their\nperformance in long-tail, safety-critical scenarios remains limited. These rare\ncases contribute a disproportionate number of accidents. Vision-Language Action\n(VLA) models have strong reasoning abilities and offer a potential solution,\nbut their effectiveness is limited by the lack of high-quality data and\ninefficient learning in such conditions. To address these challenges, we\npropose CoReVLA, a continual learning end-to-end autonomous driving framework\nthat improves the performance in long-tail scenarios through a dual-stage\nprocess of data Collection and behavior Refinement. First, the model is jointly\nfine-tuned on a mixture of open-source driving QA datasets, allowing it to\nacquire a foundational understanding of driving scenarios. Next, CoReVLA is\ndeployed within the Cave Automatic Virtual Environment (CAVE) simulation\nplatform, where driver takeover data is collected from real-time interactions.\nEach takeover indicates a long-tail scenario that CoReVLA fails to handle\nreliably. Finally, the model is refined via Direct Preference Optimization\n(DPO), allowing it to learn directly from human preferences and thereby avoid\nreward hacking caused by manually designed rewards. Extensive open-loop and\nclosed-loop experiments demonstrate that the proposed CoReVLA model can\naccurately perceive driving scenarios and make appropriate decisions. On the\nBench2Drive benchmark, CoReVLA achieves a Driving Score (DS) of 72.18 and a\nSuccess Rate (SR) of 50%, outperforming state-of-the-art methods by 7.96 DS and\n15% SR under long-tail, safety-critical scenarios. Furthermore, case studies\ndemonstrate the model's ability to continually improve its performance in\nsimilar failure-prone scenarios by leveraging past takeover experiences. All\ncodea and preprocessed datasets are available at:\nhttps://github.com/FanGShiYuu/CoReVLA",
+        "url": "http://arxiv.org/abs/2509.15968v1",
+        "published_date": "2025-09-19T13:25:56+00:00",
+        "updated_date": "2025-09-19T13:25:56+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Shiyu Fang",
+            "Yiming Cui",
+            "Haoyang Liang",
+            "Chen Lv",
+            "Peng Hang",
+            "Jian Sun"
+        ]
+    },
+    {
+        "title": "SmolRGPT: Efficient Spatial Reasoning for Warehouse Environments with 600M Parameters",
+        "summary": "Recent advances in vision-language models (VLMs) have enabled powerful\nmultimodal reasoning, but state-of-the-art approaches typically rely on\nextremely large models with prohibitive computational and memory requirements.\nThis makes their deployment challenging in resource-constrained environments\nsuch as warehouses, robotics, and industrial applications, where both\nefficiency and robust spatial understanding are critical. In this work, we\npresent SmolRGPT, a compact vision-language architecture that explicitly\nincorporates region-level spatial reasoning by integrating both RGB and depth\ncues. SmolRGPT employs a three-stage curriculum that progressively align visual\nand language features, enables spatial relationship understanding, and adapts\nto task-specific datasets. We demonstrate that with only 600M parameters,\nSmolRGPT achieves competitive results on challenging warehouse spatial\nreasoning benchmarks, matching or exceeding the performance of much larger\nalternatives. These findings highlight the potential for efficient, deployable\nmultimodal intelligence in real-world settings without sacrificing core spatial\nreasoning capabilities. The code of the experimentation will be available at:\nhttps://github.com/abtraore/SmolRGPT",
+        "url": "http://arxiv.org/abs/2509.15490v1",
+        "published_date": "2025-09-18T23:55:51+00:00",
+        "updated_date": "2025-09-18T23:55:51+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Abdarahmane Traore",
+            "Éric Hervet",
+            "Andy Couturier"
+        ]
+    },
+    {
+        "title": "OpenViGA: Video Generation for Automotive Driving Scenes by Streamlining and Fine-Tuning Open Source Models with Public Data",
+        "summary": "Recent successful video generation systems that predict and create realistic\nautomotive driving scenes from short video inputs assign tokenization, future\nstate prediction (world model), and video decoding to dedicated models. These\napproaches often utilize large models that require significant training\nresources, offer limited insight into design choices, and lack publicly\navailable code and datasets. In this work, we address these deficiencies and\npresent OpenViGA, an open video generation system for automotive driving\nscenes. Our contributions are: Unlike several earlier works for video\ngeneration, such as GAIA-1, we provide a deep analysis of the three components\nof our system by separate quantitative and qualitative evaluation: Image\ntokenizer, world model, video decoder. Second, we purely build upon powerful\npre-trained open source models from various domains, which we fine-tune by\npublicly available automotive data (BDD100K) on GPU hardware at academic scale.\nThird, we build a coherent video generation system by streamlining interfaces\nof our components. Fourth, due to public availability of the underlying models\nand data, we allow full reproducibility. Finally, we also publish our code and\nmodels on Github. For an image size of 256x256 at 4 fps we are able to predict\nrealistic driving scene videos frame-by-frame with only one frame of\nalgorithmic latency.",
+        "url": "http://arxiv.org/abs/2509.15479v1",
+        "published_date": "2025-09-18T22:54:13+00:00",
+        "updated_date": "2025-09-18T22:54:13+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Björn Möller",
+            "Zhengyang Li",
+            "Malte Stelzer",
+            "Thomas Graave",
+            "Fabian Bettels",
+            "Muaaz Ataya",
+            "Tim Fingscheidt"
+        ]
+    }
+]
