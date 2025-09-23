@@ -1,0 +1,97 @@
+[
+    {
+        "title": "CoBEVMoE: Heterogeneity-aware Feature Fusion with Dynamic Mixture-of-Experts for Collaborative Perception",
+        "summary": "Collaborative perception aims to extend sensing coverage and improve\nperception accuracy by sharing information among multiple agents. However, due\nto differences in viewpoints and spatial positions, agents often acquire\nheterogeneous observations. Existing intermediate fusion methods primarily\nfocus on aligning similar features, often overlooking the perceptual diversity\namong agents. To address this limitation, we propose CoBEVMoE, a novel\ncollaborative perception framework that operates in the Bird's Eye View (BEV)\nspace and incorporates a Dynamic Mixture-of-Experts (DMoE) architecture. In\nDMoE, each expert is dynamically generated based on the input features of a\nspecific agent, enabling it to extract distinctive and reliable cues while\nattending to shared semantics. This design allows the fusion process to\nexplicitly model both feature similarity and heterogeneity across agents.\nFurthermore, we introduce a Dynamic Expert Metric Loss (DEML) to enhance\ninter-expert diversity and improve the discriminability of the fused\nrepresentation. Extensive experiments on the OPV2V and DAIR-V2X-C datasets\ndemonstrate that CoBEVMoE achieves state-of-the-art performance. Specifically,\nit improves the IoU for Camera-based BEV segmentation by +1.5% on OPV2V and the\nAP@50 for LiDAR-based 3D object detection by +3.0% on DAIR-V2X-C, verifying the\neffectiveness of expert-based heterogeneous feature modeling in multi-agent\ncollaborative perception. The source code will be made publicly available at\nhttps://github.com/godk0509/CoBEVMoE.",
+        "url": "http://arxiv.org/abs/2509.17107v1",
+        "published_date": "2025-09-21T14:56:05+00:00",
+        "updated_date": "2025-09-21T14:56:05+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO",
+            "eess.IV"
+        ],
+        "authors": [
+            "Lingzhao Kong",
+            "Jiacheng Lin",
+            "Siyu Li",
+            "Kai Luo",
+            "Zhiyong Li",
+            "Kailun Yang"
+        ],
+        "tldr": "CoBEVMoE introduces a Dynamic Mixture-of-Experts architecture for collaborative perception in autonomous driving, explicitly modeling feature heterogeneity across agents and achieving state-of-the-art performance on relevant datasets.",
+        "tldr_zh": "CoBEVMoE 引入了一种动态混合专家架构，用于自动驾驶中的协作感知，显式建模了跨代理的特征异构性，并在相关数据集上实现了最先进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "SLAM-Former: Putting SLAM into One Transformer",
+        "summary": "We present SLAM-Former, a novel neural approach that integrates full SLAM\ncapabilities into a single transformer. Similar to traditional SLAM systems,\nSLAM-Former comprises both a frontend and a backend that operate in tandem. The\nfrontend processes sequential monocular images in real-time for incremental\nmapping and tracking, while the backend performs global refinement to ensure a\ngeometrically consistent result. This alternating execution allows the frontend\nand backend to mutually promote one another, enhancing overall system\nperformance. Comprehensive experimental results demonstrate that SLAM-Former\nachieves superior or highly competitive performance compared to\nstate-of-the-art dense SLAM methods.",
+        "url": "http://arxiv.org/abs/2509.16909v1",
+        "published_date": "2025-09-21T04:04:47+00:00",
+        "updated_date": "2025-09-21T04:04:47+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Yijun Yuan",
+            "Zhuoguang Chen",
+            "Kenan Li",
+            "Weibang Wang",
+            "Hang Zhao"
+        ],
+        "tldr": "SLAM-Former is a novel SLAM system implemented as a single transformer network, featuring a frontend for real-time incremental mapping and a backend for global refinement, achieving state-of-the-art or competitive performance.",
+        "tldr_zh": "SLAM-Former是一个新颖的SLAM系统，它被实现为一个单独的Transformer网络，具有用于实时增量映射的前端和用于全局优化的后端，实现了最先进或有竞争力的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "ConfidentSplat: Confidence-Weighted Depth Fusion for Accurate 3D Gaussian Splatting SLAM",
+        "summary": "We introduce ConfidentSplat, a novel 3D Gaussian Splatting (3DGS)-based SLAM\nsystem for robust, highfidelity RGB-only reconstruction. Addressing geometric\ninaccuracies in existing RGB-only 3DGS SLAM methods that stem from unreliable\ndepth estimation, ConfidentSplat incorporates a core innovation: a\nconfidence-weighted fusion mechanism. This mechanism adaptively integrates\ndepth cues from multiview geometry with learned monocular priors (Omnidata\nViT), dynamically weighting their contributions based on explicit reliability\nestimates-derived predominantly from multi-view geometric consistency-to\ngenerate high-fidelity proxy depth for map supervision. The resulting proxy\ndepth guides the optimization of a deformable 3DGS map, which efficiently\nadapts online to maintain global consistency following pose updates from a\nDROID-SLAM-inspired frontend and backend optimizations (loop closure, global\nbundle adjustment). Extensive validation on standard benchmarks (TUM-RGBD,\nScanNet) and diverse custom mobile datasets demonstrates significant\nimprovements in reconstruction accuracy (L1 depth error) and novel view\nsynthesis fidelity (PSNR, SSIM, LPIPS) over baselines, particularly in\nchallenging conditions. ConfidentSplat underscores the efficacy of principled,\nconfidence-aware sensor fusion for advancing state-of-the-art dense visual\nSLAM.",
+        "url": "http://arxiv.org/abs/2509.16863v1",
+        "published_date": "2025-09-21T01:28:03+00:00",
+        "updated_date": "2025-09-21T01:28:03+00:00",
+        "categories": [
+            "cs.CV",
+            "68T20, 68U20"
+        ],
+        "authors": [
+            "Amanuel T. Dufera",
+            "Yuan-Li Cai"
+        ],
+        "tldr": "ConfidentSplat introduces a confidence-weighted depth fusion mechanism for 3D Gaussian Splatting SLAM, improving reconstruction accuracy and novel view synthesis, particularly in challenging conditions, by integrating multi-view geometry and learned monocular priors.",
+        "tldr_zh": "ConfidentSplat 引入了一种置信度加权的深度融合机制，用于 3D 高斯溅射 SLAM，通过整合多视图几何和学习的单目先验，提高了重建精度和新视角合成质量，尤其是在具有挑战性的条件下。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "MMPart: Harnessing Multi-Modal Large Language Models for Part-Aware 3D Generation",
+        "summary": "Generative 3D modeling has advanced rapidly, driven by applications in VR/AR,\nmetaverse, and robotics. However, most methods represent the target object as a\nclosed mesh devoid of any structural information, limiting editing, animation,\nand semantic understanding. Part-aware 3D generation addresses this problem by\ndecomposing objects into meaningful components, but existing pipelines face\nchallenges: in existing methods, the user has no control over which objects are\nseparated and how model imagine the occluded parts in isolation phase. In this\npaper, we introduce MMPart, an innovative framework for generating part-aware\n3D models from a single image. We first use a VLM to generate a set of prompts\nbased on the input image and user descriptions. In the next step, a generative\nmodel generates isolated images of each object based on the initial image and\nthe previous step's prompts as supervisor (which control the pose and guide\nmodel how imagine previously occluded areas). Each of those images then enters\nthe multi-view generation stage, where a number of consistent images from\ndifferent views are generated. Finally, a reconstruction model converts each of\nthese multi-view images into a 3D model.",
+        "url": "http://arxiv.org/abs/2509.16768v1",
+        "published_date": "2025-09-20T18:25:14+00:00",
+        "updated_date": "2025-09-20T18:25:14+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Omid Bonakdar",
+            "Nasser Mozayani"
+        ],
+        "tldr": "The paper presents MMPart, a framework for generating part-aware 3D models from a single image using VLMs to generate prompts that guide a generative model to create isolated part images, which are then used for multi-view 3D reconstruction.",
+        "tldr_zh": "该论文提出了MMPart，一个利用多模态大语言模型从单张图像生成部件感知的3D模型的框架。该框架使用VLM生成提示，引导生成模型创建隔离的部件图像，然后用于多视角3D重建。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    }
+]

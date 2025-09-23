@@ -1,0 +1,377 @@
+[
+    {
+        "title": "RCTDistill: Cross-Modal Knowledge Distillation Framework for Radar-Camera 3D Object Detection with Temporal Fusion",
+        "summary": "Radar-camera fusion methods have emerged as a cost-effective approach for 3D\nobject detection but still lag behind LiDAR-based methods in performance.\nRecent works have focused on employing temporal fusion and Knowledge\nDistillation (KD) strategies to overcome these limitations. However, existing\napproaches have not sufficiently accounted for uncertainties arising from\nobject motion or sensor-specific errors inherent in radar and camera\nmodalities. In this work, we propose RCTDistill, a novel cross-modal KD method\nbased on temporal fusion, comprising three key modules: Range-Azimuth Knowledge\nDistillation (RAKD), Temporal Knowledge Distillation (TKD), and\nRegion-Decoupled Knowledge Distillation (RDKD). RAKD is designed to consider\nthe inherent errors in the range and azimuth directions, enabling effective\nknowledge transfer from LiDAR features to refine inaccurate BEV\nrepresentations. TKD mitigates temporal misalignment caused by dynamic objects\nby aligning historical radar-camera BEV features with current LiDAR\nrepresentations. RDKD enhances feature discrimination by distilling relational\nknowledge from the teacher model, allowing the student to differentiate\nforeground and background features. RCTDistill achieves state-of-the-art\nradar-camera fusion performance on both the nuScenes and View-of-Delft (VoD)\ndatasets, with the fastest inference speed of 26.2 FPS.",
+        "url": "http://arxiv.org/abs/2509.17712v1",
+        "published_date": "2025-09-22T12:49:49+00:00",
+        "updated_date": "2025-09-22T12:49:49+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Geonho Bang",
+            "Minjae Seong",
+            "Jisong Kim",
+            "Geunju Baek",
+            "Daye Oh",
+            "Junhyung Kim",
+            "Junho Koh",
+            "Jun Won Choi"
+        ],
+        "tldr": "The paper introduces RCTDistill, a novel knowledge distillation framework for radar-camera 3D object detection with temporal fusion, addressing uncertainties in sensor data and object motion. It achieves state-of-the-art performance and fast inference speed on nuScenes and VoD datasets.",
+        "tldr_zh": "该论文介绍了一种新的知识蒸馏框架RCTDistill，用于雷达-相机3D目标检测，具有时间融合功能，解决了传感器数据和物体运动中的不确定性。在nuScenes和VoD数据集上实现了最先进的性能和快速的推理速度。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "MAESTRO: Task-Relevant Optimization via Adaptive Feature Enhancement and Suppression for Multi-task 3D Perception",
+        "summary": "The goal of multi-task learning is to learn to conduct multiple tasks\nsimultaneously based on a shared data representation. While this approach can\nimprove learning efficiency, it may also cause performance degradation due to\ntask conflicts that arise when optimizing the model for different objectives.\nTo address this challenge, we introduce MAESTRO, a structured framework\ndesigned to generate task-specific features and mitigate feature interference\nin multi-task 3D perception, including 3D object detection, bird's-eye view\n(BEV) map segmentation, and 3D occupancy prediction. MAESTRO comprises three\ncomponents: the Class-wise Prototype Generator (CPG), the Task-Specific Feature\nGenerator (TSFG), and the Scene Prototype Aggregator (SPA). CPG groups class\ncategories into foreground and background groups and generates group-wise\nprototypes. The foreground and background prototypes are assigned to the 3D\nobject detection task and the map segmentation task, respectively, while both\nare assigned to the 3D occupancy prediction task. TSFG leverages these\nprototype groups to retain task-relevant features while suppressing irrelevant\nfeatures, thereby enhancing the performance for each task. SPA enhances the\nprototype groups assigned for 3D occupancy prediction by utilizing the\ninformation produced by the 3D object detection head and the map segmentation\nhead. Extensive experiments on the nuScenes and Occ3D benchmarks demonstrate\nthat MAESTRO consistently outperforms existing methods across 3D object\ndetection, BEV map segmentation, and 3D occupancy prediction tasks.",
+        "url": "http://arxiv.org/abs/2509.17462v1",
+        "published_date": "2025-09-22T07:55:43+00:00",
+        "updated_date": "2025-09-22T07:55:43+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Changwon Kang",
+            "Jisong Kim",
+            "Hongjae Shin",
+            "Junseo Park",
+            "Jun Won Choi"
+        ],
+        "tldr": "The paper introduces MAESTRO, a framework for multi-task 3D perception that adaptively enhances task-relevant features and suppresses interference, achieving state-of-the-art results on nuScenes and Occ3D datasets for 3D object detection, BEV segmentation, and occupancy prediction.",
+        "tldr_zh": "该论文介绍了MAESTRO，一个用于多任务3D感知的框架，它可以自适应地增强任务相关的特征并抑制干扰，在nuScenes和Occ3D数据集上实现了3D目标检测、BEV分割和占用预测的最先进结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Event-Based Visual Teach-and-Repeat via Fast Fourier-Domain Cross-Correlation",
+        "summary": "Visual teach-and-repeat navigation enables robots to autonomously traverse\npreviously demonstrated paths by comparing current sensory input with recorded\ntrajectories. However, conventional frame-based cameras fundamentally limit\nsystem responsiveness: their fixed frame rates (typically 30-60 Hz) create\ninherent latency between environmental changes and control responses. Here we\npresent the first event-camera-based visual teach-and-repeat system. To achieve\nthis, we develop a frequency-domain cross-correlation framework that transforms\nthe event stream matching problem into computationally efficient Fourier space\nmultiplications, capable of exceeding 300Hz processing rates, an order of\nmagnitude faster than frame-based approaches. By exploiting the binary nature\nof event frames and applying image compression techniques, we further enhance\nthe computational speed of the cross-correlation process without sacrificing\nlocalization accuracy. Extensive experiments using a Prophesee EVK4 HD event\ncamera mounted on an AgileX Scout Mini robot demonstrate successful autonomous\nnavigation across 4000+ meters of indoor and outdoor trajectories. Our system\nachieves ATEs below 24 cm while maintaining consistent high-frequency control\nupdates. Our evaluations show that our approach achieves substantially higher\nupdate rates compared to conventional frame-based systems, underscoring the\npractical viability of event-based perception for real-time robotic navigation.",
+        "url": "http://arxiv.org/abs/2509.17287v1",
+        "published_date": "2025-09-21T23:53:31+00:00",
+        "updated_date": "2025-09-21T23:53:31+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Gokul B. Nair",
+            "Alejandro Fontan",
+            "Michael Milford",
+            "Tobias Fischer"
+        ],
+        "tldr": "This paper presents a novel event-camera-based visual teach-and-repeat system that uses frequency-domain cross-correlation for efficient and fast robotic navigation, demonstrating significant speed improvements and good accuracy compared to frame-based methods.",
+        "tldr_zh": "该论文提出了一种基于事件相机的视觉示教重复系统，该系统采用频域互相关实现高效快速的机器人导航，与基于帧的方法相比，展示了显著的速度提升和良好的精度。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "ComposableNav: Instruction-Following Navigation in Dynamic Environments via Composable Diffusion",
+        "summary": "This paper considers the problem of enabling robots to navigate dynamic\nenvironments while following instructions. The challenge lies in the\ncombinatorial nature of instruction specifications: each instruction can\ninclude multiple specifications, and the number of possible specification\ncombinations grows exponentially as the robot's skill set expands. For example,\n\"overtake the pedestrian while staying on the right side of the road\" consists\nof two specifications: \"overtake the pedestrian\" and \"walk on the right side of\nthe road.\" To tackle this challenge, we propose ComposableNav, based on the\nintuition that following an instruction involves independently satisfying its\nconstituent specifications, each corresponding to a distinct motion primitive.\nUsing diffusion models, ComposableNav learns each primitive separately, then\ncomposes them in parallel at deployment time to satisfy novel combinations of\nspecifications unseen in training. Additionally, to avoid the onerous need for\ndemonstrations of individual motion primitives, we propose a two-stage training\nprocedure: (1) supervised pre-training to learn a base diffusion model for\ndynamic navigation, and (2) reinforcement learning fine-tuning that molds the\nbase model into different motion primitives. Through simulation and real-world\nexperiments, we show that ComposableNav enables robots to follow instructions\nby generating trajectories that satisfy diverse and unseen combinations of\nspecifications, significantly outperforming both non-compositional VLM-based\npolicies and costmap composing baselines. Videos and additional materials can\nbe found on the project page: https://amrl.cs.utexas.edu/ComposableNav/",
+        "url": "http://arxiv.org/abs/2509.17941v1",
+        "published_date": "2025-09-22T16:04:50+00:00",
+        "updated_date": "2025-09-22T16:04:50+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Zichao Hu",
+            "Chen Tang",
+            "Michael J. Munje",
+            "Yifeng Zhu",
+            "Alex Liu",
+            "Shuijing Liu",
+            "Garrett Warnell",
+            "Peter Stone",
+            "Joydeep Biswas"
+        ],
+        "tldr": "ComposableNav addresses instruction-following navigation in dynamic environments by learning and composing motion primitives using diffusion models and reinforcement learning, enabling robots to handle unseen combinations of specifications.",
+        "tldr_zh": "ComposableNav通过使用扩散模型和强化学习学习和组合运动原语，解决了动态环境中遵循指令的导航问题，使机器人能够处理未见过的规范组合。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "DriveDPO: Policy Learning via Safety DPO For End-to-End Autonomous Driving",
+        "summary": "End-to-end autonomous driving has substantially progressed by directly\npredicting future trajectories from raw perception inputs, which bypasses\ntraditional modular pipelines. However, mainstream methods trained via\nimitation learning suffer from critical safety limitations, as they fail to\ndistinguish between trajectories that appear human-like but are potentially\nunsafe. Some recent approaches attempt to address this by regressing multiple\nrule-driven scores but decoupling supervision from policy optimization,\nresulting in suboptimal performance. To tackle these challenges, we propose\nDriveDPO, a Safety Direct Preference Optimization Policy Learning framework.\nFirst, we distill a unified policy distribution from human imitation similarity\nand rule-based safety scores for direct policy optimization. Further, we\nintroduce an iterative Direct Preference Optimization stage formulated as\ntrajectory-level preference alignment. Extensive experiments on the NAVSIM\nbenchmark demonstrate that DriveDPO achieves a new state-of-the-art PDMS of\n90.0. Furthermore, qualitative results across diverse challenging scenarios\nhighlight DriveDPO's ability to produce safer and more reliable driving\nbehaviors.",
+        "url": "http://arxiv.org/abs/2509.17940v1",
+        "published_date": "2025-09-22T16:01:11+00:00",
+        "updated_date": "2025-09-22T16:01:11+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Shuyao Shang",
+            "Yuntao Chen",
+            "Yuqi Wang",
+            "Yingyan Li",
+            "Zhaoxiang Zhang"
+        ],
+        "tldr": "DriveDPO is proposed to tackle the safety limitations of imitation learning in end-to-end autonomous driving by incorporating rule-based safety scores into direct policy optimization, achieving state-of-the-art results on the NAVSIM benchmark.",
+        "tldr_zh": "DriveDPO旨在通过将基于规则的安全评分纳入直接策略优化中，解决端到端自动驾驶中模仿学习的安全限制，并在NAVSIM基准测试中取得了最先进的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Sight Over Site: Perception-Aware Reinforcement Learning for Efficient Robotic Inspection",
+        "summary": "Autonomous inspection is a central problem in robotics, with applications\nranging from industrial monitoring to search-and-rescue. Traditionally,\ninspection has often been reduced to navigation tasks, where the objective is\nto reach a predefined location while avoiding obstacles. However, this\nformulation captures only part of the real inspection problem. In real-world\nenvironments, the inspection targets may become visible well before their exact\ncoordinates are reached, making further movement both redundant and\ninefficient. What matters more for inspection is not simply arriving at the\ntarget's position, but positioning the robot at a viewpoint from which the\ntarget becomes observable. In this work, we revisit inspection from a\nperception-aware perspective. We propose an end-to-end reinforcement learning\nframework that explicitly incorporates target visibility as the primary\nobjective, enabling the robot to find the shortest trajectory that guarantees\nvisual contact with the target without relying on a map. The learned policy\nleverages both perceptual and proprioceptive sensing and is trained entirely in\nsimulation, before being deployed to a real-world robot. We further develop an\nalgorithm to compute ground-truth shortest inspection paths, which provides a\nreference for evaluation. Through extensive experiments, we show that our\nmethod outperforms existing classical and learning-based navigation approaches,\nyielding more efficient inspection trajectories in both simulated and\nreal-world settings. The project is avialable at\nhttps://sight-over-site.github.io/",
+        "url": "http://arxiv.org/abs/2509.17877v1",
+        "published_date": "2025-09-22T15:14:02+00:00",
+        "updated_date": "2025-09-22T15:14:02+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Richard Kuhlmann",
+            "Jakob Wolfram",
+            "Boyang Sun",
+            "Jiaxu Xing",
+            "Davide Scaramuzza",
+            "Marc Pollefeys",
+            "Cesar Cadena"
+        ],
+        "tldr": "This paper introduces a perception-aware reinforcement learning framework for efficient robotic inspection, prioritizing visual contact over simply reaching target coordinates and demonstrating improved performance in simulated and real-world environments.",
+        "tldr_zh": "本文提出了一种感知驱动的强化学习框架，用于高效的机器人巡检，优先考虑视觉接触而非简单地到达目标坐标，并在模拟和真实环境中展示了改进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Predicting Depth Maps from Single RGB Images and Addressing Missing Information in Depth Estimation",
+        "summary": "Depth imaging is a crucial area in Autonomous Driving Systems (ADS), as it\nplays a key role in detecting and measuring objects in the vehicle's\nsurroundings. However, a significant challenge in this domain arises from\nmissing information in Depth images, where certain points are not measurable\ndue to gaps or inconsistencies in pixel data. Our research addresses two key\ntasks to overcome this challenge. First, we developed an algorithm using a\nmulti-layered training approach to generate Depth images from a single RGB\nimage. Second, we addressed the issue of missing information in Depth images by\napplying our algorithm to rectify these gaps, resulting in Depth images with\ncomplete and accurate data. We further tested our algorithm on the Cityscapes\ndataset and successfully resolved the missing information in its Depth images,\ndemonstrating the effectiveness of our approach in real-world urban\nenvironments.",
+        "url": "http://arxiv.org/abs/2509.17686v1",
+        "published_date": "2025-09-22T12:28:29+00:00",
+        "updated_date": "2025-09-22T12:28:29+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Mohamad Mofeed Chaar",
+            "Jamal Raiyn",
+            "Galia Weidl"
+        ],
+        "tldr": "This paper presents a multi-layered training approach to generate depth maps from single RGB images and addresses the problem of missing information in depth images, demonstrating results on the Cityscapes dataset.",
+        "tldr_zh": "本文提出了一种多层训练方法，用于从单张RGB图像生成深度图，并解决了深度图像中信息缺失的问题，并在Cityscapes数据集上展示了结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "DINOv3-Diffusion Policy: Self-Supervised Large Visual Model for Visuomotor Diffusion Policy Learning",
+        "summary": "This paper evaluates DINOv3, a recent large-scale self-supervised vision\nbackbone, for visuomotor diffusion policy learning in robotic manipulation. We\ninvestigate whether a purely self-supervised encoder can match or surpass\nconventional supervised ImageNet-pretrained backbones (e.g., ResNet-18) under\nthree regimes: training from scratch, frozen, and finetuned. Across four\nbenchmark tasks (Push-T, Lift, Can, Square) using a unified FiLM-conditioned\ndiffusion policy, we find that (i) finetuned DINOv3 matches or exceeds\nResNet-18 on several tasks, (ii) frozen DINOv3 remains competitive, indicating\nstrong transferable priors, and (iii) self-supervised features improve sample\nefficiency and robustness. These results support self-supervised large visual\nmodels as effective, generalizable perceptual front-ends for action diffusion\npolicies, motivating further exploration of scalable label-free pretraining in\nrobotic manipulation. Compared to using ResNet18 as a backbone, our approach\nwith DINOv3 achieves up to a 10% absolute increase in test-time success rates\non challenging tasks such as Can, and on-the-par performance in tasks like\nLift, PushT, and Square.",
+        "url": "http://arxiv.org/abs/2509.17684v1",
+        "published_date": "2025-09-22T12:27:26+00:00",
+        "updated_date": "2025-09-22T12:27:26+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "ThankGod Egbe",
+            "Peng Wang",
+            "Zhihao Guo",
+            "Zidong Chen"
+        ],
+        "tldr": "This paper explores the use of DINOv3, a self-supervised visual model, as a backbone for visuomotor diffusion policies in robotic manipulation, demonstrating competitive or superior performance compared to ImageNet-pretrained ResNet-18.",
+        "tldr_zh": "本文探讨了使用自监督视觉模型DINOv3作为机器人操作中视觉运动扩散策略的骨干网络，结果表明其性能与ImageNet预训练的ResNet-18相比具有竞争力或更优。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "SD-VLM: Spatial Measuring and Understanding with Depth-Encoded Vision-Language Models",
+        "summary": "While vision language models (VLMs) excel in 2D semantic visual\nunderstanding, their ability to quantitatively reason about 3D spatial\nrelationships remains under-explored, due to the deficiency of 2D images'\nspatial representation ability. In this paper, we analyze the problem hindering\nVLMs' spatial understanding abilities and propose SD-VLM, a novel framework\nthat significantly enhances fundamental spatial perception abilities of VLMs\nthrough two key contributions: (1) propose Massive Spatial Measuring and\nUnderstanding (MSMU) dataset with precise spatial annotations, and (2)\nintroduce a simple depth positional encoding method strengthening VLMs' spatial\nawareness. MSMU dataset covers massive quantitative spatial tasks with 700K QA\npairs, 2.5M physical numerical annotations, and 10K chain-of-thought augmented\nsamples. We have trained SD-VLM, a strong generalist VLM which shows superior\nquantitative spatial measuring and understanding capability. SD-VLM not only\nachieves state-of-the-art performance on our proposed MSMU-Bench, but also\nshows spatial generalization abilities on other spatial understanding\nbenchmarks including Q-Spatial and SpatialRGPT-Bench. Extensive experiments\ndemonstrate that SD-VLM outperforms GPT-4o and Intern-VL3-78B by 26.91% and\n25.56% respectively on MSMU-Bench. Code and models are released at\nhttps://github.com/cpystan/SD-VLM.",
+        "url": "http://arxiv.org/abs/2509.17664v1",
+        "published_date": "2025-09-22T12:08:12+00:00",
+        "updated_date": "2025-09-22T12:08:12+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Pingyi Chen",
+            "Yujing Lou",
+            "Shen Cao",
+            "Jinhui Guo",
+            "Lubin Fan",
+            "Yue Wu",
+            "Lin Yang",
+            "Lizhuang Ma",
+            "Jieping Ye"
+        ],
+        "tldr": "The paper introduces SD-VLM, a novel VLM framework with depth positional encoding and a new dataset (MSMU) to enhance 3D spatial understanding, outperforming GPT-4o and Intern-VL3-78B on spatial reasoning tasks.",
+        "tldr_zh": "该论文介绍了SD-VLM，一种新型的VLM框架，它通过深度位置编码和一个新的数据集（MSMU）来增强3D空间理解能力，并在空间推理任务上优于GPT-4o和Intern-VL3-78B。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Evict3R: Training-Free Token Eviction for Memory-Bounded Streaming Visual Geometry Transformers",
+        "summary": "Streaming visual transformers like StreamVGGT achieve strong 3D perception\nbut suffer from unbounded growth of key value (KV) memory, which limits\nscalability. We propose a training-free, inference-time token eviction policy\nthat bounds memory by discarding redundant tokens while keeping the most\ninformative ones. Our method uses significantly less memory with little to no\ndrop in accuracy: on 7-Scenes with long sequences it reduces peak memory from\n18.63 GB to 9.39 GB while accuracy and completeness drop by only 0.003. Under\nstrict memory budgets, eviction enables denser frame sampling, which improves\nreconstruction accuracy compared to the baseline. Experiments across video\ndepth estimation (Sintel, KITTI), 3D reconstruction (7-Scenes, NRGBD), and\ncamera pose estimation (Sintel, TUM-dynamics) show that our approach closely\nmatches StreamVGGT at a fraction of the memory and makes long-horizon streaming\ninference more practical.",
+        "url": "http://arxiv.org/abs/2509.17650v1",
+        "published_date": "2025-09-22T11:54:58+00:00",
+        "updated_date": "2025-09-22T11:54:58+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Soroush Mahdi",
+            "Fardin Ayar",
+            "Ehsan Javanmardi",
+            "Manabu Tsukada",
+            "Mahdi Javanmardi"
+        ],
+        "tldr": "The paper introduces Evict3R, a training-free token eviction policy for streaming visual transformers that significantly reduces memory usage with minimal impact on accuracy, enabling more practical long-horizon streaming inference.",
+        "tldr_zh": "该论文介绍了Evict3R，一种无需训练的token驱逐策略，用于流式视觉Transformer，能够在显著降低内存使用的同时，对准确率的影响极小，从而使长期流式推理更具实用性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Tensor-Based Self-Calibration of Cameras via the TrifocalCalib Method",
+        "summary": "Estimating camera intrinsic parameters without prior scene knowledge is a\nfundamental challenge in computer vision. This capability is particularly\nimportant for applications such as autonomous driving and vehicle platooning,\nwhere precalibrated setups are impractical and real-time adaptability is\nnecessary. To advance the state-of-the-art, we present a set of equations based\non the calibrated trifocal tensor, enabling projective camera self-calibration\nfrom minimal image data. Our method, termed TrifocalCalib, significantly\nimproves accuracy and robustness compared to both recent learning-based and\nclassical approaches. Unlike many existing techniques, our approach requires no\ncalibration target, imposes no constraints on camera motion, and simultaneously\nestimates both focal length and principal point. Evaluations in both\nprocedurally generated synthetic environments and structured dataset-based\nscenarios demonstrate the effectiveness of our approach. To support\nreproducibility, we make the code publicly available.",
+        "url": "http://arxiv.org/abs/2509.17620v1",
+        "published_date": "2025-09-22T11:31:57+00:00",
+        "updated_date": "2025-09-22T11:31:57+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Gregory Schroeder",
+            "Mohamed Sabry",
+            "Cristina Olaverri-Monreal"
+        ],
+        "tldr": "The paper introduces TrifocalCalib, a novel tensor-based method for projective camera self-calibration that improves accuracy and robustness without calibration targets or constraints on camera motion, making it suitable for autonomous driving applications.",
+        "tldr_zh": "该论文介绍了一种新的基于张量的相机自标定方法 TrifocalCalib，它提高了精度和鲁棒性，无需校准目标或对相机运动的约束，使其适用于自动驾驶应用。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "EmbodiedSplat: Personalized Real-to-Sim-to-Real Navigation with Gaussian Splats from a Mobile Device",
+        "summary": "The field of Embodied AI predominantly relies on simulation for training and\nevaluation, often using either fully synthetic environments that lack\nphotorealism or high-fidelity real-world reconstructions captured with\nexpensive hardware. As a result, sim-to-real transfer remains a major\nchallenge. In this paper, we introduce EmbodiedSplat, a novel approach that\npersonalizes policy training by efficiently capturing the deployment\nenvironment and fine-tuning policies within the reconstructed scenes. Our\nmethod leverages 3D Gaussian Splatting (GS) and the Habitat-Sim simulator to\nbridge the gap between realistic scene capture and effective training\nenvironments. Using iPhone-captured deployment scenes, we reconstruct meshes\nvia GS, enabling training in settings that closely approximate real-world\nconditions. We conduct a comprehensive analysis of training strategies,\npre-training datasets, and mesh reconstruction techniques, evaluating their\nimpact on sim-to-real predictivity in real-world scenarios. Experimental\nresults demonstrate that agents fine-tuned with EmbodiedSplat outperform both\nzero-shot baselines pre-trained on large-scale real-world datasets (HM3D) and\nsynthetically generated datasets (HSSD), achieving absolute success rate\nimprovements of 20\\% and 40\\% on real-world Image Navigation task. Moreover,\nour approach yields a high sim-vs-real correlation (0.87--0.97) for the\nreconstructed meshes, underscoring its effectiveness in adapting policies to\ndiverse environments with minimal effort. Project page:\nhttps://gchhablani.github.io/embodied-splat",
+        "url": "http://arxiv.org/abs/2509.17430v1",
+        "published_date": "2025-09-22T07:22:31+00:00",
+        "updated_date": "2025-09-22T07:22:31+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Gunjan Chhablani",
+            "Xiaomeng Ye",
+            "Muhammad Zubair Irshad",
+            "Zsolt Kira"
+        ],
+        "tldr": "EmbodiedSplat introduces a method for personalized policy training in Embodied AI by using 3D Gaussian Splatting to reconstruct realistic environments from iPhone captures, enabling effective sim-to-real transfer with significant performance improvements in real-world navigation tasks.",
+        "tldr_zh": "EmbodiedSplat 提出了一种个性化的 Embodied AI 策略训练方法，该方法利用 3D Gaussian Splatting 从 iPhone 拍摄的图像中重建逼真的环境，从而实现了有效的 sim-to-real 迁移，并在真实世界导航任务中取得了显著的性能提升。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "DepTR-MOT: Unveiling the Potential of Depth-Informed Trajectory Refinement for Multi-Object Tracking",
+        "summary": "Visual Multi-Object Tracking (MOT) is a crucial component of robotic\nperception, yet existing Tracking-By-Detection (TBD) methods often rely on 2D\ncues, such as bounding boxes and motion modeling, which struggle under\nocclusions and close-proximity interactions. Trackers relying on these 2D cues\nare particularly unreliable in robotic environments, where dense targets and\nfrequent occlusions are common. While depth information has the potential to\nalleviate these issues, most existing MOT datasets lack depth annotations,\nleading to its underexploited role in the domain. To unveil the potential of\ndepth-informed trajectory refinement, we introduce DepTR-MOT, a DETR-based\ndetector enhanced with instance-level depth information. Specifically, we\npropose two key innovations: (i) foundation model-based instance-level soft\ndepth label supervision, which refines depth prediction, and (ii) the\ndistillation of dense depth maps to maintain global depth consistency. These\nstrategies enable DepTR-MOT to output instance-level depth during inference,\nwithout requiring foundation models and without additional computational cost.\nBy incorporating depth cues, our method enhances the robustness of the TBD\nparadigm, effectively resolving occlusion and close-proximity challenges.\nExperiments on both the QuadTrack and DanceTrack datasets demonstrate the\neffectiveness of our approach, achieving HOTA scores of 27.59 and 44.47,\nrespectively. In particular, results on QuadTrack, a robotic platform MOT\ndataset, highlight the advantages of our method in handling occlusion and\nclose-proximity challenges in robotic tracking. The source code will be made\npublicly available at https://github.com/warriordby/DepTR-MOT.",
+        "url": "http://arxiv.org/abs/2509.17323v1",
+        "published_date": "2025-09-22T02:58:04+00:00",
+        "updated_date": "2025-09-22T02:58:04+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO",
+            "eess.IV"
+        ],
+        "authors": [
+            "Buyin Deng",
+            "Lingxin Huang",
+            "Kai Luo",
+            "Fei Teng",
+            "Kailun Yang"
+        ],
+        "tldr": "This paper introduces DepTR-MOT, a depth-informed multi-object tracking method that uses instance-level depth prediction and distillation to improve robustness in occluded robotic environments, achieving improved HOTA scores on relevant datasets.",
+        "tldr_zh": "该论文介绍了DepTR-MOT，一种深度感知的多目标跟踪方法，它使用实例级深度预测和蒸馏来提高在遮挡的机器人环境中的鲁棒性，并在相关数据集上实现了更高的HOTA分数。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "SPFSplatV2: Efficient Self-Supervised Pose-Free 3D Gaussian Splatting from Sparse Views",
+        "summary": "We introduce SPFSplatV2, an efficient feed-forward framework for 3D Gaussian\nsplatting from sparse multi-view images, requiring no ground-truth poses during\ntraining and inference. It employs a shared feature extraction backbone,\nenabling simultaneous prediction of 3D Gaussian primitives and camera poses in\na canonical space from unposed inputs. A masked attention mechanism is\nintroduced to efficiently estimate target poses during training, while a\nreprojection loss enforces pixel-aligned Gaussian primitives, providing\nstronger geometric constraints. We further demonstrate the compatibility of our\ntraining framework with different reconstruction architectures, resulting in\ntwo model variants. Remarkably, despite the absence of pose supervision, our\nmethod achieves state-of-the-art performance in both in-domain and\nout-of-domain novel view synthesis, even under extreme viewpoint changes and\nlimited image overlap, and surpasses recent methods that rely on geometric\nsupervision for relative pose estimation. By eliminating dependence on\nground-truth poses, our method offers the scalability to leverage larger and\nmore diverse datasets. Code and pretrained models will be available on our\nproject page: https://ranrhuang.github.io/spfsplatv2/.",
+        "url": "http://arxiv.org/abs/2509.17246v1",
+        "published_date": "2025-09-21T21:37:56+00:00",
+        "updated_date": "2025-09-21T21:37:56+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ranran Huang",
+            "Krystian Mikolajczyk"
+        ],
+        "tldr": "SPFSplatV2 presents a novel, efficient, and pose-free 3D Gaussian Splatting framework for novel view synthesis from sparse multi-view images, achieving state-of-the-art performance without ground-truth poses.",
+        "tldr_zh": "SPFSplatV2 提出了一个新颖、高效且无姿态的 3D 高斯溅射框架，用于从稀疏多视图图像中合成新视角，在没有真值姿态的情况下实现了最先进的性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Guided and Unguided Conditional Diffusion Mechanisms for Structured and Semantically-Aware 3D Point Cloud Generation",
+        "summary": "Generating realistic 3D point clouds is a fundamental problem in computer\nvision with applications in remote sensing, robotics, and digital object\nmodeling. Existing generative approaches primarily capture geometry, and when\nsemantics are considered, they are typically imposed post hoc through external\nsegmentation or clustering rather than integrated into the generative process\nitself. We propose a diffusion-based framework that embeds per-point semantic\nconditioning directly within generation. Each point is associated with a\nconditional variable corresponding to its semantic label, which guides the\ndiffusion dynamics and enables the joint synthesis of geometry and semantics.\nThis design produces point clouds that are both structurally coherent and\nsegmentation-aware, with object parts explicitly represented during synthesis.\nThrough a comparative analysis of guided and unguided diffusion processes, we\ndemonstrate the significant impact of conditional variables on diffusion\ndynamics and generation quality. Extensive experiments validate the efficacy of\nour approach, producing detailed and accurate 3D point clouds tailored to\nspecific parts and features.",
+        "url": "http://arxiv.org/abs/2509.17206v1",
+        "published_date": "2025-09-21T19:19:36+00:00",
+        "updated_date": "2025-09-21T19:19:36+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG"
+        ],
+        "authors": [
+            "Gunner Stone",
+            "Sushmita Sarker",
+            "Alireza Tavakkoli"
+        ],
+        "tldr": "This paper introduces a diffusion-based approach for generating 3D point clouds that integrates semantic conditioning directly into the generative process, resulting in structurally coherent and segmentation-aware point clouds. It demonstrates the impact of guided and unguided diffusion, showing improvements in generation quality.",
+        "tldr_zh": "本文提出了一种基于扩散的3D点云生成方法，该方法将语义条件直接嵌入到生成过程中，从而产生结构连贯且具有分割意识的点云。它展示了引导式和非引导式扩散的影响，表明生成质量有所提高。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    }
+]

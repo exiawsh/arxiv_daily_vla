@@ -1,0 +1,259 @@
+[
+    {
+        "title": "RLGF: Reinforcement Learning with Geometric Feedback for Autonomous Driving Video Generation",
+        "summary": "Synthetic data is crucial for advancing autonomous driving (AD) systems, yet\ncurrent state-of-the-art video generation models, despite their visual realism,\nsuffer from subtle geometric distortions that limit their utility for\ndownstream perception tasks. We identify and quantify this critical issue,\ndemonstrating a significant performance gap in 3D object detection when using\nsynthetic versus real data. To address this, we introduce Reinforcement\nLearning with Geometric Feedback (RLGF), RLGF uniquely refines video diffusion\nmodels by incorporating rewards from specialized latent-space AD perception\nmodels. Its core components include an efficient Latent-Space Windowing\nOptimization technique for targeted feedback during diffusion, and a\nHierarchical Geometric Reward (HGR) system providing multi-level rewards for\npoint-line-plane alignment, and scene occupancy coherence. To quantify these\ndistortions, we propose GeoScores. Applied to models like DiVE on nuScenes,\nRLGF substantially reduces geometric errors (e.g., VP error by 21\\%, Depth\nerror by 57\\%) and dramatically improves 3D object detection mAP by 12.7\\%,\nnarrowing the gap to real-data performance. RLGF offers a plug-and-play\nsolution for generating geometrically sound and reliable synthetic videos for\nAD development.",
+        "url": "http://arxiv.org/abs/2509.16500v1",
+        "published_date": "2025-09-20T02:23:36+00:00",
+        "updated_date": "2025-09-20T02:23:36+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Tianyi Yan",
+            "Wencheng Han",
+            "Xia Zhou",
+            "Xueyang Zhang",
+            "Kun Zhan",
+            "Cheng-zhong Xu",
+            "Jianbing Shen"
+        ],
+        "tldr": "The paper introduces RLGF, a reinforcement learning framework that enhances video diffusion models for autonomous driving by incorporating geometric feedback, resulting in improved geometric accuracy and 3D object detection performance in synthetic data.",
+        "tldr_zh": "该论文介绍了RLGF，一个强化学习框架，通过结合几何反馈来增强用于自动驾驶的视频扩散模型，从而提高合成数据中的几何精度和3D物体检测性能。",
+        "relevance_score": 10,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "AHA -- Predicting What Matters Next: Online Highlight Detection Without Looking Ahead",
+        "summary": "Real-time understanding of continuous video streams is essential for\nintelligent agents operating in high-stakes environments, including autonomous\nvehicles, surveillance drones, and disaster response robots. Yet, most existing\nvideo understanding and highlight detection methods assume access to the entire\nvideo during inference, making them unsuitable for online or streaming\nscenarios. In particular, current models optimize for offline summarization,\nfailing to support step-by-step reasoning needed for real-time decision-making.\nWe introduce Aha, an autoregressive highlight detection framework that predicts\nthe relevance of each video frame against a task described in natural language.\nWithout accessing future video frames, Aha utilizes a multimodal\nvision-language model and lightweight, decoupled heads trained on a large,\ncurated dataset of human-centric video labels. To enable scalability, we\nintroduce the Dynamic SinkCache mechanism that achieves constant memory usage\nacross infinite-length streams without degrading performance on standard\nbenchmarks. This encourages the hidden representation to capture high-level\ntask objectives, enabling effective frame-level rankings for informativeness,\nrelevance, and uncertainty with respect to the natural language task. Aha\nachieves state-of-the-art (SOTA) performance on highlight detection benchmarks,\nsurpassing even prior offline, full-context approaches and video-language\nmodels by +5.9% on TVSum and +8.3% on Mr.Hisum in mAP (mean Average Precision).\nWe explore Aha's potential for real-world robotics applications given a\ntask-oriented natural language input and a continuous, robot-centric video.\nBoth experiments demonstrate Aha's potential effectiveness as a real-time\nreasoning module for downstream planning and long-horizon understanding.",
+        "url": "http://arxiv.org/abs/2509.16421v1",
+        "published_date": "2025-09-19T21:03:00+00:00",
+        "updated_date": "2025-09-19T21:03:00+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Aiden Chang",
+            "Celso De Melo",
+            "Stephanie M. Lukin"
+        ],
+        "tldr": "The paper introduces Aha, an autoregressive highlight detection framework for real-time video understanding using vision-language models, achieving state-of-the-art results on highlight detection benchmarks without needing future video frames.",
+        "tldr_zh": "该论文介绍了一种名为Aha的自回归高亮检测框架，利用视觉-语言模型进行实时视频理解，并在高亮检测基准测试中取得了最先进的结果，且无需访问未来的视频帧。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Text-Scene: A Scene-to-Language Parsing Framework for 3D Scene Understanding",
+        "summary": "Enabling agents to understand and interact with complex 3D scenes is a\nfundamental challenge for embodied artificial intelligence systems. While\nMultimodal Large Language Models (MLLMs) have achieved significant progress in\n2D image understanding, extending such capabilities to 3D scenes remains\ndifficult: 1) 3D environment involves richer concepts such as spatial\nrelationships, affordances, physics, layout, and so on, 2) the absence of\nlarge-scale 3D vision-language datasets has posed a significant obstacle. In\nthis paper, we introduce Text-Scene, a framework that automatically parses 3D\nscenes into textual descriptions for scene understanding. Given a 3D scene, our\nmodel identifies object attributes and spatial relationships, and then\ngenerates a coherent summary of the whole scene, bridging the gap between 3D\nobservation and language without requiring human-in-the-loop intervention. By\nleveraging both geometric analysis and MLLMs, Text-Scene produces descriptions\nthat are accurate, detailed, and human-interpretable, capturing object-level\ndetails and global-level context. Experimental results on benchmarks\ndemonstrate that our textual parses can faithfully represent 3D scenes and\nbenefit downstream tasks. To evaluate the reasoning capability of MLLMs, we\npresent InPlan3D, a comprehensive benchmark for 3D task planning, consisting of\n3174 long-term planning tasks across 636 indoor scenes. We emphasize clarity\nand accessibility in our approach, aiming to make 3D scene content\nunderstandable through language. Code and datasets will be released.",
+        "url": "http://arxiv.org/abs/2509.16721v1",
+        "published_date": "2025-09-20T15:10:45+00:00",
+        "updated_date": "2025-09-20T15:10:45+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.RO"
+        ],
+        "authors": [
+            "Haoyuan Li",
+            "Rui Liu",
+            "Hehe Fan",
+            "Yi Yang"
+        ],
+        "tldr": "The paper introduces Text-Scene, a framework that automatically parses 3D scenes into textual descriptions, leveraging geometric analysis and MLLMs to bridge the gap between 3D observation and language, and presents InPlan3D, a benchmark for 3D task planning.",
+        "tldr_zh": "该论文介绍了Text-Scene，一个自动将3D场景解析为文本描述的框架，它利用几何分析和多模态大语言模型来弥合3D观察和语言之间的差距，并提出了InPlan3D，一个用于3D任务规划的基准。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Are VLMs Ready for Lane Topology Awareness in Autonomous Driving?",
+        "summary": "Vision-Language Models (VLMs) have recently shown remarkable progress in\nmultimodal reasoning, yet their applications in autonomous driving remain\nlimited. In particular, the ability to understand road topology, a key\nrequirement for safe navigation, has received relatively little attention.\nWhile some recent works have begun to explore VLMs in driving contexts, their\nperformance on topology reasoning is far from satisfactory. In this work, we\nsystematically evaluate VLMs' capabilities in road topology understanding.\nSpecifically, multi-view images are projected into unified ground-plane\ncoordinate system and fused into bird's-eye-view (BEV) lanes. Based on these\nBEV lanes, we formulate four topology-related diagnostic VQA tasks, which\ntogether capture essential components of spatial topology reasoning. Through\nextensive evaluation, we find that while frontier closed-source models (e.g.,\nGPT-4o) achieve relatively high accuracy in some tasks, they still fail in some\ntemporal questions that humans can answer (e.g., GPT-4o achieve only 67.8% in\nvector, a two-class classification problem). Furthermore, we find open-source\nVLMs, even at 30B scale, struggle significantly. These results indicate that\nspatial reasoning remains a fundamental bottleneck for current VLMs. We also\nfind that the model's capability is positively correlated with model size,\nlength of reasoning tokens and shots provided as examples, showing direction\nfor future research.",
+        "url": "http://arxiv.org/abs/2509.16654v1",
+        "published_date": "2025-09-20T12:02:39+00:00",
+        "updated_date": "2025-09-20T12:02:39+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Xin Chen",
+            "Jia He",
+            "Maozheng Li",
+            "Dongliang Xu",
+            "Tianyu Wang",
+            "Yixiao Chen",
+            "Zhixin Lin",
+            "Yue Yao"
+        ],
+        "tldr": "This paper evaluates the capabilities of VLMs in understanding road topology for autonomous driving, finding that even advanced models like GPT-4o struggle with certain spatial and temporal reasoning tasks, highlighting a key bottleneck for VLM applications in this domain.",
+        "tldr_zh": "本文评估了视觉语言模型（VLMs）在理解自动驾驶中的道路拓扑结构的能力，发现即使像GPT-4o这样的先进模型在某些空间和时间推理任务中也表现不佳，突出了VLM在该领域应用中的一个关键瓶颈。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "ADVEDM:Fine-grained Adversarial Attack against VLM-based Embodied Agents",
+        "summary": "Vision-Language Models (VLMs), with their strong reasoning and planning\ncapabilities, are widely used in embodied decision-making (EDM) tasks in\nembodied agents, such as autonomous driving and robotic manipulation. Recent\nresearch has increasingly explored adversarial attacks on VLMs to reveal their\nvulnerabilities. However, these attacks either rely on overly strong\nassumptions, requiring full knowledge of the victim VLM, which is impractical\nfor attacking VLM-based agents, or exhibit limited effectiveness. The latter\nstems from disrupting most semantic information in the image, which leads to a\nmisalignment between the perception and the task context defined by system\nprompts. This inconsistency interrupts the VLM's reasoning process, resulting\nin invalid outputs that fail to affect interactions in the physical world. To\nthis end, we propose a fine-grained adversarial attack framework, ADVEDM, which\nmodifies the VLM's perception of only a few key objects while preserving the\nsemantics of the remaining regions. This attack effectively reduces conflicts\nwith the task context, making VLMs output valid but incorrect decisions and\naffecting the actions of agents, thus posing a more substantial safety threat\nin the physical world. We design two variants of based on this framework,\nADVEDM-R and ADVEDM-A, which respectively remove the semantics of a specific\nobject from the image and add the semantics of a new object into the image. The\nexperimental results in both general scenarios and EDM tasks demonstrate\nfine-grained control and excellent attack performance.",
+        "url": "http://arxiv.org/abs/2509.16645v1",
+        "published_date": "2025-09-20T11:48:11+00:00",
+        "updated_date": "2025-09-20T11:48:11+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yichen Wang",
+            "Hangtao Zhang",
+            "Hewen Pan",
+            "Ziqi Zhou",
+            "Xianlong Wang",
+            "Peijin Guo",
+            "Lulu Xue",
+            "Shengshan Hu",
+            "Minghui Li",
+            "Leo Yu Zhang"
+        ],
+        "tldr": "The paper introduces ADVEDM, a fine-grained adversarial attack framework targeting VLM-based embodied agents, by selectively modifying object semantics to induce incorrect yet valid decisions, posing a greater safety risk than existing methods.",
+        "tldr_zh": "该论文介绍了ADVEDM，一种针对基于VLM的具身智能体的细粒度对抗攻击框架。该框架通过选择性地修改物体语义来诱导智能体做出错误但有效的决策，从而比现有方法构成更大的安全风险。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "SQS: Enhancing Sparse Perception Models via Query-based Splatting in Autonomous Driving",
+        "summary": "Sparse Perception Models (SPMs) adopt a query-driven paradigm that forgoes\nexplicit dense BEV or volumetric construction, enabling highly efficient\ncomputation and accelerated inference. In this paper, we introduce SQS, a novel\nquery-based splatting pre-training specifically designed to advance SPMs in\nautonomous driving. SQS introduces a plug-in module that predicts 3D Gaussian\nrepresentations from sparse queries during pre-training, leveraging\nself-supervised splatting to learn fine-grained contextual features through the\nreconstruction of multi-view images and depth maps. During fine-tuning, the\npre-trained Gaussian queries are seamlessly integrated into downstream networks\nvia query interaction mechanisms that explicitly connect pre-trained queries\nwith task-specific queries, effectively accommodating the diverse requirements\nof occupancy prediction and 3D object detection. Extensive experiments on\nautonomous driving benchmarks demonstrate that SQS delivers considerable\nperformance gains across multiple query-based 3D perception tasks, notably in\noccupancy prediction and 3D object detection, outperforming prior\nstate-of-the-art pre-training approaches by a significant margin (i.e., +1.3\nmIoU on occupancy prediction and +1.0 NDS on 3D detection).",
+        "url": "http://arxiv.org/abs/2509.16588v1",
+        "published_date": "2025-09-20T09:25:19+00:00",
+        "updated_date": "2025-09-20T09:25:19+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.RO"
+        ],
+        "authors": [
+            "Haiming Zhang",
+            "Yiyao Zhu",
+            "Wending Zhou",
+            "Xu Yan",
+            "Yingjie Cai",
+            "Bingbing Liu",
+            "Shuguang Cui",
+            "Zhen Li"
+        ],
+        "tldr": "The paper introduces SQS, a query-based splatting pre-training method for sparse perception models in autonomous driving, which uses 3D Gaussian representations and self-supervised splatting to improve performance on occupancy prediction and 3D object detection tasks.",
+        "tldr_zh": "该论文介绍了SQS，一种用于自动驾驶中稀疏感知模型的基于查询的splatting预训练方法。该方法利用3D高斯表示和自监督splatting来提高在占用预测和3D目标检测任务上的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "ST-GS: Vision-Based 3D Semantic Occupancy Prediction with Spatial-Temporal Gaussian Splatting",
+        "summary": "3D occupancy prediction is critical for comprehensive scene understanding in\nvision-centric autonomous driving. Recent advances have explored utilizing 3D\nsemantic Gaussians to model occupancy while reducing computational overhead,\nbut they remain constrained by insufficient multi-view spatial interaction and\nlimited multi-frame temporal consistency. To overcome these issues, in this\npaper, we propose a novel Spatial-Temporal Gaussian Splatting (ST-GS) framework\nto enhance both spatial and temporal modeling in existing Gaussian-based\npipelines. Specifically, we develop a guidance-informed spatial aggregation\nstrategy within a dual-mode attention mechanism to strengthen spatial\ninteraction in Gaussian representations. Furthermore, we introduce a\ngeometry-aware temporal fusion scheme that effectively leverages historical\ncontext to improve temporal continuity in scene completion. Extensive\nexperiments on the large-scale nuScenes occupancy prediction benchmark showcase\nthat our proposed approach not only achieves state-of-the-art performance but\nalso delivers markedly better temporal consistency compared to existing\nGaussian-based methods.",
+        "url": "http://arxiv.org/abs/2509.16552v1",
+        "published_date": "2025-09-20T06:36:30+00:00",
+        "updated_date": "2025-09-20T06:36:30+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Xiaoyang Yan",
+            "Muleilan Pei",
+            "Shaojie Shen"
+        ],
+        "tldr": "This paper introduces Spatial-Temporal Gaussian Splatting (ST-GS) for 3D semantic occupancy prediction in autonomous driving, enhancing spatial interaction and temporal consistency using a dual-mode attention mechanism and geometry-aware temporal fusion, achieving state-of-the-art performance on nuScenes.",
+        "tldr_zh": "该论文介绍了用于自动驾驶中3D语义占用预测的空间-时间高斯溅射（ST-GS），通过双模注意力机制和几何感知的时间融合来增强空间交互和时间一致性，在nuScenes上实现了最先进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Octree Latent Diffusion for Semantic 3D Scene Generation and Completion",
+        "summary": "The completion, extension, and generation of 3D semantic scenes are an\ninterrelated set of capabilities that are useful for robotic navigation and\nexploration. Existing approaches seek to decouple these problems and solve them\noneoff. Additionally, these approaches are often domain-specific, requiring\nseparate models for different data distributions, e.g. indoor vs. outdoor\nscenes. To unify these techniques and provide cross-domain compatibility, we\ndevelop a single framework that can perform scene completion, extension, and\ngeneration in both indoor and outdoor scenes, which we term Octree Latent\nSemantic Diffusion. Our approach operates directly on an efficient dual octree\ngraph latent representation: a hierarchical, sparse, and memory-efficient\noccupancy structure. This technique disentangles synthesis into two stages: (i)\nstructure diffusion, which predicts binary split signals to construct a coarse\noccupancy octree, and (ii) latent semantic diffusion, which generates semantic\nembeddings decoded by a graph VAE into voxellevel semantic labels. To perform\nsemantic scene completion or extension, our model leverages inference-time\nlatent inpainting, or outpainting respectively. These inference-time methods\nuse partial LiDAR scans or maps to condition generation, without the need for\nretraining or finetuning. We demonstrate highquality structure, coherent\nsemantics, and robust completion from single LiDAR scans, as well as zero-shot\ngeneralization to out-of-distribution LiDAR data. These results indicate that\ncompletion-through-generation in a dual octree graph latent space is a\npractical and scalable alternative to regression-based pipelines for real-world\nrobotic perception tasks.",
+        "url": "http://arxiv.org/abs/2509.16483v1",
+        "published_date": "2025-09-20T00:53:13+00:00",
+        "updated_date": "2025-09-20T00:53:13+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Xujia Zhang",
+            "Brendan Crowe",
+            "Christoffer Heckman"
+        ],
+        "tldr": "This paper introduces Octree Latent Semantic Diffusion, a unified framework for 3D semantic scene generation, completion, and extension in both indoor and outdoor environments, using a dual octree graph latent representation and diffusion models. It demonstrates zero-shot generalization to out-of-distribution LiDAR data.",
+        "tldr_zh": "本文介绍了一种名为Octree Latent Semantic Diffusion的统一框架，用于在室内和室外环境中进行3D语义场景生成、补全和扩展，使用双八叉树图潜在表示和扩散模型。该方法展示了对分布外激光雷达数据的零样本泛化能力。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "StereoAdapter: Adapting Stereo Depth Estimation to Underwater Scenes",
+        "summary": "Underwater stereo depth estimation provides accurate 3D geometry for robotics\ntasks such as navigation, inspection, and mapping, offering metric depth from\nlow-cost passive cameras while avoiding the scale ambiguity of monocular\nmethods. However, existing approaches face two critical challenges: (i)\nparameter-efficiently adapting large vision foundation encoders to the\nunderwater domain without extensive labeled data, and (ii) tightly fusing\nglobally coherent but scale-ambiguous monocular priors with locally metric yet\nphotometrically fragile stereo correspondences. To address these challenges, we\npropose StereoAdapter, a parameter-efficient self-supervised framework that\nintegrates a LoRA-adapted monocular foundation encoder with a recurrent stereo\nrefinement module. We further introduce dynamic LoRA adaptation for efficient\nrank selection and pre-training on the synthetic UW-StereoDepth-40K dataset to\nenhance robustness under diverse underwater conditions. Comprehensive\nevaluations on both simulated and real-world benchmarks show improvements of\n6.11% on TartanAir and 5.12% on SQUID compared to state-of-the-art methods,\nwhile real-world deployment with the BlueROV2 robot further demonstrates the\nconsistent robustness of our approach. Code:\nhttps://github.com/AIGeeksGroup/StereoAdapter. Website:\nhttps://aigeeksgroup.github.io/StereoAdapter.",
+        "url": "http://arxiv.org/abs/2509.16415v1",
+        "published_date": "2025-09-19T20:57:03+00:00",
+        "updated_date": "2025-09-19T20:57:03+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Zhengri Wu",
+            "Yiran Wang",
+            "Yu Wen",
+            "Zeyu Zhang",
+            "Biao Wu",
+            "Hao Tang"
+        ],
+        "tldr": "The paper introduces StereoAdapter, a parameter-efficient, self-supervised framework that adapts stereo depth estimation for underwater scenes by integrating a LoRA-adapted monocular foundation encoder with a recurrent stereo refinement module, demonstrating improved performance in both simulated and real-world environments.",
+        "tldr_zh": "该论文介绍了StereoAdapter，一个参数高效的自监督框架，通过结合LoRA适配的单目基础编码器和循环立体细化模块，来调整立体深度估计以适应水下场景，并在模拟和真实环境中展示了改进的性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Neural Atlas Graphs for Dynamic Scene Decomposition and Editing",
+        "summary": "Learning editable high-resolution scene representations for dynamic scenes is\nan open problem with applications across the domains from autonomous driving to\ncreative editing - the most successful approaches today make a trade-off\nbetween editability and supporting scene complexity: neural atlases represent\ndynamic scenes as two deforming image layers, foreground and background, which\nare editable in 2D, but break down when multiple objects occlude and interact.\nIn contrast, scene graph models make use of annotated data such as masks and\nbounding boxes from autonomous-driving datasets to capture complex 3D spatial\nrelationships, but their implicit volumetric node representations are\nchallenging to edit view-consistently. We propose Neural Atlas Graphs (NAGs), a\nhybrid high-resolution scene representation, where every graph node is a\nview-dependent neural atlas, facilitating both 2D appearance editing and 3D\nordering and positioning of scene elements. Fit at test-time, NAGs achieve\nstate-of-the-art quantitative results on the Waymo Open Dataset - by 5 dB PSNR\nincrease compared to existing methods - and make environmental editing possible\nin high resolution and visual quality - creating counterfactual driving\nscenarios with new backgrounds and edited vehicle appearance. We find that the\nmethod also generalizes beyond driving scenes and compares favorably - by more\nthan 7 dB in PSNR - to recent matting and video editing baselines on the DAVIS\nvideo dataset with a diverse set of human and animal-centric scenes.",
+        "url": "http://arxiv.org/abs/2509.16336v1",
+        "published_date": "2025-09-19T18:24:41+00:00",
+        "updated_date": "2025-09-19T18:24:41+00:00",
+        "categories": [
+            "cs.GR",
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Jan Philipp Schneider",
+            "Pratik Singh Bisht",
+            "Ilya Chugunov",
+            "Andreas Kolb",
+            "Michael Moeller",
+            "Felix Heide"
+        ],
+        "tldr": "The paper introduces Neural Atlas Graphs (NAGs), a hybrid scene representation combining neural atlases and scene graphs for editable dynamic scenes, achieving state-of-the-art results on Waymo and DAVIS datasets.",
+        "tldr_zh": "该论文介绍了神经图集图（NAGs），一种混合场景表示，结合了神经图集和场景图，用于可编辑的动态场景，并在Waymo和DAVIS数据集上取得了最先进的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    }
+]

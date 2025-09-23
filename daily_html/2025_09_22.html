@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Autonomous Driving, VLA, 3D Understanding, Robotics) - September 13, 2025</title>
+    <title>ArXiv CS.CV Papers (Autonomous Driving, VLA, 3D Understanding, Robotics) - September 22, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>VLM Daily Papers</h1>
         <p>Daily papers related to VLA/AV/3D Understanding from cs.CV</p>
         
-            <p>September 13, 2025</p>
+            <p>September 22, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,36 +215,34 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">GC-VLN: Instruction as Graph Constraints for Training-free Vision-and-Language Navigation</h2>
+            <h2 class="paper-title">CoBEVMoE: Heterogeneity-aware Feature Fusion with Dynamic Mixture-of-Experts for Collaborative Perception</h2>
             
-            <p class="paper-summary">In this paper, we propose a training-free framework for vision-and-language
-navigation (VLN). Existing zero-shot VLN methods are mainly designed for
-discrete environments or involve unsupervised training in continuous simulator
-environments, which makes it challenging to generalize and deploy them in
-real-world scenarios. To achieve a training-free framework in continuous
-environments, our framework formulates navigation guidance as graph constraint
-optimization by decomposing instructions into explicit spatial constraints. The
-constraint-driven paradigm decodes spatial semantics through constraint
-solving, enabling zero-shot adaptation to unseen environments. Specifically, we
-construct a spatial constraint library covering all types of spatial
-relationship mentioned in VLN instructions. The human instruction is decomposed
-into a directed acyclic graph, with waypoint nodes, object nodes and edges,
-which are used as queries to retrieve the library to build the graph
-constraints. The graph constraint optimization is solved by the constraint
-solver to determine the positions of waypoints, obtaining the robot's
-navigation path and final goal. To handle cases of no solution or multiple
-solutions, we construct a navigation tree and the backtracking mechanism.
-Extensive experiments on standard benchmarks demonstrate significant
-improvements in success rate and navigation efficiency compared to
-state-of-the-art zero-shot VLN methods. We further conduct real-world
-experiments to show that our framework can effectively generalize to new
-environments and instruction sets, paving the way for a more robust and
-autonomous navigation framework.</p>
+            <p class="paper-summary">Collaborative perception aims to extend sensing coverage and improve
+perception accuracy by sharing information among multiple agents. However, due
+to differences in viewpoints and spatial positions, agents often acquire
+heterogeneous observations. Existing intermediate fusion methods primarily
+focus on aligning similar features, often overlooking the perceptual diversity
+among agents. To address this limitation, we propose CoBEVMoE, a novel
+collaborative perception framework that operates in the Bird's Eye View (BEV)
+space and incorporates a Dynamic Mixture-of-Experts (DMoE) architecture. In
+DMoE, each expert is dynamically generated based on the input features of a
+specific agent, enabling it to extract distinctive and reliable cues while
+attending to shared semantics. This design allows the fusion process to
+explicitly model both feature similarity and heterogeneity across agents.
+Furthermore, we introduce a Dynamic Expert Metric Loss (DEML) to enhance
+inter-expert diversity and improve the discriminability of the fused
+representation. Extensive experiments on the OPV2V and DAIR-V2X-C datasets
+demonstrate that CoBEVMoE achieves state-of-the-art performance. Specifically,
+it improves the IoU for Camera-based BEV segmentation by +1.5% on OPV2V and the
+AP@50 for LiDAR-based 3D object detection by +3.0% on DAIR-V2X-C, verifying the
+effectiveness of expert-based heterogeneous feature modeling in multi-agent
+collaborative perception. The source code will be made publicly available at
+https://github.com/godk0509/CoBEVMoE.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper presents a training-free vision-and-language navigation (VLN) framework that formulates navigation guidance as graph constraint optimization, achieving zero-shot adaptation to unseen environments. It demonstrates significant improvements over existing zero-shot VLN methods and shows effective generalization in real-world experiments.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: CoBEVMoE introduces a Dynamic Mixture-of-Experts architecture for collaborative perception in autonomous driving, explicitly modeling feature heterogeneity across agents and achieving state-of-the-art performance on relevant datasets.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种无需训练的视觉语言导航(VLN)框架，该框架将导航指导建模为图约束优化，实现了对未见环境的零样本适应。该框架在标准benchmark上表现出优于现有零样本VLN方法的性能，并在真实世界的实验中展示了有效的泛化能力。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: CoBEVMoE 引入了一种动态混合专家架构，用于自动驾驶中的协作感知，显式建模了跨代理的特征异构性，并在相关数据集上实现了最先进的性能。</p>
             
 
             
@@ -270,8 +268,8 @@ autonomous navigation framework.</p>
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -315,11 +313,11 @@ autonomous navigation framework.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2509.10454v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2509.17107v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Hang Yin, Haoyu Wei, Xiuwei Xu, Wenxuan Guo, Jie Zhou, Jiwen Lu</p>
+            <p class="paper-authors">Authors: Lingzhao Kong, Jiacheng Lin, Siyu Li, Kai Luo, Zhiyong Li, Kailun Yang</p>
             
         </motion.div>
         
@@ -331,35 +329,23 @@ autonomous navigation framework.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Multimodal SAM-adapter for Semantic Segmentation</h2>
+            <h2 class="paper-title">SLAM-Former: Putting SLAM into One Transformer</h2>
             
-            <p class="paper-summary">Semantic segmentation, a key task in computer vision with broad applications
-in autonomous driving, medical imaging, and robotics, has advanced
-substantially with deep learning. Nevertheless, current approaches remain
-vulnerable to challenging conditions such as poor lighting, occlusions, and
-adverse weather. To address these limitations, multimodal methods that
-integrate auxiliary sensor data (e.g., LiDAR, infrared) have recently emerged,
-providing complementary information that enhances robustness. In this work, we
-present MM SAM-adapter, a novel framework that extends the capabilities of the
-Segment Anything Model (SAM) for multimodal semantic segmentation. The proposed
-method employs an adapter network that injects fused multimodal features into
-SAM's rich RGB features. This design enables the model to retain the strong
-generalization ability of RGB features while selectively incorporating
-auxiliary modalities only when they contribute additional cues. As a result, MM
-SAM-adapter achieves a balanced and efficient use of multimodal information. We
-evaluate our approach on three challenging benchmarks, DeLiVER, FMB, and MUSES,
-where MM SAM-adapter delivers state-of-the-art performance. To further analyze
-modality contributions, we partition DeLiVER and FMB into RGB-easy and RGB-hard
-subsets. Results consistently demonstrate that our framework outperforms
-competing methods in both favorable and adverse conditions, highlighting the
-effectiveness of multimodal adaptation for robust scene understanding. The code
-is available at the following link:
-https://github.com/iacopo97/Multimodal-SAM-Adapter.</p>
+            <p class="paper-summary">We present SLAM-Former, a novel neural approach that integrates full SLAM
+capabilities into a single transformer. Similar to traditional SLAM systems,
+SLAM-Former comprises both a frontend and a backend that operate in tandem. The
+frontend processes sequential monocular images in real-time for incremental
+mapping and tracking, while the backend performs global refinement to ensure a
+geometrically consistent result. This alternating execution allows the frontend
+and backend to mutually promote one another, enhancing overall system
+performance. Comprehensive experimental results demonstrate that SLAM-Former
+achieves superior or highly competitive performance compared to
+state-of-the-art dense SLAM methods.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces MM SAM-adapter, a novel multimodal semantic segmentation framework that extends SAM using an adapter network to fuse auxiliary sensor data with RGB features, achieving state-of-the-art performance on challenging benchmarks.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: SLAM-Former is a novel SLAM system implemented as a single transformer network, featuring a frontend for real-time incremental mapping and a backend for global refinement, achieving state-of-the-art or competitive performance.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种名为 MM SAM-adapter 的新型多模态语义分割框架，该框架使用适配器网络将辅助传感器数据与 RGB 特征融合，从而扩展了 SAM，并在具有挑战性的基准测试中实现了最先进的性能。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: SLAM-Former是一个新颖的SLAM系统，它被实现为一个单独的Transformer网络，具有用于实时增量映射的前端和用于全局优化的后端，实现了最先进或有竞争力的性能。</p>
             
 
             
@@ -385,8 +371,8 @@ https://github.com/iacopo97/Multimodal-SAM-Adapter.</p>
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -430,11 +416,11 @@ https://github.com/iacopo97/Multimodal-SAM-Adapter.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2509.10408v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2509.16909v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Iacopo Curti, Pierluigi Zama Ramirez, Alioscia Petrelli, Luigi Di Stefano</p>
+            <p class="paper-authors">Authors: Yijun Yuan, Zhuoguang Chen, Kenan Li, Weibang Wang, Hang Zhao</p>
             
         </motion.div>
         
@@ -446,31 +432,32 @@ https://github.com/iacopo97/Multimodal-SAM-Adapter.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">BEVTraj: Map-Free End-to-End Trajectory Prediction in Bird's-Eye View with Deformable Attention and Sparse Goal Proposals</h2>
+            <h2 class="paper-title">ConfidentSplat: Confidence-Weighted Depth Fusion for Accurate 3D Gaussian Splatting SLAM</h2>
             
-            <p class="paper-summary">In autonomous driving, trajectory prediction is essential for ensuring safe
-and efficient navigation. To improve prediction accuracy, recent approaches
-often rely on pre-built high-definition (HD) maps or real-time local map
-construction modules to incorporate static environmental information. However,
-pre-built HD maps are limited to specific regions and cannot adapt to transient
-changes. In addition, local map construction modules, which recognize only
-predefined elements, may fail to capture critical scene details or introduce
-errors that degrade prediction performance. To overcome these limitations, we
-propose Bird's-Eye View Trajectory Prediction (BEVTraj), a novel trajectory
-prediction framework that operates directly in the bird's-eye view (BEV) space
-utilizing real-time sensor data without relying on any pre-built maps. The
-BEVTraj leverages deformable attention to efficiently extract relevant context
-from dense BEV features. Furthermore, we introduce a Sparse Goal Candidate
-Proposal (SGCP) module, which enables full end-to-end prediction without
-requiring any post-processing steps. Extensive experiments demonstrate that the
-BEVTraj achieves performance comparable to state-of-the-art HD map-based models
-while offering greater flexibility by eliminating the dependency on pre-built
-maps. The source code is available at https://github.com/Kongminsang/bevtraj.</p>
+            <p class="paper-summary">We introduce ConfidentSplat, a novel 3D Gaussian Splatting (3DGS)-based SLAM
+system for robust, highfidelity RGB-only reconstruction. Addressing geometric
+inaccuracies in existing RGB-only 3DGS SLAM methods that stem from unreliable
+depth estimation, ConfidentSplat incorporates a core innovation: a
+confidence-weighted fusion mechanism. This mechanism adaptively integrates
+depth cues from multiview geometry with learned monocular priors (Omnidata
+ViT), dynamically weighting their contributions based on explicit reliability
+estimates-derived predominantly from multi-view geometric consistency-to
+generate high-fidelity proxy depth for map supervision. The resulting proxy
+depth guides the optimization of a deformable 3DGS map, which efficiently
+adapts online to maintain global consistency following pose updates from a
+DROID-SLAM-inspired frontend and backend optimizations (loop closure, global
+bundle adjustment). Extensive validation on standard benchmarks (TUM-RGBD,
+ScanNet) and diverse custom mobile datasets demonstrates significant
+improvements in reconstruction accuracy (L1 depth error) and novel view
+synthesis fidelity (PSNR, SSIM, LPIPS) over baselines, particularly in
+challenging conditions. ConfidentSplat underscores the efficacy of principled,
+confidence-aware sensor fusion for advancing state-of-the-art dense visual
+SLAM.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: BEVTraj is a novel map-free trajectory prediction framework using deformable attention and sparse goal proposals in bird's-eye view, achieving comparable performance to HD map-based methods.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: ConfidentSplat introduces a confidence-weighted depth fusion mechanism for 3D Gaussian Splatting SLAM, improving reconstruction accuracy and novel view synthesis, particularly in challenging conditions, by integrating multi-view geometry and learned monocular priors.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: BEVTraj是一个新颖的无地图轨迹预测框架，它使用鸟瞰图中的可变形注意力和稀疏目标提议，实现了与基于高清地图的方法相当的性能。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: ConfidentSplat 引入了一种置信度加权的深度融合机制，用于 3D 高斯溅射 SLAM，通过整合多视图几何和学习的单目先验，提高了重建精度和新视角合成质量，尤其是在具有挑战性的条件下。</p>
             
 
             
@@ -541,11 +528,11 @@ maps. The source code is available at https://github.com/Kongminsang/bevtraj.</p
             </div>
             
 
-            <a href="http://arxiv.org/abs/2509.10080v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2509.16863v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Minsang Kong, Myeongjun Kim, Sang Gu Kang, Sang Hun Lee</p>
+            <p class="paper-authors">Authors: Amanuel T. Dufera, Yuan-Li Cai</p>
             
         </motion.div>
         
@@ -557,34 +544,29 @@ maps. The source code is available at https://github.com/Kongminsang/bevtraj.</p
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">TUNI: Real-time RGB-T Semantic Segmentation with Unified Multi-Modal Feature Extraction and Cross-Modal Feature Fusion</h2>
+            <h2 class="paper-title">MMPart: Harnessing Multi-Modal Large Language Models for Part-Aware 3D Generation</h2>
             
-            <p class="paper-summary">RGB-thermal (RGB-T) semantic segmentation improves the environmental
-perception of autonomous platforms in challenging conditions. Prevailing models
-employ encoders pre-trained on RGB images to extract features from both RGB and
-infrared inputs, and design additional modules to achieve cross-modal feature
-fusion. This results in limited thermal feature extraction and suboptimal
-cross-modal fusion, while the redundant encoders further compromises the
-model's real-time efficiency. To address the above issues, we propose TUNI,
-with an RGB-T encoder consisting of multiple stacked blocks that simultaneously
-perform multi-modal feature extraction and cross-modal fusion. By leveraging
-large-scale pre-training with RGB and pseudo-thermal data, the RGB-T encoder
-learns to integrate feature extraction and fusion in a unified manner. By
-slimming down the thermal branch, the encoder achieves a more compact
-architecture. Moreover, we introduce an RGB-T local module to strengthen the
-encoder's capacity for cross-modal local feature fusion. The RGB-T local module
-employs adaptive cosine similarity to selectively emphasize salient consistent
-and distinct local features across RGB-T modalities. Experimental results show
-that TUNI achieves competitive performance with state-of-the-art models on FMB,
-PST900 and CART, with fewer parameters and lower computational cost. Meanwhile,
-it achieves an inference speed of 27 FPS on a Jetson Orin NX, demonstrating its
-real-time capability in deployment. Codes are available at
-https://github.com/xiaodonguo/TUNI.</p>
+            <p class="paper-summary">Generative 3D modeling has advanced rapidly, driven by applications in VR/AR,
+metaverse, and robotics. However, most methods represent the target object as a
+closed mesh devoid of any structural information, limiting editing, animation,
+and semantic understanding. Part-aware 3D generation addresses this problem by
+decomposing objects into meaningful components, but existing pipelines face
+challenges: in existing methods, the user has no control over which objects are
+separated and how model imagine the occluded parts in isolation phase. In this
+paper, we introduce MMPart, an innovative framework for generating part-aware
+3D models from a single image. We first use a VLM to generate a set of prompts
+based on the input image and user descriptions. In the next step, a generative
+model generates isolated images of each object based on the initial image and
+the previous step's prompts as supervisor (which control the pose and guide
+model how imagine previously occluded areas). Each of those images then enters
+the multi-view generation stage, where a number of consistent images from
+different views are generated. Finally, a reconstruction model converts each of
+these multi-view images into a 3D model.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces TUNI, a real-time RGB-T semantic segmentation network with a unified multi-modal feature extraction and cross-modal fusion approach, achieving competitive performance with fewer parameters and real-time inference on an embedded platform.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper presents MMPart, a framework for generating part-aware 3D models from a single image using VLMs to generate prompts that guide a generative model to create isolated part images, which are then used for multi-view 3D reconstruction.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为TUNI的实时RGB-T语义分割网络，它采用统一的多模态特征提取和跨模态特征融合方法，以更少的参数实现了具有竞争力的性能，并在嵌入式平台上实现了实时推理。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了MMPart，一个利用多模态大语言模型从单张图像生成部件感知的3D模型的框架。该框架使用VLM生成提示，引导生成模型创建隔离的部件图像，然后用于多视角3D重建。</p>
             
 
             
@@ -610,8 +592,8 @@ https://github.com/xiaodonguo/TUNI.</p>
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -655,125 +637,18 @@ https://github.com/xiaodonguo/TUNI.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2509.10005v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2509.16768v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Xiaodong Guo, Tong Liu, Yike Li, Zi'ang Lin, Zhihong Deng</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.2, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">On the Geometric Accuracy of Implicit and Primitive-based Representations Derived from View Rendering Constraints</h2>
-            
-            <p class="paper-summary">We present the first systematic comparison of implicit and explicit Novel
-View Synthesis methods for space-based 3D object reconstruction, evaluating the
-role of appearance embeddings. While embeddings improve photometric fidelity by
-modeling lighting variation, we show they do not translate into meaningful
-gains in geometric accuracy - a critical requirement for space robotics
-applications. Using the SPEED+ dataset, we compare K-Planes, Gaussian
-Splatting, and Convex Splatting, and demonstrate that embeddings primarily
-reduce the number of primitives needed for explicit methods rather than
-enhancing geometric fidelity. Moreover, convex splatting achieves more compact
-and clutter-free representations than Gaussian splatting, offering advantages
-for safety-critical applications such as interaction and collision avoidance.
-Our findings clarify the limits of appearance embeddings for geometry-centric
-tasks and highlight trade-offs between reconstruction quality and
-representation efficiency in space scenarios.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper compares implicit and explicit Novel View Synthesis methods for 3D object reconstruction in space, finding that appearance embeddings improve photometric fidelity but not geometric accuracy, a key requirement for space robotics. Convex splatting offers advantages for safety-critical applications due to more compact representations.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文比较了用于空间3D物体重建的隐式和显式新型视图合成方法，发现外观嵌入提高了光度保真度，但没有提高几何精度，而几何精度是空间机器人技术的一项关键要求。凸溅射由于其更紧凑的表示，为安全关键型应用提供了优势。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(6/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star-half-alt"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2509.10241v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Elias De Smijter, Renaud Detry, Christophe De Vleeschouwer</p>
+            <p class="paper-authors">Authors: Omid Bonakdar, Nasser Mozayani</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-09-23 03:30:52 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-09-23 03:37:09 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>
