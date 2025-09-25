@@ -1,0 +1,398 @@
+[
+    {
+        "title": "Queryable 3D Scene Representation: A Multi-Modal Framework for Semantic Reasoning and Robotic Task Planning",
+        "summary": "To enable robots to comprehend high-level human instructions and perform\ncomplex tasks, a key challenge lies in achieving comprehensive scene\nunderstanding: interpreting and interacting with the 3D environment in a\nmeaningful way. This requires a smart map that fuses accurate geometric\nstructure with rich, human-understandable semantics. To address this, we\nintroduce the 3D Queryable Scene Representation (3D QSR), a novel framework\nbuilt on multimedia data that unifies three complementary 3D representations:\n(1) 3D-consistent novel view rendering and segmentation from panoptic\nreconstruction, (2) precise geometry from 3D point clouds, and (3) structured,\nscalable organization via 3D scene graphs. Built on an object-centric design,\nthe framework integrates with large vision-language models to enable semantic\nqueryability by linking multimodal object embeddings, and supporting\nobject-level retrieval of geometric, visual, and semantic information. The\nretrieved data are then loaded into a robotic task planner for downstream\nexecution. We evaluate our approach through simulated robotic task planning\nscenarios in Unity, guided by abstract language instructions and using the\nindoor public dataset Replica. Furthermore, we apply it in a digital duplicate\nof a real wet lab environment to test QSR-supported robotic task planning for\nemergency response. The results demonstrate the framework's ability to\nfacilitate scene understanding and integrate spatial and semantic reasoning,\neffectively translating high-level human instructions into precise robotic task\nplanning in complex 3D environments.",
+        "url": "http://arxiv.org/abs/2509.20077v1",
+        "published_date": "2025-09-24T12:53:32+00:00",
+        "updated_date": "2025-09-24T12:53:32+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV",
+            "cs.HC"
+        ],
+        "authors": [
+            "Xun Li",
+            "Rodrigo Santa Cruz",
+            "Mingze Xi",
+            "Hu Zhang",
+            "Madhawa Perera",
+            "Ziwei Wang",
+            "Ahalya Ravendran",
+            "Brandon J. Matthews",
+            "Feng Xu",
+            "Matt Adcock",
+            "Dadong Wang",
+            "Jiajun Liu"
+        ],
+        "tldr": "This paper introduces a 3D Queryable Scene Representation (3D QSR) framework that integrates geometric, visual, and semantic information for robotic task planning based on high-level language instructions, demonstrating its effectiveness in simulated and real-world environments.",
+        "tldr_zh": "本文介绍了一种三维可查询场景表示（3D QSR）框架，该框架集成了几何、视觉和语义信息，用于基于高级语言指令的机器人任务规划，并在模拟和真实环境中展示了其有效性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "OmniScene: Attention-Augmented Multimodal 4D Scene Understanding for Autonomous Driving",
+        "summary": "Human vision is capable of transforming two-dimensional observations into an\negocentric three-dimensional scene understanding, which underpins the ability\nto translate complex scenes and exhibit adaptive behaviors. This capability,\nhowever, remains lacking in current autonomous driving systems, where\nmainstream approaches primarily rely on depth-based 3D reconstruction rather\nthan true scene understanding. To address this limitation, we propose a novel\nhuman-like framework called OmniScene. First, we introduce the OmniScene\nVision-Language Model (OmniVLM), a vision-language framework that integrates\nmulti-view and temporal perception for holistic 4D scene understanding. Then,\nharnessing a teacher-student OmniVLM architecture and knowledge distillation,\nwe embed textual representations into 3D instance features for semantic\nsupervision, enriching feature learning, and explicitly capturing human-like\nattentional semantics. These feature representations are further aligned with\nhuman driving behaviors, forming a more human-like\nperception-understanding-action architecture. In addition, we propose a\nHierarchical Fusion Strategy (HFS) to address imbalances in modality\ncontributions during multimodal integration. Our approach adaptively calibrates\nthe relative significance of geometric and semantic features at multiple\nabstraction levels, enabling the synergistic use of complementary cues from\nvisual and textual modalities. This learnable dynamic fusion enables a more\nnuanced and effective exploitation of heterogeneous information. We evaluate\nOmniScene comprehensively on the nuScenes dataset, benchmarking it against over\nten state-of-the-art models across various tasks. Our approach consistently\nachieves superior results, establishing new benchmarks in perception,\nprediction, planning, and visual question answering.",
+        "url": "http://arxiv.org/abs/2509.19973v1",
+        "published_date": "2025-09-24T10:28:06+00:00",
+        "updated_date": "2025-09-24T10:28:06+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Pei Liu",
+            "Hongliang Lu",
+            "Haichao Liu",
+            "Haipeng Liu",
+            "Xin Liu",
+            "Ruoyu Yao",
+            "Shengbo Eben Li",
+            "Jun Ma"
+        ],
+        "tldr": "The paper introduces OmniScene, a novel vision-language model for autonomous driving that integrates multi-view and temporal perception, attention mechanisms, and a hierarchical fusion strategy to achieve superior performance in 4D scene understanding across various tasks.",
+        "tldr_zh": "该论文介绍了OmniScene，一种用于自动驾驶的新型视觉-语言模型，它集成了多视图和时间感知、注意力机制和分层融合策略，从而在各种任务中实现卓越的 4D 场景理解性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "FreezeVLA: Action-Freezing Attacks against Vision-Language-Action Models",
+        "summary": "Vision-Language-Action (VLA) models are driving rapid progress in robotics by\nenabling agents to interpret multimodal inputs and execute complex,\nlong-horizon tasks. However, their safety and robustness against adversarial\nattacks remain largely underexplored. In this work, we identify and formalize a\ncritical adversarial vulnerability in which adversarial images can \"freeze\" VLA\nmodels and cause them to ignore subsequent instructions. This threat\neffectively disconnects the robot's digital mind from its physical actions,\npotentially inducing inaction during critical interventions. To systematically\nstudy this vulnerability, we propose FreezeVLA, a novel attack framework that\ngenerates and evaluates action-freezing attacks via min-max bi-level\noptimization. Experiments on three state-of-the-art VLA models and four robotic\nbenchmarks show that FreezeVLA attains an average attack success rate of 76.2%,\nsignificantly outperforming existing methods. Moreover, adversarial images\ngenerated by FreezeVLA exhibit strong transferability, with a single image\nreliably inducing paralysis across diverse language prompts. Our findings\nexpose a critical safety risk in VLA models and highlight the urgent need for\nrobust defense mechanisms.",
+        "url": "http://arxiv.org/abs/2509.19870v1",
+        "published_date": "2025-09-24T08:15:28+00:00",
+        "updated_date": "2025-09-24T08:15:28+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Xin Wang",
+            "Jie Li",
+            "Zejia Weng",
+            "Yixu Wang",
+            "Yifeng Gao",
+            "Tianyu Pang",
+            "Chao Du",
+            "Yan Teng",
+            "Yingchun Wang",
+            "Zuxuan Wu",
+            "Xingjun Ma",
+            "Yu-Gang Jiang"
+        ],
+        "tldr": "The paper identifies a critical vulnerability in Vision-Language-Action (VLA) models where adversarial images can cause the model to freeze, ignoring subsequent instructions, and proposes FreezeVLA, an attack framework to systematically study this vulnerability.",
+        "tldr_zh": "该论文发现视觉-语言-动作(VLA)模型中的一个关键漏洞，即对抗性图像可能导致模型冻结，忽略后续指令。论文提出了FreezeVLA，一个用于系统研究这种漏洞的攻击框架。",
+        "relevance_score": 10,
+        "novelty_claim_score": 9,
+        "clarity_score": 10,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "4D Driving Scene Generation With Stereo Forcing",
+        "summary": "Current generative models struggle to synthesize dynamic 4D driving scenes\nthat simultaneously support temporal extrapolation and spatial novel view\nsynthesis (NVS) without per-scene optimization. Bridging generation and novel\nview synthesis remains a major challenge. We present PhiGenesis, a unified\nframework for 4D scene generation that extends video generation techniques with\ngeometric and temporal consistency. Given multi-view image sequences and camera\nparameters, PhiGenesis produces temporally continuous 4D Gaussian splatting\nrepresentations along target 3D trajectories. In its first stage, PhiGenesis\nleverages a pre-trained video VAE with a novel range-view adapter to enable\nfeed-forward 4D reconstruction from multi-view images. This architecture\nsupports single-frame or video inputs and outputs complete 4D scenes including\ngeometry, semantics, and motion. In the second stage, PhiGenesis introduces a\ngeometric-guided video diffusion model, using rendered historical 4D scenes as\npriors to generate future views conditioned on trajectories. To address\ngeometric exposure bias in novel views, we propose Stereo Forcing, a novel\nconditioning strategy that integrates geometric uncertainty during denoising.\nThis method enhances temporal coherence by dynamically adjusting generative\ninfluence based on uncertainty-aware perturbations. Our experimental results\ndemonstrate that our method achieves state-of-the-art performance in both\nappearance and geometric reconstruction, temporal generation and novel view\nsynthesis (NVS) tasks, while simultaneously delivering competitive performance\nin downstream evaluations. Homepage is at\n\\href{https://jiangxb98.github.io/PhiGensis}{PhiGensis}.",
+        "url": "http://arxiv.org/abs/2509.20251v1",
+        "published_date": "2025-09-24T15:37:17+00:00",
+        "updated_date": "2025-09-24T15:37:17+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Hao Lu",
+            "Zhuang Ma",
+            "Guangfeng Jiang",
+            "Wenhang Ge",
+            "Bohan Li",
+            "Yuzhan Cai",
+            "Wenzhao Zheng",
+            "Yunpeng Zhang",
+            "Yingcong Chen"
+        ],
+        "tldr": "The paper introduces PhiGenesis, a framework for generating dynamic 4D driving scenes with temporal extrapolation and novel view synthesis, using a video VAE and a geometric-guided video diffusion model with a novel \"Stereo Forcing\" technique to improve geometric consistency and temporal coherence.",
+        "tldr_zh": "该论文介绍了一个名为PhiGenesis的框架，用于生成具有时间外推和新视角合成的动态4D驾驶场景。该框架使用视频VAE和一个几何引导的视频扩散模型，并采用一种名为\"Stereo Forcing\"的新技术，以提高几何一致性和时间连贯性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Design Insights and Comparative Evaluation of a Hardware-Based Cooperative Perception Architecture for Lane Change Prediction",
+        "summary": "Research on lane change prediction has gained attention in the last few\nyears. Most existing works in this area have been conducted in simulation\nenvironments or with pre-recorded datasets, these works often rely on\nsimplified assumptions about sensing, communication, and traffic behavior that\ndo not always hold in practice. Real-world deployments of lane-change\nprediction systems are relatively rare, and when they are reported, the\npractical challenges, limitations, and lessons learned are often\nunder-documented. This study explores cooperative lane-change prediction\nthrough a real hardware deployment in mixed traffic and shares the insights\nthat emerged during implementation and testing. We highlight the practical\nchallenges we faced, including bottlenecks, reliability issues, and operational\nconstraints that shaped the behavior of the system. By documenting these\nexperiences, the study provides guidance for others working on similar\npipelines.",
+        "url": "http://arxiv.org/abs/2509.20218v1",
+        "published_date": "2025-09-24T15:15:05+00:00",
+        "updated_date": "2025-09-24T15:15:05+00:00",
+        "categories": [
+            "cs.AI",
+            "cs.AR",
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Mohamed Manzour",
+            "Catherine M. Elias",
+            "Omar M. Shehata",
+            "Rubén Izquierdo",
+            "Miguel Ángel Sotelo"
+        ],
+        "tldr": "This paper presents a real-world hardware deployment of a cooperative lane-change prediction system, highlighting practical challenges and insights gained during implementation and testing in mixed traffic.",
+        "tldr_zh": "本文介绍了一个协同变道预测系统的实际硬件部署，重点介绍了在混合交通中实施和测试过程中获得的实际挑战和见解。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Universal Camouflage Attack on Vision-Language Models for Autonomous Driving",
+        "summary": "Visual language modeling for automated driving is emerging as a promising\nresearch direction with substantial improvements in multimodal reasoning\ncapabilities. Despite its advanced reasoning abilities, VLM-AD remains\nvulnerable to serious security threats from adversarial attacks, which involve\nmisleading model decisions through carefully crafted perturbations. Existing\nattacks have obvious challenges: 1) Physical adversarial attacks primarily\ntarget vision modules. They are difficult to directly transfer to VLM-AD\nsystems because they typically attack low-level perceptual components. 2)\nAdversarial attacks against VLM-AD have largely concentrated on the digital\nlevel. To address these challenges, we propose the first Universal Camouflage\nAttack (UCA) framework for VLM-AD. Unlike previous methods that focus on\noptimizing the logit layer, UCA operates in the feature space to generate\nphysically realizable camouflage textures that exhibit strong generalization\nacross different user commands and model architectures. Motivated by the\nobserved vulnerability of encoder and projection layers in VLM-AD, UCA\nintroduces a feature divergence loss (FDL) that maximizes the representational\ndiscrepancy between clean and adversarial images. In addition, UCA incorporates\na multi-scale learning strategy and adjusts the sampling ratio to enhance its\nadaptability to changes in scale and viewpoint diversity in real-world\nscenarios, thereby improving training stability. Extensive experiments\ndemonstrate that UCA can induce incorrect driving commands across various\nVLM-AD models and driving scenarios, significantly surpassing existing\nstate-of-the-art attack methods (improving 30\\% in 3-P metrics). Furthermore,\nUCA exhibits strong attack robustness under diverse viewpoints and dynamic\nconditions, indicating high potential for practical deployment.",
+        "url": "http://arxiv.org/abs/2509.20196v1",
+        "published_date": "2025-09-24T14:52:01+00:00",
+        "updated_date": "2025-09-24T14:52:01+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Dehong Kong",
+            "Sifan Yu",
+            "Siyuan Liang",
+            "Jiawei Liang",
+            "Jianhou Gan",
+            "Aishan Liu",
+            "Wenqi Ren"
+        ],
+        "tldr": "The paper introduces a novel Universal Camouflage Attack (UCA) framework targeting vision-language models in autonomous driving, demonstrating strong attack performance and robustness in real-world scenarios.",
+        "tldr_zh": "该论文介绍了一种新颖的通用伪装攻击（UCA）框架，旨在攻击自动驾驶中的视觉语言模型，并在真实场景中展示了强大的攻击性能和鲁棒性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Hyperspectral Adapter for Semantic Segmentation with Vision Foundation Models",
+        "summary": "Hyperspectral imaging (HSI) captures spatial information along with dense\nspectral measurements across numerous narrow wavelength bands. This rich\nspectral content has the potential to facilitate robust robotic perception,\nparticularly in environments with complex material compositions, varying\nillumination, or other visually challenging conditions. However, current HSI\nsemantic segmentation methods underperform due to their reliance on\narchitectures and learning frameworks optimized for RGB inputs. In this work,\nwe propose a novel hyperspectral adapter that leverages pretrained vision\nfoundation models to effectively learn from hyperspectral data. Our\narchitecture incorporates a spectral transformer and a spectrum-aware spatial\nprior module to extract rich spatial-spectral features. Additionally, we\nintroduce a modality-aware interaction block that facilitates effective\nintegration of hyperspectral representations and frozen vision Transformer\nfeatures through dedicated extraction and injection mechanisms. Extensive\nevaluations on three benchmark autonomous driving datasets demonstrate that our\narchitecture achieves state-of-the-art semantic segmentation performance while\ndirectly using HSI inputs, outperforming both vision-based and hyperspectral\nsegmentation methods. We make the code available at\nhttps://hyperspectraladapter.cs.uni-freiburg.de.",
+        "url": "http://arxiv.org/abs/2509.20107v1",
+        "published_date": "2025-09-24T13:32:07+00:00",
+        "updated_date": "2025-09-24T13:32:07+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG",
+            "cs.RO"
+        ],
+        "authors": [
+            "JuanaJuana Valeria Hurtado",
+            "Rohit Mohan",
+            "Abhinav Valada"
+        ],
+        "tldr": "This paper introduces a novel hyperspectral adapter that leverages pretrained vision foundation models for semantic segmentation of HSI data, achieving state-of-the-art performance on autonomous driving datasets.",
+        "tldr_zh": "本文提出了一种新型高光谱适配器，该适配器利用预训练的视觉基础模型进行高光谱数据语义分割，并在自动驾驶数据集上实现了最先进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "GS-RoadPatching: Inpainting Gaussians via 3D Searching and Placing for Driving Scenes",
+        "summary": "This paper presents GS-RoadPatching, an inpainting method for driving scene\ncompletion by referring to completely reconstructed regions, which are\nrepresented by 3D Gaussian Splatting (3DGS). Unlike existing 3DGS inpainting\nmethods that perform generative completion relying on 2D perspective-view-based\ndiffusion or GAN models to predict limited appearance or depth cues for missing\nregions, our approach enables substitutional scene inpainting and editing\ndirectly through the 3DGS modality, extricating it from requiring\nspatial-temporal consistency of 2D cross-modals and eliminating the need for\ntime-intensive retraining of Gaussians. Our key insight is that the highly\nrepetitive patterns in driving scenes often share multi-modal similarities\nwithin the implicit 3DGS feature space and are particularly suitable for\nstructural matching to enable effective 3DGS-based substitutional inpainting.\nPractically, we construct feature-embedded 3DGS scenes to incorporate a patch\nmeasurement method for abstracting local context at different scales and,\nsubsequently, propose a structural search method to find candidate patches in\n3D space effectively. Finally, we propose a simple yet effective\nsubstitution-and-fusion optimization for better visual harmony. We conduct\nextensive experiments on multiple publicly available datasets to demonstrate\nthe effectiveness and efficiency of our proposed method in driving scenes, and\nthe results validate that our method achieves state-of-the-art performance\ncompared to the baseline methods in terms of both quality and interoperability.\nAdditional experiments in general scenes also demonstrate the applicability of\nthe proposed 3D inpainting strategy. The project page and code are available\nat: https://shanzhaguoo.github.io/GS-RoadPatching/",
+        "url": "http://arxiv.org/abs/2509.19937v1",
+        "published_date": "2025-09-24T09:44:37+00:00",
+        "updated_date": "2025-09-24T09:44:37+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Guo Chen",
+            "Jiarun Liu",
+            "Sicong Du",
+            "Chenming Wu",
+            "Deqi Li",
+            "Shi-Sheng Huang",
+            "Guofeng Zhang",
+            "Sheng Yang"
+        ],
+        "tldr": "The paper introduces GS-RoadPatching, a 3D Gaussian Splatting-based inpainting method for driving scenes that leverages structural matching and substitution to complete missing regions efficiently and effectively, achieving SOTA performance.",
+        "tldr_zh": "该论文介绍了GS-RoadPatching，一种基于3D高斯溅射的驾驶场景修复方法，它利用结构匹配和替换来高效且有效地完成缺失区域，并实现了SOTA性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "BiTAA: A Bi-Task Adversarial Attack for Object Detection and Depth Estimation via 3D Gaussian Splatting",
+        "summary": "Camera-based perception is critical to autonomous driving yet remains\nvulnerable to task-specific adversarial manipulations in object detection and\nmonocular depth estimation. Most existing 2D/3D attacks are developed in task\nsilos, lack mechanisms to induce controllable depth bias, and offer no\nstandardized protocol to quantify cross-task transfer, leaving the interaction\nbetween detection and depth underexplored. We present BiTAA, a bi-task\nadversarial attack built on 3D Gaussian Splatting that yields a single\nperturbation capable of simultaneously degrading detection and biasing\nmonocular depth. Specifically, we introduce a dual-model attack framework that\nsupports both full-image and patch settings and is compatible with common\ndetectors and depth estimators, with optional expectation-over-transformation\n(EOT) for physical reality. In addition, we design a composite loss that\ncouples detection suppression with a signed, magnitude-controlled log-depth\nbias within regions of interest (ROIs) enabling controllable near or far\nmisperception while maintaining stable optimization across tasks. We also\npropose a unified evaluation protocol with cross-task transfer metrics and\nreal-world evaluations, showing consistent cross-task degradation and a clear\nasymmetry between Det to Depth and from Depth to Det transfer. The results\nhighlight practical risks for multi-task camera-only perception and motivate\ncross-task-aware defenses in autonomous driving scenarios.",
+        "url": "http://arxiv.org/abs/2509.19793v1",
+        "published_date": "2025-09-24T06:27:15+00:00",
+        "updated_date": "2025-09-24T06:27:15+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yixun Zhang",
+            "Feng Zhou",
+            "Jianqin Yin"
+        ],
+        "tldr": "The paper introduces BiTAA, a novel adversarial attack using 3D Gaussian Splatting to simultaneously degrade object detection and bias depth estimation in autonomous driving, along with a unified evaluation protocol.",
+        "tldr_zh": "该论文介绍了BiTAA，一种新颖的对抗攻击方法，利用3D高斯溅射同时降低自动驾驶中的目标检测性能并使深度估计产生偏差，并提出了统一的评估协议。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "VIMD: Monocular Visual-Inertial Motion and Depth Estimation",
+        "summary": "Accurate and efficient dense metric depth estimation is crucial for 3D visual\nperception in robotics and XR. In this paper, we develop a monocular\nvisual-inertial motion and depth (VIMD) learning framework to estimate dense\nmetric depth by leveraging accurate and efficient MSCKF-based monocular\nvisual-inertial motion tracking. At the core the proposed VIMD is to exploit\nmulti-view information to iteratively refine per-pixel scale, instead of\nglobally fitting an invariant affine model as in the prior work. The VIMD\nframework is highly modular, making it compatible with a variety of existing\ndepth estimation backbones. We conduct extensive evaluations on the TartanAir\nand VOID datasets and demonstrate its zero-shot generalization capabilities on\nthe AR Table dataset. Our results show that VIMD achieves exceptional accuracy\nand robustness, even with extremely sparse points as few as 10-20 metric depth\npoints per image. This makes the proposed VIMD a practical solution for\ndeployment in resource constrained settings, while its robust performance and\nstrong generalization capabilities offer significant potential across a wide\nrange of scenarios.",
+        "url": "http://arxiv.org/abs/2509.19713v1",
+        "published_date": "2025-09-24T02:50:55+00:00",
+        "updated_date": "2025-09-24T02:50:55+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Saimouli Katragadda",
+            "Guoquan Huang"
+        ],
+        "tldr": "This paper presents a monocular visual-inertial motion and depth (VIMD) learning framework that leverages MSCKF-based motion tracking and iteratively refines per-pixel scale for accurate and efficient metric depth estimation, demonstrating strong performance and generalization across datasets.",
+        "tldr_zh": "该论文提出了一个单目视觉惯性运动和深度（VIMD）学习框架，利用基于MSCKF的运动跟踪并迭代优化每个像素的尺度，以实现准确高效的度量深度估计，并在多个数据集上展示了强大的性能和泛化能力。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "The Impact of 2D Segmentation Backbones on Point Cloud Predictions Using 4D Radar",
+        "summary": "LiDAR's dense, sharp point cloud (PC) representations of the surrounding\nenvironment enable accurate perception and significantly improve road safety by\noffering greater scene awareness and understanding. However, LiDAR's high cost\ncontinues to restrict the broad adoption of high-level Autonomous Driving (AD)\nsystems in commercially available vehicles. Prior research has shown progress\ntowards circumventing the need for LiDAR by training a neural network, using\nLiDAR point clouds as ground truth (GT), to produce LiDAR-like 3D point clouds\nusing only 4D Radars. One of the best examples is a neural network created to\ntrain a more efficient radar target detector with a modular 2D convolutional\nneural network (CNN) backbone and a temporal coherence network at its core that\nuses the RaDelft dataset for training (see arXiv:2406.04723). In this work, we\ninvestigate the impact of higher-capacity segmentation backbones on the quality\nof the produced point clouds. Our results show that while very high-capacity\nmodels may actually hurt performance, an optimal segmentation backbone can\nprovide a 23.7% improvement over the state-of-the-art (SOTA).",
+        "url": "http://arxiv.org/abs/2509.19644v1",
+        "published_date": "2025-09-23T23:21:50+00:00",
+        "updated_date": "2025-09-23T23:21:50+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "William L. Muckelroy III",
+            "Mohammed Alsakabi",
+            "John M. Dolan",
+            "Ozan K. Tonguz"
+        ],
+        "tldr": "This paper explores the impact of different 2D segmentation backbones on the quality of point clouds generated from 4D radar data, demonstrating that an optimal backbone choice can significantly improve performance compared to the state-of-the-art.",
+        "tldr_zh": "本文探讨了不同的 2D 分割骨干网络对从 4D 雷达数据生成的点云质量的影响，表明选择最佳骨干网络可以显著提高性能，优于当前最佳水平。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Agentic Scene Policies: Unifying Space, Semantics, and Affordances for Robot Action",
+        "summary": "Executing open-ended natural language queries is a core problem in robotics.\nWhile recent advances in imitation learning and vision-language-actions models\n(VLAs) have enabled promising end-to-end policies, these models struggle when\nfaced with complex instructions and new scenes. An alternative is to design an\nexplicit scene representation as a queryable interface between the robot and\nthe world, using query results to guide downstream motion planning. In this\nwork, we present Agentic Scene Policies (ASP), an agentic framework that\nleverages the advanced semantic, spatial, and affordance-based querying\ncapabilities of modern scene representations to implement a capable\nlanguage-conditioned robot policy. ASP can execute open-vocabulary queries in a\nzero-shot manner by explicitly reasoning about object affordances in the case\nof more complex skills. Through extensive experiments, we compare ASP with VLAs\non tabletop manipulation problems and showcase how ASP can tackle room-level\nqueries through affordance-guided navigation, and a scaled-up scene\nrepresentation. (Project page:\nhttps://montrealrobotics.ca/agentic-scene-policies.github.io/)",
+        "url": "http://arxiv.org/abs/2509.19571v1",
+        "published_date": "2025-09-23T20:56:00+00:00",
+        "updated_date": "2025-09-23T20:56:00+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Sacha Morin",
+            "Kumaraditya Gupta",
+            "Mahtab Sandhu",
+            "Charlie Gauthier",
+            "Francesco Argenziano",
+            "Kirsty Ellis",
+            "Liam Paull"
+        ],
+        "tldr": "The paper introduces Agentic Scene Policies (ASP), a framework leveraging scene representations and object affordances to improve robot action execution for complex, language-conditioned queries in novel environments, outperforming vision-language-action models.",
+        "tldr_zh": "该论文介绍了Agentic Scene Policies (ASP)，一个利用场景表示和物体可供性的框架，以改善机器人对复杂、语言条件查询在新的环境中执行动作，性能优于视觉-语言-动作模型。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "iFinder: Structured Zero-Shot Vision-Based LLM Grounding for Dash-Cam Video Reasoning",
+        "summary": "Grounding large language models (LLMs) in domain-specific tasks like post-hoc\ndash-cam driving video analysis is challenging due to their general-purpose\ntraining and lack of structured inductive biases. As vision is often the sole\nmodality available for such analysis (i.e., no LiDAR, GPS, etc.), existing\nvideo-based vision-language models (V-VLMs) struggle with spatial reasoning,\ncausal inference, and explainability of events in the input video. To this end,\nwe introduce iFinder, a structured semantic grounding framework that decouples\nperception from reasoning by translating dash-cam videos into a hierarchical,\ninterpretable data structure for LLMs. iFinder operates as a modular,\ntraining-free pipeline that employs pretrained vision models to extract\ncritical cues -- object pose, lane positions, and object trajectories -- which\nare hierarchically organized into frame- and video-level structures. Combined\nwith a three-block prompting strategy, it enables step-wise, grounded reasoning\nfor the LLM to refine a peer V-VLM's outputs and provide accurate reasoning.\nEvaluations on four public dash-cam video benchmarks show that iFinder's\nproposed grounding with domain-specific cues, especially object orientation and\nglobal context, significantly outperforms end-to-end V-VLMs on four zero-shot\ndriving benchmarks, with up to 39% gains in accident reasoning accuracy. By\ngrounding LLMs with driving domain-specific representations, iFinder offers a\nzero-shot, interpretable, and reliable alternative to end-to-end V-VLMs for\npost-hoc driving video understanding.",
+        "url": "http://arxiv.org/abs/2509.19552v1",
+        "published_date": "2025-09-23T20:25:53+00:00",
+        "updated_date": "2025-09-23T20:25:53+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Manyi Yao",
+            "Bingbing Zhuang",
+            "Sparsh Garg",
+            "Amit Roy-Chowdhury",
+            "Christian Shelton",
+            "Manmohan Chandraker",
+            "Abhishek Aich"
+        ],
+        "tldr": "The paper introduces iFinder, a training-free framework that translates dash-cam videos into structured data for LLMs, improving spatial reasoning and explainability in driving video analysis, achieving significant gains in accident reasoning accuracy compared to end-to-end V-VLMs.",
+        "tldr_zh": "该论文介绍了iFinder，一个无需训练的框架，将行车记录仪视频转化为结构化数据供LLM使用，提高了驾驶视频分析中的空间推理和可解释性，与端到端V-VLM相比，在事故推理准确性方面取得了显著提高。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Smaller is Better: Enhancing Transparency in Vehicle AI Systems via Pruning",
+        "summary": "Connected and autonomous vehicles continue to heavily rely on AI systems,\nwhere transparency and security are critical for trust and operational safety.\nPost-hoc explanations provide transparency to these black-box like AI models\nbut the quality and reliability of these explanations is often questioned due\nto inconsistencies and lack of faithfulness in representing model decisions.\nThis paper systematically examines the impact of three widely used training\napproaches, namely natural training, adversarial training, and pruning, affect\nthe quality of post-hoc explanations for traffic sign classifiers. Through\nextensive empirical evaluation, we demonstrate that pruning significantly\nenhances the comprehensibility and faithfulness of explanations (using saliency\nmaps). Our findings reveal that pruning not only improves model efficiency but\nalso enforces sparsity in learned representation, leading to more interpretable\nand reliable decisions. Additionally, these insights suggest that pruning is a\npromising strategy for developing transparent deep learning models, especially\nin resource-constrained vehicular AI systems.",
+        "url": "http://arxiv.org/abs/2509.20148v1",
+        "published_date": "2025-09-24T14:11:59+00:00",
+        "updated_date": "2025-09-24T14:11:59+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Sanish Suwal",
+            "Shaurya Garg",
+            "Dipkamal Bhusal",
+            "Michael Clifford",
+            "Nidhi Rastogi"
+        ],
+        "tldr": "This paper explores how pruning, compared to adversarial and natural training, improves the transparency and faithfulness of post-hoc explanations for traffic sign classifiers in autonomous vehicles. They find pruning enhances comprehensibility and reliability of explanations.",
+        "tldr_zh": "本文探讨了与对抗训练和自然训练相比，剪枝如何提高自动驾驶车辆中交通标志分类器事后解释的透明度和忠实度。他们发现剪枝增强了解释的可理解性和可靠性。",
+        "relevance_score": 8,
+        "novelty_claim_score": 6,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "ROPA: Synthetic Robot Pose Generation for RGB-D Bimanual Data Augmentation",
+        "summary": "Training robust bimanual manipulation policies via imitation learning\nrequires demonstration data with broad coverage over robot poses, contacts, and\nscene contexts. However, collecting diverse and precise real-world\ndemonstrations is costly and time-consuming, which hinders scalability. Prior\nworks have addressed this with data augmentation, typically for either\neye-in-hand (wrist camera) setups with RGB inputs or for generating novel\nimages without paired actions, leaving augmentation for eye-to-hand\n(third-person) RGB-D training with new action labels less explored. In this\npaper, we propose Synthetic Robot Pose Generation for RGB-D Bimanual Data\nAugmentation (ROPA), an offline imitation learning data augmentation method\nthat fine-tunes Stable Diffusion to synthesize third-person RGB and RGB-D\nobservations of novel robot poses. Our approach simultaneously generates\ncorresponding joint-space action labels while employing constrained\noptimization to enforce physical consistency through appropriate\ngripper-to-object contact constraints in bimanual scenarios. We evaluate our\nmethod on 5 simulated and 3 real-world tasks. Our results across 2625\nsimulation trials and 300 real-world trials demonstrate that ROPA outperforms\nbaselines and ablations, showing its potential for scalable RGB and RGB-D data\naugmentation in eye-to-hand bimanual manipulation. Our project website is\navailable at: https://ropaaug.github.io/.",
+        "url": "http://arxiv.org/abs/2509.19454v1",
+        "published_date": "2025-09-23T18:11:53+00:00",
+        "updated_date": "2025-09-23T18:11:53+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Jason Chen",
+            "I-Chun Arthur Liu",
+            "Gaurav Sukhatme",
+            "Daniel Seita"
+        ],
+        "tldr": "The paper proposes ROPA, a method using fine-tuned Stable Diffusion for RGB-D bimanual data augmentation in imitation learning, generating novel robot poses and actions while ensuring physical consistency. They demonstrate improved performance on simulated and real-world tasks.",
+        "tldr_zh": "该论文提出了ROPA，一种使用微调的Stable Diffusion进行RGB-D双臂操作模仿学习中的数据增强方法，生成新的机器人姿势和动作，同时确保物理一致性。他们在模拟和真实世界任务中展示了改进的性能。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
