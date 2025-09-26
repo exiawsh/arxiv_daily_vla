@@ -1,0 +1,339 @@
+[
+    {
+        "title": "Quantized Visual Geometry Grounded Transformer",
+        "summary": "Learning-based 3D reconstruction models, represented by Visual Geometry\nGrounded Transformers (VGGTs), have made remarkable progress with the use of\nlarge-scale transformers. Their prohibitive computational and memory costs\nseverely hinder real-world deployment. Post-Training Quantization (PTQ) has\nbecome a common practice for compressing and accelerating models. However, we\nempirically observe that PTQ faces unique obstacles when compressing\nbillion-scale VGGTs: the data-independent special tokens induce heavy-tailed\nactivation distributions, while the multi-view nature of 3D data makes\ncalibration sample selection highly unstable. This paper proposes the first\nQuantization framework for VGGTs, namely QuantVGGT. This mainly relies on two\ntechnical contributions: First, we introduce Dual-Smoothed Fine-Grained\nQuantization, which integrates pre-global Hadamard rotation and post-local\nchannel smoothing to mitigate heavy-tailed distributions and inter-channel\nvariance robustly. Second, we design Noise-Filtered Diverse Sampling, which\nfilters outliers via deep-layer statistics and constructs frame-aware diverse\ncalibration clusters to ensure stable quantization ranges. Comprehensive\nexperiments demonstrate that QuantVGGT achieves the state-of-the-art results\nacross different benchmarks and bit-width, surpassing the previous\nstate-of-the-art generic quantization method with a great margin. We highlight\nthat our 4-bit QuantVGGT can deliver a 3.7$\\times$ memory reduction and\n2.5$\\times$ acceleration in real-hardware inference, while maintaining\nreconstruction accuracy above 98\\% of its full-precision counterpart. This\ndemonstrates the vast advantages and practicality of QuantVGGT in\nresource-constrained scenarios. Our code is released in\nhttps://github.com/wlfeng0509/QuantVGGT.",
+        "url": "http://arxiv.org/abs/2509.21302v1",
+        "published_date": "2025-09-25T15:17:11+00:00",
+        "updated_date": "2025-09-25T15:17:11+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Weilun Feng",
+            "Haotong Qin",
+            "Mingqiang Wu",
+            "Chuanguang Yang",
+            "Yuqi Li",
+            "Xiangqi Li",
+            "Zhulin An",
+            "Libo Huang",
+            "Yulun Zhang",
+            "Michele Magno",
+            "Yongjun Xu"
+        ],
+        "tldr": "The paper introduces QuantVGGT, a novel quantization framework for compressing and accelerating Visual Geometry Grounded Transformers (VGGTs) for 3D reconstruction, achieving significant memory reduction and speedup with minimal accuracy loss.",
+        "tldr_zh": "该论文介绍了 QuantVGGT，一种用于压缩和加速视觉几何基础 Transformer (VGGT) 的新型量化框架，用于 3D 重建，实现了显著的内存减少和加速，同时精度损失极小。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Human-like Navigation in a World Built for Humans",
+        "summary": "When navigating in a man-made environment they haven't visited before--like\nan office building--humans employ behaviors such as reading signs and asking\nothers for directions. These behaviors help humans reach their destinations\nefficiently by reducing the need to search through large areas. Existing robot\nnavigation systems lack the ability to execute such behaviors and are thus\nhighly inefficient at navigating within large environments. We present\nReasonNav, a modular navigation system which integrates these human-like\nnavigation skills by leveraging the reasoning capabilities of a vision-language\nmodel (VLM). We design compact input and output abstractions based on\nnavigation landmarks, allowing the VLM to focus on language understanding and\nreasoning. We evaluate ReasonNav on real and simulated navigation tasks and\nshow that the agent successfully employs higher-order reasoning to navigate\nefficiently in large, complex buildings.",
+        "url": "http://arxiv.org/abs/2509.21189v1",
+        "published_date": "2025-09-25T14:04:17+00:00",
+        "updated_date": "2025-09-25T14:04:17+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Bhargav Chandaka",
+            "Gloria X. Wang",
+            "Haozhe Chen",
+            "Henry Che",
+            "Albert J. Zhai",
+            "Shenlong Wang"
+        ],
+        "tldr": "ReasonNav, a novel navigation system, leverages VLMs to mimic human-like navigation behaviors like reading signs and asking for directions, demonstrating improved efficiency in complex environments.",
+        "tldr_zh": "ReasonNav是一种新型导航系统，它利用VLM来模仿人类的导航行为，如阅读标志和询问方向，从而在复杂环境中展现出更高的效率。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Cross-Modal Instructions for Robot Motion Generation",
+        "summary": "Teaching robots novel behaviors typically requires motion demonstrations via\nteleoperation or kinaesthetic teaching, that is, physically guiding the robot.\nWhile recent work has explored using human sketches to specify desired\nbehaviors, data collection remains cumbersome, and demonstration datasets are\ndifficult to scale. In this paper, we introduce an alternative paradigm,\nLearning from Cross-Modal Instructions, where robots are shaped by\ndemonstrations in the form of rough annotations, which can contain free-form\ntext labels, and are used in lieu of physical motion. We introduce the\nCrossInstruct framework, which integrates cross-modal instructions as examples\ninto the context input to a foundational vision-language model (VLM). The VLM\nthen iteratively queries a smaller, fine-tuned model, and synthesizes the\ndesired motion over multiple 2D views. These are then subsequently fused into a\ncoherent distribution over 3D motion trajectories in the robot's workspace. By\nincorporating the reasoning of the large VLM with a fine-grained pointing\nmodel, CrossInstruct produces executable robot behaviors that generalize beyond\nthe environment of in the limited set of instruction examples. We then\nintroduce a downstream reinforcement learning pipeline that leverages\nCrossInstruct outputs to efficiently learn policies to complete fine-grained\ntasks. We rigorously evaluate CrossInstruct on benchmark simulation tasks and\nreal hardware, demonstrating effectiveness without additional fine-tuning and\nproviding a strong initialization for policies subsequently refined via\nreinforcement learning.",
+        "url": "http://arxiv.org/abs/2509.21107v1",
+        "published_date": "2025-09-25T12:54:00+00:00",
+        "updated_date": "2025-09-25T12:54:00+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "William Barron",
+            "Xiaoxiang Dong",
+            "Matthew Johnson-Roberson",
+            "Weiming Zhi"
+        ],
+        "tldr": "The paper introduces CrossInstruct, a framework that uses cross-modal instructions (text labels) to guide robot motion generation by leveraging a vision-language model (VLM) and reinforcement learning, demonstrating effectiveness in both simulation and real-world hardware.",
+        "tldr_zh": "该论文介绍了 CrossInstruct 框架，该框架使用跨模态指令（文本标签）来指导机器人运动生成，通过利用视觉语言模型（VLM）和强化学习，展示了其在仿真和真实硬件中的有效性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "KeyWorld: Key Frame Reasoning Enables Effective and Efficient World Models",
+        "summary": "Robotic world models are a promising paradigm for forecasting future\nenvironment states, yet their inference speed and the physical plausibility of\ngenerated trajectories remain critical bottlenecks, limiting their real-world\napplications. This stems from the redundancy of the prevailing frame-to-frame\ngeneration approach, where the model conducts costly computation on similar\nframes, as well as neglecting the semantic importance of key transitions. To\naddress this inefficiency, we propose KeyWorld, a framework that improves\ntext-conditioned robotic world models by concentrating transformers computation\non a few semantic key frames while employing a lightweight convolutional model\nto fill the intermediate frames. Specifically, KeyWorld first identifies\nsignificant transitions by iteratively simplifying the robot's motion\ntrajectories, obtaining the ground truth key frames. Then, a DiT model is\ntrained to reason and generate these physically meaningful key frames from\ntextual task descriptions. Finally, a lightweight interpolator efficiently\nreconstructs the full video by inpainting all intermediate frames. Evaluations\non the LIBERO benchmark demonstrate that KeyWorld achieves a 5.68$\\times$\nacceleration compared to the frame-to-frame generation baseline, and focusing\non the motion-aware key frames further contributes to the physical validity of\nthe generated videos, especially on complex tasks. Our approach highlights a\npractical path toward deploying world models in real-time robotic control and\nother domains requiring both efficient and effective world models. Code is\nreleased at https://anonymous.4open.science/r/Keyworld-E43D.",
+        "url": "http://arxiv.org/abs/2509.21027v1",
+        "published_date": "2025-09-25T11:35:40+00:00",
+        "updated_date": "2025-09-25T11:35:40+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Sibo Li",
+            "Qianyue Hao",
+            "Yu Shang",
+            "Yong Li"
+        ],
+        "tldr": "The paper introduces KeyWorld, a framework that accelerates and improves the physical plausibility of text-conditioned robotic world models by focusing computation on key frames and using a lightweight interpolator for intermediate frames.",
+        "tldr_zh": "本文介绍了一个名为KeyWorld的框架，它通过将计算集中在关键帧上，并使用轻量级插值器处理中间帧，从而加速并提高了文本条件下的机器人世界模型的物理合理性。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Autoregressive End-to-End Planning with Time-Invariant Spatial Alignment and Multi-Objective Policy Refinement",
+        "summary": "The inherent sequential modeling capabilities of autoregressive models make\nthem a formidable baseline for end-to-end planning in autonomous driving.\nNevertheless, their performance is constrained by a spatio-temporal\nmisalignment, as the planner must condition future actions on past sensory\ndata. This creates an inconsistent worldview, limiting the upper bound of\nperformance for an otherwise powerful approach. To address this, we propose a\nTime-Invariant Spatial Alignment (TISA) module that learns to project initial\nenvironmental features into a consistent ego-centric frame for each future time\nstep, effectively correcting the agent's worldview without explicit future\nscene prediction. In addition, we employ a kinematic action prediction head\n(i.e., acceleration and yaw rate) to ensure physically feasible trajectories.\nFinally, we introduce a multi-objective post-training stage using Direct\nPreference Optimization (DPO) to move beyond pure imitation. Our approach\nprovides targeted feedback on specific driving behaviors, offering a more\nfine-grained learning signal than the single, overall objective used in\nstandard DPO. Our model achieves a state-of-the-art 89.8 PDMS on the NAVSIM\ndataset among autoregressive models. The video document is available at\nhttps://tisa-dpo-e2e.github.io/.",
+        "url": "http://arxiv.org/abs/2509.20938v1",
+        "published_date": "2025-09-25T09:24:45+00:00",
+        "updated_date": "2025-09-25T09:24:45+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Jianbo Zhao",
+            "Taiyu Ban",
+            "Xiangjie Li",
+            "Xingtai Gui",
+            "Hangning Zhou",
+            "Lei Liu",
+            "Hongwei Zhao",
+            "Bin Li"
+        ],
+        "tldr": "This paper introduces a Time-Invariant Spatial Alignment (TISA) module and multi-objective DPO for autoregressive end-to-end planning in autonomous driving, achieving state-of-the-art performance on the NAVSIM dataset.",
+        "tldr_zh": "本文提出了一种时不变空间对齐（TISA）模块和多目标DPO，用于自动驾驶中的自回归端到端规划，并在NAVSIM数据集上实现了最先进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Finding 3D Positions of Distant Objects from Noisy Camera Movement and Semantic Segmentation Sequences",
+        "summary": "3D object localisation based on a sequence of camera measurements is\nessential for safety-critical surveillance tasks, such as drone-based wildfire\nmonitoring. Localisation of objects detected with a camera can typically be\nsolved with dense depth estimation or 3D scene reconstruction. However, in the\ncontext of distant objects or tasks limited by the amount of available\ncomputational resources, neither solution is feasible. In this paper, we show\nthat the task can be solved using particle filters for both single and multiple\ntarget scenarios. The method was studied using a 3D simulation and a\ndrone-based image segmentation sequence with global navigation satellite system\n(GNSS)-based camera pose estimates. The results showed that a particle filter\ncan be used to solve practical localisation tasks based on camera poses and\nimage segments in these situations where other solutions fail. The particle\nfilter is independent of the detection method, making it flexible for new\ntasks. The study also demonstrates that drone-based wildfire monitoring can be\nconducted using the proposed method paired with a pre-existing image\nsegmentation model.",
+        "url": "http://arxiv.org/abs/2509.20906v1",
+        "published_date": "2025-09-25T08:46:37+00:00",
+        "updated_date": "2025-09-25T08:46:37+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO",
+            "I.4.8; I.4.9"
+        ],
+        "authors": [
+            "Julius Pesonen",
+            "Arno Solin",
+            "Eija Honkavaara"
+        ],
+        "tldr": "This paper presents a particle filter approach to 3D object localization from noisy camera movement and semantic segmentation, particularly addressing scenarios with distant objects or limited computational resources where dense methods are unsuitable. The method is demonstrated in drone-based wildfire monitoring.",
+        "tldr_zh": "本文提出了一种基于粒子滤波的方法，用于从嘈杂的相机运动和语义分割中进行3D物体定位，特别适用于远距离物体或计算资源有限的场景，在这种场景下，密集方法并不适用。该方法已在无人机野火监测中得到验证。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "DAC-LoRA: Dynamic Adversarial Curriculum for Efficient and Robust Few-Shot Adaptation",
+        "summary": "Vision-Language Models (VLMs) are foundational to critical applications like\nautonomous driving, medical diagnosis, and content moderation. While\nParameter-Efficient Fine-Tuning (PEFT) methods like LoRA enable their efficient\nadaptation to specialized tasks, these models remain vulnerable to adversarial\nattacks that can compromise safety-critical decisions. CLIP, the backbone for\nnumerous downstream VLMs, is a high-value target whose vulnerabilities can\ncascade across the multimodal AI ecosystem. We propose Dynamic Adversarial\nCurriculum DAC-LoRA, a novel framework that integrates adversarial training\ninto PEFT. The core principle of our method i.e. an intelligent curriculum of\nprogressively challenging attack, is general and can potentially be applied to\nany iterative attack method. Guided by the First-Order Stationary Condition\n(FOSC) and a TRADES-inspired loss, DAC-LoRA achieves substantial improvements\nin adversarial robustness without significantly compromising clean accuracy.\nOur work presents an effective, lightweight, and broadly applicable method to\ndemonstrate that the DAC-LoRA framework can be easily integrated into a\nstandard PEFT pipeline to significantly enhance robustness.",
+        "url": "http://arxiv.org/abs/2509.20792v1",
+        "published_date": "2025-09-25T06:20:56+00:00",
+        "updated_date": "2025-09-25T06:20:56+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG"
+        ],
+        "authors": [
+            "Ved Umrajkar"
+        ],
+        "tldr": "The paper introduces DAC-LoRA, a novel adversarial training framework integrated with Parameter-Efficient Fine-Tuning (PEFT) to enhance the robustness of Vision-Language Models (VLMs) against adversarial attacks, particularly focusing on CLIP.",
+        "tldr_zh": "该论文介绍了DAC-LoRA，一种新颖的对抗训练框架，与参数高效微调（PEFT）相结合，旨在增强视觉-语言模型（VLM）抵抗对抗性攻击的鲁棒性，特别关注CLIP模型。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "MASt3R-Fusion: Integrating Feed-Forward Visual Model with IMU, GNSS for High-Functionality SLAM",
+        "summary": "Visual SLAM is a cornerstone technique in robotics, autonomous driving and\nextended reality (XR), yet classical systems often struggle with low-texture\nenvironments, scale ambiguity, and degraded performance under challenging\nvisual conditions. Recent advancements in feed-forward neural network-based\npointmap regression have demonstrated the potential to recover high-fidelity 3D\nscene geometry directly from images, leveraging learned spatial priors to\novercome limitations of traditional multi-view geometry methods. However, the\nwidely validated advantages of probabilistic multi-sensor information fusion\nare often discarded in these pipelines. In this work, we propose\nMASt3R-Fusion,a multi-sensor-assisted visual SLAM framework that tightly\nintegrates feed-forward pointmap regression with complementary sensor\ninformation, including inertial measurements and GNSS data. The system\nintroduces Sim(3)-based visualalignment constraints (in the Hessian form) into\na universal metric-scale SE(3) factor graph for effective information fusion. A\nhierarchical factor graph design is developed, which allows both real-time\nsliding-window optimization and global optimization with aggressive loop\nclosures, enabling real-time pose tracking, metric-scale structure perception\nand globally consistent mapping. We evaluate our approach on both public\nbenchmarks and self-collected datasets, demonstrating substantial improvements\nin accuracy and robustness over existing visual-centered multi-sensor SLAM\nsystems. The code will be released open-source to support reproducibility and\nfurther research (https://github.com/GREAT-WHU/MASt3R-Fusion).",
+        "url": "http://arxiv.org/abs/2509.20757v1",
+        "published_date": "2025-09-25T05:26:28+00:00",
+        "updated_date": "2025-09-25T05:26:28+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Yuxuan Zhou",
+            "Xingxing Li",
+            "Shengyu Li",
+            "Zhuohao Yan",
+            "Chunxi Xia",
+            "Shaoquan Feng"
+        ],
+        "tldr": "The paper presents MASt3R-Fusion, a visual SLAM framework that integrates feed-forward pointmap regression with IMU and GNSS data using a novel factor graph approach, demonstrating improved accuracy and robustness in challenging environments.",
+        "tldr_zh": "该论文提出了MASt3R-Fusion，一个视觉SLAM框架，它通过新颖的因子图方法将前馈点云回归与IMU和GNSS数据集成，在具有挑战性的环境中表现出更高的准确性和鲁棒性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "SLAM-Free Visual Navigation with Hierarchical Vision-Language Perception and Coarse-to-Fine Semantic Topological Planning",
+        "summary": "Conventional SLAM pipelines for legged robot navigation are fragile under\nrapid motion, calibration demands, and sensor drift, while offering limited\nsemantic reasoning for task-driven exploration. To deal with these issues, we\npropose a vision-only, SLAM-free navigation framework that replaces dense\ngeometry with semantic reasoning and lightweight topological representations. A\nhierarchical vision-language perception module fuses scene-level context with\nobject-level cues for robust semantic inference. And a semantic-probabilistic\ntopological map supports coarse-to-fine planning: LLM-based global reasoning\nfor subgoal selection and vision-based local planning for obstacle avoidance.\nIntegrated with reinforcement-learning locomotion controllers, the framework is\ndeployable across diverse legged robot platforms. Experiments in simulation and\nreal-world settings demonstrate consistent improvements in semantic accuracy,\nplanning quality, and navigation success, while ablation studies further\nshowcase the necessity of both hierarchical perception and fine local planning.\nThis work introduces a new paradigm for SLAM-free, vision-language-driven\nnavigation, shifting robotic exploration from geometry-centric mapping to\nsemantics-driven decision making.",
+        "url": "http://arxiv.org/abs/2509.20739v1",
+        "published_date": "2025-09-25T04:38:45+00:00",
+        "updated_date": "2025-09-25T04:38:45+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Guoyang Zhao",
+            "Yudong Li",
+            "Weiqing Qi",
+            "Kai Zhang",
+            "Bonan Liu",
+            "Kai Chen",
+            "Haoang Li",
+            "Jun Ma"
+        ],
+        "tldr": "The paper proposes a SLAM-free, vision-language-driven navigation framework for legged robots, using hierarchical perception and coarse-to-fine semantic topological planning to improve navigation success and semantic accuracy.",
+        "tldr_zh": "本文提出了一种用于腿式机器人的无 SLAM 的、视觉-语言驱动的导航框架，该框架使用分层感知和由粗到细的语义拓扑规划，以提高导航成功率和语义准确性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "RAM-NAS: Resource-aware Multiobjective Neural Architecture Search Method for Robot Vision Tasks",
+        "summary": "Neural architecture search (NAS) has shown great promise in automatically\ndesigning lightweight models. However, conventional approaches are insufficient\nin training the supernet and pay little attention to actual robot hardware\nresources. To meet such challenges, we propose RAM-NAS, a resource-aware\nmulti-objective NAS method that focuses on improving the supernet pretrain and\nresource-awareness on robot hardware devices. We introduce the concept of\nsubnets mutual distillation, which refers to mutually distilling all subnets\nsampled by the sandwich rule. Additionally, we utilize the Decoupled Knowledge\nDistillation (DKD) loss to enhance logits distillation performance. To expedite\nthe search process with consideration for hardware resources, we used data from\nthree types of robotic edge hardware to train Latency Surrogate predictors.\nThese predictors facilitated the estimation of hardware inference latency\nduring the search phase, enabling a unified multi-objective evolutionary search\nto balance model accuracy and latency trade-offs. Our discovered model family,\nRAM-NAS models, can achieve top-1 accuracy ranging from 76.7% to 81.4% on\nImageNet. In addition, the resource-aware multi-objective NAS we employ\nsignificantly reduces the model's inference latency on edge hardware for\nrobots. We conducted experiments on downstream tasks to verify the scalability\nof our methods. The inference time for detection and segmentation is reduced on\nall three hardware types compared to MobileNetv3-based methods. Our work fills\nthe gap in NAS for robot hardware resource-aware.",
+        "url": "http://arxiv.org/abs/2509.20688v1",
+        "published_date": "2025-09-25T02:42:57+00:00",
+        "updated_date": "2025-09-25T02:42:57+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Shouren Mao",
+            "Minghao Qin",
+            "Wei Dong",
+            "Huajian Liu",
+            "Yongzhuo Gao"
+        ],
+        "tldr": "The paper introduces RAM-NAS, a resource-aware multi-objective NAS method that optimizes neural architectures for robot vision tasks by considering hardware resource constraints and using subnet distillation and latency predictors. It achieves improved accuracy and reduced inference latency on robotic edge hardware.",
+        "tldr_zh": "该论文介绍了RAM-NAS，一种资源感知的多目标神经架构搜索方法，通过考虑硬件资源约束并使用子网蒸馏和延迟预测器，为机器人视觉任务优化神经架构。它在机器人边缘硬件上实现了更高的准确性和更低的推理延迟。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Efficient Construction of Implicit Surface Models From a Single Image for Motion Generation",
+        "summary": "Implicit representations have been widely applied in robotics for obstacle\navoidance and path planning. In this paper, we explore the problem of\nconstructing an implicit distance representation from a single image. Past\nmethods for implicit surface reconstruction, such as \\emph{NeuS} and its\nvariants generally require a large set of multi-view images as input, and\nrequire long training times. In this work, we propose Fast Image-to-Neural\nSurface (FINS), a lightweight framework that can reconstruct high-fidelity\nsurfaces and SDF fields based on a single or a small set of images. FINS\nintegrates a multi-resolution hash grid encoder with lightweight geometry and\ncolor heads, making the training via an approximate second-order optimizer\nhighly efficient and capable of converging within a few seconds. Additionally,\nwe achieve the construction of a neural surface requiring only a single RGB\nimage, by leveraging pre-trained foundation models to estimate the geometry\ninherent in the image. Our experiments demonstrate that under the same\nconditions, our method outperforms state-of-the-art baselines in both\nconvergence speed and accuracy on surface reconstruction and SDF field\nestimation. Moreover, we demonstrate the applicability of FINS for robot\nsurface following tasks and show its scalability to a variety of benchmark\ndatasets.",
+        "url": "http://arxiv.org/abs/2509.20681v1",
+        "published_date": "2025-09-25T02:30:05+00:00",
+        "updated_date": "2025-09-25T02:30:05+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Wei-Teng Chu",
+            "Tianyi Zhang",
+            "Matthew Johnson-Roberson",
+            "Weiming Zhi"
+        ],
+        "tldr": "This paper introduces FINS, a fast and lightweight framework for reconstructing high-fidelity surfaces and SDF fields from a single image using pre-trained foundation models and a multi-resolution hash grid encoder, outperforming existing methods in speed and accuracy.",
+        "tldr_zh": "本文介绍了FINS，一个快速轻量级的框架，使用预训练的基础模型和多分辨率哈希网格编码器，从单张图像重建高保真表面和SDF场，在速度和精度上优于现有方法。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Equi-RO: A 4D mmWave Radar Odometry via Equivariant Networks",
+        "summary": "Autonomous vehicles and robots rely on accurate odometry estimation in\nGPS-denied environments. While LiDARs and cameras struggle under extreme\nweather, 4D mmWave radar emerges as a robust alternative with all-weather\noperability and velocity measurement. In this paper, we introduce Equi-RO, an\nequivariant network-based framework for 4D radar odometry. Our algorithm\npre-processes Doppler velocity into invariant node and edge features in the\ngraph, and employs separate networks for equivariant and invariant feature\nprocessing. A graph-based architecture enhances feature aggregation in sparse\nradar data, improving inter-frame correspondence. Experiments on the\nopen-source dataset and self-collected dataset show Equi-RO outperforms\nstate-of-the-art algorithms in accuracy and robustness. Overall, our method\nachieves 10.7% and 20.0% relative improvements in translation and rotation\naccuracy, respectively, compared to the best baseline on the open-source\ndataset.",
+        "url": "http://arxiv.org/abs/2509.20674v1",
+        "published_date": "2025-09-25T02:21:05+00:00",
+        "updated_date": "2025-09-25T02:21:05+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Zeyu Han",
+            "Shuocheng Yang",
+            "Minghan Zhu",
+            "Fang Zhang",
+            "Shaobing Xu",
+            "Maani Ghaffari",
+            "Jianqiang Wang"
+        ],
+        "tldr": "This paper introduces Equi-RO, an equivariant network-based framework for 4D mmWave radar odometry, demonstrating improved accuracy and robustness compared to state-of-the-art methods in GPS-denied environments.",
+        "tldr_zh": "本文介绍了Equi-RO，一个基于等变网络的4D毫米波雷达里程计框架，相比于最先进的方法，在无GPS环境中表现出更高的精度和鲁棒性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Large Pre-Trained Models for Bimanual Manipulation in 3D",
+        "summary": "We investigate the integration of attention maps from a pre-trained Vision\nTransformer into voxel representations to enhance bimanual robotic\nmanipulation. Specifically, we extract attention maps from DINOv2, a\nself-supervised ViT model, and interpret them as pixel-level saliency scores\nover RGB images. These maps are lifted into a 3D voxel grid, resulting in\nvoxel-level semantic cues that are incorporated into a behavior cloning policy.\nWhen integrated into a state-of-the-art voxel-based policy, our\nattention-guided featurization yields an average absolute improvement of 8.2%\nand a relative gain of 21.9% across all tasks in the RLBench bimanual\nbenchmark.",
+        "url": "http://arxiv.org/abs/2509.20579v1",
+        "published_date": "2025-09-24T21:38:42+00:00",
+        "updated_date": "2025-09-24T21:38:42+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG",
+            "cs.RO"
+        ],
+        "authors": [
+            "Hanna Yurchyk",
+            "Wei-Di Chang",
+            "Gregory Dudek",
+            "David Meger"
+        ],
+        "tldr": "This paper uses attention maps from a pre-trained Vision Transformer (DINOv2) to improve voxel-based bimanual robotic manipulation policies, achieving significant performance gains on the RLBench benchmark.",
+        "tldr_zh": "本文利用预训练视觉Transformer (DINOv2) 的注意力图来改进基于体素的双手动机器人操作策略，在RLBench基准测试中取得了显著的性能提升。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    }
+]
