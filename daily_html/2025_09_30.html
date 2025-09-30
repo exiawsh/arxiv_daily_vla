@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Autonomous Driving, VLA, 3D Understanding, Robotics) - September 16, 2025</title>
+    <title>ArXiv CS.CV Papers (Autonomous Driving, VLA, 3D Understanding, Robotics) - September 30, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>VLM Daily Papers</h1>
         <p>Daily papers related to VLA/AV/3D Understanding from cs.CV</p>
         
-            <p>September 16, 2025</p>
+            <p>September 30, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -208,120 +208,19 @@
     <div class="bento-grid" id="paper-grid">
         
         <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.0, ease: 'easeOut' }"  
-            class="bento-item"
+            initial="{ opacity: 0 }"
+            animate="{ opacity: 1 }"
+            transition="{ duration: 0.5 }"
+            class="bento-item col-span-full text-center text-gray-500"
             data-motion-element
         >
-            <h2 class="paper-title">Beyond Frame-wise Tracking: A Trajectory-based Paradigm for Efficient Point Cloud Tracking</h2>
-            
-            <p class="paper-summary">LiDAR-based 3D single object tracking (3D SOT) is a critical task in robotics
-and autonomous systems. Existing methods typically follow frame-wise motion
-estimation or a sequence-based paradigm. However, the two-frame methods are
-efficient but lack long-term temporal context, making them vulnerable in sparse
-or occluded scenes, while sequence-based methods that process multiple point
-clouds gain robustness at a significant computational cost. To resolve this
-dilemma, we propose a novel trajectory-based paradigm and its instantiation,
-TrajTrack. TrajTrack is a lightweight framework that enhances a base two-frame
-tracker by implicitly learning motion continuity from historical bounding box
-trajectories alone-without requiring additional, costly point cloud inputs. It
-first generates a fast, explicit motion proposal and then uses an implicit
-motion modeling module to predict the future trajectory, which in turn refines
-and corrects the initial proposal. Extensive experiments on the large-scale
-NuScenes benchmark show that TrajTrack achieves new state-of-the-art
-performance, dramatically improving tracking precision by 4.48% over a strong
-baseline while running at 56 FPS. Besides, we also demonstrate the strong
-generalizability of TrajTrack across different base trackers. Video is
-available at https://www.bilibili.com/video/BV1ahYgzmEWP.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces TrajTrack, a novel trajectory-based paradigm for efficient LiDAR-based 3D single object tracking, achieving state-of-the-art performance by implicitly learning motion continuity from historical bounding box trajectories without additional point cloud inputs.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为 TrajTrack 的新型基于轨迹的范例，用于高效的基于激光雷达的 3D 单目标跟踪。它通过从历史边界框轨迹中隐式学习运动连续性来实现最先进的性能，而无需额外的点云输入。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star-half-alt"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2509.11453v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: BaiChen Fan, Sifan Zhou, Jian Li, Shibo Zhao, Muqing Cao, Qin Wang</p>
-            
+            <p>No relevant papers found for today.</p>
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-09-30 03:32:06 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-09-30 06:06:49 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>
