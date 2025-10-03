@@ -1,0 +1,210 @@
+[
+    {
+        "title": "KeySG: Hierarchical Keyframe-Based 3D Scene Graphs",
+        "summary": "In recent years, 3D scene graphs have emerged as a powerful world\nrepresentation, offering both geometric accuracy and semantic richness.\nCombining 3D scene graphs with large language models enables robots to reason,\nplan, and navigate in complex human-centered environments. However, current\napproaches for constructing 3D scene graphs are semantically limited to a\npredefined set of relationships, and their serialization in large environments\ncan easily exceed an LLM's context window. We introduce KeySG, a framework that\nrepresents 3D scenes as a hierarchical graph consisting of floors, rooms,\nobjects, and functional elements, where nodes are augmented with multi-modal\ninformation extracted from keyframes selected to optimize geometric and visual\ncoverage. The keyframes allow us to efficiently leverage VLM to extract scene\ninformation, alleviating the need to explicitly model relationship edges\nbetween objects, enabling more general, task-agnostic reasoning and planning.\nOur approach can process complex and ambiguous queries while mitigating the\nscalability issues associated with large scene graphs by utilizing a\nhierarchical retrieval-augmented generation (RAG) pipeline to extract relevant\ncontext from the graph. Evaluated across four distinct benchmarks -- including\n3D object segmentation and complex query retrieval -- KeySG outperforms prior\napproaches on most metrics, demonstrating its superior semantic richness and\nefficiency.",
+        "url": "http://arxiv.org/abs/2510.01049v1",
+        "published_date": "2025-10-01T15:53:27+00:00",
+        "updated_date": "2025-10-01T15:53:27+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Abdelrhman Werby",
+            "Dennis Rotondi",
+            "Fabio Scaparro",
+            "Kai O. Arras"
+        ],
+        "tldr": "The paper introduces KeySG, a hierarchical keyframe-based 3D scene graph framework that leverages VLMs for improved scene understanding and reasoning, addressing limitations in semantic richness and scalability of existing approaches.",
+        "tldr_zh": "该论文介绍了KeySG，一个基于分层关键帧的3D场景图框架，利用VLM来改进场景理解和推理，解决了现有方法在语义丰富性和可扩展性方面的局限性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "A Scene is Worth a Thousand Features: Feed-Forward Camera Localization from a Collection of Image Features",
+        "summary": "Visually localizing an image, i.e., estimating its camera pose, requires\nbuilding a scene representation that serves as a visual map. The representation\nwe choose has direct consequences towards the practicability of our system.\nEven when starting from mapping images with known camera poses,\nstate-of-the-art approaches still require hours of mapping time in the worst\ncase, and several minutes in the best. This work raises the question whether we\ncan achieve competitive accuracy much faster. We introduce FastForward, a\nmethod that creates a map representation and relocalizes a query image\non-the-fly in a single feed-forward pass. At the core, we represent multiple\nmapping images as a collection of features anchored in 3D space. FastForward\nutilizes these mapping features to predict image-to-scene correspondences for\nthe query image, enabling the estimation of its camera pose. We couple\nFastForward with image retrieval and achieve state-of-the-art accuracy when\ncompared to other approaches with minimal map preparation time. Furthermore,\nFastForward demonstrates robust generalization to unseen domains, including\nchallenging large-scale outdoor environments.",
+        "url": "http://arxiv.org/abs/2510.00978v1",
+        "published_date": "2025-10-01T14:52:12+00:00",
+        "updated_date": "2025-10-01T14:52:12+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Axel Barroso-Laguna",
+            "Tommaso Cavallari",
+            "Victor Adrian Prisacariu",
+            "Eric Brachmann"
+        ],
+        "tldr": "The paper introduces FastForward, a novel camera localization method using a collection of 3D anchored features for rapid map creation and real-time query image relocalization with state-of-the-art accuracy and robust generalization.",
+        "tldr_zh": "该论文介绍了一种名为FastForward的新颖相机定位方法，该方法使用3D锚定特征集合来实现快速地图创建和实时查询图像重定位，具有最先进的精度和强大的泛化能力。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "FIN: Fast Inference Network for Map Segmentation",
+        "summary": "Multi-sensor fusion in autonomous vehicles is becoming more common to offer a\nmore robust alternative for several perception tasks. This need arises from the\nunique contribution of each sensor in collecting data: camera-radar fusion\noffers a cost-effective solution by combining rich semantic information from\ncameras with accurate distance measurements from radar, without incurring\nexcessive financial costs or overwhelming data processing requirements. Map\nsegmentation is a critical task for enabling effective vehicle behaviour in its\nenvironment, yet it continues to face significant challenges in achieving high\naccuracy and meeting real-time performance requirements. Therefore, this work\npresents a novel and efficient map segmentation architecture, using cameras and\nradars, in the \\acrfull{bev} space. Our model introduces a real-time map\nsegmentation architecture considering aspects such as high accuracy, per-class\nbalancing, and inference time. To accomplish this, we use an advanced loss set\ntogether with a new lightweight head to improve the perception results. Our\nresults show that, with these modifications, our approach achieves results\ncomparable to large models, reaching 53.5 mIoU, while also setting a new\nbenchmark for inference time, improving it by 260\\% over the strongest baseline\nmodels.",
+        "url": "http://arxiv.org/abs/2510.00651v1",
+        "published_date": "2025-10-01T08:29:59+00:00",
+        "updated_date": "2025-10-01T08:29:59+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ruan Bispo",
+            "Tim Brophy",
+            "Reenu Mohandas",
+            "Anthony Scanlan",
+            "Ciarán Eising"
+        ],
+        "tldr": "This paper introduces a fast and accurate camera-radar fusion network (FIN) for map segmentation in autonomous driving, achieving real-time performance and comparable accuracy to larger models with a 260% inference time improvement.",
+        "tldr_zh": "本文介绍了一种快速且精确的用于自动驾驶地图分割的相机-雷达融合网络 (FIN)，实现了实时性能，并且在推理时间上改进了 260%，同时达到了与大型模型相当的精度。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Strategic Fusion of Vision Language Models: Shapley-Credited Context-Aware Dawid-Skene for Multi-Label Tasks in Autonomous Driving",
+        "summary": "Large vision-language models (VLMs) are increasingly used in\nautonomous-vehicle (AV) stacks, but hallucination limits their reliability in\nsafety-critical pipelines. We present Shapley-credited Context-Aware\nDawid-Skene with Agreement, a game-theoretic fusion method for multi-label\nunderstanding of ego-view dashcam video. It learns per-model, per-label,\ncontext-conditioned reliabilities from labelled history and, at inference,\nconverts each model's report into an agreement-guardrailed log-likelihood ratio\nthat is combined with a contextual prior and a public reputation state updated\nvia Shapley-based team credit. The result is calibrated, thresholdable\nposteriors that (i) amplify agreement among reliable models, (ii) preserve\nuniquely correct single-model signals, and (iii) adapt to drift. To specialise\ngeneral VLMs, we curate 1,000 real-world dashcam clips with structured\nannotations (scene description, manoeuvre recommendation, rationale) via an\nautomatic pipeline that fuses HDD ground truth, vehicle kinematics, and YOLOv11\n+ BoT-SORT tracking, guided by a three-step chain-of-thought prompt; three\nheterogeneous VLMs are then fine-tuned with LoRA. We evaluate with Hamming\ndistance, Micro-Macro-F1, and average per-video latency. Empirically, the\nproposed method achieves a 23% reduction in Hamming distance, 55% improvement\nin Macro-F1, and 47% improvement in Micro-F1 when comparing with the best\nsingle model, supporting VLM fusion as a calibrated, interpretable, and robust\ndecision-support component for AV pipelines.",
+        "url": "http://arxiv.org/abs/2510.01126v1",
+        "published_date": "2025-10-01T17:14:11+00:00",
+        "updated_date": "2025-10-01T17:14:11+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Yuxiang Feng",
+            "Keyang Zhang",
+            "Hassane Ouchouid",
+            "Ashwil Kaniamparambil",
+            "Ioannis Souflas",
+            "Panagiotis Angeloudis"
+        ],
+        "tldr": "This paper introduces a novel game-theoretic fusion method, Shapley-credited Context-Aware Dawid-Skene, for improving the reliability of VLMs in autonomous driving by learning context-conditioned reliabilities and adapting to drift, achieving significant improvements in multi-label understanding tasks.",
+        "tldr_zh": "本文提出了一种新的博弈论融合方法，即 Shapley-credited Context-Aware Dawid-Skene，通过学习上下文相关的可靠性并适应漂移，提高VLM在自动驾驶中的可靠性，并在多标签理解任务中取得了显著的改进。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "HAMLET: Switch your Vision-Language-Action Model into a History-Aware Policy",
+        "summary": "Inherently, robotic manipulation tasks are history-dependent: leveraging past\ncontext could be beneficial. However, most existing Vision-Language-Action\nmodels (VLAs) have been designed without considering this aspect, i.e., they\nrely solely on the current observation, ignoring preceding context. In this\npaper, we propose HAMLET, a scalable framework to adapt VLAs to attend to the\nhistorical context during action prediction. Specifically, we introduce moment\ntokens that compactly encode perceptual information at each timestep. Their\nrepresentations are initialized with time-contrastive learning, allowing them\nto better capture temporally distinctive aspects. Next, we employ a lightweight\nmemory module that integrates the moment tokens across past timesteps into\nmemory features, which are then leveraged for action prediction. Through\nempirical evaluation, we show that HAMLET successfully transforms a\nstate-of-the-art VLA into a history-aware policy, especially demonstrating\nsignificant improvements on long-horizon tasks that require historical context.\nIn particular, on top of GR00T N1.5, HAMLET achieves an average success rate of\n76.4% on history-dependent real-world tasks, surpassing the baseline\nperformance by 47.2%. Furthermore, HAMLET pushes prior art performance from\n64.1% to 66.4% on RoboCasa Kitchen (100-demo setup) and from 95.6% to 97.7% on\nLIBERO, highlighting its effectiveness even under generic robot-manipulation\nbenchmarks.",
+        "url": "http://arxiv.org/abs/2510.00695v2",
+        "published_date": "2025-10-01T09:15:52+00:00",
+        "updated_date": "2025-10-02T06:41:44+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Myungkyu Koo",
+            "Daewon Choi",
+            "Taeyoung Kim",
+            "Kyungmin Lee",
+            "Changyeon Kim",
+            "Younggyo Seo",
+            "Jinwoo Shin"
+        ],
+        "tldr": "The paper introduces HAMLET, a framework that enhances Vision-Language-Action models with historical context awareness using moment tokens and a memory module, showing significant performance gains in robotic manipulation tasks, especially long-horizon ones.",
+        "tldr_zh": "该论文介绍了 HAMLET，一个通过使用 moment tokens 和记忆模块来增强视觉-语言-动作模型历史上下文感知能力的框架。该框架在机器人操作任务（尤其是长程任务）中表现出显著的性能提升。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Hybrid Training for Vision-Language-Action Models",
+        "summary": "Using Large Language Models to produce intermediate thoughts, a.k.a.\nChain-of-thought (CoT), before providing an answer has been a successful recipe\nfor solving complex language tasks. In robotics, similar embodied CoT\nstrategies, generating thoughts before actions, have also been shown to lead to\nimproved performance when using Vision-Language-Action models (VLAs). As these\ntechniques increase the length of the model's generated outputs to include the\nthoughts, the inference time is negatively affected. Delaying an agent's\nactions in real-world executions, as in robotic manipulation settings, strongly\naffects the usability of a method, as tasks require long sequences of actions.\nHowever, is the generation of long chains-of-thought a strong prerequisite for\nachieving performance improvements? In this work, we explore the idea of Hybrid\nTraining (HyT), a framework that enables VLAs to learn from thoughts and\nbenefit from the associated performance gains, while enabling the possibility\nto leave out CoT generation during inference. Furthermore, by learning to\nconditionally predict a diverse set of outputs, HyT supports flexibility at\ninference time, enabling the model to either predict actions directly, generate\nthoughts or follow instructions. We evaluate the proposed method in a series of\nsimulated benchmarks and real-world experiments.",
+        "url": "http://arxiv.org/abs/2510.00600v1",
+        "published_date": "2025-10-01T07:27:15+00:00",
+        "updated_date": "2025-10-01T07:27:15+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Pietro Mazzaglia",
+            "Cansu Sancaktar",
+            "Markus Peschl",
+            "Daniel Dijkman"
+        ],
+        "tldr": "The paper introduces Hybrid Training (HyT) for Vision-Language-Action models (VLAs), allowing them to learn from Chain-of-Thought (CoT) reasoning without requiring CoT generation during inference, thus improving efficiency and flexibility.",
+        "tldr_zh": "本文介绍了一种针对视觉-语言-动作模型(VLA)的混合训练(HyT)方法，该方法使模型能够从思维链(CoT)推理中学习，而无需在推理过程中生成CoT，从而提高效率和灵活性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "VLA-RFT: Vision-Language-Action Reinforcement Fine-tuning with Verified Rewards in World Simulators",
+        "summary": "Vision-Language-Action (VLA) models enable embodied decision-making but rely\nheavily on imitation learning, leading to compounding errors and poor\nrobustness under distribution shift. Reinforcement learning (RL) can mitigate\nthese issues yet typically demands costly real-world interactions or suffers\nfrom sim-to-real gaps. We introduce VLA-RFT, a reinforcement fine-tuning\nframework that leverages a data-driven world model as a controllable simulator.\nTrained from real interaction data, the simulator predicts future visual\nobservations conditioned on actions, allowing policy rollouts with dense,\ntrajectory-level rewards derived from goal-achieving references. This design\ndelivers an efficient and action-aligned learning signal, drastically lowering\nsample requirements. With fewer than 400 fine-tuning steps, VLA-RFT surpasses\nstrong supervised baselines and achieves greater efficiency than\nsimulator-based RL. Moreover, it exhibits strong robustness under perturbed\nconditions, sustaining stable task execution. Our results establish\nworld-model-based RFT as a practical post-training paradigm to enhance the\ngeneralization and robustness of VLA models. For more details, please refer to\nhttps://vla-rft.github.io/.",
+        "url": "http://arxiv.org/abs/2510.00406v1",
+        "published_date": "2025-10-01T01:33:10+00:00",
+        "updated_date": "2025-10-01T01:33:10+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Hengtao Li",
+            "Pengxiang Ding",
+            "Runze Suo",
+            "Yihao Wang",
+            "Zirui Ge",
+            "Dongyuan Zang",
+            "Kexian Yu",
+            "Mingyang Sun",
+            "Hongyin Zhang",
+            "Donglin Wang",
+            "Weihua Su"
+        ],
+        "tldr": "The paper introduces VLA-RFT, a reinforcement fine-tuning framework using a data-driven world model for VLA agents, demonstrating improved sample efficiency, generalization, and robustness compared to supervised learning and simulator-based RL.",
+        "tldr_zh": "该论文介绍了 VLA-RFT，一个使用数据驱动的世界模型对 VLA 智能体进行强化微调的框架。与监督学习和基于模拟器的强化学习相比，该方法表现出更高的样本效率、泛化性和鲁棒性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "EgoTraj-Bench: Towards Robust Trajectory Prediction Under Ego-view Noisy Observations",
+        "summary": "Reliable trajectory prediction from an ego-centric perspective is crucial for\nrobotic navigation in human-centric environments. However, existing methods\ntypically assume idealized observation histories, failing to account for the\nperceptual artifacts inherent in first-person vision, such as occlusions, ID\nswitches, and tracking drift. This discrepancy between training assumptions and\ndeployment reality severely limits model robustness. To bridge this gap, we\nintroduce EgoTraj-Bench, the first real-world benchmark that grounds noisy,\nfirst-person visual histories in clean, bird's-eye-view future trajectories,\nenabling robust learning under realistic perceptual constraints. Building on\nthis benchmark, we propose BiFlow, a dual-stream flow matching model that\nconcurrently denoises historical observations and forecasts future motion by\nleveraging a shared latent representation. To better model agent intent, BiFlow\nincorporates our EgoAnchor mechanism, which conditions the prediction decoder\non distilled historical features via feature modulation. Extensive experiments\nshow that BiFlow achieves state-of-the-art performance, reducing minADE and\nminFDE by 10-15% on average and demonstrating superior robustness. We\nanticipate that our benchmark and model will provide a critical foundation for\ndeveloping trajectory forecasting systems truly resilient to the challenges of\nreal-world, ego-centric perception.",
+        "url": "http://arxiv.org/abs/2510.00405v1",
+        "published_date": "2025-10-01T01:30:13+00:00",
+        "updated_date": "2025-10-01T01:30:13+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.RO"
+        ],
+        "authors": [
+            "Jiayi Liu",
+            "Jiaming Zhou",
+            "Ke Ye",
+            "Kun-Yu Lin",
+            "Allan Wang",
+            "Junwei Liang"
+        ],
+        "tldr": "The paper introduces EgoTraj-Bench, a new benchmark for ego-centric trajectory prediction under noisy conditions, and proposes BiFlow, a flow-matching model that achieves SOTA performance by denoising observations and forecasting future motion using a shared latent representation and EgoAnchor mechanism.",
+        "tldr_zh": "本文介绍了EgoTraj-Bench，这是一个新的用于在噪声条件下以自我为中心的轨迹预测的基准，并提出了BiFlow，一种通过使用共享的潜在表示和EgoAnchor机制来去噪观测和预测未来运动，从而实现SOTA性能的流匹配模型。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    }
+]
