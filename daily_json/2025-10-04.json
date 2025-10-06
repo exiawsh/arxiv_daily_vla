@@ -1,0 +1,185 @@
+[
+    {
+        "title": "MM-Nav: Multi-View VLA Model for Robust Visual Navigation via Multi-Expert Learning",
+        "summary": "Visual navigation policy is widely regarded as a promising direction, as it\nmimics humans by using egocentric visual observations for navigation. However,\noptical information of visual observations is difficult to be explicitly\nmodeled like LiDAR point clouds or depth maps, which subsequently requires\nintelligent models and large-scale data. To this end, we propose to leverage\nthe intelligence of the Vision-Language-Action (VLA) model to learn diverse\nnavigation capabilities from synthetic expert data in a teacher-student manner.\nSpecifically, we implement the VLA model, MM-Nav, as a multi-view VLA (with 360\nobservations) based on pretrained large language models and visual foundation\nmodels. For large-scale navigation data, we collect expert data from three\nreinforcement learning (RL) experts trained with privileged depth information\nin three challenging tailor-made environments for different navigation\ncapabilities: reaching, squeezing, and avoiding. We iteratively train our VLA\nmodel using data collected online from RL experts, where the training ratio is\ndynamically balanced based on performance on individual capabilities. Through\nextensive experiments in synthetic environments, we demonstrate that our model\nachieves strong generalization capability. Moreover, we find that our student\nVLA model outperforms the RL teachers, demonstrating the synergistic effect of\nintegrating multiple capabilities. Extensive real-world experiments further\nconfirm the effectiveness of our method.",
+        "url": "http://arxiv.org/abs/2510.03142v1",
+        "published_date": "2025-10-03T16:15:09+00:00",
+        "updated_date": "2025-10-03T16:15:09+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Tianyu Xu",
+            "Jiawei Chen",
+            "Jiazhao Zhang",
+            "Wenyao Zhang",
+            "Zekun Qi",
+            "Minghan Li",
+            "Zhizheng Zhang",
+            "He Wang"
+        ],
+        "tldr": "The paper proposes a Multi-View Vision-Language-Action (VLA) model (MM-Nav) for visual navigation, trained using expert data from multiple RL agents with privileged depth information and dynamically balanced training for improved generalization and performance, outperforming the teacher RL agents.",
+        "tldr_zh": "本文提出了一种多视角视觉-语言-动作（VLA）模型（MM-Nav），用于视觉导航。该模型使用来自多个具有特权深度信息的强化学习（RL）代理的专家数据进行训练，并通过动态平衡训练来提高泛化能力和性能，优于教师RL代理。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Mask2IV: Interaction-Centric Video Generation via Mask Trajectories",
+        "summary": "Generating interaction-centric videos, such as those depicting humans or\nrobots interacting with objects, is crucial for embodied intelligence, as they\nprovide rich and diverse visual priors for robot learning, manipulation policy\ntraining, and affordance reasoning. However, existing methods often struggle to\nmodel such complex and dynamic interactions. While recent studies show that\nmasks can serve as effective control signals and enhance generation quality,\nobtaining dense and precise mask annotations remains a major challenge for\nreal-world use. To overcome this limitation, we introduce Mask2IV, a novel\nframework specifically designed for interaction-centric video generation. It\nadopts a decoupled two-stage pipeline that first predicts plausible motion\ntrajectories for both actor and object, then generates a video conditioned on\nthese trajectories. This design eliminates the need for dense mask inputs from\nusers while preserving the flexibility to manipulate the interaction process.\nFurthermore, Mask2IV supports versatile and intuitive control, allowing users\nto specify the target object of interaction and guide the motion trajectory\nthrough action descriptions or spatial position cues. To support systematic\ntraining and evaluation, we curate two benchmarks covering diverse action and\nobject categories across both human-object interaction and robotic manipulation\nscenarios. Extensive experiments demonstrate that our method achieves superior\nvisual realism and controllability compared to existing baselines.",
+        "url": "http://arxiv.org/abs/2510.03135v1",
+        "published_date": "2025-10-03T16:04:33+00:00",
+        "updated_date": "2025-10-03T16:04:33+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Gen Li",
+            "Bo Zhao",
+            "Jianfei Yang",
+            "Laura Sevilla-Lara"
+        ],
+        "tldr": "Mask2IV is a novel framework for generating interaction-centric videos by predicting actor and object trajectories, eliminating the need for dense mask inputs while maintaining controllability and realism. It introduces new benchmarks for human-object interaction and robotic manipulation.",
+        "tldr_zh": "Mask2IV是一个新的框架，通过预测演员和物体的轨迹来生成以交互为中心的视频，无需密集的蒙版输入，同时保持可控性和真实感。它引入了人类-物体交互和机器人操作的新基准。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Geometry Meets Vision: Revisiting Pretrained Semantics in Distilled Fields",
+        "summary": "Semantic distillation in radiance fields has spurred significant advances in\nopen-vocabulary robot policies, e.g., in manipulation and navigation, founded\non pretrained semantics from large vision models. While prior work has\ndemonstrated the effectiveness of visual-only semantic features (e.g., DINO and\nCLIP) in Gaussian Splatting and neural radiance fields, the potential benefit\nof geometry-grounding in distilled fields remains an open question. In\nprinciple, visual-geometry features seem very promising for spatial tasks such\nas pose estimation, prompting the question: Do geometry-grounded semantic\nfeatures offer an edge in distilled fields? Specifically, we ask three critical\nquestions: First, does spatial-grounding produce higher-fidelity geometry-aware\nsemantic features? We find that image features from geometry-grounded backbones\ncontain finer structural details compared to their counterparts. Secondly, does\ngeometry-grounding improve semantic object localization? We observe no\nsignificant difference in this task. Thirdly, does geometry-grounding enable\nhigher-accuracy radiance field inversion? Given the limitations of prior work\nand their lack of semantics integration, we propose a novel framework SPINE for\ninverting radiance fields without an initial guess, consisting of two core\ncomponents: coarse inversion using distilled semantics, and fine inversion\nusing photometric-based optimization. Surprisingly, we find that the pose\nestimation accuracy decreases with geometry-grounded features. Our results\nsuggest that visual-only features offer greater versatility for a broader range\nof downstream tasks, although geometry-grounded features contain more geometric\ndetail. Notably, our findings underscore the necessity of future research on\neffective strategies for geometry-grounding that augment the versatility and\nperformance of pretrained semantic features.",
+        "url": "http://arxiv.org/abs/2510.03104v1",
+        "published_date": "2025-10-03T15:32:56+00:00",
+        "updated_date": "2025-10-03T15:32:56+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Zhiting Mei",
+            "Ola Shorinwa",
+            "Anirudha Majumdar"
+        ],
+        "tldr": "This paper investigates the benefit of geometry-grounded semantic features in distilled radiance fields for robotics, finding that visual-only features are surprisingly more versatile than geometry-grounded ones, despite the latter containing finer geometric detail. They also proposed a novel framework called SPINE for inverting radiance fields without initial guess.",
+        "tldr_zh": "该论文研究了几何关联语义特征在机器人蒸馏辐射场中的益处，发现尽管几何关联特征包含更精细的几何细节，但纯视觉特征比几何关联特征更通用。他们还提出了一个名为 SPINE 的新框架，用于在没有初始猜测的情况下反演辐射场。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Training-Free Out-Of-Distribution Segmentation With Foundation Models",
+        "summary": "Detecting unknown objects in semantic segmentation is crucial for\nsafety-critical applications such as autonomous driving. Large vision\nfoundation models, includ- ing DINOv2, InternImage, and CLIP, have advanced\nvisual representation learn- ing by providing rich features that generalize\nwell across diverse tasks. While their strength in closed-set semantic tasks is\nestablished, their capability to detect out- of-distribution (OoD) regions in\nsemantic segmentation remains underexplored. In this work, we investigate\nwhether foundation models fine-tuned on segmen- tation datasets can inherently\ndistinguish in-distribution (ID) from OoD regions without any outlier\nsupervision. We propose a simple, training-free approach that utilizes features\nfrom the InternImage backbone and applies K-Means clustering alongside\nconfidence thresholding on raw decoder logits to identify OoD clusters. Our\nmethod achieves 50.02 Average Precision on the RoadAnomaly benchmark and 48.77\non the benchmark of ADE-OoD with InternImage-L, surpassing several supervised\nand unsupervised baselines. These results suggest a promising direc- tion for\ngeneric OoD segmentation methods that require minimal assumptions or additional\ndata.",
+        "url": "http://arxiv.org/abs/2510.02909v1",
+        "published_date": "2025-10-03T11:27:40+00:00",
+        "updated_date": "2025-10-03T11:27:40+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Laith Nayal",
+            "Hadi Salloum",
+            "Ahmad Taha",
+            "Yaroslav Kholodov",
+            "Alexander Gasnikov"
+        ],
+        "tldr": "This paper explores the out-of-distribution segmentation capabilities of foundation models like DINOv2, InternImage, and CLIP, demonstrating a training-free approach using K-Means clustering and confidence thresholding on InternImage features that achieves competitive results on RoadAnomaly and ADE-OoD benchmarks.",
+        "tldr_zh": "本文探讨了诸如DINOv2、InternImage和CLIP等基础模型在异常检测分割方面的能力，展示了一种无需训练的方法，该方法利用K-Means聚类和置信度阈值处理InternImage特征，在RoadAnomaly和ADE-OoD基准测试中取得了有竞争力的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Work Zones challenge VLM Trajectory Planning: Toward Mitigation and Robust Autonomous Driving",
+        "summary": "Visual Language Models (VLMs), with powerful multimodal reasoning\ncapabilities, are gradually integrated into autonomous driving by several\nautomobile manufacturers to enhance planning capability in challenging\nenvironments. However, the trajectory planning capability of VLMs in work\nzones, which often include irregular layouts, temporary traffic control, and\ndynamically changing geometric structures, is still unexplored. To bridge this\ngap, we conduct the \\textit{first} systematic study of VLMs for work zone\ntrajectory planning, revealing that mainstream VLMs fail to generate correct\ntrajectories in $68.0%$ of cases. To better understand these failures, we first\nidentify candidate patterns via subgraph mining and clustering analysis, and\nthen confirm the validity of $8$ common failure patterns through human\nverification. Building on these findings, we propose REACT-Drive, a trajectory\nplanning framework that integrates VLMs with Retrieval-Augmented Generation\n(RAG). Specifically, REACT-Drive leverages VLMs to convert prior failure cases\ninto constraint rules and executable trajectory planning code, while RAG\nretrieves similar patterns in new scenarios to guide trajectory generation.\nExperimental results on the ROADWork dataset show that REACT-Drive yields a\nreduction of around $3\\times$ in average displacement error relative to VLM\nbaselines under evaluation with Qwen2.5-VL. In addition, REACT-Drive yields the\nlowest inference time ($0.58$s) compared with other methods such as fine-tuning\n($17.90$s). We further conduct experiments using a real vehicle in 15 work zone\nscenarios in the physical world, demonstrating the strong practicality of\nREACT-Drive.",
+        "url": "http://arxiv.org/abs/2510.02803v1",
+        "published_date": "2025-10-03T08:21:15+00:00",
+        "updated_date": "2025-10-03T08:21:15+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Yifan Liao",
+            "Zhen Sun",
+            "Xiaoyun Qiu",
+            "Zixiao Zhao",
+            "Wenbing Tang",
+            "Xinlei He",
+            "Xinhu Zheng",
+            "Tianwei Zhang",
+            "Xinyi Huang",
+            "Xingshuo Han"
+        ],
+        "tldr": "This paper systematically studies the failure of VLMs in work zone trajectory planning for autonomous driving and proposes REACT-Drive, a Retrieval-Augmented Generation framework to mitigate these failures, demonstrating improved performance in both simulated and real-world settings.",
+        "tldr_zh": "本文系统研究了视觉语言模型（VLMs）在自动驾驶工作区域轨迹规划中的失败案例，并提出了REACT-Drive，一种利用检索增强生成（RAG）的框架来减轻这些失败，在模拟和真实环境中都表现出更好的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Sequence-Preserving Dual-FoV Defense for Traffic Sign and Light Recognition in Autonomous Vehicles",
+        "summary": "Traffic light and sign recognition are key for Autonomous Vehicles (AVs)\nbecause perception mistakes directly influence navigation and safety. In\naddition to digital adversarial attacks, models are vulnerable to existing\nperturbations (glare, rain, dirt, or graffiti), which could lead to dangerous\nmisclassifications. The current work lacks consideration of temporal\ncontinuity, multistatic field-of-view (FoV) sensing, and robustness to both\ndigital and natural degradation. This study proposes a dual FoV,\nsequence-preserving robustness framework for traffic lights and signs in the\nUSA based on a multi-source dataset built on aiMotive, Udacity, Waymo, and\nself-recorded videos from the region of Texas. Mid and long-term sequences of\nRGB images are temporally aligned for four operational design domains (ODDs):\nhighway, night, rainy, and urban. Over a series of experiments on a real-life\napplication of anomaly detection, this study outlines a unified three-layer\ndefense stack framework that incorporates feature squeezing, defensive\ndistillation, and entropy-based anomaly detection, as well as sequence-wise\ntemporal voting for further enhancement. The evaluation measures included\naccuracy, attack success rate (ASR), risk-weighted misclassification severity,\nand confidence stability. Physical transferability was confirmed using probes\nfor recapture. The results showed that the Unified Defense Stack achieved\n79.8mAP and reduced the ASR to 18.2%, which is superior to YOLOv8, YOLOv9, and\nBEVFormer, while reducing the high-risk misclassification to 32%.",
+        "url": "http://arxiv.org/abs/2510.02642v1",
+        "published_date": "2025-10-03T00:43:25+00:00",
+        "updated_date": "2025-10-03T00:43:25+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Abhishek Joshi",
+            "Jahnavi Krishna Koda",
+            "Abhishek Phadke"
+        ],
+        "tldr": "The paper introduces a sequence-preserving, dual field-of-view defense framework for traffic sign and light recognition in autonomous vehicles, demonstrating improved robustness against adversarial attacks and natural degradation compared to existing methods.",
+        "tldr_zh": "本文介绍了一种序列保持的双视场防御框架，用于自动驾驶车辆中的交通标志和交通灯识别，与现有方法相比，该框架在对抗性攻击和自然退化方面表现出更高的鲁棒性。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "SIMSplat: Predictive Driving Scene Editing with Language-aligned 4D Gaussian Splatting",
+        "summary": "Driving scene manipulation with sensor data is emerging as a promising\nalternative to traditional virtual driving simulators. However, existing\nframeworks struggle to generate realistic scenarios efficiently due to limited\nediting capabilities. To address these challenges, we present SIMSplat, a\npredictive driving scene editor with language-aligned Gaussian splatting. As a\nlanguage-controlled editor, SIMSplat enables intuitive manipulation using\nnatural language prompts. By aligning language with Gaussian-reconstructed\nscenes, it further supports direct querying of road objects, allowing precise\nand flexible editing. Our method provides detailed object-level editing,\nincluding adding new objects and modifying the trajectories of both vehicles\nand pedestrians, while also incorporating predictive path refinement through\nmulti-agent motion prediction to generate realistic interactions among all\nagents in the scene. Experiments on the Waymo dataset demonstrate SIMSplat's\nextensive editing capabilities and adaptability across a wide range of\nscenarios. Project page: https://sungyeonparkk.github.io/simsplat/",
+        "url": "http://arxiv.org/abs/2510.02469v1",
+        "published_date": "2025-10-02T18:22:03+00:00",
+        "updated_date": "2025-10-02T18:22:03+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CL",
+            "cs.CV"
+        ],
+        "authors": [
+            "Sung-Yeon Park",
+            "Adam Lee",
+            "Juanwu Lu",
+            "Can Cui",
+            "Luyang Jiang",
+            "Rohit Gupta",
+            "Kyungtae Han",
+            "Ahmadreza Moradipari",
+            "Ziran Wang"
+        ],
+        "tldr": "SIMSplat introduces a language-controlled driving scene editor using Gaussian splatting, enabling realistic and intuitive manipulation of driving scenarios with language prompts and predictive path refinement.",
+        "tldr_zh": "SIMSplat 提出了一种基于高斯溅射的语言控制驾驶场景编辑器，能够通过语言提示和预测路径优化，对驾驶场景进行逼真和直观的操作。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    }
+]
