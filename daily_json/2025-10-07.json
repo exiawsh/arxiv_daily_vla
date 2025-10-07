@@ -1,0 +1,228 @@
+[
+    {
+        "title": "MorphoSim: An Interactive, Controllable, and Editable Language-guided 4D World Simulator",
+        "summary": "World models that support controllable\n  and editable spatiotemporal environments are valuable\n  for robotics, enabling scalable training data, repro ducible evaluation, and\nflexible task design. While\n  recent text-to-video models generate realistic dynam ics, they are\nconstrained to 2D views and offer limited\n  interaction. We introduce MorphoSim, a language guided framework that\ngenerates 4D scenes with\n  multi-view consistency and object-level controls. From\n  natural language instructions, MorphoSim produces\n  dynamic environments where objects can be directed,\n  recolored, or removed, and scenes can be observed\n  from arbitrary viewpoints. The framework integrates\n  trajectory-guided generation with feature field dis tillation, allowing edits\nto be applied interactively\n  without full re-generation. Experiments show that Mor phoSim maintains high\nscene fidelity while enabling\n  controllability and editability. The code is available\n  at https://github.com/eric-ai-lab/Morph4D.",
+        "url": "http://arxiv.org/abs/2510.04390v1",
+        "published_date": "2025-10-05T22:55:17+00:00",
+        "updated_date": "2025-10-05T22:55:17+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.CL"
+        ],
+        "authors": [
+            "Xuehai He",
+            "Shijie Zhou",
+            "Thivyanth Venkateswaran",
+            "Kaizhi Zheng",
+            "Ziyu Wan",
+            "Achuta Kadambi",
+            "Xin Eric Wang"
+        ],
+        "tldr": "MorphoSim is a language-guided 4D world simulator enabling interactive and controllable generation and editing of dynamic scenes with multi-view consistency, which is valuable for robotics training and evaluation.",
+        "tldr_zh": "MorphoSim是一个语言引导的4D世界模拟器，能够以多视角一致性交互式地生成和编辑动态场景，这对于机器人训练和评估很有价值。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "RAP: 3D Rasterization Augmented End-to-End Planning",
+        "summary": "Imitation learning for end-to-end driving trains policies only on expert\ndemonstrations. Once deployed in a closed loop, such policies lack recovery\ndata: small mistakes cannot be corrected and quickly compound into failures. A\npromising direction is to generate alternative viewpoints and trajectories\nbeyond the logged path. Prior work explores photorealistic digital twins via\nneural rendering or game engines, but these methods are prohibitively slow and\ncostly, and thus mainly used for evaluation. In this work, we argue that\nphotorealism is unnecessary for training end-to-end planners. What matters is\nsemantic fidelity and scalability: driving depends on geometry and dynamics,\nnot textures or lighting. Motivated by this, we propose 3D Rasterization, which\nreplaces costly rendering with lightweight rasterization of annotated\nprimitives, enabling augmentations such as counterfactual recovery maneuvers\nand cross-agent view synthesis. To transfer these synthetic views effectively\nto real-world deployment, we introduce a Raster-to-Real feature-space alignment\nthat bridges the sim-to-real gap. Together, these components form Rasterization\nAugmented Planning (RAP), a scalable data augmentation pipeline for planning.\nRAP achieves state-of-the-art closed-loop robustness and long-tail\ngeneralization, ranking first on four major benchmarks: NAVSIM v1/v2, Waymo\nOpen Dataset Vision-based E2E Driving, and Bench2Drive. Our results show that\nlightweight rasterization with feature alignment suffices to scale E2E\ntraining, offering a practical alternative to photorealistic rendering. Project\npage: https://alan-lanfeng.github.io/RAP/.",
+        "url": "http://arxiv.org/abs/2510.04333v1",
+        "published_date": "2025-10-05T19:31:24+00:00",
+        "updated_date": "2025-10-05T19:31:24+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Lan Feng",
+            "Yang Gao",
+            "Eloi Zablocki",
+            "Quanyi Li",
+            "Wuyang Li",
+            "Sichao Liu",
+            "Matthieu Cord",
+            "Alexandre Alahi"
+        ],
+        "tldr": "The paper introduces RAP, a novel data augmentation pipeline for end-to-end driving planning using lightweight 3D rasterization and Raster-to-Real feature alignment, achieving state-of-the-art closed-loop robustness on multiple benchmarks.",
+        "tldr_zh": "该论文介绍了RAP，一种新颖的端到端驾驶规划数据增强管道，使用轻量级的3D栅格化和Raster-to-Real特征对齐，在多个基准测试中实现了最先进的闭环鲁棒性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "StaMo: Unsupervised Learning of Generalizable Robot Motion from Compact State Representation",
+        "summary": "A fundamental challenge in embodied intelligence is developing expressive and\ncompact state representations for efficient world modeling and decision making.\nHowever, existing methods often fail to achieve this balance, yielding\nrepresentations that are either overly redundant or lacking in task-critical\ninformation. We propose an unsupervised approach that learns a highly\ncompressed two-token state representation using a lightweight encoder and a\npre-trained Diffusion Transformer (DiT) decoder, capitalizing on its strong\ngenerative prior. Our representation is efficient, interpretable, and\nintegrates seamlessly into existing VLA-based models, improving performance by\n14.3% on LIBERO and 30% in real-world task success with minimal inference\noverhead. More importantly, we find that the difference between these tokens,\nobtained via latent interpolation, naturally serves as a highly effective\nlatent action, which can be further decoded into executable robot actions. This\nemergent capability reveals that our representation captures structured\ndynamics without explicit supervision. We name our method StaMo for its ability\nto learn generalizable robotic Motion from compact State representation, which\nis encoded from static images, challenging the prevalent dependence to learning\nlatent action on complex architectures and video data. The resulting latent\nactions also enhance policy co-training, outperforming prior methods by 10.4%\nwith improved interpretability. Moreover, our approach scales effectively\nacross diverse data sources, including real-world robot data, simulation, and\nhuman egocentric video.",
+        "url": "http://arxiv.org/abs/2510.05057v1",
+        "published_date": "2025-10-06T17:37:24+00:00",
+        "updated_date": "2025-10-06T17:37:24+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Mingyu Liu",
+            "Jiuhe Shu",
+            "Hui Chen",
+            "Zeju Li",
+            "Canyu Zhao",
+            "Jiange Yang",
+            "Shenyuan Gao",
+            "Hao Chen",
+            "Chunhua Shen"
+        ],
+        "tldr": "The paper introduces StaMo, an unsupervised method for learning compact state representations from images using a Diffusion Transformer, which enables effective robot motion generation and improves performance on various robotic tasks.",
+        "tldr_zh": "该论文介绍了一种名为StaMo的无监督方法，它利用Diffusion Transformer从图像中学习紧凑的状态表示，从而能够有效地生成机器人运动，并提高在各种机器人任务上的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Progressive Gaussian Transformer with Anisotropy-aware Sampling for Open Vocabulary Occupancy Prediction",
+        "summary": "The 3D occupancy prediction task has witnessed remarkable progress in recent\nyears, playing a crucial role in vision-based autonomous driving systems. While\ntraditional methods are limited to fixed semantic categories, recent approaches\nhave moved towards predicting text-aligned features to enable open-vocabulary\ntext queries in real-world scenes. However, there exists a trade-off in\ntext-aligned scene modeling: sparse Gaussian representation struggles to\ncapture small objects in the scene, while dense representation incurs\nsignificant computational overhead. To address these limitations, we present\nPG-Occ, an innovative Progressive Gaussian Transformer Framework that enables\nopen-vocabulary 3D occupancy prediction. Our framework employs progressive\nonline densification, a feed-forward strategy that gradually enhances the 3D\nGaussian representation to capture fine-grained scene details. By iteratively\nenhancing the representation, the framework achieves increasingly precise and\ndetailed scene understanding. Another key contribution is the introduction of\nan anisotropy-aware sampling strategy with spatio-temporal fusion, which\nadaptively assigns receptive fields to Gaussians at different scales and\nstages, enabling more effective feature aggregation and richer scene\ninformation capture. Through extensive evaluations, we demonstrate that PG-Occ\nachieves state-of-the-art performance with a relative 14.3% mIoU improvement\nover the previous best performing method. Code and pretrained models will be\nreleased upon publication on our project page:\nhttps://yanchi-3dv.github.io/PG-Occ",
+        "url": "http://arxiv.org/abs/2510.04759v1",
+        "published_date": "2025-10-06T12:36:07+00:00",
+        "updated_date": "2025-10-06T12:36:07+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Chi Yan",
+            "Dan Xu"
+        ],
+        "tldr": "The paper introduces PG-Occ, a Progressive Gaussian Transformer framework for open-vocabulary 3D occupancy prediction that uses progressive online densification and anisotropy-aware sampling to improve performance and capture fine-grained details, achieving a 14.3% mIoU improvement over existing methods.",
+        "tldr_zh": "该论文提出了PG-Occ，一个用于开放词汇三维占用预测的渐进式高斯Transformer框架，它使用渐进式在线稠密化和各向异性感知采样来提高性能并捕获细粒度细节，相比现有方法，mIoU提高了14.3%。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Object-Centric Representation Learning for Enhanced 3D Scene Graph Prediction",
+        "summary": "3D Semantic Scene Graph Prediction aims to detect objects and their semantic\nrelationships in 3D scenes, and has emerged as a crucial technology for\nrobotics and AR/VR applications. While previous research has addressed dataset\nlimitations and explored various approaches including Open-Vocabulary settings,\nthey frequently fail to optimize the representational capacity of object and\nrelationship features, showing excessive reliance on Graph Neural Networks\ndespite insufficient discriminative capability. In this work, we demonstrate\nthrough extensive analysis that the quality of object features plays a critical\nrole in determining overall scene graph accuracy. To address this challenge, we\ndesign a highly discriminative object feature encoder and employ a contrastive\npretraining strategy that decouples object representation learning from the\nscene graph prediction. This design not only enhances object classification\naccuracy but also yields direct improvements in relationship prediction.\nNotably, when plugging in our pretrained encoder into existing frameworks, we\nobserve substantial performance improvements across all evaluation metrics.\nAdditionally, whereas existing approaches have not fully exploited the\nintegration of relationship information, we effectively combine both geometric\nand semantic features to achieve superior relationship prediction.\nComprehensive experiments on the 3DSSG dataset demonstrate that our approach\nsignificantly outperforms previous state-of-the-art methods. Our code is\npublicly available at https://github.com/VisualScienceLab-KHU/OCRL-3DSSG-Codes.",
+        "url": "http://arxiv.org/abs/2510.04714v1",
+        "published_date": "2025-10-06T11:33:09+00:00",
+        "updated_date": "2025-10-06T11:33:09+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "KunHo Heo",
+            "GiHyun Kim",
+            "SuYeon Kim",
+            "MyeongAh Cho"
+        ],
+        "tldr": "This paper proposes a novel object-centric representation learning approach with contrastive pretraining to enhance 3D scene graph prediction, demonstrating significant performance improvements by improving object feature quality and integrating geometric/semantic relationship information.",
+        "tldr_zh": "本文提出了一种新的以对象为中心的表征学习方法，通过对比预训练来增强3D场景图预测。该方法通过提高对象特征质量和整合几何/语义关系信息，显著提升了性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Diffusion^2: Dual Diffusion Model with Uncertainty-Aware Adaptive Noise for Momentary Trajectory Prediction",
+        "summary": "Accurate pedestrian trajectory prediction is crucial for ensuring safety and\nefficiency in autonomous driving and human-robot interaction scenarios. Earlier\nstudies primarily utilized sufficient observational data to predict future\ntrajectories. However, in real-world scenarios, such as pedestrians suddenly\nemerging from blind spots, sufficient observational data is often unavailable\n(i.e. momentary trajectory), making accurate prediction challenging and\nincreasing the risk of traffic accidents. Therefore, advancing research on\npedestrian trajectory prediction under extreme scenarios is critical for\nenhancing traffic safety. In this work, we propose a novel framework termed\nDiffusion^2, tailored for momentary trajectory prediction. Diffusion^2 consists\nof two sequentially connected diffusion models: one for backward prediction,\nwhich generates unobserved historical trajectories, and the other for forward\nprediction, which forecasts future trajectories. Given that the generated\nunobserved historical trajectories may introduce additional noise, we propose a\ndual-head parameterization mechanism to estimate their aleatoric uncertainty\nand design a temporally adaptive noise module that dynamically modulates the\nnoise scale in the forward diffusion process. Empirically, Diffusion^2 sets a\nnew state-of-the-art in momentary trajectory prediction on ETH/UCY and Stanford\nDrone datasets.",
+        "url": "http://arxiv.org/abs/2510.04365v1",
+        "published_date": "2025-10-05T21:19:33+00:00",
+        "updated_date": "2025-10-05T21:19:33+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yuhao Luo",
+            "Yuang Zhang",
+            "Kehua Chen",
+            "Xinyu Zheng",
+            "Shucheng Zhang",
+            "Sikai Chen",
+            "Yinhai Wang"
+        ],
+        "tldr": "The paper introduces Diffusion^2, a dual diffusion model framework for momentary trajectory prediction in autonomous driving scenarios, addressing the challenge of limited observational data by generating unobserved historical trajectories and adaptively modulating noise based on uncertainty estimation. It claims state-of-the-art results on ETH/UCY and Stanford Drone datasets.",
+        "tldr_zh": "该论文介绍了Diffusion^2，一个双扩散模型框架，用于自动驾驶场景下的瞬时轨迹预测。该框架通过生成未观测到的历史轨迹，并基于不确定性估计自适应地调节噪声，从而解决了观测数据有限的挑战。论文声称在ETH/UCY和Stanford Drone数据集上取得了最先进的结果。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "In-Field Mapping of Grape Yield and Quality with Illumination-Invariant Deep Learning",
+        "summary": "This paper presents an end-to-end, IoT-enabled robotic system for the\nnon-destructive, real-time, and spatially-resolved mapping of grape yield and\nquality (Brix, Acidity) in vineyards. The system features a comprehensive\nanalytical pipeline that integrates two key modules: a high-performance model\nfor grape bunch detection and weight estimation, and a novel deep learning\nframework for quality assessment from hyperspectral (HSI) data. A critical\nbarrier to in-field HSI is the ``domain shift\" caused by variable illumination.\nTo overcome this, our quality assessment is powered by the Light-Invariant\nSpectral Autoencoder (LISA), a domain-adversarial framework that learns\nillumination-invariant features from uncalibrated data. We validated the\nsystem's robustness on a purpose-built HSI dataset spanning three distinct\nillumination domains: controlled artificial lighting (lab), and variable\nnatural sunlight captured in the morning and afternoon. Results show the\ncomplete pipeline achieves a recall (0.82) for bunch detection and a $R^2$\n(0.76) for weight prediction, while the LISA module improves quality prediction\ngeneralization by over 20% compared to the baselines. By combining these robust\nmodules, the system successfully generates high-resolution, georeferenced data\nof both grape yield and quality, providing actionable, data-driven insights for\nprecision viticulture.",
+        "url": "http://arxiv.org/abs/2510.04864v1",
+        "published_date": "2025-10-06T14:51:24+00:00",
+        "updated_date": "2025-10-06T14:51:24+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ciem Cornelissen",
+            "Sander De Coninck",
+            "Axel Willekens",
+            "Sam Leroux",
+            "Pieter Simoens"
+        ],
+        "tldr": "The paper presents an IoT-enabled robotic system with a light-invariant deep learning framework (LISA) for mapping grape yield and quality in vineyards, demonstrating improved generalization in quality prediction under variable illumination conditions.",
+        "tldr_zh": "该论文介绍了一种物联网机器人系统，该系统采用光照不变深度学习框架（LISA），用于绘制葡萄园的葡萄产量和质量图，并展示了在可变光照条件下质量预测的泛化能力。",
+        "relevance_score": 6,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "A Comparative Study of Vision Transformers and CNNs for Few-Shot Rigid Transformation and Fundamental Matrix Estimation",
+        "summary": "Vision-transformers (ViTs) and large-scale convolution-neural-networks (CNNs)\nhave reshaped computer vision through pretrained feature representations that\nenable strong transfer learning for diverse tasks. However, their efficiency as\nbackbone architectures for geometric estimation tasks involving image\ndeformations in low-data regimes remains an open question. This work considers\ntwo such tasks: 1) estimating 2D rigid transformations between pairs of images\nand 2) predicting the fundamental matrix for stereo image pairs, an important\nproblem in various applications, such as autonomous mobility, robotics, and 3D\nscene reconstruction. Addressing this intriguing question, this work\nsystematically compares large-scale CNNs (ResNet, EfficientNet, CLIP-ResNet)\nwith ViT-based foundation models (CLIP-ViT variants and DINO) in various data\nsize settings, including few-shot scenarios. These pretrained models are\noptimized for classification or contrastive learning, encouraging them to focus\nmostly on high-level semantics. The considered tasks require balancing local\nand global features differently, challenging the straightforward adoption of\nthese models as the backbone. Empirical comparative analysis shows that,\nsimilar to training from scratch, ViTs outperform CNNs during refinement in\nlarge downstream-data scenarios. However, in small data scenarios, the\ninductive bias and smaller capacity of CNNs improve their performance, allowing\nthem to match that of a ViT. Moreover, ViTs exhibit stronger generalization in\ncross-domain evaluation where the data distribution changes. These results\nemphasize the importance of carefully selecting model architectures for\nrefinement, motivating future research towards hybrid architectures that\nbalance local and global representations.",
+        "url": "http://arxiv.org/abs/2510.04794v1",
+        "published_date": "2025-10-06T13:18:27+00:00",
+        "updated_date": "2025-10-06T13:18:27+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Alon Kaya",
+            "Igal Bilik",
+            "Inna Stainvas"
+        ],
+        "tldr": "This paper compares Vision Transformers (ViTs) and CNNs as backbone architectures for geometric estimation tasks (rigid transformation and fundamental matrix estimation) in low-data regimes, finding that CNNs perform better in small data scenarios while ViTs generalize better across domains.",
+        "tldr_zh": "本文比较了视觉Transformer (ViT) 和 CNN 作为几何估计任务（刚性变换和基础矩阵估计）的骨干架构在低数据情况下的性能，发现 CNN 在小数据场景中表现更好，而 ViT 在跨领域泛化方面表现更好。",
+        "relevance_score": 8,
+        "novelty_claim_score": 6,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Comparative Analysis of YOLOv5, Faster R-CNN, SSD, and RetinaNet for Motorbike Detection in Kigali Autonomous Driving Context",
+        "summary": "In Kigali, Rwanda, motorcycle taxis are a primary mode of transportation,\noften navigating unpredictably and disregarding traffic rules, posing\nsignificant challenges for autonomous driving systems. This study compares four\nobject detection models--YOLOv5, Faster R-CNN, SSD, and RetinaNet--for\nmotorbike detection using a custom dataset of 198 images collected in Kigali.\nImplemented in PyTorch with transfer learning, the models were evaluated for\naccuracy, localization, and inference speed to assess their suitability for\nreal-time navigation in resource-constrained settings. We identify\nimplementation challenges, including dataset limitations and model\ncomplexities, and recommend simplified architectures for future work to enhance\naccessibility for autonomous systems in developing countries like Rwanda.",
+        "url": "http://arxiv.org/abs/2510.04912v1",
+        "published_date": "2025-10-06T15:26:08+00:00",
+        "updated_date": "2025-10-06T15:26:08+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Ngeyen Yinkfu",
+            "Sunday Nwovu",
+            "Jonathan Kayizzi",
+            "Angelique Uwamahoro"
+        ],
+        "tldr": "This paper compares YOLOv5, Faster R-CNN, SSD, and RetinaNet for motorbike detection in Kigali, Rwanda, to address challenges for autonomous driving systems in that environment, using a custom dataset and evaluating performance for real-time navigation.",
+        "tldr_zh": "该论文比较了YOLOv5、Faster R-CNN、SSD和RetinaNet在卢旺达基加利用于摩托车检测的性能，旨在解决该地区自动驾驶系统所面临的挑战。该研究使用定制数据集，并评估了模型在实时导航中的性能。",
+        "relevance_score": 7,
+        "novelty_claim_score": 4,
+        "clarity_score": 8,
+        "potential_impact_score": 6,
+        "overall_priority_score": 6
+    }
+]

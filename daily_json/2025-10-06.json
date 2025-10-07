@@ -1,0 +1,88 @@
+[
+    {
+        "title": "Bridge Thinking and Acting: Unleashing Physical Potential of VLM with Generalizable Action Expert",
+        "summary": "Although Vision-Language Models (VLM) have demonstrated impressive planning\nand reasoning capabilities, translating these abilities into the physical world\nintroduces significant challenges. Conventional Vision-Language-Action (VLA)\nmodels, which integrate reasoning and action into a monolithic architecture,\ngeneralize poorly because they are constrained by scarce, narrow-domain data.\nWhile recent dual-system approaches attempt to decouple \"thinking\" from\n\"acting\", they are often constrained by semantic ambiguities within the action\nmodule. This ambiguity makes large-scale, cross-task training infeasible.\nConsequently, these systems typically necessitate fine-tuning on newly\ncollected data when deployed to novel environments, and the cooperation\nmechanism between the two systems remains ill-defined. To address these\nlimitations, we introduce, for the first time, a framework centered around a\ngeneralizable action expert. Our approach utilizes sparse 3D trajectories as an\nintermediate representation, effectively bridging the high-level planning\ncapabilities of the VLM with the low-level physical action module. During the\nplanning phase, the VLM is only required to generate coarse 3D waypoints. These\nwaypoints are then processed by our generalizable action expert, which refines\nthem into dense, executable action sequences by sampling real-time point cloud\nobservations of the environment. To promote training efficiency and robust\ngeneralization, we introduce a novel \"Action Pre-training, Pointcloud\nFine-tuning\" paradigm. Our method combines the broad generalization\ncapabilities of VLMs in visual understanding and planning with the\nfine-grained, action-level generalization of action expert.",
+        "url": "http://arxiv.org/abs/2510.03896v1",
+        "published_date": "2025-10-04T18:33:27+00:00",
+        "updated_date": "2025-10-04T18:33:27+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Mingyu Liu",
+            "Zheng Huang",
+            "Xiaoyi Lin",
+            "Muzhi Zhu",
+            "Canyu Zhao",
+            "Zongze Du",
+            "Yating Wang",
+            "Haoyi Zhu",
+            "Hao Chen",
+            "Chunhua Shen"
+        ],
+        "tldr": "The paper proposes a VLA framework with a generalizable action expert that uses sparse 3D trajectories as an intermediate representation to bridge high-level planning of VLMs with low-level physical actions, trained using a novel \"Action Pre-training, Pointcloud Fine-tuning\" paradigm.",
+        "tldr_zh": "该论文提出了一个VLA框架，该框架具有通用动作专家，该专家使用稀疏3D轨迹作为中间表示，以桥接VLM的高级规划和低级物理动作，并使用一种新颖的“动作预训练，点云微调”范例进行训练。",
+        "relevance_score": 10,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "From Filters to VLMs: Benchmarking Defogging Methods through Object Detection and Segmentation Performance",
+        "summary": "Autonomous driving perception systems are particularly vulnerable in foggy\nconditions, where light scattering reduces contrast and obscures fine details\ncritical for safe operation. While numerous defogging methods exist-from\nhandcrafted filters to learned restoration models-improvements in image\nfidelity do not consistently translate into better downstream detection and\nsegmentation. Moreover, prior evaluations often rely on synthetic data, leaving\nquestions about real-world transferability. We present a structured empirical\nstudy that benchmarks a comprehensive set of pipelines, including (i) classical\nfilters, (ii) modern defogging networks, (iii) chained variants\n(filter$\\rightarrow$model, model$\\rightarrow$filter), and (iv) prompt-driven\nvisual--language image editing models (VLM) applied directly to foggy images.\nUsing Foggy Cityscapes, we assess both image quality and downstream performance\non object detection (mAP) and segmentation (PQ, RQ, SQ). Our analysis reveals\nwhen defogging helps, when chaining yields synergy or degradation, and how\nVLM-based editors compare to dedicated approaches. In addition, we evaluate\nqualitative rubric-based scores from a VLM judge and quantify their alignment\nwith task metrics, showing strong correlations with mAP. Together, these\nresults establish a transparent, task-oriented benchmark for defogging methods\nand highlight the conditions under which preprocessing genuinely improves\nautonomous perception in adverse weather.",
+        "url": "http://arxiv.org/abs/2510.03906v1",
+        "published_date": "2025-10-04T19:05:04+00:00",
+        "updated_date": "2025-10-04T19:05:04+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ardalan Aryashad",
+            "Parsa Razmara",
+            "Amin Mahjoub",
+            "Seyedarmin Azizi",
+            "Mahdi Salmani",
+            "Arad Firouzkouhi"
+        ],
+        "tldr": "This paper benchmarks various defogging methods, including classical filters, modern networks, chained approaches, and VLMs, for autonomous driving perception tasks like object detection and segmentation on the Foggy Cityscapes dataset, assessing their impact on downstream performance.",
+        "tldr_zh": "本文针对自动驾驶感知任务，如目标检测和分割，在Foggy Cityscapes数据集上对各种去雾方法进行了基准测试，包括经典滤波器、现代网络、链式方法和视觉语言模型，并评估了它们对下游性能的影响。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "NoTVLA: Narrowing of Dense Action Trajectories for Generalizable Robot Manipulation",
+        "summary": "Vision-Language-Action (VLA) models represent a pivotal advance in embodied\nintelligence, yet they confront critical barriers to real-world deployment,\nmost notably catastrophic forgetting. This issue stems from their overreliance\non continuous action sequences or action chunks, which inadvertently create\nisolated data silos that disrupt knowledge retention across tasks. To tackle\nthese challenges, we propose the Narrowing of Trajectory VLA (NoTVLA)\nframework: a novel approach that narrows its focus to sparse trajectories,\nthereby avoiding the catastrophic forgetting associated with dense trajectory\nfine-tuning. A key innovation of NoTVLA lies in its trajectory planning\nstrategy: instead of centering on the target object's trajectory, it leverages\ntemporal compression and spatial reasoning pruning specifically for the robot\nend effector's trajectory. Furthermore, training is conducted using these\nsparse trajectories rather than dense action trajectories, an optimization that\ndelivers remarkable practical advantages with better performance in zero-shot.\nIn multi-task evaluation scenarios, NoTVLA achieves superior performance and\ngeneralization compared to pi0 while operating under two critical constraints:\nit uses over an order of magnitude less computing power than pi0 and requires\nno wrist-mounted camera. This design ensures that NoTVLA's operational accuracy\nclosely approximates that of single-task expert models. Crucially, it also\npreserves the model's inherent language capabilities, enabling zero-shot\ngeneralization in specific scenarios, supporting unified model deployment\nacross multiple robot platforms, and fostering a degree of generalization even\nwhen perceiving tasks from novel perspectives.",
+        "url": "http://arxiv.org/abs/2510.03895v1",
+        "published_date": "2025-10-04T18:26:55+00:00",
+        "updated_date": "2025-10-04T18:26:55+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Zheng Huang",
+            "Mingyu Liu",
+            "Xiaoyi Lin",
+            "Muzhi Zhu",
+            "Canyu Zhao",
+            "Zongze Du",
+            "Xiaoman Li",
+            "Yiduo Jia",
+            "Hao Zhong",
+            "Hao Chen",
+            "Chunhua Shen"
+        ],
+        "tldr": "The paper introduces NoTVLA, a framework for Vision-Language-Action models that addresses catastrophic forgetting by using sparse action trajectories and a novel trajectory planning strategy, achieving better generalization and efficiency in multi-task robot manipulation.",
+        "tldr_zh": "该论文介绍了NoTVLA，一个视觉-语言-动作模型的框架，通过使用稀疏动作轨迹和一种新的轨迹规划策略来解决灾难性遗忘问题，从而在多任务机器人操作中实现更好的泛化和效率。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    }
+]
