@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Autonomous Driving, VLA, 3D Understanding, Robotics) - October 04, 2025</title>
+    <title>ArXiv CS.CV Papers (Autonomous Driving, VLA, 3D Understanding, Robotics) - October 08, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>VLM Daily Papers</h1>
         <p>Daily papers related to VLA/AV/3D Understanding from cs.CV</p>
         
-            <p>October 04, 2025</p>
+            <p>October 08, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,33 +215,31 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">MM-Nav: Multi-View VLA Model for Robust Visual Navigation via Multi-Expert Learning</h2>
+            <h2 class="paper-title">ALISE: Annotation-Free LiDAR Instance Segmentation for Autonomous Driving</h2>
             
-            <p class="paper-summary">Visual navigation policy is widely regarded as a promising direction, as it
-mimics humans by using egocentric visual observations for navigation. However,
-optical information of visual observations is difficult to be explicitly
-modeled like LiDAR point clouds or depth maps, which subsequently requires
-intelligent models and large-scale data. To this end, we propose to leverage
-the intelligence of the Vision-Language-Action (VLA) model to learn diverse
-navigation capabilities from synthetic expert data in a teacher-student manner.
-Specifically, we implement the VLA model, MM-Nav, as a multi-view VLA (with 360
-observations) based on pretrained large language models and visual foundation
-models. For large-scale navigation data, we collect expert data from three
-reinforcement learning (RL) experts trained with privileged depth information
-in three challenging tailor-made environments for different navigation
-capabilities: reaching, squeezing, and avoiding. We iteratively train our VLA
-model using data collected online from RL experts, where the training ratio is
-dynamically balanced based on performance on individual capabilities. Through
-extensive experiments in synthetic environments, we demonstrate that our model
-achieves strong generalization capability. Moreover, we find that our student
-VLA model outperforms the RL teachers, demonstrating the synergistic effect of
-integrating multiple capabilities. Extensive real-world experiments further
-confirm the effectiveness of our method.</p>
+            <p class="paper-summary">The manual annotation of outdoor LiDAR point clouds for instance segmentation
+is extremely costly and time-consuming. Current methods attempt to reduce this
+burden but still rely on some form of human labeling. To completely eliminate
+this dependency, we introduce ALISE, a novel framework that performs LiDAR
+instance segmentation without any annotations. The central challenge is to
+generate high-quality pseudo-labels in a fully unsupervised manner. Our
+approach starts by employing Vision Foundation Models (VFMs), guided by text
+and images, to produce initial pseudo-labels. We then refine these labels
+through a dedicated spatio-temporal voting module, which combines 2D and 3D
+semantics for both offline and online optimization. To achieve superior feature
+learning, we further introduce two forms of semantic supervision: a set of 2D
+prior-based losses that inject visual knowledge into the 3D network, and a
+novel prototype-based contrastive loss that builds a discriminative feature
+space by exploiting 3D semantic consistency. This comprehensive design results
+in significant performance gains, establishing a new state-of-the-art for
+unsupervised 3D instance segmentation. Remarkably, our approach even
+outperforms MWSIS, a method that operates with supervision from ground-truth
+(GT) 2D bounding boxes by a margin of 2.53% in mAP (50.95% vs. 48.42%).</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper proposes a Multi-View Vision-Language-Action (VLA) model (MM-Nav) for visual navigation, trained using expert data from multiple RL agents with privileged depth information and dynamically balanced training for improved generalization and performance, outperforming the teacher RL agents.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces ALISE, a novel annotation-free framework for LiDAR instance segmentation in autonomous driving, utilizing Vision Foundation Models and spatio-temporal voting to generate high-quality pseudo-labels and achieve state-of-the-art unsupervised performance.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种多视角视觉-语言-动作（VLA）模型（MM-Nav），用于视觉导航。该模型使用来自多个具有特权深度信息的强化学习（RL）代理的专家数据进行训练，并通过动态平衡训练来提高泛化能力和性能，优于教师RL代理。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为ALISE的全新无标注LiDAR点云实例分割框架，用于自动驾驶。该框架利用视觉基础模型和时空投票生成高质量的伪标签，实现了最先进的无监督性能。</p>
             
 
             
@@ -251,32 +249,32 @@ confirm the effectiveness of our method.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(10/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
             </div>
@@ -305,18 +303,18 @@ confirm the effectiveness of our method.</p>
                     
                 
                     
-                        <i class="far fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(9/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.03142v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.05752v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Tianyu Xu, Jiawei Chen, Jiazhao Zhang, Wenyao Zhang, Zekun Qi, Minghan Li, Zhizheng Zhang, He Wang</p>
+            <p class="paper-authors">Authors: Yongxuan Lyu, Guangfeng Jiang, Hongsi Liu, Jun Liu</p>
             
         </motion.div>
         
@@ -328,33 +326,26 @@ confirm the effectiveness of our method.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Mask2IV: Interaction-Centric Video Generation via Mask Trajectories</h2>
+            <h2 class="paper-title">Dropping the D: RGB-D SLAM Without the Depth Sensor</h2>
             
-            <p class="paper-summary">Generating interaction-centric videos, such as those depicting humans or
-robots interacting with objects, is crucial for embodied intelligence, as they
-provide rich and diverse visual priors for robot learning, manipulation policy
-training, and affordance reasoning. However, existing methods often struggle to
-model such complex and dynamic interactions. While recent studies show that
-masks can serve as effective control signals and enhance generation quality,
-obtaining dense and precise mask annotations remains a major challenge for
-real-world use. To overcome this limitation, we introduce Mask2IV, a novel
-framework specifically designed for interaction-centric video generation. It
-adopts a decoupled two-stage pipeline that first predicts plausible motion
-trajectories for both actor and object, then generates a video conditioned on
-these trajectories. This design eliminates the need for dense mask inputs from
-users while preserving the flexibility to manipulate the interaction process.
-Furthermore, Mask2IV supports versatile and intuitive control, allowing users
-to specify the target object of interaction and guide the motion trajectory
-through action descriptions or spatial position cues. To support systematic
-training and evaluation, we curate two benchmarks covering diverse action and
-object categories across both human-object interaction and robotic manipulation
-scenarios. Extensive experiments demonstrate that our method achieves superior
-visual realism and controllability compared to existing baselines.</p>
+            <p class="paper-summary">We present DropD-SLAM, a real-time monocular SLAM system that achieves
+RGB-D-level accuracy without relying on depth sensors. The system replaces
+active depth input with three pretrained vision modules: a monocular metric
+depth estimator, a learned keypoint detector, and an instance segmentation
+network. Dynamic objects are suppressed using dilated instance masks, while
+static keypoints are assigned predicted depth values and backprojected into 3D
+to form metrically scaled features. These are processed by an unmodified RGB-D
+SLAM back end for tracking and mapping. On the TUM RGB-D benchmark, DropD-SLAM
+attains 7.4 cm mean ATE on static sequences and 1.8 cm on dynamic sequences,
+matching or surpassing state-of-the-art RGB-D methods while operating at 22 FPS
+on a single GPU. These results suggest that modern pretrained vision models can
+replace active depth sensors as reliable, real-time sources of metric scale,
+marking a step toward simpler and more cost-effective SLAM systems.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: Mask2IV is a novel framework for generating interaction-centric videos by predicting actor and object trajectories, eliminating the need for dense mask inputs while maintaining controllability and realism. It introduces new benchmarks for human-object interaction and robotic manipulation.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper presents DropD-SLAM, a monocular SLAM system achieving RGB-D accuracy without a depth sensor by leveraging pretrained vision models for depth estimation, keypoint detection, and instance segmentation. It demonstrates comparable or superior performance to RGB-D methods on the TUM RGB-D benchmark.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: Mask2IV是一个新的框架，通过预测演员和物体的轨迹来生成以交互为中心的视频，无需密集的蒙版输入，同时保持可控性和真实感。它引入了人类-物体交互和机器人操作的新基准。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了DropD-SLAM，一种单目SLAM系统，它利用预训练的视觉模型进行深度估计、关键点检测和实例分割，在没有深度传感器的情况下实现了RGB-D的精度。该系统在TUM RGB-D基准测试中表现出与RGB-D方法相当甚至更好的性能。</p>
             
 
             
@@ -364,16 +355,16 @@ visual realism and controllability compared to existing baselines.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -425,11 +416,11 @@ visual realism and controllability compared to existing baselines.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.03135v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.06216v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Gen Li, Bo Zhao, Jianfei Yang, Laura Sevilla-Lara</p>
+            <p class="paper-authors">Authors: Mert Kiray, Alican Karaomer, Benjamin Busam</p>
             
         </motion.div>
         
@@ -441,38 +432,36 @@ visual realism and controllability compared to existing baselines.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Geometry Meets Vision: Revisiting Pretrained Semantics in Distilled Fields</h2>
+            <h2 class="paper-title">Drive&Gen: Co-Evaluating End-to-End Driving and Video Generation Models</h2>
             
-            <p class="paper-summary">Semantic distillation in radiance fields has spurred significant advances in
-open-vocabulary robot policies, e.g., in manipulation and navigation, founded
-on pretrained semantics from large vision models. While prior work has
-demonstrated the effectiveness of visual-only semantic features (e.g., DINO and
-CLIP) in Gaussian Splatting and neural radiance fields, the potential benefit
-of geometry-grounding in distilled fields remains an open question. In
-principle, visual-geometry features seem very promising for spatial tasks such
-as pose estimation, prompting the question: Do geometry-grounded semantic
-features offer an edge in distilled fields? Specifically, we ask three critical
-questions: First, does spatial-grounding produce higher-fidelity geometry-aware
-semantic features? We find that image features from geometry-grounded backbones
-contain finer structural details compared to their counterparts. Secondly, does
-geometry-grounding improve semantic object localization? We observe no
-significant difference in this task. Thirdly, does geometry-grounding enable
-higher-accuracy radiance field inversion? Given the limitations of prior work
-and their lack of semantics integration, we propose a novel framework SPINE for
-inverting radiance fields without an initial guess, consisting of two core
-components: coarse inversion using distilled semantics, and fine inversion
-using photometric-based optimization. Surprisingly, we find that the pose
-estimation accuracy decreases with geometry-grounded features. Our results
-suggest that visual-only features offer greater versatility for a broader range
-of downstream tasks, although geometry-grounded features contain more geometric
-detail. Notably, our findings underscore the necessity of future research on
-effective strategies for geometry-grounding that augment the versatility and
-performance of pretrained semantic features.</p>
+            <p class="paper-summary">Recent advances in generative models have sparked exciting new possibilities
+in the field of autonomous vehicles. Specifically, video generation models are
+now being explored as controllable virtual testing environments.
+Simultaneously, end-to-end (E2E) driving models have emerged as a streamlined
+alternative to conventional modular autonomous driving systems, gaining
+popularity for their simplicity and scalability. However, the application of
+these techniques to simulation and planning raises important questions. First,
+while video generation models can generate increasingly realistic videos, can
+these videos faithfully adhere to the specified conditions and be realistic
+enough for E2E autonomous planner evaluation? Second, given that data is
+crucial for understanding and controlling E2E planners, how can we gain deeper
+insights into their biases and improve their ability to generalize to
+out-of-distribution scenarios? In this work, we bridge the gap between the
+driving models and generative world models (Drive&Gen) to address these
+questions. We propose novel statistical measures leveraging E2E drivers to
+evaluate the realism of generated videos. By exploiting the controllability of
+the video generation model, we conduct targeted experiments to investigate
+distribution gaps affecting E2E planner performance. Finally, we show that
+synthetic data produced by the video generation model offers a cost-effective
+alternative to real-world data collection. This synthetic data effectively
+improves E2E model generalization beyond existing Operational Design Domains,
+facilitating the expansion of autonomous vehicle services into new operational
+contexts.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper investigates the benefit of geometry-grounded semantic features in distilled radiance fields for robotics, finding that visual-only features are surprisingly more versatile than geometry-grounded ones, despite the latter containing finer geometric detail. They also proposed a novel framework called SPINE for inverting radiance fields without initial guess.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a framework called Drive&Gen that uses end-to-end driving models to evaluate the realism and controllability of generated videos for autonomous driving simulation, and demonstrates the use of synthetic data from video generation to improve E2E planner generalization.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文研究了几何关联语义特征在机器人蒸馏辐射场中的益处，发现尽管几何关联特征包含更精细的几何细节，但纯视觉特征比几何关联特征更通用。他们还提出了一个名为 SPINE 的新框架，用于在没有初始猜测的情况下反演辐射场。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一个名为Drive&Gen的框架，该框架使用端到端驾驶模型来评估生成视频的真实性和可控性，用于自动驾驶仿真，并展示了使用视频生成产生的合成数据来提高E2E规划器的泛化能力。</p>
             
 
             
@@ -482,16 +471,16 @@ performance of pretrained semantic features.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -506,8 +495,8 @@ performance of pretrained semantic features.</p>
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
             </div>
@@ -543,11 +532,11 @@ performance of pretrained semantic features.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.03104v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.06209v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Zhiting Mei, Ola Shorinwa, Anirudha Majumdar</p>
+            <p class="paper-authors">Authors: Jiahao Wang, Zhenpei Yang, Yijing Bai, Yingwei Li, Yuliang Zou, Bo Sun, Abhijit Kundu, Jose Lezama, Luna Yue Huang, Zehao Zhu, Jyh-Jing Hwang, Dragomir Anguelov, Mingxing Tan, Chiyu Max Jiang</p>
             
         </motion.div>
         
@@ -559,30 +548,27 @@ performance of pretrained semantic features.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Training-Free Out-Of-Distribution Segmentation With Foundation Models</h2>
+            <h2 class="paper-title">The Safety Challenge of World Models for Embodied AI Agents: A Review</h2>
             
-            <p class="paper-summary">Detecting unknown objects in semantic segmentation is crucial for
-safety-critical applications such as autonomous driving. Large vision
-foundation models, includ- ing DINOv2, InternImage, and CLIP, have advanced
-visual representation learn- ing by providing rich features that generalize
-well across diverse tasks. While their strength in closed-set semantic tasks is
-established, their capability to detect out- of-distribution (OoD) regions in
-semantic segmentation remains underexplored. In this work, we investigate
-whether foundation models fine-tuned on segmen- tation datasets can inherently
-distinguish in-distribution (ID) from OoD regions without any outlier
-supervision. We propose a simple, training-free approach that utilizes features
-from the InternImage backbone and applies K-Means clustering alongside
-confidence thresholding on raw decoder logits to identify OoD clusters. Our
-method achieves 50.02 Average Precision on the RoadAnomaly benchmark and 48.77
-on the benchmark of ADE-OoD with InternImage-L, surpassing several supervised
-and unsupervised baselines. These results suggest a promising direc- tion for
-generic OoD segmentation methods that require minimal assumptions or additional
-data.</p>
+            <p class="paper-summary">The rapid progress in embodied artificial intelligence has highlighted the
+necessity for more advanced and integrated models that can perceive, interpret,
+and predict environmental dynamics. In this context, World Models (WMs) have
+been introduced to provide embodied agents with the abilities to anticipate
+future environmental states and fill in knowledge gaps, thereby enhancing
+agents' ability to plan and execute actions. However, when dealing with
+embodied agents it is fundamental to ensure that predictions are safe for both
+the agent and the environment. In this article, we conduct a comprehensive
+literature review of World Models in the domains of autonomous driving and
+robotics, with a specific focus on the safety implications of scene and control
+generation tasks. Our review is complemented by an empirical analysis, wherein
+we collect and examine predictions from state-of-the-art models, identify and
+categorize common faults (herein referred to as pathologies), and provide a
+quantitative evaluation of the results.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper explores the out-of-distribution segmentation capabilities of foundation models like DINOv2, InternImage, and CLIP, demonstrating a training-free approach using K-Means clustering and confidence thresholding on InternImage features that achieves competitive results on RoadAnomaly and ADE-OoD benchmarks.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper reviews the safety implications of using World Models in autonomous driving and robotics, empirically analyzing and categorizing prediction faults from state-of-the-art models.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文探讨了诸如DINOv2、InternImage和CLIP等基础模型在异常检测分割方面的能力，展示了一种无需训练的方法，该方法利用K-Means聚类和置信度阈值处理InternImage特征，在RoadAnomaly和ADE-OoD基准测试中取得了有竞争力的结果。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文回顾了在自动驾驶和机器人领域使用世界模型（World Models）的安全性影响，并对现有模型的预测错误进行了实证分析和分类。</p>
             
 
             
@@ -594,236 +580,6 @@ data.</p>
                     
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                     <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2510.02909v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Laith Nayal, Hadi Salloum, Ahmad Taha, Yaroslav Kholodov, Alexander Gasnikov</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.2, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">Work Zones challenge VLM Trajectory Planning: Toward Mitigation and Robust Autonomous Driving</h2>
-            
-            <p class="paper-summary">Visual Language Models (VLMs), with powerful multimodal reasoning
-capabilities, are gradually integrated into autonomous driving by several
-automobile manufacturers to enhance planning capability in challenging
-environments. However, the trajectory planning capability of VLMs in work
-zones, which often include irregular layouts, temporary traffic control, and
-dynamically changing geometric structures, is still unexplored. To bridge this
-gap, we conduct the \textit{first} systematic study of VLMs for work zone
-trajectory planning, revealing that mainstream VLMs fail to generate correct
-trajectories in $68.0%$ of cases. To better understand these failures, we first
-identify candidate patterns via subgraph mining and clustering analysis, and
-then confirm the validity of $8$ common failure patterns through human
-verification. Building on these findings, we propose REACT-Drive, a trajectory
-planning framework that integrates VLMs with Retrieval-Augmented Generation
-(RAG). Specifically, REACT-Drive leverages VLMs to convert prior failure cases
-into constraint rules and executable trajectory planning code, while RAG
-retrieves similar patterns in new scenarios to guide trajectory generation.
-Experimental results on the ROADWork dataset show that REACT-Drive yields a
-reduction of around $3\times$ in average displacement error relative to VLM
-baselines under evaluation with Qwen2.5-VL. In addition, REACT-Drive yields the
-lowest inference time ($0.58$s) compared with other methods such as fine-tuning
-($17.90$s). We further conduct experiments using a real vehicle in 15 work zone
-scenarios in the physical world, demonstrating the strong practicality of
-REACT-Drive.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper systematically studies the failure of VLMs in work zone trajectory planning for autonomous driving and proposes REACT-Drive, a Retrieval-Augmented Generation framework to mitigate these failures, demonstrating improved performance in both simulated and real-world settings.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文系统研究了视觉语言模型（VLMs）在自动驾驶工作区域轨迹规划中的失败案例，并提出了REACT-Drive，一种利用检索增强生成（RAG）的框架来减轻这些失败，在模拟和真实环境中都表现出更好的性能。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2510.02803v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Yifan Liao, Zhen Sun, Xiaoyun Qiu, Zixiao Zhao, Wenbing Tang, Xinlei He, Xinhu Zheng, Tianwei Zhang, Xinyi Huang, Xingshuo Han</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.25, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">Sequence-Preserving Dual-FoV Defense for Traffic Sign and Light Recognition in Autonomous Vehicles</h2>
-            
-            <p class="paper-summary">Traffic light and sign recognition are key for Autonomous Vehicles (AVs)
-because perception mistakes directly influence navigation and safety. In
-addition to digital adversarial attacks, models are vulnerable to existing
-perturbations (glare, rain, dirt, or graffiti), which could lead to dangerous
-misclassifications. The current work lacks consideration of temporal
-continuity, multistatic field-of-view (FoV) sensing, and robustness to both
-digital and natural degradation. This study proposes a dual FoV,
-sequence-preserving robustness framework for traffic lights and signs in the
-USA based on a multi-source dataset built on aiMotive, Udacity, Waymo, and
-self-recorded videos from the region of Texas. Mid and long-term sequences of
-RGB images are temporally aligned for four operational design domains (ODDs):
-highway, night, rainy, and urban. Over a series of experiments on a real-life
-application of anomaly detection, this study outlines a unified three-layer
-defense stack framework that incorporates feature squeezing, defensive
-distillation, and entropy-based anomaly detection, as well as sequence-wise
-temporal voting for further enhancement. The evaluation measures included
-accuracy, attack success rate (ASR), risk-weighted misclassification severity,
-and confidence stability. Physical transferability was confirmed using probes
-for recapture. The results showed that the Unified Defense Stack achieved
-79.8mAP and reduced the ASR to 18.2%, which is superior to YOLOv8, YOLOv9, and
-BEVFormer, while reducing the high-risk misclassification to 32%.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces a sequence-preserving, dual field-of-view defense framework for traffic sign and light recognition in autonomous vehicles, demonstrating improved robustness against adversarial attacks and natural degradation compared to existing methods.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种序列保持的双视场防御框架，用于自动驾驶车辆中的交通标志和交通灯识别，与现有方法相比，该框架在对抗性攻击和自然退化方面表现出更高的鲁棒性。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -883,11 +639,11 @@ BEVFormer, while reducing the high-risk misclassification to 32%.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.02642v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.05865v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Abhishek Joshi, Jahnavi Krishna Koda, Abhishek Phadke</p>
+            <p class="paper-authors">Authors: Lorenzo Baraldi, Zifan Zeng, Chongzhe Zhang, Aradhana Nayak, Hongbo Zhu, Feng Liu, Qunli Zhang, Peng Wang, Shiming Liu, Zheng Hu, Angelo Cangelosi, Lorenzo Baraldi</p>
             
         </motion.div>
         
@@ -895,32 +651,42 @@ BEVFormer, while reducing the high-risk misclassification to 32%.</p>
             initial="{ opacity: 0, y: 50, scale: 0.9 }"
             whileInView="{ opacity: 1, y: 0, scale: 1 }"
             viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.30000000000000004, ease: 'easeOut' }"  
+            transition="{ duration: 0.5, delay: 0.2, ease: 'easeOut' }"  
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">SIMSplat: Predictive Driving Scene Editing with Language-aligned 4D Gaussian Splatting</h2>
+            <h2 class="paper-title">D2E: Scaling Vision-Action Pretraining on Desktop Data for Transfer to Embodied AI</h2>
             
-            <p class="paper-summary">Driving scene manipulation with sensor data is emerging as a promising
-alternative to traditional virtual driving simulators. However, existing
-frameworks struggle to generate realistic scenarios efficiently due to limited
-editing capabilities. To address these challenges, we present SIMSplat, a
-predictive driving scene editor with language-aligned Gaussian splatting. As a
-language-controlled editor, SIMSplat enables intuitive manipulation using
-natural language prompts. By aligning language with Gaussian-reconstructed
-scenes, it further supports direct querying of road objects, allowing precise
-and flexible editing. Our method provides detailed object-level editing,
-including adding new objects and modifying the trajectories of both vehicles
-and pedestrians, while also incorporating predictive path refinement through
-multi-agent motion prediction to generate realistic interactions among all
-agents in the scene. Experiments on the Waymo dataset demonstrate SIMSplat's
-extensive editing capabilities and adaptability across a wide range of
-scenarios. Project page: https://sungyeonparkk.github.io/simsplat/</p>
+            <p class="paper-summary">Large language models leverage internet-scale text data, yet embodied AI
+remains constrained by the prohibitive costs of physical trajectory collection.
+Desktop environments -- particularly gaming -- offer a compelling alternative:
+they provide rich sensorimotor interactions at scale while maintaining the
+structured observation-action coupling essential for embodied learning. We
+present D2E (Desktop to Embodied AI), a framework that demonstrates desktop
+interactions can serve as an effective pretraining substrate for robotics
+embodied AI tasks. Unlike prior work that remained domain-specific (e.g., VPT
+for Minecraft) or kept data proprietary (e.g., SIMA), D2E establishes a
+complete pipeline from scalable desktop data collection to verified transfer in
+embodied domains. Our framework comprises three components: (1) the OWA Toolkit
+that unifies diverse desktop interactions into a standardized format with 152x
+compression, (2) the Generalist-IDM that achieves strong zero-shot
+generalization across unseen games through timestamp-based event prediction,
+enabling internet-scale pseudo-labeling, and (3) VAPT that transfers
+desktop-pretrained representations to physical manipulation and navigation.
+Using 1.3K+ hours of data (259 hours of human demonstrations, and 1K+ hours of
+pseudo-labeled gameplay), we achieve a total of 96.6% success rate on LIBERO
+manipulation and 83.3% on CANVAS navigation benchmarks. This validates that
+sensorimotor primitives in digital interactions exhibit sufficient invariance
+to transfer meaningfully to physical embodied tasks, establishing desktop
+pretraining as a practical paradigm for robotics. We will make all our work
+public, including the OWA toolkit, datasets of human-collected and
+pseudo-labeled, and VAPT-trained models available at
+https://worv-ai.github.io/d2e/</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: SIMSplat introduces a language-controlled driving scene editor using Gaussian splatting, enabling realistic and intuitive manipulation of driving scenarios with language prompts and predictive path refinement.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces D2E, a framework for pretraining embodied AI agents using large-scale desktop interaction data and demonstrates its effectiveness by achieving high success rates on robotic manipulation and navigation benchmarks, proving that desktop interactions can transfer to physical embodied tasks.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: SIMSplat 提出了一种基于高斯溅射的语言控制驾驶场景编辑器，能够通过语言提示和预测路径优化，对驾驶场景进行逼真和直观的操作。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了D2E，一个利用大规模桌面交互数据预训练具身智能代理的框架。通过在机器人操作和导航基准测试中取得较高的成功率，证明了桌面交互可以迁移到物理具身任务。</p>
             
 
             
@@ -930,8 +696,8 @@ scenarios. Project page: https://sungyeonparkk.github.io/simsplat/</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -946,8 +712,8 @@ scenarios. Project page: https://sungyeonparkk.github.io/simsplat/</p>
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -991,18 +757,130 @@ scenarios. Project page: https://sungyeonparkk.github.io/simsplat/</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.02469v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.05684v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Sung-Yeon Park, Adam Lee, Juanwu Lu, Can Cui, Luyang Jiang, Rohit Gupta, Kyungtae Han, Ahmadreza Moradipari, Ziran Wang</p>
+            <p class="paper-authors">Authors: Suwhan Choi, Jaeyoon Jung, Haebin Seong, Minchan Kim, Minyeong Kim, Yongjun Cho, Yoonshik Kim, Yubeen Park, Youngjae Yu, Yunsung Lee</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.25, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">DeLTa: Demonstration and Language-Guided Novel Transparent Object Manipulation</h2>
+            
+            <p class="paper-summary">Despite the prevalence of transparent object interactions in human everyday
+life, transparent robotic manipulation research remains limited to
+short-horizon tasks and basic grasping capabilities.Although some methods have
+partially addressed these issues, most of them have limitations in
+generalizability to novel objects and are insufficient for precise long-horizon
+robot manipulation. To address this limitation, we propose DeLTa (Demonstration
+and Language-Guided Novel Transparent Object Manipulation), a novel framework
+that integrates depth estimation, 6D pose estimation, and vision-language
+planning for precise long-horizon manipulation of transparent objects guided by
+natural task instructions. A key advantage of our method is its
+single-demonstration approach, which generalizes 6D trajectories to novel
+transparent objects without requiring category-level priors or additional
+training. Additionally, we present a task planner that refines the
+VLM-generated plan to account for the constraints of a single-arm, eye-in-hand
+robot for long-horizon object manipulation tasks. Through comprehensive
+evaluation, we demonstrate that our method significantly outperforms existing
+transparent object manipulation approaches, particularly in long-horizon
+scenarios requiring precise manipulation capabilities. Project page:
+https://sites.google.com/view/DeLTa25/</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces DeLTa, a framework for long-horizon transparent object manipulation using single-demonstration learning and vision-language planning, showing improved performance over existing methods.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了DeLTa，一个用于长程透明物体操作的框架，它采用单次演示学习和视觉语言规划，并展示了优于现有方法的性能。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2510.05662v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Taeyeop Lee, Gyuree Kang, Bowen Wen, Youngho Kim, Seunghyeok Back, In So Kweon, David Hyunchul Shim, Kuk-Jin Yoon</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-10-08 03:30:42 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-10-08 03:37:11 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>
