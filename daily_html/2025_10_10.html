@@ -1,0 +1,2240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArXiv CS.CV Papers (Autonomous Driving, VLA, 3D Understanding, Robotics) - October 10, 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
+    <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+        :root {
+            /* New Palette: Light, Clean, Futuristic with Teal/Aqua accents */
+            --bg-color: #f8fafc; /* Tailwind slate-50 (Very Light Gray) */
+            --card-bg-color: #ffffff; /* White */
+            --text-color: #1e293b; /* Tailwind slate-800 (Dark Gray-Blue) */
+            --text-muted-color: #64748b; /* Tailwind slate-500 (Medium Gray-Blue) */
+            --header-color: #0f172a; /* Tailwind slate-900 (Very Dark Blue) */
+            --highlight-primary: #14b8a6; /* Tailwind teal-500 */
+            --highlight-secondary: #67e8f9; /* Tailwind cyan-300 */
+            --border-color: #e2e8f0; /* Tailwind slate-200 (Light Gray) */
+            --shadow-color: rgba(15, 23, 42, 0.08); /* Subtle shadow based on slate-900 */
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+            line-height: 1.6;
+        }
+
+        .bento-grid {
+            display: grid;
+            gap: 1.5rem; /* Tailwind gap-6 */
+            grid-template-columns: 1fr; /* Force single column */
+            padding-bottom: 4rem; /* Add padding at the bottom */
+        }
+
+        .bento-item {
+            /* Apply semi-transparent white background and blur */
+            background-color: rgba(255, 255, 255, 0.7); /* White with 70% opacity */
+            backdrop-filter: blur(10px); /* Apply blur effect */
+            -webkit-backdrop-filter: blur(10px); /* Safari prefix */
+            border-radius: 1rem; /* Slightly larger radius */
+            padding: 1.75rem; /* Slightly more padding */
+            border: 1px solid rgba(226, 232, 240, 0.5); /* Lighter border with transparency */
+            box-shadow: 0 4px 12px var(--shadow-color);
+            transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, background-color 0.3s ease-out;
+            overflow: hidden; /* Ensure content doesn't overflow */
+            position: relative; /* For potential pseudo-elements */
+        }
+
+        /* Removed ::before pseudo-element for a cleaner look */
+
+
+        .bento-item:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 20px var(--shadow-color), 0 4px 8px rgba(15, 23, 42, 0.06); /* Adjusted hover shadow */
+        }
+
+        .paper-title {
+            font-size: 1.125rem; /* Tailwind text-lg */
+            font-weight: 600; /* Tailwind font-semibold */
+            color: var(--highlight-primary); /* Use new primary highlight */
+            margin-bottom: 0.75rem; /* Tailwind mb-3 */
+            line-height: 1.4;
+        }
+
+        .paper-summary {
+            font-size: 0.875rem; /* Tailwind text-sm */
+            color: var(--text-muted-color);
+            margin-bottom: 1.25rem; /* Tailwind mb-5 */
+            line-height: 1.6;
+        }
+
+        .paper-link {
+            display: inline-flex; /* Use flex for icon alignment */
+            align-items: center;
+            font-size: 0.875rem; /* Tailwind text-sm */
+            font-weight: 600;
+            color: var(--highlight-primary);
+            text-decoration: none;
+            padding: 0.5rem 1rem; /* Add padding */
+            border-radius: 0.5rem; /* Slightly rounder */
+            background-color: rgba(20, 184, 166, 0.08); /* Subtle teal background */
+            border: 1px solid rgba(20, 184, 166, 0.2);
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+        }
+
+        .paper-link i {
+            margin-right: 0.5rem; /* Tailwind mr-2 */
+            transition: transform 0.3s ease;
+        }
+
+        .paper-link:hover {
+            background-color: rgba(20, 184, 166, 0.15);
+            color: #0d9488; /* Darker teal on hover */
+            transform: translateY(-1px);
+        }
+        .paper-link:hover i {
+             transform: translateX(2px);
+        }
+
+        .paper-authors {
+            font-size: 0.75rem; /* Tailwind text-xs */
+            color: var(--text-muted-color);
+            margin-top: 1rem; /* Tailwind mt-4 */
+            font-style: italic;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem; /* Tailwind mb-12 */
+            padding-top: 3rem; /* Tailwind pt-12 */
+        }
+
+        .header h1 {
+            font-size: 2.5rem; /* Tailwind text-4xl or 5xl */
+            font-weight: 700; /* Tailwind font-bold */
+            color: var(--header-color);
+            letter-spacing: -0.025em; /* Tailwind tracking-tight */
+            margin-bottom: 0.5rem;
+            /* Optional: Add a subtle text gradient */
+            /* background: linear-gradient(90deg, var(--highlight-primary), var(--highlight-secondary)); */
+            /* -webkit-background-clip: text; */
+            /* -webkit-text-fill-color: transparent; */
+        }
+
+        .header p {
+            font-size: 1.125rem; /* Tailwind text-lg */
+            color: var(--text-muted-color);
+            margin-top: 0.5rem; /* Tailwind mt-2 */
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .footer {
+            text-align: center;
+            color: var(--text-muted-color);
+            font-size: 0.875rem; /* Tailwind text-sm */
+            padding-top: 2rem;
+            padding-bottom: 2rem; /* Tailwind py-8 */
+            border-top: 1px solid var(--border-color);
+            margin-top: 4rem;
+        }
+
+        /* Simple line graphic element (optional) */
+        .line-graphic {
+            height: 1px; /* Thinner line */
+            background: linear-gradient(90deg, rgba(20, 184, 166, 0), var(--highlight-primary), rgba(20, 184, 166, 0));
+            opacity: 0.6;
+            margin: 1.5rem 0; /* Adjust margin */
+        }
+
+        /* Framer Motion requires the script, styles enhance appearance */
+        [data-motion-element] {
+             /* Base styles for elements animated by Framer Motion */
+        }
+
+        .paper-tldr {
+            font-size: 0.95rem; /* Slightly bigger than summary */
+            color: #475569; /* Changed to Tailwind slate-600 (slightly darker than summary) */
+            margin-top: 0.75rem; /* Tailwind mt-3 */
+            margin-bottom: 0.75rem; /* Tailwind mb-2 */
+            /* font-style: italic; */
+            font-weight: bold;
+        }
+
+        .paper-rating {
+            margin-top: 1rem; /* Tailwind mt-4 */
+            margin-bottom: 1rem; /* Tailwind mb-4 */
+            color: #f59e0b; /* Tailwind amber-500 */
+        }
+
+        .paper-rating i {
+            margin-right: 0.125rem; /* Tailwind mr-0.5 */
+        }
+
+        /* Apply consistent star color to sub-ratings */
+        .paper-sub-ratings .rating-item i {
+            color: #f59e0b; /* Match overall rating star color (amber-500) */
+            margin-right: 0.125rem; /* Consistent spacing */
+        }
+
+    </style>
+</head>
+<body class="container mx-auto px-4 antialiased">
+
+    <motion.div
+        initial="{ opacity: 0, y: -30 }"
+        animate="{ opacity: 1, y: 0 }"
+        transition="{ duration: 0.6, ease: 'easeOut' }"
+        class="header"
+        data-motion-element
+    >
+        <h1>VLM Daily Papers</h1>
+        <p>Daily papers related to VLA/AV/3D Understanding from cs.CV</p>
+        
+            <p>October 10, 2025</p>
+        
+        <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
+    </motion.div>
+
+    <div class="bento-grid" id="paper-grid">
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.0, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">ARTDECO: Towards Efficient and High-Fidelity On-the-Fly 3D Reconstruction with Structured Scene Representation</h2>
+            
+            <p class="paper-summary">On-the-fly 3D reconstruction from monocular image sequences is a
+long-standing challenge in computer vision, critical for applications such as
+real-to-sim, AR/VR, and robotics. Existing methods face a major tradeoff:
+per-scene optimization yields high fidelity but is computationally expensive,
+whereas feed-forward foundation models enable real-time inference but struggle
+with accuracy and robustness. In this work, we propose ARTDECO, a unified
+framework that combines the efficiency of feed-forward models with the
+reliability of SLAM-based pipelines. ARTDECO uses 3D foundation models for pose
+estimation and point prediction, coupled with a Gaussian decoder that
+transforms multi-scale features into structured 3D Gaussians. To sustain both
+fidelity and efficiency at scale, we design a hierarchical Gaussian
+representation with a LoD-aware rendering strategy, which improves rendering
+fidelity while reducing redundancy. Experiments on eight diverse indoor and
+outdoor benchmarks show that ARTDECO delivers interactive performance
+comparable to SLAM, robustness similar to feed-forward systems, and
+reconstruction quality close to per-scene optimization, providing a practical
+path toward on-the-fly digitization of real-world environments with both
+accurate geometry and high visual fidelity. Explore more demos on our project
+page: https://city-super.github.io/artdeco/.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: ARTDECO presents a unified framework for efficient and high-fidelity on-the-fly 3D reconstruction by combining 3D foundation models with a hierarchical Gaussian representation, achieving a balance between speed, robustness, and accuracy.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: ARTDECO 提出了一个统一的框架，用于高效且高保真地进行即时 3D 重建，它结合了 3D 基础模型和分层高斯表示，从而在速度、鲁棒性和准确性之间实现了平衡。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star-half-alt"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2510.08551v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Guanghao Li, Kerui Ren, Linning Xu, Zhewen Zheng, Changjian Jiang, Xin Gao, Bo Dai, Jian Pu, Mulin Yu, Jiangmiao Pang</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.05, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">GTR-Bench: Evaluating Geo-Temporal Reasoning in Vision-Language Models</h2>
+            
+            <p class="paper-summary">Recently spatial-temporal intelligence of Visual-Language Models (VLMs) has
+attracted much attention due to its importance for Autonomous Driving, Embodied
+AI and General Artificial Intelligence. Existing spatial-temporal benchmarks
+mainly focus on egocentric perspective reasoning with images/video context, or
+geographic perspective reasoning with graphics context (eg. a map), thus fail
+to assess VLMs' geographic spatial-temporal intelligence with both images/video
+and graphics context, which is important for areas like traffic management and
+emergency response. To address the gaps, we introduce Geo-Temporal Reasoning
+benchmark (GTR-Bench), a novel challenge for geographic temporal reasoning of
+moving targets in a large-scale camera network. GTR-Bench is more challenging
+as it requires multiple perspective switches between maps and videos, joint
+reasoning across multiple videos with non-overlapping fields of view, and
+inference over spatial-temporal regions that are unobserved by any video
+context. Evaluations of more than 10 popular VLMs on GTR-Bench demonstrate that
+even the best proprietary model, Gemini-2.5-Pro (34.9%), significantly lags
+behind human performance (78.61%) on geo-temporal reasoning. Moreover, our
+comprehensive analysis on GTR-Bench reveals three primary deficiencies of
+current models for geo-temporal reasoning. (1) VLMs' reasoning is impaired by
+an imbalanced utilization of spatial-temporal context. (2) VLMs are weak in
+temporal forecasting, which leads to worse performance on temporal-emphasized
+tasks than on spatial-emphasized tasks. (3) VLMs lack the proficiency to
+comprehend or align the map data with multi-view video inputs. We believe
+GTR-Bench offers valuable insights and opens up new opportunities for research
+and applications in spatial-temporal intelligence. Benchmark and code will be
+released at https://github.com/X-Luffy/GTR-Bench.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces GTR-Bench, a new benchmark for evaluating geo-temporal reasoning in VLMs using image/video and map contexts, highlighting the shortcomings of current VLMs in this area, especially for applications like traffic management.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了GTR-Bench，一个新的用于评估VLMs中地理时序推理的基准，它结合了图像/视频和地图上下文，并强调了当前VLMs在这方面的不足，尤其是在交通管理等应用中。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star-half-alt"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2510.07791v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Qinghongbing Xie, Zhaoyuan Xia, Feng Zhu, Lijun Gong, Ziyue Li, Rui Zhao, Long Zeng</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.1, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">IntentionVLA: Generalizable and Efficient Embodied Intention Reasoning for Human-Robot Interaction</h2>
+            
+            <p class="paper-summary">Vision-Language-Action (VLA) models leverage pretrained vision-language
+models (VLMs) to couple perception with robotic control, offering a promising
+path toward general-purpose embodied intelligence. However, current SOTA VLAs
+are primarily pretrained on multimodal tasks with limited relevance to embodied
+scenarios, and then finetuned to map explicit instructions to actions.
+Consequently, due to the lack of reasoning-intensive pretraining and
+reasoning-guided manipulation, these models are unable to perform implicit
+human intention reasoning required for complex, real-world interactions. To
+overcome these limitations, we propose \textbf{IntentionVLA}, a VLA framework
+with a curriculum training paradigm and an efficient inference mechanism. Our
+proposed method first leverages carefully designed reasoning data that combine
+intention inference, spatial grounding, and compact embodied reasoning,
+endowing the model with both reasoning and perception capabilities. In the
+following finetuning stage, IntentionVLA employs the compact reasoning outputs
+as contextual guidance for action generation, enabling fast inference under
+indirect instructions. Experimental results show that IntentionVLA
+substantially outperforms $\pi_0$, achieving 18\% higher success rates with
+direct instructions and 28\% higher than ECoT under intention instructions. On
+out-of-distribution intention tasks, IntentionVLA achieves over twice the
+success rate of all baselines, and further enables zero-shot human-robot
+interaction with 40\% success rate. These results highlight IntentionVLA as a
+promising paradigm for next-generation human-robot interaction (HRI) systems.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces IntentionVLA, a novel Vision-Language-Action framework that enhances human-robot interaction by enabling robots to reason about implicit human intentions through a curriculum training paradigm and efficient inference mechanism, leading to significantly improved performance in intention-based tasks.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了IntentionVLA，一种新型的视觉-语言-动作框架，通过课程学习范式和高效的推理机制，使机器人能够推理人类的隐含意图，从而显著提高在基于意图任务中的性能，增强人机交互。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star-half-alt"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2510.07778v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Yandu Chen, Kefan Gu, Yuqing Wen, Yucheng Zhao, Tiancai Wang, Liqiang Nie</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.15000000000000002, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">Scalable Offline Metrics for Autonomous Driving</h2>
+            
+            <p class="paper-summary">Real-World evaluation of perception-based planning models for robotic
+systems, such as autonomous vehicles, can be safely and inexpensively conducted
+offline, i.e., by computing model prediction error over a pre-collected
+validation dataset with ground-truth annotations. However, extrapolating from
+offline model performance to online settings remains a challenge. In these
+settings, seemingly minor errors can compound and result in test-time
+infractions or collisions. This relationship is understudied, particularly
+across diverse closed-loop metrics and complex urban maneuvers. In this work,
+we revisit this undervalued question in policy evaluation through an extensive
+set of experiments across diverse conditions and metrics. Based on analysis in
+simulation, we find an even worse correlation between offline and online
+settings than reported by prior studies, casting doubts on the validity of
+current evaluation practices and metrics for driving policies. Next, we bridge
+the gap between offline and online evaluation. We investigate an offline metric
+based on epistemic uncertainty, which aims to capture events that are likely to
+cause errors in closed-loop settings. The resulting metric achieves over 13%
+improvement in correlation compared to previous offline metrics. We further
+validate the generalization of our findings beyond the simulation environment
+in real-world settings, where even greater gains are observed.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper identifies and addresses the weak correlation between offline and online evaluation metrics for autonomous driving policies. They propose an improved offline metric based on epistemic uncertainty that better predicts online performance, validated in both simulation and real-world settings.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文指出并解决了自动驾驶策略中离线和在线评估指标之间相关性较弱的问题。他们提出了一种基于认知不确定性的改进离线指标，可以更好地预测在线性能，并在仿真和真实环境中进行了验证。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2510.08571v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Animikh Aich, Adwait Kulkarni, Eshed Ohn-Bar</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.2, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">NovaFlow: Zero-Shot Manipulation via Actionable Flow from Generated Videos</h2>
+            
+            <p class="paper-summary">Enabling robots to execute novel manipulation tasks zero-shot is a central
+goal in robotics. Most existing methods assume in-distribution tasks or rely on
+fine-tuning with embodiment-matched data, limiting transfer across platforms.
+We present NovaFlow, an autonomous manipulation framework that converts a task
+description into an actionable plan for a target robot without any
+demonstrations. Given a task description, NovaFlow synthesizes a video using a
+video generation model and distills it into 3D actionable object flow using
+off-the-shelf perception modules. From the object flow, it computes relative
+poses for rigid objects and realizes them as robot actions via grasp proposals
+and trajectory optimization. For deformable objects, this flow serves as a
+tracking objective for model-based planning with a particle-based dynamics
+model. By decoupling task understanding from low-level control, NovaFlow
+naturally transfers across embodiments. We validate on rigid, articulated, and
+deformable object manipulation tasks using a table-top Franka arm and a Spot
+quadrupedal mobile robot, and achieve effective zero-shot execution without
+demonstrations or embodiment-specific training. Project website:
+https://novaflow.lhy.xyz/.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: NovaFlow enables robots to perform zero-shot manipulation tasks by synthesizing videos from task descriptions and distilling them into actionable object flow for robot control, demonstrating transferability across different robot embodiments.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: NovaFlow通过从任务描述合成视频，并将其提炼为可操作的对象流以进行机器人控制，从而使机器人能够执行零样本操作任务，并展示了跨不同机器人形态的可转移性。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2510.08568v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Hongyu Li, Lingfeng Sun, Yafei Hu, Duy Ta, Jennifer Barry, George Konidaris, Jiahui Fu</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.25, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">ResAD: Normalized Residual Trajectory Modeling for End-to-End Autonomous Driving</h2>
+            
+            <p class="paper-summary">End-to-end autonomous driving (E2EAD) systems, which learn to predict future
+trajectories directly from sensor data, are fundamentally challenged by the
+inherent spatio-temporal imbalance of trajectory data. This imbalance creates a
+significant optimization burden, causing models to learn spurious correlations
+instead of causal inference, while also prioritizing uncertain, distant
+predictions, thereby compromising immediate safety. To address these issues, we
+propose ResAD, a novel Normalized Residual Trajectory Modeling framework.
+Instead of predicting the future trajectory directly, our approach reframes the
+learning task to predict the residual deviation from a deterministic inertial
+reference. The inertial reference serves as a counterfactual, forcing the model
+to move beyond simple pattern recognition and instead identify the underlying
+causal factors (e.g., traffic rules, obstacles) that necessitate deviations
+from a default, inertially-guided path. To deal with the optimization imbalance
+caused by uncertain, long-term horizons, ResAD further incorporates Point-wise
+Normalization of the predicted residual. It re-weights the optimization
+objective, preventing large-magnitude errors associated with distant, uncertain
+waypoints from dominating the learning signal. Extensive experiments validate
+the effectiveness of our framework. On the NAVSIM benchmark, ResAD achieves a
+state-of-the-art PDMS of 88.6 using a vanilla diffusion policy with only two
+denoising steps, demonstrating that our approach significantly simplifies the
+learning task and improves model performance. The code will be released to
+facilitate further research.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces ResAD, a normalized residual trajectory modeling framework for end-to-end autonomous driving, addressing spatio-temporal imbalance in trajectory data by predicting deviations from an inertial reference and normalizing residual predictions, achieving state-of-the-art performance on the NAVSIM benchmark.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了 ResAD，一个用于端到端自动驾驶的归一化残差轨迹建模框架，通过预测与惯性参考的偏差并归一化残差预测，解决了轨迹数据中的时空不平衡问题，并在 NAVSIM 基准测试中取得了最先进的性能。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2510.08562v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Zhiyu Zheng, Shaoyu Chen, Haoran Yin, Xinbang Zhang, Jialv Zou, Xinggang Wang, Qian Zhang, Lefei Zhang</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.30000000000000004, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">DexNDM: Closing the Reality Gap for Dexterous In-Hand Rotation via Joint-Wise Neural Dynamics Model</h2>
+            
+            <p class="paper-summary">Achieving generalized in-hand object rotation remains a significant challenge
+in robotics, largely due to the difficulty of transferring policies from
+simulation to the real world. The complex, contact-rich dynamics of dexterous
+manipulation create a "reality gap" that has limited prior work to constrained
+scenarios involving simple geometries, limited object sizes and aspect ratios,
+constrained wrist poses, or customized hands. We address this sim-to-real
+challenge with a novel framework that enables a single policy, trained in
+simulation, to generalize to a wide variety of objects and conditions in the
+real world. The core of our method is a joint-wise dynamics model that learns
+to bridge the reality gap by effectively fitting limited amount of real-world
+collected data and then adapting the sim policy's actions accordingly. The
+model is highly data-efficient and generalizable across different whole-hand
+interaction distributions by factorizing dynamics across joints, compressing
+system-wide influences into low-dimensional variables, and learning each
+joint's evolution from its own dynamic profile, implicitly capturing these net
+effects. We pair this with a fully autonomous data collection strategy that
+gathers diverse, real-world interaction data with minimal human intervention.
+Our complete pipeline demonstrates unprecedented generality: a single policy
+successfully rotates challenging objects with complex shapes (e.g., animals),
+high aspect ratios (up to 5.33), and small sizes, all while handling diverse
+wrist orientations and rotation axes. Comprehensive real-world evaluations and
+a teleoperation application for complex tasks validate the effectiveness and
+robustness of our approach. Website: https://meowuu7.github.io/DexNDM/</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper presents a novel sim-to-real framework for dexterous in-hand object rotation, using a joint-wise neural dynamics model (DexNDM) to adapt simulation policies to the real world, achieving unprecedented generality across diverse objects and conditions.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了一种新的模拟到真实框架，用于灵巧的手内物体旋转，使用关节式神经动力学模型（DexNDM）将模拟策略适应于真实世界，在各种物体和条件下实现了前所未有的通用性。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2510.08556v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Xueyi Liu, He Wang, Li Yi</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.35000000000000003, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">Have We Scene It All? Scene Graph-Aware Deep Point Cloud Compression</h2>
+            
+            <p class="paper-summary">Efficient transmission of 3D point cloud data is critical for advanced
+perception in centralized and decentralized multi-agent robotic systems,
+especially nowadays with the growing reliance on edge and cloud-based
+processing. However, the large and complex nature of point clouds creates
+challenges under bandwidth constraints and intermittent connectivity, often
+degrading system performance. We propose a deep compression framework based on
+semantic scene graphs. The method decomposes point clouds into semantically
+coherent patches and encodes them into compact latent representations with
+semantic-aware encoders conditioned by Feature-wise Linear Modulation (FiLM). A
+folding-based decoder, guided by latent features and graph node attributes,
+enables structurally accurate reconstruction. Experiments on the SemanticKITTI
+and nuScenes datasets show that the framework achieves state-of-the-art
+compression rates, reducing data size by up to 98% while preserving both
+structural and semantic fidelity. In addition, it supports downstream
+applications such as multi-robot pose graph optimization and map merging,
+achieving trajectory accuracy and map alignment comparable to those obtained
+with raw LiDAR scans.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a deep learning framework for compressing 3D point cloud data using semantic scene graphs, achieving state-of-the-art compression rates while maintaining structural and semantic fidelity, and supporting downstream robotic applications.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种基于语义场景图的深度学习框架，用于压缩3D点云数据。该框架在保持结构和语义保真度的同时，实现了最先进的压缩率，并支持下游机器人应用。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2510.08512v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Nikolaos Stathoulopoulos, Christoforos Kanellakis, George Nikolakopoulos</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.4, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">Evaluating Small Vision-Language Models on Distance-Dependent Traffic Perception</h2>
+            
+            <p class="paper-summary">Vision-Language Models (VLMs) are becoming increasingly powerful,
+demonstrating strong performance on a variety of tasks that require both visual
+and textual understanding. Their strong generalisation abilities make them a
+promising component for automated driving systems, which must handle unexpected
+corner cases. However, to be trusted in such safety-critical applications, a
+model must first possess a reliable perception system. Moreover, since critical
+objects and agents in traffic scenes are often at a distance, we require
+systems that are not "shortsighted", i.e., systems with strong perception
+capabilities at both close (up to 20 meters) and long (30+ meters) range. With
+this in mind, we introduce Distance-Annotated Traffic Perception Question
+Answering (DTPQA), the first Visual Question Answering (VQA) benchmark focused
+solely on perception-based questions in traffic scenes, enriched with distance
+annotations. By excluding questions that require reasoning, we ensure that
+model performance reflects perception capabilities alone. Since automated
+driving hardware has limited processing power and cannot support large VLMs,
+our study centers on smaller VLMs. More specifically, we evaluate several
+state-of-the-art (SOTA) small VLMs on DTPQA and show that, despite the
+simplicity of the questions, these models significantly underperform compared
+to humans (~60% average accuracy for the best-performing small VLM versus ~85%
+human performance). However, it is important to note that the human sample size
+was relatively small, which imposes statistical limitations. We also identify
+specific perception tasks, such as distinguishing left from right, that remain
+particularly challenging for these models.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces DTPQA, a new VQA benchmark for evaluating the distance-dependent perception capabilities of small VLMs in traffic scenes, and finds that existing models underperform compared to humans.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一个新的VQA基准测试DTPQA，用于评估小型VLMs在交通场景中距离相关的感知能力，并发现现有模型与人类相比表现不佳。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2510.08352v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Nikos Theodoridis, Tim Brophy, Reenu Mohandas, Ganesh Sistu, Fiachra Collins, Anthony Scanlan, Ciaran Eising</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.45, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge</h2>
+            
+            <p class="paper-summary">Affordance segmentation aims to parse 3D objects into functionally distinct
+parts, bridging recognition and interaction for applications in robotic
+manipulation, embodied AI, and AR. While recent studies leverage visual or
+textual prompts to guide this process, they often rely on point cloud encoders
+as generic feature extractors, overlooking the intrinsic challenges of 3D data
+such as sparsity, noise, and geometric ambiguity. As a result, 3D features
+learned in isolation frequently lack clear and semantically consistent
+functional boundaries. To address this bottleneck, we propose a
+semantic-grounded learning paradigm that transfers rich semantic knowledge from
+large-scale 2D Vision Foundation Models (VFMs) into the 3D domain.
+Specifically, We introduce Cross-Modal Affinity Transfer (CMAT), a pre-training
+strategy that aligns a 3D encoder with lifted 2D semantics and jointly
+optimizes reconstruction, affinity, and diversity to yield semantically
+organized representations. Building on this backbone, we further design the
+Cross-modal Affordance Segmentation Transformer (CAST), which integrates
+multi-modal prompts with CMAT-pretrained features to generate precise,
+prompt-aware segmentation maps. Extensive experiments on standard benchmarks
+demonstrate that our framework establishes new state-of-the-art results for 3D
+affordance segmentation.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a novel approach, CMAT and CAST, for 3D affordance segmentation by transferring semantic knowledge from 2D Vision Foundation Models, achieving state-of-the-art results.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了一种新颖的方法 CMAT 和 CAST，通过从 2D 视觉基础模型迁移语义知识来进行 3D 可供性分割，并取得了最先进的结果。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2510.08316v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Yu Huang, Zelin Peng, Changsong Wen, Xiaokang Yang, Wei Shen</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.5, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">NavSpace: How Navigation Agents Follow Spatial Intelligence Instructions</h2>
+            
+            <p class="paper-summary">Instruction-following navigation is a key step toward embodied intelligence.
+Prior benchmarks mainly focus on semantic understanding but overlook
+systematically evaluating navigation agents' spatial perception and reasoning
+capabilities. In this work, we introduce the NavSpace benchmark, which contains
+six task categories and 1,228 trajectory-instruction pairs designed to probe
+the spatial intelligence of navigation agents. On this benchmark, we
+comprehensively evaluate 22 navigation agents, including state-of-the-art
+navigation models and multimodal large language models. The evaluation results
+lift the veil on spatial intelligence in embodied navigation. Furthermore, we
+propose SNav, a new spatially intelligent navigation model. SNav outperforms
+existing navigation agents on NavSpace and real robot tests, establishing a
+strong baseline for future work.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces NavSpace, a benchmark to evaluate spatial intelligence in navigation agents, revealing limitations in existing models and proposing a new model, SNav, which shows improved performance.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了NavSpace，一个用于评估导航智能体空间智能的基准。研究揭示了现有模型的局限性，并提出了一个新的模型SNav，该模型表现出改进的性能。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2510.08173v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Haolin Yang, Yuxing Long, Zhuoyuan Yu, Zihan Yang, Minghan Wang, Jiapeng Xu, Yihan Wang, Ziyan Yu, Wenzhe Cai, Lei Kang, Hao Dong</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.55, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">RayFusion: Ray Fusion Enhanced Collaborative Visual Perception</h2>
+            
+            <p class="paper-summary">Collaborative visual perception methods have gained widespread attention in
+the autonomous driving community in recent years due to their ability to
+address sensor limitation problems. However, the absence of explicit depth
+information often makes it difficult for camera-based perception systems, e.g.,
+3D object detection, to generate accurate predictions. To alleviate the
+ambiguity in depth estimation, we propose RayFusion, a ray-based fusion method
+for collaborative visual perception. Using ray occupancy information from
+collaborators, RayFusion reduces redundancy and false positive predictions
+along camera rays, enhancing the detection performance of purely camera-based
+collaborative perception systems. Comprehensive experiments show that our
+method consistently outperforms existing state-of-the-art models, substantially
+advancing the performance of collaborative visual perception. The code is
+available at https://github.com/wangsh0111/RayFusion.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: RayFusion, a ray-based fusion method, improves camera-based collaborative perception in autonomous driving by leveraging ray occupancy information to enhance 3D object detection and outperform existing state-of-the-art models.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: RayFusion是一种基于光线的融合方法，它通过利用光线占用信息来增强3D物体检测，从而改进自动驾驶中的基于摄像头的协同感知，并且性能优于现有最先进的模型。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2510.08017v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Shaohong Wang, Bin Lu, Xinyu Xiao, Hanzhi Zhong, Bowen Pang, Tong Wang, Zhiyu Xiang, Hangguan Shan, Eryun Liu</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.6000000000000001, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">CVD-STORM: Cross-View Video Diffusion with Spatial-Temporal Reconstruction Model for Autonomous Driving</h2>
+            
+            <p class="paper-summary">Generative models have been widely applied to world modeling for environment
+simulation and future state prediction. With advancements in autonomous
+driving, there is a growing demand not only for high-fidelity video generation
+under various controls, but also for producing diverse and meaningful
+information such as depth estimation. To address this, we propose CVD-STORM, a
+cross-view video diffusion model utilizing a spatial-temporal reconstruction
+Variational Autoencoder (VAE) that generates long-term, multi-view videos with
+4D reconstruction capabilities under various control inputs. Our approach first
+fine-tunes the VAE with an auxiliary 4D reconstruction task, enhancing its
+ability to encode 3D structures and temporal dynamics. Subsequently, we
+integrate this VAE into the video diffusion process to significantly improve
+generation quality. Experimental results demonstrate that our model achieves
+substantial improvements in both FID and FVD metrics. Additionally, the
+jointly-trained Gaussian Splatting Decoder effectively reconstructs dynamic
+scenes, providing valuable geometric information for comprehensive scene
+understanding.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces CVD-STORM, a cross-view video diffusion model for autonomous driving that utilizes a spatial-temporal reconstruction VAE to generate high-fidelity, multi-view videos with 4D reconstruction capabilities, demonstrating improvements in FID and FVD metrics and providing valuable geometric information.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种名为CVD-STORM的跨视角视频扩散模型，用于自动驾驶领域。该模型利用时空重建VAE生成高保真、多视角的视频，并具备4D重建能力，在FID和FVD指标上有所提升，同时提供有价值的几何信息。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2510.07944v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Tianrui Zhang, Yichen Liu, Zilin Guo, Yuxin Guo, Jingcheng Ni, Chenjing Ding, Dan Xu, Lewei Lu, Zehuan Wu</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.65, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">Team Xiaomi EV-AD VLA: Learning to Navigate Socially Through Proactive Risk Perception - Technical Report for IROS 2025 RoboSense Challenge Social Navigation Track</h2>
+            
+            <p class="paper-summary">In this report, we describe the technical details of our submission to the
+IROS 2025 RoboSense Challenge Social Navigation Track. This track focuses on
+developing RGBD-based perception and navigation systems that enable autonomous
+agents to navigate safely, efficiently, and socially compliantly in dynamic
+human-populated indoor environments. The challenge requires agents to operate
+from an egocentric perspective using only onboard sensors including RGB-D
+observations and odometry, without access to global maps or privileged
+information, while maintaining social norm compliance such as safe distances
+and collision avoidance. Building upon the Falcon model, we introduce a
+Proactive Risk Perception Module to enhance social navigation performance. Our
+approach augments Falcon with collision risk understanding that learns to
+predict distance-based collision risk scores for surrounding humans, which
+enables the agent to develop more robust spatial awareness and proactive
+collision avoidance behaviors. The evaluation on the Social-HM3D benchmark
+demonstrates that our method improves the agent's ability to maintain personal
+space compliance while navigating toward goals in crowded indoor scenes with
+dynamic human agents, achieving 2nd place among 16 participating teams in the
+challenge.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper presents a proactive risk perception module built upon the Falcon model for socially compliant robot navigation in dynamic, human-populated environments, achieving 2nd place in the IROS 2025 RoboSense Challenge.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一个基于猎鹰模型的，用于在动态人群环境中进行社会规范机器人导航的主动风险感知模块，并在IROS 2025 RoboSense挑战赛中获得第二名。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2510.07871v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Erjia Xiao, Lingfeng Zhang, Yingbo Tang, Hao Cheng, Renjing Xu, Wenbo Ding, Lei Zhou, Long Chen, Hangjun Ye, Xiaoshuai Hao</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.7000000000000001, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">XYZCylinder: Feedforward Reconstruction for Driving Scenes Based on A Unified Cylinder Lifting Method</h2>
+            
+            <p class="paper-summary">Recently, more attention has been paid to feedforward reconstruction
+paradigms, which mainly learn a fixed view transformation implicitly and
+reconstruct the scene with a single representation. However, their
+generalization capability and reconstruction accuracy are still limited while
+reconstructing driving scenes, which results from two aspects: (1) The fixed
+view transformation fails when the camera configuration changes, limiting the
+generalization capability across different driving scenes equipped with
+different camera configurations. (2) The small overlapping regions between
+sparse views of the $360^\circ$ panorama and the complexity of driving scenes
+increase the learning difficulty, reducing the reconstruction accuracy. To
+handle these difficulties, we propose \textbf{XYZCylinder}, a feedforward model
+based on a unified cylinder lifting method which involves camera modeling and
+feature lifting. Specifically, to improve the generalization capability, we
+design a Unified Cylinder Camera Modeling (UCCM) strategy, which avoids the
+learning of viewpoint-dependent spatial correspondence and unifies different
+camera configurations with adjustable parameters. To improve the reconstruction
+accuracy, we propose a hybrid representation with several dedicated modules
+based on newly designed Cylinder Plane Feature Group (CPFG) to lift 2D image
+features to 3D space. Experimental results show that XYZCylinder achieves
+state-of-the-art performance under different evaluation settings, and can be
+generalized to other driving scenes in a zero-shot manner. Project page:
+\href{https://yuyuyu223.github.io/XYZCYlinder-projectpage/}{here}.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces XYZCylinder, a feedforward 3D reconstruction method for driving scenes that uses a unified cylinder lifting approach to improve generalization across different camera configurations and enhance reconstruction accuracy in complex environments, achieving state-of-the-art performance.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了XYZCylinder，一种用于驾驶场景的前馈3D重建方法，它使用统一的圆柱提升方法来提高跨不同相机配置的泛化能力，并提高复杂环境中的重建精度，实现了最先进的性能。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2510.07856v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Haochen Yu, Qiankun Liu, Hongyuan Liu, Jianfei Jiang, Juntao Lyu, Jiansheng Chen, Huimin Ma</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.75, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">AlignGS: Aligning Geometry and Semantics for Robust Indoor Reconstruction from Sparse Views</h2>
+            
+            <p class="paper-summary">The demand for semantically rich 3D models of indoor scenes is rapidly
+growing, driven by applications in augmented reality, virtual reality, and
+robotics. However, creating them from sparse views remains a challenge due to
+geometric ambiguity. Existing methods often treat semantics as a passive
+feature painted on an already-formed, and potentially flawed, geometry. We
+posit that for robust sparse-view reconstruction, semantic understanding
+instead be an active, guiding force. This paper introduces AlignGS, a novel
+framework that actualizes this vision by pioneering a synergistic, end-to-end
+optimization of geometry and semantics. Our method distills rich priors from 2D
+foundation models and uses them to directly regularize the 3D representation
+through a set of novel semantic-to-geometry guidance mechanisms, including
+depth consistency and multi-faceted normal regularization. Extensive
+evaluations on standard benchmarks demonstrate that our approach achieves
+state-of-the-art results in novel view synthesis and produces reconstructions
+with superior geometric accuracy. The results validate that leveraging semantic
+priors as a geometric regularizer leads to more coherent and complete 3D models
+from limited input views. Our code is avaliable at
+https://github.com/MediaX-SJTU/AlignGS .</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: AlignGS introduces a novel framework for indoor 3D reconstruction from sparse views, synergistically optimizing geometry and semantics by leveraging 2D foundation model priors for geometric regularization, achieving state-of-the-art results.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: AlignGS 提出了一种新的室内三维重建框架，该框架从稀疏视角出发，通过利用二维基础模型先验进行几何正则化，协同优化了几何和语义，实现了最先进的结果。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2510.07839v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Yijie Gao, Houqiang Zhong, Tianchi Zhu, Zhengxue Cheng, Qiang Hu, Li Song</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.8, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">DEGS: Deformable Event-based 3D Gaussian Splatting from RGB and Event Stream</h2>
+            
+            <p class="paper-summary">Reconstructing Dynamic 3D Gaussian Splatting (3DGS) from low-framerate RGB
+videos is challenging. This is because large inter-frame motions will increase
+the uncertainty of the solution space. For example, one pixel in the first
+frame might have more choices to reach the corresponding pixel in the second
+frame. Event cameras can asynchronously capture rapid visual changes and are
+robust to motion blur, but they do not provide color information. Intuitively,
+the event stream can provide deterministic constraints for the inter-frame
+large motion by the event trajectories. Hence, combining
+low-temporal-resolution images with high-framerate event streams can address
+this challenge. However, it is challenging to jointly optimize Dynamic 3DGS
+using both RGB and event modalities due to the significant discrepancy between
+these two data modalities. This paper introduces a novel framework that jointly
+optimizes dynamic 3DGS from the two modalities. The key idea is to adopt event
+motion priors to guide the optimization of the deformation fields. First, we
+extract the motion priors encoded in event streams by using the proposed LoCM
+unsupervised fine-tuning framework to adapt an event flow estimator to a
+certain unseen scene. Then, we present the geometry-aware data association
+method to build the event-Gaussian motion correspondence, which is the primary
+foundation of the pipeline, accompanied by two useful strategies, namely motion
+decomposition and inter-frame pseudo-label. Extensive experiments show that our
+method outperforms existing image and event-based approaches across synthetic
+and real scenes and prove that our method can effectively optimize dynamic 3DGS
+with the help of event data.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces a novel framework, DEGS, that combines RGB video and event stream data to optimize dynamic 3D Gaussian Splatting by using event motion priors to guide deformation field optimization, achieving superior performance in both synthetic and real scenes.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种新颖的框架DEGS，它结合RGB视频和事件流数据来优化动态3D高斯溅射，通过使用事件运动先验来指导变形场优化，在合成和真实场景中均实现了卓越的性能。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2510.07752v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Junhao He, Jiaxu Wang, Jia Li, Mingyuan Sun, Qiang Zhang, Jiahang Cao, Ziyi Zhang, Yi Gu, Jingkai Sun, Renjing Xu</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.8500000000000001, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">R2RGEN: Real-to-Real 3D Data Generation for Spatially Generalized Manipulation</h2>
+            
+            <p class="paper-summary">Towards the aim of generalized robotic manipulation, spatial generalization
+is the most fundamental capability that requires the policy to work robustly
+under different spatial distribution of objects, environment and agent itself.
+To achieve this, substantial human demonstrations need to be collected to cover
+different spatial configurations for training a generalized visuomotor policy
+via imitation learning. Prior works explore a promising direction that
+leverages data generation to acquire abundant spatially diverse data from
+minimal source demonstrations. However, most approaches face significant
+sim-to-real gap and are often limited to constrained settings, such as
+fixed-base scenarios and predefined camera viewpoints. In this paper, we
+propose a real-to-real 3D data generation framework (R2RGen) that directly
+augments the pointcloud observation-action pairs to generate real-world data.
+R2RGen is simulator- and rendering-free, thus being efficient and
+plug-and-play. Specifically, given a single source demonstration, we introduce
+an annotation mechanism for fine-grained parsing of scene and trajectory. A
+group-wise augmentation strategy is proposed to handle complex multi-object
+compositions and diverse task constraints. We further present camera-aware
+processing to align the distribution of generated data with real-world 3D
+sensor. Empirically, R2RGen substantially enhances data efficiency on extensive
+experiments and demonstrates strong potential for scaling and application on
+mobile manipulation.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces R2RGen, a real-to-real 3D data generation framework for robotic manipulation that augments point cloud observation-action pairs directly, addressing the sim-to-real gap and spatial generalization challenges with a novel annotation and augmentation strategy.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了R2RGen，一种用于机器人操作的真实到真实的3D数据生成框架，该框架直接增强点云观察-动作对，通过一种新颖的注释和增强策略，解决了从仿真到真实的差距和空间泛化挑战。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star-half-alt"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2510.08547v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Xiuwei Xu, Angyuan Ma, Hankun Li, Bingyao Yu, Zheng Zhu, Jie Zhou, Jiwen Lu</p>
+            
+        </motion.div>
+        
+    </div>
+
+    <footer class="footer">
+        Generated on 2025-10-10 03:37:28 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+    </footer>
+
+</body>
+</html>

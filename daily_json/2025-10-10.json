@@ -1,0 +1,488 @@
+[
+    {
+        "title": "ARTDECO: Towards Efficient and High-Fidelity On-the-Fly 3D Reconstruction with Structured Scene Representation",
+        "summary": "On-the-fly 3D reconstruction from monocular image sequences is a\nlong-standing challenge in computer vision, critical for applications such as\nreal-to-sim, AR/VR, and robotics. Existing methods face a major tradeoff:\nper-scene optimization yields high fidelity but is computationally expensive,\nwhereas feed-forward foundation models enable real-time inference but struggle\nwith accuracy and robustness. In this work, we propose ARTDECO, a unified\nframework that combines the efficiency of feed-forward models with the\nreliability of SLAM-based pipelines. ARTDECO uses 3D foundation models for pose\nestimation and point prediction, coupled with a Gaussian decoder that\ntransforms multi-scale features into structured 3D Gaussians. To sustain both\nfidelity and efficiency at scale, we design a hierarchical Gaussian\nrepresentation with a LoD-aware rendering strategy, which improves rendering\nfidelity while reducing redundancy. Experiments on eight diverse indoor and\noutdoor benchmarks show that ARTDECO delivers interactive performance\ncomparable to SLAM, robustness similar to feed-forward systems, and\nreconstruction quality close to per-scene optimization, providing a practical\npath toward on-the-fly digitization of real-world environments with both\naccurate geometry and high visual fidelity. Explore more demos on our project\npage: https://city-super.github.io/artdeco/.",
+        "url": "http://arxiv.org/abs/2510.08551v1",
+        "published_date": "2025-10-09T17:57:38+00:00",
+        "updated_date": "2025-10-09T17:57:38+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Guanghao Li",
+            "Kerui Ren",
+            "Linning Xu",
+            "Zhewen Zheng",
+            "Changjian Jiang",
+            "Xin Gao",
+            "Bo Dai",
+            "Jian Pu",
+            "Mulin Yu",
+            "Jiangmiao Pang"
+        ],
+        "tldr": "ARTDECO presents a unified framework for efficient and high-fidelity on-the-fly 3D reconstruction by combining 3D foundation models with a hierarchical Gaussian representation, achieving a balance between speed, robustness, and accuracy.",
+        "tldr_zh": "ARTDECO 提出了一个统一的框架，用于高效且高保真地进行即时 3D 重建，它结合了 3D 基础模型和分层高斯表示，从而在速度、鲁棒性和准确性之间实现了平衡。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "GTR-Bench: Evaluating Geo-Temporal Reasoning in Vision-Language Models",
+        "summary": "Recently spatial-temporal intelligence of Visual-Language Models (VLMs) has\nattracted much attention due to its importance for Autonomous Driving, Embodied\nAI and General Artificial Intelligence. Existing spatial-temporal benchmarks\nmainly focus on egocentric perspective reasoning with images/video context, or\ngeographic perspective reasoning with graphics context (eg. a map), thus fail\nto assess VLMs' geographic spatial-temporal intelligence with both images/video\nand graphics context, which is important for areas like traffic management and\nemergency response. To address the gaps, we introduce Geo-Temporal Reasoning\nbenchmark (GTR-Bench), a novel challenge for geographic temporal reasoning of\nmoving targets in a large-scale camera network. GTR-Bench is more challenging\nas it requires multiple perspective switches between maps and videos, joint\nreasoning across multiple videos with non-overlapping fields of view, and\ninference over spatial-temporal regions that are unobserved by any video\ncontext. Evaluations of more than 10 popular VLMs on GTR-Bench demonstrate that\neven the best proprietary model, Gemini-2.5-Pro (34.9%), significantly lags\nbehind human performance (78.61%) on geo-temporal reasoning. Moreover, our\ncomprehensive analysis on GTR-Bench reveals three primary deficiencies of\ncurrent models for geo-temporal reasoning. (1) VLMs' reasoning is impaired by\nan imbalanced utilization of spatial-temporal context. (2) VLMs are weak in\ntemporal forecasting, which leads to worse performance on temporal-emphasized\ntasks than on spatial-emphasized tasks. (3) VLMs lack the proficiency to\ncomprehend or align the map data with multi-view video inputs. We believe\nGTR-Bench offers valuable insights and opens up new opportunities for research\nand applications in spatial-temporal intelligence. Benchmark and code will be\nreleased at https://github.com/X-Luffy/GTR-Bench.",
+        "url": "http://arxiv.org/abs/2510.07791v1",
+        "published_date": "2025-10-09T05:09:27+00:00",
+        "updated_date": "2025-10-09T05:09:27+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Qinghongbing Xie",
+            "Zhaoyuan Xia",
+            "Feng Zhu",
+            "Lijun Gong",
+            "Ziyue Li",
+            "Rui Zhao",
+            "Long Zeng"
+        ],
+        "tldr": "The paper introduces GTR-Bench, a new benchmark for evaluating geo-temporal reasoning in VLMs using image/video and map contexts, highlighting the shortcomings of current VLMs in this area, especially for applications like traffic management.",
+        "tldr_zh": "该论文介绍了GTR-Bench，一个新的用于评估VLMs中地理时序推理的基准，它结合了图像/视频和地图上下文，并强调了当前VLMs在这方面的不足，尤其是在交通管理等应用中。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "IntentionVLA: Generalizable and Efficient Embodied Intention Reasoning for Human-Robot Interaction",
+        "summary": "Vision-Language-Action (VLA) models leverage pretrained vision-language\nmodels (VLMs) to couple perception with robotic control, offering a promising\npath toward general-purpose embodied intelligence. However, current SOTA VLAs\nare primarily pretrained on multimodal tasks with limited relevance to embodied\nscenarios, and then finetuned to map explicit instructions to actions.\nConsequently, due to the lack of reasoning-intensive pretraining and\nreasoning-guided manipulation, these models are unable to perform implicit\nhuman intention reasoning required for complex, real-world interactions. To\novercome these limitations, we propose \\textbf{IntentionVLA}, a VLA framework\nwith a curriculum training paradigm and an efficient inference mechanism. Our\nproposed method first leverages carefully designed reasoning data that combine\nintention inference, spatial grounding, and compact embodied reasoning,\nendowing the model with both reasoning and perception capabilities. In the\nfollowing finetuning stage, IntentionVLA employs the compact reasoning outputs\nas contextual guidance for action generation, enabling fast inference under\nindirect instructions. Experimental results show that IntentionVLA\nsubstantially outperforms $\\pi_0$, achieving 18\\% higher success rates with\ndirect instructions and 28\\% higher than ECoT under intention instructions. On\nout-of-distribution intention tasks, IntentionVLA achieves over twice the\nsuccess rate of all baselines, and further enables zero-shot human-robot\ninteraction with 40\\% success rate. These results highlight IntentionVLA as a\npromising paradigm for next-generation human-robot interaction (HRI) systems.",
+        "url": "http://arxiv.org/abs/2510.07778v1",
+        "published_date": "2025-10-09T04:49:46+00:00",
+        "updated_date": "2025-10-09T04:49:46+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Yandu Chen",
+            "Kefan Gu",
+            "Yuqing Wen",
+            "Yucheng Zhao",
+            "Tiancai Wang",
+            "Liqiang Nie"
+        ],
+        "tldr": "The paper introduces IntentionVLA, a novel Vision-Language-Action framework that enhances human-robot interaction by enabling robots to reason about implicit human intentions through a curriculum training paradigm and efficient inference mechanism, leading to significantly improved performance in intention-based tasks.",
+        "tldr_zh": "该论文介绍了IntentionVLA，一种新型的视觉-语言-动作框架，通过课程学习范式和高效的推理机制，使机器人能够推理人类的隐含意图，从而显著提高在基于意图任务中的性能，增强人机交互。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Scalable Offline Metrics for Autonomous Driving",
+        "summary": "Real-World evaluation of perception-based planning models for robotic\nsystems, such as autonomous vehicles, can be safely and inexpensively conducted\noffline, i.e., by computing model prediction error over a pre-collected\nvalidation dataset with ground-truth annotations. However, extrapolating from\noffline model performance to online settings remains a challenge. In these\nsettings, seemingly minor errors can compound and result in test-time\ninfractions or collisions. This relationship is understudied, particularly\nacross diverse closed-loop metrics and complex urban maneuvers. In this work,\nwe revisit this undervalued question in policy evaluation through an extensive\nset of experiments across diverse conditions and metrics. Based on analysis in\nsimulation, we find an even worse correlation between offline and online\nsettings than reported by prior studies, casting doubts on the validity of\ncurrent evaluation practices and metrics for driving policies. Next, we bridge\nthe gap between offline and online evaluation. We investigate an offline metric\nbased on epistemic uncertainty, which aims to capture events that are likely to\ncause errors in closed-loop settings. The resulting metric achieves over 13%\nimprovement in correlation compared to previous offline metrics. We further\nvalidate the generalization of our findings beyond the simulation environment\nin real-world settings, where even greater gains are observed.",
+        "url": "http://arxiv.org/abs/2510.08571v1",
+        "published_date": "2025-10-09T17:59:57+00:00",
+        "updated_date": "2025-10-09T17:59:57+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Animikh Aich",
+            "Adwait Kulkarni",
+            "Eshed Ohn-Bar"
+        ],
+        "tldr": "This paper identifies and addresses the weak correlation between offline and online evaluation metrics for autonomous driving policies. They propose an improved offline metric based on epistemic uncertainty that better predicts online performance, validated in both simulation and real-world settings.",
+        "tldr_zh": "该论文指出并解决了自动驾驶策略中离线和在线评估指标之间相关性较弱的问题。他们提出了一种基于认知不确定性的改进离线指标，可以更好地预测在线性能，并在仿真和真实环境中进行了验证。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "NovaFlow: Zero-Shot Manipulation via Actionable Flow from Generated Videos",
+        "summary": "Enabling robots to execute novel manipulation tasks zero-shot is a central\ngoal in robotics. Most existing methods assume in-distribution tasks or rely on\nfine-tuning with embodiment-matched data, limiting transfer across platforms.\nWe present NovaFlow, an autonomous manipulation framework that converts a task\ndescription into an actionable plan for a target robot without any\ndemonstrations. Given a task description, NovaFlow synthesizes a video using a\nvideo generation model and distills it into 3D actionable object flow using\noff-the-shelf perception modules. From the object flow, it computes relative\nposes for rigid objects and realizes them as robot actions via grasp proposals\nand trajectory optimization. For deformable objects, this flow serves as a\ntracking objective for model-based planning with a particle-based dynamics\nmodel. By decoupling task understanding from low-level control, NovaFlow\nnaturally transfers across embodiments. We validate on rigid, articulated, and\ndeformable object manipulation tasks using a table-top Franka arm and a Spot\nquadrupedal mobile robot, and achieve effective zero-shot execution without\ndemonstrations or embodiment-specific training. Project website:\nhttps://novaflow.lhy.xyz/.",
+        "url": "http://arxiv.org/abs/2510.08568v1",
+        "published_date": "2025-10-09T17:59:55+00:00",
+        "updated_date": "2025-10-09T17:59:55+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Hongyu Li",
+            "Lingfeng Sun",
+            "Yafei Hu",
+            "Duy Ta",
+            "Jennifer Barry",
+            "George Konidaris",
+            "Jiahui Fu"
+        ],
+        "tldr": "NovaFlow enables robots to perform zero-shot manipulation tasks by synthesizing videos from task descriptions and distilling them into actionable object flow for robot control, demonstrating transferability across different robot embodiments.",
+        "tldr_zh": "NovaFlow通过从任务描述合成视频，并将其提炼为可操作的对象流以进行机器人控制，从而使机器人能够执行零样本操作任务，并展示了跨不同机器人形态的可转移性。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "ResAD: Normalized Residual Trajectory Modeling for End-to-End Autonomous Driving",
+        "summary": "End-to-end autonomous driving (E2EAD) systems, which learn to predict future\ntrajectories directly from sensor data, are fundamentally challenged by the\ninherent spatio-temporal imbalance of trajectory data. This imbalance creates a\nsignificant optimization burden, causing models to learn spurious correlations\ninstead of causal inference, while also prioritizing uncertain, distant\npredictions, thereby compromising immediate safety. To address these issues, we\npropose ResAD, a novel Normalized Residual Trajectory Modeling framework.\nInstead of predicting the future trajectory directly, our approach reframes the\nlearning task to predict the residual deviation from a deterministic inertial\nreference. The inertial reference serves as a counterfactual, forcing the model\nto move beyond simple pattern recognition and instead identify the underlying\ncausal factors (e.g., traffic rules, obstacles) that necessitate deviations\nfrom a default, inertially-guided path. To deal with the optimization imbalance\ncaused by uncertain, long-term horizons, ResAD further incorporates Point-wise\nNormalization of the predicted residual. It re-weights the optimization\nobjective, preventing large-magnitude errors associated with distant, uncertain\nwaypoints from dominating the learning signal. Extensive experiments validate\nthe effectiveness of our framework. On the NAVSIM benchmark, ResAD achieves a\nstate-of-the-art PDMS of 88.6 using a vanilla diffusion policy with only two\ndenoising steps, demonstrating that our approach significantly simplifies the\nlearning task and improves model performance. The code will be released to\nfacilitate further research.",
+        "url": "http://arxiv.org/abs/2510.08562v1",
+        "published_date": "2025-10-09T17:59:36+00:00",
+        "updated_date": "2025-10-09T17:59:36+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Zhiyu Zheng",
+            "Shaoyu Chen",
+            "Haoran Yin",
+            "Xinbang Zhang",
+            "Jialv Zou",
+            "Xinggang Wang",
+            "Qian Zhang",
+            "Lefei Zhang"
+        ],
+        "tldr": "The paper introduces ResAD, a normalized residual trajectory modeling framework for end-to-end autonomous driving, addressing spatio-temporal imbalance in trajectory data by predicting deviations from an inertial reference and normalizing residual predictions, achieving state-of-the-art performance on the NAVSIM benchmark.",
+        "tldr_zh": "本文介绍了 ResAD，一个用于端到端自动驾驶的归一化残差轨迹建模框架，通过预测与惯性参考的偏差并归一化残差预测，解决了轨迹数据中的时空不平衡问题，并在 NAVSIM 基准测试中取得了最先进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "DexNDM: Closing the Reality Gap for Dexterous In-Hand Rotation via Joint-Wise Neural Dynamics Model",
+        "summary": "Achieving generalized in-hand object rotation remains a significant challenge\nin robotics, largely due to the difficulty of transferring policies from\nsimulation to the real world. The complex, contact-rich dynamics of dexterous\nmanipulation create a \"reality gap\" that has limited prior work to constrained\nscenarios involving simple geometries, limited object sizes and aspect ratios,\nconstrained wrist poses, or customized hands. We address this sim-to-real\nchallenge with a novel framework that enables a single policy, trained in\nsimulation, to generalize to a wide variety of objects and conditions in the\nreal world. The core of our method is a joint-wise dynamics model that learns\nto bridge the reality gap by effectively fitting limited amount of real-world\ncollected data and then adapting the sim policy's actions accordingly. The\nmodel is highly data-efficient and generalizable across different whole-hand\ninteraction distributions by factorizing dynamics across joints, compressing\nsystem-wide influences into low-dimensional variables, and learning each\njoint's evolution from its own dynamic profile, implicitly capturing these net\neffects. We pair this with a fully autonomous data collection strategy that\ngathers diverse, real-world interaction data with minimal human intervention.\nOur complete pipeline demonstrates unprecedented generality: a single policy\nsuccessfully rotates challenging objects with complex shapes (e.g., animals),\nhigh aspect ratios (up to 5.33), and small sizes, all while handling diverse\nwrist orientations and rotation axes. Comprehensive real-world evaluations and\na teleoperation application for complex tasks validate the effectiveness and\nrobustness of our approach. Website: https://meowuu7.github.io/DexNDM/",
+        "url": "http://arxiv.org/abs/2510.08556v1",
+        "published_date": "2025-10-09T17:59:11+00:00",
+        "updated_date": "2025-10-09T17:59:11+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Xueyi Liu",
+            "He Wang",
+            "Li Yi"
+        ],
+        "tldr": "This paper presents a novel sim-to-real framework for dexterous in-hand object rotation, using a joint-wise neural dynamics model (DexNDM) to adapt simulation policies to the real world, achieving unprecedented generality across diverse objects and conditions.",
+        "tldr_zh": "该论文提出了一种新的模拟到真实框架，用于灵巧的手内物体旋转，使用关节式神经动力学模型（DexNDM）将模拟策略适应于真实世界，在各种物体和条件下实现了前所未有的通用性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Have We Scene It All? Scene Graph-Aware Deep Point Cloud Compression",
+        "summary": "Efficient transmission of 3D point cloud data is critical for advanced\nperception in centralized and decentralized multi-agent robotic systems,\nespecially nowadays with the growing reliance on edge and cloud-based\nprocessing. However, the large and complex nature of point clouds creates\nchallenges under bandwidth constraints and intermittent connectivity, often\ndegrading system performance. We propose a deep compression framework based on\nsemantic scene graphs. The method decomposes point clouds into semantically\ncoherent patches and encodes them into compact latent representations with\nsemantic-aware encoders conditioned by Feature-wise Linear Modulation (FiLM). A\nfolding-based decoder, guided by latent features and graph node attributes,\nenables structurally accurate reconstruction. Experiments on the SemanticKITTI\nand nuScenes datasets show that the framework achieves state-of-the-art\ncompression rates, reducing data size by up to 98% while preserving both\nstructural and semantic fidelity. In addition, it supports downstream\napplications such as multi-robot pose graph optimization and map merging,\nachieving trajectory accuracy and map alignment comparable to those obtained\nwith raw LiDAR scans.",
+        "url": "http://arxiv.org/abs/2510.08512v1",
+        "published_date": "2025-10-09T17:45:09+00:00",
+        "updated_date": "2025-10-09T17:45:09+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Nikolaos Stathoulopoulos",
+            "Christoforos Kanellakis",
+            "George Nikolakopoulos"
+        ],
+        "tldr": "This paper introduces a deep learning framework for compressing 3D point cloud data using semantic scene graphs, achieving state-of-the-art compression rates while maintaining structural and semantic fidelity, and supporting downstream robotic applications.",
+        "tldr_zh": "本文介绍了一种基于语义场景图的深度学习框架，用于压缩3D点云数据。该框架在保持结构和语义保真度的同时，实现了最先进的压缩率，并支持下游机器人应用。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Evaluating Small Vision-Language Models on Distance-Dependent Traffic Perception",
+        "summary": "Vision-Language Models (VLMs) are becoming increasingly powerful,\ndemonstrating strong performance on a variety of tasks that require both visual\nand textual understanding. Their strong generalisation abilities make them a\npromising component for automated driving systems, which must handle unexpected\ncorner cases. However, to be trusted in such safety-critical applications, a\nmodel must first possess a reliable perception system. Moreover, since critical\nobjects and agents in traffic scenes are often at a distance, we require\nsystems that are not \"shortsighted\", i.e., systems with strong perception\ncapabilities at both close (up to 20 meters) and long (30+ meters) range. With\nthis in mind, we introduce Distance-Annotated Traffic Perception Question\nAnswering (DTPQA), the first Visual Question Answering (VQA) benchmark focused\nsolely on perception-based questions in traffic scenes, enriched with distance\nannotations. By excluding questions that require reasoning, we ensure that\nmodel performance reflects perception capabilities alone. Since automated\ndriving hardware has limited processing power and cannot support large VLMs,\nour study centers on smaller VLMs. More specifically, we evaluate several\nstate-of-the-art (SOTA) small VLMs on DTPQA and show that, despite the\nsimplicity of the questions, these models significantly underperform compared\nto humans (~60% average accuracy for the best-performing small VLM versus ~85%\nhuman performance). However, it is important to note that the human sample size\nwas relatively small, which imposes statistical limitations. We also identify\nspecific perception tasks, such as distinguishing left from right, that remain\nparticularly challenging for these models.",
+        "url": "http://arxiv.org/abs/2510.08352v1",
+        "published_date": "2025-10-09T15:38:41+00:00",
+        "updated_date": "2025-10-09T15:38:41+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Nikos Theodoridis",
+            "Tim Brophy",
+            "Reenu Mohandas",
+            "Ganesh Sistu",
+            "Fiachra Collins",
+            "Anthony Scanlan",
+            "Ciaran Eising"
+        ],
+        "tldr": "This paper introduces DTPQA, a new VQA benchmark for evaluating the distance-dependent perception capabilities of small VLMs in traffic scenes, and finds that existing models underperform compared to humans.",
+        "tldr_zh": "本文介绍了一个新的VQA基准测试DTPQA，用于评估小型VLMs在交通场景中距离相关的感知能力，并发现现有模型与人类相比表现不佳。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Unlocking 3D Affordance Segmentation with 2D Semantic Knowledge",
+        "summary": "Affordance segmentation aims to parse 3D objects into functionally distinct\nparts, bridging recognition and interaction for applications in robotic\nmanipulation, embodied AI, and AR. While recent studies leverage visual or\ntextual prompts to guide this process, they often rely on point cloud encoders\nas generic feature extractors, overlooking the intrinsic challenges of 3D data\nsuch as sparsity, noise, and geometric ambiguity. As a result, 3D features\nlearned in isolation frequently lack clear and semantically consistent\nfunctional boundaries. To address this bottleneck, we propose a\nsemantic-grounded learning paradigm that transfers rich semantic knowledge from\nlarge-scale 2D Vision Foundation Models (VFMs) into the 3D domain.\nSpecifically, We introduce Cross-Modal Affinity Transfer (CMAT), a pre-training\nstrategy that aligns a 3D encoder with lifted 2D semantics and jointly\noptimizes reconstruction, affinity, and diversity to yield semantically\norganized representations. Building on this backbone, we further design the\nCross-modal Affordance Segmentation Transformer (CAST), which integrates\nmulti-modal prompts with CMAT-pretrained features to generate precise,\nprompt-aware segmentation maps. Extensive experiments on standard benchmarks\ndemonstrate that our framework establishes new state-of-the-art results for 3D\naffordance segmentation.",
+        "url": "http://arxiv.org/abs/2510.08316v1",
+        "published_date": "2025-10-09T15:01:26+00:00",
+        "updated_date": "2025-10-09T15:01:26+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yu Huang",
+            "Zelin Peng",
+            "Changsong Wen",
+            "Xiaokang Yang",
+            "Wei Shen"
+        ],
+        "tldr": "This paper introduces a novel approach, CMAT and CAST, for 3D affordance segmentation by transferring semantic knowledge from 2D Vision Foundation Models, achieving state-of-the-art results.",
+        "tldr_zh": "该论文提出了一种新颖的方法 CMAT 和 CAST，通过从 2D 视觉基础模型迁移语义知识来进行 3D 可供性分割，并取得了最先进的结果。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "NavSpace: How Navigation Agents Follow Spatial Intelligence Instructions",
+        "summary": "Instruction-following navigation is a key step toward embodied intelligence.\nPrior benchmarks mainly focus on semantic understanding but overlook\nsystematically evaluating navigation agents' spatial perception and reasoning\ncapabilities. In this work, we introduce the NavSpace benchmark, which contains\nsix task categories and 1,228 trajectory-instruction pairs designed to probe\nthe spatial intelligence of navigation agents. On this benchmark, we\ncomprehensively evaluate 22 navigation agents, including state-of-the-art\nnavigation models and multimodal large language models. The evaluation results\nlift the veil on spatial intelligence in embodied navigation. Furthermore, we\npropose SNav, a new spatially intelligent navigation model. SNav outperforms\nexisting navigation agents on NavSpace and real robot tests, establishing a\nstrong baseline for future work.",
+        "url": "http://arxiv.org/abs/2510.08173v1",
+        "published_date": "2025-10-09T12:59:19+00:00",
+        "updated_date": "2025-10-09T12:59:19+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CL",
+            "cs.CV"
+        ],
+        "authors": [
+            "Haolin Yang",
+            "Yuxing Long",
+            "Zhuoyuan Yu",
+            "Zihan Yang",
+            "Minghan Wang",
+            "Jiapeng Xu",
+            "Yihan Wang",
+            "Ziyan Yu",
+            "Wenzhe Cai",
+            "Lei Kang",
+            "Hao Dong"
+        ],
+        "tldr": "The paper introduces NavSpace, a benchmark to evaluate spatial intelligence in navigation agents, revealing limitations in existing models and proposing a new model, SNav, which shows improved performance.",
+        "tldr_zh": "该论文介绍了NavSpace，一个用于评估导航智能体空间智能的基准。研究揭示了现有模型的局限性，并提出了一个新的模型SNav，该模型表现出改进的性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "RayFusion: Ray Fusion Enhanced Collaborative Visual Perception",
+        "summary": "Collaborative visual perception methods have gained widespread attention in\nthe autonomous driving community in recent years due to their ability to\naddress sensor limitation problems. However, the absence of explicit depth\ninformation often makes it difficult for camera-based perception systems, e.g.,\n3D object detection, to generate accurate predictions. To alleviate the\nambiguity in depth estimation, we propose RayFusion, a ray-based fusion method\nfor collaborative visual perception. Using ray occupancy information from\ncollaborators, RayFusion reduces redundancy and false positive predictions\nalong camera rays, enhancing the detection performance of purely camera-based\ncollaborative perception systems. Comprehensive experiments show that our\nmethod consistently outperforms existing state-of-the-art models, substantially\nadvancing the performance of collaborative visual perception. The code is\navailable at https://github.com/wangsh0111/RayFusion.",
+        "url": "http://arxiv.org/abs/2510.08017v1",
+        "published_date": "2025-10-09T09:54:08+00:00",
+        "updated_date": "2025-10-09T09:54:08+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Shaohong Wang",
+            "Bin Lu",
+            "Xinyu Xiao",
+            "Hanzhi Zhong",
+            "Bowen Pang",
+            "Tong Wang",
+            "Zhiyu Xiang",
+            "Hangguan Shan",
+            "Eryun Liu"
+        ],
+        "tldr": "RayFusion, a ray-based fusion method, improves camera-based collaborative perception in autonomous driving by leveraging ray occupancy information to enhance 3D object detection and outperform existing state-of-the-art models.",
+        "tldr_zh": "RayFusion是一种基于光线的融合方法，它通过利用光线占用信息来增强3D物体检测，从而改进自动驾驶中的基于摄像头的协同感知，并且性能优于现有最先进的模型。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "CVD-STORM: Cross-View Video Diffusion with Spatial-Temporal Reconstruction Model for Autonomous Driving",
+        "summary": "Generative models have been widely applied to world modeling for environment\nsimulation and future state prediction. With advancements in autonomous\ndriving, there is a growing demand not only for high-fidelity video generation\nunder various controls, but also for producing diverse and meaningful\ninformation such as depth estimation. To address this, we propose CVD-STORM, a\ncross-view video diffusion model utilizing a spatial-temporal reconstruction\nVariational Autoencoder (VAE) that generates long-term, multi-view videos with\n4D reconstruction capabilities under various control inputs. Our approach first\nfine-tunes the VAE with an auxiliary 4D reconstruction task, enhancing its\nability to encode 3D structures and temporal dynamics. Subsequently, we\nintegrate this VAE into the video diffusion process to significantly improve\ngeneration quality. Experimental results demonstrate that our model achieves\nsubstantial improvements in both FID and FVD metrics. Additionally, the\njointly-trained Gaussian Splatting Decoder effectively reconstructs dynamic\nscenes, providing valuable geometric information for comprehensive scene\nunderstanding.",
+        "url": "http://arxiv.org/abs/2510.07944v1",
+        "published_date": "2025-10-09T08:41:58+00:00",
+        "updated_date": "2025-10-09T08:41:58+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Tianrui Zhang",
+            "Yichen Liu",
+            "Zilin Guo",
+            "Yuxin Guo",
+            "Jingcheng Ni",
+            "Chenjing Ding",
+            "Dan Xu",
+            "Lewei Lu",
+            "Zehuan Wu"
+        ],
+        "tldr": "This paper introduces CVD-STORM, a cross-view video diffusion model for autonomous driving that utilizes a spatial-temporal reconstruction VAE to generate high-fidelity, multi-view videos with 4D reconstruction capabilities, demonstrating improvements in FID and FVD metrics and providing valuable geometric information.",
+        "tldr_zh": "本文介绍了一种名为CVD-STORM的跨视角视频扩散模型，用于自动驾驶领域。该模型利用时空重建VAE生成高保真、多视角的视频，并具备4D重建能力，在FID和FVD指标上有所提升，同时提供有价值的几何信息。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Team Xiaomi EV-AD VLA: Learning to Navigate Socially Through Proactive Risk Perception - Technical Report for IROS 2025 RoboSense Challenge Social Navigation Track",
+        "summary": "In this report, we describe the technical details of our submission to the\nIROS 2025 RoboSense Challenge Social Navigation Track. This track focuses on\ndeveloping RGBD-based perception and navigation systems that enable autonomous\nagents to navigate safely, efficiently, and socially compliantly in dynamic\nhuman-populated indoor environments. The challenge requires agents to operate\nfrom an egocentric perspective using only onboard sensors including RGB-D\nobservations and odometry, without access to global maps or privileged\ninformation, while maintaining social norm compliance such as safe distances\nand collision avoidance. Building upon the Falcon model, we introduce a\nProactive Risk Perception Module to enhance social navigation performance. Our\napproach augments Falcon with collision risk understanding that learns to\npredict distance-based collision risk scores for surrounding humans, which\nenables the agent to develop more robust spatial awareness and proactive\ncollision avoidance behaviors. The evaluation on the Social-HM3D benchmark\ndemonstrates that our method improves the agent's ability to maintain personal\nspace compliance while navigating toward goals in crowded indoor scenes with\ndynamic human agents, achieving 2nd place among 16 participating teams in the\nchallenge.",
+        "url": "http://arxiv.org/abs/2510.07871v1",
+        "published_date": "2025-10-09T07:22:12+00:00",
+        "updated_date": "2025-10-09T07:22:12+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Erjia Xiao",
+            "Lingfeng Zhang",
+            "Yingbo Tang",
+            "Hao Cheng",
+            "Renjing Xu",
+            "Wenbo Ding",
+            "Lei Zhou",
+            "Long Chen",
+            "Hangjun Ye",
+            "Xiaoshuai Hao"
+        ],
+        "tldr": "This paper presents a proactive risk perception module built upon the Falcon model for socially compliant robot navigation in dynamic, human-populated environments, achieving 2nd place in the IROS 2025 RoboSense Challenge.",
+        "tldr_zh": "该论文介绍了一个基于猎鹰模型的，用于在动态人群环境中进行社会规范机器人导航的主动风险感知模块，并在IROS 2025 RoboSense挑战赛中获得第二名。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "XYZCylinder: Feedforward Reconstruction for Driving Scenes Based on A Unified Cylinder Lifting Method",
+        "summary": "Recently, more attention has been paid to feedforward reconstruction\nparadigms, which mainly learn a fixed view transformation implicitly and\nreconstruct the scene with a single representation. However, their\ngeneralization capability and reconstruction accuracy are still limited while\nreconstructing driving scenes, which results from two aspects: (1) The fixed\nview transformation fails when the camera configuration changes, limiting the\ngeneralization capability across different driving scenes equipped with\ndifferent camera configurations. (2) The small overlapping regions between\nsparse views of the $360^\\circ$ panorama and the complexity of driving scenes\nincrease the learning difficulty, reducing the reconstruction accuracy. To\nhandle these difficulties, we propose \\textbf{XYZCylinder}, a feedforward model\nbased on a unified cylinder lifting method which involves camera modeling and\nfeature lifting. Specifically, to improve the generalization capability, we\ndesign a Unified Cylinder Camera Modeling (UCCM) strategy, which avoids the\nlearning of viewpoint-dependent spatial correspondence and unifies different\ncamera configurations with adjustable parameters. To improve the reconstruction\naccuracy, we propose a hybrid representation with several dedicated modules\nbased on newly designed Cylinder Plane Feature Group (CPFG) to lift 2D image\nfeatures to 3D space. Experimental results show that XYZCylinder achieves\nstate-of-the-art performance under different evaluation settings, and can be\ngeneralized to other driving scenes in a zero-shot manner. Project page:\n\\href{https://yuyuyu223.github.io/XYZCYlinder-projectpage/}{here}.",
+        "url": "http://arxiv.org/abs/2510.07856v1",
+        "published_date": "2025-10-09T06:58:03+00:00",
+        "updated_date": "2025-10-09T06:58:03+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Haochen Yu",
+            "Qiankun Liu",
+            "Hongyuan Liu",
+            "Jianfei Jiang",
+            "Juntao Lyu",
+            "Jiansheng Chen",
+            "Huimin Ma"
+        ],
+        "tldr": "The paper introduces XYZCylinder, a feedforward 3D reconstruction method for driving scenes that uses a unified cylinder lifting approach to improve generalization across different camera configurations and enhance reconstruction accuracy in complex environments, achieving state-of-the-art performance.",
+        "tldr_zh": "该论文介绍了XYZCylinder，一种用于驾驶场景的前馈3D重建方法，它使用统一的圆柱提升方法来提高跨不同相机配置的泛化能力，并提高复杂环境中的重建精度，实现了最先进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "AlignGS: Aligning Geometry and Semantics for Robust Indoor Reconstruction from Sparse Views",
+        "summary": "The demand for semantically rich 3D models of indoor scenes is rapidly\ngrowing, driven by applications in augmented reality, virtual reality, and\nrobotics. However, creating them from sparse views remains a challenge due to\ngeometric ambiguity. Existing methods often treat semantics as a passive\nfeature painted on an already-formed, and potentially flawed, geometry. We\nposit that for robust sparse-view reconstruction, semantic understanding\ninstead be an active, guiding force. This paper introduces AlignGS, a novel\nframework that actualizes this vision by pioneering a synergistic, end-to-end\noptimization of geometry and semantics. Our method distills rich priors from 2D\nfoundation models and uses them to directly regularize the 3D representation\nthrough a set of novel semantic-to-geometry guidance mechanisms, including\ndepth consistency and multi-faceted normal regularization. Extensive\nevaluations on standard benchmarks demonstrate that our approach achieves\nstate-of-the-art results in novel view synthesis and produces reconstructions\nwith superior geometric accuracy. The results validate that leveraging semantic\npriors as a geometric regularizer leads to more coherent and complete 3D models\nfrom limited input views. Our code is avaliable at\nhttps://github.com/MediaX-SJTU/AlignGS .",
+        "url": "http://arxiv.org/abs/2510.07839v1",
+        "published_date": "2025-10-09T06:30:20+00:00",
+        "updated_date": "2025-10-09T06:30:20+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yijie Gao",
+            "Houqiang Zhong",
+            "Tianchi Zhu",
+            "Zhengxue Cheng",
+            "Qiang Hu",
+            "Li Song"
+        ],
+        "tldr": "AlignGS introduces a novel framework for indoor 3D reconstruction from sparse views, synergistically optimizing geometry and semantics by leveraging 2D foundation model priors for geometric regularization, achieving state-of-the-art results.",
+        "tldr_zh": "AlignGS 提出了一种新的室内三维重建框架，该框架从稀疏视角出发，通过利用二维基础模型先验进行几何正则化，协同优化了几何和语义，实现了最先进的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "DEGS: Deformable Event-based 3D Gaussian Splatting from RGB and Event Stream",
+        "summary": "Reconstructing Dynamic 3D Gaussian Splatting (3DGS) from low-framerate RGB\nvideos is challenging. This is because large inter-frame motions will increase\nthe uncertainty of the solution space. For example, one pixel in the first\nframe might have more choices to reach the corresponding pixel in the second\nframe. Event cameras can asynchronously capture rapid visual changes and are\nrobust to motion blur, but they do not provide color information. Intuitively,\nthe event stream can provide deterministic constraints for the inter-frame\nlarge motion by the event trajectories. Hence, combining\nlow-temporal-resolution images with high-framerate event streams can address\nthis challenge. However, it is challenging to jointly optimize Dynamic 3DGS\nusing both RGB and event modalities due to the significant discrepancy between\nthese two data modalities. This paper introduces a novel framework that jointly\noptimizes dynamic 3DGS from the two modalities. The key idea is to adopt event\nmotion priors to guide the optimization of the deformation fields. First, we\nextract the motion priors encoded in event streams by using the proposed LoCM\nunsupervised fine-tuning framework to adapt an event flow estimator to a\ncertain unseen scene. Then, we present the geometry-aware data association\nmethod to build the event-Gaussian motion correspondence, which is the primary\nfoundation of the pipeline, accompanied by two useful strategies, namely motion\ndecomposition and inter-frame pseudo-label. Extensive experiments show that our\nmethod outperforms existing image and event-based approaches across synthetic\nand real scenes and prove that our method can effectively optimize dynamic 3DGS\nwith the help of event data.",
+        "url": "http://arxiv.org/abs/2510.07752v1",
+        "published_date": "2025-10-09T03:43:27+00:00",
+        "updated_date": "2025-10-09T03:43:27+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Junhao He",
+            "Jiaxu Wang",
+            "Jia Li",
+            "Mingyuan Sun",
+            "Qiang Zhang",
+            "Jiahang Cao",
+            "Ziyi Zhang",
+            "Yi Gu",
+            "Jingkai Sun",
+            "Renjing Xu"
+        ],
+        "tldr": "The paper introduces a novel framework, DEGS, that combines RGB video and event stream data to optimize dynamic 3D Gaussian Splatting by using event motion priors to guide deformation field optimization, achieving superior performance in both synthetic and real scenes.",
+        "tldr_zh": "该论文介绍了一种新颖的框架DEGS，它结合RGB视频和事件流数据来优化动态3D高斯溅射，通过使用事件运动先验来指导变形场优化，在合成和真实场景中均实现了卓越的性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "R2RGEN: Real-to-Real 3D Data Generation for Spatially Generalized Manipulation",
+        "summary": "Towards the aim of generalized robotic manipulation, spatial generalization\nis the most fundamental capability that requires the policy to work robustly\nunder different spatial distribution of objects, environment and agent itself.\nTo achieve this, substantial human demonstrations need to be collected to cover\ndifferent spatial configurations for training a generalized visuomotor policy\nvia imitation learning. Prior works explore a promising direction that\nleverages data generation to acquire abundant spatially diverse data from\nminimal source demonstrations. However, most approaches face significant\nsim-to-real gap and are often limited to constrained settings, such as\nfixed-base scenarios and predefined camera viewpoints. In this paper, we\npropose a real-to-real 3D data generation framework (R2RGen) that directly\naugments the pointcloud observation-action pairs to generate real-world data.\nR2RGen is simulator- and rendering-free, thus being efficient and\nplug-and-play. Specifically, given a single source demonstration, we introduce\nan annotation mechanism for fine-grained parsing of scene and trajectory. A\ngroup-wise augmentation strategy is proposed to handle complex multi-object\ncompositions and diverse task constraints. We further present camera-aware\nprocessing to align the distribution of generated data with real-world 3D\nsensor. Empirically, R2RGen substantially enhances data efficiency on extensive\nexperiments and demonstrates strong potential for scaling and application on\nmobile manipulation.",
+        "url": "http://arxiv.org/abs/2510.08547v1",
+        "published_date": "2025-10-09T17:55:44+00:00",
+        "updated_date": "2025-10-09T17:55:44+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Xiuwei Xu",
+            "Angyuan Ma",
+            "Hankun Li",
+            "Bingyao Yu",
+            "Zheng Zhu",
+            "Jie Zhou",
+            "Jiwen Lu"
+        ],
+        "tldr": "The paper introduces R2RGen, a real-to-real 3D data generation framework for robotic manipulation that augments point cloud observation-action pairs directly, addressing the sim-to-real gap and spatial generalization challenges with a novel annotation and augmentation strategy.",
+        "tldr_zh": "该论文介绍了R2RGen，一种用于机器人操作的真实到真实的3D数据生成框架，该框架直接增强点云观察-动作对，通过一种新颖的注释和增强策略，解决了从仿真到真实的差距和空间泛化挑战。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
