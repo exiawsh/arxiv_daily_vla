@@ -1,0 +1,327 @@
+[
+    {
+        "title": "VITA-VLA: Efficiently Teaching Vision-Language Models to Act via Action Expert Distillation",
+        "summary": "Vision-Language Action (VLA) models significantly advance robotic\nmanipulation by leveraging the strong perception capabilities of pretrained\nvision-language models (VLMs). By integrating action modules into these\npretrained models, VLA methods exhibit improved generalization. However,\ntraining them from scratch is costly. In this work, we propose a simple yet\neffective distillation-based framework that equips VLMs with action-execution\ncapability by transferring knowledge from pretrained small action models. Our\narchitecture retains the original VLM structure, adding only an action token\nand a state encoder to incorporate physical inputs. To distill action\nknowledge, we adopt a two-stage training strategy. First, we perform\nlightweight alignment by mapping VLM hidden states into the action space of the\nsmall action model, enabling effective reuse of its pretrained action decoder\nand avoiding expensive pretraining. Second, we selectively fine-tune the\nlanguage model, state encoder, and action modules, enabling the system to\nintegrate multimodal inputs with precise action generation. Specifically, the\naction token provides the VLM with a direct handle for predicting future\nactions, while the state encoder allows the model to incorporate robot dynamics\nnot captured by vision alone. This design yields substantial efficiency gains\nover training large VLA models from scratch. Compared with previous\nstate-of-the-art methods, our method achieves 97.3% average success rate on\nLIBERO (11.8% improvement) and 93.5% on LIBERO-LONG (24.5% improvement). In\nreal-world experiments across five manipulation tasks, our method consistently\noutperforms the teacher model, achieving 82.0% success rate (17% improvement),\nwhich demonstrate that action distillation effectively enables VLMs to generate\nprecise actions while substantially reducing training costs.",
+        "url": "http://arxiv.org/abs/2510.09607v1",
+        "published_date": "2025-10-10T17:59:56+00:00",
+        "updated_date": "2025-10-10T17:59:56+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Shaoqi Dong",
+            "Chaoyou Fu",
+            "Haihan Gao",
+            "Yi-Fan Zhang",
+            "Chi Yan",
+            "Chu Wu",
+            "Xiaoyu Liu",
+            "Yunhang Shen",
+            "Jing Huo",
+            "Deqiang Jiang",
+            "Haoyu Cao",
+            "Yang Gao",
+            "Xing Sun",
+            "Ran He",
+            "Caifeng Shan"
+        ],
+        "tldr": "This paper introduces VITA-VLA, a distillation-based framework that efficiently trains Vision-Language Models to act by transferring knowledge from smaller, pretrained action models, achieving significant improvements in robotic manipulation tasks with reduced training costs.",
+        "tldr_zh": "本文介绍了一种基于蒸馏的框架VITA-VLA，它通过从较小的预训练动作模型中转移知识，有效地训练视觉语言模型执行动作，从而以更低的训练成本在机器人操作任务中实现了显著的改进。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "SpaceVista: All-Scale Visual Spatial Reasoning from mm to km",
+        "summary": "With the current surge in spatial reasoning explorations, researchers have\nmade significant progress in understanding indoor scenes, but still struggle\nwith diverse applications such as robotics and autonomous driving. This paper\naims to advance all-scale spatial reasoning across diverse scenarios by\ntackling two key challenges: 1) the heavy reliance on indoor 3D scans and\nlabor-intensive manual annotations for dataset curation; 2) the absence of\neffective all-scale scene modeling, which often leads to overfitting to\nindividual scenes. In this paper, we introduce a holistic solution that\nintegrates a structured spatial reasoning knowledge system, scale-aware\nmodeling, and a progressive training paradigm, as the first attempt to broaden\nthe all-scale spatial intelligence of MLLMs to the best of our knowledge. Using\na task-specific, specialist-driven automated pipeline, we curate over 38K video\nscenes across 5 spatial scales to create SpaceVista-1M, a dataset comprising\napproximately 1M spatial QA pairs spanning 19 diverse task types. While\nspecialist models can inject useful domain knowledge, they are not reliable for\nevaluation. We then build an all-scale benchmark with precise annotations by\nmanually recording, retrieving, and assembling video-based data. However, naive\ntraining with SpaceVista-1M often yields suboptimal results due to the\npotential knowledge conflict. Accordingly, we introduce SpaceVista-7B, a\nspatial reasoning model that accepts dense inputs beyond semantics and uses\nscale as an anchor for scale-aware experts and progressive rewards. Finally,\nextensive evaluations across 5 benchmarks, including our SpaceVista-Bench,\ndemonstrate competitive performance, showcasing strong generalization across\nall scales and scenarios. Our dataset, model, and benchmark will be released on\nhttps://peiwensun2000.github.io/mm2km .",
+        "url": "http://arxiv.org/abs/2510.09606v1",
+        "published_date": "2025-10-10T17:59:46+00:00",
+        "updated_date": "2025-10-10T17:59:46+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Peiwen Sun",
+            "Shiqiang Lang",
+            "Dongming Wu",
+            "Yi Ding",
+            "Kaituo Feng",
+            "Huadai Liu",
+            "Zhen Ye",
+            "Rui Liu",
+            "Yun-Hui Liu",
+            "Jianan Wang",
+            "Xiangyu Yue"
+        ],
+        "tldr": "The paper introduces SpaceVista-1M, a large-scale dataset for all-scale spatial reasoning, along with SpaceVista-7B, a spatial reasoning model, demonstrating strong generalization across different scales and scenarios. They also introduce an all-scale benchmark with precise annotations.",
+        "tldr_zh": "该论文介绍了 SpaceVista-1M，一个用于全尺度空间推理的大规模数据集，以及 SpaceVista-7B，一个空间推理模型，展示了在不同尺度和场景下的强大泛化能力。他们还引入了一个具有精确注释的全尺度基准。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Goal-oriented Backdoor Attack against Vision-Language-Action Models via Physical Objects",
+        "summary": "Recent advances in vision-language-action (VLA) models have greatly improved\nembodied AI, enabling robots to follow natural language instructions and\nperform diverse tasks. However, their reliance on uncurated training datasets\nraises serious security concerns. Existing backdoor attacks on VLAs mostly\nassume white-box access and result in task failures instead of enforcing\nspecific actions. In this work, we reveal a more practical threat: attackers\ncan manipulate VLAs by simply injecting physical objects as triggers into the\ntraining dataset. We propose goal-oriented backdoor attacks (GoBA), where the\nVLA behaves normally in the absence of physical triggers but executes\npredefined and goal-oriented actions in the presence of physical triggers.\nSpecifically, based on a popular VLA benchmark LIBERO, we introduce BadLIBERO\nthat incorporates diverse physical triggers and goal-oriented backdoor actions.\nIn addition, we propose a three-level evaluation that categorizes the victim\nVLA's actions under GoBA into three states: nothing to do, try to do, and\nsuccess to do. Experiments show that GoBA enables the victim VLA to\nsuccessfully achieve the backdoor goal in 97 percentage of inputs when the\nphysical trigger is present, while causing zero performance degradation on\nclean inputs. Finally, by investigating factors related to GoBA, we find that\nthe action trajectory and trigger color significantly influence attack\nperformance, while trigger size has surprisingly little effect. The code and\nBadLIBERO dataset are accessible via the project page at\nhttps://goba-attack.github.io/.",
+        "url": "http://arxiv.org/abs/2510.09269v1",
+        "published_date": "2025-10-10T11:09:36+00:00",
+        "updated_date": "2025-10-10T11:09:36+00:00",
+        "categories": [
+            "cs.CR",
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Zirun Zhou",
+            "Zhengyang Xiao",
+            "Haochuan Xu",
+            "Jing Sun",
+            "Di Wang",
+            "Jingfeng Zhang"
+        ],
+        "tldr": "This paper introduces a goal-oriented backdoor attack (GoBA) against Vision-Language-Action (VLA) models using physical objects as triggers, demonstrating high success rates in manipulating robot actions without affecting performance on clean inputs.",
+        "tldr_zh": "本文提出了一种目标导向的后门攻击（GoBA），利用物理对象作为触发器攻击视觉-语言-动作（VLA）模型，实验表明该方法能够在不影响清洁输入性能的情况下，以高成功率操纵机器人行为。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Unified World Models: Memory-Augmented Planning and Foresight for Visual Navigation",
+        "summary": "Enabling embodied agents to effectively imagine future states is critical for\nrobust and generalizable visual navigation. Current state-of-the-art\napproaches, however, adopt modular architectures that separate navigation\nplanning from visual world modeling, leading to state-action misalignment and\nlimited adaptability in novel or dynamic scenarios. To overcome this\nfundamental limitation, we propose UniWM, a unified, memory-augmented world\nmodel integrating egocentric visual foresight and planning within a single\nmultimodal autoregressive backbone. Unlike modular frameworks, UniWM explicitly\ngrounds action decisions in visually imagined outcomes, ensuring tight\nalignment between prediction and control. A hierarchical memory mechanism\nfurther integrates detailed short-term perceptual cues with longer-term\ntrajectory context, enabling stable, coherent reasoning over extended horizons.\nExtensive experiments across four challenging benchmarks (Go Stanford, ReCon,\nSCAND, HuRoN) demonstrate that UniWM substantially improves navigation success\nrates by up to 30%, significantly reduces trajectory errors compared to strong\nbaselines, and exhibits impressive zero-shot generalization on the unseen\nTartanDrive dataset. These results highlight UniWM as a principled step toward\nunified, imagination-driven embodied navigation.",
+        "url": "http://arxiv.org/abs/2510.08713v1",
+        "published_date": "2025-10-09T18:18:11+00:00",
+        "updated_date": "2025-10-09T18:18:11+00:00",
+        "categories": [
+            "cs.AI",
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Yifei Dong",
+            "Fengyi Wu",
+            "Guangyu Chen",
+            "Zhi-Qi Cheng",
+            "Qiyu Hu",
+            "Yuxuan Zhou",
+            "Jingdong Sun",
+            "Jun-Yan He",
+            "Qi Dai",
+            "Alexander G Hauptmann"
+        ],
+        "tldr": "The paper introduces UniWM, a unified, memory-augmented world model for visual navigation that integrates egocentric visual foresight and planning, achieving significant improvements and zero-shot generalization compared to modular approaches.",
+        "tldr_zh": "该论文介绍了一种用于视觉导航的统一的、记忆增强的世界模型UniWM，它集成了以自我为中心的视觉预测和规划，与模块化方法相比，实现了显著的改进和零样本泛化。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "StreamingVLM: Real-Time Understanding for Infinite Video Streams",
+        "summary": "Vision-language models (VLMs) could power real-time assistants and autonomous\nagents, but they face a critical challenge: understanding near-infinite video\nstreams without escalating latency and memory usage. Processing entire videos\nwith full attention leads to quadratic computational costs and poor performance\non long videos. Meanwhile, simple sliding window methods are also flawed, as\nthey either break coherence or suffer from high latency due to redundant\nrecomputation. In this paper, we introduce StreamingVLM, a model designed for\nreal-time, stable understanding of infinite visual input. Our approach is a\nunified framework that aligns training with streaming inference. During\ninference, we maintain a compact KV cache by reusing states of attention sinks,\na short window of recent vision tokens, and a long window of recent text\ntokens. This streaming ability is instilled via a simple supervised fine-tuning\n(SFT) strategy that applies full attention on short, overlapped video chunks,\nwhich effectively mimics the inference-time attention pattern without training\non prohibitively long contexts. For evaluation, we build Inf-Streams-Eval, a\nnew benchmark with videos averaging over two hours that requires dense,\nper-second alignment between frames and text. On Inf-Streams-Eval, StreamingVLM\nachieves a 66.18% win rate against GPT-4O mini and maintains stable, real-time\nperformance at up to 8 FPS on a single NVIDIA H100. Notably, our SFT strategy\nalso enhances general VQA abilities without any VQA-specific fine-tuning,\nimproving performance on LongVideoBench by +4.30 and OVOBench Realtime by\n+5.96. Code is available at https://github.com/mit-han-lab/streaming-vlm.",
+        "url": "http://arxiv.org/abs/2510.09608v1",
+        "published_date": "2025-10-10T17:59:58+00:00",
+        "updated_date": "2025-10-10T17:59:58+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.CL"
+        ],
+        "authors": [
+            "Ruyi Xu",
+            "Guangxuan Xiao",
+            "Yukang Chen",
+            "Liuning He",
+            "Kelly Peng",
+            "Yao Lu",
+            "Song Han"
+        ],
+        "tldr": "StreamingVLM addresses the challenge of real-time video understanding by introducing a novel approach that efficiently processes long video streams with minimal latency and memory usage, achieving state-of-the-art performance on a new long-video benchmark.",
+        "tldr_zh": "StreamingVLM通过引入一种有效处理长视频流且延迟和内存使用最小的新方法，解决了实时视频理解的挑战，并在新的长视频基准测试中实现了最先进的性能。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Visibility-Aware Densification for 3D Gaussian Splatting in Dynamic Urban Scenes",
+        "summary": "3D Gaussian splatting (3DGS) has demonstrated impressive performance in\nsynthesizing high-fidelity novel views. Nonetheless, its effectiveness\ncritically depends on the quality of the initialized point cloud. Specifically,\nachieving uniform and complete point coverage over the underlying scene\nstructure requires overlapping observation frustums, an assumption that is\noften violated in unbounded, dynamic urban environments. Training Gaussian\nmodels with partially initialized point clouds often leads to distortions and\nartifacts, as camera rays may fail to intersect valid surfaces, resulting in\nincorrect gradient propagation to Gaussian primitives associated with occluded\nor invisible geometry. Additionally, existing densification strategies simply\nclone and split Gaussian primitives from existing ones, incapable of\nreconstructing missing structures. To address these limitations, we propose\nVAD-GS, a 3DGS framework tailored for geometry recovery in challenging urban\nscenes. Our method identifies unreliable geometry structures via voxel-based\nvisibility reasoning, selects informative supporting views through\ndiversity-aware view selection, and recovers missing structures via patch\nmatching-based multi-view stereo reconstruction. This design enables the\ngeneration of new Gaussian primitives guided by reliable geometric priors, even\nin regions lacking initial points. Extensive experiments on the Waymo and\nnuScenes datasets demonstrate that VAD-GS outperforms state-of-the-art 3DGS\napproaches and significantly improves the quality of reconstructed geometry for\nboth static and dynamic objects. Source code will be released upon publication.",
+        "url": "http://arxiv.org/abs/2510.09364v1",
+        "published_date": "2025-10-10T13:22:12+00:00",
+        "updated_date": "2025-10-10T13:22:12+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yikang Zhang",
+            "Rui Fan"
+        ],
+        "tldr": "The paper introduces VAD-GS, a 3D Gaussian Splatting framework that addresses geometry recovery in dynamic urban scenes by using visibility reasoning, view selection, and multi-view stereo reconstruction to improve the quality of reconstructed geometry, especially in regions lacking initial points.",
+        "tldr_zh": "该论文介绍了VAD-GS，一个3D高斯溅射框架，通过使用可见性推理、视图选择和多视图立体重建来解决动态城市场景中的几何体恢复问题，从而提高重建几何体的质量，尤其是在缺乏初始点的区域。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Towards Safer and Understandable Driver Intention Prediction",
+        "summary": "Autonomous driving (AD) systems are becoming increasingly capable of handling\ncomplex tasks, mainly due to recent advances in deep learning and AI. As\ninteractions between autonomous systems and humans increase, the\ninterpretability of decision-making processes in driving systems becomes\nincreasingly crucial for ensuring safe driving operations. Successful\nhuman-machine interaction requires understanding the underlying representations\nof the environment and the driving task, which remains a significant challenge\nin deep learning-based systems. To address this, we introduce the task of\ninterpretability in maneuver prediction before they occur for driver safety,\ni.e., driver intent prediction (DIP), which plays a critical role in AD\nsystems. To foster research in interpretable DIP, we curate the eXplainable\nDriving Action Anticipation Dataset (DAAD-X), a new multimodal, ego-centric\nvideo dataset to provide hierarchical, high-level textual explanations as\ncausal reasoning for the driver's decisions. These explanations are derived\nfrom both the driver's eye-gaze and the ego-vehicle's perspective. Next, we\npropose Video Concept Bottleneck Model (VCBM), a framework that generates\nspatio-temporally coherent explanations inherently, without relying on post-hoc\ntechniques. Finally, through extensive evaluations of the proposed VCBM on the\nDAAD-X dataset, we demonstrate that transformer-based models exhibit greater\ninterpretability than conventional CNN-based models. Additionally, we introduce\na multilabel t-SNE visualization technique to illustrate the disentanglement\nand causal correlation among multiple explanations. Our data, code and models\nare available at: https://mukil07.github.io/VCBM.github.io/",
+        "url": "http://arxiv.org/abs/2510.09200v1",
+        "published_date": "2025-10-10T09:41:25+00:00",
+        "updated_date": "2025-10-10T09:41:25+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.HC"
+        ],
+        "authors": [
+            "Mukilan Karuppasamy",
+            "Shankar Gangisetty",
+            "Shyam Nandan Rai",
+            "Carlo Masone",
+            "C V Jawahar"
+        ],
+        "tldr": "This paper introduces a new task of interpretable driver intent prediction (DIP), a new multimodal dataset (DAAD-X) with textual explanations, and a video concept bottleneck model (VCBM) for generating interpretable explanations for driver intent. The results demonstrate transformer-based models have greater interpretability.",
+        "tldr_zh": "本文介绍了一个新的可解释的驾驶员意图预测(DIP)任务，一个新的多模态数据集(DAAD-X)，带有文本解释，以及一个视频概念瓶颈模型(VCBM)，用于生成驾驶员意图的可解释的解释。结果表明，基于transformer的模型具有更好的可解释性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "TARO: Toward Semantically Rich Open-World Object Detection",
+        "summary": "Modern object detectors are largely confined to a \"closed-world\" assumption,\nlimiting them to a predefined set of classes and posing risks when encountering\nnovel objects in real-world scenarios. While open-set detection methods aim to\naddress this by identifying such instances as 'Unknown', this is often\ninsufficient. Rather than treating all unknowns as a single class, assigning\nthem more descriptive subcategories can enhance decision-making in\nsafety-critical contexts. For example, identifying an object as an 'Unknown\nAnimal' (requiring an urgent stop) versus 'Unknown Debris' (requiring a safe\nlane change) is far more useful than just 'Unknown' in autonomous driving. To\nbridge this gap, we introduce TARO, a novel detection framework that not only\nidentifies unknown objects but also classifies them into coarse parent\ncategories within a semantic hierarchy. TARO employs a unique architecture with\na sparsemax-based head for modeling objectness, a hierarchy-guided relabeling\ncomponent that provides auxiliary supervision, and a classification module that\nlearns hierarchical relationships. Experiments show TARO can categorize up to\n29.9% of unknowns into meaningful coarse classes, significantly reduce\nconfusion between unknown and known classes, and achieve competitive\nperformance in both unknown recall and known mAP. Code will be made available.",
+        "url": "http://arxiv.org/abs/2510.09173v1",
+        "published_date": "2025-10-10T09:15:26+00:00",
+        "updated_date": "2025-10-10T09:15:26+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yuchen Zhang",
+            "Yao Lu",
+            "Johannes Betz"
+        ],
+        "tldr": "TARO is a novel object detection framework that identifies and classifies unknown objects into coarse semantic categories, improving decision-making in safety-critical applications like autonomous driving by providing more context than simple 'Unknown' labels.",
+        "tldr_zh": "TARO 是一种新颖的目标检测框架，可以将未知物体识别并分类到粗略的语义类别中，通过提供比简单“未知”标签更多的上下文信息，从而改善自动驾驶等安全关键型应用中的决策。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Exploring Single Domain Generalization of LiDAR-based Semantic Segmentation under Imperfect Labels",
+        "summary": "Accurate perception is critical for vehicle safety, with LiDAR as a key\nenabler in autonomous driving. To ensure robust performance across\nenvironments, sensor types, and weather conditions without costly\nre-annotation, domain generalization in LiDAR-based 3D semantic segmentation is\nessential. However, LiDAR annotations are often noisy due to sensor\nimperfections, occlusions, and human errors. Such noise degrades segmentation\naccuracy and is further amplified under domain shifts, threatening system\nreliability. While noisy-label learning is well-studied in images, its\nextension to 3D LiDAR segmentation under domain generalization remains largely\nunexplored, as the sparse and irregular structure of point clouds limits direct\nuse of 2D methods. To address this gap, we introduce the novel task Domain\nGeneralization for LiDAR Semantic Segmentation under Noisy Labels (DGLSS-NL)\nand establish the first benchmark by adapting three representative noisy-label\nlearning strategies from image classification to 3D segmentation. However, we\nfind that existing noisy-label learning approaches adapt poorly to LiDAR data.\nWe therefore propose DuNe, a dual-view framework with strong and weak branches\nthat enforce feature-level consistency and apply cross-entropy loss based on\nconfidence-aware filtering of predictions. Our approach shows state-of-the-art\nperformance by achieving 56.86% mIoU on SemanticKITTI, 42.28% on nuScenes, and\n52.58% on SemanticPOSS under 10% symmetric label noise, with an overall\nArithmetic Mean (AM) of 49.57% and Harmonic Mean (HM) of 48.50%, thereby\ndemonstrating robust domain generalization in DGLSS-NL tasks. The code is\navailable on our project page.",
+        "url": "http://arxiv.org/abs/2510.09035v1",
+        "published_date": "2025-10-10T06:11:34+00:00",
+        "updated_date": "2025-10-10T06:11:34+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG",
+            "cs.RO"
+        ],
+        "authors": [
+            "Weitong Kong",
+            "Zichao Zeng",
+            "Di Wen",
+            "Jiale Wei",
+            "Kunyu Peng",
+            "June Moh Goo",
+            "Jan Boehm",
+            "Rainer Stiefelhagen"
+        ],
+        "tldr": "This paper introduces the novel task of Domain Generalization for LiDAR Semantic Segmentation under Noisy Labels (DGLSS-NL) and proposes a dual-view framework, DuNe, that achieves state-of-the-art performance on multiple datasets with noisy labels.",
+        "tldr_zh": "本文提出了一个新任务：在噪声标签下进行LiDAR语义分割的领域泛化（DGLSS-NL），并提出了一个双视角框架DuNe，在多个带有噪声标签的数据集上实现了最先进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "FOLK: Fast Open-Vocabulary 3D Instance Segmentation via Label-guided Knowledge Distillation",
+        "summary": "Open-vocabulary 3D instance segmentation seeks to segment and classify\ninstances beyond the annotated label space. Existing methods typically map 3D\ninstances to 2D RGB-D images, and then employ vision-language models (VLMs) for\nclassification. However, such a mapping strategy usually introduces noise from\n2D occlusions and incurs substantial computational and memory costs during\ninference, slowing down the inference speed. To address the above problems, we\npropose a Fast Open-vocabulary 3D instance segmentation method via Label-guided\nKnowledge distillation (FOLK). Our core idea is to design a teacher model that\nextracts high-quality instance embeddings and distills its open-vocabulary\nknowledge into a 3D student model. In this way, during inference, the distilled\n3D model can directly classify instances from the 3D point cloud, avoiding\nnoise caused by occlusions and significantly accelerating the inference\nprocess. Specifically, we first design a teacher model to generate a 2D CLIP\nembedding for each 3D instance, incorporating both visibility and viewpoint\ndiversity, which serves as the learning target for distillation. We then\ndevelop a 3D student model that directly produces a 3D embedding for each 3D\ninstance. During training, we propose a label-guided distillation algorithm to\ndistill open-vocabulary knowledge from label-consistent 2D embeddings into the\nstudent model. FOLK conducted experiments on the ScanNet200 and Replica\ndatasets, achieving state-of-the-art performance on the ScanNet200 dataset with\nan AP50 score of 35.7, while running approximately 6.0x to 152.2x faster than\nprevious methods. All codes will be released after the paper is accepted.",
+        "url": "http://arxiv.org/abs/2510.08849v1",
+        "published_date": "2025-10-09T22:43:26+00:00",
+        "updated_date": "2025-10-09T22:43:26+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Hongrui Wu",
+            "Zhicheng Gao",
+            "Jin Cao",
+            "Kelu Yao",
+            "Wen Shen",
+            "Zhihua Wei"
+        ],
+        "tldr": "The paper introduces FOLK, a fast open-vocabulary 3D instance segmentation method using label-guided knowledge distillation from a 2D teacher model to a 3D student model, achieving state-of-the-art performance with significant speed improvements.",
+        "tldr_zh": "该论文介绍了FOLK，一种快速的开放词汇3D实例分割方法，它使用标签引导的知识蒸馏，从2D教师模型到3D学生模型，实现了最先进的性能，并显著提高了速度。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Clear Roads, Clear Vision: Advancements in Multi-Weather Restoration for Smart Transportation",
+        "summary": "Adverse weather conditions such as haze, rain, and snow significantly degrade\nthe quality of images and videos, posing serious challenges to intelligent\ntransportation systems (ITS) that rely on visual input. These degradations\naffect critical applications including autonomous driving, traffic monitoring,\nand surveillance. This survey presents a comprehensive review of image and\nvideo restoration techniques developed to mitigate weather-induced visual\nimpairments. We categorize existing approaches into traditional prior-based\nmethods and modern data-driven models, including CNNs, transformers, diffusion\nmodels, and emerging vision-language models (VLMs). Restoration strategies are\nfurther classified based on their scope: single-task models,\nmulti-task/multi-weather systems, and all-in-one frameworks capable of handling\ndiverse degradations. In addition, we discuss day and night time restoration\nchallenges, benchmark datasets, and evaluation protocols. The survey concludes\nwith an in-depth discussion on limitations in current research and outlines\nfuture directions such as mixed/compound-degradation restoration, real-time\ndeployment, and agentic AI frameworks. This work aims to serve as a valuable\nreference for advancing weather-resilient vision systems in smart\ntransportation environments. Lastly, to stay current with rapid advancements in\nthis field, we will maintain regular updates of the latest relevant papers and\ntheir open-source implementations at\nhttps://github.com/ChaudharyUPES/A-comprehensive-review-on-Multi-weather-restoration",
+        "url": "http://arxiv.org/abs/2510.09228v1",
+        "published_date": "2025-10-10T10:15:59+00:00",
+        "updated_date": "2025-10-10T10:15:59+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Vijay M. Galshetwar",
+            "Praful Hambarde",
+            "Prashant W. Patil",
+            "Akshay Dudhane",
+            "Sachin Chaudhary",
+            "Santosh Kumar Vipparathi",
+            "Subrahmanyam Murala"
+        ],
+        "tldr": "This survey paper comprehensively reviews image and video restoration techniques for adverse weather conditions in intelligent transportation systems, covering traditional and modern methods, datasets, and future research directions.",
+        "tldr_zh": "该综述论文全面回顾了智能交通系统中针对恶劣天气条件的图像和视频恢复技术，涵盖传统和现代方法、数据集以及未来研究方向。",
+        "relevance_score": 8,
+        "novelty_claim_score": 5,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Detecting spills using thermal imaging, pretrained deep learning models, and a robotic platform",
+        "summary": "This paper presents a real-time spill detection system that utilizes\npretrained deep learning models with RGB and thermal imaging to classify spill\nvs. no-spill scenarios across varied environments. Using a balanced binary\ndataset (4,000 images), our experiments demonstrate the advantages of thermal\nimaging in inference speed, accuracy, and model size. We achieve up to 100%\naccuracy using lightweight models like VGG19 and NasNetMobile, with thermal\nmodels performing faster and more robustly across different lighting\nconditions. Our system runs on consumer-grade hardware (RTX 4080) and achieves\ninference times as low as 44 ms with model sizes under 350 MB, highlighting its\ndeployability in safety-critical contexts. Results from experiments with a real\nrobot and test datasets indicate that a VGG19 model trained on thermal imaging\nperforms best.",
+        "url": "http://arxiv.org/abs/2510.08770v1",
+        "published_date": "2025-10-09T19:40:58+00:00",
+        "updated_date": "2025-10-09T19:40:58+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG",
+            "cs.RO"
+        ],
+        "authors": [
+            "Gregory Yeghiyan",
+            "Jurius Azar",
+            "Devson Butani",
+            "Chan-Jin Chung"
+        ],
+        "tldr": "This paper presents a real-time spill detection system using thermal imaging and pre-trained deep learning models on a robotic platform, achieving high accuracy and fast inference times with lightweight models.",
+        "tldr_zh": "本文提出了一种基于热成像和预训练深度学习模型的实时溢出检测系统，该系统在机器人平台上使用轻量级模型实现了高精度和快速推理。",
+        "relevance_score": 7,
+        "novelty_claim_score": 6,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
