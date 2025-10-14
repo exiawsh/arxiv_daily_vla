@@ -1,0 +1,340 @@
+[
+    {
+        "title": "Beyond 'Templates': Category-Agnostic Object Pose, Size, and Shape Estimation from a Single View",
+        "summary": "Estimating an object's 6D pose, size, and shape from visual input is a\nfundamental problem in computer vision, with critical applications in robotic\ngrasping and manipulation. Existing methods either rely on object-specific\npriors such as CAD models or templates, or suffer from limited generalization\nacross categories due to pose-shape entanglement and multi-stage pipelines. In\nthis work, we propose a unified, category-agnostic framework that\nsimultaneously predicts 6D pose, size, and dense shape from a single RGB-D\nimage, without requiring templates, CAD models, or category labels at test\ntime. Our model fuses dense 2D features from vision foundation models with\npartial 3D point clouds using a Transformer encoder enhanced by a\nMixture-of-Experts, and employs parallel decoders for pose-size estimation and\nshape reconstruction, achieving real-time inference at 28 FPS. Trained solely\non synthetic data from 149 categories in the SOPE dataset, our framework is\nevaluated on four diverse benchmarks SOPE, ROPE, ObjaversePose, and HANDAL,\nspanning over 300 categories. It achieves state-of-the-art accuracy on seen\ncategories while demonstrating remarkably strong zero-shot generalization to\nunseen real-world objects, establishing a new standard for open-set 6D\nunderstanding in robotics and embodied AI.",
+        "url": "http://arxiv.org/abs/2510.11687v1",
+        "published_date": "2025-10-13T17:49:15+00:00",
+        "updated_date": "2025-10-13T17:49:15+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jinyu Zhang",
+            "Haitao Lin",
+            "Jiashu Hou",
+            "Xiangyang Xue",
+            "Yanwei Fu"
+        ],
+        "tldr": "This paper introduces a category-agnostic framework for estimating an object's 6D pose, size, and shape from a single RGB-D image, achieving state-of-the-art accuracy and strong zero-shot generalization.",
+        "tldr_zh": "本文介绍了一种类别无关的框架，用于从单个RGB-D图像估计物体的6D姿态、大小和形状，实现了最先进的精度和强大的零样本泛化能力。",
+        "relevance_score": 9,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "PhySIC: Physically Plausible 3D Human-Scene Interaction and Contact from a Single Image",
+        "summary": "Reconstructing metrically accurate humans and their surrounding scenes from a\nsingle image is crucial for virtual reality, robotics, and comprehensive 3D\nscene understanding. However, existing methods struggle with depth ambiguity,\nocclusions, and physically inconsistent contacts. To address these challenges,\nwe introduce PhySIC, a framework for physically plausible Human-Scene\nInteraction and Contact reconstruction. PhySIC recovers metrically consistent\nSMPL-X human meshes, dense scene surfaces, and vertex-level contact maps within\na shared coordinate frame from a single RGB image. Starting from coarse\nmonocular depth and body estimates, PhySIC performs occlusion-aware inpainting,\nfuses visible depth with unscaled geometry for a robust metric scaffold, and\nsynthesizes missing support surfaces like floors. A confidence-weighted\noptimization refines body pose, camera parameters, and global scale by jointly\nenforcing depth alignment, contact priors, interpenetration avoidance, and 2D\nreprojection consistency. Explicit occlusion masking safeguards invisible\nregions against implausible configurations. PhySIC is efficient, requiring only\n9 seconds for joint human-scene optimization and under 27 seconds end-to-end.\nIt naturally handles multiple humans, enabling reconstruction of diverse\ninteractions. Empirically, PhySIC outperforms single-image baselines, reducing\nmean per-vertex scene error from 641 mm to 227 mm, halving PA-MPJPE to 42 mm,\nand improving contact F1 from 0.09 to 0.51. Qualitative results show realistic\nfoot-floor interactions, natural seating, and plausible reconstructions of\nheavily occluded furniture. By converting a single image into a physically\nplausible 3D human-scene pair, PhySIC advances scalable 3D scene understanding.\nOur implementation is publicly available at https://yuxuan-xue.com/physic.",
+        "url": "http://arxiv.org/abs/2510.11649v1",
+        "published_date": "2025-10-13T17:29:51+00:00",
+        "updated_date": "2025-10-13T17:29:51+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Pradyumna Yalandur Muralidhar",
+            "Yuxuan Xue",
+            "Xianghui Xie",
+            "Margaret Kostyrko",
+            "Gerard Pons-Moll"
+        ],
+        "tldr": "The paper introduces PhySIC, a framework for reconstructing physically plausible 3D human-scene interactions and contacts from a single RGB image, achieving state-of-the-art results in accuracy and realism.",
+        "tldr_zh": "该论文介绍了 PhySIC，一个从单张 RGB 图像中重建符合物理规律的 3D 人物-场景交互和接触的框架，并在准确性和真实感方面取得了最先进的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "NV3D: Leveraging Spatial Shape Through Normal Vector-based 3D Object Detection",
+        "summary": "Recent studies in 3D object detection for autonomous vehicles aim to enrich\nfeatures through the utilization of multi-modal setups or the extraction of\nlocal patterns within LiDAR point clouds. However, multi-modal methods face\nsignificant challenges in feature alignment, and gaining features locally can\nbe oversimplified for complex 3D object detection tasks. In this paper, we\npropose a novel model, NV3D, which utilizes local features acquired from voxel\nneighbors, as normal vectors computed per voxel basis using K-nearest neighbors\n(KNN) and principal component analysis (PCA). This informative feature enables\nNV3D to determine the relationship between the surface and pertinent target\nentities, including cars, pedestrians, or cyclists. During the normal vector\nextraction process, NV3D offers two distinct sampling strategies: normal vector\ndensity-based sampling and FOV-aware bin-based sampling, allowing elimination\nof up to 55% of data while maintaining performance. In addition, we applied\nelement-wise attention fusion, which accepts voxel features as the query and\nvalue and normal vector features as the key, similar to the attention\nmechanism. Our method is trained on the KITTI dataset and has demonstrated\nsuperior performance in car and cyclist detection owing to their spatial\nshapes. In the validation set, NV3D without sampling achieves 86.60% and 80.18%\nmean Average Precision (mAP), greater than the baseline Voxel R-CNN by 2.61%\nand 4.23% mAP, respectively. With both samplings, NV3D achieves 85.54% mAP in\ncar detection, exceeding the baseline by 1.56% mAP, despite roughly 55% of\nvoxels being filtered out.",
+        "url": "http://arxiv.org/abs/2510.11632v1",
+        "published_date": "2025-10-13T17:13:06+00:00",
+        "updated_date": "2025-10-13T17:13:06+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG",
+            "I.2.6; I.2.9; I.2.10; I.4.8; I.4.10; I.5.1; I.5.4"
+        ],
+        "authors": [
+            "Krittin Chaowakarn",
+            "Paramin Sangwongngam",
+            "Nang Htet Htet Aung",
+            "Chalie Charoenlarpnopparut"
+        ],
+        "tldr": "The paper introduces NV3D, a novel 3D object detection method leveraging normal vectors computed from voxel neighbors to enhance feature extraction and performance in autonomous driving scenarios, achieving improvements over Voxel R-CNN on the KITTI dataset.",
+        "tldr_zh": "本文介绍了一种新的3D物体检测方法NV3D，该方法利用从体素邻居计算出的法向量来增强特征提取，并提升在自动驾驶场景中的性能，在KITTI数据集上优于Voxel R-CNN。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "ACE-G: Improving Generalization of Scene Coordinate Regression Through Query Pre-Training",
+        "summary": "Scene coordinate regression (SCR) has established itself as a promising\nlearning-based approach to visual relocalization. After mere minutes of\nscene-specific training, SCR models estimate camera poses of query images with\nhigh accuracy. Still, SCR methods fall short of the generalization capabilities\nof more classical feature-matching approaches. When imaging conditions of query\nimages, such as lighting or viewpoint, are too different from the training\nviews, SCR models fail. Failing to generalize is an inherent limitation of\nprevious SCR frameworks, since their training objective is to encode the\ntraining views in the weights of the coordinate regressor itself. The regressor\nessentially overfits to the training views, by design. We propose to separate\nthe coordinate regressor and the map representation into a generic transformer\nand a scene-specific map code. This separation allows us to pre-train the\ntransformer on tens of thousands of scenes. More importantly, it allows us to\ntrain the transformer to generalize from mapping images to unseen query images\nduring pre-training. We demonstrate on multiple challenging relocalization\ndatasets that our method, ACE-G, leads to significantly increased robustness\nwhile keeping the computational footprint attractive.",
+        "url": "http://arxiv.org/abs/2510.11605v1",
+        "published_date": "2025-10-13T16:45:17+00:00",
+        "updated_date": "2025-10-13T16:45:17+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Leonard Bruns",
+            "Axel Barroso-Laguna",
+            "Tommaso Cavallari",
+            "Áron Monszpart",
+            "Sowmya Munukutla",
+            "Victor Adrian Prisacariu",
+            "Eric Brachmann"
+        ],
+        "tldr": "The paper introduces ACE-G, a scene coordinate regression method that improves generalization by pre-training a transformer on numerous scenes, separating the coordinate regressor and map representation. This allows the model to generalize from mapping images to unseen query images.",
+        "tldr_zh": "该论文提出了ACE-G，一种场景坐标回归方法，通过在大量场景上预训练Transformer来提高泛化能力，分离坐标回归器和地图表示。这使得模型能够从映射图像泛化到未见过的查询图像。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "SNAP: Towards Segmenting Anything in Any Point Cloud",
+        "summary": "Interactive 3D point cloud segmentation enables efficient annotation of\ncomplex 3D scenes through user-guided prompts. However, current approaches are\ntypically restricted in scope to a single domain (indoor or outdoor), and to a\nsingle form of user interaction (either spatial clicks or textual prompts).\nMoreover, training on multiple datasets often leads to negative transfer,\nresulting in domain-specific tools that lack generalizability. To address these\nlimitations, we present \\textbf{SNAP} (\\textbf{S}egment a\\textbf{N}ything in\n\\textbf{A}ny \\textbf{P}oint cloud), a unified model for interactive 3D\nsegmentation that supports both point-based and text-based prompts across\ndiverse domains. Our approach achieves cross-domain generalizability by\ntraining on 7 datasets spanning indoor, outdoor, and aerial environments, while\nemploying domain-adaptive normalization to prevent negative transfer. For\ntext-prompted segmentation, we automatically generate mask proposals without\nhuman intervention and match them against CLIP embeddings of textual queries,\nenabling both panoptic and open-vocabulary segmentation. Extensive experiments\ndemonstrate that SNAP consistently delivers high-quality segmentation results.\nWe achieve state-of-the-art performance on 8 out of 9 zero-shot benchmarks for\nspatial-prompted segmentation and demonstrate competitive results on all 5\ntext-prompted benchmarks. These results show that a unified model can match or\nexceed specialized domain-specific approaches, providing a practical tool for\nscalable 3D annotation. Project page is at, https://neu-vi.github.io/SNAP/",
+        "url": "http://arxiv.org/abs/2510.11565v1",
+        "published_date": "2025-10-13T16:07:00+00:00",
+        "updated_date": "2025-10-13T16:07:00+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Aniket Gupta",
+            "Hanhui Wang",
+            "Charles Saunders",
+            "Aruni RoyChowdhury",
+            "Hanumant Singh",
+            "Huaizu Jiang"
+        ],
+        "tldr": "The paper presents SNAP, a unified model for interactive 3D point cloud segmentation that handles both point-based and text-based prompts across diverse domains, achieving state-of-the-art or competitive performance on multiple benchmarks.",
+        "tldr_zh": "该论文提出了 SNAP，一个统一的交互式 3D 点云分割模型，可以处理跨不同领域的基于点和基于文本的提示，并在多个基准测试中实现了最先进或具有竞争力的性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Situat3DChange: Situated 3D Change Understanding Dataset for Multimodal Large Language Model",
+        "summary": "Physical environments and circumstances are fundamentally dynamic, yet\ncurrent 3D datasets and evaluation benchmarks tend to concentrate on either\ndynamic scenarios or dynamic situations in isolation, resulting in incomplete\ncomprehension. To overcome these constraints, we introduce Situat3DChange, an\nextensive dataset supporting three situation-aware change understanding tasks\nfollowing the perception-action model: 121K question-answer pairs, 36K change\ndescriptions for perception tasks, and 17K rearrangement instructions for the\naction task. To construct this large-scale dataset, Situat3DChange leverages\n11K human observations of environmental changes to establish shared mental\nmodels and shared situational awareness for human-AI collaboration. These\nobservations, enriched with egocentric and allocentric perspectives as well as\ncategorical and coordinate spatial relations, are integrated using an LLM to\nsupport understanding of situated changes. To address the challenge of\ncomparing pairs of point clouds from the same scene with minor changes, we\npropose SCReasoner, an efficient 3D MLLM approach that enables effective point\ncloud comparison with minimal parameter overhead and no additional tokens\nrequired for the language decoder. Comprehensive evaluation on Situat3DChange\ntasks highlights both the progress and limitations of MLLMs in dynamic scene\nand situation understanding. Additional experiments on data scaling and\ncross-domain transfer demonstrate the task-agnostic effectiveness of using\nSituat3DChange as a training dataset for MLLMs.",
+        "url": "http://arxiv.org/abs/2510.11509v1",
+        "published_date": "2025-10-13T15:17:18+00:00",
+        "updated_date": "2025-10-13T15:17:18+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ruiping Liu",
+            "Junwei Zheng",
+            "Yufan Chen",
+            "Zirui Wang",
+            "Kunyu Peng",
+            "Kailun Yang",
+            "Jiaming Zhang",
+            "Marc Pollefeys",
+            "Rainer Stiefelhagen"
+        ],
+        "tldr": "The paper introduces Situat3DChange, a large-scale dataset for situated 3D change understanding, designed to train and evaluate Multimodal Large Language Models (MLLMs) on perception and action tasks within dynamic 3D environments, along with a novel 3D MLLM approach, SCReasoner.",
+        "tldr_zh": "该论文介绍了Situat3DChange，一个大规模的3D场景变化理解数据集，旨在训练和评估多模态大型语言模型（MLLM）在动态3D环境中的感知和行动任务，并提出了一种新的3D MLLM方法，SCReasoner。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "REACT3D: Recovering Articulations for Interactive Physical 3D Scenes",
+        "summary": "Interactive 3D scenes are increasingly vital for embodied intelligence, yet\nexisting datasets remain limited due to the labor-intensive process of\nannotating part segmentation, kinematic types, and motion trajectories. We\npresent REACT3D, a scalable zero-shot framework that converts static 3D scenes\ninto simulation-ready interactive replicas with consistent geometry, enabling\ndirect use in diverse downstream tasks. Our contributions include: (i)\nopenable-object detection and segmentation to extract candidate movable parts\nfrom static scenes, (ii) articulation estimation that infers joint types and\nmotion parameters, (iii) hidden-geometry completion followed by interactive\nobject assembly, and (iv) interactive scene integration in widely supported\nformats to ensure compatibility with standard simulation platforms. We achieve\nstate-of-the-art performance on detection/segmentation and articulation metrics\nacross diverse indoor scenes, demonstrating the effectiveness of our framework\nand providing a practical foundation for scalable interactive scene generation,\nthereby lowering the barrier to large-scale research on articulated scene\nunderstanding. Our project page is\n\\textit{\\hypersetup{urlcolor=black}\\href{https://react3d.github.io/}{react3d.github.io}}.",
+        "url": "http://arxiv.org/abs/2510.11340v1",
+        "published_date": "2025-10-13T12:37:59+00:00",
+        "updated_date": "2025-10-13T12:37:59+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Zhao Huang",
+            "Boyang Sun",
+            "Alexandros Delitzas",
+            "Jiaqi Chen",
+            "Marc Pollefeys"
+        ],
+        "tldr": "REACT3D is a zero-shot framework that converts static 3D scenes into interactive, simulation-ready replicas, enabling scalable generation of articulated scenes for embodied intelligence research.",
+        "tldr_zh": "REACT3D是一个零样本框架，可以将静态3D场景转换为可交互、可用于仿真的副本，从而实现对具身智能研究的可扩展的铰接场景生成。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "MoMaps: Semantics-Aware Scene Motion Generation with Motion Maps",
+        "summary": "This paper addresses the challenge of learning semantically and functionally\nmeaningful 3D motion priors from real-world videos, in order to enable\nprediction of future 3D scene motion from a single input image. We propose a\nnovel pixel-aligned Motion Map (MoMap) representation for 3D scene motion,\nwhich can be generated from existing generative image models to facilitate\nefficient and effective motion prediction. To learn meaningful distributions\nover motion, we create a large-scale database of MoMaps from over 50,000 real\nvideos and train a diffusion model on these representations. Our motion\ngeneration not only synthesizes trajectories in 3D but also suggests a new\npipeline for 2D video synthesis: first generate a MoMap, then warp an image\naccordingly and complete the warped point-based renderings. Experimental\nresults demonstrate that our approach generates plausible and semantically\nconsistent 3D scene motion.",
+        "url": "http://arxiv.org/abs/2510.11107v1",
+        "published_date": "2025-10-13T07:56:19+00:00",
+        "updated_date": "2025-10-13T07:56:19+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jiahui Lei",
+            "Kyle Genova",
+            "George Kopanas",
+            "Noah Snavely",
+            "Leonidas Guibas"
+        ],
+        "tldr": "The paper introduces Motion Maps (MoMaps) for learning 3D scene motion priors from real videos, using a diffusion model trained on a large-scale MoMap database to predict future 3D motion from a single image, enabling plausible 3D motion generation and a new 2D video synthesis pipeline.",
+        "tldr_zh": "该论文介绍了运动地图（MoMaps），用于从真实视频中学习3D场景运动先验，使用在大型MoMap数据库上训练的扩散模型，从单个图像预测未来3D运动，从而实现合理的3D运动生成和一种新的2D视频合成流程。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Future-Aware End-to-End Driving: Bidirectional Modeling of Trajectory Planning and Scene Evolution",
+        "summary": "End-to-end autonomous driving methods aim to directly map raw sensor inputs\nto future driving actions such as planned trajectories, bypassing traditional\nmodular pipelines. While these approaches have shown promise, they often\noperate under a one-shot paradigm that relies heavily on the current scene\ncontext, potentially underestimating the importance of scene dynamics and their\ntemporal evolution. This limitation restricts the model's ability to make\ninformed and adaptive decisions in complex driving scenarios. We propose a new\nperspective: the future trajectory of an autonomous vehicle is closely\nintertwined with the evolving dynamics of its environment, and conversely, the\nvehicle's own future states can influence how the surrounding scene unfolds.\nMotivated by this bidirectional relationship, we introduce SeerDrive, a novel\nend-to-end framework that jointly models future scene evolution and trajectory\nplanning in a closed-loop manner. Our method first predicts future bird's-eye\nview (BEV) representations to anticipate the dynamics of the surrounding scene,\nthen leverages this foresight to generate future-context-aware trajectories.\nTwo key components enable this: (1) future-aware planning, which injects\npredicted BEV features into the trajectory planner, and (2) iterative scene\nmodeling and vehicle planning, which refines both future scene prediction and\ntrajectory generation through collaborative optimization. Extensive experiments\non the NAVSIM and nuScenes benchmarks show that SeerDrive significantly\noutperforms existing state-of-the-art methods.",
+        "url": "http://arxiv.org/abs/2510.11092v1",
+        "published_date": "2025-10-13T07:41:47+00:00",
+        "updated_date": "2025-10-13T07:41:47+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Bozhou Zhang",
+            "Nan Song",
+            "Jingyu Li",
+            "Xiatian Zhu",
+            "Jiankang Deng",
+            "Li Zhang"
+        ],
+        "tldr": "The paper proposes SeerDrive, a novel end-to-end autonomous driving framework that jointly models future scene evolution and trajectory planning bidirectionally, outperforming state-of-the-art methods on NAVSIM and nuScenes.",
+        "tldr_zh": "本文提出了一种名为SeerDrive的新型端到端自动驾驶框架，该框架以双向方式联合建模未来场景演化和轨迹规划，在NAVSIM和nuScenes上优于现有最先进方法。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Vlaser: Vision-Language-Action Model with Synergistic Embodied Reasoning",
+        "summary": "While significant research has focused on developing embodied reasoning\ncapabilities using Vision-Language Models (VLMs) or integrating advanced VLMs\ninto Vision-Language-Action (VLA) models for end-to-end robot control, few\nstudies directly address the critical gap between upstream VLM-based reasoning\nand downstream VLA policy learning. In this work, we take an initial step\ntoward bridging embodied reasoning with VLA policy learning by introducing\nVlaser - a Vision-Language-Action Model with synergistic embodied reasoning\ncapability, which is a foundational vision-language model designed to integrate\nhigh-level reasoning with low-level control for embodied agents. Built upon the\nhigh-quality Vlaser-6M dataset, Vlaser achieves state-of-the-art performance\nacross a range of embodied reasoning benchmarks - including spatial reasoning,\nembodied grounding, embodied QA, and task planning. Furthermore, we\nsystematically examine how different VLM initializations affect supervised VLA\nfine-tuning, offering novel insights into mitigating the domain shift between\ninternet-scale pre-training data and embodied-specific policy learning data.\nBased on these insights, our approach achieves state-of-the-art results on the\nWidowX benchmark and competitive performance on the Google Robot benchmark.",
+        "url": "http://arxiv.org/abs/2510.11027v1",
+        "published_date": "2025-10-13T05:51:22+00:00",
+        "updated_date": "2025-10-13T05:51:22+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ganlin Yang",
+            "Tianyi Zhang",
+            "Haoran Hao",
+            "Weiyun Wang",
+            "Yibin Liu",
+            "Dehui Wang",
+            "Guanzhou Chen",
+            "Zijian Cai",
+            "Junting Chen",
+            "Weijie Su",
+            "Wengang Zhou",
+            "Yu Qiao",
+            "Jifeng Dai",
+            "Jiangmiao Pang",
+            "Gen Luo",
+            "Wenhai Wang",
+            "Yao Mu",
+            "Zhi Hou"
+        ],
+        "tldr": "The paper introduces Vlaser, a Vision-Language-Action model designed to bridge the gap between high-level VLM reasoning and low-level VLA policy learning in embodied agents. It achieves SOTA results on several benchmarks and offers insights into VLM initialization for VLA fine-tuning.",
+        "tldr_zh": "本文介绍了Vlaser，一种视觉-语言-动作模型，旨在弥合具身智能体中高层VLM推理和底层VLA策略学习之间的差距。它在多个基准测试中取得了SOTA结果，并为VLA微调的VLM初始化提供了见解。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Into the Unknown: Towards using Generative Models for Sampling Priors of Environment Uncertainty for Planning in Configuration Spaces",
+        "summary": "Priors are vital for planning under partial observability, yet difficult to\nobtain in practice. We present a sampling-based pipeline that leverages\nlarge-scale pretrained generative models to produce probabilistic priors\ncapturing environmental uncertainty and spatio-semantic relationships in a\nzero-shot manner. Conditioned on partial observations, the pipeline recovers\ncomplete RGB-D point cloud samples with occupancy and target semantics,\nformulated to be directly useful in configuration-space planning. We establish\na Matterport3D benchmark of rooms partially visible through doorways, where a\nrobot must navigate to an unobserved target object. Effective priors for this\nsetting must represent both occupancy and target-location uncertainty in\nunobserved regions. Experiments show that our approach recovers commonsense\nspatial semantics consistent with ground truth, yielding diverse, clean 3D\npoint clouds usable in motion planning, highlight the promise of generative\nmodels as a rich source of priors for robotic planning.",
+        "url": "http://arxiv.org/abs/2510.11014v1",
+        "published_date": "2025-10-13T05:08:48+00:00",
+        "updated_date": "2025-10-13T05:08:48+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Subhransu S. Bhattacharjee",
+            "Hao Lu",
+            "Dylan Campbell",
+            "Rahul Shome"
+        ],
+        "tldr": "This paper introduces a method for generating probabilistic priors of environmental uncertainty using large-scale pretrained generative models for robot planning in partially observed environments. It demonstrates the effectiveness of this approach in a navigation task within the Matterport3D dataset.",
+        "tldr_zh": "本文介绍了一种利用大规模预训练生成模型生成环境不确定性概率先验的方法，用于部分观测环境中的机器人规划。它在Matterport3D数据集中的导航任务中展示了该方法的有效性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "DKPMV: Dense Keypoints Fusion from Multi-View RGB Frames for 6D Pose Estimation of Textureless Objects",
+        "summary": "6D pose estimation of textureless objects is valuable for industrial robotic\napplications, yet remains challenging due to the frequent loss of depth\ninformation. Current multi-view methods either rely on depth data or\ninsufficiently exploit multi-view geometric cues, limiting their performance.\nIn this paper, we propose DKPMV, a pipeline that achieves dense keypoint-level\nfusion using only multi-view RGB images as input. We design a three-stage\nprogressive pose optimization strategy that leverages dense multi-view keypoint\ngeometry information. To enable effective dense keypoint fusion, we enhance the\nkeypoint network with attentional aggregation and symmetry-aware training,\nimproving prediction accuracy and resolving ambiguities on symmetric objects.\nExtensive experiments on the ROBI dataset demonstrate that DKPMV outperforms\nstate-of-the-art multi-view RGB approaches and even surpasses the RGB-D methods\nin the majority of cases. The code will be available soon.",
+        "url": "http://arxiv.org/abs/2510.10933v1",
+        "published_date": "2025-10-13T02:45:55+00:00",
+        "updated_date": "2025-10-13T02:45:55+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Jiahong Chen",
+            "Jinghao Wang",
+            "Zi Wang",
+            "Ziwen Wang",
+            "Banglei Guan",
+            "Qifeng Yu"
+        ],
+        "tldr": "The paper introduces DKPMV, a novel pipeline for 6D pose estimation of textureless objects using multi-view RGB images, achieving dense keypoint-level fusion and outperforming existing methods, including RGB-D approaches, on the ROBI dataset.",
+        "tldr_zh": "该论文介绍了DKPMV，一种新的使用多视角RGB图像进行无纹理物体6D姿态估计的流程，实现了密集关键点级别的融合，并在ROBI数据集上优于现有方法，包括RGB-D方法。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "rareboost3d: a synthetic lidar dataset with enhanced rare classes",
+        "summary": "Real-world point cloud datasets have made significant contributions to the\ndevelopment of LiDAR-based perception technologies, such as object segmentation\nfor autonomous driving. However, due to the limited number of instances in some\nrare classes, the long-tail problem remains a major challenge in existing\ndatasets. To address this issue, we introduce a novel, synthetic point cloud\ndataset named RareBoost3D, which complements existing real-world datasets by\nproviding significantly more instances for object classes that are rare in\nreal-world datasets. To effectively leverage both synthetic and real-world\ndata, we further propose a cross-domain semantic alignment method named CSC\nloss that aligns feature representations of the same class across different\ndomains. Experimental results demonstrate that this alignment significantly\nenhances the performance of LiDAR point cloud segmentation models over\nreal-world data.",
+        "url": "http://arxiv.org/abs/2510.10876v1",
+        "published_date": "2025-10-13T01:02:33+00:00",
+        "updated_date": "2025-10-13T01:02:33+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Shutong Lin",
+            "Zhengkang Xiang",
+            "Jianzhong Qi",
+            "Kourosh Khoshelham"
+        ],
+        "tldr": "The paper introduces RareBoost3D, a synthetic LiDAR dataset designed to augment real-world datasets with more instances of rare object classes, and proposes a cross-domain semantic alignment method (CSC loss) to improve segmentation model performance.",
+        "tldr_zh": "该论文介绍了一个名为RareBoost3D的合成激光雷达数据集，旨在通过增加现实世界数据集中稀有对象类别的实例来扩充现有数据集，并提出了一种跨域语义对齐方法（CSC损失）来提高分割模型的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    }
+]

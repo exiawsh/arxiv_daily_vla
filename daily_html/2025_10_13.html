@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Autonomous Driving, VLA, 3D Understanding, Robotics) - October 02, 2025</title>
+    <title>ArXiv CS.CV Papers (Autonomous Driving, VLA, 3D Understanding, Robotics) - October 13, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>VLM Daily Papers</h1>
         <p>Daily papers related to VLA/AV/3D Understanding from cs.CV</p>
         
-            <p>October 02, 2025</p>
+            <p>October 13, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,33 +215,35 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">KeySG: Hierarchical Keyframe-Based 3D Scene Graphs</h2>
+            <h2 class="paper-title">Stability Under Scrutiny: Benchmarking Representation Paradigms for Online HD Mapping</h2>
             
-            <p class="paper-summary">In recent years, 3D scene graphs have emerged as a powerful world
-representation, offering both geometric accuracy and semantic richness.
-Combining 3D scene graphs with large language models enables robots to reason,
-plan, and navigate in complex human-centered environments. However, current
-approaches for constructing 3D scene graphs are semantically limited to a
-predefined set of relationships, and their serialization in large environments
-can easily exceed an LLM's context window. We introduce KeySG, a framework that
-represents 3D scenes as a hierarchical graph consisting of floors, rooms,
-objects, and functional elements, where nodes are augmented with multi-modal
-information extracted from keyframes selected to optimize geometric and visual
-coverage. The keyframes allow us to efficiently leverage VLM to extract scene
-information, alleviating the need to explicitly model relationship edges
-between objects, enabling more general, task-agnostic reasoning and planning.
-Our approach can process complex and ambiguous queries while mitigating the
-scalability issues associated with large scene graphs by utilizing a
-hierarchical retrieval-augmented generation (RAG) pipeline to extract relevant
-context from the graph. Evaluated across four distinct benchmarks -- including
-3D object segmentation and complex query retrieval -- KeySG outperforms prior
-approaches on most metrics, demonstrating its superior semantic richness and
-efficiency.</p>
+            <p class="paper-summary">As one of the fundamental modules in autonomous driving, online
+high-definition (HD) maps have attracted significant attention due to their
+cost-effectiveness and real-time capabilities. Since vehicles always cruise in
+highly dynamic environments, spatial displacement of onboard sensors inevitably
+causes shifts in real-time HD mapping results, and such instability poses
+fundamental challenges for downstream tasks. However, existing online map
+construction models tend to prioritize improving each frame's mapping accuracy,
+while the mapping stability has not yet been systematically studied. To fill
+this gap, this paper presents the first comprehensive benchmark for evaluating
+the temporal stability of online HD mapping models. We propose a
+multi-dimensional stability evaluation framework with novel metrics for
+Presence, Localization, and Shape Stability, integrated into a unified mean
+Average Stability (mAS) score. Extensive experiments on 42 models and variants
+show that accuracy (mAP) and stability (mAS) represent largely independent
+performance dimensions. We further analyze the impact of key model design
+choices on both criteria, identifying architectural and training factors that
+contribute to high accuracy, high stability, or both. To encourage broader
+focus on stability, we will release a public benchmark. Our work highlights the
+importance of treating temporal stability as a core evaluation criterion
+alongside accuracy, advancing the development of more reliable autonomous
+driving systems. The benchmark toolkit, code, and models will be available at
+https://stablehdmap.github.io/.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces KeySG, a hierarchical keyframe-based 3D scene graph framework that leverages VLMs for improved scene understanding and reasoning, addressing limitations in semantic richness and scalability of existing approaches.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a benchmark for evaluating the temporal stability of online HD mapping models, proposing new metrics and highlighting the importance of stability alongside accuracy for autonomous driving systems.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了KeySG，一个基于分层关键帧的3D场景图框架，利用VLM来改进场景理解和推理，解决了现有方法在语义丰富性和可扩展性方面的局限性。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一个用于评估在线高清地图模型时间稳定性的基准，提出了新的指标，并强调了稳定性和准确性对于自动驾驶系统的重要性。</p>
             
 
             
@@ -312,11 +314,11 @@ efficiency.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.01049v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.10660v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Abdelrhman Werby, Dennis Rotondi, Fabio Scaparro, Kai O. Arras</p>
+            <p class="paper-authors">Authors: Hao Shan, Ruikai Li, Han Jiang, Yizhe Fan, Ziyang Yan, Bohan Li, Xiaoshuai Hao, Hao Zhao, Zhiyong Cui, Yilong Ren, Haiyang Yu</p>
             
         </motion.div>
         
@@ -328,29 +330,29 @@ efficiency.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">A Scene is Worth a Thousand Features: Feed-Forward Camera Localization from a Collection of Image Features</h2>
+            <h2 class="paper-title">A Machine Learning Perspective on Automated Driving Corner Cases</h2>
             
-            <p class="paper-summary">Visually localizing an image, i.e., estimating its camera pose, requires
-building a scene representation that serves as a visual map. The representation
-we choose has direct consequences towards the practicability of our system.
-Even when starting from mapping images with known camera poses,
-state-of-the-art approaches still require hours of mapping time in the worst
-case, and several minutes in the best. This work raises the question whether we
-can achieve competitive accuracy much faster. We introduce FastForward, a
-method that creates a map representation and relocalizes a query image
-on-the-fly in a single feed-forward pass. At the core, we represent multiple
-mapping images as a collection of features anchored in 3D space. FastForward
-utilizes these mapping features to predict image-to-scene correspondences for
-the query image, enabling the estimation of its camera pose. We couple
-FastForward with image retrieval and achieve state-of-the-art accuracy when
-compared to other approaches with minimal map preparation time. Furthermore,
-FastForward demonstrates robust generalization to unseen domains, including
-challenging large-scale outdoor environments.</p>
+            <p class="paper-summary">For high-stakes applications, like autonomous driving, a safe operation is
+necessary to prevent harm, accidents, and failures. Traditionally, difficult
+scenarios have been categorized into corner cases and addressed individually.
+However, this example-based categorization is not scalable and lacks a data
+coverage perspective, neglecting the generalization to training data of machine
+learning models. In our work, we propose a novel machine learning approach that
+takes the underlying data distribution into account. Based on our novel
+perspective, we present a framework for effective corner case recognition for
+perception on individual samples. In our evaluation, we show that our approach
+(i) unifies existing scenario-based corner case taxonomies under a
+distributional perspective, (ii) achieves strong performance on corner case
+detection tasks across standard benchmarks for which we extend established
+out-of-distribution detection benchmarks, and (iii) enables analysis of
+combined corner cases via a newly introduced fog-augmented Lost & Found
+dataset. These results provide a principled basis for corner case recognition,
+underlining our manual specification-free definition.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces FastForward, a novel camera localization method using a collection of 3D anchored features for rapid map creation and real-time query image relocalization with state-of-the-art accuracy and robust generalization.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper presents a machine learning framework for corner case recognition in autonomous driving by considering the underlying data distribution, unifying existing taxonomies and achieving strong detection performance.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为FastForward的新颖相机定位方法，该方法使用3D锚定特征集合来实现快速地图创建和实时查询图像重定位，具有最先进的精度和强大的泛化能力。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种基于机器学习的自动驾驶 corner case 识别框架，通过考虑底层数据分布，统一了现有分类，并实现了强大的检测性能。</p>
             
 
             
@@ -376,16 +378,16 @@ challenging large-scale outdoor environments.</p>
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
             </div>
@@ -421,11 +423,11 @@ challenging large-scale outdoor environments.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.00978v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.10653v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Axel Barroso-Laguna, Tommaso Cavallari, Victor Adrian Prisacariu, Eric Brachmann</p>
+            <p class="paper-authors">Authors: Sebastian Schmidt, Julius Körner, Stephan Günnemann</p>
             
         </motion.div>
         
@@ -437,31 +439,26 @@ challenging large-scale outdoor environments.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">FIN: Fast Inference Network for Map Segmentation</h2>
+            <h2 class="paper-title">WorldMirror: Universal 3D World Reconstruction with Any-Prior Prompting</h2>
             
-            <p class="paper-summary">Multi-sensor fusion in autonomous vehicles is becoming more common to offer a
-more robust alternative for several perception tasks. This need arises from the
-unique contribution of each sensor in collecting data: camera-radar fusion
-offers a cost-effective solution by combining rich semantic information from
-cameras with accurate distance measurements from radar, without incurring
-excessive financial costs or overwhelming data processing requirements. Map
-segmentation is a critical task for enabling effective vehicle behaviour in its
-environment, yet it continues to face significant challenges in achieving high
-accuracy and meeting real-time performance requirements. Therefore, this work
-presents a novel and efficient map segmentation architecture, using cameras and
-radars, in the \acrfull{bev} space. Our model introduces a real-time map
-segmentation architecture considering aspects such as high accuracy, per-class
-balancing, and inference time. To accomplish this, we use an advanced loss set
-together with a new lightweight head to improve the perception results. Our
-results show that, with these modifications, our approach achieves results
-comparable to large models, reaching 53.5 mIoU, while also setting a new
-benchmark for inference time, improving it by 260\% over the strongest baseline
-models.</p>
+            <p class="paper-summary">We present WorldMirror, an all-in-one, feed-forward model for versatile 3D
+geometric prediction tasks. Unlike existing methods constrained to image-only
+inputs or customized for a specific task, our framework flexibly integrates
+diverse geometric priors, including camera poses, intrinsics, and depth maps,
+while simultaneously generating multiple 3D representations: dense point
+clouds, multi-view depth maps, camera parameters, surface normals, and 3D
+Gaussians. This elegant and unified architecture leverages available prior
+information to resolve structural ambiguities and delivers geometrically
+consistent 3D outputs in a single forward pass. WorldMirror achieves
+state-of-the-art performance across diverse benchmarks from camera, point map,
+depth, and surface normal estimation to novel view synthesis, while maintaining
+the efficiency of feed-forward inference. Code and models will be publicly
+available soon.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a fast and accurate camera-radar fusion network (FIN) for map segmentation in autonomous driving, achieving real-time performance and comparable accuracy to larger models with a 260% inference time improvement.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: WorldMirror is a feed-forward model for versatile 3D geometric prediction that integrates diverse geometric priors and generates multiple 3D representations in a unified architecture, achieving state-of-the-art performance.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种快速且精确的用于自动驾驶地图分割的相机-雷达融合网络 (FIN)，实现了实时性能，并且在推理时间上改进了 260%，同时达到了与大型模型相当的精度。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: WorldMirror是一个通用的前馈模型，用于多功能的3D几何预测，它集成了各种几何先验，并在统一的架构中生成多个3D表示，从而实现了最先进的性能。</p>
             
 
             
@@ -525,18 +522,18 @@ models.</p>
                     
                 
                     
-                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.00651v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.10726v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Ruan Bispo, Tim Brophy, Reenu Mohandas, Anthony Scanlan, Ciarán Eising</p>
+            <p class="paper-authors">Authors: Yifan Liu, Zhiyuan Min, Zhenwei Wang, Junta Wu, Tengfei Wang, Yixuan Yuan, Yawei Luo, Chunchao Guo</p>
             
         </motion.div>
         
@@ -548,34 +545,28 @@ models.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Strategic Fusion of Vision Language Models: Shapley-Credited Context-Aware Dawid-Skene for Multi-Label Tasks in Autonomous Driving</h2>
+            <h2 class="paper-title">SpikeGrasp: A Benchmark for 6-DoF Grasp Pose Detection from Stereo Spike Streams</h2>
             
-            <p class="paper-summary">Large vision-language models (VLMs) are increasingly used in
-autonomous-vehicle (AV) stacks, but hallucination limits their reliability in
-safety-critical pipelines. We present Shapley-credited Context-Aware
-Dawid-Skene with Agreement, a game-theoretic fusion method for multi-label
-understanding of ego-view dashcam video. It learns per-model, per-label,
-context-conditioned reliabilities from labelled history and, at inference,
-converts each model's report into an agreement-guardrailed log-likelihood ratio
-that is combined with a contextual prior and a public reputation state updated
-via Shapley-based team credit. The result is calibrated, thresholdable
-posteriors that (i) amplify agreement among reliable models, (ii) preserve
-uniquely correct single-model signals, and (iii) adapt to drift. To specialise
-general VLMs, we curate 1,000 real-world dashcam clips with structured
-annotations (scene description, manoeuvre recommendation, rationale) via an
-automatic pipeline that fuses HDD ground truth, vehicle kinematics, and YOLOv11
-+ BoT-SORT tracking, guided by a three-step chain-of-thought prompt; three
-heterogeneous VLMs are then fine-tuned with LoRA. We evaluate with Hamming
-distance, Micro-Macro-F1, and average per-video latency. Empirically, the
-proposed method achieves a 23% reduction in Hamming distance, 55% improvement
-in Macro-F1, and 47% improvement in Micro-F1 when comparing with the best
-single model, supporting VLM fusion as a calibrated, interpretable, and robust
-decision-support component for AV pipelines.</p>
+            <p class="paper-summary">Most robotic grasping systems rely on converting sensor data into explicit 3D
+point clouds, which is a computational step not found in biological
+intelligence. This paper explores a fundamentally different, neuro-inspired
+paradigm for 6-DoF grasp detection. We introduce SpikeGrasp, a framework that
+mimics the biological visuomotor pathway, processing raw, asynchronous events
+from stereo spike cameras, similarly to retinas, to directly infer grasp poses.
+Our model fuses these stereo spike streams and uses a recurrent spiking neural
+network, analogous to high-level visual processing, to iteratively refine grasp
+hypotheses without ever reconstructing a point cloud. To validate this
+approach, we built a large-scale synthetic benchmark dataset. Experiments show
+that SpikeGrasp surpasses traditional point-cloud-based baselines, especially
+in cluttered and textureless scenes, and demonstrates remarkable data
+efficiency. By establishing the viability of this end-to-end, neuro-inspired
+approach, SpikeGrasp paves the way for future systems capable of the fluid and
+efficient manipulation seen in nature, particularly for dynamic objects.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a novel game-theoretic fusion method, Shapley-credited Context-Aware Dawid-Skene, for improving the reliability of VLMs in autonomous driving by learning context-conditioned reliabilities and adapting to drift, achieving significant improvements in multi-label understanding tasks.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces SpikeGrasp, a neuro-inspired framework that uses stereo spike streams and recurrent spiking neural networks for 6-DoF grasp pose detection, bypassing traditional point cloud reconstruction, and demonstrating superior performance in cluttered environments.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种新的博弈论融合方法，即 Shapley-credited Context-Aware Dawid-Skene，通过学习上下文相关的可靠性并适应漂移，提高VLM在自动驾驶中的可靠性，并在多标签理解任务中取得了显著的改进。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了 SpikeGrasp，一个神经启发式框架，使用立体脉冲流和循环脉冲神经网络进行 6-DoF 抓取姿态检测，绕过了传统的点云重建，并在杂乱环境中表现出卓越的性能。</p>
             
 
             
@@ -585,16 +576,16 @@ decision-support component for AV pipelines.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -646,11 +637,11 @@ decision-support component for AV pipelines.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.01126v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.10602v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Yuxiang Feng, Keyang Zhang, Hassane Ouchouid, Ashwil Kaniamparambil, Ioannis Souflas, Panagiotis Angeloudis</p>
+            <p class="paper-authors">Authors: Zhuoheng Gao, Jiyao Zhang, Zhiyong Xie, Hao Dong, Zhaofei Yu, Rongmei Chen, Guozhang Chen, Tiejun Huang</p>
             
         </motion.div>
         
@@ -662,33 +653,33 @@ decision-support component for AV pipelines.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">HAMLET: Switch your Vision-Language-Action Model into a History-Aware Policy</h2>
+            <h2 class="paper-title">SuperEx: Enhancing Indoor Mapping and Exploration using Non-Line-of-Sight Perception</h2>
             
-            <p class="paper-summary">Inherently, robotic manipulation tasks are history-dependent: leveraging past
-context could be beneficial. However, most existing Vision-Language-Action
-models (VLAs) have been designed without considering this aspect, i.e., they
-rely solely on the current observation, ignoring preceding context. In this
-paper, we propose HAMLET, a scalable framework to adapt VLAs to attend to the
-historical context during action prediction. Specifically, we introduce moment
-tokens that compactly encode perceptual information at each timestep. Their
-representations are initialized with time-contrastive learning, allowing them
-to better capture temporally distinctive aspects. Next, we employ a lightweight
-memory module that integrates the moment tokens across past timesteps into
-memory features, which are then leveraged for action prediction. Through
-empirical evaluation, we show that HAMLET successfully transforms a
-state-of-the-art VLA into a history-aware policy, especially demonstrating
-significant improvements on long-horizon tasks that require historical context.
-In particular, on top of GR00T N1.5, HAMLET achieves an average success rate of
-76.4% on history-dependent real-world tasks, surpassing the baseline
-performance by 47.2%. Furthermore, HAMLET pushes prior art performance from
-64.1% to 66.4% on RoboCasa Kitchen (100-demo setup) and from 95.6% to 97.7% on
-LIBERO, highlighting its effectiveness even under generic robot-manipulation
-benchmarks.</p>
+            <p class="paper-summary">Efficient exploration and mapping in unknown indoor environments is a
+fundamental challenge, with high stakes in time-critical settings. In current
+systems, robot perception remains confined to line-of-sight; occluded regions
+remain unknown until physically traversed, leading to inefficient exploration
+when layouts deviate from prior assumptions. In this work, we bring
+non-line-of-sight (NLOS) sensing to robotic exploration. We leverage
+single-photon LiDARs, which capture time-of-flight histograms that encode the
+presence of hidden objects - allowing robots to look around blind corners.
+Recent single-photon LiDARs have become practical and portable, enabling
+deployment beyond controlled lab settings. Prior NLOS works target 3D
+reconstruction in static, lab-based scenarios, and initial efforts toward
+NLOS-aided navigation consider simplified geometries. We introduce SuperEx, a
+framework that integrates NLOS sensing directly into the mapping-exploration
+loop. SuperEx augments global map prediction with beyond-line-of-sight cues by
+(i) carving empty NLOS regions from timing histograms and (ii) reconstructing
+occupied structure via a two-step physics-based and data-driven approach that
+leverages structural regularities. Evaluations on complex simulated maps and
+the real-world KTH Floorplan dataset show a 12% gain in mapping accuracy under
+< 30% coverage and improved exploration efficiency compared to line-of-sight
+baselines, opening a path to reliable mapping beyond direct visibility.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces HAMLET, a framework that enhances Vision-Language-Action models with historical context awareness using moment tokens and a memory module, showing significant performance gains in robotic manipulation tasks, especially long-horizon ones.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces SuperEx, a framework that integrates non-line-of-sight (NLOS) sensing using single-photon LiDARs into the mapping-exploration loop for robots, improving mapping accuracy and exploration efficiency in indoor environments.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了 HAMLET，一个通过使用 moment tokens 和记忆模块来增强视觉-语言-动作模型历史上下文感知能力的框架。该框架在机器人操作任务（尤其是长程任务）中表现出显著的性能提升。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了SuperEx，一个将基于单光子激光雷达的非视距（NLOS）感知集成到机器人地图构建-探索循环中的框架，提高了室内环境中的地图构建精度和探索效率。</p>
             
 
             
@@ -759,11 +750,11 @@ benchmarks.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.00695v2" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.10506v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Myungkyu Koo, Daewon Choi, Taeyoung Kim, Kyungmin Lee, Changyeon Kim, Younggyo Seo, Jinwoo Shin</p>
+            <p class="paper-authors">Authors: Kush Garg, Akshat Dave</p>
             
         </motion.div>
         
@@ -775,31 +766,33 @@ benchmarks.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Hybrid Training for Vision-Language-Action Models</h2>
+            <h2 class="paper-title">DAGLFNet:Deep Attention-Guided Global-Local Feature Fusion for Pseudo-Image Point Cloud Segmentation</h2>
             
-            <p class="paper-summary">Using Large Language Models to produce intermediate thoughts, a.k.a.
-Chain-of-thought (CoT), before providing an answer has been a successful recipe
-for solving complex language tasks. In robotics, similar embodied CoT
-strategies, generating thoughts before actions, have also been shown to lead to
-improved performance when using Vision-Language-Action models (VLAs). As these
-techniques increase the length of the model's generated outputs to include the
-thoughts, the inference time is negatively affected. Delaying an agent's
-actions in real-world executions, as in robotic manipulation settings, strongly
-affects the usability of a method, as tasks require long sequences of actions.
-However, is the generation of long chains-of-thought a strong prerequisite for
-achieving performance improvements? In this work, we explore the idea of Hybrid
-Training (HyT), a framework that enables VLAs to learn from thoughts and
-benefit from the associated performance gains, while enabling the possibility
-to leave out CoT generation during inference. Furthermore, by learning to
-conditionally predict a diverse set of outputs, HyT supports flexibility at
-inference time, enabling the model to either predict actions directly, generate
-thoughts or follow instructions. We evaluate the proposed method in a series of
-simulated benchmarks and real-world experiments.</p>
+            <p class="paper-summary">Environmental perception systems play a critical role in high-precision
+mapping and autonomous navigation, with LiDAR serving as a core sensor that
+provides accurate 3D point cloud data. How to efficiently process unstructured
+point clouds while extracting structured semantic information remains a
+significant challenge, and in recent years, numerous pseudo-image-based
+representation methods have emerged to achieve a balance between efficiency and
+performance. However, they often overlook the structural and semantic details
+of point clouds, resulting in limited feature fusion and discriminability. In
+this work, we propose DAGLFNet, a pseudo-image-based semantic segmentation
+framework designed to extract discriminative features. First, the Global-Local
+Feature Fusion Encoding module is used to enhance the correlation among local
+features within a set and capture global contextual information. Second, the
+Multi-Branch Feature Extraction network is employed to capture more
+neighborhood information and enhance the discriminability of contour features.
+Finally, a Feature Fusion via Deep Feature-guided Attention mechanism is
+introduced to improve the precision of cross-channel feature fusion.
+Experimental evaluations show that DAGLFNet achieves 69.83\% and 78.65\% on the
+validation sets of SemanticKITTI and nuScenes, respectively. The method
+balances high performance with real-time capability, demonstrating great
+potential for LiDAR-based real-time applications.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Hybrid Training (HyT) for Vision-Language-Action models (VLAs), allowing them to learn from Chain-of-Thought (CoT) reasoning without requiring CoT generation during inference, thus improving efficiency and flexibility.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces DAGLFNet, a pseudo-image-based LiDAR point cloud segmentation framework employing global-local feature fusion and attention mechanisms to improve segmentation accuracy and real-time performance, achieving state-of-the-art results on SemanticKITTI and nuScenes datasets.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种针对视觉-语言-动作模型(VLA)的混合训练(HyT)方法，该方法使模型能够从思维链(CoT)推理中学习，而无需在推理过程中生成CoT，从而提高效率和灵活性。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了DAGLFNet，一种基于伪图像的LiDAR点云分割框架，该框架采用全局-局部特征融合和注意力机制来提高分割精度和实时性能，并在SemanticKITTI和nuScenes数据集上取得了最先进的结果。</p>
             
 
             
@@ -817,16 +810,16 @@ simulated benchmarks and real-world experiments.</p>
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -870,11 +863,11 @@ simulated benchmarks and real-world experiments.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.00600v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.10471v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Pietro Mazzaglia, Cansu Sancaktar, Markus Peschl, Daniel Dijkman</p>
+            <p class="paper-authors">Authors: Chuang Chen, Wenyi Ge</p>
             
         </motion.div>
         
@@ -886,30 +879,33 @@ simulated benchmarks and real-world experiments.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">VLA-RFT: Vision-Language-Action Reinforcement Fine-tuning with Verified Rewards in World Simulators</h2>
+            <h2 class="paper-title">MonoSE(3)-Diffusion: A Monocular SE(3) Diffusion Framework for Robust Camera-to-Robot Pose Estimation</h2>
             
-            <p class="paper-summary">Vision-Language-Action (VLA) models enable embodied decision-making but rely
-heavily on imitation learning, leading to compounding errors and poor
-robustness under distribution shift. Reinforcement learning (RL) can mitigate
-these issues yet typically demands costly real-world interactions or suffers
-from sim-to-real gaps. We introduce VLA-RFT, a reinforcement fine-tuning
-framework that leverages a data-driven world model as a controllable simulator.
-Trained from real interaction data, the simulator predicts future visual
-observations conditioned on actions, allowing policy rollouts with dense,
-trajectory-level rewards derived from goal-achieving references. This design
-delivers an efficient and action-aligned learning signal, drastically lowering
-sample requirements. With fewer than 400 fine-tuning steps, VLA-RFT surpasses
-strong supervised baselines and achieves greater efficiency than
-simulator-based RL. Moreover, it exhibits strong robustness under perturbed
-conditions, sustaining stable task execution. Our results establish
-world-model-based RFT as a practical post-training paradigm to enhance the
-generalization and robustness of VLA models. For more details, please refer to
-https://vla-rft.github.io/.</p>
+            <p class="paper-summary">We propose MonoSE(3)-Diffusion, a monocular SE(3) diffusion framework that
+formulates markerless, image-based robot pose estimation as a conditional
+denoising diffusion process. The framework consists of two processes: a
+visibility-constrained diffusion process for diverse pose augmentation and a
+timestep-aware reverse process for progressive pose refinement. The diffusion
+process progressively perturbs ground-truth poses to noisy transformations for
+training a pose denoising network. Importantly, we integrate visibility
+constraints into the process, ensuring the transformations remain within the
+camera field of view. Compared to the fixed-scale perturbations used in current
+methods, the diffusion process generates in-view and diverse training poses,
+thereby improving the network generalization capability. Furthermore, the
+reverse process iteratively predicts the poses by the denoising network and
+refines pose estimates by sampling from the diffusion posterior of current
+timestep, following a scheduled coarse-to-fine procedure. Moreover, the
+timestep indicates the transformation scales, which guide the denoising network
+to achieve more accurate pose predictions. The reverse process demonstrates
+higher robustness than direct prediction, benefiting from its timestep-aware
+refinement scheme. Our approach demonstrates improvements across two benchmarks
+(DREAM and RoboKeyGen), achieving a notable AUC of 66.75 on the most
+challenging dataset, representing a 32.3% gain over the state-of-the-art.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces VLA-RFT, a reinforcement fine-tuning framework using a data-driven world model for VLA agents, demonstrating improved sample efficiency, generalization, and robustness compared to supervised learning and simulator-based RL.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces MonoSE(3)-Diffusion, a monocular SE(3) diffusion framework for robust camera-to-robot pose estimation using a visibility-constrained diffusion process for pose augmentation and a timestep-aware reverse process for refinement, achieving significant improvements over state-of-the-art methods.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了 VLA-RFT，一个使用数据驱动的世界模型对 VLA 智能体进行强化微调的框架。与监督学习和基于模拟器的强化学习相比，该方法表现出更高的样本效率、泛化性和鲁棒性。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了MonoSE(3)-Diffusion，一个单目SE(3)扩散框架，用于稳健的相机到机器人姿态估计。该框架使用可见性约束的扩散过程进行姿态增强，并使用时间步感知逆过程进行姿态细化，相对于现有技术取得了显著的改进。</p>
             
 
             
@@ -980,11 +976,11 @@ https://vla-rft.github.io/.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.00406v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.10434v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Hengtao Li, Pengxiang Ding, Runze Suo, Yihao Wang, Zirui Ge, Dongyuan Zang, Kexian Yu, Mingyang Sun, Hongyin Zhang, Donglin Wang, Weihua Su</p>
+            <p class="paper-authors">Authors: Kangjian Zhu, Haobo Jiang, Yigong Zhang, Jianjun Qian, Jian Yang, Jin Xie</p>
             
         </motion.div>
         
@@ -996,32 +992,34 @@ https://vla-rft.github.io/.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">EgoTraj-Bench: Towards Robust Trajectory Prediction Under Ego-view Noisy Observations</h2>
+            <h2 class="paper-title">PointMAC: Meta-Learned Adaptation for Robust Test-Time Point Cloud Completion</h2>
             
-            <p class="paper-summary">Reliable trajectory prediction from an ego-centric perspective is crucial for
-robotic navigation in human-centric environments. However, existing methods
-typically assume idealized observation histories, failing to account for the
-perceptual artifacts inherent in first-person vision, such as occlusions, ID
-switches, and tracking drift. This discrepancy between training assumptions and
-deployment reality severely limits model robustness. To bridge this gap, we
-introduce EgoTraj-Bench, the first real-world benchmark that grounds noisy,
-first-person visual histories in clean, bird's-eye-view future trajectories,
-enabling robust learning under realistic perceptual constraints. Building on
-this benchmark, we propose BiFlow, a dual-stream flow matching model that
-concurrently denoises historical observations and forecasts future motion by
-leveraging a shared latent representation. To better model agent intent, BiFlow
-incorporates our EgoAnchor mechanism, which conditions the prediction decoder
-on distilled historical features via feature modulation. Extensive experiments
-show that BiFlow achieves state-of-the-art performance, reducing minADE and
-minFDE by 10-15% on average and demonstrating superior robustness. We
-anticipate that our benchmark and model will provide a critical foundation for
-developing trajectory forecasting systems truly resilient to the challenges of
-real-world, ego-centric perception.</p>
+            <p class="paper-summary">Point cloud completion is essential for robust 3D perception in
+safety-critical applications such as robotics and augmented reality. However,
+existing models perform static inference and rely heavily on inductive biases
+learned during training, limiting their ability to adapt to novel structural
+patterns and sensor-induced distortions at test time. To address this
+limitation, we propose PointMAC, a meta-learned framework for robust test-time
+adaptation in point cloud completion. It enables sample-specific refinement
+without requiring additional supervision. Our method optimizes the completion
+model under two self-supervised auxiliary objectives that simulate structural
+and sensor-level incompleteness. A meta-auxiliary learning strategy based on
+Model-Agnostic Meta-Learning (MAML) ensures that adaptation driven by auxiliary
+objectives is consistently aligned with the primary completion task. During
+inference, we adapt the shared encoder on-the-fly by optimizing auxiliary
+losses, with the decoder kept fixed. To further stabilize adaptation, we
+introduce Adaptive $\lambda$-Calibration, a meta-learned mechanism for
+balancing gradients between primary and auxiliary objectives. Extensive
+experiments on synthetic, simulated, and real-world datasets demonstrate that
+PointMAC achieves state-of-the-art results by refining each sample individually
+to produce high-quality completions. To the best of our knowledge, this is the
+first work to apply meta-auxiliary test-time adaptation to point cloud
+completion.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces EgoTraj-Bench, a new benchmark for ego-centric trajectory prediction under noisy conditions, and proposes BiFlow, a flow-matching model that achieves SOTA performance by denoising observations and forecasting future motion using a shared latent representation and EgoAnchor mechanism.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: PointMAC introduces a meta-learned test-time adaptation framework for point cloud completion, using self-supervised auxiliary objectives and a meta-auxiliary learning strategy to improve robustness in novel and distorted environments.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了EgoTraj-Bench，这是一个新的用于在噪声条件下以自我为中心的轨迹预测的基准，并提出了BiFlow，一种通过使用共享的潜在表示和EgoAnchor机制来去噪观测和预测未来运动，从而实现SOTA性能的流匹配模型。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: PointMAC 提出了一种用于点云补全的元学习测试时自适应框架，它使用自监督辅助目标和元辅助学习策略来提高在新的和扭曲的环境中的鲁棒性。</p>
             
 
             
@@ -1031,24 +1029,24 @@ real-world, ego-centric perception.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
                     <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
+                    <span class="rating-label">Novelty:</span>
                     
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                     <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -1092,18 +1090,18 @@ real-world, ego-centric perception.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.00405v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.10365v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Jiayi Liu, Jiaming Zhou, Ke Ye, Kun-Yu Lin, Allan Wang, Junwei Liang</p>
+            <p class="paper-authors">Authors: Linlian Jiang, Rui Ma, Li Gu, Ziqiang Wang, Xinxin Zuo, Yang Wang</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-10-14 03:33:56 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-10-14 03:42:12 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>
