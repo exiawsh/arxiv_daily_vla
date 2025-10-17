@@ -1,0 +1,239 @@
+[
+    {
+        "title": "ChangingGrounding: 3D Visual Grounding in Changing Scenes",
+        "summary": "Real-world robots localize objects from natural-language instructions while\nscenes around them keep changing. Yet most of the existing 3D visual grounding\n(3DVG) method still assumes a reconstructed and up-to-date point cloud, an\nassumption that forces costly re-scans and hinders deployment. We argue that\n3DVG should be formulated as an active, memory-driven problem, and we introduce\nChangingGrounding, the first benchmark that explicitly measures how well an\nagent can exploit past observations, explore only where needed, and still\ndeliver precise 3D boxes in changing scenes. To set a strong reference point,\nwe also propose Mem-ChangingGrounder, a zero-shot method for this task that\nmarries cross-modal retrieval with lightweight multi-view fusion: it identifies\nthe object type implied by the query, retrieves relevant memories to guide\nactions, then explores the target efficiently in the scene, falls back when\nprevious operations are invalid, performs multi-view scanning of the target,\nand projects the fused evidence from multi-view scans to get accurate object\nbounding boxes. We evaluate different baselines on ChangingGrounding, and our\nMem-ChangingGrounder achieves the highest localization accuracy while greatly\nreducing exploration cost. We hope this benchmark and method catalyze a shift\ntoward practical, memory-centric 3DVG research for real-world applications.\nProject page: https://hm123450.github.io/CGB/ .",
+        "url": "http://arxiv.org/abs/2510.14965v1",
+        "published_date": "2025-10-16T17:59:16+00:00",
+        "updated_date": "2025-10-16T17:59:16+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Miao Hu",
+            "Zhiwei Huang",
+            "Tai Wang",
+            "Jiangmiao Pang",
+            "Dahua Lin",
+            "Nanning Zheng",
+            "Runsen Xu"
+        ],
+        "tldr": "The paper introduces ChangingGrounding, a new benchmark for 3D visual grounding in changing scenes, addressing the limitations of existing methods that assume static point clouds. It also proposes Mem-ChangingGrounder, a memory-driven, zero-shot method that demonstrates improved accuracy and reduced exploration costs.",
+        "tldr_zh": "本文介绍了ChangingGrounding，这是一个用于在变化场景中进行3D视觉定位的新基准，旨在解决现有方法假设静态点云的局限性。同时，提出了Mem-ChangingGrounder，这是一种记忆驱动的零样本方法，展示了更高的准确性和更低的探索成本。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Terra: Explorable Native 3D World Model with Point Latents",
+        "summary": "World models have garnered increasing attention for comprehensive modeling of\nthe real world. However, most existing methods still rely on pixel-aligned\nrepresentations as the basis for world evolution, neglecting the inherent 3D\nnature of the physical world. This could undermine the 3D consistency and\ndiminish the modeling efficiency of world models. In this paper, we present\nTerra, a native 3D world model that represents and generates explorable\nenvironments in an intrinsic 3D latent space. Specifically, we propose a novel\npoint-to-Gaussian variational autoencoder (P2G-VAE) that encodes 3D inputs into\na latent point representation, which is subsequently decoded as 3D Gaussian\nprimitives to jointly model geometry and appearance. We then introduce a sparse\npoint flow matching network (SPFlow) for generating the latent point\nrepresentation, which simultaneously denoises the positions and features of the\npoint latents. Our Terra enables exact multi-view consistency with native 3D\nrepresentation and architecture, and supports flexible rendering from any\nviewpoint with only a single generation process. Furthermore, Terra achieves\nexplorable world modeling through progressive generation in the point latent\nspace. We conduct extensive experiments on the challenging indoor scenes from\nScanNet v2. Terra achieves state-of-the-art performance in both reconstruction\nand generation with high 3D consistency.",
+        "url": "http://arxiv.org/abs/2510.14977v1",
+        "published_date": "2025-10-16T17:59:56+00:00",
+        "updated_date": "2025-10-16T17:59:56+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG"
+        ],
+        "authors": [
+            "Yuanhui Huang",
+            "Weiliang Chen",
+            "Wenzhao Zheng",
+            "Xin Tao",
+            "Pengfei Wan",
+            "Jie Zhou",
+            "Jiwen Lu"
+        ],
+        "tldr": "Terra introduces a novel 3D world model using a point-to-Gaussian VAE and sparse point flow matching for generating and exploring 3D environments with high 3D consistency and efficient rendering.",
+        "tldr_zh": "Terra 提出了一种新的 3D 世界模型，使用点到高斯 VAE 和稀疏点流匹配来生成和探索具有高 3D 一致性和高效渲染的 3D 环境。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "RDD: Retrieval-Based Demonstration Decomposer for Planner Alignment in Long-Horizon Tasks",
+        "summary": "To tackle long-horizon tasks, recent hierarchical vision-language-action\n(VLAs) frameworks employ vision-language model (VLM)-based planners to\ndecompose complex manipulation tasks into simpler sub-tasks that low-level\nvisuomotor policies can easily handle. Typically, the VLM planner is finetuned\nto learn to decompose a target task. This finetuning requires target task\ndemonstrations segmented into sub-tasks by either human annotation or heuristic\nrules. However, the heuristic subtasks can deviate significantly from the\ntraining data of the visuomotor policy, which degrades task performance. To\naddress these issues, we propose a Retrieval-based Demonstration Decomposer\n(RDD) that automatically decomposes demonstrations into sub-tasks by aligning\nthe visual features of the decomposed sub-task intervals with those from the\ntraining data of the low-level visuomotor policies. Our method outperforms the\nstate-of-the-art sub-task decomposer on both simulation and real-world tasks,\ndemonstrating robustness across diverse settings. Code and more results are\navailable at rdd-neurips.github.io.",
+        "url": "http://arxiv.org/abs/2510.14968v1",
+        "published_date": "2025-10-16T17:59:37+00:00",
+        "updated_date": "2025-10-16T17:59:37+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV",
+            "cs.LG",
+            "cs.SY",
+            "eess.SY"
+        ],
+        "authors": [
+            "Mingxuan Yan",
+            "Yuping Wang",
+            "Zechun Liu",
+            "Jiachen Li"
+        ],
+        "tldr": "The paper introduces Retrieval-based Demonstration Decomposer (RDD), a method for automatically decomposing long-horizon tasks into sub-tasks that align with the training data of low-level visuomotor policies, improving performance in manipulation tasks.",
+        "tldr_zh": "本文介绍了一种基于检索的演示分解器(RDD)，该方法能够自动将长时程任务分解为与底层视觉运动策略训练数据对齐的子任务，从而提高操作任务的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "From Language to Locomotion: Retargeting-free Humanoid Control via Motion Latent Guidance",
+        "summary": "Natural language offers a natural interface for humanoid robots, but existing\nlanguage-guided humanoid locomotion pipelines remain cumbersome and unreliable.\nThey typically decode human motion, retarget it to robot morphology, and then\ntrack it with a physics-based controller. However, this multi-stage process is\nprone to cumulative errors, introduces high latency, and yields weak coupling\nbetween semantics and control. These limitations call for a more direct pathway\nfrom language to action, one that eliminates fragile intermediate stages.\nTherefore, we present RoboGhost, a retargeting-free framework that directly\nconditions humanoid policies on language-grounded motion latents. By bypassing\nexplicit motion decoding and retargeting, RoboGhost enables a diffusion-based\npolicy to denoise executable actions directly from noise, preserving semantic\nintent and supporting fast, reactive control. A hybrid causal\ntransformer-diffusion motion generator further ensures long-horizon consistency\nwhile maintaining stability and diversity, yielding rich latent representations\nfor precise humanoid behavior. Extensive experiments demonstrate that RoboGhost\nsubstantially reduces deployment latency, improves success rates and tracking\naccuracy, and produces smooth, semantically aligned locomotion on real\nhumanoids. Beyond text, the framework naturally extends to other modalities\nsuch as images, audio, and music, providing a general foundation for\nvision-language-action humanoid systems.",
+        "url": "http://arxiv.org/abs/2510.14952v1",
+        "published_date": "2025-10-16T17:57:47+00:00",
+        "updated_date": "2025-10-16T17:57:47+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Zhe Li",
+            "Cheng Chi",
+            "Yangyang Wei",
+            "Boan Zhu",
+            "Yibo Peng",
+            "Tao Huang",
+            "Pengwei Wang",
+            "Zhongyuan Wang",
+            "Shanghang Zhang",
+            "Chang Xu"
+        ],
+        "tldr": "This paper introduces RoboGhost, a retargeting-free framework for language-guided humanoid locomotion that directly conditions policies on language-grounded motion latents, improving latency and accuracy.",
+        "tldr_zh": "该论文介绍了RoboGhost，一个无需重新定位的框架，用于语言引导的类人机器人运动，它直接根据语言驱动的运动潜变量来调节策略，从而提高延迟和准确性。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "QDepth-VLA: Quantized Depth Prediction as Auxiliary Supervision for Vision-Language-Action Models",
+        "summary": "Spatial perception and reasoning are crucial for Vision-Language-Action (VLA)\nmodels to accomplish fine-grained manipulation tasks. However, existing\napproaches often lack the ability to understand and reason over the essential\n3D structures necessary for precise control. To address this limitation, we\npropose QDepth-VLA, a general framework that augments VLA models with an\nauxiliary depth prediction task. A dedicated depth expert is designed to\npredict quantized latent tokens of depth maps obtained from a VQ-VAE encoder,\nenabling the model to learn depth-aware representations that capture critical\ngeometric cues. Experimental results on the simulation benchmarks and\nreal-world tasks demonstrate that QDepth-VLA yields strong spatial reasoning\nand competitive performance on manipulation tasks.",
+        "url": "http://arxiv.org/abs/2510.14836v1",
+        "published_date": "2025-10-16T16:11:18+00:00",
+        "updated_date": "2025-10-16T16:11:18+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Yixuan Li",
+            "Yuhui Chen",
+            "Mingcai Zhou",
+            "Haoran Li"
+        ],
+        "tldr": "The paper introduces QDepth-VLA, a framework that enhances Vision-Language-Action (VLA) models by incorporating an auxiliary quantized depth prediction task, improving spatial reasoning and manipulation task performance.",
+        "tldr_zh": "该论文介绍了QDepth-VLA，一个通过结合辅助量化深度预测任务来增强视觉-语言-动作(VLA)模型的框架，从而提高空间推理和操作任务的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "GOPLA: Generalizable Object Placement Learning via Synthetic Augmentation of Human Arrangement",
+        "summary": "Robots are expected to serve as intelligent assistants, helping humans with\neveryday household organization. A central challenge in this setting is the\ntask of object placement, which requires reasoning about both semantic\npreferences (e.g., common-sense object relations) and geometric feasibility\n(e.g., collision avoidance). We present GOPLA, a hierarchical framework that\nlearns generalizable object placement from augmented human demonstrations. A\nmulti-modal large language model translates human instructions and visual\ninputs into structured plans that specify pairwise object relationships. These\nplans are then converted into 3D affordance maps with geometric common sense by\na spatial mapper, while a diffusion-based planner generates placement poses\nguided by test-time costs, considering multi-plan distributions and collision\navoidance. To overcome data scarcity, we introduce a scalable pipeline that\nexpands human placement demonstrations into diverse synthetic training data.\nExtensive experiments show that our approach improves placement success rates\nby 30.04 percentage points over the runner-up, evaluated on positioning\naccuracy and physical plausibility, demonstrating strong generalization across\na wide range of real-world robotic placement scenarios.",
+        "url": "http://arxiv.org/abs/2510.14627v1",
+        "published_date": "2025-10-16T12:38:14+00:00",
+        "updated_date": "2025-10-16T12:38:14+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Yao Zhong",
+            "Hanzhi Chen",
+            "Simon Schaefer",
+            "Anran Zhang",
+            "Stefan Leutenegger"
+        ],
+        "tldr": "The paper presents GOPLA, a framework for generalizable object placement using LLMs, diffusion models, and synthetic data augmentation to improve robotic object placement in household settings. It achieves a significant improvement in placement success rate compared to other methods.",
+        "tldr_zh": "该论文提出了GOPLA，一个通过LLM、扩散模型和合成数据增强来实现可泛化物体放置的框架，旨在改进机器人居家环境中的物体放置。相较于其他方法，该方法在放置成功率方面有显著提升。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "CALM-Net: Curvature-Aware LiDAR Point Cloud-based Multi-Branch Neural Network for Vehicle Re-Identification",
+        "summary": "This paper presents CALM-Net, a curvature-aware LiDAR point cloud-based\nmulti-branch neural network for vehicle re-identification. The proposed model\naddresses the challenge of learning discriminative and complementary features\nfrom three-dimensional point clouds to distinguish between vehicles. CALM-Net\nemploys a multi-branch architecture that integrates edge convolution, point\nattention, and a curvature embedding that characterizes local surface variation\nin point clouds. By combining these mechanisms, the model learns richer\ngeometric and contextual features that are well suited for the\nre-identification task. Experimental evaluation on the large-scale nuScenes\ndataset demonstrates that CALM-Net achieves a mean re-identification accuracy\nimprovement of approximately 1.97\\% points compared with the strongest baseline\nin our study. The results confirms the effectiveness of incorporating curvature\ninformation into deep learning architectures and highlight the benefit of\nmulti-branch feature learning for LiDAR point cloud-based vehicle\nre-identification.",
+        "url": "http://arxiv.org/abs/2510.14576v1",
+        "published_date": "2025-10-16T11:36:54+00:00",
+        "updated_date": "2025-10-16T11:36:54+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Dongwook Lee",
+            "Sol Han",
+            "Jinwhan Kim"
+        ],
+        "tldr": "CALM-Net, a novel multi-branch neural network, leverages curvature embedding, edge convolution, and point attention on LiDAR point clouds to improve vehicle re-identification accuracy by 1.97% on the nuScenes dataset.",
+        "tldr_zh": "CALM-Net是一种新的多分支神经网络，它利用曲率嵌入、边缘卷积和点注意力处理LiDAR点云，从而将nuScenes数据集上的车辆重识别精度提高了1.97%。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "MACE: Mixture-of-Experts Accelerated Coordinate Encoding for Large-Scale Scene Localization and Rendering",
+        "summary": "Efficient localization and high-quality rendering in large-scale scenes\nremain a significant challenge due to the computational cost involved. While\nScene Coordinate Regression (SCR) methods perform well in small-scale\nlocalization, they are limited by the capacity of a single network when\nextended to large-scale scenes. To address these challenges, we propose the\nMixed Expert-based Accelerated Coordinate Encoding method (MACE), which enables\nefficient localization and high-quality rendering in large-scale scenes.\nInspired by the remarkable capabilities of MOE in large model domains, we\nintroduce a gating network to implicitly classify and select sub-networks,\nensuring that only a single sub-network is activated during each inference.\nFurtheremore, we present Auxiliary-Loss-Free Load Balancing(ALF-LB) strategy to\nenhance the localization accuracy on large-scale scene. Our framework provides\na significant reduction in costs while maintaining higher precision, offering\nan efficient solution for large-scale scene applications. Additional\nexperiments on the Cambridge test set demonstrate that our method achieves\nhigh-quality rendering results with merely 10 minutes of training.",
+        "url": "http://arxiv.org/abs/2510.14251v1",
+        "published_date": "2025-10-16T03:08:19+00:00",
+        "updated_date": "2025-10-16T03:08:19+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Mingkai Liu",
+            "Dikai Fan",
+            "Haohua Que",
+            "Haojia Gao",
+            "Xiao Liu",
+            "Shuxue Peng",
+            "Meixia Lin",
+            "Shengyu Gu",
+            "Ruicong Ye",
+            "Wanli Qiu",
+            "Handong Yao",
+            "Ruopeng Zhang",
+            "Xianliang Huang"
+        ],
+        "tldr": "The paper introduces MACE, a Mixture-of-Experts based approach for efficient scene localization and rendering in large-scale environments, utilizing a gating network and a load balancing strategy to improve accuracy and reduce computational costs.",
+        "tldr_zh": "该论文提出了MACE，一种基于混合专家模型的方法，用于大规模场景中高效的场景定位和渲染。它采用门控网络和负载平衡策略来提高精度并降低计算成本。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "MoCom: Motion-based Inter-MAV Visual Communication Using Event Vision and Spiking Neural Networks",
+        "summary": "Reliable communication in Micro Air Vehicle (MAV) swarms is challenging in\nenvironments, where conventional radio-based methods suffer from spectrum\ncongestion, jamming, and high power consumption. Inspired by the waggle dance\nof honeybees, which efficiently communicate the location of food sources\nwithout sound or contact, we propose a novel visual communication framework for\nMAV swarms using motion-based signaling. In this framework, MAVs convey\ninformation, such as heading and distance, through deliberate flight patterns,\nwhich are passively captured by event cameras and interpreted using a\npredefined visual codebook of four motion primitives: vertical (up/down),\nhorizontal (left/right), left-to-up-to-right, and left-to-down-to-right,\nrepresenting control symbols (``start'', ``end'', ``1'', ``0''). To decode\nthese signals, we design an event frame-based segmentation model and a\nlightweight Spiking Neural Network (SNN) for action recognition. An integrated\ndecoding algorithm then combines segmentation and classification to robustly\ninterpret MAV motion sequences. Experimental results validate the framework's\neffectiveness, which demonstrates accurate decoding and low power consumption,\nand highlights its potential as an energy-efficient alternative for MAV\ncommunication in constrained environments.",
+        "url": "http://arxiv.org/abs/2510.14770v1",
+        "published_date": "2025-10-16T15:06:51+00:00",
+        "updated_date": "2025-10-16T15:06:51+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zhang Nengbo",
+            "Hann Woei Ho",
+            "Ye Zhou"
+        ],
+        "tldr": "This paper presents a novel visual communication framework for MAV swarms using motion-based signaling, event cameras, and spiking neural networks for decoding, offering an energy-efficient alternative to radio communication in constrained environments.",
+        "tldr_zh": "本文提出了一种新颖的微型飞行器集群视觉通信框架，该框架使用基于运动的信号、事件相机和脉冲神经网络进行解码，为受限环境中的无线电通信提供了一种节能替代方案。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
