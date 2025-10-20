@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Autonomous Driving, VLA, 3D Understanding, Robotics) - October 15, 2025</title>
+    <title>ArXiv CS.CV Papers (Autonomous Driving, VLA, 3D Understanding, Robotics) - October 18, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>VLM Daily Papers</h1>
         <p>Daily papers related to VLA/AV/3D Understanding from cs.CV</p>
         
-            <p>October 15, 2025</p>
+            <p>October 18, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,30 +215,31 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">PAGS: Priority-Adaptive Gaussian Splatting for Dynamic Driving Scenes</h2>
+            <h2 class="paper-title">DriveGen3D: Boosting Feed-Forward Driving Scene Generation with Efficient Video Diffusion</h2>
             
-            <p class="paper-summary">Reconstructing dynamic 3D urban scenes is crucial for autonomous driving, yet
-current methods face a stark trade-off between fidelity and computational cost.
-This inefficiency stems from their semantically agnostic design, which
-allocates resources uniformly, treating static backgrounds and safety-critical
-objects with equal importance. To address this, we introduce Priority-Adaptive
-Gaussian Splatting (PAGS), a framework that injects task-aware semantic
-priorities directly into the 3D reconstruction and rendering pipeline. PAGS
-introduces two core contributions: (1) Semantically-Guided Pruning and
-Regularization strategy, which employs a hybrid importance metric to
-aggressively simplify non-critical scene elements while preserving fine-grained
-details on objects vital for navigation. (2) Priority-Driven Rendering
-pipeline, which employs a priority-based depth pre-pass to aggressively cull
-occluded primitives and accelerate the final shading computations. Extensive
-experiments on the Waymo and KITTI datasets demonstrate that PAGS achieves
-exceptional reconstruction quality, particularly on safety-critical objects,
-while significantly reducing training time and boosting rendering speeds to
-over 350 FPS.</p>
+            <p class="paper-summary">We present DriveGen3D, a novel framework for generating high-quality and
+highly controllable dynamic 3D driving scenes that addresses critical
+limitations in existing methodologies. Current approaches to driving scene
+synthesis either suffer from prohibitive computational demands for extended
+temporal generation, focus exclusively on prolonged video synthesis without 3D
+representation, or restrict themselves to static single-scene reconstruction.
+Our work bridges this methodological gap by integrating accelerated long-term
+video generation with large-scale dynamic scene reconstruction through
+multimodal conditional control. DriveGen3D introduces a unified pipeline
+consisting of two specialized components: FastDrive-DiT, an efficient video
+diffusion transformer for high-resolution, temporally coherent video synthesis
+under text and Bird's-Eye-View (BEV) layout guidance; and FastRecon3D, a
+feed-forward reconstruction module that rapidly builds 3D Gaussian
+representations across time, ensuring spatial-temporal consistency. Together,
+these components enable real-time generation of extended driving videos (up to
+$424\times800$ at 12 FPS) and corresponding dynamic 3D scenes, achieving SSIM
+of 0.811 and PSNR of 22.84 on novel view synthesis, all while maintaining
+parameter efficiency.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: PAGS introduces a priority-adaptive Gaussian Splatting framework for dynamic driving scenes that improves reconstruction quality of critical objects while reducing computational cost by prioritizing semantic information. It achieves over 350 FPS rendering speeds.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: DriveGen3D introduces a framework for generating controllable, temporally consistent 3D driving scenes using a fast video diffusion transformer (FastDrive-DiT) and a feed-forward 3D reconstruction module (FastRecon3D), enabling real-time generation of extended driving videos with corresponding dynamic 3D scenes.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: PAGS 引入了一种优先级自适应的高斯溅射框架，用于动态驾驶场景，通过优先考虑语义信息，提高关键物体的重建质量，同时降低计算成本。它实现了超过 350 FPS 的渲染速度。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: DriveGen3D 提出了一个用于生成可控的、时间一致的 3D 驾驶场景的框架，该框架使用快速视频扩散变换器 (FastDrive-DiT) 和前馈 3D 重建模块 (FastRecon3D)，从而能够实时生成具有相应动态 3D 场景的扩展驾驶视频。</p>
             
 
             
@@ -248,16 +249,16 @@ over 350 FPS.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(10/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -272,8 +273,8 @@ over 350 FPS.</p>
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
             </div>
@@ -309,11 +310,11 @@ over 350 FPS.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.12282v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.15264v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Ying A, Wenzhang Sun, Chang Zeng, Chunfeng Wang, Hao Li, Jianxun Cui</p>
+            <p class="paper-authors">Authors: Weijie Wang, Jiagang Zhu, Zeyu Zhang, Xiaofeng Wang, Zheng Zhu, Guosheng Zhao, Chaojun Ni, Haoxiao Wang, Guan Huang, Xinze Chen, Yukun Zhou, Wenkang Qin, Duochao Shi, Haoyun Li, Guanghong Jia, Jiwen Lu</p>
             
         </motion.div>
         
@@ -325,31 +326,24 @@ over 350 FPS.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">MCOP: Multi-UAV Collaborative Occupancy Prediction</h2>
+            <h2 class="paper-title">LightsOut: Diffusion-based Outpainting for Enhanced Lens Flare Removal</h2>
             
-            <p class="paper-summary">Unmanned Aerial Vehicle (UAV) swarm systems necessitate efficient
-collaborative perception mechanisms for diverse operational scenarios. Current
-Bird's Eye View (BEV)-based approaches exhibit two main limitations:
-bounding-box representations fail to capture complete semantic and geometric
-information of the scene, and their performance significantly degrades when
-encountering undefined or occluded objects. To address these limitations, we
-propose a novel multi-UAV collaborative occupancy prediction framework. Our
-framework effectively preserves 3D spatial structures and semantics through
-integrating a Spatial-Aware Feature Encoder and Cross-Agent Feature
-Integration. To enhance efficiency, we further introduce Altitude-Aware Feature
-Reduction to compactly represent scene information, along with a Dual-Mask
-Perceptual Guidance mechanism to adaptively select features and reduce
-communication overhead. Due to the absence of suitable benchmark datasets, we
-extend three datasets for evaluation: two virtual datasets (Air-to-Pred-Occ and
-UAV3D-Occ) and one real-world dataset (GauUScene-Occ). Experiments results
-demonstrate that our method achieves state-of-the-art accuracy, significantly
-outperforming existing collaborative methods while reducing communication
-overhead to only a fraction of previous approaches.</p>
+            <p class="paper-summary">Lens flare significantly degrades image quality, impacting critical computer
+vision tasks like object detection and autonomous driving. Recent Single Image
+Flare Removal (SIFR) methods perform poorly when off-frame light sources are
+incomplete or absent. We propose LightsOut, a diffusion-based outpainting
+framework tailored to enhance SIFR by reconstructing off-frame light sources.
+Our method leverages a multitask regression module and LoRA fine-tuned
+diffusion model to ensure realistic and physically consistent outpainting
+results. Comprehensive experiments demonstrate LightsOut consistently boosts
+the performance of existing SIFR methods across challenging scenarios without
+additional retraining, serving as a universally applicable plug-and-play
+preprocessing solution. Project page: https://ray-1026.github.io/lightsout/</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces MCOP, a multi-UAV collaborative occupancy prediction framework that uses spatial-aware feature encoding, cross-agent feature integration, altitude-aware feature reduction, and dual-mask perceptual guidance to improve accuracy and reduce communication overhead compared to BEV-based methods.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: LightsOut uses diffusion-based outpainting to reconstruct off-frame light sources, enhancing single image flare removal and improving computer vision tasks like autonomous driving by acting as a plug-and-play preprocessing step for existing methods.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了MCOP，一种多无人机协同占据预测框架，它使用空间感知特征编码、跨代理特征集成、高度感知特征减少和双掩码感知引导，与基于BEV的方法相比，提高了准确性并降低了通信开销。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: LightsOut 使用基于扩散的出画技术来重建画面外的光源，从而增强单图像眩光消除，并通过充当现有方法的即插即用预处理步骤来改善自动驾驶等计算机视觉任务。</p>
             
 
             
@@ -359,8 +353,8 @@ overhead to only a fraction of previous approaches.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -383,8 +377,8 @@ overhead to only a fraction of previous approaches.</p>
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
             </div>
@@ -420,11 +414,11 @@ overhead to only a fraction of previous approaches.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.12679v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.15868v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Zefu Lin, Wenbo Chen, Xiaojuan Jin, Yuran Yang, Lue Fan, Yixin Zhang, Yufeng Zhang, Zhaoxiang Zhang</p>
+            <p class="paper-authors">Authors: Shr-Ruei Tsai, Wei-Cheng Chang, Jie-Ying Lee, Chih-Hai Su, Yu-Lun Liu</p>
             
         </motion.div>
         
@@ -436,25 +430,28 @@ overhead to only a fraction of previous approaches.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">CoIRL-AD: Collaborative-Competitive Imitation-Reinforcement Learning in Latent World Models for Autonomous Driving</h2>
+            <h2 class="paper-title">Exploring Conditions for Diffusion models in Robotic Control</h2>
             
-            <p class="paper-summary">End-to-end autonomous driving models trained solely with imitation learning
-(IL) often suffer from poor generalization. In contrast, reinforcement learning
-(RL) promotes exploration through reward maximization but faces challenges such
-as sample inefficiency and unstable convergence. A natural solution is to
-combine IL and RL. Moving beyond the conventional two-stage paradigm (IL
-pretraining followed by RL fine-tuning), we propose CoIRL-AD, a competitive
-dual-policy framework that enables IL and RL agents to interact during
-training. CoIRL-AD introduces a competition-based mechanism that facilitates
-knowledge exchange while preventing gradient conflicts. Experiments on the
-nuScenes dataset show an 18% reduction in collision rate compared to baselines,
-along with stronger generalization and improved performance on long-tail
-scenarios. Code is available at: https://github.com/SEU-zxj/CoIRL-AD.</p>
+            <p class="paper-summary">While pre-trained visual representations have significantly advanced
+imitation learning, they are often task-agnostic as they remain frozen during
+policy learning. In this work, we explore leveraging pre-trained text-to-image
+diffusion models to obtain task-adaptive visual representations for robotic
+control, without fine-tuning the model itself. However, we find that naively
+applying textual conditions - a successful strategy in other vision domains -
+yields minimal or even negative gains in control tasks. We attribute this to
+the domain gap between the diffusion model's training data and robotic control
+environments, leading us to argue for conditions that consider the specific,
+dynamic visual information required for control. To this end, we propose ORCA,
+which introduces learnable task prompts that adapt to the control environment
+and visual prompts that capture fine-grained, frame-specific details. Through
+facilitating task-adaptive representations with our newly devised conditions,
+our approach achieves state-of-the-art performance on various robotic control
+benchmarks, significantly surpassing prior methods.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces CoIRL-AD, a collaborative-competitive imitation-reinforcement learning framework with dual-policy training, which improves autonomous driving performance with a significant reduction in collision rate on the nuScenes dataset.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper explores using pre-trained text-to-image diffusion models to generate task-adaptive visual representations for robotic control. It proposes a new conditioning method (ORCA) utilizing learnable task and visual prompts to achieve state-of-the-art performance on robotic control benchmarks.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了CoIRL-AD，一个协作竞争的模仿-强化学习框架，具有双策略训练，通过在nuScenes数据集上显著降低碰撞率来提高自动驾驶性能。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文探索了利用预训练的文本到图像扩散模型，为机器人控制生成任务自适应的视觉表征。它提出了一种新的调节方法 (ORCA)，利用可学习的任务和视觉提示，在机器人控制基准测试中实现了最先进的性能。</p>
             
 
             
@@ -464,16 +461,16 @@ scenarios. Code is available at: https://github.com/SEU-zxj/CoIRL-AD.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
@@ -488,8 +485,8 @@ scenarios. Code is available at: https://github.com/SEU-zxj/CoIRL-AD.</p>
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
             </div>
@@ -525,11 +522,11 @@ scenarios. Code is available at: https://github.com/SEU-zxj/CoIRL-AD.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.12560v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.15510v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Xiaoji Zheng, Ziyuan Yang, Yanhao Chen, Yuhang Peng, Yuanrong Tang, Gengyuan Liu, Bokui Chen, Jiangtao Gong</p>
+            <p class="paper-authors">Authors: Heeseong Shin, Byeongho Heo, Dongyoon Han, Seungryong Kim, Taekyung Kim</p>
             
         </motion.div>
         
@@ -541,28 +538,33 @@ scenarios. Code is available at: https://github.com/SEU-zxj/CoIRL-AD.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Scene Coordinate Reconstruction Priors</h2>
+            <h2 class="paper-title">MRASfM: Multi-Camera Reconstruction and Aggregation through Structure-from-Motion in Driving Scenes</h2>
             
-            <p class="paper-summary">Scene coordinate regression (SCR) models have proven to be powerful implicit
-scene representations for 3D vision, enabling visual relocalization and
-structure-from-motion. SCR models are trained specifically for one scene. If
-training images imply insufficient multi-view constraints SCR models
-degenerate. We present a probabilistic reinterpretation of training SCR models,
-which allows us to infuse high-level reconstruction priors. We investigate
-multiple such priors, ranging from simple priors over the distribution of
-reconstructed depth values to learned priors over plausible scene coordinate
-configurations. For the latter, we train a 3D point cloud diffusion model on a
-large corpus of indoor scans. Our priors push predicted 3D scene points towards
-plausible geometry at each training step to increase their likelihood. On three
-indoor datasets our priors help learning better scene representations,
-resulting in more coherent scene point clouds, higher registration rates and
-better camera poses, with a positive effect on down-stream tasks such as novel
-view synthesis and camera relocalization.</p>
+            <p class="paper-summary">Structure from Motion (SfM) estimates camera poses and reconstructs point
+clouds, forming a foundation for various tasks. However, applying SfM to
+driving scenes captured by multi-camera systems presents significant
+difficulties, including unreliable pose estimation, excessive outliers in road
+surface reconstruction, and low reconstruction efficiency. To address these
+limitations, we propose a Multi-camera Reconstruction and Aggregation
+Structure-from-Motion (MRASfM) framework specifically designed for driving
+scenes. MRASfM enhances the reliability of camera pose estimation by leveraging
+the fixed spatial relationships within the multi-camera system during the
+registration process. To improve the quality of road surface reconstruction,
+our framework employs a plane model to effectively remove erroneous points from
+the triangulated road surface. Moreover, treating the multi-camera set as a
+single unit in Bundle Adjustment (BA) helps reduce optimization variables to
+boost efficiency. In addition, MRASfM achieves multi-scene aggregation through
+scene association and assembly modules in a coarse-to-fine fashion. We deployed
+multi-camera systems on actual vehicles to validate the generalizability of
+MRASfM across various scenes and its robustness in challenging conditions
+through real-world applications. Furthermore, large-scale validation results on
+public datasets show the state-of-the-art performance of MRASfM, achieving
+0.124 absolute pose error on the nuScenes dataset.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces a probabilistic reinterpretation of scene coordinate regression (SCR) training, incorporating reconstruction priors (depth distribution and learned scene coordinate configurations via a 3D point cloud diffusion model) to improve scene representation learning, resulting in better 3D reconstruction and camera pose estimation.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper presents MRASfM, a novel Structure-from-Motion framework tailored for multi-camera systems in driving scenes, addressing pose estimation, outlier removal, and efficiency challenges, and achieving state-of-the-art results on nuScenes.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了一种场景坐标回归(SCR)训练的概率重新解释方法，通过结合重建先验（深度分布和使用3D点云扩散模型学习到的场景坐标配置）来改进场景表示学习，从而产生更好的3D重建和相机姿态估计。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了 MRASfM，一种专为驾驶场景中的多摄像头系统设计的结构运动框架，解决了姿态估计、异常值移除和效率挑战，并在 nuScenes 数据集上取得了最先进的结果。</p>
             
 
             
@@ -572,16 +574,16 @@ view synthesis and camera relocalization.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -596,8 +598,8 @@ view synthesis and camera relocalization.</p>
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
             </div>
@@ -633,11 +635,11 @@ view synthesis and camera relocalization.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.12387v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.15467v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Wenjing Bian, Axel Barroso-Laguna, Tommaso Cavallari, Victor Adrian Prisacariu, Eric Brachmann</p>
+            <p class="paper-authors">Authors: Lingfeng Xuan, Chang Nie, Yiqing Xu, Zhe Liu, Yanzi Miao, Hesheng Wang</p>
             
         </motion.div>
         
@@ -649,32 +651,36 @@ view synthesis and camera relocalization.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">CurriFlow: Curriculum-Guided Depth Fusion with Optical Flow-Based Temporal Alignment for 3D Semantic Scene Completion</h2>
+            <h2 class="paper-title">FreqPDE: Rethinking Positional Depth Embedding for Multi-View 3D Object Detection Transformers</h2>
             
-            <p class="paper-summary">Semantic Scene Completion (SSC) aims to infer complete 3D geometry and
-semantics from monocular images, serving as a crucial capability for
-camera-based perception in autonomous driving. However, existing SSC methods
-relying on temporal stacking or depth projection often lack explicit motion
-reasoning and struggle with occlusions and noisy depth supervision. We propose
-CurriFlow, a novel semantic occupancy prediction framework that integrates
-optical flow-based temporal alignment with curriculum-guided depth fusion.
-CurriFlow employs a multi-level fusion strategy to align segmentation, visual,
-and depth features across frames using pre-trained optical flow, thereby
-improving temporal consistency and dynamic object understanding. To enhance
-geometric robustness, a curriculum learning mechanism progressively transitions
-from sparse yet accurate LiDAR depth to dense but noisy stereo depth during
-training, ensuring stable optimization and seamless adaptation to real-world
-deployment. Furthermore, semantic priors from the Segment Anything Model (SAM)
-provide category-agnostic supervision, strengthening voxel-level semantic
-learning and spatial consistency. Experiments on the SemanticKITTI benchmark
-demonstrate that CurriFlow achieves state-of-the-art performance with a mean
-IoU of 16.9, validating the effectiveness of our motion-guided and
-curriculum-aware design for camera-based 3D semantic scene completion.</p>
+            <p class="paper-summary">Detecting 3D objects accurately from multi-view 2D images is a challenging
+yet essential task in the field of autonomous driving. Current methods resort
+to integrating depth prediction to recover the spatial information for object
+query decoding, which necessitates explicit supervision from LiDAR points
+during the training phase. However, the predicted depth quality is still
+unsatisfactory such as depth discontinuity of object boundaries and
+indistinction of small objects, which are mainly caused by the sparse
+supervision of projected points and the use of high-level image features for
+depth prediction. Besides, cross-view consistency and scale invariance are also
+overlooked in previous methods. In this paper, we introduce Frequency-aware
+Positional Depth Embedding (FreqPDE) to equip 2D image features with spatial
+information for 3D detection transformer decoder, which can be obtained through
+three main modules. Specifically, the Frequency-aware Spatial Pyramid Encoder
+(FSPE) constructs a feature pyramid by combining high-frequency edge clues and
+low-frequency semantics from different levels respectively. Then the Cross-view
+Scale-invariant Depth Predictor (CSDP) estimates the pixel-level depth
+distribution with cross-view and efficient channel attention mechanism.
+Finally, the Positional Depth Encoder (PDE) combines the 2D image features and
+3D position embeddings to generate the 3D depth-aware features for query
+decoding. Additionally, hybrid depth supervision is adopted for complementary
+depth learning from both metric and distribution aspects. Extensive experiments
+conducted on the nuScenes dataset demonstrate the effectiveness and superiority
+of our proposed method.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces CurriFlow, a novel framework for 3D Semantic Scene Completion that uses optical flow for temporal alignment and curriculum learning for depth fusion, achieving state-of-the-art performance on SemanticKITTI.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces FreqPDE, a novel approach for multi-view 3D object detection using transformers. It focuses on improving depth estimation with frequency-aware feature extraction, cross-view consistency, and hybrid depth supervision, demonstrating superior performance on the nuScenes dataset.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为 CurriFlow 的新型 3D 语义场景补全框架，该框架使用光流进行时间对齐，并使用课程学习进行深度融合，在 SemanticKITTI 上实现了最先进的性能。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了 FreqPDE，一种用于多视图 3D 目标检测的新方法，它使用 transformer 模型。它侧重于通过频率感知特征提取、跨视图一致性和混合深度监督来改进深度估计，并在 nuScenes 数据集上表现出卓越的性能。</p>
             
 
             
@@ -700,8 +706,8 @@ curriculum-aware design for camera-based 3D semantic scene completion.</p>
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -745,11 +751,11 @@ curriculum-aware design for camera-based 3D semantic scene completion.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.12362v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.15385v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Jinzhou Lin, Jie Zhou, Wenhao Xu, Rongtao Xu, Changwei Wang, Shunpeng Chen, Kexue Fu, Yihua Shao, Li Guo, Shibiao Xu</p>
+            <p class="paper-authors">Authors: Haisheng Su, Junjie Zhang, Feixiang Song, Sanping Zhou, Wei Wu, Nanning Zheng, Junchi Yan</p>
             
         </motion.div>
         
@@ -761,30 +767,29 @@ curriculum-aware design for camera-based 3D semantic scene completion.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Hybrid Gaussian Splatting for Novel Urban View Synthesis</h2>
+            <h2 class="paper-title">SHARE: Scene-Human Aligned Reconstruction</h2>
             
-            <p class="paper-summary">This paper describes the Qualcomm AI Research solution to the RealADSim-NVS
-challenge, hosted at the RealADSim Workshop at ICCV 2025. The challenge
-concerns novel view synthesis in street scenes, and participants are required
-to generate, starting from car-centric frames captured during some training
-traversals, renders of the same urban environment as viewed from a different
-traversal (e.g. different street lane or car direction). Our solution is
-inspired by hybrid methods in scene generation and generative simulators
-merging gaussian splatting and diffusion models, and it is composed of two
-stages: First, we fit a 3D reconstruction of the scene and render novel views
-as seen from the target cameras. Then, we enhance the resulting frames with a
-dedicated single-step diffusion model. We discuss specific choices made in the
-initialization of gaussian primitives as well as the finetuning of the enhancer
-model and its training data curation. We report the performance of our model
-design and we ablate its components in terms of novel view quality as measured
-by PSNR, SSIM and LPIPS. On the public leaderboard reporting test results, our
-proposal reaches an aggregated score of 0.432, achieving the second place
-overall.</p>
+            <p class="paper-summary">Animating realistic character interactions with the surrounding environment
+is important for autonomous agents in gaming, AR/VR, and robotics. However,
+current methods for human motion reconstruction struggle with accurately
+placing humans in 3D space. We introduce Scene-Human Aligned REconstruction
+(SHARE), a technique that leverages the scene geometry's inherent spatial cues
+to accurately ground human motion reconstruction. Each reconstruction relies
+solely on a monocular RGB video from a stationary camera. SHARE first estimates
+a human mesh and segmentation mask for every frame, alongside a scene point map
+at keyframes. It iteratively refines the human's positions at these keyframes
+by comparing the human mesh against the human point map extracted from the
+scene using the mask. Crucially, we also ensure that non-keyframe human meshes
+remain consistent by preserving their relative root joint positions to keyframe
+root joints during optimization. Our approach enables more accurate 3D human
+placement while reconstructing the surrounding scene, facilitating use cases on
+both curated datasets and in-the-wild web videos. Extensive experiments
+demonstrate that SHARE outperforms existing methods.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper presents a hybrid Gaussian splatting and diffusion model approach for novel view synthesis in urban street scenes, achieving second place in the RealADSim-NVS challenge at ICCV 2025. The method uses 3D reconstruction and a single-step diffusion model for image enhancement.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: SHARE improves human motion reconstruction by aligning human meshes with scene geometry extracted from monocular RGB videos, resulting in more accurate 3D human placement.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了一种混合高斯溅射和扩散模型方法，用于城市街道场景中的新视角合成，并在 ICCV 2025 的 RealADSim-NVS 挑战赛中获得第二名。该方法使用 3D 重建和一个单步扩散模型进行图像增强。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: SHARE通过将人体网格与从单目RGB视频中提取的场景几何对齐，改进了人体运动重建，从而实现更精确的3D人体定位。</p>
             
 
             
@@ -818,8 +823,8 @@ overall.</p>
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
             </div>
@@ -855,11 +860,11 @@ overall.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.12308v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.15342v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Mohamed Omran, Farhad Zanjani, Davide Abati, Jens Petersen, Amirhossein Habibian</p>
+            <p class="paper-authors">Authors: Joshua Li, Brendan Chharawala, Chang Shu, Xue Bin Peng, Pengcheng Xi</p>
             
         </motion.div>
         
@@ -871,35 +876,30 @@ overall.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">BEEP3D: Box-Supervised End-to-End Pseudo-Mask Generation for 3D Instance Segmentation</h2>
+            <h2 class="paper-title">CuSfM: CUDA-Accelerated Structure-from-Motion</h2>
             
-            <p class="paper-summary">3D instance segmentation is crucial for understanding complex 3D
-environments, yet fully supervised methods require dense point-level
-annotations, resulting in substantial annotation costs and labor overhead. To
-mitigate this, box-level annotations have been explored as a weaker but more
-scalable form of supervision. However, box annotations inherently introduce
-ambiguity in overlapping regions, making accurate point-to-instance assignment
-challenging. Recent methods address this ambiguity by generating pseudo-masks
-through training a dedicated pseudo-labeler in an additional training stage.
-However, such two-stage pipelines often increase overall training time and
-complexity, hinder end-to-end optimization. To overcome these challenges, we
-propose BEEP3D-Box-supervised End-to-End Pseudo-mask generation for 3D instance
-segmentation. BEEP3D adopts a student-teacher framework, where the teacher
-model serves as a pseudo-labeler and is updated by the student model via an
-Exponential Moving Average. To better guide the teacher model to generate
-precise pseudo-masks, we introduce an instance center-based query refinement
-that enhances position query localization and leverages features near instance
-centers. Additionally, we design two novel losses-query consistency loss and
-masked feature consistency loss-to align semantic and geometric signals between
-predictions and pseudo-masks. Extensive experiments on ScanNetV2 and S3DIS
-datasets demonstrate that BEEP3D achieves competitive or superior performance
-compared to state-of-the-art weakly supervised methods while remaining
-computationally efficient.</p>
+            <p class="paper-summary">Efficient and accurate camera pose estimation forms the foundational
+requirement for dense reconstruction in autonomous navigation, robotic
+perception, and virtual simulation systems. This paper addresses the challenge
+via cuSfM, a CUDA-accelerated offline Structure-from-Motion system that
+leverages GPU parallelization to efficiently employ computationally intensive
+yet highly accurate feature extractors, generating comprehensive and
+non-redundant data associations for precise camera pose estimation and globally
+consistent mapping. The system supports pose optimization, mapping, prior-map
+localization, and extrinsic refinement. It is designed for offline processing,
+where computational resources can be fully utilized to maximize accuracy.
+Experimental results demonstrate that cuSfM achieves significantly improved
+accuracy and processing speed compared to the widely used COLMAP method across
+various testing scenarios, while maintaining the high precision and global
+consistency essential for offline SfM applications. The system is released as
+an open-source Python wrapper implementation, PyCuSfM, available at
+https://github.com/nvidia-isaac/pyCuSFM, to facilitate research and
+applications in computer vision and robotics.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces BEEP3D, a box-supervised end-to-end pseudo-mask generation method for 3D instance segmentation using a student-teacher framework and novel losses, achieving competitive performance on ScanNetV2 and S3DIS.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces cuSfM, a CUDA-accelerated offline Structure-from-Motion system that achieves improved accuracy and speed compared to COLMAP, and is released as an open-source Python wrapper.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了BEEP3D，一种基于盒监督的端到端伪掩码生成方法，用于三维实例分割，采用学生-教师框架和新颖的损失函数，在ScanNetV2和S3DIS数据集上取得了有竞争力的性能。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种CUDA加速的离线Structure-from-Motion系统cuSfM，与COLMAP相比，该系统实现了更高的精度和速度，并以开源Python封装的形式发布。</p>
             
 
             
@@ -917,8 +917,8 @@ computationally efficient.</p>
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
@@ -970,11 +970,11 @@ computationally efficient.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.12182v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.15271v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Youngju Yoo, Seho Kim, Changick Kim</p>
+            <p class="paper-authors">Authors: Jingrui Yu, Jun Liu, Kefei Ren, Joydeep Biswas, Rurui Ye, Keqiang Wu, Chirag Majithia, Di Zeng</p>
             
         </motion.div>
         
@@ -986,29 +986,31 @@ computationally efficient.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Gaussian Semantic Field for One-shot LiDAR Global Localization</h2>
+            <h2 class="paper-title">Generalized Dynamics Generation towards Scannable Physical World Model</h2>
             
-            <p class="paper-summary">We present a one-shot LiDAR global localization algorithm featuring semantic
-disambiguation ability based on a lightweight tri-layered scene graph. While
-landmark semantic registration-based methods have shown promising performance
-improvements in global localization compared with geometric-only methods,
-landmarks can be repetitive and misleading for correspondence establishment. We
-propose to mitigate this problem by modeling semantic distributions with
-continuous functions learned from a population of Gaussian processes. Compared
-with discrete semantic labels, the continuous functions capture finer-grained
-geo-semantic information and also provide more detailed metric information for
-correspondence establishment. We insert this continuous function as the middle
-layer between the object layer and the metric-semantic layer, forming a
-tri-layered 3D scene graph, serving as a light-weight yet performant backend
-for one-shot localization. We term our global localization pipeline Outram-GSF
-(Gaussian semantic field) and conduct a wide range of experiments on publicly
-available data sets, validating the superior performance against the current
-state-of-the-art.</p>
+            <p class="paper-summary">Digital twin worlds with realistic interactive dynamics presents a new
+opportunity to develop generalist embodied agents in scannable environments
+with complex physical behaviors. To this end, we present GDGen (Generalized
+Representation for Generalized Dynamics Generation), a framework that takes a
+potential energy perspective to seamlessly integrate rigid body, articulated
+body, and soft body dynamics into a unified, geometry-agnostic system. GDGen
+operates from the governing principle that the potential energy for any stable
+physical system should be low. This fresh perspective allows us to treat the
+world as one holistic entity and infer underlying physical properties from
+simple motion observations. We extend classic elastodynamics by introducing
+directional stiffness to capture a broad spectrum of physical behaviors,
+covering soft elastic, articulated, and rigid body systems. We propose a
+specialized network to model the extended material property and employ a neural
+field to represent deformation in a geometry-agnostic manner. Extensive
+experiments demonstrate that GDGen robustly unifies diverse simulation
+paradigms, offering a versatile foundation for creating interactive virtual
+environments and training robotic agents in complex, dynamically rich
+scenarios.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a novel one-shot LiDAR global localization algorithm, Outram-GSF, which uses Gaussian processes to model semantic distributions for improved accuracy and robustness compared to existing methods.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces GDGen, a novel framework that unifies rigid, articulated, and soft body dynamics using a potential energy perspective, enabling the creation of realistic and interactive virtual environments for robot training.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种新的单次激光雷达全局定位算法 Outram-GSF，该算法使用高斯过程来建模语义分布，与现有方法相比，提高了准确性和鲁棒性。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种名为GDGen的新框架，该框架使用势能视角统一了刚体、铰接体和软体动力学，从而能够创建用于机器人训练的逼真且可交互的虚拟环境。</p>
             
 
             
@@ -1018,8 +1020,8 @@ state-of-the-art.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
@@ -1079,11 +1081,11 @@ state-of-the-art.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.12101v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.15041v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Pengyu Yin, Shenghai Yuan, Haozhi Cao, Xingyu Ji, Ruofei Bai, Siyu Chen, Lihua Xie</p>
+            <p class="paper-authors">Authors: Yichen Li, Zhiyi Li, Brandon Feng, Dinghuai Zhang, Antonio Torralba</p>
             
         </motion.div>
         
@@ -1095,150 +1097,32 @@ state-of-the-art.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Prompt-Guided Spatial Understanding with RGB-D Transformers for Fine-Grained Object Relation Reasoning</h2>
+            <h2 class="paper-title">MAVR-Net: Robust Multi-View Learning for MAV Action Recognition with Cross-View Attention</h2>
             
-            <p class="paper-summary">Spatial reasoning in large-scale 3D environments such as warehouses remains a
-significant challenge for vision-language systems due to scene clutter,
-occlusions, and the need for precise spatial understanding. Existing models
-often struggle with generalization in such settings, as they rely heavily on
-local appearance and lack explicit spatial grounding. In this work, we
-introduce a dedicated spatial reasoning framework for the Physical AI Spatial
-Intelligence Warehouse dataset introduced in the Track 3 2025 AI City
-Challenge. Our approach enhances spatial comprehension by embedding mask
-dimensions in the form of bounding box coordinates directly into the input
-prompts, enabling the model to reason over object geometry and layout. We
-fine-tune the framework across four question categories namely: Distance
-Estimation, Object Counting, Multi-choice Grounding, and Spatial Relation
-Inference using task-specific supervision. To further improve consistency with
-the evaluation system, normalized answers are appended to the GPT response
-within the training set. Our comprehensive pipeline achieves a final score of
-73.0606, placing 4th overall on the public leaderboard. These results
-demonstrate the effectiveness of structured prompt enrichment and targeted
-optimization in advancing spatial reasoning for real-world industrial
-environments.</p>
+            <p class="paper-summary">Recognizing the motion of Micro Aerial Vehicles (MAVs) is crucial for
+enabling cooperative perception and control in autonomous aerial swarms. Yet,
+vision-based recognition models relying only on RGB data often fail to capture
+the complex spatial temporal characteristics of MAV motion, which limits their
+ability to distinguish different actions. To overcome this problem, this paper
+presents MAVR-Net, a multi-view learning-based MAV action recognition
+framework. Unlike traditional single-view methods, the proposed approach
+combines three complementary types of data, including raw RGB frames, optical
+flow, and segmentation masks, to improve the robustness and accuracy of MAV
+motion recognition. Specifically, ResNet-based encoders are used to extract
+discriminative features from each view, and a multi-scale feature pyramid is
+adopted to preserve the spatiotemporal details of MAV motion patterns. To
+enhance the interaction between different views, a cross-view attention module
+is introduced to model the dependencies among various modalities and feature
+scales. In addition, a multi-view alignment loss is designed to ensure semantic
+consistency and strengthen cross-view feature representations. Experimental
+results on benchmark MAV action datasets show that our method clearly
+outperforms existing approaches, achieving 97.8\%, 96.5\%, and 92.8\% accuracy
+on the Short MAV, Medium MAV, and Long MAV datasets, respectively.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a prompt-guided RGB-D Transformer framework for spatial reasoning in 3D warehouse environments, achieving 4th place in the AI City Challenge by embedding bounding box coordinates into prompts and fine-tuning on specific spatial reasoning tasks.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种prompt引导的RGB-D Transformer框架，用于3D仓库环境中的空间推理。该方法通过将边界框坐标嵌入到prompt中，并针对特定空间推理任务进行微调，在AI City Challenge中获得了第4名。</p>
-            
-
+            <p class="paper-tldr"><strong>TLDR</strong>: MAVR-Net is a multi-view learning framework for MAV action recognition that combines RGB, optical flow, and segmentation masks with cross-view attention and a multi-view alignment loss, achieving state-of-the-art results on MAV action datasets.</p>
             
             
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2510.11996v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Tanner Muturi, Blessing Agyei Kyem, Joshua Kofi Asamoah, Neema Jakisa Owor, Richard Dyzinela, Andrews Danyo, Yaw Adu-Gyamfi, Armstrong Aboah</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.45, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">AngularFuse: A Closer Look at Angle-based Perception for Spatial-Sensitive Multi-Modality Image Fusion</h2>
-            
-            <p class="paper-summary">Visible-infrared image fusion is crucial in key applications such as
-autonomous driving and nighttime surveillance. Its main goal is to integrate
-multimodal information to produce enhanced images that are better suited for
-downstream tasks. Although deep learning based fusion methods have made
-significant progress, mainstream unsupervised approaches still face serious
-challenges in practical applications. Existing methods mostly rely on manually
-designed loss functions to guide the fusion process. However, these loss
-functions have obvious limitations. On one hand, the reference images
-constructed by existing methods often lack details and have uneven brightness.
-On the other hand, the widely used gradient losses focus only on gradient
-magnitude. To address these challenges, this paper proposes an angle-based
-perception framework for spatial-sensitive image fusion (AngularFuse). At
-first, we design a cross-modal complementary mask module to force the network
-to learn complementary information between modalities. Then, a fine-grained
-reference image synthesis strategy is introduced. By combining Laplacian edge
-enhancement with adaptive histogram equalization, reference images with richer
-details and more balanced brightness are generated. Last but not least, we
-introduce an angle-aware loss, which for the first time constrains both
-gradient magnitude and direction simultaneously in the gradient domain.
-AngularFuse ensures that the fused images preserve both texture intensity and
-correct edge orientation. Comprehensive experiments on the MSRS, RoadScene, and
-M3FD public datasets show that AngularFuse outperforms existing mainstream
-methods with clear margin. Visual comparisons further confirm that our method
-produces sharper and more detailed results in challenging scenes, demonstrating
-superior fusion capability.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces AngularFuse, a novel angle-based perception framework for visible-infrared image fusion, employing a cross-modal complementary mask module, a fine-grained reference image synthesis strategy, and an angle-aware loss function. It outperforms existing methods on multiple datasets.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了AngularFuse，一种新颖的基于角度感知的可见光-红外图像融合框架，它采用了跨模态互补掩码模块、细粒度的参考图像合成策略和角度感知损失函数。在多个数据集上，该方法优于现有方法。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: MAVR-Net是一个用于MAV动作识别的多视角学习框架，它结合了RGB、光流和分割掩码，并采用跨视角注意力机制和多视角对齐损失，在MAV动作数据集上实现了最先进的结果。</p>
             
 
             
@@ -1256,8 +1140,8 @@ superior fusion capability.</p>
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
@@ -1309,18 +1193,18 @@ superior fusion capability.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.12260v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.15448v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Xiaopeng Liu, Yupei Lin, Sen Zhang, Xiao Wang, Yukai Shi, Liang Lin</p>
+            <p class="paper-authors">Authors: Nengbo Zhang, Hann Woei Ho</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-10-20 02:45:21 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-10-20 02:48:37 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>
