@@ -1,0 +1,252 @@
+[
+    {
+        "title": "Descriptor: Occluded nuScenes: A Multi-Sensor Dataset for Evaluating Perception Robustness in Automated Driving",
+        "summary": "Robust perception in automated driving requires reliable performance under\nadverse conditions, where sensors may be affected by partial failures or\nenvironmental occlusions. Although existing autonomous driving datasets\ninherently contain sensor noise and environmental variability, very few enable\ncontrolled, parameterised, and reproducible degradations across multiple\nsensing modalities. This gap limits the ability to systematically evaluate how\nperception and fusion architectures perform under well-defined adverse\nconditions. To address this limitation, we introduce the Occluded nuScenes\nDataset, a novel extension of the widely used nuScenes benchmark. For the\ncamera modality, we release both the full and mini versions with four types of\nocclusions, two adapted from public implementations and two newly designed. For\nradar and LiDAR, we provide parameterised occlusion scripts that implement\nthree types of degradations each, enabling flexible and repeatable generation\nof occluded data. This resource supports consistent, reproducible evaluation of\nperception models under partial sensor failures and environmental interference.\nBy releasing the first multi-sensor occlusion dataset with controlled and\nreproducible degradations, we aim to advance research on robust sensor fusion,\nresilience analysis, and safety-critical perception in automated driving.",
+        "url": "http://arxiv.org/abs/2510.18552v1",
+        "published_date": "2025-10-21T12:02:26+00:00",
+        "updated_date": "2025-10-21T12:02:26+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Sanjay Kumar",
+            "Tim Brophy",
+            "Reenu Mohandas",
+            "Eoin Martino Grua",
+            "Ganesh Sistu",
+            "Valentina Donzella",
+            "Ciaran Eising"
+        ],
+        "tldr": "The paper introduces Occluded nuScenes, a multi-sensor dataset extending nuScenes with controlled and reproducible occlusions for camera, radar, and LiDAR, designed to evaluate perception robustness in automated driving.",
+        "tldr_zh": "该论文介绍了Occluded nuScenes，这是一个多传感器数据集，它扩展了nuScenes，包含可控和可重复的摄像头、雷达和激光雷达遮挡，旨在评估自动驾驶中感知的鲁棒性。",
+        "relevance_score": 10,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "BlendCLIP: Bridging Synthetic and Real Domains for Zero-Shot 3D Object Classification with Multimodal Pretraining",
+        "summary": "Zero-shot 3D object classification is crucial for real-world applications\nlike autonomous driving, however it is often hindered by a significant domain\ngap between the synthetic data used for training and the sparse, noisy LiDAR\nscans encountered in the real-world. Current methods trained solely on\nsynthetic data fail to generalize to outdoor scenes, while those trained only\non real data lack the semantic diversity to recognize rare or unseen objects.\n  We introduce BlendCLIP, a multimodal pretraining framework that bridges this\nsynthetic-to-real gap by strategically combining the strengths of both domains.\nWe first propose a pipeline to generate a large-scale dataset of object-level\ntriplets -- consisting of a point cloud, image, and text description -- mined\ndirectly from real-world driving data and human annotated 3D boxes. Our core\ncontribution is a curriculum-based data mixing strategy that first grounds the\nmodel in the semantically rich synthetic CAD data before progressively adapting\nit to the specific characteristics of real-world scans.\n  Our experiments show that our approach is highly label-efficient: introducing\nas few as 1.5\\% real-world samples per batch into training boosts zero-shot\naccuracy on the nuScenes benchmark by 27\\%. Consequently, our final model\nachieves state-of-the-art performance on challenging outdoor datasets like\nnuScenes and TruckScenes, improving over the best prior method by 19.3\\% on\nnuScenes, while maintaining strong generalization on diverse synthetic\nbenchmarks. Our findings demonstrate that effective domain adaptation, not\nfull-scale real-world annotation, is the key to unlocking robust\nopen-vocabulary 3D perception. Our code and dataset will be released upon\nacceptance on https://github.com/kesu1/BlendCLIP.",
+        "url": "http://arxiv.org/abs/2510.18244v1",
+        "published_date": "2025-10-21T03:08:27+00:00",
+        "updated_date": "2025-10-21T03:08:27+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ajinkya Khoche",
+            "Gergő László Nagy",
+            "Maciej Wozniak",
+            "Thomas Gustafsson",
+            "Patric Jensfelt"
+        ],
+        "tldr": "BlendCLIP bridges the synthetic-to-real domain gap in 3D object classification by using a curriculum-based data mixing strategy with both synthetic and real-world data, achieving state-of-the-art results on nuScenes and TruckScenes.",
+        "tldr_zh": "BlendCLIP通过使用基于课程的数据混合策略，结合合成数据和真实世界数据，弥合了3D对象分类中从合成到真实的领域差距，在nuScenes和TruckScenes上实现了最先进的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "SAVANT: Semantic Analysis with Vision-Augmented Anomaly deTection",
+        "summary": "Autonomous driving systems remain critically vulnerable to the long-tail of\nrare, out-of-distribution scenarios with semantic anomalies. While Vision\nLanguage Models (VLMs) offer promising reasoning capabilities, naive prompting\napproaches yield unreliable performance and depend on expensive proprietary\nmodels, limiting practical deployment. We introduce SAVANT (Semantic Analysis\nwith Vision-Augmented Anomaly deTection), a structured reasoning framework that\nachieves high accuracy and recall in detecting anomalous driving scenarios from\ninput images through layered scene analysis and a two-phase pipeline:\nstructured scene description extraction followed by multi-modal evaluation. Our\napproach transforms VLM reasoning from ad-hoc prompting to systematic analysis\nacross four semantic layers: Street, Infrastructure, Movable Objects, and\nEnvironment. SAVANT achieves 89.6% recall and 88.0% accuracy on real-world\ndriving scenarios, significantly outperforming unstructured baselines. More\nimportantly, we demonstrate that our structured framework enables a fine-tuned\n7B parameter open-source model (Qwen2.5VL) to achieve 90.8% recall and 93.8%\naccuracy - surpassing all models evaluated while enabling local deployment at\nnear-zero cost. By automatically labeling over 9,640 real-world images with\nhigh accuracy, SAVANT addresses the critical data scarcity problem in anomaly\ndetection and provides a practical path toward reliable, accessible semantic\nmonitoring for autonomous systems.",
+        "url": "http://arxiv.org/abs/2510.18034v1",
+        "published_date": "2025-10-20T19:14:29+00:00",
+        "updated_date": "2025-10-20T19:14:29+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.RO",
+            "I.2.9; I.4.8"
+        ],
+        "authors": [
+            "Roberto Brusnicki",
+            "David Pop",
+            "Yuan Gao",
+            "Mattia Piccinini",
+            "Johannes Betz"
+        ],
+        "tldr": "The paper introduces SAVANT, a structured reasoning framework for detecting semantic anomalies in autonomous driving using VLMs. It achieves high accuracy and recall with a fine-tuned open-source model, addressing data scarcity by automatically labeling real-world images.",
+        "tldr_zh": "该论文介绍了SAVANT，一个使用VLM检测自动驾驶中语义异常的结构化推理框架。它通过微调的开源模型实现了高精度和高召回率，并通过自动标记真实世界图像来解决数据稀缺问题。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Think with 3D: Geometric Imagination Grounded Spatial Reasoning from Limited Views",
+        "summary": "Though recent advances in vision-language models (VLMs) have achieved\nremarkable progress across a wide range of multimodal tasks, understanding 3D\nspatial relationships from limited views remains a significant challenge.\nPrevious reasoning methods typically rely on pure text (e.g., topological\ncognitive maps) or on 2D visual cues. However, their limited representational\ncapacity hinders performance in specific tasks that require 3D spatial\nimagination. To address this limitation, we propose 3DThinker, a framework that\ncan effectively exploits the rich geometric information embedded within images\nwhile reasoning, like humans do. Our framework is the first to enable 3D\nmentaling during reasoning without any 3D prior input, and it does not rely on\nexplicitly labeled 3D data for training. Specifically, our training consists of\ntwo stages. First, we perform supervised training to align the 3D latent\ngenerated by VLM while reasoning with that of a 3D foundation model (e.g.,\nVGGT). Then, we optimize the entire reasoning trajectory solely based on\noutcome signals, thereby refining the underlying 3D mentaling. Extensive\nexperiments across multiple benchmarks show that 3DThinker consistently\noutperforms strong baselines and offers a new perspective toward unifying 3D\nrepresentations into multimodal reasoning. Our code will be available at\nhttps://github.com/zhangquanchen/3DThinker.",
+        "url": "http://arxiv.org/abs/2510.18632v1",
+        "published_date": "2025-10-21T13:36:58+00:00",
+        "updated_date": "2025-10-21T13:36:58+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "I.2.10"
+        ],
+        "authors": [
+            "Zhangquan Chen",
+            "Manyuan Zhang",
+            "Xinlei Yu",
+            "Xufang Luo",
+            "Mingze Sun",
+            "Zihao Pan",
+            "Yan Feng",
+            "Peng Pei",
+            "Xunliang Cai",
+            "Ruqi Huang"
+        ],
+        "tldr": "The paper introduces 3DThinker, a novel framework enabling 3D mentalizing during vision-language reasoning from limited views without explicit 3D data, achieving state-of-the-art performance on several benchmarks.",
+        "tldr_zh": "该论文介绍了3DThinker，一种新的框架，可以在有限的视角下实现视觉语言推理过程中的3D思维，无需明确的3D数据，并在多个基准测试中实现了最先进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "GBlobs: Local LiDAR Geometry for Improved Sensor Placement Generalization",
+        "summary": "This technical report outlines the top-ranking solution for RoboSense 2025:\nTrack 3, achieving state-of-the-art performance on 3D object detection under\nvarious sensor placements. Our submission utilizes GBlobs, a local point cloud\nfeature descriptor specifically designed to enhance model generalization across\ndiverse LiDAR configurations. Current LiDAR-based 3D detectors often suffer\nfrom a \\enquote{geometric shortcut} when trained on conventional global\nfeatures (\\ie, absolute Cartesian coordinates). This introduces a position bias\nthat causes models to primarily rely on absolute object position rather than\ndistinguishing shape and appearance characteristics. Although effective for\nin-domain data, this shortcut severely limits generalization when encountering\ndifferent point distributions, such as those resulting from varying sensor\nplacements. By using GBlobs as network input features, we effectively\ncircumvent this geometric shortcut, compelling the network to learn robust,\nobject-centric representations. This approach significantly enhances the\nmodel's ability to generalize, resulting in the exceptional performance\ndemonstrated in this challenge.",
+        "url": "http://arxiv.org/abs/2510.18539v1",
+        "published_date": "2025-10-21T11:35:58+00:00",
+        "updated_date": "2025-10-21T11:35:58+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Dušan Malić",
+            "Christian Fruhwirth-Reisinger",
+            "Alexander Prutsch",
+            "Wei Lin",
+            "Samuel Schulter",
+            "Horst Possegger"
+        ],
+        "tldr": "The paper introduces GBlobs, a novel local point cloud feature descriptor, to improve the generalization of 3D object detection models across different LiDAR sensor placements by avoiding geometric shortcuts and enforcing object-centric representation learning.",
+        "tldr_zh": "该论文介绍了GBlobs，一种新颖的局部点云特征描述符，旨在通过避免几何捷径并强制进行以对象为中心的表示学习，来提高3D对象检测模型在不同激光雷达传感器位置上的泛化能力。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "ViSE: A Systematic Approach to Vision-Only Street-View Extrapolation",
+        "summary": "Realistic view extrapolation is critical for closed-loop simulation in\nautonomous driving, yet it remains a significant challenge for current Novel\nView Synthesis (NVS) methods, which often produce distorted and inconsistent\nimages beyond the original trajectory. This report presents our winning\nsolution which ctook first place in the RealADSim Workshop NVS track at ICCV\n2025. To address the core challenges of street view extrapolation, we introduce\na comprehensive four-stage pipeline. First, we employ a data-driven\ninitialization strategy to generate a robust pseudo-LiDAR point cloud, avoiding\nlocal minima. Second, we inject strong geometric priors by modeling the road\nsurface with a novel dimension-reduced SDF termed 2D-SDF. Third, we leverage a\ngenerative prior to create pseudo ground truth for extrapolated viewpoints,\nproviding auxilary supervision. Finally, a data-driven adaptation network\nremoves time-specific artifacts. On the RealADSim-NVS benchmark, our method\nachieves a final score of 0.441, ranking first among all participants.",
+        "url": "http://arxiv.org/abs/2510.18341v1",
+        "published_date": "2025-10-21T06:50:20+00:00",
+        "updated_date": "2025-10-21T06:50:20+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Kaiyuan Tan",
+            "Yingying Shen",
+            "Haiyang Sun",
+            "Bing Wang",
+            "Guang Chen",
+            "Hangjun Ye"
+        ],
+        "tldr": "The paper presents a novel four-stage pipeline, ViSE, for realistic street-view extrapolation in autonomous driving, achieving first place in the RealADSim Workshop NVS track at ICCV 2025 by using pseudo-LiDAR, 2D-SDF road modeling, generative priors for pseudo ground truth, and a data-driven adaptation network.",
+        "tldr_zh": "该论文提出了一种名为ViSE的新型四阶段流程，用于自动驾驶中逼真的街景外推。该方法在ICCV 2025的RealADSim Workshop NVS赛道中获得第一名，通过使用伪激光雷达、2D-SDF道路建模、生成先验知识的伪真值以及数据驱动的自适应网络。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "OpenInsGaussian: Open-vocabulary Instance Gaussian Segmentation with Context-aware Cross-view Fusion",
+        "summary": "Understanding 3D scenes is pivotal for autonomous driving, robotics, and\naugmented reality. Recent semantic Gaussian Splatting approaches leverage\nlarge-scale 2D vision models to project 2D semantic features onto 3D scenes.\nHowever, they suffer from two major limitations: (1) insufficient contextual\ncues for individual masks during preprocessing and (2) inconsistencies and\nmissing details when fusing multi-view features from these 2D models. In this\npaper, we introduce \\textbf{OpenInsGaussian}, an \\textbf{Open}-vocabulary\n\\textbf{Ins}tance \\textbf{Gaussian} segmentation framework with Context-aware\nCross-view Fusion. Our method consists of two modules: Context-Aware Feature\nExtraction, which augments each mask with rich semantic context, and\nAttention-Driven Feature Aggregation, which selectively fuses multi-view\nfeatures to mitigate alignment errors and incompleteness. Through extensive\nexperiments on benchmark datasets, OpenInsGaussian achieves state-of-the-art\nresults in open-vocabulary 3D Gaussian segmentation, outperforming existing\nbaselines by a large margin. These findings underscore the robustness and\ngenerality of our proposed approach, marking a significant step forward in 3D\nscene understanding and its practical deployment across diverse real-world\nscenarios.",
+        "url": "http://arxiv.org/abs/2510.18253v1",
+        "published_date": "2025-10-21T03:24:12+00:00",
+        "updated_date": "2025-10-21T03:24:12+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Tianyu Huang",
+            "Runnan Chen",
+            "Dongting Hu",
+            "Fengming Huang",
+            "Mingming Gong",
+            "Tongliang Liu"
+        ],
+        "tldr": "OpenInsGaussian introduces a novel framework for open-vocabulary instance Gaussian segmentation, addressing limitations in contextual understanding and multi-view feature fusion. It achieves state-of-the-art results on benchmark datasets.",
+        "tldr_zh": "OpenInsGaussian 引入了一种新颖的开放词汇实例高斯分割框架，解决了上下文理解和多视图特征融合方面的局限性。该方法在基准数据集上实现了最先进的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "World-in-World: World Models in a Closed-Loop World",
+        "summary": "Generative world models (WMs) can now simulate worlds with striking visual\nrealism, which naturally raises the question of whether they can endow embodied\nagents with predictive perception for decision making. Progress on this\nquestion has been limited by fragmented evaluation: most existing benchmarks\nadopt open-loop protocols that emphasize visual quality in isolation, leaving\nthe core issue of embodied utility unresolved, i.e., do WMs actually help\nagents succeed at embodied tasks? To address this gap, we introduce\nWorld-in-World, the first open platform that benchmarks WMs in a closed-loop\nworld that mirrors real agent-environment interactions. World-in-World provides\na unified online planning strategy and a standardized action API, enabling\nheterogeneous WMs for decision making. We curate four closed-loop environments\nthat rigorously evaluate diverse WMs, prioritize task success as the primary\nmetric, and move beyond the common focus on visual quality; we also present the\nfirst data scaling law for world models in embodied settings. Our study\nuncovers three surprises: (1) visual quality alone does not guarantee task\nsuccess, controllability matters more; (2) scaling post-training with\naction-observation data is more effective than upgrading the pretrained video\ngenerators; and (3) allocating more inference-time compute allows WMs to\nsubstantially improve closed-loop performance.",
+        "url": "http://arxiv.org/abs/2510.18135v1",
+        "published_date": "2025-10-20T22:09:15+00:00",
+        "updated_date": "2025-10-20T22:09:15+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jiahan Zhang",
+            "Muqing Jiang",
+            "Nanru Dai",
+            "Taiming Lu",
+            "Arda Uzunoglu",
+            "Shunchi Zhang",
+            "Yana Wei",
+            "Jiahao Wang",
+            "Vishal M. Patel",
+            "Paul Pu Liang",
+            "Daniel Khashabi",
+            "Cheng Peng",
+            "Rama Chellappa",
+            "Tianmin Shu",
+            "Alan Yuille",
+            "Yilun Du",
+            "Jieneng Chen"
+        ],
+        "tldr": "The paper introduces World-in-World, a new benchmark and platform for evaluating world models in closed-loop embodied tasks, moving beyond visual quality to prioritize task success. They identify key insights about the importance of controllability and data scaling for world model performance.",
+        "tldr_zh": "该论文介绍了 World-in-World，一个用于评估闭环具身任务中世界模型的新基准和平台，从视觉质量转向优先考虑任务成功。 他们发现了关于可控性和数据缩放对世界模型性能重要性的关键见解。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "SafeCoop: Unravelling Full Stack Safety in Agentic Collaborative Driving",
+        "summary": "Collaborative driving systems leverage vehicle-to-everything (V2X)\ncommunication across multiple agents to enhance driving safety and efficiency.\nTraditional V2X systems take raw sensor data, neural features, or perception\nresults as communication media, which face persistent challenges, including\nhigh bandwidth demands, semantic loss, and interoperability issues. Recent\nadvances investigate natural language as a promising medium, which can provide\nsemantic richness, decision-level reasoning, and human-machine interoperability\nat significantly lower bandwidth. Despite great promise, this paradigm shift\nalso introduces new vulnerabilities within language communication, including\nmessage loss, hallucinations, semantic manipulation, and adversarial attacks.\nIn this work, we present the first systematic study of full-stack safety and\nsecurity issues in natural-language-based collaborative driving. Specifically,\nwe develop a comprehensive taxonomy of attack strategies, including connection\ndisruption, relay/replay interference, content spoofing, and multi-connection\nforgery. To mitigate these risks, we introduce an agentic defense pipeline,\nwhich we call SafeCoop, that integrates a semantic firewall,\nlanguage-perception consistency checks, and multi-source consensus, enabled by\nan agentic transformation function for cross-frame spatial alignment. We\nsystematically evaluate SafeCoop in closed-loop CARLA simulation across 32\ncritical scenarios, achieving 69.15% driving score improvement under malicious\nattacks and up to 67.32% F1 score for malicious detection. This study provides\nguidance for advancing research on safe, secure, and trustworthy\nlanguage-driven collaboration in transportation systems. Our project page is\nhttps://xiangbogaobarry.github.io/SafeCoop.",
+        "url": "http://arxiv.org/abs/2510.18123v1",
+        "published_date": "2025-10-20T21:41:28+00:00",
+        "updated_date": "2025-10-20T21:41:28+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.CL",
+            "cs.RO"
+        ],
+        "authors": [
+            "Xiangbo Gao",
+            "Tzu-Hsiang Lin",
+            "Ruojing Song",
+            "Yuheng Wu",
+            "Kuan-Ru Huang",
+            "Zicheng Jin",
+            "Fangzhou Lin",
+            "Shinan Liu",
+            "Zhengzhong Tu"
+        ],
+        "tldr": "The paper introduces SafeCoop, a defense pipeline against vulnerabilities in natural-language-based collaborative driving systems. It addresses safety and security issues by integrating semantic firewalls, consistency checks, and multi-source consensus, demonstrating significant improvements in driving safety and malicious attack detection.",
+        "tldr_zh": "该论文介绍了SafeCoop，一种针对基于自然语言的协作驾驶系统中漏洞的防御管道。它通过集成语义防火墙、一致性检查和多源共识来解决安全问题，并在驾驶安全性和恶意攻击检测方面取得了显著改进。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    }
+]
