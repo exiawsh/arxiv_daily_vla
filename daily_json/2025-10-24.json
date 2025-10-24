@@ -1,0 +1,289 @@
+[
+    {
+        "title": "AutoScape: Geometry-Consistent Long-Horizon Scene Generation",
+        "summary": "This paper proposes AutoScape, a long-horizon driving scene generation\nframework. At its core is a novel RGB-D diffusion model that iteratively\ngenerates sparse, geometrically consistent keyframes, serving as reliable\nanchors for the scene's appearance and geometry. To maintain long-range\ngeometric consistency, the model 1) jointly handles image and depth in a shared\nlatent space, 2) explicitly conditions on the existing scene geometry (i.e.,\nrendered point clouds) from previously generated keyframes, and 3) steers the\nsampling process with a warp-consistent guidance. Given high-quality RGB-D\nkeyframes, a video diffusion model then interpolates between them to produce\ndense and coherent video frames. AutoScape generates realistic and\ngeometrically consistent driving videos of over 20 seconds, improving the\nlong-horizon FID and FVD scores over the prior state-of-the-art by 48.6\\% and\n43.0\\%, respectively.",
+        "url": "http://arxiv.org/abs/2510.20726v1",
+        "published_date": "2025-10-23T16:44:34+00:00",
+        "updated_date": "2025-10-23T16:44:34+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jiacheng Chen",
+            "Ziyu Jiang",
+            "Mingfu Liang",
+            "Bingbing Zhuang",
+            "Jong-Chyi Su",
+            "Sparsh Garg",
+            "Ying Wu",
+            "Manmohan Chandraker"
+        ],
+        "tldr": "AutoScape introduces a novel RGB-D diffusion model for generating geometrically consistent, long-horizon driving scene videos by iteratively creating sparse keyframes and interpolating them with a video diffusion model, significantly improving FID and FVD scores.",
+        "tldr_zh": "AutoScape 提出了一种新颖的 RGB-D 扩散模型，用于生成几何一致的、长时程驾驶场景视频。该模型通过迭代创建稀疏关键帧，并使用视频扩散模型对其进行插值，从而显著提高了 FID 和 FVD 分数。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Monocular Visual 8D Pose Estimation for Articulated Bicycles and Cyclists",
+        "summary": "In Autonomous Driving, cyclists belong to the safety-critical class of\nVulnerable Road Users (VRU), and accurate estimation of their pose is critical\nfor cyclist crossing intention classification, behavior prediction, and\ncollision avoidance. Unlike rigid objects, articulated bicycles are composed of\nmovable rigid parts linked by joints and constrained by a kinematic structure.\n6D pose methods can estimate the 3D rotation and translation of rigid bicycles,\nbut 6D becomes insufficient when the steering/pedals angles of the bicycle\nvary. That is because: 1) varying the articulated pose of the bicycle causes\nits 3D bounding box to vary as well, and 2) the 3D box orientation is not\nnecessarily aligned to the orientation of the steering which determines the\nactual intended travel direction. In this work, we introduce a method for\ncategory-level 8D pose estimation for articulated bicycles and cyclists from a\nsingle RGB image. Besides being able to estimate the 3D translation and\nrotation of a bicycle from a single image, our method also estimates the\nrotations of its steering handles and pedals with respect to the bicycle body\nframe. These two new parameters enable the estimation of a more fine-grained\nbicycle pose state and travel direction. Our proposed model jointly estimates\nthe 8D pose and the 3D Keypoints of articulated bicycles, and trains with a mix\nof synthetic and real image data to generalize on real images. We include an\nevaluation section where we evaluate the accuracy of our estimated 8D pose\nparameters, and our method shows promising results by achieving competitive\nscores when compared against state-of-the-art category-level 6D pose estimators\nthat use rigid canonical object templates for matching.",
+        "url": "http://arxiv.org/abs/2510.20158v1",
+        "published_date": "2025-10-23T03:17:22+00:00",
+        "updated_date": "2025-10-23T03:17:22+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Eduardo R. Corral-Soto",
+            "Yang Liu",
+            "Yuan Ren",
+            "Bai Dongfeng",
+            "Liu Bingbing"
+        ],
+        "tldr": "This paper introduces a monocular vision-based method for estimating the 8D pose of articulated bicycles and cyclists, including steering and pedal angles, which is important for autonomous driving safety.",
+        "tldr_zh": "本文介绍了一种基于单目视觉的方法，用于估计铰接式自行车和骑自行车者的8D姿态，包括转向和踏板角度，这对于自动驾驶安全至关重要。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Radar-Camera Fused Multi-Object Tracking: Online Calibration and Common Feature",
+        "summary": "This paper presents a Multi-Object Tracking (MOT) framework that fuses radar\nand camera data to enhance tracking efficiency while minimizing manual\ninterventions. Contrary to many studies that underutilize radar and assign it a\nsupplementary role--despite its capability to provide accurate range/depth\ninformation of targets in a world 3D coordinate system--our approach positions\nradar in a crucial role. Meanwhile, this paper utilizes common features to\nenable online calibration to autonomously associate detections from radar and\ncamera. The main contributions of this work include: (1) the development of a\nradar-camera fusion MOT framework that exploits online radar-camera calibration\nto simplify the integration of detection results from these two sensors, (2)\nthe utilization of common features between radar and camera data to accurately\nderive real-world positions of detected objects, and (3) the adoption of\nfeature matching and category-consistency checking to surpass the limitations\nof mere position matching in enhancing sensor association accuracy. To the best\nof our knowledge, we are the first to investigate the integration of\nradar-camera common features and their use in online calibration for achieving\nMOT. The efficacy of our framework is demonstrated by its ability to streamline\nthe radar-camera mapping process and improve tracking precision, as evidenced\nby real-world experiments conducted in both controlled environments and actual\ntraffic scenarios. Code is available at\nhttps://github.com/radar-lab/Radar_Camera_MOT",
+        "url": "http://arxiv.org/abs/2510.20794v1",
+        "published_date": "2025-10-23T17:54:57+00:00",
+        "updated_date": "2025-10-23T17:54:57+00:00",
+        "categories": [
+            "cs.CV",
+            "eess.SP"
+        ],
+        "authors": [
+            "Lei Cheng",
+            "Siyang Cao"
+        ],
+        "tldr": "This paper presents a novel radar-camera fusion MOT framework with online calibration using common features, improving tracking accuracy in real-world autonomous driving scenarios. The code is publicly available.",
+        "tldr_zh": "本文提出了一种新颖的雷达-摄像头融合的多目标跟踪框架，该框架使用通用特征进行在线校准，从而提高了真实自动驾驶场景中的跟踪精度。代码已公开。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "ALICE-LRI: A General Method for Lossless Range Image Generation for Spinning LiDAR Sensors without Calibration Metadata",
+        "summary": "3D LiDAR sensors are essential for autonomous navigation, environmental\nmonitoring, and precision mapping in remote sensing applications. To\nefficiently process the massive point clouds generated by these sensors, LiDAR\ndata is often projected into 2D range images that organize points by their\nangular positions and distances. While these range image representations enable\nefficient processing, conventional projection methods suffer from fundamental\ngeometric inconsistencies that cause irreversible information loss,\ncompromising high-fidelity applications. We present ALICE-LRI (Automatic LiDAR\nIntrinsic Calibration Estimation for Lossless Range Images), the first general,\nsensor-agnostic method that achieves lossless range image generation from\nspinning LiDAR point clouds without requiring manufacturer metadata or\ncalibration files. Our algorithm automatically reverse-engineers the intrinsic\ngeometry of any spinning LiDAR sensor by inferring critical parameters\nincluding laser beam configuration, angular distributions, and per-beam\ncalibration corrections, enabling lossless projection and complete point cloud\nreconstruction with zero point loss. Comprehensive evaluation across the\ncomplete KITTI and DurLAR datasets demonstrates that ALICE-LRI achieves perfect\npoint preservation, with zero points lost across all point clouds. Geometric\naccuracy is maintained well within sensor precision limits, establishing\ngeometric losslessness with real-time performance. We also present a\ncompression case study that validates substantial downstream benefits,\ndemonstrating significant quality improvements in practical applications. This\nparadigm shift from approximate to lossless LiDAR projections opens new\npossibilities for high-precision remote sensing applications requiring complete\ngeometric preservation.",
+        "url": "http://arxiv.org/abs/2510.20708v1",
+        "published_date": "2025-10-23T16:22:58+00:00",
+        "updated_date": "2025-10-23T16:22:58+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Samuel Soutullo",
+            "Miguel Yermo",
+            "David L. Vilariño",
+            "Óscar G. Lorenzo",
+            "José C. Cabaleiro",
+            "Francisco F. Rivera"
+        ],
+        "tldr": "ALICE-LRI presents a novel, sensor-agnostic method for generating lossless range images from spinning LiDAR data without calibration metadata, enabling perfect point preservation and complete point cloud reconstruction.",
+        "tldr_zh": "ALICE-LRI 提出了一种新颖的、传感器无关的方法，用于从旋转 LiDAR 数据生成无损距离图像，无需校准元数据，从而实现完美的点保留和完整的点云重建。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "OnlineSplatter: Pose-Free Online 3D Reconstruction for Free-Moving Objects",
+        "summary": "Free-moving object reconstruction from monocular video remains challenging,\nparticularly without reliable pose or depth cues and under arbitrary object\nmotion. We introduce OnlineSplatter, a novel online feed-forward framework\ngenerating high-quality, object-centric 3D Gaussians directly from RGB frames\nwithout requiring camera pose, depth priors, or bundle optimization. Our\napproach anchors reconstruction using the first frame and progressively refines\nthe object representation through a dense Gaussian primitive field, maintaining\nconstant computational cost regardless of video sequence length. Our core\ncontribution is a dual-key memory module combining latent appearance-geometry\nkeys with explicit directional keys, robustly fusing current frame features\nwith temporally aggregated object states. This design enables effective\nhandling of free-moving objects via spatial-guided memory readout and an\nefficient sparsification mechanism, ensuring comprehensive yet compact object\ncoverage. Evaluations on real-world datasets demonstrate that OnlineSplatter\nsignificantly outperforms state-of-the-art pose-free reconstruction baselines,\nconsistently improving with more observations while maintaining constant memory\nand runtime.",
+        "url": "http://arxiv.org/abs/2510.20605v1",
+        "published_date": "2025-10-23T14:37:25+00:00",
+        "updated_date": "2025-10-23T14:37:25+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "I.4.5; I.2.6"
+        ],
+        "authors": [
+            "Mark He Huang",
+            "Lin Geng Foo",
+            "Christian Theobalt",
+            "Ying Sun",
+            "De Wen Soh"
+        ],
+        "tldr": "OnlineSplatter introduces a novel online framework for reconstructing 3D Gaussians of free-moving objects from monocular video without pose or depth priors, utilizing a dual-key memory module for robust temporal aggregation and demonstrating state-of-the-art performance.",
+        "tldr_zh": "OnlineSplatter 提出了一种新的在线框架，用于从单目视频中重建自由移动物体的3D高斯分布，无需姿态或深度先验信息。它采用双键记忆模块进行鲁棒的时间聚合，并展示了最先进的性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "EmbodiedBrain: Expanding Performance Boundaries of Task Planning for Embodied Intelligence",
+        "summary": "The realization of Artificial General Intelligence (AGI) necessitates\nEmbodied AI agents capable of robust spatial perception, effective task\nplanning, and adaptive execution in physical environments. However, current\nlarge language models (LLMs) and multimodal LLMs (MLLMs) for embodied tasks\nsuffer from key limitations, including a significant gap between model design\nand agent requirements, an unavoidable trade-off between real-time latency and\nperformance, and the use of unauthentic, offline evaluation metrics. To address\nthese challenges, we propose EmbodiedBrain, a novel vision-language foundation\nmodel available in both 7B and 32B parameter sizes. Our framework features an\nagent-aligned data structure and employs a powerful training methodology that\nintegrates large-scale Supervised Fine-Tuning (SFT) with Step-Augumented Group\nRelative Policy Optimization (Step-GRPO), which boosts long-horizon task\nsuccess by integrating preceding steps as Guided Precursors. Furthermore, we\nincorporate a comprehensive reward system, including a Generative Reward Model\n(GRM) accelerated at the infrastructure level, to improve training efficiency.\nFor enable thorough validation, we establish a three-part evaluation system\nencompassing General, Planning, and End-to-End Simulation Benchmarks,\nhighlighted by the proposal and open-sourcing of a novel, challenging\nsimulation environment. Experimental results demonstrate that EmbodiedBrain\nachieves superior performance across all metrics, establishing a new\nstate-of-the-art for embodied foundation models. Towards paving the way for the\nnext generation of generalist embodied agents, we open-source all of our data,\nmodel weight, and evaluating methods, which are available at\nhttps://zterobot.github.io/EmbodiedBrain.github.io.",
+        "url": "http://arxiv.org/abs/2510.20578v1",
+        "published_date": "2025-10-23T14:05:55+00:00",
+        "updated_date": "2025-10-23T14:05:55+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Ding Zou",
+            "Feifan Wang",
+            "Mengyu Ge",
+            "Siyuan Fan",
+            "Zongbing Zhang",
+            "Wei Chen",
+            "Lingfeng Wang",
+            "Zhongyou Hu",
+            "Wenrui Yan",
+            "Zhengwei Gao",
+            "Hao Wang",
+            "Weizhao Jin",
+            "Yu Zhang",
+            "Hainan Zhao",
+            "Mingliang Zhang",
+            "Xianxian Xi",
+            "Yaru Zhang",
+            "Wenyuan Li",
+            "Zhengguang Gao",
+            "Yurui Zhu"
+        ],
+        "tldr": "The paper introduces EmbodiedBrain, a new vision-language foundation model for embodied AI agents, addressing limitations of current LLMs/MLLMs through a novel training methodology and evaluation system, achieving state-of-the-art performance.",
+        "tldr_zh": "该论文介绍了EmbodiedBrain，一种新的具身AI代理的视觉-语言基础模型，通过新的训练方法和评估系统解决了当前LLM/MLLM的局限性，并实现了最先进的性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Dino-Diffusion Modular Designs Bridge the Cross-Domain Gap in Autonomous Parking",
+        "summary": "Parking is a critical pillar of driving safety. While recent end-to-end (E2E)\napproaches have achieved promising in-domain results, robustness under domain\nshifts (e.g., weather and lighting changes) remains a key challenge. Rather\nthan relying on additional data, in this paper, we propose Dino-Diffusion\nParking (DDP), a domain-agnostic autonomous parking pipeline that integrates\nvisual foundation models with diffusion-based planning to enable generalized\nperception and robust motion planning under distribution shifts. We train our\npipeline in CARLA at regular setting and transfer it to more adversarial\nsettings in a zero-shot fashion. Our model consistently achieves a parking\nsuccess rate above 90% across all tested out-of-distribution (OOD) scenarios,\nwith ablation studies confirming that both the network architecture and\nalgorithmic design significantly enhance cross-domain performance over existing\nbaselines. Furthermore, testing in a 3D Gaussian splatting (3DGS) environment\nreconstructed from a real-world parking lot demonstrates promising sim-to-real\ntransfer.",
+        "url": "http://arxiv.org/abs/2510.20335v1",
+        "published_date": "2025-10-23T08:35:50+00:00",
+        "updated_date": "2025-10-23T08:35:50+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Zixuan Wu",
+            "Hengyuan Zhang",
+            "Ting-Hsuan Chen",
+            "Yuliang Guo",
+            "David Paz",
+            "Xinyu Huang",
+            "Liu Ren"
+        ],
+        "tldr": "This paper introduces Dino-Diffusion Parking (DDP), a domain-agnostic autonomous parking pipeline using visual foundation models and diffusion-based planning, achieving high success rates in various out-of-distribution scenarios and promising sim-to-real transfer.",
+        "tldr_zh": "该论文介绍了Dino-Diffusion Parking (DDP)，一种领域无关的自动泊车方案，使用视觉基础模型和基于扩散的规划，在各种分布外场景中实现了较高的成功率，并展示了有希望的sim-to-real迁移。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Kinaema: a recurrent sequence model for memory and pose in motion",
+        "summary": "One key aspect of spatially aware robots is the ability to \"find their\nbearings\", ie. to correctly situate themselves in previously seen spaces. In\nthis work, we focus on this particular scenario of continuous robotics\noperations, where information observed before an actual episode start is\nexploited to optimize efficiency. We introduce a new model, Kinaema, and agent,\ncapable of integrating a stream of visual observations while moving in a\npotentially large scene, and upon request, processing a query image and\npredicting the relative position of the shown space with respect to its current\nposition. Our model does not explicitly store an observation history, therefore\ndoes not have hard constraints on context length. It maintains an implicit\nlatent memory, which is updated by a transformer in a recurrent way,\ncompressing the history of sensor readings into a compact representation. We\nevaluate the impact of this model in a new downstream task we call \"Mem-Nav\".\nWe show that our large-capacity recurrent model maintains a useful\nrepresentation of the scene, navigates to goals observed before the actual\nepisode start, and is computationally efficient, in particular compared to\nclassical transformers with attention over an observation history.",
+        "url": "http://arxiv.org/abs/2510.20261v1",
+        "published_date": "2025-10-23T06:34:53+00:00",
+        "updated_date": "2025-10-23T06:34:53+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV",
+            "I.2.10"
+        ],
+        "authors": [
+            "Mert Bulent Sariyildiz",
+            "Philippe Weinzaepfel",
+            "Guillaume Bono",
+            "Gianluca Monaci",
+            "Christian Wolf"
+        ],
+        "tldr": "The paper introduces Kinaema, a recurrent sequence model that enables robots to localize themselves in previously seen environments using a latent memory updated by a transformer, demonstrating its effectiveness in a \"Mem-Nav\" task.",
+        "tldr_zh": "该论文介绍了一种名为Kinaema的循环序列模型，它使机器人能够利用Transformer更新的潜在记忆在先前见过的环境中定位自己，并在“Mem-Nav”任务中展示了其有效性。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Physics-Guided Fusion for Robust 3D Tracking of Fast Moving Small Objects",
+        "summary": "While computer vision has advanced considerably for general object detection\nand tracking, the specific problem of fast-moving tiny objects remains\nunderexplored. This paper addresses the significant challenge of detecting and\ntracking rapidly moving small objects using an RGB-D camera. Our novel system\ncombines deep learning-based detection with physics-based tracking to overcome\nthe limitations of existing approaches. Our contributions include: (1) a\ncomprehensive system design for object detection and tracking of fast-moving\nsmall objects in 3D space, (2) an innovative physics-based tracking algorithm\nthat integrates kinematics motion equations to handle outliers and missed\ndetections, and (3) an outlier detection and correction module that\nsignificantly improves tracking performance in challenging scenarios such as\nocclusions and rapid direction changes. We evaluated our proposed system on a\ncustom racquetball dataset. Our evaluation shows our system surpassing kalman\nfilter based trackers with up to 70\\% less Average Displacement Error. Our\nsystem has significant applications for improving robot perception on\nautonomous platforms and demonstrates the effectiveness of combining\nphysics-based models with deep learning approaches for real-time 3D detection\nand tracking of challenging small objects.",
+        "url": "http://arxiv.org/abs/2510.20126v1",
+        "published_date": "2025-10-23T02:00:58+00:00",
+        "updated_date": "2025-10-23T02:00:58+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Prithvi Raj Singh",
+            "Raju Gottumukkala",
+            "Anthony S. Maida",
+            "Alan B. Barhorst",
+            "Vijaya Gopu"
+        ],
+        "tldr": "This paper presents a novel RGB-D based system for detecting and tracking fast-moving small objects by fusing deep learning detection with physics-based tracking, demonstrating superior performance over Kalman filter based methods on a racquetball dataset.",
+        "tldr_zh": "本文提出了一种新颖的基于RGB-D的系统，通过融合深度学习检测和基于物理的跟踪来检测和跟踪快速移动的小物体，在球拍球数据集上表现出优于基于卡尔曼滤波器的性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "FutrTrack: A Camera-LiDAR Fusion Transformer for 3D Multiple Object Tracking",
+        "summary": "We propose FutrTrack, a modular camera-LiDAR multi-object tracking framework\nthat builds on existing 3D detectors by introducing a transformer-based\nsmoother and a fusion-driven tracker. Inspired by query-based tracking\nframeworks, FutrTrack employs a multimodal two-stage transformer refinement and\ntracking pipeline. Our fusion tracker integrates bounding boxes with multimodal\nbird's-eye-view (BEV) fusion features from multiple cameras and LiDAR without\nthe need for an explicit motion model. The tracker assigns and propagates\nidentities across frames, leveraging both geometric and semantic cues for\nrobust re-identification under occlusion and viewpoint changes. Prior to\ntracking, we refine sequences of bounding boxes with a temporal smoother over a\nmoving window to refine trajectories, reduce jitter, and improve spatial\nconsistency. Evaluated on nuScenes and KITTI, FutrTrack demonstrates that\nquery-based transformer tracking methods benefit significantly from multimodal\nsensor features compared with previous single-sensor approaches. With an aMOTA\nof 74.7 on the nuScenes test set, FutrTrack achieves strong performance on 3D\nMOT benchmarks, reducing identity switches while maintaining competitive\naccuracy. Our approach provides an efficient framework for improving\ntransformer-based trackers to compete with other neural-network-based methods\neven with limited data and without pretraining.",
+        "url": "http://arxiv.org/abs/2510.19981v1",
+        "published_date": "2025-10-22T19:25:01+00:00",
+        "updated_date": "2025-10-22T19:25:01+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Martha Teiko Teye",
+            "Ori Maoz",
+            "Matthias Rottmann"
+        ],
+        "tldr": "FutrTrack is a camera-LiDAR fusion-based 3D multi-object tracking framework using a transformer-based smoother and fusion-driven tracker, achieving strong performance on nuScenes and KITTI datasets.",
+        "tldr_zh": "FutrTrack是一个基于相机-激光雷达融合的3D多目标跟踪框架，它采用基于Transformer的平滑器和融合驱动的跟踪器，在nuScenes和KITTI数据集上取得了优异的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Seeing the Unseen: Mask-Driven Positional Encoding and Strip-Convolution Context Modeling for Cross-View Object Geo-Localization",
+        "summary": "Cross-view object geo-localization enables high-precision object localization\nthrough cross-view matching, with critical applications in autonomous driving,\nurban management, and disaster response. However, existing methods rely on\nkeypoint-based positional encoding, which captures only 2D coordinates while\nneglecting object shape information, resulting in sensitivity to annotation\nshifts and limited cross-view matching capability. To address these\nlimitations, we propose a mask-based positional encoding scheme that leverages\nsegmentation masks to capture both spatial coordinates and object silhouettes,\nthereby upgrading the model from \"location-aware\" to \"object-aware.\"\nFurthermore, to tackle the challenge of large-span objects (e.g., elongated\nbuildings) in satellite imagery, we design a context enhancement module. This\nmodule employs horizontal and vertical strip convolutional kernels to extract\nlong-range contextual features, enhancing feature discrimination among\nstrip-like objects. Integrating MPE and CEM, we present EDGeo, an end-to-end\nframework for robust cross-view object geo-localization. Extensive experiments\non two public datasets (CVOGL and VIGOR-Building) demonstrate that our method\nachieves state-of-the-art performance, with a 3.39% improvement in localization\naccuracy under challenging ground-to-satellite scenarios. This work provides a\nrobust positional encoding paradigm and a contextual modeling framework for\nadvancing cross-view geo-localization research.",
+        "url": "http://arxiv.org/abs/2510.20247v1",
+        "published_date": "2025-10-23T06:07:07+00:00",
+        "updated_date": "2025-10-23T06:07:07+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Shuhan Hu",
+            "Yiru Li",
+            "Yuanyuan Li",
+            "Yingying Zhu"
+        ],
+        "tldr": "This paper introduces a new cross-view object geo-localization framework, EDGeo, which uses mask-based positional encoding and strip-convolutional context modeling to improve localization accuracy, especially for objects with large spans in satellite imagery.",
+        "tldr_zh": "本文介绍了一种新的跨视角目标地理定位框架EDGeo，该框架使用基于掩码的位置编码和条带卷积上下文建模来提高定位精度，尤其是在卫星图像中跨度较大的目标。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
