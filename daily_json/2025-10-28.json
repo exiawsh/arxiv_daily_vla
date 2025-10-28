@@ -1,0 +1,290 @@
+[
+    {
+        "title": "Concerto: Joint 2D-3D Self-Supervised Learning Emerges Spatial Representations",
+        "summary": "Humans learn abstract concepts through multisensory synergy, and once formed,\nsuch representations can often be recalled from a single modality. Inspired by\nthis principle, we introduce Concerto, a minimalist simulation of human concept\nlearning for spatial cognition, combining 3D intra-modal self-distillation with\n2D-3D cross-modal joint embedding. Despite its simplicity, Concerto learns more\ncoherent and informative spatial features, as demonstrated by zero-shot\nvisualizations. It outperforms both standalone SOTA 2D and 3D self-supervised\nmodels by 14.2% and 4.8%, respectively, as well as their feature concatenation,\nin linear probing for 3D scene perception. With full fine-tuning, Concerto sets\nnew SOTA results across multiple scene understanding benchmarks (e.g., 80.7%\nmIoU on ScanNet). We further present a variant of Concerto tailored for\nvideo-lifted point cloud spatial understanding, and a translator that linearly\nprojects Concerto representations into CLIP's language space, enabling\nopen-world perception. These results highlight that Concerto emerges spatial\nrepresentations with superior fine-grained geometric and semantic consistency.",
+        "url": "http://arxiv.org/abs/2510.23607v1",
+        "published_date": "2025-10-27T17:59:59+00:00",
+        "updated_date": "2025-10-27T17:59:59+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yujia Zhang",
+            "Xiaoyang Wu",
+            "Yixing Lao",
+            "Chengyao Wang",
+            "Zhuotao Tian",
+            "Naiyan Wang",
+            "Hengshuang Zhao"
+        ],
+        "tldr": "The paper introduces Concerto, a self-supervised learning approach combining 2D-3D modalities for spatial representation learning, achieving SOTA results on 3D scene understanding benchmarks and demonstrating superior geometric and semantic consistency.",
+        "tldr_zh": "该论文介绍了 Concerto，一种结合 2D-3D 模态的自监督学习方法，用于空间表征学习，在 3D 场景理解基准测试上实现了 SOTA 结果，并展示了卓越的几何和语义一致性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "RobotArena $\\infty$: Scalable Robot Benchmarking via Real-to-Sim Translation",
+        "summary": "The pursuit of robot generalists - instructable agents capable of performing\ndiverse tasks across diverse environments - demands rigorous and scalable\nevaluation. Yet real-world testing of robot policies remains fundamentally\nconstrained: it is labor-intensive, slow, unsafe at scale, and difficult to\nreproduce. Existing simulation benchmarks are similarly limited, as they train\nand test policies within the same synthetic domains and cannot assess models\ntrained from real-world demonstrations or alternative simulation environments.\nAs policies expand in scope and complexity, these barriers only intensify,\nsince defining \"success\" in robotics often hinges on nuanced human judgments of\nexecution quality. In this paper, we introduce a new benchmarking framework\nthat overcomes these challenges by shifting VLA evaluation into large-scale\nsimulated environments augmented with online human feedback. Leveraging\nadvances in vision-language models, 2D-to-3D generative modeling, and\ndifferentiable rendering, our approach automatically converts video\ndemonstrations from widely used robot datasets into simulated counterparts.\nWithin these digital twins, we assess VLA policies using both automated\nVLM-guided scoring and scalable human preference judgments collected from\ncrowdworkers, transforming human involvement from tedious scene setup,\nresetting, and safety supervision into lightweight preference comparisons. To\nmeasure robustness, we systematically perturb simulated environments along\nmultiple axes, such as textures and object placements, stress-testing policy\ngeneralization under controlled variation. The result is a continuously\nevolving, reproducible, and scalable benchmark for real-world trained robot\nmanipulation policies, addressing a critical missing capability in today's\nrobotics landscape.",
+        "url": "http://arxiv.org/abs/2510.23571v1",
+        "published_date": "2025-10-27T17:41:38+00:00",
+        "updated_date": "2025-10-27T17:41:38+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Yash Jangir",
+            "Yidi Zhang",
+            "Kashu Yamazaki",
+            "Chenyu Zhang",
+            "Kuan-Hsun Tu",
+            "Tsung-Wei Ke",
+            "Lei Ke",
+            "Yonatan Bisk",
+            "Katerina Fragkiadaki"
+        ],
+        "tldr": "This paper introduces RobotArena $\\infty$, a novel benchmarking framework that translates real-world robot demonstrations into scalable simulated environments for VLA policy evaluation, incorporating both automated VLM-guided scoring and human preference judgments.",
+        "tldr_zh": "该论文介绍了RobotArena $\\infty$，一种新颖的基准测试框架，它将真实世界的机器人演示转换为可扩展的模拟环境，用于VLA策略评估，并结合了自动VLM引导的评分和人类偏好判断。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "UrbanIng-V2X: A Large-Scale Multi-Vehicle, Multi-Infrastructure Dataset Across Multiple Intersections for Cooperative Perception",
+        "summary": "Recent cooperative perception datasets have played a crucial role in\nadvancing smart mobility applications by enabling information exchange between\nintelligent agents, helping to overcome challenges such as occlusions and\nimproving overall scene understanding. While some existing real-world datasets\nincorporate both vehicle-to-vehicle and vehicle-to-infrastructure interactions,\nthey are typically limited to a single intersection or a single vehicle. A\ncomprehensive perception dataset featuring multiple connected vehicles and\ninfrastructure sensors across several intersections remains unavailable,\nlimiting the benchmarking of algorithms in diverse traffic environments.\nConsequently, overfitting can occur, and models may demonstrate misleadingly\nhigh performance due to similar intersection layouts and traffic participant\nbehavior. To address this gap, we introduce UrbanIng-V2X, the first\nlarge-scale, multi-modal dataset supporting cooperative perception involving\nvehicles and infrastructure sensors deployed across three urban intersections\nin Ingolstadt, Germany. UrbanIng-V2X consists of 34 temporally aligned and\nspatially calibrated sensor sequences, each lasting 20 seconds. All sequences\ncontain recordings from one of three intersections, involving two vehicles and\nup to three infrastructure-mounted sensor poles operating in coordinated\nscenarios. In total, UrbanIng-V2X provides data from 12 vehicle-mounted RGB\ncameras, 2 vehicle LiDARs, 17 infrastructure thermal cameras, and 12\ninfrastructure LiDARs. All sequences are annotated at a frequency of 10 Hz with\n3D bounding boxes spanning 13 object classes, resulting in approximately 712k\nannotated instances across the dataset. We provide comprehensive evaluations\nusing state-of-the-art cooperative perception methods and publicly release the\ncodebase, dataset, HD map, and a digital twin of the complete data collection\nenvironment.",
+        "url": "http://arxiv.org/abs/2510.23478v1",
+        "published_date": "2025-10-27T16:12:12+00:00",
+        "updated_date": "2025-10-27T16:12:12+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Karthikeyan Chandra Sekaran",
+            "Markus Geisler",
+            "Dominik Rößle",
+            "Adithya Mohan",
+            "Daniel Cremers",
+            "Wolfgang Utschick",
+            "Michael Botsch",
+            "Werner Huber",
+            "Torsten Schön"
+        ],
+        "tldr": "The paper introduces UrbanIng-V2X, a new large-scale, multi-modal dataset for cooperative perception in autonomous driving, featuring synchronized data from vehicles and infrastructure across multiple intersections.",
+        "tldr_zh": "该论文介绍了UrbanIng-V2X，这是一个新的大规模多模态数据集，用于自动驾驶中的协同感知，包含来自车辆和基础设施在多个交叉路口同步的数据。",
+        "relevance_score": 10,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Scaling Up Occupancy-centric Driving Scene Generation: Dataset and Method",
+        "summary": "Driving scene generation is a critical domain for autonomous driving,\nenabling downstream applications, including perception and planning evaluation.\nOccupancy-centric methods have recently achieved state-of-the-art results by\noffering consistent conditioning across frames and modalities; however, their\nperformance heavily depends on annotated occupancy data, which still remains\nscarce. To overcome this limitation, we curate Nuplan-Occ, the largest semantic\noccupancy dataset to date, constructed from the widely used Nuplan benchmark.\nIts scale and diversity facilitate not only large-scale generative modeling but\nalso autonomous driving downstream applications. Based on this dataset, we\ndevelop a unified framework that jointly synthesizes high-quality semantic\noccupancy, multi-view videos, and LiDAR point clouds. Our approach incorporates\na spatio-temporal disentangled architecture to support high-fidelity spatial\nexpansion and temporal forecasting of 4D dynamic occupancy. To bridge modal\ngaps, we further propose two novel techniques: a Gaussian splatting-based\nsparse point map rendering strategy that enhances multi-view video generation,\nand a sensor-aware embedding strategy that explicitly models LiDAR sensor\nproperties for realistic multi-LiDAR simulation. Extensive experiments\ndemonstrate that our method achieves superior generation fidelity and\nscalability compared to existing approaches, and validates its practical value\nin downstream tasks. Repo:\nhttps://github.com/Arlo0o/UniScene-Unified-Occupancy-centric-Driving-Scene-Generation/tree/v2",
+        "url": "http://arxiv.org/abs/2510.22973v1",
+        "published_date": "2025-10-27T03:52:45+00:00",
+        "updated_date": "2025-10-27T03:52:45+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Bohan Li",
+            "Xin Jin",
+            "Hu Zhu",
+            "Hongsi Liu",
+            "Ruikai Li",
+            "Jiazhe Guo",
+            "Kaiwen Cai",
+            "Chao Ma",
+            "Yueming Jin",
+            "Hao Zhao",
+            "Xiaokang Yang",
+            "Wenjun Zeng"
+        ],
+        "tldr": "This paper introduces Nuplan-Occ, a large-scale semantic occupancy dataset for driving scene generation, and a unified framework for synthesizing high-quality multi-modal data (occupancy, video, LiDAR) with improved fidelity and scalability.",
+        "tldr_zh": "本文介绍了Nuplan-Occ，一个大规模的驾驶场景生成语义占用数据集，以及一个统一的框架，用于合成高质量的多模态数据（占用、视频、激光雷达），具有更高的保真度和可扩展性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "UrbanVLA: A Vision-Language-Action Model for Urban Micromobility",
+        "summary": "Urban micromobility applications, such as delivery robots, demand reliable\nnavigation across large-scale urban environments while following long-horizon\nroute instructions. This task is particularly challenging due to the dynamic\nand unstructured nature of real-world city areas, yet most existing navigation\nmethods remain tailored to short-scale and controllable scenarios. Effective\nurban micromobility requires two complementary levels of navigation skills:\nlow-level capabilities such as point-goal reaching and obstacle avoidance, and\nhigh-level capabilities, such as route-visual alignment. To this end, we\npropose UrbanVLA, a route-conditioned Vision-Language-Action (VLA) framework\ndesigned for scalable urban navigation. Our method explicitly aligns noisy\nroute waypoints with visual observations during execution, and subsequently\nplans trajectories to drive the robot. To enable UrbanVLA to master both levels\nof navigation, we employ a two-stage training pipeline. The process begins with\nSupervised Fine-Tuning (SFT) using simulated environments and trajectories\nparsed from web videos. This is followed by Reinforcement Fine-Tuning (RFT) on\na mixture of simulation and real-world data, which enhances the model's safety\nand adaptability in real-world settings. Experiments demonstrate that UrbanVLA\nsurpasses strong baselines by more than 55% in the SocialNav task on MetaUrban.\nFurthermore, UrbanVLA achieves reliable real-world navigation, showcasing both\nscalability to large-scale urban environments and robustness against real-world\nuncertainties.",
+        "url": "http://arxiv.org/abs/2510.23576v1",
+        "published_date": "2025-10-27T17:46:43+00:00",
+        "updated_date": "2025-10-27T17:46:43+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Anqi Li",
+            "Zhiyong Wang",
+            "Jiazhao Zhang",
+            "Minghan Li",
+            "Yunpeng Qi",
+            "Zhibo Chen",
+            "Zhizheng Zhang",
+            "He Wang"
+        ],
+        "tldr": "The paper introduces UrbanVLA, a Vision-Language-Action framework for urban micromobility navigation, which aligns visual cues with route instructions, trained in two stages using both simulated and real-world data to achieve robust and scalable performance.",
+        "tldr_zh": "该论文介绍了一种名为 UrbanVLA 的视觉-语言-动作框架，用于城市微移动导航。它将视觉线索与路线指令对齐，并通过使用模拟和真实世界数据的两阶段训练，实现了稳健且可扩展的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "DPGLA: Bridging the Gap between Synthetic and Real Data for Unsupervised Domain Adaptation in 3D LiDAR Semantic Segmentation",
+        "summary": "Annotating real-world LiDAR point clouds for use in intelligent autonomous\nsystems is costly. To overcome this limitation, self-training-based\nUnsupervised Domain Adaptation (UDA) has been widely used to improve point\ncloud semantic segmentation by leveraging synthetic point cloud data. However,\nwe argue that existing methods do not effectively utilize unlabeled data, as\nthey either rely on predefined or fixed confidence thresholds, resulting in\nsuboptimal performance. In this paper, we propose a Dynamic Pseudo-Label\nFiltering (DPLF) scheme to enhance real data utilization in point cloud UDA\nsemantic segmentation. Additionally, we design a simple and efficient\nPrior-Guided Data Augmentation Pipeline (PG-DAP) to mitigate domain shift\nbetween synthetic and real-world point clouds. Finally, we utilize data mixing\nconsistency loss to push the model to learn context-free representations. We\nimplement and thoroughly evaluate our approach through extensive comparisons\nwith state-of-the-art methods. Experiments on two challenging synthetic-to-real\npoint cloud semantic segmentation tasks demonstrate that our approach achieves\nsuperior performance. Ablation studies confirm the effectiveness of the DPLF\nand PG-DAP modules. We release the code of our method in this paper.",
+        "url": "http://arxiv.org/abs/2510.23525v1",
+        "published_date": "2025-10-27T17:05:59+00:00",
+        "updated_date": "2025-10-27T17:05:59+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Wanmeng Li",
+            "Simone Mosco",
+            "Daniel Fusaro",
+            "Alberto Pretto"
+        ],
+        "tldr": "The paper introduces DPGLA, a novel approach for unsupervised domain adaptation in 3D LiDAR semantic segmentation, featuring dynamic pseudo-label filtering and prior-guided data augmentation to bridge the gap between synthetic and real data.",
+        "tldr_zh": "该论文介绍了DPGLA，一种用于3D LiDAR语义分割中无监督领域自适应的新方法，其特点是动态伪标签过滤和先验引导的数据增强，以弥合合成数据和真实数据之间的差距。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "VR-Drive: Viewpoint-Robust End-to-End Driving with Feed-Forward 3D Gaussian Splatting",
+        "summary": "End-to-end autonomous driving (E2E-AD) has emerged as a promising paradigm\nthat unifies perception, prediction, and planning into a holistic, data-driven\nframework. However, achieving robustness to varying camera viewpoints, a common\nreal-world challenge due to diverse vehicle configurations, remains an open\nproblem. In this work, we propose VR-Drive, a novel E2E-AD framework that\naddresses viewpoint generalization by jointly learning 3D scene reconstruction\nas an auxiliary task to enable planning-aware view synthesis. Unlike prior\nscene-specific synthesis approaches, VR-Drive adopts a feed-forward inference\nstrategy that supports online training-time augmentation from sparse views\nwithout additional annotations. To further improve viewpoint consistency, we\nintroduce a viewpoint-mixed memory bank that facilitates temporal interaction\nacross multiple viewpoints and a viewpoint-consistent distillation strategy\nthat transfers knowledge from original to synthesized views. Trained in a fully\nend-to-end manner, VR-Drive effectively mitigates synthesis-induced noise and\nimproves planning under viewpoint shifts. In addition, we release a new\nbenchmark dataset to evaluate E2E-AD performance under novel camera viewpoints,\nenabling comprehensive analysis. Our results demonstrate that VR-Drive is a\nscalable and robust solution for the real-world deployment of end-to-end\nautonomous driving systems.",
+        "url": "http://arxiv.org/abs/2510.23205v1",
+        "published_date": "2025-10-27T10:49:39+00:00",
+        "updated_date": "2025-10-27T10:49:39+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Hoonhee Cho",
+            "Jae-Young Kang",
+            "Giwon Lee",
+            "Hyemin Yang",
+            "Heejun Park",
+            "Seokwoo Jung",
+            "Kuk-Jin Yoon"
+        ],
+        "tldr": "VR-Drive is a novel end-to-end autonomous driving framework that addresses viewpoint generalization by jointly learning 3D scene reconstruction, using a feed-forward approach and viewpoint-consistent distillation. They also release a new benchmark dataset.",
+        "tldr_zh": "VR-Drive 是一种新颖的端到端自动驾驶框架，通过联合学习 3D 场景重建来解决视点泛化问题，使用前馈方法和视点一致的知识蒸馏。他们还发布了一个新的基准数据集。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Finding 3D Scene Analogies with Multimodal Foundation Models",
+        "summary": "Connecting current observations with prior experiences helps robots adapt and\nplan in new, unseen 3D environments. Recently, 3D scene analogies have been\nproposed to connect two 3D scenes, which are smooth maps that align scene\nregions with common spatial relationships. These maps enable detailed transfer\nof trajectories or waypoints, potentially supporting demonstration transfer for\nimitation learning or task plan transfer across scenes. However, existing\nmethods for the task require additional training and fixed object vocabularies.\nIn this work, we propose to use multimodal foundation models for finding 3D\nscene analogies in a zero-shot, open-vocabulary setting. Central to our\napproach is a hybrid neural representation of scenes that consists of a sparse\ngraph based on vision-language model features and a feature field derived from\n3D shape foundation models. 3D scene analogies are then found in a\ncoarse-to-fine manner, by first aligning the graph and refining the\ncorrespondence with feature fields. Our method can establish accurate\ncorrespondences between complex scenes, and we showcase applications in\ntrajectory and waypoint transfer.",
+        "url": "http://arxiv.org/abs/2510.23184v1",
+        "published_date": "2025-10-27T10:23:31+00:00",
+        "updated_date": "2025-10-27T10:23:31+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Junho Kim",
+            "Young Min Kim"
+        ],
+        "tldr": "This paper proposes a zero-shot, open-vocabulary method for finding 3D scene analogies using multimodal foundation models and a hybrid neural representation, enabling applications like trajectory and waypoint transfer.",
+        "tldr_zh": "本文提出了一种零样本、开放词汇的方法，利用多模态基础模型和混合神经表示来寻找 3D 场景类比，从而实现轨迹和航路点转移等应用。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "AG-Fusion: adaptive gated multimodal fusion for 3d object detection in complex scenes",
+        "summary": "Multimodal camera-LiDAR fusion technology has found extensive application in\n3D object detection, demonstrating encouraging performance. However, existing\nmethods exhibit significant performance degradation in challenging scenarios\ncharacterized by sensor degradation or environmental disturbances. We propose a\nnovel Adaptive Gated Fusion (AG-Fusion) approach that selectively integrates\ncross-modal knowledge by identifying reliable patterns for robust detection in\ncomplex scenes. Specifically, we first project features from each modality into\na unified BEV space and enhance them using a window-based attention mechanism.\nSubsequently, an adaptive gated fusion module based on cross-modal attention is\ndesigned to integrate these features into reliable BEV representations robust\nto challenging environments. Furthermore, we construct a new dataset named\nExcavator3D (E3D) focusing on challenging excavator operation scenarios to\nbenchmark performance in complex conditions. Our method not only achieves\ncompetitive performance on the standard KITTI dataset with 93.92% accuracy, but\nalso significantly outperforms the baseline by 24.88% on the challenging E3D\ndataset, demonstrating superior robustness to unreliable modal information in\ncomplex industrial scenes.",
+        "url": "http://arxiv.org/abs/2510.23151v1",
+        "published_date": "2025-10-27T09:26:27+00:00",
+        "updated_date": "2025-10-27T09:26:27+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Sixian Liu",
+            "Chen Xu",
+            "Qiang Wang",
+            "Donghai Shi",
+            "Yiwen Li"
+        ],
+        "tldr": "The paper introduces AG-Fusion, an adaptive gated multimodal fusion approach for robust 3D object detection in complex scenes with sensor degradation, and a new dataset Excavator3D (E3D) to benchmark performance in such conditions. It achieves significant performance improvement on the E3D dataset.",
+        "tldr_zh": "本文介绍了一种自适应门控多模态融合方法AG-Fusion，用于在传感器退化等复杂场景中实现鲁棒的3D目标检测，并提出了一个新的数据集Excavator3D (E3D)，用于在这些条件下评估性能。该方法在E3D数据集上取得了显著的性能提升。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "DQ3D: Depth-guided Query for Transformer-Based 3D Object Detection in Traffic Scenarios",
+        "summary": "3D object detection from multi-view images in traffic scenarios has garnered\nsignificant attention in recent years. Many existing approaches rely on object\nqueries that are generated from 3D reference points to localize objects.\nHowever, a limitation of these methods is that some reference points are often\nfar from the target object, which can lead to false positive detections. In\nthis paper, we propose a depth-guided query generator for 3D object detection\n(DQ3D) that leverages depth information and 2D detections to ensure that\nreference points are sampled from the surface or interior of the object.\nFurthermore, to address partially occluded objects in current frame, we\nintroduce a hybrid attention mechanism that fuses historical detection results\nwith depth-guided queries, thereby forming hybrid queries. Evaluation on the\nnuScenes dataset demonstrates that our method outperforms the baseline by 6.3\\%\nin terms of mean Average Precision (mAP) and 4.3\\% in the NuScenes Detection\nScore (NDS).",
+        "url": "http://arxiv.org/abs/2510.23144v1",
+        "published_date": "2025-10-27T09:20:59+00:00",
+        "updated_date": "2025-10-27T09:20:59+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ziyu Wang",
+            "Wenhao Li",
+            "Ji Wu"
+        ],
+        "tldr": "The paper introduces DQ3D, a depth-guided query generator for 3D object detection in traffic scenarios, which uses depth information and 2D detections to generate better reference points, and fuses historical results to handle occlusions, achieving improved mAP and NDS on nuScenes.",
+        "tldr_zh": "该论文介绍了DQ3D，一种深度引导的查询生成器，用于交通场景中的3D物体检测。它利用深度信息和2D检测来生成更好的参考点，并融合历史结果来处理遮挡问题，在nuScenes数据集上实现了更高的mAP和NDS。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Seq-DeepIPC: Sequential Sensing for End-to-End Control in Legged Robot Navigation",
+        "summary": "We present Seq-DeepIPC, a sequential end-to-end perception-to-control model\nfor legged robot navigation in realworld environments. Seq-DeepIPC advances\nintelligent sensing for autonomous legged navigation by tightly integrating\nmulti-modal perception (RGB-D + GNSS) with temporal fusion and control. The\nmodel jointly predicts semantic segmentation and depth estimation, giving\nricher spatial features for planning and control. For efficient deployment on\nedge devices, we use EfficientNet-B0 as the encoder, reducing computation while\nmaintaining accuracy. Heading estimation is simplified by removing the noisy\nIMU and instead computing the bearing angle directly from consecutive GNSS\npositions. We collected a larger and more diverse dataset that includes both\nroad and grass terrains, and validated Seq-DeepIPC on a robot dog. Comparative\nand ablation studies show that sequential inputs improve perception and control\nin our models, while other baselines do not benefit. Seq-DeepIPC achieves\ncompetitive or better results with reasonable model size; although GNSS-only\nheading is less reliable near tall buildings, it is robust in open areas.\nOverall, Seq-DeepIPC extends end-to-end navigation beyond wheeled robots to\nmore versatile and temporally-aware systems. To support future research, we\nwill release the codes to our GitHub repository at\nhttps://github.com/oskarnatan/Seq-DeepIPC.",
+        "url": "http://arxiv.org/abs/2510.23057v1",
+        "published_date": "2025-10-27T06:39:57+00:00",
+        "updated_date": "2025-10-27T06:39:57+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV",
+            "cs.SY",
+            "eess.IV",
+            "eess.SY"
+        ],
+        "authors": [
+            "Oskar Natan",
+            "Jun Miura"
+        ],
+        "tldr": "Seq-DeepIPC is a sequential end-to-end perception-to-control model for legged robot navigation using multi-modal perception (RGB-D + GNSS), achieving competitive results with efficient computation and demonstrating robustness in open areas. The authors will release the code.",
+        "tldr_zh": "Seq-DeepIPC是一个用于足式机器人导航的端到端感知控制模型，它使用多模态感知（RGB-D + GNSS），并在计算效率方面取得了有竞争力的结果，同时在开阔区域表现出鲁棒性。作者将发布代码。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    }
+]
