@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Autonomous Driving, VLA, 3D Understanding, Robotics) - October 21, 2025</title>
+    <title>ArXiv CS.CV Papers (Autonomous Driving, VLA, 3D Understanding, Robotics) - October 25, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>VLM Daily Papers</h1>
         <p>Daily papers related to VLA/AV/3D Understanding from cs.CV</p>
         
-            <p>October 21, 2025</p>
+            <p>October 25, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,141 +215,36 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">SparseWorld: A Flexible, Adaptive, and Efficient 4D Occupancy World Model Powered by Sparse and Dynamic Queries</h2>
+            <h2 class="paper-title">Scalable Vision-Language-Action Model Pretraining for Robotic Manipulation with Real-Life Human Activity Videos</h2>
             
-            <p class="paper-summary">Semantic occupancy has emerged as a powerful representation in world models
-for its ability to capture rich spatial semantics. However, most existing
-occupancy world models rely on static and fixed embeddings or grids, which
-inherently limit the flexibility of perception. Moreover, their ``in-place
-classification" over grids exhibits a potential misalignment with the dynamic
-and continuous nature of real scenarios.In this paper, we propose SparseWorld,
-a novel 4D occupancy world model that is flexible, adaptive, and efficient,
-powered by sparse and dynamic queries. We propose a Range-Adaptive Perception
-module, in which learnable queries are modulated by the ego vehicle states and
-enriched with temporal-spatial associations to enable extended-range
-perception. To effectively capture the dynamics of the scene, we design a
-State-Conditioned Forecasting module, which replaces classification-based
-forecasting with regression-guided formulation, precisely aligning the dynamic
-queries with the continuity of the 4D environment. In addition, We specifically
-devise a Temporal-Aware Self-Scheduling training strategy to enable smooth and
-efficient training. Extensive experiments demonstrate that SparseWorld achieves
-state-of-the-art performance across perception, forecasting, and planning
-tasks. Comprehensive visualizations and ablation studies further validate the
-advantages of SparseWorld in terms of flexibility, adaptability, and
-efficiency. The code is available at https://github.com/MSunDYY/SparseWorld.</p>
+            <p class="paper-summary">This paper presents a novel approach for pretraining robotic manipulation
+Vision-Language-Action (VLA) models using a large corpus of unscripted
+real-life video recordings of human hand activities. Treating human hand as
+dexterous robot end-effector, we show that "in-the-wild" egocentric human
+videos without any annotations can be transformed into data formats fully
+aligned with existing robotic V-L-A training data in terms of task granularity
+and labels. This is achieved by the development of a fully-automated holistic
+human activity analysis approach for arbitrary human hand videos. This approach
+can generate atomic-level hand activity segments and their language
+descriptions, each accompanied with framewise 3D hand motion and camera motion.
+We process a large volume of egocentric videos and create a hand-VLA training
+dataset containing 1M episodes and 26M frames. This training data covers a wide
+range of objects and concepts, dexterous manipulation tasks, and environment
+variations in real life, vastly exceeding the coverage of existing robot data.
+We design a dexterous hand VLA model architecture and pretrain the model on
+this dataset. The model exhibits strong zero-shot capabilities on completely
+unseen real-world observations. Additionally, fine-tuning it on a small amount
+of real robot action data significantly improves task success rates and
+generalization to novel objects in real robotic experiments. We also
+demonstrate the appealing scaling behavior of the model's task performance with
+respect to pretraining data scale. We believe this work lays a solid foundation
+for scalable VLA pretraining, advancing robots toward truly generalizable
+embodied intelligence.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: SparseWorld is a novel 4D occupancy world model for autonomous driving that uses sparse, dynamic queries and a regression-guided formulation to improve perception, forecasting, and planning by better capturing scene dynamics and extending range.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: SparseWorld是一种新颖的4D占据世界模型，用于自动驾驶，它使用稀疏、动态的查询和回归引导的公式，通过更好地捕获场景动态并扩展范围来改善感知、预测和规划。</p>
-            
-
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces a novel approach to pretraining Vision-Language-Action models for robotic manipulation using a large dataset of unlabeled, real-world human hand activity videos, demonstrating strong zero-shot and fine-tuning performance on robotic tasks.</p>
             
             
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star-half-alt"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2510.17482v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Chenxu Dang, Haiyan Liu, Guangjun Bao, Pei An, Xinyue Tang, Jie Ma, Bingchuan Sun, Yan Wang</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.05, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">DiffVLA++: Bridging Cognitive Reasoning and End-to-End Driving through Metric-Guided Alignment</h2>
-            
-            <p class="paper-summary">Conventional end-to-end (E2E) driving models are effective at generating
-physically plausible trajectories, but often fail to generalize to long-tail
-scenarios due to the lack of essential world knowledge to understand and reason
-about surrounding environments. In contrast, Vision-Language-Action (VLA)
-models leverage world knowledge to handle challenging cases, but their limited
-3D reasoning capability can lead to physically infeasible actions. In this work
-we introduce DiffVLA++, an enhanced autonomous driving framework that
-explicitly bridges cognitive reasoning and E2E planning through metric-guided
-alignment. First, we build a VLA module directly generating semantically
-grounded driving trajectories. Second, we design an E2E module with a dense
-trajectory vocabulary that ensures physical feasibility. Third, and most
-critically, we introduce a metric-guided trajectory scorer that guides and
-aligns the outputs of the VLA and E2E modules, thereby integrating their
-complementary strengths. The experiment on the ICCV 2025 Autonomous Grand
-Challenge leaderboard shows that DiffVLA++ achieves EPDMS of 49.12.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: DiffVLA++ combines Vision-Language-Action (VLA) models with end-to-end (E2E) driving using a metric-guided trajectory scorer to improve autonomous driving performance, achieving a high score on the ICCV 2025 Autonomous Grand Challenge leaderboard.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: DiffVLA++通过度量引导的轨迹评分器，结合了视觉-语言-动作（VLA）模型和端到端（E2E）驾驶，以提高自动驾驶性能，并在 ICCV 2025 自动驾驶大赛排行榜上取得了高分。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种新的视觉-语言-动作模型预训练方法，用于机器人操作，该方法使用大量未标记的真实世界人类手部活动视频数据集，并在机器人任务上展示了强大的零样本和微调性能。</p>
             
 
             
@@ -367,16 +262,16 @@ Challenge leaderboard shows that DiffVLA++ achieves EPDMS of 49.12.</p>
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -420,11 +315,128 @@ Challenge leaderboard shows that DiffVLA++ achieves EPDMS of 49.12.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.17148v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.21571v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Yu Gao, Yiru Wang, Anqing Jiang, Heng Yuwen, Wang Shuo, Sun Hao, Wang Jijun</p>
+            <p class="paper-authors">Authors: Qixiu Li, Yu Deng, Yaobo Liang, Lin Luo, Lei Zhou, Chengtang Yao, Lingqi Zeng, Zhiyuan Feng, Huizhi Liang, Sicheng Xu, Yizhong Zhang, Xi Chen, Hao Chen, Lily Sun, Dong Chen, Jiaolong Yang, Baining Guo</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.05, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">Urban 3D Change Detection Using LiDAR Sensor for HD Map Maintenance and Smart Mobility</h2>
+            
+            <p class="paper-summary">High-definition 3D city maps underpin smart transportation, digital twins,
+and autonomous driving, where object level change detection across bi temporal
+LiDAR enables HD map maintenance, construction monitoring, and reliable
+localization. Classical DSM differencing and image based methods are sensitive
+to small vertical bias, ground slope, and viewpoint mismatch and yield cellwise
+outputs without object identity. Point based neural models and voxel encodings
+demand large memory, assume near perfect pre alignment, degrade thin
+structures, and seldom enforce class consistent association, which leaves split
+or merge cases unresolved and ignores uncertainty. We propose an object
+centric, uncertainty aware pipeline for city scale LiDAR that aligns epochs
+with multi resolution NDT followed by point to plane ICP, normalizes height,
+and derives a per location level of detection from registration covariance and
+surface roughness to calibrate decisions and suppress spurious changes.
+Geometry only proxies seed cross epoch associations that are refined by
+semantic and instance segmentation and a class constrained bipartite assignment
+with augmented dummies to handle splits and merges while preserving per class
+counts. Tiled processing bounds memory without eroding narrow ground changes,
+and instance level decisions combine 3D overlap, normal direction displacement,
+and height and volume differences with a histogram distance, all gated by the
+local level of detection to remain stable under partial overlap and sampling
+variation. On 15 representative Subiaco blocks the method attains 95.2%
+accuracy, 90.4% mF1, and 82.6% mIoU, exceeding Triplet KPConv by 0.2 percentage
+points in accuracy, 0.2 in mF1, and 0.8 in mIoU, with the largest gain on
+Decreased where IoU reaches 74.8% and improves by 7.6 points.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper proposes an object-centric, uncertainty-aware pipeline for 3D change detection in LiDAR data for HD map maintenance, achieving high accuracy and IoU compared to a baseline method. It addresses limitations of prior methods by incorporating multi-resolution alignment, semantic segmentation, and instance-level reasoning to handle splits and merges.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种面向对象、具有不确定性感知的流水线，用于激光雷达数据中的3D变化检测，以维护高清地图，与基线方法相比，实现了高精度和IoU。通过结合多分辨率对齐、语义分割和实例级推理来处理分割和合并情况，解决了先前方法的局限性。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star-half-alt"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2510.21112v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Hezam Albagami, Haitian Wang, Xinyu Wang, Muhammad Ibrahim, Zainy M. Malakan, Abdullah M. Alqamdi, Mohammed H. Alghamdi, Ajmal Mian</p>
             
         </motion.div>
         
@@ -436,31 +448,34 @@ Challenge leaderboard shows that DiffVLA++ achieves EPDMS of 49.12.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">4DSegStreamer: Streaming 4D Panoptic Segmentation via Dual Threads</h2>
+            <h2 class="paper-title">AURASeg: Attention Guided Upsampling with Residual Boundary-Assistive Refinement for Drivable-Area Segmentation</h2>
             
-            <p class="paper-summary">4D panoptic segmentation in a streaming setting is critical for highly
-dynamic environments, such as evacuating dense crowds and autonomous driving in
-complex scenarios, where real-time, fine-grained perception within a
-constrained time budget is essential. In this paper, we introduce
-4DSegStreamer, a novel framework that employs a Dual-Thread System to
-efficiently process streaming frames. The framework is general and can be
-seamlessly integrated into existing 3D and 4D segmentation methods to enable
-real-time capability. It also demonstrates superior robustness compared to
-existing streaming perception approaches, particularly under high FPS
-conditions. The system consists of a predictive thread and an inference thread.
-The predictive thread leverages historical motion and geometric information to
-extract features and forecast future dynamics. The inference thread ensures
-timely prediction for incoming frames by aligning with the latest memory and
-compensating for ego-motion and dynamic object movements. We evaluate
-4DSegStreamer on the indoor HOI4D dataset and the outdoor SemanticKITTI and
-nuScenes datasets. Comprehensive experiments demonstrate the effectiveness of
-our approach, particularly in accurately predicting dynamic objects in complex
-scenes.</p>
+            <p class="paper-summary">Free space ground segmentation is essential to navigate robots and autonomous
+vehicles, recognize drivable zones, and traverse efficiently. Fine-grained
+features remain challenging for existing segmentation models, particularly for
+robots in indoor and structured environments. These difficulties arise from
+ineffective multi-scale processing, suboptimal boundary refinement, and limited
+feature representation. In order to overcome these limitations, we propose
+Attention-Guided Upsampling with Residual Boundary-Assistive Refinement
+(AURASeg), a ground-plane semantic segmentation model that maintains high
+segmentation accuracy while improving border precision. Our method uses
+CSP-Darknet backbone by adding a Residual Border Refinement Module (RBRM) for
+accurate edge delineation and an Attention Progressive Upsampling Decoder
+(APUD) for strong feature integration. We also incorporate a lightweight Atrous
+Spatial Pyramid Pooling (ASPP-Lite) module to ensure multi-scale context
+extraction without compromising real-time performance. The proposed model beats
+benchmark segmentation architectures in mIoU and F1 metrics when tested on the
+Ground Mobile Robot Perception (GMRP) Dataset and a custom Gazebo indoor
+dataset. Our approach achieves an improvement in mean Intersection-over-Union
+(mIoU) of +1.26% and segmentation precision of +1.65% compared to
+state-of-the-art models. These results show that our technique is feasible for
+autonomous perception in both indoor and outdoor environments, enabling precise
+border refinement with minimal effect on inference speed.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces 4DSegStreamer, a dual-thread system for real-time 4D panoptic segmentation, demonstrating robustness and accuracy in dynamic environments on datasets like HOI4D, SemanticKITTI, and nuScenes.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces AURASeg, a new semantic segmentation model for drivable area segmentation that improves border precision while maintaining accuracy, especially in indoor environments, by using attention-guided upsampling and residual boundary refinement. It outperforms existing models on relevant datasets.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了4DSegStreamer，一个用于实时4D全景分割的双线程系统，并在HOI4D、SemanticKITTI和nuScenes等数据集上展示了其在动态环境中的鲁棒性和准确性。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了AURASeg，一种用于可行驶区域分割的新型语义分割模型，通过使用注意力引导的上采样和残差边界细化，提高了边界精度，同时保持了准确性，尤其是在室内环境中。它在相关数据集上优于现有模型。</p>
             
 
             
@@ -470,16 +485,16 @@ scenes.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
@@ -494,8 +509,8 @@ scenes.</p>
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
             </div>
@@ -531,11 +546,11 @@ scenes.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.17664v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.21536v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Ling Liu, Jun Tian, Li Yi</p>
+            <p class="paper-authors">Authors: Narendhiran Vijayakumar, Sridevi. M</p>
             
         </motion.div>
         
@@ -547,30 +562,29 @@ scenes.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">PAGE-4D: Disentangled Pose and Geometry Estimation for 4D Perception</h2>
+            <h2 class="paper-title">OpenHype: Hyperbolic Embeddings for Hierarchical Open-Vocabulary Radiance Fields</h2>
             
-            <p class="paper-summary">Recent 3D feed-forward models, such as the Visual Geometry Grounded
-Transformer (VGGT), have shown strong capability in inferring 3D attributes of
-static scenes. However, since they are typically trained on static datasets,
-these models often struggle in real-world scenarios involving complex dynamic
-elements, such as moving humans or deformable objects like umbrellas. To
-address this limitation, we introduce PAGE-4D, a feedforward model that extends
-VGGT to dynamic scenes, enabling camera pose estimation, depth prediction, and
-point cloud reconstruction -- all without post-processing. A central challenge
-in multi-task 4D reconstruction is the inherent conflict between tasks:
-accurate camera pose estimation requires suppressing dynamic regions, while
-geometry reconstruction requires modeling them. To resolve this tension, we
-propose a dynamics-aware aggregator that disentangles static and dynamic
-information by predicting a dynamics-aware mask -- suppressing motion cues for
-pose estimation while amplifying them for geometry reconstruction. Extensive
-experiments show that PAGE-4D consistently outperforms the original VGGT in
-dynamic scenarios, achieving superior results in camera pose estimation,
-monocular and video depth estimation, and dense point map reconstruction.</p>
+            <p class="paper-summary">Modeling the inherent hierarchical structure of 3D objects and 3D scenes is
+highly desirable, as it enables a more holistic understanding of environments
+for autonomous agents. Accomplishing this with implicit representations, such
+as Neural Radiance Fields, remains an unexplored challenge. Existing methods
+that explicitly model hierarchical structures often face significant
+limitations: they either require multiple rendering passes to capture
+embeddings at different levels of granularity, significantly increasing
+inference time, or rely on predefined, closed-set discrete hierarchies that
+generalize poorly to the diverse and nuanced structures encountered by agents
+in the real world. To address these challenges, we propose OpenHype, a novel
+approach that represents scene hierarchies using a continuous hyperbolic latent
+space. By leveraging the properties of hyperbolic geometry, OpenHype naturally
+encodes multi-scale relationships and enables smooth traversal of hierarchies
+through geodesic paths in latent space. Our method outperforms state-of-the-art
+approaches on standard benchmarks, demonstrating superior efficiency and
+adaptability in 3D scene understanding.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: PAGE-4D is a feedforward model extending VGGT for dynamic 4D scene reconstruction, addressing the conflict between pose estimation and geometry reconstruction using a dynamics-aware aggregator.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: OpenHype uses hyperbolic embeddings for Neural Radiance Fields to represent and traverse 3D scene hierarchies, improving efficiency and adaptability in scene understanding compared to existing methods.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: PAGE-4D是一个前馈模型，扩展了VGGT用于动态4D场景重建，通过使用动态感知聚合器来解决姿态估计和几何重建之间的冲突。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: OpenHype 使用双曲嵌入来处理神经辐射场，用于表示和遍历3D场景层次结构，与现有方法相比，提高了场景理解的效率和适应性。</p>
             
 
             
@@ -580,16 +594,16 @@ monocular and video depth estimation, and dense point map reconstruction.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -641,11 +655,11 @@ monocular and video depth estimation, and dense point map reconstruction.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.17568v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.21441v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Kaichen Zhou, Yuhan Wang, Grace Chen, Xinhai Chang, Gaspard Beaudouin, Fangneng Zhan, Paul Pu Liang, Mengyu Wang</p>
+            <p class="paper-authors">Authors: Lisa Weijler, Sebastian Koch, Fabio Poiesi, Timo Ropinski, Pedro Hermosilla</p>
             
         </motion.div>
         
@@ -657,31 +671,28 @@ monocular and video depth estimation, and dense point map reconstruction.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">M2H: Multi-Task Learning with Efficient Window-Based Cross-Task Attention for Monocular Spatial Perception</h2>
+            <h2 class="paper-title">Towards Physically Executable 3D Gaussian for Embodied Navigation</h2>
             
-            <p class="paper-summary">Deploying real-time spatial perception on edge devices requires efficient
-multi-task models that leverage complementary task information while minimizing
-computational overhead. This paper introduces Multi-Mono-Hydra (M2H), a novel
-multi-task learning framework designed for semantic segmentation and depth,
-edge, and surface normal estimation from a single monocular image. Unlike
-conventional approaches that rely on independent single-task models or shared
-encoder-decoder architectures, M2H introduces a Window-Based Cross-Task
-Attention Module that enables structured feature exchange while preserving
-task-specific details, improving prediction consistency across tasks. Built on
-a lightweight ViT-based DINOv2 backbone, M2H is optimized for real-time
-deployment and serves as the foundation for monocular spatial perception
-systems supporting 3D scene graph construction in dynamic environments.
-Comprehensive evaluations show that M2H outperforms state-of-the-art multi-task
-models on NYUDv2, surpasses single-task depth and semantic baselines on
-Hypersim, and achieves superior performance on the Cityscapes dataset, all
-while maintaining computational efficiency on laptop hardware. Beyond
-benchmarks, M2H is validated on real-world data, demonstrating its practicality
-in spatial perception tasks.</p>
+            <p class="paper-summary">3D Gaussian Splatting (3DGS), a 3D representation method with photorealistic
+real-time rendering capabilities, is regarded as an effective tool for
+narrowing the sim-to-real gap. However, it lacks fine-grained semantics and
+physical executability for Visual-Language Navigation (VLN). To address this,
+we propose SAGE-3D (Semantically and Physically Aligned Gaussian Environments
+for 3D Navigation), a new paradigm that upgrades 3DGS into an executable,
+semantically and physically aligned environment. It comprises two components:
+(1) Object-Centric Semantic Grounding, which adds object-level fine-grained
+annotations to 3DGS; and (2) Physics-Aware Execution Jointing, which embeds
+collision objects into 3DGS and constructs rich physical interfaces. We release
+InteriorGS, containing 1K object-annotated 3DGS indoor scene data, and
+introduce SAGE-Bench, the first 3DGS-based VLN benchmark with 2M VLN data.
+Experiments show that 3DGS scene data is more difficult to converge, while
+exhibiting strong generalizability, improving baseline performance by 31% on
+the VLN-CE Unseen task. The data and code will be available soon.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces M2H, a multi-task learning framework with a window-based cross-task attention module, optimized for real-time monocular spatial perception tasks like semantic segmentation, depth estimation, and surface normal estimation. It outperforms state-of-the-art methods with computational efficiency.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces SAGE-3D, a new paradigm that extends 3D Gaussian Splatting with object-level semantics and physics-aware execution for VLN, along with a new dataset and benchmark.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为M2H的多任务学习框架，它采用基于窗口的跨任务注意力模块，针对单目空间感知任务（如语义分割、深度估计和表面法线估计）进行了实时优化。该方法在计算效率方面优于现有技术水平。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了SAGE-3D，一种通过对象级别的语义和物理感知执行扩展3D高斯溅射的新范例，用于视觉语言导航（VLN），并提供了一个新的数据集和基准。</p>
             
 
             
@@ -752,11 +763,11 @@ in spatial perception tasks.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.17363v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.21307v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: U. V. B. L Udugama, George Vosselman, Francesco Nex</p>
+            <p class="paper-authors">Authors: Bingchen Miao, Rong Wei, Zhiqi Ge, Xiaoquan sun, Shiqi Gao, Jingzhe Zhu, Renhan Wang, Siliang Tang, Jun Xiao, Rui Tang, Juncheng Li</p>
             
         </motion.div>
         
@@ -768,29 +779,31 @@ in spatial perception tasks.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Enhanced Motion Forecasting with Plug-and-Play Multimodal Large Language Models</h2>
+            <h2 class="paper-title">Towards Physics-informed Spatial Intelligence with Human Priors: An Autonomous Driving Pilot Study</h2>
             
-            <p class="paper-summary">Current autonomous driving systems rely on specialized models for perceiving
-and predicting motion, which demonstrate reliable performance in standard
-conditions. However, generalizing cost-effectively to diverse real-world
-scenarios remains a significant challenge. To address this, we propose
-Plug-and-Forecast (PnF), a plug-and-play approach that augments existing motion
-forecasting models with multimodal large language models (MLLMs). PnF builds on
-the insight that natural language provides a more effective way to describe and
-handle complex scenarios, enabling quick adaptation to targeted behaviors. We
-design prompts to extract structured scene understanding from MLLMs and distill
-this information into learnable embeddings to augment existing behavior
-prediction models. Our method leverages the zero-shot reasoning capabilities of
-MLLMs to achieve significant improvements in motion prediction performance,
-while requiring no fine-tuning -- making it practical to adopt. We validate our
-approach on two state-of-the-art motion forecasting models using the Waymo Open
-Motion Dataset and the nuScenes Dataset, demonstrating consistent performance
-improvements across both benchmarks.</p>
+            <p class="paper-summary">How to integrate and verify spatial intelligence in foundation models remains
+an open challenge. Current practice often proxies Visual-Spatial Intelligence
+(VSI) with purely textual prompts and VQA-style scoring, which obscures
+geometry, invites linguistic shortcuts, and weakens attribution to genuinely
+spatial skills. We introduce Spatial Intelligence Grid (SIG): a structured,
+grid-based schema that explicitly encodes object layouts, inter-object
+relations, and physically grounded priors. As a complementary channel to text,
+SIG provides a faithful, compositional representation of scene structure for
+foundation-model reasoning. Building on SIG, we derive SIG-informed evaluation
+metrics that quantify a model's intrinsic VSI, which separates spatial
+capability from language priors. In few-shot in-context learning with
+state-of-the-art multimodal LLMs (e.g. GPT- and Gemini-family models), SIG
+yields consistently larger, more stable, and more comprehensive gains across
+all VSI metrics compared to VQA-only representations, indicating its promise as
+a data-labeling and training schema for learning VSI. We also release SIGBench,
+a benchmark of 1.4K driving frames annotated with ground-truth SIG labels and
+human gaze traces, supporting both grid-based machine VSI tasks and
+attention-driven, human-like VSI tasks in autonomous-driving scenarios.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Plug-and-Forecast (PnF), a method to enhance motion forecasting models by integrating multimodal large language models (MLLMs) without fine-tuning, demonstrating improved performance on Waymo and nuScenes datasets.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces Spatial Intelligence Grid (SIG), a structured grid-based schema for encoding spatial information, and SIGBench, a benchmark dataset, to improve and evaluate visual-spatial intelligence (VSI) in foundation models for autonomous driving.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了Plug-and-Forecast (PnF)，一种通过集成多模态大型语言模型(MLLM)来增强运动预测模型的方法，无需微调，并在Waymo和nuScenes数据集上展示了性能提升。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了空间智能网格（SIG），一种用于编码空间信息的结构化网格模式，以及SIGBench，一个基准数据集，旨在提高和评估用于自动驾驶的基础模型中的视觉-空间智能（VSI）。</p>
             
 
             
@@ -816,8 +829,8 @@ improvements across both benchmarks.</p>
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -861,11 +874,11 @@ improvements across both benchmarks.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.17274v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.21160v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Katie Luo, Jingwei Ji, Tong He, Runsheng Xu, Yichen Xie, Dragomir Anguelov, Mingxing Tan</p>
+            <p class="paper-authors">Authors: Guanlin Wu, Boyan Su, Yang Zhao, Pu Wang, Yichen Lin, Hao Frank Yang</p>
             
         </motion.div>
         
@@ -877,31 +890,38 @@ improvements across both benchmarks.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">ProDAT: Progressive Density-Aware Tail-Drop for Point Cloud Coding</h2>
+            <h2 class="paper-title">PhysVLM-AVR: Active Visual Reasoning for Multimodal Large Language Models in Physical Environments</h2>
             
-            <p class="paper-summary">Three-dimensional (3D) point clouds are becoming increasingly vital in
-applications such as autonomous driving, augmented reality, and immersive
-communication, demanding real-time processing and low latency. However, their
-large data volumes and bandwidth constraints hinder the deployment of
-high-quality services in resource-limited environments. Progres- sive coding,
-which allows for decoding at varying levels of detail, provides an alternative
-by allowing initial partial decoding with subsequent refinement. Although
-recent learning-based point cloud geometry coding methods have achieved notable
-success, their fixed latent representation does not support progressive
-decoding. To bridge this gap, we propose ProDAT, a novel density-aware
-tail-drop mechanism for progressive point cloud coding. By leveraging density
-information as a guidance signal, latent features and coordinates are decoded
-adaptively based on their significance, therefore achieving progressive
-decoding at multiple bitrates using one single model. Experimental results on
-benchmark datasets show that the proposed ProDAT not only enables progressive
-coding but also achieves superior coding efficiency compared to
-state-of-the-art learning-based coding techniques, with over 28.6% BD-rate
-improvement for PSNR- D2 on SemanticKITTI and over 18.15% for ShapeNet</p>
+            <p class="paper-summary">Visual reasoning in multimodal large language models (MLLMs) has primarily
+been studied in static, fully observable settings, limiting their effectiveness
+in real-world environments where information is often incomplete due to
+occlusion or limited field of view. Humans, in contrast, actively explore and
+interact with their environment-moving, examining, and manipulating objects-to
+gather information through a closed-loop process integrating perception,
+reasoning, and action. Inspired by this human capability, we introduce the
+Active Visual Reasoning (AVR) task, extending visual reasoning to partially
+observable, interactive environments. AVR necessitates agents to: (1) actively
+acquire information via sequential physical actions, (2) integrate observations
+across multiple steps for coherent reasoning, and (3) dynamically adjust
+decisions based on evolving visual feedback. To rigorously evaluate AVR, we
+introduce CLEVR-AVR, a simulation benchmark featuring multi-round interactive
+environments designed to assess both reasoning correctness and
+information-gathering efficiency. We present AVR-152k, a large-scale dataset
+that offers rich Chain-of-Thought (CoT) annotations detailing iterative
+reasoning for uncertainty identification, action-conditioned information gain
+prediction, and information-maximizing action selection, crucial for training
+agents in a higher-order Markov Decision Process. Building on this, we develop
+PhysVLM-AVR, an MLLM achieving state-of-the-art performance on CLEVR-AVR,
+embodied reasoning (OpenEQA, RoboVQA), and passive visual reasoning (GeoMath,
+Geometry30K). Our analysis also reveals that current embodied MLLMs, despite
+detecting information incompleteness, struggle to actively acquire and
+integrate new information through interaction, highlighting a fundamental gap
+in active reasoning capabilities.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces ProDAT, a density-aware tail-drop mechanism for progressive point cloud coding, enabling efficient progressive decoding with improved coding efficiency compared to state-of-the-art methods.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces the Active Visual Reasoning (AVR) task and CLEVR-AVR benchmark for evaluating MLLMs in interactive, partially observable environments, along with a new model, PhysVLM-AVR, achieving state-of-the-art results.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为ProDAT的密度感知尾部丢弃机制，用于渐进式点云编码，与最先进的方法相比，它能够实现高效的渐进式解码并提高编码效率。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了主动视觉推理（AVR）任务和CLEVR-AVR基准，用于评估在交互式、部分可观察环境中的MLLM，并提出了一个新的模型PhysVLM-AVR，取得了目前最好的结果。</p>
             
 
             
@@ -919,16 +939,16 @@ improvement for PSNR- D2 on SemanticKITTI and over 18.15% for ShapeNet</p>
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -972,11 +992,11 @@ improvement for PSNR- D2 on SemanticKITTI and over 18.15% for ShapeNet</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.17068v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.21111v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Zhe Luo, Wenjing Jia, Stuart Perry</p>
+            <p class="paper-authors">Authors: Weijie Zhou, Xuantang Xiong, Yi Peng, Manli Tao, Chaoyang Zhao, Honghui Dong, Ming Tang, Jinqiao Wang</p>
             
         </motion.div>
         
@@ -988,31 +1008,31 @@ improvement for PSNR- D2 on SemanticKITTI and over 18.15% for ShapeNet</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Where, Not What: Compelling Video LLMs to Learn Geometric Causality for 3D-Grounding</h2>
+            <h2 class="paper-title">ZING-3D: Zero-shot Incremental 3D Scene Graphs via Vision-Language Models</h2>
             
-            <p class="paper-summary">Multimodal 3D grounding has garnered considerable interest in Vision-Language
-Models (VLMs) \cite{yin2025spatial} for advancing spatial reasoning in complex
-environments. However, these models suffer from a severe "2D semantic bias"
-that arises from over-reliance on 2D image features for coarse localization,
-largely disregarding 3D geometric inputs and resulting in suboptimal fusion
-performance. In this paper, we propose a novel training framework called
-What-Where Representation Re-Forming (W2R2) to tackle this issue via
-disentangled representation learning and targeted shortcut suppression. Our
-approach fundamentally reshapes the model's internal space by designating 2D
-features as semantic beacons for "What" identification and 3D features as
-spatial anchors for "Where" localization, enabling precise 3D grounding without
-modifying inference architecture. Key components include a dual-objective loss
-function with an Alignment Loss that supervises fused predictions using adapted
-cross-entropy for multimodal synergy, and a Pseudo-Label Loss that penalizes
-overly effective 2D-dominant pseudo-outputs via a margin-based mechanism.
-Experiments conducted on ScanRefer and ScanQA demonstrate the effectiveness of
-W2R2, with significant gains in localization accuracy and robustness,
-particularly in cluttered outdoor scenes.</p>
+            <p class="paper-summary">Understanding and reasoning about complex 3D environments requires structured
+scene representations that capture not only objects but also their semantic and
+spatial relationships. While recent works on 3D scene graph generation have
+leveraged pretrained VLMs without task-specific fine-tuning, they are largely
+confined to single-view settings, fail to support incremental updates as new
+observations arrive and lack explicit geometric grounding in 3D space, all of
+which are essential for embodied scenarios. In this paper, we propose, ZING-3D,
+a framework that leverages the vast knowledge of pretrained foundation models
+to enable open-vocabulary recognition and generate a rich semantic
+representation of the scene in a zero-shot manner while also enabling
+incremental updates and geometric grounding in 3D space, making it suitable for
+downstream robotics applications. Our approach leverages VLM reasoning to
+generate a rich 2D scene graph, which is grounded in 3D using depth
+information. Nodes represent open-vocabulary objects with features, 3D
+locations, and semantic context, while edges capture spatial and semantic
+relations with inter-object distances. Our experiments on scenes from the
+Replica and HM3D dataset show that ZING-3D is effective at capturing spatial
+and relational knowledge without the need of task-specific training.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper proposes a novel training framework (W2R2) to improve 3D grounding in Vision-Language Models by disentangling 2D semantic features and 3D geometric features, leading to better localization accuracy, especially in cluttered scenes.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: ZING-3D is a zero-shot framework leveraging VLMs for incremental 3D scene graph generation with geometric grounding, suitable for robotics applications.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种新的训练框架（W2R2），通过解耦2D语义特征和3D几何特征来提高视觉语言模型中的3D定位能力，从而提高定位精度，尤其是在杂乱的场景中。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: ZING-3D是一个零样本框架，利用视觉语言模型进行增量式3D场景图生成，并进行几何定位，适用于机器人应用。</p>
             
 
             
@@ -1083,11 +1103,11 @@ particularly in cluttered outdoor scenes.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.17034v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.21069v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Yutong Zhong</p>
+            <p class="paper-authors">Authors: Pranav Saxena, Jimmy Chiun</p>
             
         </motion.div>
         
@@ -1099,24 +1119,31 @@ particularly in cluttered outdoor scenes.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Botany-Bot: Digital Twin Monitoring of Occluded and Underleaf Plant Structures with Gaussian Splats</h2>
+            <h2 class="paper-title">DAP-MAE: Domain-Adaptive Point Cloud Masked Autoencoder for Effective Cross-Domain Learning</h2>
             
-            <p class="paper-summary">Commercial plant phenotyping systems using fixed cameras cannot perceive many
-plant details due to leaf occlusion. In this paper, we present Botany-Bot, a
-system for building detailed "annotated digital twins" of living plants using
-two stereo cameras, a digital turntable inside a lightbox, an industrial robot
-arm, and 3D segmentated Gaussian Splat models. We also present robot algorithms
-for manipulating leaves to take high-resolution indexable images of occluded
-details such as stem buds and the underside/topside of leaves. Results from
-experiments suggest that Botany-Bot can segment leaves with 90.8% accuracy,
-detect leaves with 86.2% accuracy, lift/push leaves with 77.9% accuracy, and
-take detailed overside/underside images with 77.3% accuracy. Code, videos, and
-datasets are available at https://berkeleyautomation.github.io/Botany-Bot/.</p>
+            <p class="paper-summary">Compared to 2D data, the scale of point cloud data in different domains
+available for training, is quite limited. Researchers have been trying to
+combine these data of different domains for masked autoencoder (MAE)
+pre-training to leverage such a data scarcity issue. However, the prior
+knowledge learned from mixed domains may not align well with the downstream 3D
+point cloud analysis tasks, leading to degraded performance. To address such an
+issue, we propose the Domain-Adaptive Point Cloud Masked Autoencoder (DAP-MAE),
+an MAE pre-training method, to adaptively integrate the knowledge of
+cross-domain datasets for general point cloud analysis. In DAP-MAE, we design a
+heterogeneous domain adapter that utilizes an adaptation mode during
+pre-training, enabling the model to comprehensively learn information from
+point clouds across different domains, while employing a fusion mode in the
+fine-tuning to enhance point cloud features. Meanwhile, DAP-MAE incorporates a
+domain feature generator to guide the adaptation of point cloud features to
+various downstream tasks. With only one pre-training, DAP-MAE achieves
+excellent performance across four different point cloud analysis tasks,
+reaching 95.18% in object classification on ScanObjectNN and 88.45% in facial
+expression recognition on Bosphorus.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Botany-Bot, a robotic system using Gaussian Splats and leaf manipulation for detailed digital twin creation of plants, enabling the capture of previously occluded structures with promising accuracy.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces DAP-MAE, a domain-adaptive masked autoencoder for point clouds that aims to improve cross-domain learning by adaptively integrating knowledge from different point cloud datasets. It achieves strong performance on several 3D analysis tasks.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了Botany-Bot，一个使用高斯溅射和叶片操作的机器人系统，用于创建植物的详细数字孪生模型，能够以有希望的精度捕获先前被遮挡的结构。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了DAP-MAE，一种用于点云的领域自适应掩码自动编码器，旨在通过自适应地整合来自不同点云数据集的知识来改善跨领域学习。它在多个3D分析任务上实现了强大的性能。</p>
             
 
             
@@ -1126,8 +1153,8 @@ datasets are available at https://berkeleyautomation.github.io/Botany-Bot/.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(6/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -1150,8 +1177,8 @@ datasets are available at https://berkeleyautomation.github.io/Botany-Bot/.</p>
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(6/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
             </div>
@@ -1176,74 +1203,29 @@ datasets are available at https://berkeleyautomation.github.io/Botany-Bot/.</p>
                     
                 
                     
-                        <i class="far fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
                     
                 
                     
                         <i class="far fa-star"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(6/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.17783v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2510.21635v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Simeon Adebola, Chung Min Kim, Justin Kerr, Shuangyu Xie, Prithvi Akella, Jose Luis Susa Rincon, Eugen Solowjow, Ken Goldberg</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.45, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">From Spatial to Actions: Grounding Vision-Language-Action Model in Spatial Foundation Priors</h2>
-            
-            <p class="paper-summary">Existing vision-language-action (VLA) models act in 3D real-world but are
-typically built on 2D encoders, leaving a spatial reasoning gap that limits
-generalization and adaptability. Recent 3D integration techniques for VLAs
-either require specialized sensors and transfer poorly across modalities, or
-inject weak cues that lack geometry and degrade vision-language alignment. In
-this work, we introduce FALCON (From Spatial to Action), a novel paradigm that
-injects rich 3D spatial tokens into the action head. FALCON leverages spatial
-foundation models to deliver strong geometric priors from RGB alone, and
-includes an Embodied Spatial Model that can optionally fuse depth, or pose for
-higher fidelity when available, without retraining or architectural changes. To
-preserve language reasoning, spatial tokens are consumed by a Spatial-Enhanced
-Action Head rather than being concatenated into the vision-language backbone.
-These designs enable FALCON to address limitations in spatial representation,
-modality transferability, and alignment. In comprehensive evaluations across
-three simulation benchmarks and eleven real-world tasks, our proposed FALCON
-achieves state-of-the-art performance, consistently surpasses competitive
-baselines, and remains robust under clutter, spatial-prompt conditioning, and
-variations in object scale and height.</p>
-            
-            
-
-            
-            
-            
-
-            
-
-            <a href="http://arxiv.org/abs/2510.17439v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Zhengshen Zhang, Hao Li, Yalun Dai, Zhengbang Zhu, Lei Zhou, Chenchen Liu, Dong Wang, Francis E. H. Tay, Sijin Chen, Ziwei Liu, Yuxiao Liu, Xinghang Li, Pan Zhou</p>
+            <p class="paper-authors">Authors: Ziqi Gao, Qiufu Li, Linlin Shen</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-10-28 02:27:45 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-10-28 02:30:38 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>

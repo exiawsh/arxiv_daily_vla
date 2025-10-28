@@ -1,0 +1,241 @@
+[
+    {
+        "title": "Scalable Vision-Language-Action Model Pretraining for Robotic Manipulation with Real-Life Human Activity Videos",
+        "summary": "This paper presents a novel approach for pretraining robotic manipulation\nVision-Language-Action (VLA) models using a large corpus of unscripted\nreal-life video recordings of human hand activities. Treating human hand as\ndexterous robot end-effector, we show that \"in-the-wild\" egocentric human\nvideos without any annotations can be transformed into data formats fully\naligned with existing robotic V-L-A training data in terms of task granularity\nand labels. This is achieved by the development of a fully-automated holistic\nhuman activity analysis approach for arbitrary human hand videos. This approach\ncan generate atomic-level hand activity segments and their language\ndescriptions, each accompanied with framewise 3D hand motion and camera motion.\nWe process a large volume of egocentric videos and create a hand-VLA training\ndataset containing 1M episodes and 26M frames. This training data covers a wide\nrange of objects and concepts, dexterous manipulation tasks, and environment\nvariations in real life, vastly exceeding the coverage of existing robot data.\nWe design a dexterous hand VLA model architecture and pretrain the model on\nthis dataset. The model exhibits strong zero-shot capabilities on completely\nunseen real-world observations. Additionally, fine-tuning it on a small amount\nof real robot action data significantly improves task success rates and\ngeneralization to novel objects in real robotic experiments. We also\ndemonstrate the appealing scaling behavior of the model's task performance with\nrespect to pretraining data scale. We believe this work lays a solid foundation\nfor scalable VLA pretraining, advancing robots toward truly generalizable\nembodied intelligence.",
+        "url": "http://arxiv.org/abs/2510.21571v1",
+        "published_date": "2025-10-24T15:39:31+00:00",
+        "updated_date": "2025-10-24T15:39:31+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Qixiu Li",
+            "Yu Deng",
+            "Yaobo Liang",
+            "Lin Luo",
+            "Lei Zhou",
+            "Chengtang Yao",
+            "Lingqi Zeng",
+            "Zhiyuan Feng",
+            "Huizhi Liang",
+            "Sicheng Xu",
+            "Yizhong Zhang",
+            "Xi Chen",
+            "Hao Chen",
+            "Lily Sun",
+            "Dong Chen",
+            "Jiaolong Yang",
+            "Baining Guo"
+        ],
+        "tldr": "The paper introduces a novel approach to pretraining Vision-Language-Action models for robotic manipulation using a large dataset of unlabeled, real-world human hand activity videos, demonstrating strong zero-shot and fine-tuning performance on robotic tasks.",
+        "tldr_zh": "本文提出了一种新的视觉-语言-动作模型预训练方法，用于机器人操作，该方法使用大量未标记的真实世界人类手部活动视频数据集，并在机器人任务上展示了强大的零样本和微调性能。",
+        "relevance_score": 10,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Urban 3D Change Detection Using LiDAR Sensor for HD Map Maintenance and Smart Mobility",
+        "summary": "High-definition 3D city maps underpin smart transportation, digital twins,\nand autonomous driving, where object level change detection across bi temporal\nLiDAR enables HD map maintenance, construction monitoring, and reliable\nlocalization. Classical DSM differencing and image based methods are sensitive\nto small vertical bias, ground slope, and viewpoint mismatch and yield cellwise\noutputs without object identity. Point based neural models and voxel encodings\ndemand large memory, assume near perfect pre alignment, degrade thin\nstructures, and seldom enforce class consistent association, which leaves split\nor merge cases unresolved and ignores uncertainty. We propose an object\ncentric, uncertainty aware pipeline for city scale LiDAR that aligns epochs\nwith multi resolution NDT followed by point to plane ICP, normalizes height,\nand derives a per location level of detection from registration covariance and\nsurface roughness to calibrate decisions and suppress spurious changes.\nGeometry only proxies seed cross epoch associations that are refined by\nsemantic and instance segmentation and a class constrained bipartite assignment\nwith augmented dummies to handle splits and merges while preserving per class\ncounts. Tiled processing bounds memory without eroding narrow ground changes,\nand instance level decisions combine 3D overlap, normal direction displacement,\nand height and volume differences with a histogram distance, all gated by the\nlocal level of detection to remain stable under partial overlap and sampling\nvariation. On 15 representative Subiaco blocks the method attains 95.2%\naccuracy, 90.4% mF1, and 82.6% mIoU, exceeding Triplet KPConv by 0.2 percentage\npoints in accuracy, 0.2 in mF1, and 0.8 in mIoU, with the largest gain on\nDecreased where IoU reaches 74.8% and improves by 7.6 points.",
+        "url": "http://arxiv.org/abs/2510.21112v1",
+        "published_date": "2025-10-24T02:59:55+00:00",
+        "updated_date": "2025-10-24T02:59:55+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Hezam Albagami",
+            "Haitian Wang",
+            "Xinyu Wang",
+            "Muhammad Ibrahim",
+            "Zainy M. Malakan",
+            "Abdullah M. Alqamdi",
+            "Mohammed H. Alghamdi",
+            "Ajmal Mian"
+        ],
+        "tldr": "This paper proposes an object-centric, uncertainty-aware pipeline for 3D change detection in LiDAR data for HD map maintenance, achieving high accuracy and IoU compared to a baseline method. It addresses limitations of prior methods by incorporating multi-resolution alignment, semantic segmentation, and instance-level reasoning to handle splits and merges.",
+        "tldr_zh": "本文提出了一种面向对象、具有不确定性感知的流水线，用于激光雷达数据中的3D变化检测，以维护高清地图，与基线方法相比，实现了高精度和IoU。通过结合多分辨率对齐、语义分割和实例级推理来处理分割和合并情况，解决了先前方法的局限性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "AURASeg: Attention Guided Upsampling with Residual Boundary-Assistive Refinement for Drivable-Area Segmentation",
+        "summary": "Free space ground segmentation is essential to navigate robots and autonomous\nvehicles, recognize drivable zones, and traverse efficiently. Fine-grained\nfeatures remain challenging for existing segmentation models, particularly for\nrobots in indoor and structured environments. These difficulties arise from\nineffective multi-scale processing, suboptimal boundary refinement, and limited\nfeature representation. In order to overcome these limitations, we propose\nAttention-Guided Upsampling with Residual Boundary-Assistive Refinement\n(AURASeg), a ground-plane semantic segmentation model that maintains high\nsegmentation accuracy while improving border precision. Our method uses\nCSP-Darknet backbone by adding a Residual Border Refinement Module (RBRM) for\naccurate edge delineation and an Attention Progressive Upsampling Decoder\n(APUD) for strong feature integration. We also incorporate a lightweight Atrous\nSpatial Pyramid Pooling (ASPP-Lite) module to ensure multi-scale context\nextraction without compromising real-time performance. The proposed model beats\nbenchmark segmentation architectures in mIoU and F1 metrics when tested on the\nGround Mobile Robot Perception (GMRP) Dataset and a custom Gazebo indoor\ndataset. Our approach achieves an improvement in mean Intersection-over-Union\n(mIoU) of +1.26% and segmentation precision of +1.65% compared to\nstate-of-the-art models. These results show that our technique is feasible for\nautonomous perception in both indoor and outdoor environments, enabling precise\nborder refinement with minimal effect on inference speed.",
+        "url": "http://arxiv.org/abs/2510.21536v1",
+        "published_date": "2025-10-24T15:01:18+00:00",
+        "updated_date": "2025-10-24T15:01:18+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Narendhiran Vijayakumar",
+            "Sridevi. M"
+        ],
+        "tldr": "The paper introduces AURASeg, a new semantic segmentation model for drivable area segmentation that improves border precision while maintaining accuracy, especially in indoor environments, by using attention-guided upsampling and residual boundary refinement. It outperforms existing models on relevant datasets.",
+        "tldr_zh": "该论文介绍了AURASeg，一种用于可行驶区域分割的新型语义分割模型，通过使用注意力引导的上采样和残差边界细化，提高了边界精度，同时保持了准确性，尤其是在室内环境中。它在相关数据集上优于现有模型。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "OpenHype: Hyperbolic Embeddings for Hierarchical Open-Vocabulary Radiance Fields",
+        "summary": "Modeling the inherent hierarchical structure of 3D objects and 3D scenes is\nhighly desirable, as it enables a more holistic understanding of environments\nfor autonomous agents. Accomplishing this with implicit representations, such\nas Neural Radiance Fields, remains an unexplored challenge. Existing methods\nthat explicitly model hierarchical structures often face significant\nlimitations: they either require multiple rendering passes to capture\nembeddings at different levels of granularity, significantly increasing\ninference time, or rely on predefined, closed-set discrete hierarchies that\ngeneralize poorly to the diverse and nuanced structures encountered by agents\nin the real world. To address these challenges, we propose OpenHype, a novel\napproach that represents scene hierarchies using a continuous hyperbolic latent\nspace. By leveraging the properties of hyperbolic geometry, OpenHype naturally\nencodes multi-scale relationships and enables smooth traversal of hierarchies\nthrough geodesic paths in latent space. Our method outperforms state-of-the-art\napproaches on standard benchmarks, demonstrating superior efficiency and\nadaptability in 3D scene understanding.",
+        "url": "http://arxiv.org/abs/2510.21441v1",
+        "published_date": "2025-10-24T13:17:56+00:00",
+        "updated_date": "2025-10-24T13:17:56+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Lisa Weijler",
+            "Sebastian Koch",
+            "Fabio Poiesi",
+            "Timo Ropinski",
+            "Pedro Hermosilla"
+        ],
+        "tldr": "OpenHype uses hyperbolic embeddings for Neural Radiance Fields to represent and traverse 3D scene hierarchies, improving efficiency and adaptability in scene understanding compared to existing methods.",
+        "tldr_zh": "OpenHype 使用双曲嵌入来处理神经辐射场，用于表示和遍历3D场景层次结构，与现有方法相比，提高了场景理解的效率和适应性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Towards Physically Executable 3D Gaussian for Embodied Navigation",
+        "summary": "3D Gaussian Splatting (3DGS), a 3D representation method with photorealistic\nreal-time rendering capabilities, is regarded as an effective tool for\nnarrowing the sim-to-real gap. However, it lacks fine-grained semantics and\nphysical executability for Visual-Language Navigation (VLN). To address this,\nwe propose SAGE-3D (Semantically and Physically Aligned Gaussian Environments\nfor 3D Navigation), a new paradigm that upgrades 3DGS into an executable,\nsemantically and physically aligned environment. It comprises two components:\n(1) Object-Centric Semantic Grounding, which adds object-level fine-grained\nannotations to 3DGS; and (2) Physics-Aware Execution Jointing, which embeds\ncollision objects into 3DGS and constructs rich physical interfaces. We release\nInteriorGS, containing 1K object-annotated 3DGS indoor scene data, and\nintroduce SAGE-Bench, the first 3DGS-based VLN benchmark with 2M VLN data.\nExperiments show that 3DGS scene data is more difficult to converge, while\nexhibiting strong generalizability, improving baseline performance by 31% on\nthe VLN-CE Unseen task. The data and code will be available soon.",
+        "url": "http://arxiv.org/abs/2510.21307v1",
+        "published_date": "2025-10-24T10:05:00+00:00",
+        "updated_date": "2025-10-24T10:05:00+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Bingchen Miao",
+            "Rong Wei",
+            "Zhiqi Ge",
+            "Xiaoquan sun",
+            "Shiqi Gao",
+            "Jingzhe Zhu",
+            "Renhan Wang",
+            "Siliang Tang",
+            "Jun Xiao",
+            "Rui Tang",
+            "Juncheng Li"
+        ],
+        "tldr": "The paper introduces SAGE-3D, a new paradigm that extends 3D Gaussian Splatting with object-level semantics and physics-aware execution for VLN, along with a new dataset and benchmark.",
+        "tldr_zh": "该论文介绍了SAGE-3D，一种通过对象级别的语义和物理感知执行扩展3D高斯溅射的新范例，用于视觉语言导航（VLN），并提供了一个新的数据集和基准。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Towards Physics-informed Spatial Intelligence with Human Priors: An Autonomous Driving Pilot Study",
+        "summary": "How to integrate and verify spatial intelligence in foundation models remains\nan open challenge. Current practice often proxies Visual-Spatial Intelligence\n(VSI) with purely textual prompts and VQA-style scoring, which obscures\ngeometry, invites linguistic shortcuts, and weakens attribution to genuinely\nspatial skills. We introduce Spatial Intelligence Grid (SIG): a structured,\ngrid-based schema that explicitly encodes object layouts, inter-object\nrelations, and physically grounded priors. As a complementary channel to text,\nSIG provides a faithful, compositional representation of scene structure for\nfoundation-model reasoning. Building on SIG, we derive SIG-informed evaluation\nmetrics that quantify a model's intrinsic VSI, which separates spatial\ncapability from language priors. In few-shot in-context learning with\nstate-of-the-art multimodal LLMs (e.g. GPT- and Gemini-family models), SIG\nyields consistently larger, more stable, and more comprehensive gains across\nall VSI metrics compared to VQA-only representations, indicating its promise as\na data-labeling and training schema for learning VSI. We also release SIGBench,\na benchmark of 1.4K driving frames annotated with ground-truth SIG labels and\nhuman gaze traces, supporting both grid-based machine VSI tasks and\nattention-driven, human-like VSI tasks in autonomous-driving scenarios.",
+        "url": "http://arxiv.org/abs/2510.21160v1",
+        "published_date": "2025-10-24T05:21:31+00:00",
+        "updated_date": "2025-10-24T05:21:31+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Guanlin Wu",
+            "Boyan Su",
+            "Yang Zhao",
+            "Pu Wang",
+            "Yichen Lin",
+            "Hao Frank Yang"
+        ],
+        "tldr": "This paper introduces Spatial Intelligence Grid (SIG), a structured grid-based schema for encoding spatial information, and SIGBench, a benchmark dataset, to improve and evaluate visual-spatial intelligence (VSI) in foundation models for autonomous driving.",
+        "tldr_zh": "本文介绍了空间智能网格（SIG），一种用于编码空间信息的结构化网格模式，以及SIGBench，一个基准数据集，旨在提高和评估用于自动驾驶的基础模型中的视觉-空间智能（VSI）。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "PhysVLM-AVR: Active Visual Reasoning for Multimodal Large Language Models in Physical Environments",
+        "summary": "Visual reasoning in multimodal large language models (MLLMs) has primarily\nbeen studied in static, fully observable settings, limiting their effectiveness\nin real-world environments where information is often incomplete due to\nocclusion or limited field of view. Humans, in contrast, actively explore and\ninteract with their environment-moving, examining, and manipulating objects-to\ngather information through a closed-loop process integrating perception,\nreasoning, and action. Inspired by this human capability, we introduce the\nActive Visual Reasoning (AVR) task, extending visual reasoning to partially\nobservable, interactive environments. AVR necessitates agents to: (1) actively\nacquire information via sequential physical actions, (2) integrate observations\nacross multiple steps for coherent reasoning, and (3) dynamically adjust\ndecisions based on evolving visual feedback. To rigorously evaluate AVR, we\nintroduce CLEVR-AVR, a simulation benchmark featuring multi-round interactive\nenvironments designed to assess both reasoning correctness and\ninformation-gathering efficiency. We present AVR-152k, a large-scale dataset\nthat offers rich Chain-of-Thought (CoT) annotations detailing iterative\nreasoning for uncertainty identification, action-conditioned information gain\nprediction, and information-maximizing action selection, crucial for training\nagents in a higher-order Markov Decision Process. Building on this, we develop\nPhysVLM-AVR, an MLLM achieving state-of-the-art performance on CLEVR-AVR,\nembodied reasoning (OpenEQA, RoboVQA), and passive visual reasoning (GeoMath,\nGeometry30K). Our analysis also reveals that current embodied MLLMs, despite\ndetecting information incompleteness, struggle to actively acquire and\nintegrate new information through interaction, highlighting a fundamental gap\nin active reasoning capabilities.",
+        "url": "http://arxiv.org/abs/2510.21111v1",
+        "published_date": "2025-10-24T02:59:00+00:00",
+        "updated_date": "2025-10-24T02:59:00+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Weijie Zhou",
+            "Xuantang Xiong",
+            "Yi Peng",
+            "Manli Tao",
+            "Chaoyang Zhao",
+            "Honghui Dong",
+            "Ming Tang",
+            "Jinqiao Wang"
+        ],
+        "tldr": "The paper introduces the Active Visual Reasoning (AVR) task and CLEVR-AVR benchmark for evaluating MLLMs in interactive, partially observable environments, along with a new model, PhysVLM-AVR, achieving state-of-the-art results.",
+        "tldr_zh": "该论文介绍了主动视觉推理（AVR）任务和CLEVR-AVR基准，用于评估在交互式、部分可观察环境中的MLLM，并提出了一个新的模型PhysVLM-AVR，取得了目前最好的结果。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "ZING-3D: Zero-shot Incremental 3D Scene Graphs via Vision-Language Models",
+        "summary": "Understanding and reasoning about complex 3D environments requires structured\nscene representations that capture not only objects but also their semantic and\nspatial relationships. While recent works on 3D scene graph generation have\nleveraged pretrained VLMs without task-specific fine-tuning, they are largely\nconfined to single-view settings, fail to support incremental updates as new\nobservations arrive and lack explicit geometric grounding in 3D space, all of\nwhich are essential for embodied scenarios. In this paper, we propose, ZING-3D,\na framework that leverages the vast knowledge of pretrained foundation models\nto enable open-vocabulary recognition and generate a rich semantic\nrepresentation of the scene in a zero-shot manner while also enabling\nincremental updates and geometric grounding in 3D space, making it suitable for\ndownstream robotics applications. Our approach leverages VLM reasoning to\ngenerate a rich 2D scene graph, which is grounded in 3D using depth\ninformation. Nodes represent open-vocabulary objects with features, 3D\nlocations, and semantic context, while edges capture spatial and semantic\nrelations with inter-object distances. Our experiments on scenes from the\nReplica and HM3D dataset show that ZING-3D is effective at capturing spatial\nand relational knowledge without the need of task-specific training.",
+        "url": "http://arxiv.org/abs/2510.21069v1",
+        "published_date": "2025-10-24T00:52:33+00:00",
+        "updated_date": "2025-10-24T00:52:33+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Pranav Saxena",
+            "Jimmy Chiun"
+        ],
+        "tldr": "ZING-3D is a zero-shot framework leveraging VLMs for incremental 3D scene graph generation with geometric grounding, suitable for robotics applications.",
+        "tldr_zh": "ZING-3D是一个零样本框架，利用视觉语言模型进行增量式3D场景图生成，并进行几何定位，适用于机器人应用。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "DAP-MAE: Domain-Adaptive Point Cloud Masked Autoencoder for Effective Cross-Domain Learning",
+        "summary": "Compared to 2D data, the scale of point cloud data in different domains\navailable for training, is quite limited. Researchers have been trying to\ncombine these data of different domains for masked autoencoder (MAE)\npre-training to leverage such a data scarcity issue. However, the prior\nknowledge learned from mixed domains may not align well with the downstream 3D\npoint cloud analysis tasks, leading to degraded performance. To address such an\nissue, we propose the Domain-Adaptive Point Cloud Masked Autoencoder (DAP-MAE),\nan MAE pre-training method, to adaptively integrate the knowledge of\ncross-domain datasets for general point cloud analysis. In DAP-MAE, we design a\nheterogeneous domain adapter that utilizes an adaptation mode during\npre-training, enabling the model to comprehensively learn information from\npoint clouds across different domains, while employing a fusion mode in the\nfine-tuning to enhance point cloud features. Meanwhile, DAP-MAE incorporates a\ndomain feature generator to guide the adaptation of point cloud features to\nvarious downstream tasks. With only one pre-training, DAP-MAE achieves\nexcellent performance across four different point cloud analysis tasks,\nreaching 95.18% in object classification on ScanObjectNN and 88.45% in facial\nexpression recognition on Bosphorus.",
+        "url": "http://arxiv.org/abs/2510.21635v1",
+        "published_date": "2025-10-24T16:44:40+00:00",
+        "updated_date": "2025-10-24T16:44:40+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ziqi Gao",
+            "Qiufu Li",
+            "Linlin Shen"
+        ],
+        "tldr": "The paper introduces DAP-MAE, a domain-adaptive masked autoencoder for point clouds that aims to improve cross-domain learning by adaptively integrating knowledge from different point cloud datasets. It achieves strong performance on several 3D analysis tasks.",
+        "tldr_zh": "该论文介绍了DAP-MAE，一种用于点云的领域自适应掩码自动编码器，旨在通过自适应地整合来自不同点云数据集的知识来改善跨领域学习。它在多个3D分析任务上实现了强大的性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
