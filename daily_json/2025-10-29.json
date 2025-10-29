@@ -1,0 +1,189 @@
+[
+    {
+        "title": "ZTRS: Zero-Imitation End-to-end Autonomous Driving with Trajectory Scoring",
+        "summary": "End-to-end autonomous driving maps raw sensor inputs directly into\nego-vehicle trajectories to avoid cascading errors from perception modules and\nto leverage rich semantic cues. Existing frameworks largely rely on Imitation\nLearning (IL), which can be limited by sub-optimal expert demonstrations and\ncovariate shift during deployment. On the other hand, Reinforcement Learning\n(RL) has recently shown potential in scaling up with simulations, but is\ntypically confined to low-dimensional symbolic inputs (e.g. 3D objects and\nmaps), falling short of full end-to-end learning from raw sensor data. We\nintroduce ZTRS (Zero-Imitation End-to-End Autonomous Driving with Trajectory\nScoring), a framework that combines the strengths of both worlds: sensor inputs\nwithout losing information and RL training for robust planning. To the best of\nour knowledge, ZTRS is the first framework that eliminates IL entirely by only\nlearning from rewards while operating directly on high-dimensional sensor data.\nZTRS utilizes offline reinforcement learning with our proposed Exhaustive\nPolicy Optimization (EPO), a variant of policy gradient tailored for enumerable\nactions and rewards. ZTRS demonstrates strong performance across three\nbenchmarks: Navtest (generic real-world open-loop planning), Navhard (open-loop\nplanning in challenging real-world and synthetic scenarios), and HUGSIM\n(simulated closed-loop driving). Specifically, ZTRS achieves the\nstate-of-the-art result on Navhard and outperforms IL-based baselines on\nHUGSIM. Code will be available at https://github.com/woxihuanjiangguo/ZTRS.",
+        "url": "http://arxiv.org/abs/2510.24108v1",
+        "published_date": "2025-10-28T06:26:36+00:00",
+        "updated_date": "2025-10-28T06:26:36+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Zhenxin Li",
+            "Wenhao Yao",
+            "Zi Wang",
+            "Xinglong Sun",
+            "Jingde Chen",
+            "Nadine Chang",
+            "Maying Shen",
+            "Jingyu Song",
+            "Zuxuan Wu",
+            "Shiyi Lan",
+            "Jose M. Alvarez"
+        ],
+        "tldr": "The paper introduces ZTRS, a novel end-to-end autonomous driving framework that eliminates imitation learning by using offline reinforcement learning directly on high-dimensional sensor data with a proposed Exhaustive Policy Optimization. It achieves state-of-the-art results on challenging benchmarks.",
+        "tldr_zh": "该论文介绍了ZTRS，一种新颖的端到端自动驾驶框架，通过使用离线强化学习直接处理高维传感器数据，并结合提出的穷举策略优化方法，消除了模仿学习的依赖。该方法在具有挑战性的基准测试中取得了最先进的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "MIC-BEV: Multi-Infrastructure Camera Bird's-Eye-View Transformer with Relation-Aware Fusion for 3D Object Detection",
+        "summary": "Infrastructure-based perception plays a crucial role in intelligent\ntransportation systems, offering global situational awareness and enabling\ncooperative autonomy. However, existing camera-based detection models often\nunderperform in such scenarios due to challenges such as multi-view\ninfrastructure setup, diverse camera configurations, degraded visual inputs,\nand various road layouts. We introduce MIC-BEV, a Transformer-based\nbird's-eye-view (BEV) perception framework for infrastructure-based\nmulti-camera 3D object detection. MIC-BEV flexibly supports a variable number\nof cameras with heterogeneous intrinsic and extrinsic parameters and\ndemonstrates strong robustness under sensor degradation. The proposed\ngraph-enhanced fusion module in MIC-BEV integrates multi-view image features\ninto the BEV space by exploiting geometric relationships between cameras and\nBEV cells alongside latent visual cues. To support training and evaluation, we\nintroduce M2I, a synthetic dataset for infrastructure-based object detection,\nfeaturing diverse camera configurations, road layouts, and environmental\nconditions. Extensive experiments on both M2I and the real-world dataset\nRoScenes demonstrate that MIC-BEV achieves state-of-the-art performance in 3D\nobject detection. It also remains robust under challenging conditions,\nincluding extreme weather and sensor degradation. These results highlight the\npotential of MIC-BEV for real-world deployment. The dataset and source code are\navailable at: https://github.com/HandsomeYun/MIC-BEV.",
+        "url": "http://arxiv.org/abs/2510.24688v1",
+        "published_date": "2025-10-28T17:49:42+00:00",
+        "updated_date": "2025-10-28T17:49:42+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yun Zhang",
+            "Zhaoliang Zheng",
+            "Johnson Liu",
+            "Zhiyu Huang",
+            "Zewei Zhou",
+            "Zonglin Meng",
+            "Tianhui Cai",
+            "Jiaqi Ma"
+        ],
+        "tldr": "MIC-BEV is a Transformer-based BEV perception framework for infrastructure-based multi-camera 3D object detection, demonstrating robustness and state-of-the-art performance, with a new synthetic dataset (M2I) and available code.",
+        "tldr_zh": "MIC-BEV是一个基于Transformer的鸟瞰图（BEV）感知框架，用于基于基础设施的多摄像头3D物体检测，展示了鲁棒性和最先进的性能，并提供了一个新的合成数据集（M2I）和可用代码。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "GroundLoc: Efficient Large-Scale Outdoor LiDAR-Only Localization",
+        "summary": "In this letter, we introduce GroundLoc, a LiDAR-only localization pipeline\ndesigned to localize a mobile robot in large-scale outdoor environments using\nprior maps. GroundLoc employs a Bird's-Eye View (BEV) image projection focusing\non the perceived ground area and utilizes the place recognition network R2D2,\nor alternatively, the non-learning approach Scale-Invariant Feature Transform\n(SIFT), to identify and select keypoints for BEV image map registration. Our\nresults demonstrate that GroundLoc outperforms state-of-the-art methods on the\nSemanticKITTI and HeLiPR datasets across various sensors. In the multi-session\nlocalization evaluation, GroundLoc reaches an Average Trajectory Error (ATE)\nwell below 50 cm on all Ouster OS2 128 sequences while meeting online runtime\nrequirements. The system supports various sensor models, as evidenced by\nevaluations conducted with Velodyne HDL-64E, Ouster OS2 128, Aeva Aeries II,\nand Livox Avia sensors. The prior maps are stored as 2D raster image maps,\nwhich can be created from a single drive and require only 4 MB of storage per\nsquare kilometer. The source code is available at\nhttps://github.com/dcmlr/groundloc.",
+        "url": "http://arxiv.org/abs/2510.24623v1",
+        "published_date": "2025-10-28T16:51:50+00:00",
+        "updated_date": "2025-10-28T16:51:50+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Nicolai Steinke",
+            "Daniel Goehring"
+        ],
+        "tldr": "GroundLoc is a LiDAR-only localization pipeline using BEV images and place recognition networks, achieving sub-50cm ATE on various sensors in large-scale outdoor environments with efficient map storage.",
+        "tldr_zh": "GroundLoc是一个仅使用激光雷达的定位管道，使用BEV图像和地点识别网络，在大型户外环境中针对各种传感器实现了低于50厘米的ATE，并具有高效的地图存储。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "DynaRend: Learning 3D Dynamics via Masked Future Rendering for Robotic Manipulation",
+        "summary": "Learning generalizable robotic manipulation policies remains a key challenge\ndue to the scarcity of diverse real-world training data. While recent\napproaches have attempted to mitigate this through self-supervised\nrepresentation learning, most either rely on 2D vision pretraining paradigms\nsuch as masked image modeling, which primarily focus on static semantics or\nscene geometry, or utilize large-scale video prediction models that emphasize\n2D dynamics, thus failing to jointly learn the geometry, semantics, and\ndynamics required for effective manipulation. In this paper, we present\nDynaRend, a representation learning framework that learns 3D-aware and\ndynamics-informed triplane features via masked reconstruction and future\nprediction using differentiable volumetric rendering. By pretraining on\nmulti-view RGB-D video data, DynaRend jointly captures spatial geometry, future\ndynamics, and task semantics in a unified triplane representation. The learned\nrepresentations can be effectively transferred to downstream robotic\nmanipulation tasks via action value map prediction. We evaluate DynaRend on two\nchallenging benchmarks, RLBench and Colosseum, as well as in real-world robotic\nexperiments, demonstrating substantial improvements in policy success rate,\ngeneralization to environmental perturbations, and real-world applicability\nacross diverse manipulation tasks.",
+        "url": "http://arxiv.org/abs/2510.24261v1",
+        "published_date": "2025-10-28T10:17:11+00:00",
+        "updated_date": "2025-10-28T10:17:11+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Jingyi Tian",
+            "Le Wang",
+            "Sanping Zhou",
+            "Sen Wang",
+            "Jiayi Li",
+            "Gang Hua"
+        ],
+        "tldr": "DynaRend learns 3D-aware triplane features using masked reconstruction and future prediction with differentiable volumetric rendering for robotic manipulation, showing improved performance on standard benchmarks and in real-world experiments.",
+        "tldr_zh": "DynaRend通过使用可微体渲染的掩蔽重建和未来预测来学习3D感知的三平面特征，用于机器人操作，在标准基准测试和真实世界实验中表现出改进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Enhancing Vision-Language Models for Autonomous Driving through Task-Specific Prompting and Spatial Reasoning",
+        "summary": "This technical report presents our solution for the RoboSense Challenge at\nIROS 2025, which evaluates Vision-Language Models (VLMs) on autonomous driving\nscene understanding across perception, prediction, planning, and corruption\ndetection tasks. We propose a systematic framework built on four core\ncomponents. First, a Mixture-of-Prompts router classifies questions and\ndispatches them to task-specific expert prompts, eliminating interference\nacross diverse question types. Second, task-specific prompts embed explicit\ncoordinate systems, spatial reasoning rules, role-playing,\nChain-of-Thought/Tree-of-Thought reasoning, and few-shot examples tailored to\neach task. Third, a visual assembly module composes multi-view images with\nobject crops, magenta markers, and adaptive historical frames based on question\nrequirements. Fourth, we configure model inference parameters (temperature,\ntop-p, message roles) per task to optimize output quality. Implemented on\nQwen2.5-VL-72B, our approach achieves 70.87% average accuracy on Phase-1 (clean\ndata) and 72.85% on Phase-2 (corrupted data), demonstrating that structured\nprompting and spatial grounding substantially enhance VLM performance on\nsafety-critical autonomous driving tasks. Code and prompt are available at\nhttps://github.com/wuaodi/UCAS-CSU-phase2.",
+        "url": "http://arxiv.org/abs/2510.24152v1",
+        "published_date": "2025-10-28T07:43:30+00:00",
+        "updated_date": "2025-10-28T07:43:30+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Aodi Wu",
+            "Xubo Luo"
+        ],
+        "tldr": "The paper presents a framework that enhances Vision-Language Models (VLMs) for autonomous driving by using task-specific prompting, spatial reasoning, and a visual assembly module. The approach achieved strong results on a RoboSense Challenge, demonstrating improved performance on perception, prediction, planning and corruption detection tasks.",
+        "tldr_zh": "该论文提出了一个框架，通过使用特定于任务的提示、空间推理和视觉组装模块来增强用于自动驾驶的视觉语言模型 (VLM)。该方法在 RoboSense 挑战赛中取得了优异成绩，展示了在感知、预测、规划和损坏检测任务上的性能提升。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Adaptive Keyframe Selection for Scalable 3D Scene Reconstruction in Dynamic Environments",
+        "summary": "In this paper, we propose an adaptive keyframe selection method for improved\n3D scene reconstruction in dynamic environments. The proposed method integrates\ntwo complementary modules: an error-based selection module utilizing\nphotometric and structural similarity (SSIM) errors, and a momentum-based\nupdate module that dynamically adjusts keyframe selection thresholds according\nto scene motion dynamics. By dynamically curating the most informative frames,\nour approach addresses a key data bottleneck in real-time perception. This\nallows for the creation of high-quality 3D world representations from a\ncompressed data stream, a critical step towards scalable robot learning and\ndeployment in complex, dynamic environments. Experimental results demonstrate\nsignificant improvements over traditional static keyframe selection strategies,\nsuch as fixed temporal intervals or uniform frame skipping. These findings\nhighlight a meaningful advancement toward adaptive perception systems that can\ndynamically respond to complex and evolving visual scenes. We evaluate our\nproposed adaptive keyframe selection module on two recent state-of-the-art 3D\nreconstruction networks, Spann3r and CUT3R, and observe consistent improvements\nin reconstruction quality across both frameworks. Furthermore, an extensive\nablation study confirms the effectiveness of each individual component in our\nmethod, underlining their contribution to the overall performance gains.",
+        "url": "http://arxiv.org/abs/2510.23928v1",
+        "published_date": "2025-10-27T23:25:57+00:00",
+        "updated_date": "2025-10-27T23:25:57+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Raman Jha",
+            "Yang Zhou",
+            "Giuseppe Loianno"
+        ],
+        "tldr": "This paper presents an adaptive keyframe selection method for 3D scene reconstruction in dynamic environments, using error-based and momentum-based modules to improve reconstruction quality and scalability.",
+        "tldr_zh": "本文提出了一种自适应关键帧选择方法，用于在动态环境中进行三维场景重建。该方法结合了基于误差和基于动量的模块，以提高重建质量和可扩展性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "RoboOmni: Proactive Robot Manipulation in Omni-modal Context",
+        "summary": "Recent advances in Multimodal Large Language Models (MLLMs) have driven rapid\nprogress in Vision-Language-Action (VLA) models for robotic manipulation.\nAlthough effective in many scenarios, current approaches largely rely on\nexplicit instructions, whereas in real-world interactions, humans rarely issue\ninstructions directly. Effective collaboration requires robots to infer user\nintentions proactively. In this work, we introduce cross-modal contextual\ninstructions, a new setting where intent is derived from spoken dialogue,\nenvironmental sounds, and visual cues rather than explicit commands. To address\nthis new setting, we present RoboOmni, a Perceiver-Thinker-Talker-Executor\nframework based on end-to-end omni-modal LLMs that unifies intention\nrecognition, interaction confirmation, and action execution. RoboOmni fuses\nauditory and visual signals spatiotemporally for robust intention recognition,\nwhile supporting direct speech interaction. To address the absence of training\ndata for proactive intention recognition in robotic manipulation, we build\nOmniAction, comprising 140k episodes, 5k+ speakers, 2.4k event sounds, 640\nbackgrounds, and six contextual instruction types. Experiments in simulation\nand real-world settings show that RoboOmni surpasses text- and ASR-based\nbaselines in success rate, inference speed, intention recognition, and\nproactive assistance.",
+        "url": "http://arxiv.org/abs/2510.23763v1",
+        "published_date": "2025-10-27T18:49:03+00:00",
+        "updated_date": "2025-10-27T18:49:03+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CL",
+            "cs.CV"
+        ],
+        "authors": [
+            "Siyin Wang",
+            "Jinlan Fu",
+            "Feihong Liu",
+            "Xinzhe He",
+            "Huangxuan Wu",
+            "Junhao Shi",
+            "Kexin Huang",
+            "Zhaoye Fei",
+            "Jingjing Gong",
+            "Zuxuan Wu",
+            "Yugang Jiang",
+            "See-Kiong Ng",
+            "Tat-Seng Chua",
+            "Xipeng Qiu"
+        ],
+        "tldr": "The paper introduces RoboOmni, a framework for proactive robot manipulation using omni-modal LLMs that infers user intentions from spoken dialogue, environmental sounds, and visual cues, along with a new dataset, OmniAction, for training and evaluation.",
+        "tldr_zh": "该论文介绍了RoboOmni，一个使用全模态LLM的主动机器人操作框架，该框架可以从语音对话、环境声音和视觉线索中推断用户意图，并提出了一个新的数据集OmniAction，用于训练和评估。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    }
+]
