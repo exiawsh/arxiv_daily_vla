@@ -1,0 +1,153 @@
+[
+    {
+        "title": "EA3D: Online Open-World 3D Object Extraction from Streaming Videos",
+        "summary": "Current 3D scene understanding methods are limited by offline-collected\nmulti-view data or pre-constructed 3D geometry. In this paper, we present\nExtractAnything3D (EA3D), a unified online framework for open-world 3D object\nextraction that enables simultaneous geometric reconstruction and holistic\nscene understanding. Given a streaming video, EA3D dynamically interprets each\nframe using vision-language and 2D vision foundation encoders to extract\nobject-level knowledge. This knowledge is integrated and embedded into a\nGaussian feature map via a feed-forward online update strategy. We then\niteratively estimate visual odometry from historical frames and incrementally\nupdate online Gaussian features with new observations. A recurrent joint\noptimization module directs the model's attention to regions of interest,\nsimultaneously enhancing both geometric reconstruction and semantic\nunderstanding. Extensive experiments across diverse benchmarks and tasks,\nincluding photo-realistic rendering, semantic and instance segmentation, 3D\nbounding box and semantic occupancy estimation, and 3D mesh generation,\ndemonstrate the effectiveness of EA3D. Our method establishes a unified and\nefficient framework for joint online 3D reconstruction and holistic scene\nunderstanding, enabling a broad range of downstream tasks.",
+        "url": "http://arxiv.org/abs/2510.25146v1",
+        "published_date": "2025-10-29T03:56:41+00:00",
+        "updated_date": "2025-10-29T03:56:41+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Xiaoyu Zhou",
+            "Jingqi Wang",
+            "Yuang Jia",
+            "Yongtao Wang",
+            "Deqing Sun",
+            "Ming-Hsuan Yang"
+        ],
+        "tldr": "The paper introduces EA3D, an online framework for 3D object extraction from streaming video that integrates geometric reconstruction and semantic understanding using vision-language and 2D vision foundation encoders. It performs joint online 3D reconstruction and holistic scene understanding.",
+        "tldr_zh": "该论文介绍了EA3D，一个从流视频中进行3D物体提取的在线框架，它集成了几何重建和语义理解，并使用了视觉语言和2D视觉基础编码器。该方法执行联合在线3D重建和整体场景理解。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "MMEdge: Accelerating On-device Multimodal Inference via Pipelined Sensing and Encoding",
+        "summary": "Real-time multimodal inference on resource-constrained edge devices is\nessential for applications such as autonomous driving, human-computer\ninteraction, and mobile health. However, prior work often overlooks the tight\ncoupling between sensing dynamics and model execution, as well as the complex\ninter-modality dependencies. In this paper, we propose MMEdge, an new on-device\nmulti-modal inference framework based on pipelined sensing and encoding.\nInstead of waiting for complete sensor inputs, MMEdge decomposes the entire\ninference process into a sequence of fine-grained sensing and encoding units,\nallowing computation to proceed incrementally as data arrive. MMEdge also\nintroduces a lightweight but effective temporal aggregation module that\ncaptures rich temporal dynamics across different pipelined units to maintain\naccuracy performance. Such pipelined design also opens up opportunities for\nfine-grained cross-modal optimization and early decision-making during\ninference. To further enhance system performance under resource variability and\ninput data complexity, MMEdge incorporates an adaptive multimodal configuration\noptimizer that dynamically selects optimal sensing and model configurations for\neach modality under latency constraints, and a cross-modal speculative skipping\nmechanism that bypasses future units of slower modalities when early\npredictions reach sufficient confidence. We evaluate MMEdge using two public\nmultimodal datasets and deploy it on a real-world unmanned aerial vehicle\n(UAV)-based multimodal testbed. The results show that MMEdge significantly\nreduces end-to-end latency while maintaining high task accuracy across various\nsystem and data dynamics.",
+        "url": "http://arxiv.org/abs/2510.25327v1",
+        "published_date": "2025-10-29T09:41:03+00:00",
+        "updated_date": "2025-10-29T09:41:03+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG"
+        ],
+        "authors": [
+            "Runxi Huang",
+            "Mingxuan Yu",
+            "Mingyu Tsoi",
+            "Xiaomin Ouyang"
+        ],
+        "tldr": "MMEdge is a framework for accelerating on-device multimodal inference by pipelining sensing and encoding, allowing for faster and more efficient processing on resource-constrained edge devices. It achieves this through fine-grained sensing, temporal aggregation, adaptive configuration optimization, and speculative skipping.",
+        "tldr_zh": "MMEdge是一个用于加速设备端多模态推理的框架，通过流水线式的感知和编码，实现了在资源受限的边缘设备上更快更高效的处理。它通过细粒度感知、时间聚合、自适应配置优化和推测跳过来实现这一目标。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "$D^2GS$: Dense Depth Regularization for LiDAR-free Urban Scene Reconstruction",
+        "summary": "Recently, Gaussian Splatting (GS) has shown great potential for urban scene\nreconstruction in the field of autonomous driving. However, current urban scene\nreconstruction methods often depend on multimodal sensors as inputs,\n\\textit{i.e.} LiDAR and images. Though the geometry prior provided by LiDAR\npoint clouds can largely mitigate ill-posedness in reconstruction, acquiring\nsuch accurate LiDAR data is still challenging in practice: i) precise\nspatiotemporal calibration between LiDAR and other sensors is required, as they\nmay not capture data simultaneously; ii) reprojection errors arise from spatial\nmisalignment when LiDAR and cameras are mounted at different locations. To\navoid the difficulty of acquiring accurate LiDAR depth, we propose $D^2GS$, a\nLiDAR-free urban scene reconstruction framework. In this work, we obtain\ngeometry priors that are as effective as LiDAR while being denser and more\naccurate. $\\textbf{First}$, we initialize a dense point cloud by\nback-projecting multi-view metric depth predictions. This point cloud is then\noptimized by a Progressive Pruning strategy to improve the global consistency.\n$\\textbf{Second}$, we jointly refine Gaussian geometry and predicted dense\nmetric depth via a Depth Enhancer. Specifically, we leverage diffusion priors\nfrom a depth foundation model to enhance the depth maps rendered by Gaussians.\nIn turn, the enhanced depths provide stronger geometric constraints during\nGaussian training. $\\textbf{Finally}$, we improve the accuracy of ground\ngeometry by constraining the shape and normal attributes of Gaussians within\nroad regions. Extensive experiments on the Waymo dataset demonstrate that our\nmethod consistently outperforms state-of-the-art methods, producing more\naccurate geometry even when compared with those using ground-truth LiDAR data.",
+        "url": "http://arxiv.org/abs/2510.25173v1",
+        "published_date": "2025-10-29T05:13:09+00:00",
+        "updated_date": "2025-10-29T05:13:09+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Kejing Xia",
+            "Jidong Jia",
+            "Ke Jin",
+            "Yucai Bai",
+            "Li Sun",
+            "Dacheng Tao",
+            "Youjian Zhang"
+        ],
+        "tldr": "The paper introduces $D^2GS$, a LiDAR-free urban scene reconstruction framework using Gaussian Splatting that leverages multi-view depth prediction and depth enhancement with diffusion priors to achieve accuracy comparable to LiDAR-based methods.",
+        "tldr_zh": "该论文介绍了一种名为$D^2GS$的无需激光雷达的城市场景重建框架，它利用高斯溅射，通过多视角深度预测和使用扩散先验的深度增强，实现了与基于激光雷达的方法相当的精度。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "SCOUT: A Lightweight Framework for Scenario Coverage Assessment in Autonomous Driving",
+        "summary": "Assessing scenario coverage is crucial for evaluating the robustness of\nautonomous agents, yet existing methods rely on expensive human annotations or\ncomputationally intensive Large Vision-Language Models (LVLMs). These\napproaches are impractical for large-scale deployment due to cost and\nefficiency constraints. To address these shortcomings, we propose SCOUT\n(Scenario Coverage Oversight and Understanding Tool), a lightweight surrogate\nmodel designed to predict scenario coverage labels directly from an agent's\nlatent sensor representations. SCOUT is trained through a distillation process,\nlearning to approximate LVLM-generated coverage labels while eliminating the\nneed for continuous LVLM inference or human annotation. By leveraging\nprecomputed perception features, SCOUT avoids redundant computations and\nenables fast, scalable scenario coverage estimation. We evaluate our method\nacross a large dataset of real-life autonomous navigation scenarios,\ndemonstrating that it maintains high accuracy while significantly reducing\ncomputational cost. Our results show that SCOUT provides an effective and\npractical alternative for large-scale coverage analysis. While its performance\ndepends on the quality of LVLM-generated training labels, SCOUT represents a\nmajor step toward efficient scenario coverage oversight in autonomous systems.",
+        "url": "http://arxiv.org/abs/2510.24949v1",
+        "published_date": "2025-10-28T20:31:19+00:00",
+        "updated_date": "2025-10-28T20:31:19+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Anil Yildiz",
+            "Sarah M. Thornton",
+            "Carl Hildebrandt",
+            "Sreeja Roy-Singh",
+            "Mykel J. Kochenderfer"
+        ],
+        "tldr": "The paper introduces SCOUT, a lightweight surrogate model for efficient scenario coverage assessment in autonomous driving, trained via distillation from LVLM-generated labels to avoid expensive computations and human annotation.",
+        "tldr_zh": "本文介绍了一种轻量级代理模型 SCOUT，用于在自动驾驶中进行高效的场景覆盖评估。该模型通过从 LVLM 生成的标签中进行蒸馏训练，从而避免了昂贵的计算和人工标注。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Understanding Multi-View Transformers",
+        "summary": "Multi-view transformers such as DUSt3R are revolutionizing 3D vision by\nsolving 3D tasks in a feed-forward manner. However, contrary to previous\noptimization-based pipelines, the inner mechanisms of multi-view transformers\nare unclear. Their black-box nature makes further improvements beyond data\nscaling challenging and complicates usage in safety- and reliability-critical\napplications. Here, we present an approach for probing and visualizing 3D\nrepresentations from the residual connections of the multi-view transformers'\nlayers. In this manner, we investigate a variant of the DUSt3R model, shedding\nlight on the development of its latent state across blocks, the role of the\nindividual layers, and suggest how it differs from methods with stronger\ninductive biases of explicit global pose. Finally, we show that the\ninvestigated variant of DUSt3R estimates correspondences that are refined with\nreconstructed geometry. The code used for the analysis is available at\nhttps://github.com/JulienGaubil/und3rstand .",
+        "url": "http://arxiv.org/abs/2510.24907v1",
+        "published_date": "2025-10-28T19:19:35+00:00",
+        "updated_date": "2025-10-28T19:19:35+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG"
+        ],
+        "authors": [
+            "Michal Stary",
+            "Julien Gaubil",
+            "Ayush Tewari",
+            "Vincent Sitzmann"
+        ],
+        "tldr": "This paper investigates the internal mechanisms of multi-view transformers (specifically DUSt3R) for 3D vision, revealing insights into their latent state development and layer roles by probing residual connections.",
+        "tldr_zh": "本文通过探测残差连接，研究了用于 3D 视觉的多视图 Transformer (特别是 DUSt3R) 的内部机制，揭示了其潜在状态的发展和层的作用。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "SPADE: Sparsity Adaptive Depth Estimator for Zero-Shot, Real-Time, Monocular Depth Estimation in Underwater Environments",
+        "summary": "Underwater infrastructure requires frequent inspection and maintenance due to\nharsh marine conditions. Current reliance on human divers or remotely operated\nvehicles is limited by perceptual and operational challenges, especially around\ncomplex structures or in turbid water. Enhancing the spatial awareness of\nunderwater vehicles is key to reducing piloting risks and enabling greater\nautonomy. To address these challenges, we present SPADE: SParsity Adaptive\nDepth Estimator, a monocular depth estimation pipeline that combines\npre-trained relative depth estimator with sparse depth priors to produce dense,\nmetric scale depth maps. Our two-stage approach first scales the relative depth\nmap with the sparse depth points, then refines the final metric prediction with\nour proposed Cascade Conv-Deformable Transformer blocks. Our approach achieves\nimproved accuracy and generalisation over state-of-the-art baselines and runs\nefficiently at over 15 FPS on embedded hardware, promising to support practical\nunderwater inspection and intervention. This work has been submitted to IEEE\nJournal of Oceanic Engineering Special Issue of AUV 2026.",
+        "url": "http://arxiv.org/abs/2510.25463v1",
+        "published_date": "2025-10-29T12:37:34+00:00",
+        "updated_date": "2025-10-29T12:37:34+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Hongjie Zhang",
+            "Gideon Billings",
+            "Stefan B. Williams"
+        ],
+        "tldr": "SPADE is a real-time monocular depth estimation pipeline for underwater environments, combining pre-trained relative depth estimation with sparse depth priors and a novel Cascade Conv-Deformable Transformer for improved accuracy and efficiency on embedded hardware.",
+        "tldr_zh": "SPADE是一个用于水下环境的实时单目深度估计流程，它结合了预训练的相对深度估计和稀疏深度先验，以及一种新的级联卷积可变形Transformer，从而在嵌入式硬件上实现了更高的精度和效率。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
