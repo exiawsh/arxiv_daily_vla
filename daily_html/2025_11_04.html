@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Autonomous Driving, VLA, 3D Understanding, Robotics) - October 23, 2025</title>
+    <title>ArXiv CS.CV Papers (Autonomous Driving, VLA, 3D Understanding, Robotics) - November 04, 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>VLM Daily Papers</h1>
         <p>Daily papers related to VLA/AV/3D Understanding from cs.CV</p>
         
-            <p>October 23, 2025</p>
+            <p>November 04, 2025</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,32 +215,141 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">GigaBrain-0: A World Model-Powered Vision-Language-Action Model</h2>
+            <h2 class="paper-title">UniLION: Towards Unified Autonomous Driving Model with Linear Group RNNs</h2>
             
-            <p class="paper-summary">Training Vision-Language-Action (VLA) models for generalist robots typically
-requires large-scale real-world robot data, which is expensive and
-time-consuming to collect. The inefficiency of physical data collection
-severely limits the scalability, and generalization capacity of current VLA
-systems. To address this challenge, we introduce GigaBrain-0, a novel VLA
-foundation model empowered by world model-generated data (e.g., video
-generation, real2real transfer, human transfer, view transfer, sim2real
-transfer data). By leveraging world models to generate diverse data at scale,
-GigaBrain-0 significantly reduces reliance on real robot data while improving
-cross-task generalization. Our approach further improves policy robustness
-through RGBD input modeling and embodied Chain-of-Thought (CoT) supervision,
-enabling the model to reason about spatial geometry, object states, and
-long-horizon dependencies during task execution. This leads to substantial
-gains in real-world performance on dexterous, long-horizon, and mobile
-manipulation tasks. Extensive experiments demonstrate that GigaBrain-0 achieves
-superior generalization across variations in appearances (e.g., textures,
-colors), object placements, and camera viewpoints. Additionally, we present
-GigaBrain-0-Small, an optimized lightweight variant designed to run efficiently
-on devices such as the NVIDIA Jetson AGX Orin.</p>
+            <p class="paper-summary">Although transformers have demonstrated remarkable capabilities across
+various domains, their quadratic attention mechanisms introduce significant
+computational overhead when processing long-sequence data. In this paper, we
+present a unified autonomous driving model, UniLION, which efficiently handles
+large-scale LiDAR point clouds, high-resolution multi-view images, and even
+temporal sequences based on the linear group RNN operator (i.e., performs
+linear RNN for grouped features). Remarkably, UniLION serves as a single
+versatile architecture that can seamlessly support multiple specialized
+variants (i.e., LiDAR-only, temporal LiDAR, multi-modal, and multi-modal
+temporal fusion configurations) without requiring explicit temporal or
+multi-modal fusion modules. Moreover, UniLION consistently delivers competitive
+and even state-of-the-art performance across a wide range of core tasks,
+including 3D perception (e.g., 3D object detection, 3D object tracking, 3D
+occupancy prediction, BEV map segmentation), prediction (e.g., motion
+prediction), and planning (e.g., end-to-end planning). This unified paradigm
+naturally simplifies the design of multi-modal and multi-task autonomous
+driving systems while maintaining superior performance. Ultimately, we hope
+UniLION offers a fresh perspective on the development of 3D foundation models
+in autonomous driving. Code is available at
+https://github.com/happinesslz/UniLION</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: GigaBrain-0 is a VLA foundation model that leverages world model-generated data to reduce reliance on real robot data, improving generalization and robustness in real-world robotic tasks.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces UniLION, a unified autonomous driving model using linear group RNNs for efficient processing of large-scale LiDAR, multi-view images, and temporal sequences, achieving competitive performance across various tasks without explicit fusion modules.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: GigaBrain-0 是一个 VLA 基础模型，它利用世界模型生成的数据来减少对真实机器人数据的依赖，从而提高真实世界机器人任务中的泛化性和鲁棒性。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了UniLION，一种统一的自动驾驶模型，它使用线性组RNN有效地处理大规模LiDAR点云、多视角图像和时间序列，无需显式的融合模块即可在各种任务中实现有竞争力的性能。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star-half-alt"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2511.01768v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Zhe Liu, Jinghua Hou, Xiaoqing Ye, Jingdong Wang, Hengshuang Zhao, Xiang Bai</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.05, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">3EED: Ground Everything Everywhere in 3D</h2>
+            
+            <p class="paper-summary">Visual grounding in 3D is the key for embodied agents to localize
+language-referred objects in open-world environments. However, existing
+benchmarks are limited to indoor focus, single-platform constraints, and small
+scale. We introduce 3EED, a multi-platform, multi-modal 3D grounding benchmark
+featuring RGB and LiDAR data from vehicle, drone, and quadruped platforms. We
+provide over 128,000 objects and 22,000 validated referring expressions across
+diverse outdoor scenes -- 10x larger than existing datasets. We develop a
+scalable annotation pipeline combining vision-language model prompting with
+human verification to ensure high-quality spatial grounding. To support
+cross-platform learning, we propose platform-aware normalization and
+cross-modal alignment techniques, and establish benchmark protocols for
+in-domain and cross-platform evaluations. Our findings reveal significant
+performance gaps, highlighting the challenges and opportunities of
+generalizable 3D grounding. The 3EED dataset and benchmark toolkit are released
+to advance future research in language-driven 3D embodied perception.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces 3EED, a large-scale, multi-platform 3D grounding benchmark designed for embodied agents operating in diverse outdoor environments, addressing limitations of existing datasets.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了3EED，一个大规模、多平台的3D视觉定位基准，专为在各种户外环境中运行的具身智能体设计，旨在解决现有数据集的局限性。</p>
             
 
             
@@ -311,129 +420,11 @@ on devices such as the NVIDIA Jetson AGX Orin.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.19430v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2511.01755v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: GigaBrain Team, Angen Ye, Boyuan Wang, Chaojun Ni, Guan Huang, Guosheng Zhao, Haoyun Li, Jie Li, Jiagang Zhu, Lv Feng, Peng Li, Qiuping Deng, Runqi Ouyang, Wenkang Qin, Xinze Chen, Xiaofeng Wang, Yang Wang, Yifan Li, Yilong Li, Yiran Ding, Yuan Xu, Yun Ye, Yukun Zhou, Zhehao Dong, Zhenan Wang, Zhichao Liu, Zheng Zhu</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.05, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">Seeing Across Views: Benchmarking Spatial Reasoning of Vision-Language Models in Robotic Scenes</h2>
-            
-            <p class="paper-summary">Vision-language models (VLMs) are essential to Embodied AI, enabling robots
-to perceive, reason, and act in complex environments. They also serve as the
-foundation for the recent Vision-Language-Action (VLA) models. Yet most
-evaluations of VLMs focus on single-view settings, leaving their ability to
-integrate multi-view information underexplored. At the same time, multi-camera
-setups are increasingly standard in robotic platforms, as they provide
-complementary perspectives to mitigate occlusion and depth ambiguity. Whether
-VLMs can effectively leverage such multi-view inputs for robotic reasoning
-therefore remains an open question. To bridge this gap, we introduce
-MV-RoboBench, a benchmark specifically designed to evaluate the multi-view
-spatial reasoning capabilities of VLMs in robotic manipulation. MV-RoboBench
-consists of 1.7k manually curated QA items across eight subtasks, divided into
-two primary categories: spatial understanding and robotic execution. We
-evaluate a diverse set of existing VLMs, including both open-source and
-closed-source models, along with enhanced versions incorporating CoT-inspired
-techniques. The results show that state-of-the-art models remain far below
-human performance, underscoring the substantial challenges VLMs face in
-multi-view robotic perception. Additionally, our analysis uncovers two key
-findings: (i) spatial intelligence and robotic task execution are positively
-correlated in multi-view robotic scenarios; and (ii) strong performance on
-existing general-purpose single-view spatial understanding benchmarks does not
-reliably translate to success in the robotic spatial tasks assessed by our
-benchmark. We release MV-RoboBench as an open resource to foster progress in
-spatially grounded VLMs and VLAs, providing not only data but also a
-standardized evaluation protocol for multi-view embodied reasoning.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces MV-RoboBench, a new benchmark for evaluating the multi-view spatial reasoning capabilities of Vision-Language Models in robotic manipulation, highlighting the gap between single-view VLM performance and multi-view robotic task success.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了MV-RoboBench，这是一个新的基准测试，用于评估视觉语言模型在机器人操作中的多视角空间推理能力，强调了单视角VLM性能与多视角机器人任务成功之间的差距。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star-half-alt"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2510.19400v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Zhiyuan Feng, Zhaolu Kang, Qijie Wang, Zhiying Du, Jiongrui Yan, Shubin Shi, Chengbo Yuan, Huizhi Liang, Yu Deng, Qixiu Li, Rushuai Yang, Arctanx An, Leqi Zheng, Weijie Wang, Shawn Chen, Sicheng Xu, Yaobo Liang, Jiaolong Yang, Baining Guo</p>
+            <p class="paper-authors">Authors: Rong Li, Yuhao Dong, Tianshuai Hu, Ao Liang, Youquan Liu, Dongyue Lu, Liang Pan, Lingdong Kong, Junwei Liang, Ziwei Liu</p>
             
         </motion.div>
         
@@ -445,30 +436,37 @@ standardized evaluation protocol for multi-view embodied reasoning.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">$\nabla$-SDF: Learning Euclidean Signed Distance Functions Online with Gradient-Augmented Octree Interpolation and Neural Residual</h2>
+            <h2 class="paper-title">Unified Diffusion VLA: Vision-Language-Action Model via Joint Discrete Denoising Diffusion Process</h2>
             
-            <p class="paper-summary">Estimation of signed distance functions (SDFs) from point cloud data has been
-shown to benefit many robot autonomy capabilities, including localization,
-mapping, motion planning, and control. Methods that support online and
-large-scale SDF reconstruction tend to rely on discrete volumetric data
-structures, which affect the continuity and differentiability of the SDF
-estimates. Recently, using implicit features, neural network methods have
-demonstrated high-fidelity and differentiable SDF reconstruction but they tend
-to be less efficient, can experience catastrophic forgetting and memory
-limitations in large environments, and are often restricted to truncated SDFs.
-This work proposes $\nabla$-SDF, a hybrid method that combines an explicit
-prior obtained from gradient-augmented octree interpolation with an implicit
-neural residual. Our method achieves non-truncated (Euclidean) SDF
-reconstruction with computational and memory efficiency comparable to
-volumetric methods and differentiability and accuracy comparable to neural
-network methods. Extensive experiments demonstrate that \methodname{}
-outperforms the state of the art in terms of accuracy and efficiency, providing
-a scalable solution for downstream tasks in robotics and computer vision.</p>
+            <p class="paper-summary">Vision-language-action (VLA) models aim to understand natural language
+instructions and visual observations and to execute corresponding actions as an
+embodied agent. Recent work integrates future images into the
+understanding-acting loop, yielding unified VLAs that jointly understand,
+generate, and act -- reading text and images and producing future images and
+actions. However, these models either rely on external experts for modality
+unification or treat image generation and action prediction as separate
+processes, limiting the benefits of direct synergy between these tasks. Our
+core philosophy is to optimize generation and action jointly through a
+synchronous denoising process, where the iterative refinement enables actions
+to evolve from initialization, under constant and sufficient visual guidance.
+We ground this philosophy in our proposed Unified Diffusion VLA and Joint
+Discrete Denoising Diffusion Process (JD3P), which is a joint diffusion process
+that integrates multiple modalities into a single denoising trajectory to serve
+as the key mechanism enabling understanding, generation, and acting to be
+intrinsically synergistic. Our model and theory are built on a unified
+tokenized space of all modalities and a hybrid attention mechanism. We further
+propose a two-stage training pipeline and several inference-time techniques
+that optimize performance and efficiency. Our approach achieves
+state-of-the-art performance on benchmarks such as CALVIN, LIBERO, and
+SimplerEnv with 4$\times$ faster inference than autoregressive methods, and we
+demonstrate its effectiveness through in-depth analysis and real-world
+evaluations. Our project page is available at
+https://irpn-eai.github.io/UD-VLA.github.io/.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces $\nabla$-SDF, a hybrid method combining octree interpolation and a neural residual for efficient and accurate Euclidean SDF reconstruction from point clouds, addressing limitations of both volumetric and purely neural network approaches.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a Unified Diffusion VLA model with a Joint Discrete Denoising Diffusion Process (JD3P) for vision-language-action tasks, achieving SOTA results with faster inference by jointly optimizing generation and action.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种混合方法$\nabla$-SDF，它结合了八叉树插值和神经残差，用于从点云中高效准确地重建欧几里德符号距离函数，解决了体积方法和纯神经网络方法的局限性。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种统一扩散VLA模型，该模型具有联合离散去噪扩散过程（JD3P），用于视觉-语言-动作任务，通过联合优化生成和动作，实现了最先进的结果，并具有更快的推理速度。</p>
             
 
             
@@ -502,8 +500,8 @@ a scalable solution for downstream tasks in robotics and computer vision.</p>
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
             </div>
@@ -539,11 +537,11 @@ a scalable solution for downstream tasks in robotics and computer vision.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.18999v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2511.01718v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Zhirui Dai, Qihao Qian, Tianxing Fan, Nikolay Atanasov</p>
+            <p class="paper-authors">Authors: Jiayi Chen, Wenxuan Song, Pengxiang Ding, Ziyang Zhou, Han Zhao, Feilong Tang, Donglin Wang, Haoang Li</p>
             
         </motion.div>
         
@@ -555,33 +553,32 @@ a scalable solution for downstream tasks in robotics and computer vision.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Memo: Training Memory-Efficient Embodied Agents with Reinforcement Learning</h2>
+            <h2 class="paper-title">OmniVLA: Unifiying Multi-Sensor Perception for Physically-Grounded Multimodal VLA</h2>
             
-            <p class="paper-summary">To enable embodied agents to operate effectively over extended timeframes, it
-is crucial to develop models that form and access memories to stay
-contextualized in their environment. In the current paradigm of training
-transformer-based policies for embodied sequential decision-making tasks,
-visual inputs often overwhelm the context limits of transformers, while humans
-can maintain and utilize a lifetime of experience compressed as memories.
-Significant compression is possible in principle, as much of the input is
-irrelevant and can be abstracted. However, existing approaches predominantly
-focus on either recurrent models with fixed-size memory or transformers with
-full-context reliance. In this work, we propose Memo, a transformer-based
-architecture and training recipe for reinforcement learning (RL) on
-memory-intensive, long-horizon tasks. Memo incorporates the creation and
-retrieval of memory by interleaving periodic summarization tokens with the
-inputs of a model during training. We demonstrate Memo's effectiveness on a
-gridworld meta-RL benchmark and a multi-object navigation task in
-photo-realistic indoor settings. Memo outperforms naive long-context
-transformer baselines while being more compute and storage efficient.
-Additionally, Memo generalizes better to longer contexts at inference time and
-remains robust in streaming settings, where historical context must be
-truncated to fit inference constraints.</p>
+            <p class="paper-summary">Vision-language-action (VLA) models have shown strong generalization for
+action prediction through large-scale vision-language pretraining. However,
+most existing models rely solely on RGB cameras, limiting their perception and,
+consequently, manipulation capabilities. We present OmniVLA, an omni-modality
+VLA model that integrates novel sensing modalities for physically-grounded
+spatial intelligence beyond RGB perception. The core of our approach is the
+sensor-masked image, a unified representation that overlays spatially grounded
+and physically meaningful masks onto the RGB images, derived from sensors
+including an infrared camera, a mmWave radar, and a microphone array. This
+image-native unification keeps sensor input close to RGB statistics to
+facilitate training, provides a uniform interface across sensor hardware, and
+enables data-efficient learning with lightweight per-sensor projectors. Built
+on this, we present a multisensory vision-language-action model architecture
+and train the model based on an RGB-pretrained VLA backbone. We evaluate
+OmniVLA on challenging real-world tasks where sensor-modality perception is
+needed to guide the manipulation. OmniVLA achieves an average task success rate
+of 84%, significantly outperforms both RGB-only and raw-sensor-input baseline
+models by 59% and 28% respectively, meanwhile showing higher learning
+efficiency and stronger generalization capability.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Memo, a transformer-based architecture for reinforcement learning that efficiently manages memory in long-horizon embodied tasks by incorporating periodic summarization tokens, demonstrating improved performance and generalization in gridworld and navigation tasks.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: OmniVLA introduces a unified multi-sensor VLA model using a sensor-masked image representation, significantly improving performance on real-world manipulation tasks compared to RGB-only and raw-sensor baselines.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种名为Memo的基于Transformer的强化学习架构，通过结合周期性的总结令牌来有效地管理长时程具身任务中的记忆，并在网格世界和导航任务中展示了改进的性能和泛化能力。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: OmniVLA 引入了一个统一的多传感器 VLA 模型，使用传感器掩码图像表示，与仅使用 RGB 和原始传感器基线相比，显着提高了在现实世界操作任务中的性能。</p>
             
 
             
@@ -591,8 +588,8 @@ truncated to fit inference constraints.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -645,18 +642,18 @@ truncated to fit inference constraints.</p>
                     
                 
                     
-                        <i class="far fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(9/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.19732v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2511.01210v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Gunshi Gupta, Karmesh Yadav, Zsolt Kira, Yarin Gal, Rahaf Aljundi</p>
+            <p class="paper-authors">Authors: Heyu Guo, Shanmu Wang, Ruichun Ma, Shiqi Jiang, Yasaman Ghasempour, Omid Abari, Baining Guo, Lili Qi</p>
             
         </motion.div>
         
@@ -668,31 +665,35 @@ truncated to fit inference constraints.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">From Forecasting to Planning: Policy World Model for Collaborative State-Action Prediction</h2>
+            <h2 class="paper-title">Actial: Activate Spatial Reasoning Ability of Multimodal Large Language Models</h2>
             
-            <p class="paper-summary">Despite remarkable progress in driving world models, their potential for
-autonomous systems remains largely untapped: the world models are mostly
-learned for world simulation and decoupled from trajectory planning. While
-recent efforts aim to unify world modeling and planning in a single framework,
-the synergistic facilitation mechanism of world modeling for planning still
-requires further exploration. In this work, we introduce a new driving paradigm
-named Policy World Model (PWM), which not only integrates world modeling and
-trajectory planning within a unified architecture, but is also able to benefit
-planning using the learned world knowledge through the proposed action-free
-future state forecasting scheme. Through collaborative state-action prediction,
-PWM can mimic the human-like anticipatory perception, yielding more reliable
-planning performance. To facilitate the efficiency of video forecasting, we
-further introduce a dynamically enhanced parallel token generation mechanism,
-equipped with a context-guided tokenizer and an adaptive dynamic focal loss.
-Despite utilizing only front camera input, our method matches or exceeds
-state-of-the-art approaches that rely on multi-view and multi-modal inputs.
-Code and model weights will be released at
-https://github.com/6550Zhao/Policy-World-Model.</p>
+            <p class="paper-summary">Recent advances in Multimodal Large Language Models (MLLMs) have
+significantly improved 2D visual understanding, prompting interest in their
+application to complex 3D reasoning tasks. However, it remains unclear whether
+these models can effectively capture the detailed spatial information required
+for robust real-world performance, especially cross-view consistency, a key
+requirement for accurate 3D reasoning. Considering this issue, we introduce
+Viewpoint Learning, a task designed to evaluate and improve the spatial
+reasoning capabilities of MLLMs. We present the Viewpoint-100K dataset,
+consisting of 100K object-centric image pairs with diverse viewpoints and
+corresponding question-answer pairs. Our approach employs a two-stage
+fine-tuning strategy: first, foundational knowledge is injected to the baseline
+MLLM via Supervised Fine-Tuning (SFT) on Viewpoint-100K, resulting in
+significant improvements across multiple tasks; second, generalization is
+enhanced through Reinforcement Learning using the Group Relative Policy
+Optimization (GRPO) algorithm on a broader set of questions. Additionally, we
+introduce a hybrid cold-start initialization method designed to simultaneously
+learn viewpoint representations and maintain coherent reasoning thinking.
+Experimental results show that our approach significantly activates the spatial
+reasoning ability of MLLM, improving performance on both in-domain and
+out-of-domain reasoning tasks. Our findings highlight the value of developing
+foundational spatial skills in MLLMs, supporting future progress in robotics,
+autonomous systems, and 3D scene understanding.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a Policy World Model (PWM) for autonomous driving that unifies world modeling and trajectory planning, leveraging action-free future state forecasting and a dynamically enhanced parallel token generation mechanism to achieve state-of-the-art performance using only front camera input.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces Viewpoint Learning and the Viewpoint-100K dataset to enhance the spatial reasoning capabilities of MLLMs, using a two-stage fine-tuning approach (SFT + RL) and a hybrid cold-start initialization method.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种用于自动驾驶的策略世界模型 (PWM)，它统一了世界建模和轨迹规划，利用无动作的未来状态预测和动态增强的并行令牌生成机制，仅使用前置摄像头输入即可实现最先进的性能。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了视点学习和 Viewpoint-100K 数据集，旨在通过两阶段微调方法（SFT + RL）和混合冷启动初始化方法来提升 MLLM 的空间推理能力。</p>
             
 
             
@@ -718,8 +719,8 @@ https://github.com/6550Zhao/Policy-World-Model.</p>
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -763,11 +764,11 @@ https://github.com/6550Zhao/Policy-World-Model.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.19654v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2511.01618v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Zhida Zhao, Talas Fu, Yifan Wang, Lijun Wang, Huchuan Lu</p>
+            <p class="paper-authors">Authors: Xiaoyu Zhan, Wenxuan Huang, Hao Sun, Xinyu Fu, Changfeng Ma, Shaosheng Cao, Bohan Jia, Shaohui Lin, Zhenfei Yin, Lei Bai, Wanli Ouyang, Yuanqi Li, Jie Guo, Yanwen Guo</p>
             
         </motion.div>
         
@@ -779,36 +780,32 @@ https://github.com/6550Zhao/Policy-World-Model.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Pragmatic Heterogeneous Collaborative Perception via Generative Communication Mechanism</h2>
+            <h2 class="paper-title">MARS: Multi-Agent Robotic System with Multimodal Large Language Models for Assistive Intelligence</h2>
             
-            <p class="paper-summary">Multi-agent collaboration enhances the perception capabilities of individual
-agents through information sharing. However, in real-world applications,
-differences in sensors and models across heterogeneous agents inevitably lead
-to domain gaps during collaboration. Existing approaches based on adaptation
-and reconstruction fail to support pragmatic heterogeneous collaboration due to
-two key limitations: (1) Intrusive retraining of the encoder or core modules
-disrupts the established semantic consistency among agents; and (2)
-accommodating new agents incurs high computational costs, limiting scalability.
-To address these challenges, we present a novel Generative Communication
-mechanism (GenComm) that facilitates seamless perception across heterogeneous
-multi-agent systems through feature generation, without altering the original
-network, and employs lightweight numerical alignment of spatial information to
-efficiently integrate new agents at minimal cost. Specifically, a tailored
-Deformable Message Extractor is designed to extract spatial message for each
-collaborator, which is then transmitted in place of intermediate features. The
-Spatial-Aware Feature Generator, utilizing a conditional diffusion model,
-generates features aligned with the ego agent's semantic space while preserving
-the spatial information of the collaborators. These generated features are
-further refined by a Channel Enhancer before fusion. Experiments conducted on
-the OPV2V-H, DAIR-V2X and V2X-Real datasets demonstrate that GenComm
-outperforms existing state-of-the-art methods, achieving an 81\% reduction in
-both computational cost and parameter count when incorporating new agents. Our
-code is available at https://github.com/jeffreychou777/GenComm.</p>
+            <p class="paper-summary">Multimodal large language models (MLLMs) have shown remarkable capabilities
+in cross-modal understanding and reasoning, offering new opportunities for
+intelligent assistive systems, yet existing systems still struggle with
+risk-aware planning, user personalization, and grounding language plans into
+executable skills in cluttered homes. We introduce MARS - a Multi-Agent Robotic
+System powered by MLLMs for assistive intelligence and designed for smart home
+robots supporting people with disabilities. The system integrates four agents:
+a visual perception agent for extracting semantic and spatial features from
+environment images, a risk assessment agent for identifying and prioritizing
+hazards, a planning agent for generating executable action sequences, and an
+evaluation agent for iterative optimization. By combining multimodal perception
+with hierarchical multi-agent decision-making, the framework enables adaptive,
+risk-aware, and personalized assistance in dynamic indoor environments.
+Experiments on multiple datasets demonstrate the superior overall performance
+of the proposed system in risk-aware planning and coordinated multi-agent
+execution compared with state-of-the-art multimodal models. The proposed
+approach also highlights the potential of collaborative AI for practical
+assistive scenarios and provides a generalizable methodology for deploying
+MLLM-enabled multi-agent systems in real-world environments.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces GenComm, a novel generative communication mechanism for heterogeneous multi-agent perception that addresses domain gaps and scalability issues by generating features aligned with the ego agent's semantic space, achieving significant computational cost reduction.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces MARS, a multi-agent robotic system using MLLMs for assistive intelligence in smart homes, focusing on risk-aware planning and personalized assistance. It demonstrates improved performance in experiments involving risk-aware planning and multi-agent execution.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种新的生成式通信机制GenComm，用于异构多智能体感知，通过生成与自我智能体语义空间对齐的特征，解决了领域差距和可扩展性问题，并显著降低了计算成本。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了MARS，一个使用MLLM的多智能体机器人系统，用于智能家居中的辅助智能，重点关注风险感知规划和个性化辅助。实验表明，在风险感知规划和多智能体执行方面，该系统表现出优越的性能。</p>
             
 
             
@@ -818,24 +815,24 @@ code is available at https://github.com/jeffreychou777/GenComm.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -879,11 +876,11 @@ code is available at https://github.com/jeffreychou777/GenComm.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.19618v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2511.01594v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Junfei Zhou, Penglin Dai, Quanmin Wei, Bingyi Liu, Xiao Wu, Jianping Wang</p>
+            <p class="paper-authors">Authors: Renjun Gao, Peiyan Zhong</p>
             
         </motion.div>
         
@@ -895,34 +892,31 @@ code is available at https://github.com/jeffreychou777/GenComm.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">VGD: Visual Geometry Gaussian Splatting for Feed-Forward Surround-view Driving Reconstruction</h2>
+            <h2 class="paper-title">PixelVLA: Advancing Pixel-level Understanding in Vision-Language-Action Model</h2>
             
-            <p class="paper-summary">Feed-forward surround-view autonomous driving scene reconstruction offers
-fast, generalizable inference ability, which faces the core challenge of
-ensuring generalization while elevating novel view quality. Due to the
-surround-view with minimal overlap regions, existing methods typically fail to
-ensure geometric consistency and reconstruction quality for novel views. To
-tackle this tension, we claim that geometric information must be learned
-explicitly, and the resulting features should be leveraged to guide the
-elevating of semantic quality in novel views. In this paper, we introduce
-\textbf{Visual Gaussian Driving (VGD)}, a novel feed-forward end-to-end
-learning framework designed to address this challenge. To achieve generalizable
-geometric estimation, we design a lightweight variant of the VGGT architecture
-to efficiently distill its geometric priors from the pre-trained VGGT to the
-geometry branch. Furthermore, we design a Gaussian Head that fuses multi-scale
-geometry tokens to predict Gaussian parameters for novel view rendering, which
-shares the same patch backbone as the geometry branch. Finally, we integrate
-multi-scale features from both geometry and Gaussian head branches to jointly
-supervise a semantic refinement model, optimizing rendering quality through
-feature-consistent learning. Experiments on nuScenes demonstrate that our
-approach significantly outperforms state-of-the-art methods in both objective
-metrics and subjective quality under various settings, which validates VGD's
-scalability and high-fidelity surround-view reconstruction.</p>
+            <p class="paper-summary">Vision-Language-Action models (VLAs) are emerging as powerful tools for
+learning generalizable visuomotor control policies. However, current VLAs are
+mostly trained on large-scale image-text-action data and remain limited in two
+key ways: (i) they struggle with pixel-level scene understanding, and (ii) they
+rely heavily on textual prompts, which reduces their flexibility in real-world
+settings. To address these challenges, we introduce PixelVLA, the first VLA
+model designed to support both pixel-level reasoning and multimodal prompting
+with text and visual inputs. Our approach is built on a new visuomotor
+instruction tuning framework that integrates a multiscale pixel-aware encoder
+with a visual prompting encoder. To train PixelVLA effectively, we further
+propose a two-stage automated annotation pipeline that generates Pixel-160K, a
+large-scale dataset with pixel-level annotations derived from existing robot
+data. Experiments on three standard VLA benchmarks and two VLA model variants
+show that PixelVLA improves manipulation success rates by 10.1%-17.8% over
+OpenVLA, while requiring only 1.5% of its pretraining cost. These results
+demonstrate that PixelVLA can be integrated into existing VLAs to enable more
+accurate, efficient, and versatile robot control in complex environments. The
+dataset and code will be released as open source.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Visual Geometry Gaussian Splatting (VGD), a novel feed-forward framework for high-quality surround-view driving scene reconstruction that explicitly learns geometric information to improve novel view rendering quality, outperforming existing methods on nuScenes.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: PixelVLA is a new VLA model designed for pixel-level reasoning and multimodal prompting, trained on a novel pixel-level annotated dataset. It achieves improved manipulation success rates while significantly reducing pretraining costs.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种名为视觉几何高斯溅射 (VGD) 的新型前馈框架，用于高质量的环视驾驶场景重建。该框架显式学习几何信息以提高新视角的渲染质量，并在 nuScenes 数据集上优于现有方法。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: PixelVLA是一种新的VLA模型，专为像素级推理和多模态提示而设计，并使用新的像素级标注数据集进行训练。它在显著降低预训练成本的同时，提高了操作成功率。</p>
             
 
             
@@ -948,8 +942,8 @@ scalability and high-fidelity surround-view reconstruction.</p>
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
                 </div>
                 
                 
@@ -993,11 +987,11 @@ scalability and high-fidelity surround-view reconstruction.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.19578v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2511.01571v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Junhong Lin, Kangli Wang, Shunzhou Wang, Songlin Fan, Ge Li, Wei Gao</p>
+            <p class="paper-authors">Authors: Wenqi Liang, Gan Sun, Yao He, Jiahua Dong, Suyan Dai, Ivan Laptev, Salman Khan, Yang Cong</p>
             
         </motion.div>
         
@@ -1009,29 +1003,30 @@ scalability and high-fidelity surround-view reconstruction.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Background Fades, Foreground Leads: Curriculum-Guided Background Pruning for Efficient Foreground-Centric Collaborative Perception</h2>
+            <h2 class="paper-title">Driving scenario generation and evaluation using a structured layer representation and foundational models</h2>
             
-            <p class="paper-summary">Collaborative perception enhances the reliability and spatial coverage of
-autonomous vehicles by sharing complementary information across vehicles,
-offering a promising solution to long-tail scenarios that challenge
-single-vehicle perception. However, the bandwidth constraints of vehicular
-networks make transmitting the entire feature map impractical. Recent methods,
-therefore, adopt a foreground-centric paradigm, transmitting only predicted
-foreground-region features while discarding the background, which encodes
-essential context. We propose FadeLead, a foreground-centric framework that
-overcomes this limitation by learning to encapsulate background context into
-compact foreground features during training. At the core of our design is a
-curricular learning strategy that leverages background cues early on but
-progressively prunes them away, forcing the model to internalize context into
-foreground representations without transmitting background itself. Extensive
-experiments on both simulated and real-world benchmarks show that FadeLead
-outperforms prior methods under different bandwidth settings, underscoring the
-effectiveness of context-enriched foreground sharing.</p>
+            <p class="paper-summary">Rare and challenging driving scenarios are critical for autonomous vehicle
+development. Since they are difficult to encounter, simulating or generating
+them using generative models is a popular approach. Following previous efforts
+to structure driving scenario representations in a layer model, we propose a
+structured five-layer model to improve the evaluation and generation of rare
+scenarios. We use this model alongside large foundational models to generate
+new driving scenarios using a data augmentation strategy. Unlike previous
+representations, our structure introduces subclasses and characteristics for
+every agent of the scenario, allowing us to compare them using an embedding
+specific to our layer-model. We study and adapt two metrics to evaluate the
+relevance of a synthetic dataset in the context of a structured representation:
+the diversity score estimates how different the scenarios of a dataset are from
+one another, while the originality score calculates how similar a synthetic
+dataset is from a real reference set. This paper showcases both metrics in
+different generation setup, as well as a qualitative evaluation of synthetic
+videos generated from structured scenario descriptions. The code and extended
+results can be found at https://github.com/Valgiz/5LMSG.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper presents FadeLead, a foreground-centric collaborative perception framework that uses curriculum learning to encapsulate background context into foreground features, improving performance under bandwidth constraints without transmitting the background.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a structured five-layer model and foundational models for generating diverse and original driving scenarios, with metrics for evaluation. They also provide code and extended results.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了FadeLead，一个以前景为中心的协同感知框架，它使用课程学习将背景上下文封装到前景特征中，从而在带宽受限的情况下提高性能，而无需传输背景。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种结构化的五层模型和基础模型，用于生成多样化和原始的驾驶场景，并提供评估指标。他们还提供了代码和扩展结果。</p>
             
 
             
@@ -1049,16 +1044,16 @@ effectiveness of context-enriched foreground sharing.</p>
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -1102,11 +1097,11 @@ effectiveness of context-enriched foreground sharing.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.19250v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2511.01541v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Yuheng Wu, Xiangbo Gao, Quang Tau, Zhengzhong Tu, Dongman Lee</p>
+            <p class="paper-authors">Authors: Arthur Hubert, Gamal Elghazaly, Raphaël Frank</p>
             
         </motion.div>
         
@@ -1118,34 +1113,34 @@ effectiveness of context-enriched foreground sharing.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">SFGFusion: Surface Fitting Guided 3D Object Detection with 4D Radar and Camera Fusion</h2>
+            <h2 class="paper-title">Discriminately Treating Motion Components Evolves Joint Depth and Ego-Motion Learning</h2>
             
-            <p class="paper-summary">3D object detection is essential for autonomous driving. As an emerging
-sensor, 4D imaging radar offers advantages as low cost, long-range detection,
-and accurate velocity measurement, making it highly suitable for object
-detection. However, its sparse point clouds and low resolution limit object
-geometric representation and hinder multi-modal fusion. In this study, we
-introduce SFGFusion, a novel camera-4D imaging radar detection network guided
-by surface fitting. By estimating quadratic surface parameters of objects from
-image and radar data, the explicit surface fitting model enhances spatial
-representation and cross-modal interaction, enabling more reliable prediction
-of fine-grained dense depth. The predicted depth serves two purposes: 1) in an
-image branch to guide the transformation of image features from perspective
-view (PV) to a unified bird's-eye view (BEV) for multi-modal fusion, improving
-spatial mapping accuracy; and 2) in a surface pseudo-point branch to generate
-dense pseudo-point cloud, mitigating the radar point sparsity. The original
-radar point cloud is also encoded in a separate radar branch. These two point
-cloud branches adopt a pillar-based method and subsequently transform the
-features into the BEV space. Finally, a standard 2D backbone and detection head
-are used to predict object labels and bounding boxes from BEV features.
-Experimental results show that SFGFusion effectively fuses camera and 4D radar
-features, achieving superior performance on the TJ4DRadSet and view-of-delft
-(VoD) object detection benchmarks.</p>
+            <p class="paper-summary">Unsupervised learning of depth and ego-motion, two fundamental 3D perception
+tasks, has made significant strides in recent years. However, most methods
+treat ego-motion as an auxiliary task, either mixing all motion types or
+excluding depth-independent rotational motions in supervision. Such designs
+limit the incorporation of strong geometric constraints, reducing reliability
+and robustness under diverse conditions. This study introduces a discriminative
+treatment of motion components, leveraging the geometric regularities of their
+respective rigid flows to benefit both depth and ego-motion estimation. Given
+consecutive video frames, network outputs first align the optical axes and
+imaging planes of the source and target cameras. Optical flows between frames
+are transformed through these alignments, and deviations are quantified to
+impose geometric constraints individually on each ego-motion component,
+enabling more targeted refinement. These alignments further reformulate the
+joint learning process into coaxial and coplanar forms, where depth and each
+translation component can be mutually derived through closed-form geometric
+relationships, introducing complementary constraints that improve depth
+robustness. DiMoDE, a general depth and ego-motion joint learning framework
+incorporating these designs, achieves state-of-the-art performance on multiple
+public datasets and a newly collected diverse real-world dataset, particularly
+under challenging conditions. Our source code will be publicly available at
+mias.group/DiMoDE upon publication.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: SFGFusion is a novel camera-4D radar fusion network for 3D object detection that uses surface fitting to enhance spatial representation and cross-modal interaction. It achieves state-of-the-art performance on two object detection benchmarks.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a novel unsupervised depth and ego-motion learning framework (DiMoDE) that discriminatively treats motion components, improving robustness and accuracy by leveraging geometric constraints and achieving state-of-the-art results.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: SFGFusion是一种新颖的相机-4D雷达融合网络，用于3D物体检测，它使用表面拟合来增强空间表示和跨模态交互。在两个物体检测基准测试中，它实现了最先进的性能。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种新的无监督深度和自我运动学习框架 (DiMoDE)，该框架有区别地处理运动分量，通过利用几何约束来提高鲁棒性和准确性，并达到最先进的结果。</p>
             
 
             
@@ -1216,11 +1211,11 @@ features, achieving superior performance on the TJ4DRadSet and view-of-delft
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.19215v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2511.01502v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Xiaozhi Li, Huijun Di, Jian Li, Feng Liu, Wei Liang</p>
+            <p class="paper-authors">Authors: Mengtan Zhang, Zizhan Guo, Hongbo Zhao, Yi Feng, Zuyi Xiong, Yue Wang, Shaoyi Du, Hanli Wang, Rui Fan</p>
             
         </motion.div>
         
@@ -1232,29 +1227,29 @@ features, achieving superior performance on the TJ4DRadSet and view-of-delft
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">GRASPLAT: Enabling dexterous grasping through novel view synthesis</h2>
+            <h2 class="paper-title">SE(3)-PoseFlow: Estimating 6D Pose Distributions for Uncertainty-Aware Robotic Manipulation</h2>
             
-            <p class="paper-summary">Achieving dexterous robotic grasping with multi-fingered hands remains a
-significant challenge. While existing methods rely on complete 3D scans to
-predict grasp poses, these approaches face limitations due to the difficulty of
-acquiring high-quality 3D data in real-world scenarios. In this paper, we
-introduce GRASPLAT, a novel grasping framework that leverages consistent 3D
-information while being trained solely on RGB images. Our key insight is that
-by synthesizing physically plausible images of a hand grasping an object, we
-can regress the corresponding hand joints for a successful grasp. To achieve
-this, we utilize 3D Gaussian Splatting to generate high-fidelity novel views of
-real hand-object interactions, enabling end-to-end training with RGB data.
-Unlike prior methods, our approach incorporates a photometric loss that refines
-grasp predictions by minimizing discrepancies between rendered and real images.
-We conduct extensive experiments on both synthetic and real-world grasping
-datasets, demonstrating that GRASPLAT improves grasp success rates up to 36.9%
-over existing image-based methods. Project page:
-https://mbortolon97.github.io/grasplat/</p>
+            <p class="paper-summary">Object pose estimation is a fundamental problem in robotics and computer
+vision, yet it remains challenging due to partial observability, occlusions,
+and object symmetries, which inevitably lead to pose ambiguity and multiple
+hypotheses consistent with the same observation. While deterministic deep
+networks achieve impressive performance under well-constrained conditions, they
+are often overconfident and fail to capture the multi-modality of the
+underlying pose distribution. To address these challenges, we propose a novel
+probabilistic framework that leverages flow matching on the SE(3) manifold for
+estimating 6D object pose distributions. Unlike existing methods that regress a
+single deterministic output, our approach models the full pose distribution
+with a sample-based estimate and enables reasoning about uncertainty in
+ambiguous cases such as symmetric objects or severe occlusions. We achieve
+state-of-the-art results on Real275, YCB-V, and LM-O, and demonstrate how our
+sample-based pose estimates can be leveraged in downstream robotic manipulation
+tasks such as active perception for disambiguating uncertain viewpoints or
+guiding grasp synthesis in an uncertainty-aware manner.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: GRASPLAT is a novel grasping framework that uses 3D Gaussian Splatting to synthesize realistic hand-object interactions from RGB images, enabling end-to-end training and improving grasp success rates.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces SE(3)-PoseFlow, a novel probabilistic framework using flow matching on the SE(3) manifold to estimate 6D object pose distributions, achieving state-of-the-art results and enabling uncertainty-aware robotic manipulation.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: GRASPLAT 是一种新的抓取框架，它使用 3D 高斯溅射从 RGB 图像中合成逼真的手-物体交互，从而实现端到端训练并提高抓取成功率。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了SE(3)-PoseFlow，一种新颖的概率框架，它利用SE(3)流形上的流匹配来估计6D物体姿态分布，实现了最先进的结果，并实现了不确定性感知的机器人操作。</p>
             
 
             
@@ -1280,8 +1275,8 @@ https://mbortolon97.github.io/grasplat/</p>
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -1325,11 +1320,11 @@ https://mbortolon97.github.io/grasplat/</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.19200v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2511.01501v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Matteo Bortolon, Nuno Ferreira Duarte, Plinio Moreno, Fabio Poiesi, José Santos-Victor, Alessio Del Bue</p>
+            <p class="paper-authors">Authors: Yufeng Jin, Niklas Funk, Vignesh Prasad, Zechu Li, Mathias Franzius, Jan Peters, Georgia Chalvatzaki</p>
             
         </motion.div>
         
@@ -1341,36 +1336,32 @@ https://mbortolon97.github.io/grasplat/</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Rethinking Driving World Model as Synthetic Data Generator for Perception Tasks</h2>
+            <h2 class="paper-title">Source-Only Cross-Weather LiDAR via Geometry-Aware Point Drop</h2>
             
-            <p class="paper-summary">Recent advancements in driving world models enable controllable generation of
-high-quality RGB videos or multimodal videos. Existing methods primarily focus
-on metrics related to generation quality and controllability. However, they
-often overlook the evaluation of downstream perception tasks, which are
-$\mathbf{really\ crucial}$ for the performance of autonomous driving. Existing
-methods usually leverage a training strategy that first pretrains on synthetic
-data and finetunes on real data, resulting in twice the epochs compared to the
-baseline (real data only). When we double the epochs in the baseline, the
-benefit of synthetic data becomes negligible. To thoroughly demonstrate the
-benefit of synthetic data, we introduce Dream4Drive, a novel synthetic data
-generation framework designed for enhancing the downstream perception tasks.
-Dream4Drive first decomposes the input video into several 3D-aware guidance
-maps and subsequently renders the 3D assets onto these guidance maps. Finally,
-the driving world model is fine-tuned to produce the edited, multi-view
-photorealistic videos, which can be used to train the downstream perception
-models. Dream4Drive enables unprecedented flexibility in generating multi-view
-corner cases at scale, significantly boosting corner case perception in
-autonomous driving. To facilitate future research, we also contribute a
-large-scale 3D asset dataset named DriveObj3D, covering the typical categories
-in driving scenarios and enabling diverse 3D-aware video editing. We conduct
-comprehensive experiments to show that Dream4Drive can effectively boost the
-performance of downstream perception models under various training epochs.
-Project: $\href{https://wm-research.github.io/Dream4Drive/}{this\ https\ URL}$</p>
+            <p class="paper-summary">LiDAR semantic segmentation degrades in adverse weather because refraction,
+scattering, and point dropouts corrupt geometry. Prior work in weather
+simulation, mixing-based augmentation, domain randomization, and uncertainty or
+boundary regularization improves robustness but still overlooks structural
+vulnerabilities near boundaries, corners, and sparse regions. We present a
+Light Geometry-aware adapter. The module aligns azimuth and applies horizontal
+circular padding to preserve neighbor continuity across the 0~360 degree
+wrap-around boundary. A local-window K-Nearest Neighbors gathers nearby points
+and computes simple local statistics, which are compressed into compact
+geometry-aware cues. During training, these cues drive region-aware
+regularization that stabilizes predictions in structurally fragile areas. The
+adapter is plug and play, complements augmentation, and can be enabled only
+during training with negligible inference cost. We adopt a source-only
+cross-weather setup where models train on SemanticKITTI and are evaluated on
+SemanticSTF without target labels or fine-tuning. The adapter improves mIoU by
+7.9 percentage points over the data-centric augmentation baseline and by 0.6
+points over the class-centric regularization baseline. These results indicate
+that geometry-driven regularization is a key direction for all-weather LiDAR
+segmentation.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Dream4Drive, a synthetic data generation framework using 3D-aware guidance maps and asset rendering to improve the performance of downstream perception tasks in autonomous driving, particularly in handling corner cases. They also contribute a large-scale 3D asset dataset.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a geometry-aware adapter for LiDAR semantic segmentation that improves robustness in adverse weather conditions by focusing on structural vulnerabilities. It achieves this through region-aware regularization during training and a plug-and-play design for negligible inference cost.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种名为Dream4Drive的合成数据生成框架，该框架使用3D感知引导图和资产渲染来提高自动驾驶中下游感知任务的性能，尤其是在处理极端情况时。他们还贡献了一个大型3D资产数据集。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种几何感知适配器，用于激光雷达语义分割，通过关注结构脆弱性来提高在恶劣天气条件下的鲁棒性。它通过训练期间的区域感知正则化和可忽略推理成本的即插即用设计来实现这一点。</p>
             
 
             
@@ -1380,16 +1371,16 @@ Project: $\href{https://wm-research.github.io/Dream4Drive/}{this\ https\ URL}$</
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
@@ -1404,8 +1395,8 @@ Project: $\href{https://wm-research.github.io/Dream4Drive/}{this\ https\ URL}$</
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
             </div>
@@ -1441,11 +1432,11 @@ Project: $\href{https://wm-research.github.io/Dream4Drive/}{this\ https\ URL}$</
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.19195v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2511.01250v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Kai Zeng, Zhanqian Wu, Kaixin Xiong, Xiaobao Wei, Xiangyu Guo, Zhenxin Zhu, Kalok Ho, Lijun Zhou, Bohan Zeng, Ming Lu, Haiyang Sun, Bing Wang, Guang Chen, Hangjun Ye, Wentao Zhang</p>
+            <p class="paper-authors">Authors: YoungJae Cheong, Jhonghyun An</p>
             
         </motion.div>
         
@@ -1457,29 +1448,30 @@ Project: $\href{https://wm-research.github.io/Dream4Drive/}{this\ https\ URL}$</
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Robust Driving QA through Metadata-Grounded Context and Task-Specific Prompts</h2>
+            <h2 class="paper-title">LiDAR-VGGT: Cross-Modal Coarse-to-Fine Fusion for Globally Consistent and Metric-Scale Dense Mapping</h2>
             
-            <p class="paper-summary">We present a two-phase vision-language QA system for autonomous driving that
-answers high-level perception, prediction, and planning questions. In Phase-1,
-a large multimodal LLM (Qwen2.5-VL-32B) is conditioned on six-camera inputs, a
-short temporal window of history, and a chain-of-thought prompt with few-shot
-exemplars. A self-consistency ensemble (multiple sampled reasoning chains)
-further improves answer reliability. In Phase-2, we augment the prompt with
-nuScenes scene metadata (object annotations, ego-vehicle state, etc.) and
-category-specific question instructions (separate prompts for perception,
-prediction, planning tasks). In experiments on a driving QA benchmark, our
-approach significantly outperforms the baseline Qwen2.5 models. For example,
-using 5 history frames and 10-shot prompting in Phase-1 yields 65.1% overall
-accuracy (vs.62.61% with zero-shot); applying self-consistency raises this to
-66.85%. Phase-2 achieves 67.37% overall. Notably, the system maintains 96%
-accuracy under severe visual corruption. These results demonstrate that
-carefully engineered prompts and contextual grounding can greatly enhance
-high-level driving QA with pretrained vision-language models.</p>
+            <p class="paper-summary">Reconstructing large-scale colored point clouds is an important task in
+robotics, supporting perception, navigation, and scene understanding. Despite
+advances in LiDAR inertial visual odometry (LIVO), its performance remains
+highly sensitive to extrinsic calibration. Meanwhile, 3D vision foundation
+models, such as VGGT, suffer from limited scalability in large environments and
+inherently lack metric scale. To overcome these limitations, we propose
+LiDAR-VGGT, a novel framework that tightly couples LiDAR inertial odometry with
+the state-of-the-art VGGT model through a two-stage coarse- to-fine fusion
+pipeline: First, a pre-fusion module with robust initialization refinement
+efficiently estimates VGGT poses and point clouds with coarse metric scale
+within each session. Then, a post-fusion module enhances cross-modal 3D
+similarity transformation, using bounding-box-based regularization to reduce
+scale distortions caused by inconsistent FOVs between LiDAR and camera sensors.
+Extensive experiments across multiple datasets demonstrate that LiDAR-VGGT
+achieves dense, globally consistent colored point clouds and outperforms both
+VGGT-based methods and LIVO baselines. The implementation of our proposed novel
+color point cloud evaluation toolkit will be released as open source.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper presents a two-phase vision-language QA system for autonomous driving, using carefully engineered prompts and contextual grounding to improve accuracy, especially under visual corruption, achieving significant performance gains on a driving QA benchmark.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper presents LiDAR-VGGT, a novel framework that tightly integrates LiDAR inertial odometry with VGGT using a coarse-to-fine fusion pipeline to achieve globally consistent and metric-scale dense colored point clouds, outperforming existing methods.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种用于自动驾驶的双阶段视觉-语言问答系统，通过精心设计的提示和上下文 grounding 来提高准确性，尤其是在视觉损坏的情况下，在驾驶问答基准测试中取得了显著的性能提升。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了LiDAR-VGGT，一种新颖的框架，通过粗到精的融合流程将激光雷达惯性里程计与VGGT紧密结合，以实现全局一致且具有度量比例的密集彩色点云，性能优于现有方法。</p>
             
 
             
@@ -1497,8 +1489,8 @@ high-level driving QA with pretrained vision-language models.</p>
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -1550,11 +1542,11 @@ high-level driving QA with pretrained vision-language models.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.19001v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2511.01186v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Seungjun Yu, Junsung Park, Youngsun Lim, Hyunjung Shim</p>
+            <p class="paper-authors">Authors: Lijie Wang, Lianjie Guo, Ziyi Xu, Qianhao Wang, Fei Gao, Xieyuanli Chen</p>
             
         </motion.div>
         
@@ -1566,37 +1558,31 @@ high-level driving QA with pretrained vision-language models.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">MobiAct: Efficient MAV Action Recognition Using MobileNetV4 with Contrastive Learning and Knowledge Distillation</h2>
+            <h2 class="paper-title">Terrain-Enhanced Resolution-aware Refinement Attention for Off-Road Segmentation</h2>
             
-            <p class="paper-summary">Accurate and efficient recognition of Micro Air Vehicle (MAV) motion is
-essential for enabling real-time perception and coordination in autonomous
-aerial swarm. However, most existing approaches rely on large, computationally
-intensive models that are unsuitable for resource-limited MAV platforms, which
-results in a trade-off between recognition accuracy and inference speed. To
-address these challenges, this paper proposes a lightweight MAV action
-recognition framework, MobiAct, designed to achieve high accuracy with low
-computational cost. Specifically, MobiAct adopts MobileNetV4 as the backbone
-network and introduces a Stage-wise Orthogonal Knowledge Distillation (SOKD)
-strategy to effectively transfer MAV motion features from a teacher network
-(ResNet18) to a student network, thereby enhancing knowledge transfer
-efficiency. Furthermore, a parameter-free attention mechanism is integrated
-into the architecture to improve recognition accuracy without increasing model
-complexity. In addition, a hybrid loss training strategy is developed to
-combine multiple loss objectives, which ensures stable and robust optimization
-during training. Experimental results demonstrate that the proposed MobiAct
-achieves low-energy and low-computation MAV action recognition, while
-maintaining the fastest action decoding speed among compared methods. Across
-all three self-collected datasets, MobiAct achieves an average recognition
-accuracy of 92.12%, while consuming only 136.16 pJ of energy and processing
-recognition at a rate of 8.84 actions per second. Notably, MobiAct decodes
-actions up to 2 times faster than the leading method, with highly comparable
-recognition accuracy, highlighting its superior efficiency in MAV action
-recognition.</p>
+            <p class="paper-summary">Off-road semantic segmentation suffers from thick, inconsistent boundaries,
+sparse supervision for rare classes, and pervasive label noise. Designs that
+fuse only at low resolution blur edges and propagate local errors, whereas
+maintaining high-resolution pathways or repeating high-resolution fusions is
+costly and fragile to noise. We introduce a resolutionaware token decoder that
+balances global semantics, local consistency, and boundary fidelity under
+imperfect supervision. Most computation occurs at a low-resolution bottleneck;
+a gated cross-attention injects fine-scale detail, and only a sparse,
+uncertainty-selected set of pixels is refined. The components are co-designed
+and tightly integrated: global self-attention with lightweight dilated
+depthwise refinement restores local coherence; a gated cross-attention
+integrates fine-scale features from a standard high-resolution encoder stream
+without amplifying noise; and a class-aware point refinement corrects residual
+ambiguities with negligible overhead. During training, we add a boundary-band
+consistency regularizer that encourages coherent predictions in a thin
+neighborhood around annotated edges, with no inference-time cost. Overall, the
+results indicate competitive performance and improved stability across
+transitions.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces MobiAct, a lightweight MAV action recognition framework using MobileNetV4, contrastive learning, and knowledge distillation to achieve high accuracy and low computational cost, outperforming existing methods in speed and energy efficiency.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a resolution-aware token decoder for off-road semantic segmentation that balances global semantics, local consistency, and boundary fidelity using a gated cross-attention mechanism and boundary consistency regularization.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了MobiAct，一个轻量级的MAV动作识别框架，它使用MobileNetV4、对比学习和知识蒸馏来实现高精度和低计算成本，在速度和能效方面优于现有方法。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文提出了一种用于越野语义分割的、分辨率感知的 Token 解码器，该解码器利用门控交叉注意力机制和边界一致性正则化来平衡全局语义、局部一致性和边界保真度。</p>
             
 
             
@@ -1606,8 +1592,8 @@ recognition.</p>
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(6/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -1622,8 +1608,8 @@ recognition.</p>
                 <div class="rating-item">
                     <span class="rating-label">Clarity:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -1667,11 +1653,11 @@ recognition.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.19273v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2511.01434v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Zhang Nengbo, Ho Hann Woei</p>
+            <p class="paper-authors">Authors: Seongkyu Choi, Jhonghyun An</p>
             
         </motion.div>
         
@@ -1683,29 +1669,34 @@ recognition.</p>
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Ninja Codes: Neurally Generated Fiducial Markers for Stealthy 6-DoF Tracking</h2>
+            <h2 class="paper-title">Saliency-Guided Domain Adaptation for Left-Hand Driving in Autonomous Steering</h2>
             
-            <p class="paper-summary">In this paper we describe Ninja Codes, neurally-generated fiducial markers
-that can be made to naturally blend into various real-world environments. An
-encoder network converts arbitrary images into Ninja Codes by applying visually
-modest alterations; the resulting codes, printed and pasted onto surfaces, can
-provide stealthy 6-DoF location tracking for a wide range of applications
-including augmented reality, robotics, motion-based user interfaces, etc. Ninja
-Codes can be printed using off-the-shelf color printers on regular printing
-paper, and can be detected using any device equipped with a modern RGB camera
-and capable of running inference. Using an end-to-end process inspired by prior
-work on deep steganography, we jointly train a series of network modules that
-perform the creation and detection of Ninja Codes. Through experiments, we
-demonstrate Ninja Codes' ability to provide reliable location tracking under
-common indoor lighting conditions, while successfully concealing themselves
-within diverse environmental textures. We expect Ninja Codes to offer
-particular value in scenarios where the conspicuous appearances of conventional
-fiducial markers make them undesirable for aesthetic and other reasons.</p>
+            <p class="paper-summary">Domain adaptation is required for automated driving models to generalize well
+across diverse road conditions. This paper explores a training method for
+domain adaptation to adapt PilotNet, an end-to-end deep learning-based model,
+for left-hand driving conditions using real-world Australian highway data. Four
+training methods were evaluated: (1) a baseline model trained on U.S.
+right-hand driving data, (2) a model trained on flipped U.S. data, (3) a model
+pretrained on U.S. data and then fine-tuned on Australian highways, and (4) a
+model pretrained on flipped U.S. data and then finetuned on Australian
+highways. This setup examines whether incorporating flipped data enhances the
+model adaptation by providing an initial left-hand driving alignment. The paper
+compares model performance regarding steering prediction accuracy and
+attention, using saliency-based analysis to measure attention shifts across
+significant road regions. Results show that pretraining on flipped data alone
+worsens prediction stability due to misaligned feature representations, but
+significantly improves adaptation when followed by fine-tuning, leading to
+lower prediction error and stronger focus on left-side cues. To validate this
+approach across different architectures, the same experiments were done on
+ResNet, which confirmed similar adaptation trends. These findings emphasize the
+importance of preprocessing techniques, such as flipped-data pretraining,
+followed by fine-tuning to improve model adaptation with minimal retraining
+requirements.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces 'Ninja Codes,' visually subtle fiducial markers generated using neural networks for 6-DoF tracking, designed to blend into environments where traditional markers are undesirable.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper explores a domain adaptation technique for autonomous driving, specifically adapting a steering model (PilotNet and ResNet) to left-hand driving by pretraining on flipped right-hand driving data and then fine-tuning on Australian highway data, demonstrating improved performance and attention on left-side cues.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了“忍者码”，一种使用神经网络生成的视觉上不明显的定位信标，用于6自由度跟踪，旨在融入传统信标不适用的环境。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文探讨了一种自动驾驶领域的领域自适应技术，通过在翻转的右手驾驶数据上进行预训练，然后在澳大利亚高速公路数据上进行微调，将转向模型（PilotNet和ResNet）调整为左手驾驶，结果表明性能得到了改善，并且更加关注左侧提示。</p>
             
 
             
@@ -1723,8 +1714,8 @@ fiducial markers make them undesirable for aesthetic and other reasons.</p>
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(6/10)</span>
                 </div>
                 
                 
@@ -1776,18 +1767,18 @@ fiducial markers make them undesirable for aesthetic and other reasons.</p>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2510.18976v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2511.01223v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Yuichiro Takeuchi, Yusuke Imoto, Shunya Kato</p>
+            <p class="paper-authors">Authors: Zahra Mehraban, Sebastien Glaser, Michael Milford, Ronald Schroeter</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2025-11-06 02:43:49 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2025-11-06 02:52:40 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>
