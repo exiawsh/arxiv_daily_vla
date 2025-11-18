@@ -1,0 +1,514 @@
+[
+    {
+        "title": "DriveLiDAR4D: Sequential and Controllable LiDAR Scene Generation for Autonomous Driving",
+        "summary": "The generation of realistic LiDAR point clouds plays a crucial role in the development and evaluation of autonomous driving systems. Although recent methods for 3D LiDAR point cloud generation have shown significant improvements, they still face notable limitations, including the lack of sequential generation capabilities and the inability to produce accurately positioned foreground objects and realistic backgrounds. These shortcomings hinder their practical applicability. In this paper, we introduce DriveLiDAR4D, a novel LiDAR generation pipeline consisting of multimodal conditions and a novel sequential noise prediction model LiDAR4DNet, capable of producing temporally consistent LiDAR scenes with highly controllable foreground objects and realistic backgrounds. To the best of our knowledge, this is the first work to address the sequential generation of LiDAR scenes with full scene manipulation capability in an end-to-end manner. We evaluated DriveLiDAR4D on the nuScenes and KITTI datasets, where we achieved an FRD score of 743.13 and an FVD score of 16.96 on the nuScenes dataset, surpassing the current state-of-the-art (SOTA) method, UniScene, with an performance boost of 37.2% in FRD and 24.1% in FVD, respectively.",
+        "url": "http://arxiv.org/abs/2511.13309v1",
+        "published_date": "2025-11-17T12:43:26+00:00",
+        "updated_date": "2025-11-17T12:43:26+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Kaiwen Cai",
+            "Xinze Liu",
+            "Xia Zhou",
+            "Hengtong Hu",
+            "Jie Xiang",
+            "Luyao Zhang",
+            "Xueyang Zhang",
+            "Kun Zhan",
+            "Yifei Zhan",
+            "Xianpeng Lang"
+        ],
+        "tldr": "The paper introduces DriveLiDAR4D, a novel pipeline for sequential and controllable LiDAR scene generation for autonomous driving, addressing limitations of existing methods by enabling temporally consistent scenes with manipulatable foreground objects and realistic backgrounds. It achieves state-of-the-art performance on nuScenes and KITTI datasets.",
+        "tldr_zh": "本文介绍了DriveLiDAR4D，一种用于自动驾驶的顺序和可控的激光雷达场景生成的新型流程，通过生成具有可操纵的前景对象和逼真的背景的时序一致的场景，解决了现有方法的局限性。在nuScenes和KITTI数据集上实现了最先进的性能。",
+        "relevance_score": 10,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "DAP: A Discrete-token Autoregressive Planner for Autonomous Driving",
+        "summary": "Gaining sustainable performance improvement with scaling data and model budget remains a pivotal yet unresolved challenge in autonomous driving. While autoregressive models exhibited promising data-scaling efficiency in planning tasks, predicting ego trajectories alone suffers sparse supervision and weakly constrains how scene evolution should shape ego motion. Therefore, we introduce DAP, a discrete-token autoregressive planner that jointly forecasts BEV semantics and ego trajectories, thereby enforcing comprehensive representation learning and allowing predicted dynamics to directly condition ego motion. In addition, we incorporate a reinforcement-learning-based fine-tuning, which preserves supervised behavior cloning priors while injecting reward-guided improvements. Despite a compact 160M parameter budget, DAP achieves state-of-the-art performance on open-loop metrics and delivers competitive closed-loop results on the NAVSIM benchmark. Overall, the fully discrete-token autoregressive formulation operating on both rasterized BEV and ego actions provides a compact yet scalable planning paradigm for autonomous driving.",
+        "url": "http://arxiv.org/abs/2511.13306v1",
+        "published_date": "2025-11-17T12:31:33+00:00",
+        "updated_date": "2025-11-17T12:31:33+00:00",
+        "categories": [
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Bowen Ye",
+            "Bin Zhang",
+            "Hang Zhao"
+        ],
+        "tldr": "The paper introduces DAP, a discrete-token autoregressive planner for autonomous driving that jointly forecasts BEV semantics and ego trajectories, achieving state-of-the-art open-loop and competitive closed-loop performance with a relatively small model.",
+        "tldr_zh": "该论文介绍了一种名为DAP的离散令牌自回归规划器，用于自动驾驶，它联合预测BEV语义和自车轨迹，以相对较小的模型实现了最先进的开环性能和有竞争力的闭环性能。",
+        "relevance_score": 10,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Monocular 3D Lane Detection via Structure Uncertainty-Aware Network with Curve-Point Queries",
+        "summary": "Monocular 3D lane detection is challenged by aleatoric uncertainty arising from inherent observation noise. Existing methods rely on simplified geometric assumptions, such as independent point predictions or global planar modeling, failing to capture structural variations and aleatoric uncertainty in real-world scenarios. In this paper, we propose MonoUnc, a bird's-eye view (BEV)-free 3D lane detector that explicitly models aleatoric uncertainty informed by local lane structures. Specifically, 3D lanes are projected onto the front-view (FV) space and approximated by parametric curves. Guided by curve predictions, curve-point query embeddings are dynamically generated for lane point predictions in 3D space. Each segment formed by two adjacent points is modeled as a 3D Gaussian, parameterized by the local structure and uncertainty estimations. Accordingly, a novel 3D Gaussian matching loss is designed to constrain these parameters jointly. Experiments on the ONCE-3DLanes and OpenLane datasets demonstrate that MonoUnc outperforms previous state-of-the-art (SoTA) methods across all benchmarks under stricter evaluation criteria. Additionally, we propose two comprehensive evaluation metrics for ONCE-3DLanes, calculating the average and maximum bidirectional Chamfer distances to quantify global and local errors. Codes are released at https://github.com/lrx02/MonoUnc.",
+        "url": "http://arxiv.org/abs/2511.13055v1",
+        "published_date": "2025-11-17T07:01:10+00:00",
+        "updated_date": "2025-11-17T07:01:10+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ruixin Liu",
+            "Zejian Yuan"
+        ],
+        "tldr": "This paper presents MonoUnc, a novel monocular 3D lane detection method that explicitly models aleatoric uncertainty using 3D Gaussians and outperforms existing SoTA methods on standard datasets.",
+        "tldr_zh": "本文提出了MonoUnc，一种新的单目3D车道线检测方法，它使用3D高斯显式地建模了不确定性，并在标准数据集上优于现有的SoTA方法。",
+        "relevance_score": 10,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "ArtiWorld: LLM-Driven Articulation of 3D Objects in Scenes",
+        "summary": "Building interactive simulators and scalable robot-learning environments requires a large number of articulated assets. However, most existing 3D assets in simulation are rigid, and manually converting them into articulated objects is extremely labor- and cost-intensive. This raises a natural question: can we automatically identify articulable objects in a scene and convert them into articulated assets directly? In this paper, we present ArtiWorld, a scene-aware pipeline that localizes candidate articulable objects from textual scene descriptions and reconstructs executable URDF models that preserve the original geometry. At the core of this pipeline is Arti4URDF, which leverages 3D point cloud, prior knowledge of a large language model (LLM), and a URDF-oriented prompt design to rapidly convert rigid objects into interactive URDF-based articulated objects while maintaining their 3D shape. We evaluate ArtiWorld at three levels: 3D simulated objects, full 3D simulated scenes, and real-world scan scenes. Across all three settings, our method consistently outperforms existing approaches and achieves state-of-the-art performance, while preserving object geometry and correctly capturing object interactivity to produce usable URDF-based articulated models. This provides a practical path toward building interactive, robot-ready simulation environments directly from existing 3D assets. Code and data will be released.",
+        "url": "http://arxiv.org/abs/2511.12977v1",
+        "published_date": "2025-11-17T04:59:21+00:00",
+        "updated_date": "2025-11-17T04:59:21+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yixuan Yang",
+            "Luyang Xie",
+            "Zhen Luo",
+            "Zixiang Zhao",
+            "Mingqi Gao",
+            "Feng Zheng"
+        ],
+        "tldr": "The paper introduces ArtiWorld, a pipeline that automatically converts rigid 3D objects in scenes into articulated assets using LLMs, outperforming existing methods in simulated and real-world environments.",
+        "tldr_zh": "该论文介绍了 ArtiWorld，一个使用大型语言模型（LLM）自动将场景中的刚性 3D 对象转换为铰接资产的流程，并在模拟和真实环境中优于现有方法。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "CoordAR: One-Reference 6D Pose Estimation of Novel Objects via Autoregressive Coordinate Map Generation",
+        "summary": "Object 6D pose estimation, a crucial task for robotics and augmented reality applications, becomes particularly challenging when dealing with novel objects whose 3D models are not readily available. To reduce dependency on 3D models, recent studies have explored one-reference-based pose estimation, which requires only a single reference view instead of a complete 3D model. However, existing methods that rely on real-valued coordinate regression suffer from limited global consistency due to the local nature of convolutional architectures and face challenges in symmetric or occluded scenarios owing to a lack of uncertainty modeling. We present CoordAR, a novel autoregressive framework for one-reference 6D pose estimation of unseen objects. CoordAR formulates 3D-3D correspondences between the reference and query views as a map of discrete tokens, which is obtained in an autoregressive and probabilistic manner. To enable accurate correspondence regression, CoordAR introduces 1) a novel coordinate map tokenization that enables probabilistic prediction over discretized 3D space; 2) a modality-decoupled encoding strategy that separately encodes RGB appearance and coordinate cues; and 3) an autoregressive transformer decoder conditioned on both position-aligned query features and the partially generated token sequence. With these novel mechanisms, CoordAR significantly outperforms existing methods on multiple benchmarks and demonstrates strong robustness to symmetry, occlusion, and other challenges in real-world tests.",
+        "url": "http://arxiv.org/abs/2511.12919v1",
+        "published_date": "2025-11-17T03:15:46+00:00",
+        "updated_date": "2025-11-17T03:15:46+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Dexin Zuo",
+            "Ang Li",
+            "Wei Wang",
+            "Wenxian Yu",
+            "Danping Zou"
+        ],
+        "tldr": "The paper introduces CoordAR, a novel autoregressive framework for 6D pose estimation of novel objects using only a single reference view, addressing limitations of existing methods in handling symmetry, occlusion, and global consistency.",
+        "tldr_zh": "该论文介绍了一种名为CoordAR的新型自回归框架，用于仅使用单个参考视图来估计新物体的6D姿态，解决了现有方法在处理对称性、遮挡和全局一致性方面的局限性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Descriptor: Distance-Annotated Traffic Perception Question Answering (DTPQA)",
+        "summary": "The remarkable progress of Vision-Language Models (VLMs) on a variety of tasks has raised interest in their application to automated driving. However, for these models to be trusted in such a safety-critical domain, they must first possess robust perception capabilities, i.e., they must be capable of understanding a traffic scene, which can often be highly complex, with many things happening simultaneously. Moreover, since critical objects and agents in traffic scenes are often at long distances, we require systems with not only strong perception capabilities at close distances (up to 20 meters), but also at long (30+ meters) range. Therefore, it is important to evaluate the perception capabilities of these models in isolation from other skills like reasoning or advanced world knowledge. Distance-Annotated Traffic Perception Question Answering (DTPQA) is a Visual Question Answering (VQA) benchmark designed specifically for this purpose: it can be used to evaluate the perception systems of VLMs in traffic scenarios using trivial yet crucial questions relevant to driving decisions. It consists of two parts: a synthetic benchmark (DTP-Synthetic) created using a simulator, and a real-world benchmark (DTP-Real) built on top of existing images of real traffic scenes. Additionally, DTPQA includes distance annotations, i.e., how far the object in question is from the camera. More specifically, each DTPQA sample consists of (at least): (a) an image, (b) a question, (c) the ground truth answer, and (d) the distance of the object in question, enabling analysis of how VLM performance degrades with increasing object distance. In this article, we provide the dataset itself along with the Python scripts used to create it, which can be used to generate additional data of the same kind.",
+        "url": "http://arxiv.org/abs/2511.13397v1",
+        "published_date": "2025-11-17T14:12:22+00:00",
+        "updated_date": "2025-11-17T14:12:22+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Nikos Theodoridis",
+            "Tim Brophy",
+            "Reenu Mohandas",
+            "Ganesh Sistu",
+            "Fiachra Collins",
+            "Anthony Scanlan",
+            "Ciaran Eising"
+        ],
+        "tldr": "This paper introduces Distance-Annotated Traffic Perception Question Answering (DTPQA), a VQA benchmark designed to evaluate the perception capabilities of Vision-Language Models (VLMs) in autonomous driving scenarios, focusing on the impact of object distance.",
+        "tldr_zh": "本文介绍了一种名为Distance-Annotated Traffic Perception Question Answering (DTPQA)的VQA基准，旨在评估视觉语言模型（VLM）在自动驾驶场景中的感知能力，重点关注物体距离的影响。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "CorrectAD: A Self-Correcting Agentic System to Improve End-to-end Planning in Autonomous Driving",
+        "summary": "End-to-end planning methods are the de facto standard of the current autonomous driving system, while the robustness of the data-driven approaches suffers due to the notorious long-tail problem (i.e., rare but safety-critical failure cases). In this work, we explore whether recent diffusion-based video generation methods (a.k.a. world models), paired with structured 3D layouts, can enable a fully automated pipeline to self-correct such failure cases. We first introduce an agent to simulate the role of product manager, dubbed PM-Agent, which formulates data requirements to collect data similar to the failure cases. Then, we use a generative model that can simulate both data collection and annotation. However, existing generative models struggle to generate high-fidelity data conditioned on 3D layouts. To address this, we propose DriveSora, which can generate spatiotemporally consistent videos aligned with the 3D annotations requested by PM-Agent. We integrate these components into our self-correcting agentic system, CorrectAD. Importantly, our pipeline is an end-to-end model-agnostic and can be applied to improve any end-to-end planner. Evaluated on both nuScenes and a more challenging in-house dataset across multiple end-to-end planners, CorrectAD corrects 62.5% and 49.8% of failure cases, reducing collision rates by 39% and 27%, respectively.",
+        "url": "http://arxiv.org/abs/2511.13297v1",
+        "published_date": "2025-11-17T12:21:03+00:00",
+        "updated_date": "2025-11-17T12:21:03+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Enhui Ma",
+            "Lijun Zhou",
+            "Tao Tang",
+            "Jiahuan Zhang",
+            "Junpeng Jiang",
+            "Zhan Zhang",
+            "Dong Han",
+            "Kun Zhan",
+            "Xueyang Zhang",
+            "XianPeng Lang",
+            "Haiyang Sun",
+            "Xia Zhou",
+            "Di Lin",
+            "Kaicheng Yu"
+        ],
+        "tldr": "The paper introduces CorrectAD, a self-correcting agentic system leveraging diffusion-based video generation and structured 3D layouts to improve the robustness of end-to-end autonomous driving planners, particularly in handling rare failure cases. It uses an agent to generate training data focusing on failure cases and demonstrates improved collision rates on standard and in-house datasets.",
+        "tldr_zh": "该论文介绍了一种名为CorrectAD的自校正代理系统，该系统利用基于扩散的视频生成和结构化3D布局来提高端到端自动驾驶规划器的鲁棒性，尤其是在处理罕见故障情况时。它使用代理来生成专注于故障案例的训练数据，并在标准和内部数据集上展示了改进的碰撞率。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Is your VLM Sky-Ready? A Comprehensive Spatial Intelligence Benchmark for UAV Navigation",
+        "summary": "Vision-Language Models (VLMs), leveraging their powerful visual perception and reasoning capabilities, have been widely applied in Unmanned Aerial Vehicle (UAV) tasks. However, the spatial intelligence capabilities of existing VLMs in UAV scenarios remain largely unexplored, raising concerns about their effectiveness in navigating and interpreting dynamic environments. To bridge this gap, we introduce SpatialSky-Bench, a comprehensive benchmark specifically designed to evaluate the spatial intelligence capabilities of VLMs in UAV navigation. Our benchmark comprises two categories-Environmental Perception and Scene Understanding-divided into 13 subcategories, including bounding boxes, color, distance, height, and landing safety analysis, among others. Extensive evaluations of various mainstream open-source and closed-source VLMs reveal unsatisfactory performance in complex UAV navigation scenarios, highlighting significant gaps in their spatial capabilities. To address this challenge, we developed the SpatialSky-Dataset, a comprehensive dataset containing 1M samples with diverse annotations across various scenarios. Leveraging this dataset, we introduce Sky-VLM, a specialized VLM designed for UAV spatial reasoning across multiple granularities and contexts. Extensive experimental results demonstrate that Sky-VLM achieves state-of-the-art performance across all benchmark tasks, paving the way for the development of VLMs suitable for UAV scenarios. The source code is available at https://github.com/linglingxiansen/SpatialSKy.",
+        "url": "http://arxiv.org/abs/2511.13269v1",
+        "published_date": "2025-11-17T11:39:20+00:00",
+        "updated_date": "2025-11-17T11:39:20+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Lingfeng Zhang",
+            "Yuchen Zhang",
+            "Hongsheng Li",
+            "Haoxiang Fu",
+            "Yingbo Tang",
+            "Hangjun Ye",
+            "Long Chen",
+            "Xiaojun Liang",
+            "Xiaoshuai Hao",
+            "Wenbo Ding"
+        ],
+        "tldr": "This paper introduces SpatialSky-Bench, a new benchmark for evaluating VLM spatial intelligence in UAV navigation, and proposes Sky-VLM, a specialized VLM achieving state-of-the-art performance on the benchmark. They also provide a large dataset to train such models.",
+        "tldr_zh": "该论文介绍了SpatialSky-Bench，一个用于评估VLM在无人机导航中空间智能的新基准，并提出了Sky-VLM，一个在该基准上实现最先进性能的专用VLM。他们还提供了一个大型数据集来训练此类模型。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "GeoX-Bench: Benchmarking Cross-View Geo-Localization and Pose Estimation Capabilities of Large Multimodal Models",
+        "summary": "Large multimodal models (LMMs) have demonstrated remarkable capabilities across a wide range of tasks, however their knowledge and abilities in the cross-view geo-localization and pose estimation domains remain unexplored, despite potential benefits for navigation, autonomous driving, outdoor robotics, \\textit{etc}. To bridge this gap, we introduce \\textbf{GeoX-Bench}, a comprehensive \\underline{Bench}mark designed to explore and evaluate the capabilities of LMMs in \\underline{cross}-view \\underline{Geo}-localization and pose estimation. Specifically, GeoX-Bench contains 10,859 panoramic-satellite image pairs spanning 128 cities in 49 countries, along with corresponding 755,976 question-answering (QA) pairs. Among these, 42,900 QA pairs are designated for benchmarking, while the remaining are intended to enhance the capabilities of LMMs. Based on GeoX-Bench, we evaluate the capabilities of 25 state-of-the-art LMMs on cross-view geo-localization and pose estimation tasks, and further explore the empowered capabilities of instruction-tuning. Our benchmark demonstrate that while current LMMs achieve impressive performance in geo-localization tasks, their effectiveness declines significantly on the more complex pose estimation tasks, highlighting a critical area for future improvement, and instruction-tuning LMMs on the training data of GeoX-Bench can significantly improve the cross-view geo-sense abilities. The GeoX-Bench is available at \\textcolor{magenta}{https://github.com/IntMeGroup/GeoX-Bench}.",
+        "url": "http://arxiv.org/abs/2511.13259v1",
+        "published_date": "2025-11-17T11:19:07+00:00",
+        "updated_date": "2025-11-17T11:19:07+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Yushuo Zheng",
+            "Jiangyong Ying",
+            "Huiyu Duan",
+            "Chunyi Li",
+            "Zicheng Zhang",
+            "Jing Liu",
+            "Xiaohong Liu",
+            "Guangtao Zhai"
+        ],
+        "tldr": "The paper introduces GeoX-Bench, a new benchmark for evaluating large multimodal models (LMMs) in cross-view geo-localization and pose estimation, revealing limitations in current LMMs' pose estimation capabilities and demonstrating the benefits of instruction tuning.",
+        "tldr_zh": "本文介绍了GeoX-Bench，一个新的用于评估大型多模态模型（LMMs）在跨视角地理定位和姿态估计方面的基准，揭示了当前LMMs在姿态估计能力上的局限性，并展示了指令调整的益处。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "PIGEON: VLM-Driven Object Navigation via Points of Interest Selection",
+        "summary": "Navigating to a specified object in an unknown environment is a fundamental yet challenging capability of embodied intelligence. However, current methods struggle to balance decision frequency with intelligence, resulting in decisions lacking foresight or discontinuous actions. In this work, we propose PIGEON: Point of Interest Guided Exploration for Object Navigation with VLM, maintaining a lightweight and semantically aligned snapshot memory during exploration as semantic input for the exploration strategy. We use a large Visual-Language Model (VLM), named PIGEON-VL, to select Points of Interest (PoI) formed during exploration and then employ a lower-level planner for action output, increasing the decision frequency. Additionally, this PoI-based decision-making enables the generation of Reinforcement Learning with Verifiable Reward (RLVR) data suitable for simulators. Experiments on classic object navigation benchmarks demonstrate that our zero-shot transfer method achieves state-of-the-art performance, while RLVR further enhances the model's semantic guidance capabilities, enabling deep reasoning during real-time navigation.",
+        "url": "http://arxiv.org/abs/2511.13207v1",
+        "published_date": "2025-11-17T10:19:13+00:00",
+        "updated_date": "2025-11-17T10:19:13+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Cheng Peng",
+            "Zhenzhe Zhang",
+            "Cheng Chi",
+            "Xiaobao Wei",
+            "Yanhao Zhang",
+            "Heng Wang",
+            "Pengwei Wang",
+            "Zhongyuan Wang",
+            "Jing Liu",
+            "Shanghang Zhang"
+        ],
+        "tldr": "The paper presents PIGEON, a VLM-driven object navigation method using Points of Interest (PoI) selection to improve decision-making frequency and enable Reinforcement Learning with Verifiable Reward (RLVR). It achieves state-of-the-art zero-shot transfer performance on object navigation benchmarks.",
+        "tldr_zh": "该论文提出了PIGEON，一种基于VLM并利用兴趣点（PoI）选择的对象导航方法，旨在提高决策频率并实现可验证奖励的强化学习（RLVR）。 在对象导航基准测试中，该方法实现了最先进的零样本迁移性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Difficulty-Aware Label-Guided Denoising for Monocular 3D Object Detection",
+        "summary": "Monocular 3D object detection is a cost-effective solution for applications like autonomous driving and robotics, but remains fundamentally ill-posed due to inherently ambiguous depth cues. Recent DETR-based methods attempt to mitigate this through global attention and auxiliary depth prediction, yet they still struggle with inaccurate depth estimates. Moreover, these methods often overlook instance-level detection difficulty, such as occlusion, distance, and truncation, leading to suboptimal detection performance. We propose MonoDLGD, a novel Difficulty-Aware Label-Guided Denoising framework that adaptively perturbs and reconstructs ground-truth labels based on detection uncertainty. Specifically, MonoDLGD applies stronger perturbations to easier instances and weaker ones into harder cases, and then reconstructs them to effectively provide explicit geometric supervision. By jointly optimizing label reconstruction and 3D object detection, MonoDLGD encourages geometry-aware representation learning and improves robustness to varying levels of object complexity. Extensive experiments on the KITTI benchmark demonstrate that MonoDLGD achieves state-of-the-art performance across all difficulty levels.",
+        "url": "http://arxiv.org/abs/2511.13195v1",
+        "published_date": "2025-11-17T10:02:18+00:00",
+        "updated_date": "2025-11-17T10:02:18+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Soyul Lee",
+            "Seungmin Baek",
+            "Dongbo Min"
+        ],
+        "tldr": "This paper introduces MonoDLGD, a difficulty-aware label-guided denoising framework for monocular 3D object detection that adaptively perturbs and reconstructs ground-truth labels based on instance difficulty, achieving state-of-the-art performance on KITTI.",
+        "tldr_zh": "本文介绍了一种名为MonoDLGD的难度感知标签引导去噪框架，用于单目3D物体检测。该框架能够根据实例难度自适应地扰动和重建真实标签，并在KITTI数据集上实现了最先进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Video Spatial Reasoning with Object-Centric 3D Rollout",
+        "summary": "Recent advances in Multi-modal Large Language Models (MLLMs) have showcased remarkable capabilities in vision-language understanding. However, enabling robust video spatial reasoning-the ability to comprehend object locations, orientations, and inter-object relationships in dynamic 3D scenes-remains a key unsolved challenge. Existing approaches primarily rely on spatially grounded supervised fine-tuning or reinforcement learning, yet we observe that such models often exhibit query-locked reasoning, focusing narrowly on objects explicitly mentioned in the prompt while ignoring critical contextual cues. To address this limitation, we propose Object-Centric 3D Rollout (OCR), a novel strategy that introduces structured perturbations to the 3D geometry of selected objects during training. By degrading object-specific visual cues and projecting the altered geometry into 2D space, OCR compels the model to reason holistically across the entire scene. We further design a rollout-based training pipeline that jointly leverages vanilla and region-noisy videos to optimize spatial reasoning trajectories. Experiments demonstrate state-of-the-art performance: our 3B-parameter model achieves 47.5% accuracy on VSI-Bench, outperforming several 7B baselines. Ablations confirm OCR's superiority over prior rollout strategies (e.g., T-GRPO, NoisyRollout).",
+        "url": "http://arxiv.org/abs/2511.13190v1",
+        "published_date": "2025-11-17T09:53:41+00:00",
+        "updated_date": "2025-11-17T09:53:41+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Haoran Tang",
+            "Meng Cao",
+            "Ruyang Liu",
+            "Xiaoxi Liang",
+            "Linglong Li",
+            "Ge Li",
+            "Xiaodan Liang"
+        ],
+        "tldr": "This paper introduces Object-Centric 3D Rollout (OCR), a novel training strategy for MLLMs to improve video spatial reasoning by perturbing object geometry and encouraging holistic scene understanding. The method achieves state-of-the-art results on VSI-Bench.",
+        "tldr_zh": "本文介绍了一种新的训练策略，即面向对象的3D Rollout (OCR)，通过扰动对象几何形状并鼓励整体场景理解来提高多模态大语言模型(MLLM)的视频空间推理能力。该方法在VSI-Bench上取得了最先进的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "WinMamba: Multi-Scale Shifted Windows in State Space Model for 3D Object Detection",
+        "summary": "3D object detection is critical for autonomous driving, yet it remains fundamentally challenging to simultaneously maximize computational efficiency and capture long-range spatial dependencies. We observed that Mamba-based models, with their linear state-space design, capture long-range dependencies at lower cost, offering a promising balance between efficiency and accuracy. However, existing methods rely on axis-aligned scanning within a fixed window, inevitably discarding spatial information. To address this problem, we propose WinMamba, a novel Mamba-based 3D feature-encoding backbone composed of stacked WinMamba blocks. To enhance the backbone with robust multi-scale representation, the WinMamba block incorporates a window-scale-adaptive module that compensates voxel features across varying resolutions during sampling. Meanwhile, to obtain rich contextual cues within the linear state space, we equip the WinMamba layer with a learnable positional encoding and a window-shift strategy. Extensive experiments on the KITTI and Waymo datasets demonstrate that WinMamba significantly outperforms the baseline. Ablation studies further validate the individual contributions of the WSF and AWF modules in improving detection accuracy. The code will be made publicly available.",
+        "url": "http://arxiv.org/abs/2511.13138v1",
+        "published_date": "2025-11-17T08:46:54+00:00",
+        "updated_date": "2025-11-17T08:46:54+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Longhui Zheng",
+            "Qiming Xia",
+            "Xiaolu Chen",
+            "Zhaoliang Liu",
+            "Chenglu Wen"
+        ],
+        "tldr": "WinMamba introduces a novel Mamba-based 3D feature encoding backbone with window-scale-adaptive and window-shift strategies for improved 3D object detection in autonomous driving, achieving state-of-the-art results on KITTI and Waymo datasets.",
+        "tldr_zh": "WinMamba 提出了一种新的基于 Mamba 的 3D 特征编码骨干网络，具有窗口尺度自适应和窗口移位策略，以改进自动驾驶中的 3D 对象检测，并在 KITTI 和 Waymo 数据集上取得了最先进的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Decoupling Scene Perception and Ego Status: A Multi-Context Fusion Approach for Enhanced Generalization in End-to-End Autonomous Driving",
+        "summary": "Modular design of planning-oriented autonomous driving has markedly advanced end-to-end systems. However, existing architectures remain constrained by an over-reliance on ego status, hindering generalization and robust scene understanding. We identify the root cause as an inherent design within these architectures that allows ego status to be easily leveraged as a shortcut. Specifically, the premature fusion of ego status in the upstream BEV encoder allows an information flow from this strong prior to dominate the downstream planning module. To address this challenge, we propose AdaptiveAD, an architectural-level solution based on a multi-context fusion strategy. Its core is a dual-branch structure that explicitly decouples scene perception and ego status. One branch performs scene-driven reasoning based on multi-task learning, but with ego status deliberately omitted from the BEV encoder, while the other conducts ego-driven reasoning based solely on the planning task. A scene-aware fusion module then adaptively integrates the complementary decisions from the two branches to form the final planning trajectory. To ensure this decoupling does not compromise multi-task learning, we introduce a path attention mechanism for ego-BEV interaction and add two targeted auxiliary tasks: BEV unidirectional distillation and autoregressive online mapping. Extensive evaluations on the nuScenes dataset demonstrate that AdaptiveAD achieves state-of-the-art open-loop planning performance. Crucially, it significantly mitigates the over-reliance on ego status and exhibits impressive generalization capabilities across diverse scenarios.",
+        "url": "http://arxiv.org/abs/2511.13079v1",
+        "published_date": "2025-11-17T07:27:55+00:00",
+        "updated_date": "2025-11-17T07:27:55+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jiacheng Tang",
+            "Mingyue Feng",
+            "Jiachao Liu",
+            "Yaonong Wang",
+            "Jian Pu"
+        ],
+        "tldr": "The paper proposes AdaptiveAD, a novel end-to-end autonomous driving architecture that decouples scene perception and ego status to improve generalization and reduce reliance on ego-centric shortcuts. It achieves state-of-the-art open-loop planning performance on nuScenes.",
+        "tldr_zh": "该论文提出了一种新的端到端自动驾驶架构AdaptiveAD，它解耦了场景感知和自我状态，以提高泛化能力并减少对以自我为中心的捷径的依赖。它在nuScenes上实现了最先进的开环规划性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "DiffPixelFormer: Differential Pixel-Aware Transformer for RGB-D Indoor Scene Segmentation",
+        "summary": "Indoor semantic segmentation is fundamental to computer vision and robotics, supporting applications such as autonomous navigation, augmented reality, and smart environments. Although RGB-D fusion leverages complementary appearance and geometric cues, existing methods often depend on computationally intensive cross-attention mechanisms and insufficiently model intra- and inter-modal feature relationships, resulting in imprecise feature alignment and limited discriminative representation. To address these challenges, we propose DiffPixelFormer, a differential pixel-aware Transformer for RGB-D indoor scene segmentation that simultaneously enhances intra-modal representations and models inter-modal interactions. At its core, the Intra-Inter Modal Interaction Block (IIMIB) captures intra-modal long-range dependencies via self-attention and models inter-modal interactions with the Differential-Shared Inter-Modal (DSIM) module to disentangle modality-specific and shared cues, enabling fine-grained, pixel-level cross-modal alignment. Furthermore, a dynamic fusion strategy balances modality contributions and fully exploits RGB-D information according to scene characteristics. Extensive experiments on the SUN RGB-D and NYUDv2 benchmarks demonstrate that DiffPixelFormer-L achieves mIoU scores of 54.28% and 59.95%, outperforming DFormer-L by 1.78% and 2.75%, respectively. Code is available at https://github.com/gongyan1/DiffPixelFormer.",
+        "url": "http://arxiv.org/abs/2511.13047v1",
+        "published_date": "2025-11-17T06:51:07+00:00",
+        "updated_date": "2025-11-17T06:51:07+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Yan Gong",
+            "Jianli Lu",
+            "Yongsheng Gao",
+            "Jie Zhao",
+            "Xiaojuan Zhang",
+            "Susanto Rahardja"
+        ],
+        "tldr": "The paper introduces DiffPixelFormer, a novel Transformer-based architecture for RGB-D indoor scene segmentation, which leverages differential pixel-aware interactions to improve feature alignment and discriminative representation, achieving state-of-the-art results on SUN RGB-D and NYUDv2 datasets.",
+        "tldr_zh": "该论文介绍了DiffPixelFormer，一种用于RGB-D室内场景分割的新型Transformer架构，它利用差分像素感知交互来改进特征对齐和判别表示，并在SUN RGB-D和NYUDv2数据集上取得了最先进的结果。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Towards 3D Object-Centric Feature Learning for Semantic Scene Completion",
+        "summary": "Vision-based 3D Semantic Scene Completion (SSC) has received growing attention due to its potential in autonomous driving. While most existing approaches follow an ego-centric paradigm by aggregating and diffusing features over the entire scene, they often overlook fine-grained object-level details, leading to semantic and geometric ambiguities, especially in complex environments. To address this limitation, we propose Ocean, an object-centric prediction framework that decomposes the scene into individual object instances to enable more accurate semantic occupancy prediction. Specifically, we first employ a lightweight segmentation model, MobileSAM, to extract instance masks from the input image. Then, we introduce a 3D Semantic Group Attention module that leverages linear attention to aggregate object-centric features in 3D space. To handle segmentation errors and missing instances, we further design a Global Similarity-Guided Attention module that leverages segmentation features for global interaction. Finally, we propose an Instance-aware Local Diffusion module that improves instance features through a generative process and subsequently refines the scene representation in the BEV space. Extensive experiments on the SemanticKITTI and SSCBench-KITTI360 benchmarks demonstrate that Ocean achieves state-of-the-art performance, with mIoU scores of 17.40 and 20.28, respectively.",
+        "url": "http://arxiv.org/abs/2511.13031v1",
+        "published_date": "2025-11-17T06:28:26+00:00",
+        "updated_date": "2025-11-17T06:28:26+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Weihua Wang",
+            "Yubo Cui",
+            "Xiangru Lin",
+            "Zhiheng Li",
+            "Zheng Fang"
+        ],
+        "tldr": "The paper introduces Ocean, an object-centric framework for 3D Semantic Scene Completion that uses instance segmentation and attention mechanisms to improve performance, achieving state-of-the-art results on SemanticKITTI and SSCBench-KITTI360.",
+        "tldr_zh": "本文介绍了一种名为Ocean的物体中心化3D语义场景补全框架，该框架利用实例分割和注意力机制来提高性能，并在SemanticKITTI和SSCBench-KITTI360上实现了最先进的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "T2I-Based Physical-World Appearance Attack against Traffic Sign Recognition Systems in Autonomous Driving",
+        "summary": "Traffic Sign Recognition (TSR) systems play a critical role in Autonomous Driving (AD) systems, enabling real-time detection of road signs, such as STOP and speed limit signs. While these systems are increasingly integrated into commercial vehicles, recent research has exposed their vulnerability to physical-world adversarial appearance attacks. In such attacks, carefully crafted visual patterns are misinterpreted by TSR models as legitimate traffic signs, while remaining inconspicuous or benign to human observers. However, existing adversarial appearance attacks suffer from notable limitations. Pixel-level perturbation-based methods often lack stealthiness and tend to overfit to specific surrogate models, resulting in poor transferability to real-world TSR systems. On the other hand, text-to-image (T2I) diffusion model-based approaches demonstrate limited effectiveness and poor generalization to out-of-distribution sign types.\n  In this paper, we present DiffSign, a novel T2I-based appearance attack framework designed to generate physically robust, highly effective, transferable, practical, and stealthy appearance attacks against TSR systems. To overcome the limitations of prior approaches, we propose a carefully designed attack pipeline that integrates CLIP-based loss and masked prompts to improve attack focus and controllability. We also propose two novel style customization methods to guide visual appearance and improve out-of-domain traffic sign attack generalization and attack stealthiness. We conduct extensive evaluations of DiffSign under varied real-world conditions, including different distances, angles, light conditions, and sign categories. Our method achieves an average physical-world attack success rate of 83.3%, leveraging DiffSign's high effectiveness in attack transferability.",
+        "url": "http://arxiv.org/abs/2511.12956v1",
+        "published_date": "2025-11-17T04:29:55+00:00",
+        "updated_date": "2025-11-17T04:29:55+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.CR"
+        ],
+        "authors": [
+            "Chen Ma",
+            "Ningfei Wang",
+            "Junhao Zheng",
+            "Qing Guo",
+            "Qian Wang",
+            "Qi Alfred Chen",
+            "Chao Shen"
+        ],
+        "tldr": "This paper introduces DiffSign, a novel text-to-image based framework to generate stealthy and transferable physical-world adversarial attacks against traffic sign recognition systems, demonstrating high attack success rates in real-world conditions.",
+        "tldr_zh": "本文介绍了一种名为DiffSign的新型基于文本到图像的框架，用于生成针对交通标志识别系统的隐蔽且可转移的物理世界对抗性攻击，并在实际条件下展示了高攻击成功率。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Text2Traffic: A Text-to-Image Generation and Editing Method for Traffic Scenes",
+        "summary": "With the rapid advancement of intelligent transportation systems, text-driven image generation and editing techniques have demonstrated significant potential in providing rich, controllable visual scene data for applications such as traffic monitoring and autonomous driving. However, several challenges remain, including insufficient semantic richness of generated traffic elements, limited camera viewpoints, low visual fidelity of synthesized images, and poor alignment between textual descriptions and generated content. To address these issues, we propose a unified text-driven framework for both image generation and editing, leveraging a controllable mask mechanism to seamlessly integrate the two tasks. Furthermore, we incorporate both vehicle-side and roadside multi-view data to enhance the geometric diversity of traffic scenes. Our training strategy follows a two-stage paradigm: first, we perform conceptual learning using large-scale coarse-grained text-image data; then, we fine-tune with fine-grained descriptive data to enhance text-image alignment and detail quality. Additionally, we introduce a mask-region-weighted loss that dynamically emphasizes small yet critical regions during training, thereby substantially enhancing the generation fidelity of small-scale traffic elements. Extensive experiments demonstrate that our method achieves leading performance in text-based image generation and editing within traffic scenes.",
+        "url": "http://arxiv.org/abs/2511.12932v1",
+        "published_date": "2025-11-17T03:39:13+00:00",
+        "updated_date": "2025-11-17T03:39:13+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Feng Lv",
+            "Haoxuan Feng",
+            "Zilu Zhang",
+            "Chunlong Xia",
+            "Yanfeng Li"
+        ],
+        "tldr": "The paper introduces a text-driven image generation and editing framework for traffic scenes, addressing challenges like semantic richness, viewpoint diversity, and text-image alignment through a multi-view approach, two-stage training, and mask-region-weighted loss.",
+        "tldr_zh": "该论文提出了一个用于交通场景的文本驱动图像生成和编辑框架，通过多视角方法、两阶段训练和掩码区域加权损失来解决语义丰富度、视角多样性和文本图像对齐等挑战。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Backdoor Attacks on Open Vocabulary Object Detectors via Multi-Modal Prompt Tuning",
+        "summary": "Open-vocabulary object detectors (OVODs) unify vision and language to detect arbitrary object categories based on text prompts, enabling strong zero-shot generalization to novel concepts. As these models gain traction in high-stakes applications such as robotics, autonomous driving, and surveillance, understanding their security risks becomes crucial. In this work, we conduct the first study of backdoor attacks on OVODs and reveal a new attack surface introduced by prompt tuning. We propose TrAP (Trigger-Aware Prompt tuning), a multi-modal backdoor injection strategy that jointly optimizes prompt parameters in both image and text modalities along with visual triggers. TrAP enables the attacker to implant malicious behavior using lightweight, learnable prompt tokens without retraining the base model weights, thus preserving generalization while embedding a hidden backdoor. We adopt a curriculum-based training strategy that progressively shrinks the trigger size, enabling effective backdoor activation using small trigger patches at inference. Experiments across multiple datasets show that TrAP achieves high attack success rates for both object misclassification and object disappearance attacks, while also improving clean image performance on downstream datasets compared to the zero-shot setting.",
+        "url": "http://arxiv.org/abs/2511.12735v1",
+        "published_date": "2025-11-16T19:05:31+00:00",
+        "updated_date": "2025-11-16T19:05:31+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ankita Raj",
+            "Chetan Arora"
+        ],
+        "tldr": "This paper introduces TrAP, a novel multi-modal backdoor attack targeting open-vocabulary object detectors (OVODs) by tuning prompts in both image and text modalities, demonstrating high attack success rates while improving clean image performance.",
+        "tldr_zh": "该论文介绍了 TrAP，一种新颖的多模态后门攻击，通过调整图像和文本模态中的提示来针对开放词汇对象检测器 (OVOD)，在提高纯净图像性能的同时，展示了较高的攻击成功率。",
+        "relevance_score": 7,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "CloseUpShot: Close-up Novel View Synthesis from Sparse-views via Point-conditioned Diffusion Model",
+        "summary": "Reconstructing 3D scenes and synthesizing novel views from sparse input views is a highly challenging task. Recent advances in video diffusion models have demonstrated strong temporal reasoning capabilities, making them a promising tool for enhancing reconstruction quality under sparse-view settings. However, existing approaches are primarily designed for modest viewpoint variations, which struggle in capturing fine-grained details in close-up scenarios since input information is severely limited. In this paper, we present a diffusion-based framework, called CloseUpShot, for close-up novel view synthesis from sparse inputs via point-conditioned video diffusion. Specifically, we observe that pixel-warping conditioning suffers from severe sparsity and background leakage in close-up settings. To address this, we propose hierarchical warping and occlusion-aware noise suppression, enhancing the quality and completeness of the conditioning images for the video diffusion model. Furthermore, we introduce global structure guidance, which leverages a dense fused point cloud to provide consistent geometric context to the diffusion process, to compensate for the lack of globally consistent 3D constraints in sparse conditioning inputs. Extensive experiments on multiple datasets demonstrate that our method outperforms existing approaches, especially in close-up novel view synthesis, clearly validating the effectiveness of our design.",
+        "url": "http://arxiv.org/abs/2511.13121v1",
+        "published_date": "2025-11-17T08:20:06+00:00",
+        "updated_date": "2025-11-17T08:20:06+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yuqi Zhang",
+            "Guanying Chen",
+            "Jiaxing Chen",
+            "Chuanyu Fu",
+            "Chuan Huang",
+            "Shuguang Cui"
+        ],
+        "tldr": "The paper introduces CloseUpShot, a diffusion-based framework for synthesizing close-up novel views from sparse inputs, addressing limitations of existing methods in capturing fine-grained details by using hierarchical warping, occlusion-aware noise suppression, and global structure guidance.",
+        "tldr_zh": "该论文介绍了一种基于扩散的框架CloseUpShot，用于从稀疏输入合成近距离新视角，通过使用分层扭曲、遮挡感知噪声抑制和全局结构引导，解决了现有方法在捕获精细细节方面的局限性。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
