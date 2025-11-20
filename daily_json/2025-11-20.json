@@ -1,0 +1,419 @@
+[
+    {
+        "title": "CompTrack: Information Bottleneck-Guided Low-Rank Dynamic Token Compression for Point Cloud Tracking",
+        "summary": "3D single object tracking (SOT) in LiDAR point clouds is a critical task in computer vision and autonomous driving. Despite great success having been achieved, the inherent sparsity of point clouds introduces a dual-redundancy challenge that limits existing trackers: (1) vast spatial redundancy from background noise impairs accuracy, and (2) informational redundancy within the foreground hinders efficiency. To tackle these issues, we propose CompTrack, a novel end-to-end framework that systematically eliminates both forms of redundancy in point clouds. First, CompTrack incorporates a Spatial Foreground Predictor (SFP) module to filter out irrelevant background noise based on information entropy, addressing spatial redundancy. Subsequently, its core is an Information Bottleneck-guided Dynamic Token Compression (IB-DTC) module that eliminates the informational redundancy within the foreground. Theoretically grounded in low-rank approximation, this module leverages an online SVD analysis to adaptively compress the redundant foreground into a compact and highly informative set of proxy tokens. Extensive experiments on KITTI, nuScenes and Waymo datasets demonstrate that CompTrack achieves top-performing tracking performance with superior efficiency, running at a real-time 90 FPS on a single RTX 3090 GPU.",
+        "url": "http://arxiv.org/abs/2511.15580v1",
+        "published_date": "2025-11-19T16:12:24+00:00",
+        "updated_date": "2025-11-19T16:12:24+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Sifan Zhou",
+            "Yichao Cao",
+            "Jiahao Nie",
+            "Yuqian Fu",
+            "Ziyu Zhao",
+            "Xiaobo Lu",
+            "Shuo Wang"
+        ],
+        "tldr": "CompTrack is a novel 3D single object tracking framework that utilizes information bottleneck and low-rank approximation to reduce spatial and informational redundancy in LiDAR point clouds, achieving real-time performance with high accuracy.",
+        "tldr_zh": "CompTrack是一个新颖的3D单目标跟踪框架，它利用信息瓶颈和低秩逼近来减少激光雷达点云中的空间和信息冗余，从而实现实时性能和高精度。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "ShelfOcc: Native 3D Supervision beyond LiDAR for Vision-Based Occupancy Estimation",
+        "summary": "Recent progress in self- and weakly supervised occupancy estimation has largely relied on 2D projection or rendering-based supervision, which suffers from geometric inconsistencies and severe depth bleeding. We thus introduce ShelfOcc, a vision-only method that overcomes these limitations without relying on LiDAR. ShelfOcc brings supervision into native 3D space by generating metrically consistent semantic voxel labels from video, enabling true 3D supervision without any additional sensors or manual 3D annotations. While recent vision-based 3D geometry foundation models provide a promising source of prior knowledge, they do not work out of the box as a prediction due to sparse or noisy and inconsistent geometry, especially in dynamic driving scenes. Our method introduces a dedicated framework that mitigates these issues by filtering and accumulating static geometry consistently across frames, handling dynamic content and propagating semantic information into a stable voxel representation. This data-centric shift in supervision for weakly/shelf-supervised occupancy estimation allows the use of essentially any SOTA occupancy model architecture without relying on LiDAR data. We argue that such high-quality supervision is essential for robust occupancy learning and constitutes an important complementary avenue to architectural innovation. On the Occ3D-nuScenes benchmark, ShelfOcc substantially outperforms all previous weakly/shelf-supervised methods (up to a 34% relative improvement), establishing a new data-driven direction for LiDAR-free 3D scene understanding.",
+        "url": "http://arxiv.org/abs/2511.15396v1",
+        "published_date": "2025-11-19T12:44:13+00:00",
+        "updated_date": "2025-11-19T12:44:13+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Simon Boeder",
+            "Fabian Gigengack",
+            "Simon Roesler",
+            "Holger Caesar",
+            "Benjamin Risse"
+        ],
+        "tldr": "The paper introduces ShelfOcc, a vision-only method for 3D occupancy estimation that generates metrically consistent semantic voxel labels from video, enabling true 3D supervision without LiDAR and significantly outperforming existing weakly-supervised methods.",
+        "tldr_zh": "该论文介绍了ShelfOcc，一种仅使用视觉的3D occupancy estimation方法，通过从视频生成度量一致的语义体素标签，实现了真正的3D监督，无需激光雷达，并且显著优于现有的弱监督方法。",
+        "relevance_score": 10,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Text2Loc++: Generalizing 3D Point Cloud Localization from Natural Language",
+        "summary": "We tackle the problem of localizing 3D point cloud submaps using complex and diverse natural language descriptions, and present Text2Loc++, a novel neural network designed for effective cross-modal alignment between language and point clouds in a coarse-to-fine localization pipeline. To support benchmarking, we introduce a new city-scale dataset covering both color and non-color point clouds from diverse urban scenes, and organize location descriptions into three levels of linguistic complexity. In the global place recognition stage, Text2Loc++ combines a pretrained language model with a Hierarchical Transformer with Max pooling (HTM) for sentence-level semantics, and employs an attention-based point cloud encoder for spatial understanding. We further propose Masked Instance Training (MIT) to filter out non-aligned objects and improve multimodal robustness. To enhance the embedding space, we introduce Modality-aware Hierarchical Contrastive Learning (MHCL), incorporating cross-modal, submap-, text-, and instance-level losses. In the fine localization stage, we completely remove explicit text-instance matching and design a lightweight yet powerful framework based on Prototype-based Map Cloning (PMC) and a Cascaded Cross-Attention Transformer (CCAT). Extensive experiments on the KITTI360Pose dataset show that Text2Loc++ outperforms existing methods by up to 15%. In addition, the proposed model exhibits robust generalization when evaluated on the new dataset, effectively handling complex linguistic expressions and a wide variety of urban environments. The code and dataset will be made publicly available.",
+        "url": "http://arxiv.org/abs/2511.15308v1",
+        "published_date": "2025-11-19T10:19:45+00:00",
+        "updated_date": "2025-11-19T10:19:45+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yan Xia",
+            "Letian Shi",
+            "Yilin Di",
+            "Joao F. Henriques",
+            "Daniel Cremers"
+        ],
+        "tldr": "The paper introduces Text2Loc++, a novel neural network for localizing 3D point cloud submaps from natural language descriptions, along with a new city-scale dataset and achieves state-of-the-art performance on KITTI360Pose and good generalization on their new dataset.",
+        "tldr_zh": "该论文介绍了 Text2Loc++，一种用于从自然语言描述中定位 3D 点云子图的新型神经网络，同时提出了一个新的城市规模数据集，并在 KITTI360Pose 上实现了最先进的性能，并在他们的新数据集上实现了良好的泛化。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "SceneEdited: A City-Scale Benchmark for 3D HD Map Updating via Image-Guided Change Detection",
+        "summary": "Accurate, up-to-date High-Definition (HD) maps are critical for urban planning, infrastructure monitoring, and autonomous navigation. However, these maps quickly become outdated as environments evolve, creating a need for robust methods that not only detect changes but also incorporate them into updated 3D representations. While change detection techniques have advanced significantly, there remains a clear gap between detecting changes and actually updating 3D maps, particularly when relying on 2D image-based change detection. To address this gap, we introduce SceneEdited, the first city-scale dataset explicitly designed to support research on HD map maintenance through 3D point cloud updating. SceneEdited contains over 800 up-to-date scenes covering 73 km of driving and approximate 3 $\\text{km}^2$ of urban area, with more than 23,000 synthesized object changes created both manually and automatically across 2000+ out-of-date versions, simulating realistic urban modifications such as missing roadside infrastructure, buildings, overpasses, and utility poles. Each scene includes calibrated RGB images, LiDAR scans, and detailed change masks for training and evaluation. We also provide baseline methods using a foundational image-based structure-from-motion pipeline for updating outdated scenes, as well as a comprehensive toolkit supporting scalability, trackability, and portability for future dataset expansion and unification of out-of-date object annotations. Both the dataset and the toolkit are publicly available at https://github.com/ChadLin9596/ScenePoint-ETK, establising a standardized benchmark for 3D map updating research.",
+        "url": "http://arxiv.org/abs/2511.15153v1",
+        "published_date": "2025-11-19T06:10:55+00:00",
+        "updated_date": "2025-11-19T06:10:55+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Chun-Jung Lin",
+            "Tat-Jun Chin",
+            "Sourav Garg",
+            "Feras Dayoub"
+        ],
+        "tldr": "The paper introduces SceneEdited, a new city-scale dataset and benchmark for 3D HD map updating using image-guided change detection, along with baseline methods and a toolkit for future dataset expansion.",
+        "tldr_zh": "该论文介绍了 SceneEdited，这是一个新的城市规模数据集和基准，用于使用图像引导的变更检测进行 3D 高清地图更新，以及基线方法和用于未来数据集扩展的工具包。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Co-Me: Confidence-Guided Token Merging for Visual Geometric Transformers",
+        "summary": "We propose Confidence-Guided Token Merging (Co-Me), an acceleration mechanism for visual geometric transformers without retraining or finetuning the base model. Co-Me distilled a light-weight confidence predictor to rank tokens by uncertainty and selectively merge low-confidence ones, effectively reducing computation while maintaining spatial coverage. Compared to similarity-based merging or pruning, the confidence signal in Co-Me reliably indicates regions emphasized by the transformer, enabling substantial acceleration without degrading performance. Co-Me applies seamlessly to various multi-view and streaming visual geometric transformers, achieving speedups that scale with sequence length. When applied to VGGT and MapAnything, Co-Me achieves up to $11.3\\times$ and $7.2\\times$ speedup, making visual geometric transformers practical for real-time 3D perception and reconstruction.",
+        "url": "http://arxiv.org/abs/2511.14751v1",
+        "published_date": "2025-11-18T18:52:22+00:00",
+        "updated_date": "2025-11-18T18:52:22+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Yutian Chen",
+            "Yuheng Qiu",
+            "Ruogu Li",
+            "Ali Agha",
+            "Shayegan Omidshafiei",
+            "Jay Patrikar",
+            "Sebastian Scherer"
+        ],
+        "tldr": "The paper introduces Confidence-Guided Token Merging (Co-Me), a method to accelerate visual geometric transformers by selectively merging low-confidence tokens without retraining, achieving significant speedups in multi-view 3D perception and reconstruction tasks.",
+        "tldr_zh": "该论文介绍了置信度引导的令牌合并（Co-Me），这是一种通过选择性合并低置信度令牌来加速视觉几何Transformer的方法，无需重新训练，并在多视图3D感知和重建任务中实现了显著的加速。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Learning from Mistakes: Loss-Aware Memory Enhanced Continual Learning for LiDAR Place Recognition",
+        "summary": "LiDAR place recognition plays a crucial role in SLAM, robot navigation, and autonomous driving. However, existing LiDAR place recognition methods often struggle to adapt to new environments without forgetting previously learned knowledge, a challenge widely known as catastrophic forgetting. To address this issue, we propose KDF+, a novel continual learning framework for LiDAR place recognition that extends the KDF paradigm with a loss-aware sampling strategy and a rehearsal enhancement mechanism. The proposed sampling strategy estimates the learning difficulty of each sample via its loss value and selects samples for replay according to their estimated difficulty. Harder samples, which tend to encode more discriminative information, are sampled with higher probability while maintaining distributional coverage across the dataset. In addition, the rehearsal enhancement mechanism encourages memory samples to be further refined during new-task training by slightly reducing their loss relative to previous tasks, thereby reinforcing long-term knowledge retention. Extensive experiments across multiple benchmarks demonstrate that KDF+ consistently outperforms existing continual learning methods and can be seamlessly integrated into state-of-the-art continual learning for LiDAR place recognition frameworks to yield significant and stable performance gains. The code will be available at https://github.com/repo/KDF-plus.",
+        "url": "http://arxiv.org/abs/2511.15597v1",
+        "published_date": "2025-11-19T16:41:30+00:00",
+        "updated_date": "2025-11-19T16:41:30+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Xufei Wang",
+            "Junqiao Zhao",
+            "Siyue Tao",
+            "Qiwen Gu",
+            "Wonbong Kim",
+            "Tiantian Feng"
+        ],
+        "tldr": "The paper introduces KDF+, a continual learning framework for LiDAR place recognition that tackles catastrophic forgetting by using a loss-aware sampling strategy and rehearsal enhancement, demonstrating superior performance on multiple benchmarks.",
+        "tldr_zh": "该论文介绍了一种名为KDF+的持续学习框架，用于激光雷达地点识别，通过损失感知采样策略和排练增强机制解决灾难性遗忘问题，并在多个基准测试中表现出卓越的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Scriboora: Rethinking Human Pose Forecasting",
+        "summary": "Human pose forecasting predicts future poses based on past observations, and has many significant applications in areas such as action recognition, autonomous driving or human-robot interaction. This paper evaluates a wide range of pose forecasting algorithms in the task of absolute pose forecasting, revealing many reproducibility issues, and provides a unified training and evaluation pipeline. After drawing a high-level analogy to the task of speech understanding, it is shown that recent speech models can be efficiently adapted to the task of pose forecasting, and improve current state-of-the-art performance. At last the robustness of the models is evaluated, using noisy joint coordinates obtained from a pose estimator model, to reflect a realistic type of noise, which is more close to real-world applications. For this a new dataset variation is introduced, and it is shown that estimated poses result in a substantial performance degradation, and how much of it can be recovered again by unsupervised finetuning.",
+        "url": "http://arxiv.org/abs/2511.15565v1",
+        "published_date": "2025-11-19T15:58:33+00:00",
+        "updated_date": "2025-11-19T15:58:33+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Daniel Bermuth",
+            "Alexander Poeppel",
+            "Wolfgang Reif"
+        ],
+        "tldr": "This paper addresses reproducibility issues in human pose forecasting, adapts speech models for improved performance, and evaluates model robustness using noisy pose estimates, introducing a new dataset variation and unsupervised finetuning approach.",
+        "tldr_zh": "本文解决了人体姿态预测中的可重复性问题，调整语音模型以提高性能，并使用带噪声的姿态估计评估模型的鲁棒性，引入了新的数据集变体和无监督微调方法。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Driving in Spikes: An Entropy-Guided Object Detector for Spike Cameras",
+        "summary": "Object detection in autonomous driving suffers from motion blur and saturation under fast motion and extreme lighting. Spike cameras, offer microsecond latency and ultra high dynamic range for object detection by using per pixel asynchronous integrate and fire. However, their sparse, discrete output cannot be processed by standard image-based detectors, posing a critical challenge for end to end spike stream detection. We propose EASD, an end to end spike camera detector with a dual branch design: a Temporal Based Texture plus Feature Fusion branch for global cross slice semantics, and an Entropy Selective Attention branch for object centric details. To close the data gap, we introduce DSEC Spike, the first driving oriented simulated spike detection benchmark.",
+        "url": "http://arxiv.org/abs/2511.15459v1",
+        "published_date": "2025-11-19T14:16:17+00:00",
+        "updated_date": "2025-11-19T14:16:17+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ziyan Liu",
+            "Qi Su",
+            "Lulu Tang",
+            "Zhaofei Yu",
+            "Tiejun Huang"
+        ],
+        "tldr": "This paper introduces EASD, an object detector designed for spike cameras in autonomous driving, addressing challenges of sparse, discrete spike stream data and proposes DSEC Spike, a new driving-oriented simulated spike detection benchmark.",
+        "tldr_zh": "本文介绍了一种名为EASD的目标检测器，专为自动驾驶中的脉冲相机设计，旨在解决稀疏、离散脉冲流数据的挑战，并提出了DSEC Spike，一个新的面向驾驶的模拟脉冲检测基准。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "WarNav: An Autonomous Driving Benchmark for Segmentation of Navigable Zones in War Scenes",
+        "summary": "We introduce WarNav, a novel real-world dataset constructed from images of the open-source DATTALION repository, specifically tailored to enable the development and benchmarking of semantic segmentation models for autonomous ground vehicle navigation in unstructured, conflict-affected environments. This dataset addresses a critical gap between conventional urban driving resources and the unique operational scenarios encountered by unmanned systems in hazardous and damaged war-zones. We detail the methodological challenges encountered, ranging from data heterogeneity to ethical considerations, providing guidance for future efforts that target extreme operational contexts. To establish performance references, we report baseline results on WarNav using several state-of-the-art semantic segmentation models trained on structured urban scenes. We further analyse the impact of training data environments and propose a first step towards effective navigability in challenging environments with the constraint of having no annotation of the targeted images. Our goal is to foster impactful research that enhances the robustness and safety of autonomous vehicles in high-risk scenarios while being frugal in annotated data.",
+        "url": "http://arxiv.org/abs/2511.15429v1",
+        "published_date": "2025-11-19T13:32:26+00:00",
+        "updated_date": "2025-11-19T13:32:26+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Marc-Emmanuel Coupvent des Graviers",
+            "Hejer Ammar",
+            "Christophe Guettier",
+            "Yann Dumortier",
+            "Romaric Audigier"
+        ],
+        "tldr": "The paper introduces WarNav, a new real-world dataset of warzone imagery for training and benchmarking semantic segmentation models for autonomous navigation, addressing the gap between urban driving datasets and the challenges of conflict-affected environments. The authors also present baseline results and a strategy for navigating in these environments without annotations.",
+        "tldr_zh": "该论文介绍了WarNav，这是一个新的现实世界战争区域图像数据集，用于训练和评估自动导航的语义分割模型，旨在解决城市驾驶数据集与受冲突影响环境的挑战之间的差距。作者还展示了基线结果和一种在没有标注的情况下在这些环境中导航的策略。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Adapt-As-You-Walk Through the Clouds: Training-Free Online Test-Time Adaptation of 3D Vision-Language Foundation Models",
+        "summary": "3D Vision-Language Foundation Models (VLFMs) have shown strong generalization and zero-shot recognition capabilities in open-world point cloud processing tasks. However, these models often underperform in practical scenarios where data are noisy, incomplete, or drawn from a different distribution than the training data. To address this, we propose Uni-Adapter, a novel training-free online test-time adaptation (TTA) strategy for 3D VLFMs based on dynamic prototype learning. We define a 3D cache to store class-specific cluster centers as prototypes, which are continuously updated to capture intra-class variability in heterogeneous data distributions. These dynamic prototypes serve as anchors for cache-based logit computation via similarity scoring. Simultaneously, a graph-based label smoothing module captures inter-prototype similarities to enforce label consistency among similar prototypes. Finally, we unify predictions from the original 3D VLFM and the refined 3D cache using entropy-weighted aggregation for reliable adaptation. Without retraining, Uni-Adapter effectively mitigates distribution shifts, achieving state-of-the-art performance on diverse 3D benchmarks over different 3D VLFMs, improving ModelNet-40C by 10.55%, ScanObjectNN-C by 8.26%, and ShapeNet-C by 4.49% over the source 3D VLFMs.",
+        "url": "http://arxiv.org/abs/2511.15311v1",
+        "published_date": "2025-11-19T10:22:22+00:00",
+        "updated_date": "2025-11-19T10:22:22+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Mehran Tamjidi",
+            "Hamidreza Dastmalchi",
+            "Mohammadreza Alimoradijazi",
+            "Ali Cheraghian",
+            "Aijun An",
+            "Morteza Saberi"
+        ],
+        "tldr": "The paper introduces Uni-Adapter, a training-free test-time adaptation strategy for 3D Vision-Language Foundation Models (VLFMs) that dynamically updates prototypes for improved performance in noisy or shifted data distributions, achieving state-of-the-art results on multiple benchmarks.",
+        "tldr_zh": "该论文介绍了一种名为Uni-Adapter的免训练测试时自适应策略，用于3D视觉-语言基础模型(VLFMs)。该方法通过动态更新原型来提高模型在噪声或分布偏移数据下的性能，并在多个基准测试中取得了最先进的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Edge-Centric Relational Reasoning for 3D Scene Graph Prediction",
+        "summary": "3D scene graph prediction aims to abstract complex 3D environments into structured graphs consisting of objects and their pairwise relationships. Existing approaches typically adopt object-centric graph neural networks, where relation edge features are iteratively updated by aggregating messages from connected object nodes. However, this design inherently restricts relation representations to pairwise object context, making it difficult to capture high-order relational dependencies that are essential for accurate relation prediction. To address this limitation, we propose a Link-guided Edge-centric relational reasoning framework with Object-aware fusion, namely LEO, which enables progressive reasoning from relation-level context to object-level understanding. Specifically, LEO first predicts potential links between object pairs to suppress irrelevant edges, and then transforms the original scene graph into a line graph where each relation is treated as a node. A line graph neural network is applied to perform edge-centric relational reasoning to capture inter-relation context. The enriched relation features are subsequently integrated into the original object-centric graph to enhance object-level reasoning and improve relation prediction. Our framework is model-agnostic and can be integrated with any existing object-centric method. Experiments on the 3DSSG dataset with two competitive baselines show consistent improvements, highlighting the effectiveness of our edge-to-object reasoning paradigm.",
+        "url": "http://arxiv.org/abs/2511.15288v1",
+        "published_date": "2025-11-19T09:53:56+00:00",
+        "updated_date": "2025-11-19T09:53:56+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yanni Ma",
+            "Hao Liu",
+            "Yulan Guo",
+            "Theo Gevers",
+            "Martin R. Oswald"
+        ],
+        "tldr": "The paper introduces LEO, a novel edge-centric relational reasoning framework for 3D scene graph prediction that transforms the scene graph into a line graph to capture inter-relation context and improve relation prediction accuracy, demonstrating consistent improvements on the 3DSSG dataset.",
+        "tldr_zh": "本文提出了一种名为LEO的新型以边为中心的3D场景图预测关系推理框架，该框架将场景图转换为线图，以捕获关系间的上下文信息并提高关系预测的准确性，并在3DSSG数据集上表现出持续的改进。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Look, Zoom, Understand: The Robotic Eyeball for Embodied Perception",
+        "summary": "In embodied AI perception systems, visual perception should be active: the goal is not to passively process static images, but to actively acquire more informative data within pixel and spatial budget constraints. Existing vision models and fixed RGB-D camera systems fundamentally fail to reconcile wide-area coverage with fine-grained detail acquisition, severely limiting their efficacy in open-world robotic applications. To address this issue, we propose EyeVLA, a robotic eyeball for active visual perception that can take proactive actions based on instructions, enabling clear observation of fine-grained target objects and detailed information across a wide spatial extent. EyeVLA discretizes action behaviors into action tokens and integrates them with vision-language models (VLMs) that possess strong open-world understanding capabilities, enabling joint modeling of vision, language, and actions within a single autoregressive sequence. By using the 2D bounding box coordinates to guide the reasoning chain and applying reinforcement learning to refine the viewpoint selection policy, we transfer the open-world scene understanding capability of the VLM to a vision language action (VLA) policy using only minimal real-world data. Experiments show that our system efficiently performs instructed scenes in real-world environments and actively acquires more accurate visual information through instruction-driven actions of rotation and zoom, thereby achieving strong environmental perception capabilities. EyeVLA introduces a novel robotic vision system that leverages detailed and spatially rich, large-scale embodied data, and actively acquires highly informative visual observations for downstream embodied tasks.",
+        "url": "http://arxiv.org/abs/2511.15279v1",
+        "published_date": "2025-11-19T09:42:08+00:00",
+        "updated_date": "2025-11-19T09:42:08+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Jiashu Yang",
+            "Yifan Han",
+            "Yucheng Xie",
+            "Ning Guo",
+            "Wenzhao Lian"
+        ],
+        "tldr": "The paper introduces EyeVLA, a robotic eyeball system that combines vision-language models and reinforcement learning to achieve active visual perception by intelligently controlling rotation and zoom based on instructions.",
+        "tldr_zh": "本文介绍了一种名为EyeVLA的机器人眼球系统，该系统结合了视觉语言模型和强化学习，通过智能地控制旋转和缩放，根据指令实现主动视觉感知。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Graph Query Networks for Object Detection with Automotive Radar",
+        "summary": "Object detection with 3D radar is essential for 360-degree automotive perception, but radar's long wavelengths produce sparse and irregular reflections that challenge traditional grid and sequence-based convolutional and transformer detectors. This paper introduces Graph Query Networks (GQN), an attention-based framework that models objects sensed by radar as graphs, to extract individualized relational and contextual features. GQN employs a novel concept of graph queries to dynamically attend over the bird's-eye view (BEV) space, constructing object-specific graphs processed by two novel modules: EdgeFocus for relational reasoning and DeepContext Pooling for contextual aggregation. On the NuScenes dataset, GQN improves relative mAP by up to +53%, including a +8.2% gain over the strongest prior radar method, while reducing peak graph construction overhead by 80% with moderate FLOPs cost.",
+        "url": "http://arxiv.org/abs/2511.15271v1",
+        "published_date": "2025-11-19T09:36:49+00:00",
+        "updated_date": "2025-11-19T09:36:49+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Loveneet Saini",
+            "Hasan Tercan",
+            "Tobias Meisen"
+        ],
+        "tldr": "The paper introduces Graph Query Networks (GQN) for object detection with automotive radar, modeling objects as graphs with attention mechanisms and achieving significant mAP improvements on the NuScenes dataset compared to existing methods.",
+        "tldr_zh": "该论文介绍了用于汽车雷达物体检测的图查询网络（GQN），通过将物体建模为具有注意力机制的图结构，并在NuScenes数据集上实现了显著的mAP提升，优于现有方法。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Learning Depth from Past Selves: Self-Evolution Contrast for Robust Depth Estimation",
+        "summary": "Self-supervised depth estimation has gained significant attention in autonomous driving and robotics. However, existing methods exhibit substantial performance degradation under adverse weather conditions such as rain and fog, where reduced visibility critically impairs depth prediction. To address this issue, we propose a novel self-evolution contrastive learning framework called SEC-Depth for self-supervised robust depth estimation tasks. Our approach leverages intermediate parameters generated during training to construct temporally evolving latency models. Using these, we design a self-evolution contrastive scheme to mitigate performance loss under challenging conditions. Concretely, we first design a dynamic update strategy of latency models for the depth estimation task to capture optimization states across training stages. To effectively leverage latency models, we introduce a self-evolution contrastive Loss (SECL) that treats outputs from historical latency models as negative samples. This mechanism adaptively adjusts learning objectives while implicitly sensing weather degradation severity, reducing the needs for manual intervention. Experiments show that our method integrates seamlessly into diverse baseline models and significantly enhances robustness in zero-shot evaluations.",
+        "url": "http://arxiv.org/abs/2511.15167v1",
+        "published_date": "2025-11-19T06:42:40+00:00",
+        "updated_date": "2025-11-19T06:42:40+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Jing Cao",
+            "Kui Jiang",
+            "Shenyi Li",
+            "Xiaocheng Feng",
+            "Yong Huang"
+        ],
+        "tldr": "This paper introduces SEC-Depth, a self-supervised depth estimation framework using a self-evolution contrastive learning scheme to improve robustness in adverse weather conditions for autonomous driving and robotics.",
+        "tldr_zh": "该论文提出了SEC-Depth，一个自监督深度估计框架，利用自演化对比学习方案来提高在恶劣天气条件下的鲁棒性，适用于自动驾驶和机器人技术。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "MambaTrack3D: A State Space Model Framework for LiDAR-Based Object Tracking under High Temporal Variation",
+        "summary": "Dynamic outdoor environments with high temporal variation (HTV) pose significant challenges for 3D single object tracking in LiDAR point clouds. Existing memory-based trackers often suffer from quadratic computational complexity, temporal redundancy, and insufficient exploitation of geometric priors. To address these issues, we propose MambaTrack3D, a novel HTV-oriented tracking framework built upon the state space model Mamba. Specifically, we design a Mamba-based Inter-frame Propagation (MIP) module that replaces conventional single-frame feature extraction with efficient inter-frame propagation, achieving near-linear complexity while explicitly modeling spatial relations across historical frames. Furthermore, a Grouped Feature Enhancement Module (GFEM) is introduced to separate foreground and background semantics at the channel level, thereby mitigating temporal redundancy in the memory bank. Extensive experiments on KITTI-HTV and nuScenes-HTV benchmarks demonstrate that MambaTrack3D consistently outperforms both HTV-oriented and normal-scenario trackers, achieving improvements of up to 6.5 success and 9.5 precision over HVTrack under moderate temporal gaps. On the standard KITTI dataset, MambaTrack3D remains highly competitive with state-of-the-art normal-scenario trackers, confirming its strong generalization ability. Overall, MambaTrack3D achieves a superior accuracy-efficiency trade-off, delivering robust performance across both specialized HTV and conventional tracking scenarios.",
+        "url": "http://arxiv.org/abs/2511.15077v1",
+        "published_date": "2025-11-19T03:37:56+00:00",
+        "updated_date": "2025-11-19T03:37:56+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Shengjing Tian",
+            "Yinan Han",
+            "Xiantong Zhao",
+            "Xuehu Liu",
+            "Qi Lang"
+        ],
+        "tldr": "MambaTrack3D uses a state space model to improve LiDAR-based 3D object tracking in dynamic, high temporal variation environments, outperforming existing methods in both accuracy and efficiency.",
+        "tldr_zh": "MambaTrack3D利用状态空间模型改进了动态、高时间变化环境下基于激光雷达的三维物体跟踪，在准确性和效率方面均优于现有方法。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Attacking Autonomous Driving Agents with Adversarial Machine Learning: A Holistic Evaluation with the CARLA Leaderboard",
+        "summary": "To autonomously control vehicles, driving agents use outputs from a combination of machine-learning (ML) models, controller logic, and custom modules. Although numerous prior works have shown that adversarial examples can mislead ML models used in autonomous driving contexts, it remains unclear if these attacks are effective at producing harmful driving actions for various agents, environments, and scenarios.\n  To assess the risk of adversarial examples to autonomous driving, we evaluate attacks against a variety of driving agents, rather than against ML models in isolation. To support this evaluation, we leverage CARLA, an urban driving simulator, to create and evaluate adversarial examples. We create adversarial patches designed to stop or steer driving agents, stream them into the CARLA simulator at runtime, and evaluate them against agents from the CARLA Leaderboard, a public repository of best-performing autonomous driving agents from an annual research competition. Unlike prior work, we evaluate attacks against autonomous driving systems without creating or modifying any driving-agent code and against all parts of the agent included with the ML model.\n  We perform a case-study investigation of two attack strategies against three open-source driving agents from the CARLA Leaderboard across multiple driving scenarios, lighting conditions, and locations. Interestingly, we show that, although some attacks can successfully mislead ML models into predicting erroneous stopping or steering commands, some driving agents use modules, such as PID control or GPS-based rules, that can overrule attacker-manipulated predictions from ML models.",
+        "url": "http://arxiv.org/abs/2511.14876v1",
+        "published_date": "2025-11-18T19:49:46+00:00",
+        "updated_date": "2025-11-18T19:49:46+00:00",
+        "categories": [
+            "cs.CR",
+            "cs.CV",
+            "cs.LG",
+            "cs.RO"
+        ],
+        "authors": [
+            "Henry Wong",
+            "Clement Fung",
+            "Weiran Lin",
+            "Karen Li",
+            "Stanley Chen",
+            "Lujo Bauer"
+        ],
+        "tldr": "This paper evaluates adversarial attacks on complete autonomous driving systems using CARLA, showing that while ML models can be misled, other modules in the agents can sometimes mitigate these attacks.",
+        "tldr_zh": "本文使用CARLA评估了对完整自动驾驶系统的对抗性攻击，结果表明虽然机器学习模型可能被误导，但智能体中的其他模块有时可以缓解这些攻击。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Gaussian See, Gaussian Do: Semantic 3D Motion Transfer from Multiview Video",
+        "summary": "We present Gaussian See, Gaussian Do, a novel approach for semantic 3D motion transfer from multiview video. Our method enables rig-free, cross-category motion transfer between objects with semantically meaningful correspondence. Building on implicit motion transfer techniques, we extract motion embeddings from source videos via condition inversion, apply them to rendered frames of static target shapes, and use the resulting videos to supervise dynamic 3D Gaussian Splatting reconstruction. Our approach introduces an anchor-based view-aware motion embedding mechanism, ensuring cross-view consistency and accelerating convergence, along with a robust 4D reconstruction pipeline that consolidates noisy supervision videos. We establish the first benchmark for semantic 3D motion transfer and demonstrate superior motion fidelity and structural consistency compared to adapted baselines. Code and data for this paper available at https://gsgd-motiontransfer.github.io/",
+        "url": "http://arxiv.org/abs/2511.14848v1",
+        "published_date": "2025-11-18T19:02:50+00:00",
+        "updated_date": "2025-11-18T19:02:50+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yarin Bekor",
+            "Gal Michael Harari",
+            "Or Perel",
+            "Or Litany"
+        ],
+        "tldr": "The paper introduces Gaussian See, Gaussian Do, a novel method for semantic 3D motion transfer from multiview video using 3D Gaussian Splatting, enabling cross-category motion transfer with semantic correspondence and improved motion fidelity.",
+        "tldr_zh": "该论文介绍了 Gaussian See, Gaussian Do，一种新颖的基于多视图视频的语义 3D 运动传递方法，它利用 3D 高斯溅射实现了跨类别运动传递，并提高了运动保真度。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    }
+]
