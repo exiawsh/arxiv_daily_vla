@@ -1,0 +1,531 @@
+[
+    {
+        "title": "IDSplat: Instance-Decomposed 3D Gaussian Splatting for Driving Scenes",
+        "summary": "Reconstructing dynamic driving scenes is essential for developing autonomous systems through sensor-realistic simulation. Although recent methods achieve high-fidelity reconstructions, they either rely on costly human annotations for object trajectories or use time-varying representations without explicit object-level decomposition, leading to intertwined static and dynamic elements that hinder scene separation. We present IDSplat, a self-supervised 3D Gaussian Splatting framework that reconstructs dynamic scenes with explicit instance decomposition and learnable motion trajectories, without requiring human annotations. Our key insight is to model dynamic objects as coherent instances undergoing rigid transformations, rather than unstructured time-varying primitives. For instance decomposition, we employ zero-shot, language-grounded video tracking anchored to 3D using lidar, and estimate consistent poses via feature correspondences. We introduce a coordinated-turn smoothing scheme to obtain temporally and physically consistent motion trajectories, mitigating pose misalignments and tracking failures, followed by joint optimization of object poses and Gaussian parameters. Experiments on the Waymo Open Dataset demonstrate that our method achieves competitive reconstruction quality while maintaining instance-level decomposition and generalizes across diverse sequences and view densities without retraining, making it practical for large-scale autonomous driving applications. Code will be released.",
+        "url": "http://arxiv.org/abs/2511.19235v1",
+        "published_date": "2025-11-24T15:48:08+00:00",
+        "updated_date": "2025-11-24T15:48:08+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Carl Lindström",
+            "Mahan Rafidashti",
+            "Maryam Fatemi",
+            "Lars Hammarstrand",
+            "Martin R. Oswald",
+            "Lennart Svensson"
+        ],
+        "tldr": "IDSplat reconstructs dynamic driving scenes with instance-level decomposition using 3D Gaussian Splatting and language-grounded video tracking, offering a self-supervised approach for autonomous driving simulation.",
+        "tldr_zh": "IDSplat 使用 3D 高斯溅射和基于语言的视频跟踪重建具有实例级分解的动态驾驶场景，为自动驾驶模拟提供了一种自监督方法。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Percept-WAM: Perception-Enhanced World-Awareness-Action Model for Robust End-to-End Autonomous Driving",
+        "summary": "Autonomous driving heavily relies on accurate and robust spatial perception. Many failures arise from inaccuracies and instability, especially in long-tail scenarios and complex interactions. However, current vision-language models are weak at spatial grounding and understanding, and VLA systems built on them therefore show limited perception and localization ability. To address these challenges, we introduce Percept-WAM, a perception-enhanced World-Awareness-Action Model that is the first to implicitly integrate 2D/3D scene understanding abilities within a single vision-language model (VLM). Instead of relying on QA-style spatial reasoning, Percept-WAM unifies 2D/3D perception tasks into World-PV and World-BEV tokens, which encode both spatial coordinates and confidence. We propose a grid-conditioned prediction mechanism for dense object perception, incorporating IoU-aware scoring and parallel autoregressive decoding, improving stability in long-tail, far-range, and small-object scenarios. Additionally, Percept-WAM leverages pretrained VLM parameters to retain general intelligence (e.g., logical reasoning) and can output perception results and trajectory control outputs directly. Experiments show that Percept-WAM matches or surpasses classical detectors and segmenters on downstream perception benchmarks, achieving 51.7/58.9 mAP on COCO 2D detection and nuScenes BEV 3D detection. When integrated with trajectory decoders, it further improves planning performance on nuScenes and NAVSIM, e.g., surpassing DiffusionDrive by 2.1 in PMDS on NAVSIM. Qualitative results further highlight its strong open-vocabulary and long-tail generalization.",
+        "url": "http://arxiv.org/abs/2511.19221v1",
+        "published_date": "2025-11-24T15:28:25+00:00",
+        "updated_date": "2025-11-24T15:28:25+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jianhua Han",
+            "Meng Tian",
+            "Jiangtong Zhu",
+            "Fan He",
+            "Huixin Zhang",
+            "Sitong Guo",
+            "Dechang Zhu",
+            "Hao Tang",
+            "Pei Xu",
+            "Yuze Guo",
+            "Minzhe Niu",
+            "Haojie Zhu",
+            "Qichao Dong",
+            "Xuechao Yan",
+            "Siyuan Dong",
+            "Lu Hou",
+            "Qingqiu Huang",
+            "Xiaosong Jia",
+            "Hang Xu"
+        ],
+        "tldr": "The paper introduces Percept-WAM, a novel vision-language model that integrates 2D/3D scene understanding for robust autonomous driving by unifying perception tasks into World-PV and World-BEV tokens, demonstrating strong performance in perception and planning.",
+        "tldr_zh": "本文介绍了Percept-WAM，一种新型的视觉语言模型，它集成了2D/3D场景理解能力，通过将感知任务统一到World-PV和World-BEV tokens中，从而实现鲁棒的自动驾驶，并在感知和规划方面表现出强大的性能。",
+        "relevance_score": 10,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "HABIT: Human Action Benchmark for Interactive Traffic in CARLA",
+        "summary": "Current autonomous driving (AD) simulations are critically limited by their inadequate representation of realistic and diverse human behavior, which is essential for ensuring safety and reliability. Existing benchmarks often simplify pedestrian interactions, failing to capture complex, dynamic intentions and varied responses critical for robust system deployment. To overcome this, we introduce HABIT (Human Action Benchmark for Interactive Traffic), a high-fidelity simulation benchmark. HABIT integrates real-world human motion, sourced from mocap and videos, into CARLA (Car Learning to Act, a full autonomous driving simulator) via a modular, extensible, and physically consistent motion retargeting pipeline. From an initial pool of approximately 30,000 retargeted motions, we curate 4,730 traffic-compatible pedestrian motions, standardized in SMPL format for physically consistent trajectories. HABIT seamlessly integrates with CARLA's Leaderboard, enabling automated scenario generation and rigorous agent evaluation. Our safety metrics, including Abbreviated Injury Scale (AIS) and False Positive Braking Rate (FPBR), reveal critical failure modes in state-of-the-art AD agents missed by prior evaluations. Evaluating three state-of-the-art autonomous driving agents, InterFuser, TransFuser, and BEVDriver, demonstrates how HABIT exposes planner weaknesses that remain hidden in scripted simulations. Despite achieving close or equal to zero collisions per kilometer on the CARLA Leaderboard, the autonomous agents perform notably worse on HABIT, with up to 7.43 collisions/km and a 12.94% AIS 3+ injury risk, and they brake unnecessarily in up to 33% of cases. All components are publicly released to support reproducible, pedestrian-aware AI research.",
+        "url": "http://arxiv.org/abs/2511.19109v1",
+        "published_date": "2025-11-24T13:43:39+00:00",
+        "updated_date": "2025-11-24T13:43:39+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Mohan Ramesh",
+            "Mark Azer",
+            "Fabian B. Flohr"
+        ],
+        "tldr": "The paper introduces HABIT, a new high-fidelity autonomous driving benchmark in CARLA featuring realistic human motions, revealing critical safety issues in state-of-the-art AD agents that are missed by existing benchmarks.",
+        "tldr_zh": "本文介绍了HABIT，这是一个新的CARLA高保真自动驾驶基准，具有逼真的人类运动，揭示了现有基准测试中未发现的最先进的AD代理的关键安全问题。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "DetAny4D: Detect Anything 4D Temporally in a Streaming RGB Video",
+        "summary": "Reliable 4D object detection, which refers to 3D object detection in streaming video, is crucial for perceiving and understanding the real world. Existing open-set 4D object detection methods typically make predictions on a frame-by-frame basis without modeling temporal consistency, or rely on complex multi-stage pipelines that are prone to error propagation across cascaded stages. Progress in this area has been hindered by the lack of large-scale datasets that capture continuous reliable 3D bounding box (b-box) annotations. To overcome these challenges, we first introduce DA4D, a large-scale 4D detection dataset containing over 280k sequences with high-quality b-box annotations collected under diverse conditions. Building on DA4D, we propose DetAny4D, an open-set end-to-end framework that predicts 3D b-boxes directly from sequential inputs. DetAny4D fuses multi-modal features from pre-trained foundational models and designs a geometry-aware spatiotemporal decoder to effectively capture both spatial and temporal dynamics. Furthermore, it adopts a multi-task learning architecture coupled with a dedicated training strategy to maintain global consistency across sequences of varying lengths. Extensive experiments show that DetAny4D achieves competitive detection accuracy and significantly improves temporal stability, effectively addressing long-standing issues of jitter and inconsistency in 4D object detection. Data and code will be released upon acceptance.",
+        "url": "http://arxiv.org/abs/2511.18814v1",
+        "published_date": "2025-11-24T06:42:17+00:00",
+        "updated_date": "2025-11-24T06:42:17+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jiawei Hou",
+            "Shenghao Zhang",
+            "Can Wang",
+            "Zheng Gu",
+            "Yonggen Ling",
+            "Taiping Zeng",
+            "Xiangyang Xue",
+            "Jingbo Zhang"
+        ],
+        "tldr": "The paper introduces DA4D, a large-scale 4D object detection dataset, and DetAny4D, an end-to-end framework leveraging multi-modal features and spatiotemporal decoding to improve temporal stability and accuracy in 4D object detection.",
+        "tldr_zh": "本文介绍了 DA4D，一个大规模的 4D 目标检测数据集，以及 DetAny4D，一个端到端框架，利用多模态特征和时空解码来提高 4D 目标检测的时间稳定性和准确性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "MonoSR: Open-Vocabulary Spatial Reasoning from Monocular Images",
+        "summary": "Spatial reasoning (SR), the ability to infer 3D spatial information from 2D inputs, is essential for real-world applications such as embodied AI and autonomous driving. However, existing research primarily focuses on indoor environments and typically relies on multi-view observations, which limits their generalizability to outdoor scenarios and constrains their applicability to monocular images, the most common real-world setting. In this work, we propose MonoSR, a large-scale monocular spatial reasoning dataset that spans diverse scenarios including indoor, outdoor, and object-centric settings, and supports multiple question types. MonoSR provides a path toward open-world monocular spatial reasoning. Beyond introducing the dataset, we evaluate advanced vision-language models to reveal their limitations on this challenging task. We further analyze whether auxiliary information is crucial for monocular spatial reasoning and offer practical guidance for designing future models. These contributions collectively establish a foundation for advancing monocular spatial reasoning in real-world, open-world environments.",
+        "url": "http://arxiv.org/abs/2511.19119v1",
+        "published_date": "2025-11-24T13:49:17+00:00",
+        "updated_date": "2025-11-24T13:49:17+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Qirui Wang",
+            "Jingyi He",
+            "Yining Pan",
+            "Si Yong Yeo",
+            "Xulei Yang",
+            "Shijie Li"
+        ],
+        "tldr": "The paper introduces MonoSR, a large-scale monocular spatial reasoning dataset for diverse scenarios, and evaluates vision-language models on it, highlighting limitations and providing guidance for future research in open-world monocular spatial reasoning.",
+        "tldr_zh": "该论文介绍了MonoSR，一个用于多样场景的大规模单目空间推理数据集，并评估了视觉-语言模型，突出了局限性，并为开放世界单目空间推理的未来研究提供了指导。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "ReEXplore: Improving MLLMs for Embodied Exploration with Contextualized Retrospective Experience Replay",
+        "summary": "Embodied exploration is a target-driven process that requires embodied agents to possess fine-grained perception and knowledge-enhanced decision making. While recent attempts leverage MLLMs for exploration due to their strong perceptual and reasoning abilities, we find that MLLM-based embodied agents remain suboptimal in exploring new environments: (i) they rely on profound but stale pre-trained knowledge, (ii) training-based approaches such as imitation learning or reinforcement learning are expensive for long-horizon tasks with sparse outcome rewards, and (iii) frontier-based exploration yields a large, visually nuanced action space that is difficult for MLLMs to make reliable decisions. We address these challenges with ReEXplore, a training-free framework that performs retrospective experience replay to inject distilled, abstract experience at inference time, and hierarchical frontier selection to decompose frontier ranking into coarse-to-fine decisions. Our approach enables robust, traceable, and efficient exploration. Across multiple embodied exploration benchmarks, ReEXplore yields great improvements over strong MLLM baselines, up to 3x higher performance in both success rate and in navigation efficiency under open-source backbones.",
+        "url": "http://arxiv.org/abs/2511.19033v1",
+        "published_date": "2025-11-24T12:13:05+00:00",
+        "updated_date": "2025-11-24T12:13:05+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Gengyuan Zhang",
+            "Mingcong Ding",
+            "Jingpei Wu",
+            "Ruotong Liao",
+            "Volker Tresp"
+        ],
+        "tldr": "The paper introduces ReEXplore, a training-free framework that improves MLLM-based embodied exploration by using retrospective experience replay and hierarchical frontier selection, achieving significant performance gains on embodied exploration benchmarks.",
+        "tldr_zh": "该论文介绍了一种名为ReEXplore的免训练框架，通过使用回顾性经验重放和分层边界选择来改进基于MLLM的具身探索，并在具身探索基准测试中取得了显著的性能提升。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "A Self-Conditioned Representation Guided Diffusion Model for Realistic Text-to-LiDAR Scene Generation",
+        "summary": "Text-to-LiDAR generation can customize 3D data with rich structures and diverse scenes for downstream tasks. However, the scarcity of Text-LiDAR pairs often causes insufficient training priors, generating overly smooth 3D scenes. Moreover, low-quality text descriptions may degrade generation quality and controllability. In this paper, we propose a Text-to-LiDAR Diffusion Model for scene generation, named T2LDM, with a Self-Conditioned Representation Guidance (SCRG). Specifically, SCRG, by aligning to the real representations, provides the soft supervision with reconstruction details for the Denoising Network (DN) in training, while decoupled in inference. In this way, T2LDM can perceive rich geometric structures from data distribution, generating detailed objects in scenes. Meanwhile, we construct a content-composable Text-LiDAR benchmark, T2nuScenes, along with a controllability metric. Based on this, we analyze the effects of different text prompts for LiDAR generation quality and controllability, providing practical prompt paradigms and insights. Furthermore, a directional position prior is designed to mitigate street distortion, further improving scene fidelity. Additionally, by learning a conditional encoder via frozen DN, T2LDM can support multiple conditional tasks, including Sparse-to-Dense, Dense-to-Sparse, and Semantic-to-LiDAR generation. Extensive experiments in unconditional and conditional generation demonstrate that T2LDM outperforms existing methods, achieving state-of-the-art scene generation.",
+        "url": "http://arxiv.org/abs/2511.19004v1",
+        "published_date": "2025-11-24T11:32:15+00:00",
+        "updated_date": "2025-11-24T11:32:15+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Wentao Qu",
+            "Guofeng Mei",
+            "Yang Wu",
+            "Yongshun Gong",
+            "Xiaoshui Huang",
+            "Liang Xiao"
+        ],
+        "tldr": "The paper introduces T2LDM, a diffusion model with Self-Conditioned Representation Guidance (SCRG) for realistic Text-to-LiDAR scene generation. It also presents a new benchmark dataset, T2nuScenes, and achieves state-of-the-art results in both unconditional and conditional LiDAR generation tasks.",
+        "tldr_zh": "该论文介绍了一种名为T2LDM的扩散模型，该模型具有自条件表示引导（SCRG），用于生成逼真的文本到LiDAR场景。 它还提出了一个新的基准数据集T2nuScenes，并在无条件和有条件的LiDAR生成任务中均取得了最先进的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "AVA-VLA: Improving Vision-Language-Action models with Active Visual Attention",
+        "summary": "Vision-Language-Action (VLA) models have demonstrated remarkable capabilities in embodied AI tasks. However, existing VLA models, often built upon Vision-Language Models (VLMs), typically process dense visual inputs independently at each timestep. This approach implicitly models the task as a Markov Decision Process (MDP). However, this history-agnostic design is suboptimal for effective visual token processing in dynamic sequential decision-making, as it fails to leverage the context of history. To address this limitation, we reformulate the problem from a Partially Observable Markov Decision Process (POMDP) perspective and propose a novel framework named AVA-VLA. Inspired by the POMDP that the action generation should be conditioned on the belief state. AVA-VLA introduces Active Visual Attention (AVA) to dynamically modulate visual processing. It achieves this by leveraging the recurrent state, which is a neural approximation of the agent's belief state derived from the previous decision step. Specifically, the AVA module uses the recurrent state to compute the soft weights to actively process task-relevant visual tokens based on its historical context. Comprehensive evaluations demonstrate that AVA-VLA achieves state-of-the-art performance across popular robotic benchmarks, including LIBERO and CALVIN. Furthermore, real-world deployments on a dual-arm robot platform validate the framework's practical applicability and robust sim-to-real transferability.",
+        "url": "http://arxiv.org/abs/2511.18960v1",
+        "published_date": "2025-11-24T10:22:28+00:00",
+        "updated_date": "2025-11-24T10:22:28+00:00",
+        "categories": [
+            "cs.LG",
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Lei Xiao",
+            "Jifeng Li",
+            "Juntao Gao",
+            "Feiyang Ye",
+            "Yan Jin",
+            "Jingjing Qian",
+            "Jing Zhang",
+            "Yong Wu",
+            "Xiaoyuan Yu"
+        ],
+        "tldr": "The paper introduces AVA-VLA, a novel Vision-Language-Action framework that uses Active Visual Attention (AVA) to dynamically modulate visual processing based on historical context, achieving state-of-the-art results on robotic benchmarks and showing promising sim-to-real transfer.",
+        "tldr_zh": "该论文介绍了一种名为AVA-VLA的新型视觉-语言-动作框架，该框架使用主动视觉注意力（AVA）基于历史上下文动态调整视觉处理，在机器人基准测试中取得了最先进的结果，并显示出良好的模拟到真实的迁移能力。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Compressor-VLA: Instruction-Guided Visual Token Compression for Efficient Robotic Manipulation",
+        "summary": "Vision-Language-Action (VLA) models have emerged as a powerful paradigm in Embodied AI. However, the significant computational overhead of processing redundant visual tokens remains a critical bottleneck for real-time robotic deployment. While standard token pruning techniques can alleviate this, these task-agnostic methods struggle to preserve task-critical visual information. To address this challenge, simultaneously preserving both the holistic context and fine-grained details for precise action, we propose Compressor-VLA, a novel hybrid instruction-conditioned token compression framework designed for efficient, task-oriented compression of visual information in VLA models. The proposed Compressor-VLA framework consists of two token compression modules: a Semantic Task Compressor (STC) that distills holistic, task-relevant context, and a Spatial Refinement Compressor (SRC) that preserves fine-grained spatial details. This compression is dynamically modulated by the natural language instruction, allowing for the adaptive condensation of task-relevant visual information. Experimentally, extensive evaluations demonstrate that Compressor-VLA achieves a competitive success rate on the LIBERO benchmark while reducing FLOPs by 59% and the visual token count by over 3x compared to its baseline. The real-robot deployments on a dual-arm robot platform validate the model's sim-to-real transferability and practical applicability. Moreover, qualitative analyses reveal that our instruction guidance dynamically steers the model's perceptual focus toward task-relevant objects, thereby validating the effectiveness of our approach.",
+        "url": "http://arxiv.org/abs/2511.18950v1",
+        "published_date": "2025-11-24T10:06:41+00:00",
+        "updated_date": "2025-11-24T10:06:41+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Juntao Gao",
+            "Feiyang Ye",
+            "Jing Zhang",
+            "Wenjing Qian"
+        ],
+        "tldr": "The paper introduces Compressor-VLA, a novel instruction-conditioned visual token compression framework that reduces computational overhead in VLA models for robotic manipulation by selectively preserving task-relevant visual information, achieving significant FLOPs reduction and demonstrating sim-to-real transfer.",
+        "tldr_zh": "该论文介绍了一种名为Compressor-VLA的新型指令条件视觉token压缩框架，该框架通过选择性地保留任务相关的视觉信息来减少VLA模型在机器人操作中的计算开销，实现了显著的FLOPs减少并展示了从模拟到真实的迁移能力。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "GContextFormer: A global context-aware hybrid multi-head attention approach with scaled additive aggregation for multimodal trajectory prediction",
+        "summary": "Multimodal trajectory prediction generates multiple plausible future trajectories to address vehicle motion uncertainty from intention ambiguity and execution variability. However, HD map-dependent models suffer from costly data acquisition, delayed updates, and vulnerability to corrupted inputs, causing prediction failures. Map-free approaches lack global context, with pairwise attention over-amplifying straight patterns while suppressing transitional patterns, resulting in motion-intention misalignment. This paper proposes GContextFormer, a plug-and-play encoder-decoder architecture with global context-aware hybrid attention and scaled additive aggregation achieving intention-aligned multimodal prediction without map reliance. The Motion-Aware Encoder builds scene-level intention prior via bounded scaled additive aggregation over mode-embedded trajectory tokens and refines per-mode representations under shared global context, mitigating inter-mode suppression and promoting intention alignment. The Hierarchical Interaction Decoder decomposes social reasoning into dual-pathway cross-attention: a standard pathway ensures uniform geometric coverage over agent-mode pairs while a neighbor-context-enhanced pathway emphasizes salient interactions, with gating module mediating their contributions to maintain coverage-focus balance. Experiments on eight highway-ramp scenarios from TOD-VT dataset show GContextFormer outperforms state-of-the-art baselines. Compared to existing transformer models, GContextFormer achieves greater robustness and concentrated improvements in high-curvature and transition zones via spatial distributions. Interpretability is achieved through motion mode distinctions and neighbor context modulation exposing reasoning attribution. The modular architecture supports extensibility toward cross-domain multimodal reasoning tasks. Source: https://fenghy-chen.github.io/sources/.",
+        "url": "http://arxiv.org/abs/2511.18874v1",
+        "published_date": "2025-11-24T08:28:42+00:00",
+        "updated_date": "2025-11-24T08:28:42+00:00",
+        "categories": [
+            "cs.AI",
+            "cs.CV",
+            "cs.LG",
+            "cs.MA",
+            "cs.RO",
+            "cs.SI"
+        ],
+        "authors": [
+            "Yuzhi Chen",
+            "Yuanchang Xie",
+            "Lei Zhao",
+            "Pan Liu",
+            "Yajie Zou",
+            "Chen Wang"
+        ],
+        "tldr": "GContextFormer is a map-free multimodal trajectory prediction model using a novel hybrid attention mechanism and scaled additive aggregation to achieve intention-aligned predictions, demonstrating improved performance in complex driving scenarios.",
+        "tldr_zh": "GContextFormer是一个无地图的多模态轨迹预测模型，它使用了一种新颖的混合注意力机制和缩放的加性聚合来实现意图对齐的预测，并在复杂的驾驶场景中表现出改进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Disc3D: Automatic Curation of High-Quality 3D Dialog Data via Discriminative Object Referring",
+        "summary": "3D Multi-modal Large Language Models (MLLMs) still lag behind their 2D peers, largely because large-scale, high-quality 3D scene-dialogue datasets remain scarce. Prior efforts hinge on expensive human annotation and leave two key ambiguities unresolved: viewpoint ambiguity, where spatial language presumes unknown camera poses, and object referring ambiguity, where non-exclusive descriptions blur the line between targets and distractors. We therefore present a fully automated pipeline that converts raw 3D scans into unambiguous, high-quality dialogue data at a fraction of the previous cost. By synergizing rule-based constraints with 2D MLLMs and LLMs, the pipeline enables controllable, scalable generation without human intervention. The pipeline comprises four stages: (1) meta-annotation collection harvesting object-, frame-, and scene-level captions, (2) scene graph construction with relation correction to capture proximal object relations, (3) discriminative object referring that generates exclusive and compact descriptions, and (4) multi-task data generation synthesizing diverse dialogues. Our pipeline systematically mitigates inherent flaws in source datasets and produces the final Disc3D dataset, over 2 million samples in 25K hybrid 3D scenes, spanning scene, view, and object captioning, visual grounding, and five object-centric QA tasks. Extensive experiments demonstrate that training with Disc3D yields consistent, significant improvements on both public benchmarks and our multifaceted Disc3D-QA tasks. Code, data, and models will be publicly available.",
+        "url": "http://arxiv.org/abs/2511.18817v1",
+        "published_date": "2025-11-24T06:51:34+00:00",
+        "updated_date": "2025-11-24T06:51:34+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Siyuan Wei",
+            "Chunjie Wang",
+            "Xiao Liu",
+            "Xiaosheng Yan",
+            "Zhishan Zhou",
+            "Rui Huang"
+        ],
+        "tldr": "The paper introduces Disc3D, a fully automated pipeline for generating high-quality 3D scene-dialogue datasets by converting raw 3D scans into unambiguous dialogue data, leading to improvements in 3D MLLMs.",
+        "tldr_zh": "该论文介绍了Disc3D，一个全自动化的流程，通过将原始3D扫描转换为明确的对话数据来生成高质量的3D场景对话数据集，从而改进3D多模态大语言模型（MLLM）。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "SupLID: Geometrical Guidance for Out-of-Distribution Detection in Semantic Segmentation",
+        "summary": "Out-of-Distribution (OOD) detection in semantic segmentation aims to localize anomalous regions at the pixel level, advancing beyond traditional image-level OOD techniques to better suit real-world applications such as autonomous driving. Recent literature has successfully explored the adaptation of commonly used image-level OOD methods--primarily based on classifier-derived confidence scores (e.g., energy or entropy)--for this pixel-precise task. However, these methods inherit a set of limitations, including vulnerability to overconfidence. In this work, we introduce SupLID, a novel framework that effectively guides classifier-derived OOD scores by exploiting the geometrical structure of the underlying semantic space, particularly using Linear Intrinsic Dimensionality (LID). While LID effectively characterizes the local structure of high-dimensional data by analyzing distance distributions, its direct application at the pixel level remains challenging. To overcome this, SupLID constructs a geometrical coreset that captures the intrinsic structure of the in-distribution (ID) subspace. It then computes OOD scores at the superpixel level, enabling both efficient real-time inference and improved spatial smoothness. We demonstrate that geometrical cues derived from SupLID serve as a complementary signal to traditional classifier confidence, enhancing the model's ability to detect diverse OOD scenarios. Designed as a post-hoc scoring method, SupLID can be seamlessly integrated with any semantic segmentation classifier at deployment time. Our results demonstrate that SupLID significantly enhances existing classifier-based OOD scores, achieving state-of-the-art performance across key evaluation metrics, including AUR, FPR, and AUP. Code is available at https://github.com/hdnugit/SupLID.",
+        "url": "http://arxiv.org/abs/2511.18816v1",
+        "published_date": "2025-11-24T06:49:54+00:00",
+        "updated_date": "2025-11-24T06:49:54+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Nimeshika Udayangani",
+            "Sarah Erfani",
+            "Christopher Leckie"
+        ],
+        "tldr": "The paper introduces SupLID, a novel post-hoc framework for improving out-of-distribution (OOD) detection in semantic segmentation by incorporating geometrical information (Linear Intrinsic Dimensionality) to guide classifier-derived confidence scores, achieving state-of-the-art performance.",
+        "tldr_zh": "该论文介绍了一种名为SupLID的新型后处理框架，通过结合几何信息（线性内在维度）来指导分类器导出的置信度分数，从而改进语义分割中的异常检测（OOD），并实现了最先进的性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "StereoDETR: Stereo-based Transformer for 3D Object Detection",
+        "summary": "Compared to monocular 3D object detection, stereo-based 3D methods offer significantly higher accuracy but still suffer from high computational overhead and latency. The state-of-the-art stereo 3D detection method achieves twice the accuracy of monocular approaches, yet its inference speed is only half as fast. In this paper, we propose StereoDETR, an efficient stereo 3D object detection framework based on DETR. StereoDETR consists of two branches: a monocular DETR branch and a stereo branch. The DETR branch is built upon 2D DETR with additional channels for predicting object scale, orientation, and sampling points. The stereo branch leverages low-cost multi-scale disparity features to predict object-level depth maps. These two branches are coupled solely through a differentiable depth sampling strategy. To handle occlusion, we introduce a constrained supervision strategy for sampling points without requiring extra annotations. StereoDETR achieves real-time inference and is the first stereo-based method to surpass monocular approaches in speed. It also achieves competitive accuracy on the public KITTI benchmark, setting new state-of-the-art results on pedestrian and cyclist subsets. The code is available at https://github.com/shiyi-mu/StereoDETR-OPEN.",
+        "url": "http://arxiv.org/abs/2511.18788v1",
+        "published_date": "2025-11-24T05:38:31+00:00",
+        "updated_date": "2025-11-24T05:38:31+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Shiyi Mu",
+            "Zichong Gu",
+            "Zhiqi Ai",
+            "Anqi Liu",
+            "Yilin Gao",
+            "Shugong Xu"
+        ],
+        "tldr": "StereoDETR introduces an efficient stereo 3D object detection framework based on DETR, achieving real-time inference and surpassing monocular approaches in speed while maintaining competitive accuracy.",
+        "tldr_zh": "StereoDETR 提出了一种基于 DETR 的高效立体 3D 目标检测框架，实现了实时推理，并在速度上超越了单目方法，同时保持了具有竞争力的精度。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "From Features to Reference Points: Lightweight and Adaptive Fusion for Cooperative Autonomous Driving",
+        "summary": "We present RefPtsFusion, a lightweight and interpretable framework for cooperative autonomous driving. Instead of sharing large feature maps or query embeddings, vehicles exchange compact reference points, e.g., objects' positions, velocities, and size information. This approach shifts the focus from \"what is seen\" to \"where to see\", creating a sensor- and model-independent interface that works well across vehicles with heterogeneous perception models while greatly reducing communication bandwidth. To enhance the richness of shared information, we further develop a selective Top-K query fusion that selectively adds high-confidence queries from the sender. It thus achieves a strong balance between accuracy and communication cost. Experiments on the M3CAD dataset show that RefPtsFusion maintains stable perception performance while reducing communication overhead by five orders of magnitude, dropping from hundreds of MB/s to only a few KB/s at 5 FPS (frame per second), compared to traditional feature-level fusion methods. Extensive experiments also demonstrate RefPtsFusion's strong robustness and consistent transmission behavior, highlighting its potential for scalable, real-time cooperative driving systems.",
+        "url": "http://arxiv.org/abs/2511.18757v1",
+        "published_date": "2025-11-24T04:38:57+00:00",
+        "updated_date": "2025-11-24T04:38:57+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yongqi Zhu",
+            "Morui Zhu",
+            "Qi Chen",
+            "Deyuan Qu",
+            "Song Fu",
+            "Qing Yang"
+        ],
+        "tldr": "The paper introduces RefPtsFusion, a lightweight cooperative autonomous driving framework that exchanges compact reference points between vehicles, significantly reducing communication bandwidth while maintaining perception performance compared to feature-level fusion.",
+        "tldr_zh": "该论文介绍了一种轻量级的协同自动驾驶框架RefPtsFusion，该框架在车辆之间交换紧凑的参考点，与特征级融合相比，显著降低了通信带宽，同时保持了感知性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Thinking Ahead: Foresight Intelligence in MLLMs and World Models",
+        "summary": "In this work, we define Foresight Intelligence as the capability to anticipate and interpret future events-an ability essential for applications such as autonomous driving, yet largely overlooked by existing research. To bridge this gap, we introduce FSU-QA, a new Visual Question-Answering (VQA) dataset specifically designed to elicit and evaluate Foresight Intelligence. Using FSU-QA, we conduct the first comprehensive study of state-of-the-art Vision-Language Models (VLMs) under foresight-oriented tasks, revealing that current models still struggle to reason about future situations. Beyond serving as a benchmark, FSU-QA also enables the assessment of world models by measuring the semantic coherence of their generated predictions, quantified through performance gains when VLMs are augmented with such outputs. Our experiments further demonstrate that FSU-QA can effectively enhance foresight reasoning: even small VLMs fine-tuned on FSU-QA surpass much larger, advanced models by a substantial margin. Together, these findings position FSU-QA as a principled foundation for developing next-generation models capable of truly anticipating and understanding future events.",
+        "url": "http://arxiv.org/abs/2511.18735v1",
+        "published_date": "2025-11-24T04:04:59+00:00",
+        "updated_date": "2025-11-24T04:04:59+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Zhantao Gong",
+            "Liaoyuan Fan",
+            "Qing Guo",
+            "Xun Xu",
+            "Xulei Yang",
+            "Shijie Li"
+        ],
+        "tldr": "This paper introduces a new VQA dataset (FSU-QA) to evaluate and improve foresight intelligence in VLMs, showing that current models struggle with future reasoning and that fine-tuning on FSU-QA can significantly enhance their performance.",
+        "tldr_zh": "本文提出了一个新的VQA数据集（FSU-QA），用于评估和提高视觉语言模型中的前瞻智能。研究表明，当前模型在未来推理方面存在困难，而使用FSU-QA进行微调可以显著提高它们的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "GuideFlow: Constraint-Guided Flow Matching for Planning in End-to-End Autonomous Driving",
+        "summary": "Driving planning is a critical component of end-to-end (E2E) autonomous driving. However, prevailing Imitative E2E Planners often suffer from multimodal trajectory mode collapse, failing to produce diverse trajectory proposals. Meanwhile, Generative E2E Planners struggle to incorporate crucial safety and physical constraints directly into the generative process, necessitating an additional optimization stage to refine their outputs. In this paper, we propose \\textit{\\textbf{GuideFlow}}, a novel planning framework that leverages Constrained Flow Matching. Concretely, \\textit{\\textbf{GuideFlow}} explicitly models the flow matching process, which inherently mitigates mode collapse and allows for flexible guidance from various conditioning signals. Our core contribution lies in directly enforcing explicit constraints within the flow matching generation process, rather than relying on implicit constraint encoding. Crucially, \\textit{\\textbf{GuideFlow}} unifies the training of the flow matching with the Energy-Based Model (EBM) to enhance the model's autonomous optimization capability to robustly satisfy physical constraints. Secondly, \\textit{\\textbf{GuideFlow}} parameterizes driving aggressiveness as a control signal during generation, enabling precise manipulation of trajectory style. Extensive evaluations on major driving benchmarks (Bench2Drive, NuScenes, NavSim and ADV-NuScenes) validate the effectiveness of \\textit{\\textbf{GuideFlow}}. Notably, on the NavSim test hard split (Navhard), \\textit{\\textbf{GuideFlow}} achieved SOTA with an EPDMS score of 43.0. The code will be released.",
+        "url": "http://arxiv.org/abs/2511.18729v1",
+        "published_date": "2025-11-24T03:45:32+00:00",
+        "updated_date": "2025-11-24T03:45:32+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Lin Liu",
+            "Caiyan Jia",
+            "Guanyi Yu",
+            "Ziying Song",
+            "JunQiao Li",
+            "Feiyang Jia",
+            "Peiliang Wu",
+            "Xiaoshuai Hao",
+            "Yandan Luo"
+        ],
+        "tldr": "The paper introduces GuideFlow, a novel end-to-end autonomous driving planning framework that leverages constrained flow matching to generate diverse and constraint-satisfying trajectories, achieving state-of-the-art results on challenging benchmarks.",
+        "tldr_zh": "该论文介绍了一种名为GuideFlow的新型端到端自动驾驶规划框架，该框架利用约束流匹配来生成多样化且满足约束条件的轨迹，并在具有挑战性的基准测试中取得了最先进的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "DriveFlow: Rectified Flow Adaptation for Robust 3D Object Detection in Autonomous Driving",
+        "summary": "In autonomous driving, vision-centric 3D object detection recognizes and localizes 3D objects from RGB images. However, due to high annotation costs and diverse outdoor scenes, training data often fails to cover all possible test scenarios, known as the out-of-distribution (OOD) issue. Training-free image editing offers a promising solution for improving model robustness by training data enhancement without any modifications to pre-trained diffusion models. Nevertheless, inversion-based methods often suffer from limited effectiveness and inherent inaccuracies, while recent rectified-flow-based approaches struggle to preserve objects with accurate 3D geometry. In this paper, we propose DriveFlow, a Rectified Flow Adaptation method for training data enhancement in autonomous driving based on pre-trained Text-to-Image flow models. Based on frequency decomposition, DriveFlow introduces two strategies to adapt noise-free editing paths derived from text-conditioned velocities. 1) High-Frequency Foreground Preservation: DriveFlow incorporates a high-frequency alignment loss for foreground to maintain precise 3D object geometry. 2) Dual-Frequency Background Optimization: DriveFlow also conducts dual-frequency optimization for background, balancing editing flexibility and semantic consistency. Comprehensive experiments validate the effectiveness and efficiency of DriveFlow, demonstrating comprehensive performance improvements on all categories across OOD scenarios. Code is available at https://github.com/Hongbin98/DriveFlow.",
+        "url": "http://arxiv.org/abs/2511.18713v1",
+        "published_date": "2025-11-24T03:12:43+00:00",
+        "updated_date": "2025-11-24T03:12:43+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Hongbin Lin",
+            "Yiming Yang",
+            "Chaoda Zheng",
+            "Yifan Zhang",
+            "Shuaicheng Niu",
+            "Zilu Guo",
+            "Yafeng Li",
+            "Gui Gui",
+            "Shuguang Cui",
+            "Zhen Li"
+        ],
+        "tldr": "The paper introduces DriveFlow, a novel rectified flow adaptation method for enhancing training data in autonomous driving to improve 3D object detection robustness in out-of-distribution scenarios by preserving object geometry and semantic consistency using frequency decomposition and optimization.",
+        "tldr_zh": "该论文介绍了DriveFlow，一种新颖的修正流自适应方法，用于增强自动驾驶中的训练数据，以提高在分布外场景中3D物体检测的鲁棒性，通过使用频率分解和优化来保持物体几何形状和语义一致性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Exploring Surround-View Fisheye Camera 3D Object Detection",
+        "summary": "In this work, we explore the technical feasibility of implementing end-to-end 3D object detection (3DOD) with surround-view fisheye camera system. Specifically, we first investigate the performance drop incurred when transferring classic pinhole-based 3D object detectors to fisheye imagery. To mitigate this, we then develop two methods that incorporate the unique geometry of fisheye images into mainstream detection frameworks: one based on the bird's-eye-view (BEV) paradigm, named FisheyeBEVDet, and the other on the query-based paradigm, named FisheyePETR. Both methods adopt spherical spatial representations to effectively capture fisheye geometry. In light of the lack of dedicated evaluation benchmarks, we release Fisheye3DOD, a new open dataset synthesized using CARLA and featuring both standard pinhole and fisheye camera arrays. Experiments on Fisheye3DOD show that our fisheye-compatible modeling improves accuracy by up to 6.2% over baseline methods.",
+        "url": "http://arxiv.org/abs/2511.18695v1",
+        "published_date": "2025-11-24T02:28:56+00:00",
+        "updated_date": "2025-11-24T02:28:56+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Changcai Li",
+            "Wenwei Lin",
+            "Zuoxun Hou",
+            "Gang Chen",
+            "Wei Zhang",
+            "Huihui Zhou",
+            "Weishi Zheng"
+        ],
+        "tldr": "This paper explores 3D object detection using surround-view fisheye cameras, proposes FisheyeBEVDet and FisheyePETR to address fisheye geometry, and releases a new synthetic dataset, Fisheye3DOD, for evaluation.",
+        "tldr_zh": "本文研究了使用环视鱼眼相机进行3D目标检测，提出了 FisheyeBEVDet 和 FisheyePETR 来解决鱼眼几何问题，并发布了一个新的合成数据集 Fisheye3DOD 用于评估。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Data Augmentation Strategies for Robust Lane Marking Detection",
+        "summary": "Robust lane detection is essential for advanced driver assistance and autonomous driving, yet models trained on public datasets such as CULane often fail to generalise across different camera viewpoints. This paper addresses the challenge of domain shift for side-mounted cameras used in lane-wheel monitoring by introducing a generative AI-based data enhancement pipeline. The approach combines geometric perspective transformation, AI-driven inpainting, and vehicle body overlays to simulate deployment-specific viewpoints while preserving lane continuity. We evaluated the effectiveness of the proposed augmentation in two state-of-the-art models, SCNN and UFLDv2. With the augmented data trained, both models show improved robustness to different conditions, including shadows. The experimental results demonstrate gains in precision, recall, and F1 score compared to the pre-trained model.\n  By bridging the gap between widely available datasets and deployment-specific scenarios, our method provides a scalable and practical framework to improve the reliability of lane detection in a pilot deployment scenario.",
+        "url": "http://arxiv.org/abs/2511.18668v1",
+        "published_date": "2025-11-24T00:47:27+00:00",
+        "updated_date": "2025-11-24T00:47:27+00:00",
+        "categories": [
+            "cs.CV",
+            "eess.IV"
+        ],
+        "authors": [
+            "Flora Lian",
+            "Dinh Quang Huynh",
+            "Hector Penades",
+            "J. Stephany Berrio Perez",
+            "Mao Shan",
+            "Stewart Worrall"
+        ],
+        "tldr": "This paper introduces a generative AI-based data augmentation pipeline to improve lane detection robustness in side-mounted camera setups, using geometric transformations, inpainting, and vehicle overlays to bridge the gap between public datasets and specific deployment scenarios.",
+        "tldr_zh": "本文介绍了一种基于生成式AI的数据增强流水线，通过几何变换、图像修复和车辆覆盖等方法，提高了侧装摄像头在车道线检测中的鲁棒性，从而弥合了公共数据集和特定部署场景之间的差距。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "AutoFocus-IL: VLM-based Saliency Maps for Data-Efficient Visual Imitation Learning without Extra Human Annotations",
+        "summary": "AutoFocus-IL is a simple yet effective method to improve data efficiency and generalization in visual imitation learning by guiding policies to attend to task-relevant features rather than distractors and spurious correlations. Although saliency regularization has emerged as a promising way to achieve this, existing approaches typically require costly supervision such as human gaze data or manual saliency annotations. In contrast, AutoFocus-IL leverages vision-language models (VLMs) to automatically identify and track key objects in demonstrations, generating temporal saliency maps that highlight causal visual signals while suppressing distractors. These maps are then used to regularize behavior cloning policies, yielding stronger alignment between visual attention and task-relevant cues. Experiments in both the CARLA simulator and real-robot manipulation tasks demonstrate that AutoFocus-IL not only outperforms standard behavior cloning but also surpasses state-of-the-art baselines that assume privileged access to human supervision, such as gaze data. Code, datasets, and trained policy videos are available at https://AutoFocus-IL.github.io/.",
+        "url": "http://arxiv.org/abs/2511.18617v1",
+        "published_date": "2025-11-23T21:21:10+00:00",
+        "updated_date": "2025-11-23T21:21:10+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Litian Gong",
+            "Fatemeh Bahrani",
+            "Yutai Zhou",
+            "Amin Banayeeanzade",
+            "Jiachen Li",
+            "Erdem Biyik"
+        ],
+        "tldr": "AutoFocus-IL uses vision-language models to generate saliency maps for training more data-efficient and generalizable imitation learning policies, outperforming methods that rely on human supervision.",
+        "tldr_zh": "AutoFocus-IL 利用视觉语言模型生成显著性图，用于训练更具数据效率和泛化能力的模仿学习策略，其性能优于依赖于人工监督的方法。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    }
+]
