@@ -1,0 +1,555 @@
+[
+    {
+        "title": "GigaWorld-0: World Models as Data Engine to Empower Embodied AI",
+        "summary": "World models are emerging as a foundational paradigm for scalable, data-efficient embodied AI. In this work, we present GigaWorld-0, a unified world model framework designed explicitly as a data engine for Vision-Language-Action (VLA) learning. GigaWorld-0 integrates two synergistic components: GigaWorld-0-Video, which leverages large-scale video generation to produce diverse, texture-rich, and temporally coherent embodied sequences under fine-grained control of appearance, camera viewpoint, and action semantics; and GigaWorld-0-3D, which combines 3D generative modeling, 3D Gaussian Splatting reconstruction, physically differentiable system identification, and executable motion planning to ensure geometric consistency and physical realism. Their joint optimization enables the scalable synthesis of embodied interaction data that is visually compelling, spatially coherent, physically plausible, and instruction-aligned. Training at scale is made feasible through our efficient GigaTrain framework, which exploits FP8-precision and sparse attention to drastically reduce memory and compute requirements. We conduct comprehensive evaluations showing that GigaWorld-0 generates high-quality, diverse, and controllable data across multiple dimensions. Critically, VLA model (e.g., GigaBrain-0) trained on GigaWorld-0-generated data achieve strong real-world performance, significantly improving generalization and task success on physical robots without any real-world interaction during training.",
+        "url": "http://arxiv.org/abs/2511.19861v1",
+        "published_date": "2025-11-25T03:00:42+00:00",
+        "updated_date": "2025-11-25T03:00:42+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "GigaWorld Team",
+            "Angen Ye",
+            "Boyuan Wang",
+            "Chaojun Ni",
+            "Guan Huang",
+            "Guosheng Zhao",
+            "Haoyun Li",
+            "Jiagang Zhu",
+            "Kerui Li",
+            "Mengyuan Xu",
+            "Qiuping Deng",
+            "Siting Wang",
+            "Wenkang Qin",
+            "Xinze Chen",
+            "Xiaofeng Wang",
+            "Yankai Wang",
+            "Yu Cao",
+            "Yifan Chang",
+            "Yuan Xu",
+            "Yun Ye",
+            "Yang Wang",
+            "Yukun Zhou",
+            "Zhengyuan Zhang",
+            "Zhehao Dong",
+            "Zheng Zhu"
+        ],
+        "tldr": "GigaWorld-0 is a unified world model framework that generates diverse and realistic embodied interaction data for training VLA models, enabling improved real-world robotic performance without real-world training.",
+        "tldr_zh": "GigaWorld-0是一个统一的世界模型框架，用于生成多样且真实的具身交互数据，以训练VLA模型，从而在无需真实世界训练的情况下提高现实世界机器人的性能。",
+        "relevance_score": 10,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 10,
+        "overall_priority_score": 10
+    },
+    {
+        "title": "AMB3R: Accurate Feed-forward Metric-scale 3D Reconstruction with Backend",
+        "summary": "We present AMB3R, a multi-view feed-forward model for dense 3D reconstruction on a metric-scale that addresses diverse 3D vision tasks. The key idea is to leverage a sparse, yet compact, volumetric scene representation as our backend, enabling geometric reasoning with spatial compactness. Although trained solely for multi-view reconstruction, we demonstrate that AMB3R can be seamlessly extended to uncalibrated visual odometry (online) or large-scale structure from motion without the need for task-specific fine-tuning or test-time optimization. Compared to prior pointmap-based models, our approach achieves state-of-the-art performance in camera pose, depth, and metric-scale estimation, 3D reconstruction, and even surpasses optimization-based SLAM and SfM methods with dense reconstruction priors on common benchmarks.",
+        "url": "http://arxiv.org/abs/2511.20343v1",
+        "published_date": "2025-11-25T14:23:04+00:00",
+        "updated_date": "2025-11-25T14:23:04+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Hengyi Wang",
+            "Lourdes Agapito"
+        ],
+        "tldr": "AMB3R is a feed-forward, metric-scale 3D reconstruction model using a volumetric backend, achieving SOTA performance on multi-view reconstruction and extending to visual odometry and SfM without fine-tuning.",
+        "tldr_zh": "AMB3R 是一种前馈式、米制尺度的 3D 重建模型，它使用体积后端，在多视图重建方面实现了 SOTA 性能，并且可以扩展到视觉里程计和 SfM，而无需微调。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Zoo3D: Zero-Shot 3D Object Detection at Scene Level",
+        "summary": "3D object detection is fundamental for spatial understanding. Real-world environments demand models capable of recognizing diverse, previously unseen objects, which remains a major limitation of closed-set methods. Existing open-vocabulary 3D detectors relax annotation requirements but still depend on training scenes, either as point clouds or images. We take this a step further by introducing Zoo3D, the first training-free 3D object detection framework. Our method constructs 3D bounding boxes via graph clustering of 2D instance masks, then assigns semantic labels using a novel open-vocabulary module with best-view selection and view-consensus mask generation. Zoo3D operates in two modes: the zero-shot Zoo3D$_0$, which requires no training at all, and the self-supervised Zoo3D$_1$, which refines 3D box prediction by training a class-agnostic detector on Zoo3D$_0$-generated pseudo labels. Furthermore, we extend Zoo3D beyond point clouds to work directly with posed and even unposed images. Across ScanNet200 and ARKitScenes benchmarks, both Zoo3D$_0$ and Zoo3D$_1$ achieve state-of-the-art results in open-vocabulary 3D object detection. Remarkably, our zero-shot Zoo3D$_0$ outperforms all existing self-supervised methods, hence demonstrating the power and adaptability of training-free, off-the-shelf approaches for real-world 3D understanding. Code is available at https://github.com/col14m/zoo3d .",
+        "url": "http://arxiv.org/abs/2511.20253v1",
+        "published_date": "2025-11-25T12:29:06+00:00",
+        "updated_date": "2025-11-25T12:29:06+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Andrey Lemeshko",
+            "Bulat Gabdullin",
+            "Nikita Drozdov",
+            "Anton Konushin",
+            "Danila Rukhovich",
+            "Maksim Kolodiazhnyi"
+        ],
+        "tldr": "The paper introduces Zoo3D, a training-free framework for 3D object detection that leverages 2D instance masks and open-vocabulary labeling, achieving state-of-the-art open-vocabulary performance on standard benchmarks.",
+        "tldr_zh": "该论文介绍了Zoo3D，一个无需训练的3D物体检测框架，它利用2D实例掩码和开放词汇标记，在标准基准测试中实现了最先进的开放词汇性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 10,
+        "clarity_score": 8,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "WaymoQA: A Multi-View Visual Question Answering Dataset for Safety-Critical Reasoning in Autonomous Driving",
+        "summary": "Recent advancements in multimodal large language models (MLLMs) have shown strong understanding of driving scenes, drawing interest in their application to autonomous driving. However, high-level reasoning in safety-critical scenarios, where avoiding one traffic risk can create another, remains a major challenge. Such reasoning is often infeasible with only a single front view and requires a comprehensive view of the environment, which we achieve through multi-view inputs. We define Safety-Critical Reasoning as a new task that leverages multi-view inputs to address this challenge. Then, we distill Safety-Critical Reasoning into two stages: first resolve the immediate risk, then mitigate the decision-induced downstream risks. To support this, we introduce WaymoQA, a dataset of 35,000 human-annotated question-answer pairs covering complex, high-risk driving scenarios. The dataset includes multiple-choice and open-ended formats across both image and video modalities. Experiments reveal that existing MLLMs underperform in safety-critical scenarios compared to normal scenes, but fine-tuning with WaymoQA significantly improves their reasoning ability, highlighting the effectiveness of our dataset in developing safer and more reasoning-capable driving agents.",
+        "url": "http://arxiv.org/abs/2511.20022v1",
+        "published_date": "2025-11-25T07:47:27+00:00",
+        "updated_date": "2025-11-25T07:47:27+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Seungjun Yu",
+            "Seonho Lee",
+            "Namho Kim",
+            "Jaeyo Shin",
+            "Junsung Park",
+            "Wonjeong Ryu",
+            "Raehyuk Jung",
+            "Hyunjung Shim"
+        ],
+        "tldr": "The paper introduces WaymoQA, a multi-view visual question answering dataset designed to address safety-critical reasoning challenges in autonomous driving, demonstrating the limitations of existing MLLMs and the benefits of fine-tuning with the new dataset.",
+        "tldr_zh": "该论文介绍了WaymoQA，一个多视角视觉问答数据集，旨在解决自动驾驶中安全关键推理的挑战。实验表明，现有MLLM在此类场景下表现不佳，而使用该数据集进行微调可以显著提高其推理能力。",
+        "relevance_score": 10,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Reasoning-VLA: A Fast and General Vision-Language-Action Reasoning Model for Autonomous Driving",
+        "summary": "Vision-Language-Action (VLA) models have recently shown strong decision-making capabilities in autonomous driving. However, existing VLAs often struggle with achieving efficient inference and generalizing to novel autonomous vehicle configurations and driving scenarios. In this paper, we propose Reasoning-VLA, a general and fast action-generation VLA framework. The proposed model employs a set of learnable action queries, initialized via Gaussian sampling from ground-truth trajectories within the training corpus. These learnable queries interact with reasoning-enhanced vision-language features to generate continuous action trajectories in parallel. To promote robust generalization, we consolidate eight publicly available autonomous driving datasets into a standardized, Chain-of-Thought reasoning-based, and easy-to-use data format for model training. Leveraging both supervised learning and reinforcement learning fine-tuning, extensive empirical evaluations across multiple benchmarks demonstrate that Reasoning-VLA achieves state-of-the-art performance, superior generalization capability, and the excellent inference speed reported to date.",
+        "url": "http://arxiv.org/abs/2511.19912v1",
+        "published_date": "2025-11-25T04:40:11+00:00",
+        "updated_date": "2025-11-25T04:40:11+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Dapeng Zhang",
+            "Zhenlong Yuan",
+            "Zhangquan Chen",
+            "Chih-Ting Liao",
+            "Yinda Chen",
+            "Fei Shen",
+            "Qingguo Zhou",
+            "Tat-Seng Chua"
+        ],
+        "tldr": "Reasoning-VLA is a novel VLA framework for autonomous driving that uses learnable action queries and a standardized, reasoning-based dataset format to achieve state-of-the-art performance, generalization, and inference speed.",
+        "tldr_zh": "Reasoning-VLA 是一个用于自动驾驶的新型 VLA 框架，它使用可学习的动作查询和标准化的、基于推理的数据集格式，以实现最先进的性能、泛化能力和推理速度。",
+        "relevance_score": 10,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Thinking in 360°: Humanoid Visual Search in the Wild",
+        "summary": "Humans rely on the synergistic control of head (cephalomotor) and eye (oculomotor) to efficiently search for visual information in 360°. However, prior approaches to visual search are limited to a static image, neglecting the physical embodiment and its interaction with the 3D world. How can we develop embodied visual search agents as efficient as humans while bypassing the constraints imposed by real-world hardware? To this end, we propose humanoid visual search where a humanoid agent actively rotates its head to search for objects or paths in an immersive world represented by a 360° panoramic image. To study visual search in visually-crowded real-world scenarios, we build H* Bench, a new benchmark that moves beyond household scenes to challenging in-the-wild scenes that necessitate advanced visual-spatial reasoning capabilities, such as transportation hubs, large-scale retail spaces, urban streets, and public institutions. Our experiments first reveal that even top-tier proprietary models falter, achieving only ~30% success in object and path search. We then use post-training techniques to enhance the open-source Qwen2.5-VL, increasing its success rate by over threefold for both object search (14.83% to 47.38%) and path search (6.44% to 24.94%). Notably, the lower ceiling of path search reveals its inherent difficulty, which we attribute to the demand for sophisticated spatial commonsense. Our results not only show a promising path forward but also quantify the immense challenge that remains in building MLLM agents that can be seamlessly integrated into everyday human life.",
+        "url": "http://arxiv.org/abs/2511.20351v1",
+        "published_date": "2025-11-25T14:30:10+00:00",
+        "updated_date": "2025-11-25T14:30:10+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Heyang Yu",
+            "Yinan Han",
+            "Xiangyu Zhang",
+            "Baiqiao Yin",
+            "Bowen Chang",
+            "Xiangyu Han",
+            "Xinhao Liu",
+            "Jing Zhang",
+            "Marco Pavone",
+            "Chen Feng",
+            "Saining Xie",
+            "Yiming Li"
+        ],
+        "tldr": "This paper introduces a new benchmark, H* Bench, for embodied visual search in 360° panoramic images of real-world scenes and demonstrates the limitations of current MLLMs while improving the Qwen2.5-VL model for object and path search tasks.",
+        "tldr_zh": "本文提出了一个新的基准测试 H* Bench，用于在真实场景的 360° 全景图像中进行具身视觉搜索，并展示了当前 MLLM 的局限性，同时改进了 Qwen2.5-VL 模型用于物体和路径搜索任务。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "AD-R1: Closed-Loop Reinforcement Learning for End-to-End Autonomous Driving with Impartial World Models",
+        "summary": "End-to-end models for autonomous driving hold the promise of learning complex behaviors directly from sensor data, but face critical challenges in safety and handling long-tail events. Reinforcement Learning (RL) offers a promising path to overcome these limitations, yet its success in autonomous driving has been elusive. We identify a fundamental flaw hindering this progress: a deep seated optimistic bias in the world models used for RL. To address this, we introduce a framework for post-training policy refinement built around an Impartial World Model. Our primary contribution is to teach this model to be honest about danger. We achieve this with a novel data synthesis pipeline, Counterfactual Synthesis, which systematically generates a rich curriculum of plausible collisions and off-road events. This transforms the model from a passive scene completer into a veridical forecaster that remains faithful to the causal link between actions and outcomes. We then integrate this Impartial World Model into our closed-loop RL framework, where it serves as an internal critic. During refinement, the agent queries the critic to ``dream\" of the outcomes for candidate actions. We demonstrate through extensive experiments, including on a new Risk Foreseeing Benchmark, that our model significantly outperforms baselines in predicting failures. Consequently, when used as a critic, it enables a substantial reduction in safety violations in challenging simulations, proving that teaching a model to dream of danger is a critical step towards building truly safe and intelligent autonomous agents.",
+        "url": "http://arxiv.org/abs/2511.20325v1",
+        "published_date": "2025-11-25T13:57:24+00:00",
+        "updated_date": "2025-11-25T13:57:24+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Tianyi Yan",
+            "Tao Tang",
+            "Xingtai Gui",
+            "Yongkang Li",
+            "Jiasen Zhesng",
+            "Weiyao Huang",
+            "Lingdong Kong",
+            "Wencheng Han",
+            "Xia Zhou",
+            "Xueyang Zhang",
+            "Yifei Zhan",
+            "Kun Zhan",
+            "Cheng-zhong Xu",
+            "Jianbing Shen"
+        ],
+        "tldr": "The paper introduces AD-R1, a closed-loop reinforcement learning framework for autonomous driving that addresses optimistic bias in world models by using a novel impartial world model trained with counterfactual synthesis to predict potential collisions and improve safety.",
+        "tldr_zh": "该论文介绍了AD-R1，一个用于自动驾驶的闭环强化学习框架，通过使用一种新颖的、通过反事实合成训练的公正世界模型来预测潜在的碰撞并提高安全性，从而解决了世界模型中的乐观偏差问题。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "CostNav: A Navigation Benchmark for Cost-Aware Evaluation of Embodied Agents",
+        "summary": "Existing navigation benchmarks focus on task success metrics while overlooking economic viability -- critical for commercial deployment of autonomous delivery robots. We introduce \\emph{CostNav}, a \\textbf{Micro-Navigation Economic Testbed} that evaluates embodied agents through comprehensive cost-revenue analysis aligned with real-world business operations. CostNav models the complete economic lifecycle including hardware, training, energy, maintenance costs, and delivery revenue with service-level agreements, using industry-derived parameters. \\textbf{To our knowledge, CostNav is the first work to quantitatively expose the gap between navigation research metrics and commercial viability}, revealing that optimizing for task success fundamentally differs from optimizing for economic deployment. Our cost model uses parameters derived from industry data sources (energy rates, delivery service pricing), and we project from a reduced-scale simulation to realistic deliveries. Under this projection, the baseline achieves 43.0\\% SLA compliance but is \\emph{not} commercially viable: yielding a loss of \\$30.009 per run with no finite break-even point, because operating costs are dominated by collision-induced maintenance, which accounts for 99.7\\% of per-run costs and highlights collision avoidance as a key optimization target. We demonstrate a learning-based on-device navigation baseline and establish a foundation for evaluating rule-based navigation, imitation learning, and cost-aware RL training. CostNav bridges the gap between navigation research and commercial deployment, enabling data-driven decisions about economic trade-offs across navigation paradigms.",
+        "url": "http://arxiv.org/abs/2511.20216v1",
+        "published_date": "2025-11-25T11:42:28+00:00",
+        "updated_date": "2025-11-25T11:42:28+00:00",
+        "categories": [
+            "cs.AI",
+            "cs.CE",
+            "cs.CV",
+            "cs.LG",
+            "cs.RO"
+        ],
+        "authors": [
+            "Haebin Seong",
+            "Sungmin Kim",
+            "Minchan Kim",
+            "Yongjun Cho",
+            "Myunchul Joe",
+            "Suhwan Choi",
+            "Jaeyoon Jung",
+            "Jiyong Youn",
+            "Yoonshik Kim",
+            "Samwoo Seong",
+            "Yubeen Park",
+            "Youngjae Yu",
+            "Yunsung Lee"
+        ],
+        "tldr": "CostNav is a new benchmark that evaluates embodied navigation agents based on cost-effectiveness, highlighting the gap between traditional navigation metrics and real-world commercial viability by modeling costs associated with hardware, energy, maintenance, and revenue.",
+        "tldr_zh": "CostNav是一个新的基准，它基于成本效益评估具身导航代理，通过模拟硬件、能源、维护和收入相关的成本，突出了传统导航指标与现实世界商业可行性之间的差距。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Map-World: Masked Action planning and Path-Integral World Model for Autonomous Driving",
+        "summary": "Motion planning for autonomous driving must handle multiple plausible futures while remaining computationally efficient. Recent end-to-end systems and world-model-based planners predict rich multi-modal trajectories, but typically rely on handcrafted anchors or reinforcement learning to select a single best mode for training and control. This selection discards information about alternative futures and complicates optimization. We propose MAP-World, a prior-free multi-modal planning framework that couples masked action planning with a path-weighted world model. The Masked Action Planning (MAP) module treats future ego motion as masked sequence completion: past waypoints are encoded as visible tokens, future waypoints are represented as mask tokens, and a driving-intent path provides a coarse scaffold. A compact latent planning state is expanded into multiple trajectory queries with injected noise, yielding diverse, temporally consistent modes without anchor libraries or teacher policies. A lightweight world model then rolls out future BEV semantics conditioned on each candidate trajectory. During training, semantic losses are computed as an expectation over modes, using trajectory probabilities as discrete path weights, so the planner learns from the full distribution of plausible futures instead of a single selected path. On NAVSIM, our method matches anchor-based approaches and achieves state-of-the-art performance among world-model-based methods, while avoiding reinforcement learning and maintaining real-time inference latency.",
+        "url": "http://arxiv.org/abs/2511.20156v1",
+        "published_date": "2025-11-25T10:30:26+00:00",
+        "updated_date": "2025-11-25T10:30:26+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Bin Hu",
+            "Zijian Lu",
+            "Haicheng Liao",
+            "Chengran Yuan",
+            "Bin Rao",
+            "Yongkang Li",
+            "Guofa Li",
+            "Zhiyong Cui",
+            "Cheng-zhong Xu",
+            "Zhenning Li"
+        ],
+        "tldr": "The paper introduces MAP-World, a novel autonomous driving motion planning framework using masked action planning and a path-weighted world model, achieving state-of-the-art performance without reinforcement learning and maintaining real-time inference.",
+        "tldr_zh": "该论文介绍了MAP-World，一种新颖的自动驾驶运动规划框架，它使用masked action planning和路径加权的世界模型，在没有强化学习的情况下实现了最先进的性能，并保持了实时推理。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "WPT: World-to-Policy Transfer via Online World Model Distillation",
+        "summary": "Recent years have witnessed remarkable progress in world models, which primarily aim to capture the spatio-temporal correlations between an agent's actions and the evolving environment. However, existing approaches often suffer from tight runtime coupling or depend on offline reward signals, resulting in substantial inference overhead or hindering end-to-end optimization. To overcome these limitations, we introduce WPT, a World-to-Policy Transfer training paradigm that enables online distillation under the guidance of an end-to-end world model. Specifically, we develop a trainable reward model that infuses world knowledge into a teacher policy by aligning candidate trajectories with the future dynamics predicted by the world model. Subsequently, we propose policy distillation and world reward distillation to transfer the teacher's reasoning ability into a lightweight student policy, enhancing planning performance while preserving real-time deployability. Extensive experiments on both open-loop and closed-loop benchmarks show that our WPT achieves state-of-the-art performance with a simple policy architecture: it attains a 0.11 collision rate (open-loop) and achieves a 79.23 driving score (closed-loop) surpassing both world-model-based and imitation-learning methods in accuracy and safety. Moreover, the student sustains up to 4.9x faster inference, while retaining most of the gains.",
+        "url": "http://arxiv.org/abs/2511.20095v1",
+        "published_date": "2025-11-25T09:12:06+00:00",
+        "updated_date": "2025-11-25T09:12:06+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Guangfeng Jiang",
+            "Yueru Luo",
+            "Jun Liu",
+            "Yi Huang",
+            "Yiyao Zhu",
+            "Zhan Qu",
+            "Dave Zhenyu Chen",
+            "Bingbing Liu",
+            "Xu Yan"
+        ],
+        "tldr": "The paper introduces WPT, a novel world-to-policy transfer paradigm for training lightweight policies using online distillation guided by an end-to-end world model, achieving state-of-the-art performance in driving benchmarks with faster inference.",
+        "tldr_zh": "该论文介绍了一种新的世界到策略迁移范式 WPT，它使用由端到端世界模型引导的在线蒸馏来训练轻量级策略，在驾驶基准测试中实现了最先进的性能，并且推理速度更快。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "ACIT: Attention-Guided Cross-Modal Interaction Transformer for Pedestrian Crossing Intention Prediction",
+        "summary": "Predicting pedestrian crossing intention is crucial for autonomous vehicles to prevent pedestrian-related collisions. However, effectively extracting and integrating complementary cues from different types of data remains one of the major challenges. This paper proposes an attention-guided cross-modal interaction Transformer (ACIT) for pedestrian crossing intention prediction. ACIT leverages six visual and motion modalities, which are grouped into three interaction pairs: (1) Global semantic map and global optical flow, (2) Local RGB image and local optical flow, and (3) Ego-vehicle speed and pedestrian's bounding box. Within each visual interaction pair, a dual-path attention mechanism enhances salient regions within the primary modality through intra-modal self-attention and facilitates deep interactions with the auxiliary modality (i.e., optical flow) via optical flow-guided attention. Within the motion interaction pair, cross-modal attention is employed to model the cross-modal dynamics, enabling the effective extraction of complementary motion features. Beyond pairwise interactions, a multi-modal feature fusion module further facilitates cross-modal interactions at each time step. Furthermore, a Transformer-based temporal feature aggregation module is introduced to capture sequential dependencies. Experimental results demonstrate that ACIT outperforms state-of-the-art methods, achieving accuracy rates of 70% and 89% on the JAADbeh and JAADall datasets, respectively. Extensive ablation studies are further conducted to investigate the contribution of different modules of ACIT.",
+        "url": "http://arxiv.org/abs/2511.20020v1",
+        "published_date": "2025-11-25T07:41:11+00:00",
+        "updated_date": "2025-11-25T07:41:11+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yuanzhe Li",
+            "Steffen Müller"
+        ],
+        "tldr": "This paper introduces ACIT, an attention-guided cross-modal interaction Transformer, for predicting pedestrian crossing intention using visual and motion data, achieving state-of-the-art results on JAAD datasets.",
+        "tldr_zh": "本文提出了ACIT，一种注意力引导的跨模态交互Transformer，用于预测行人穿越意图，利用视觉和运动数据，并在JAAD数据集上取得了最先进的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Multi-Context Fusion Transformer for Pedestrian Crossing Intention Prediction in Urban Environments",
+        "summary": "Pedestrian crossing intention prediction is essential for autonomous vehicles to improve pedestrian safety and reduce traffic accidents. However, accurate pedestrian intention prediction in urban environments remains challenging due to the multitude of factors affecting pedestrian behavior. In this paper, we propose a multi-context fusion Transformer (MFT) that leverages diverse numerical contextual attributes across four key dimensions, encompassing pedestrian behavior context, environmental context, pedestrian localization context and vehicle motion context, to enable accurate pedestrian intention prediction. MFT employs a progressive fusion strategy, where mutual intra-context attention enables reciprocal interactions within each context, thereby facilitating feature sequence fusion and yielding a context token as a context-specific representation. This is followed by mutual cross-context attention, which integrates features across contexts with a global CLS token serving as a compact multi-context representation. Finally, guided intra-context attention refines context tokens within each context through directed interactions, while guided cross-context attention strengthens the global CLS token to promote multi-context fusion via guided information propagation, yielding deeper and more efficient integration. Experimental results validate the superiority of MFT over state-of-the-art methods, achieving accuracy rates of 73%, 93%, and 90% on the JAADbeh, JAADall, and PIE datasets, respectively. Extensive ablation studies are further conducted to investigate the effectiveness of the network architecture and contribution of different input context. Our code is open-source: https://github.com/ZhongHang0307/Multi-Context-Fusion-Transformer.",
+        "url": "http://arxiv.org/abs/2511.20011v1",
+        "published_date": "2025-11-25T07:24:49+00:00",
+        "updated_date": "2025-11-25T07:24:49+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Yuanzhe Li",
+            "Hang Zhong",
+            "Steffen Müller"
+        ],
+        "tldr": "This paper introduces a Multi-Context Fusion Transformer (MFT) that predicts pedestrian crossing intentions by fusing pedestrian behavior, environmental context, pedestrian localization, and vehicle motion data, achieving state-of-the-art accuracy on three datasets.",
+        "tldr_zh": "本文介绍了一种多上下文融合Transformer（MFT），通过融合行人行为、环境上下文、行人定位和车辆运动数据来预测行人过马路意图，并在三个数据集上实现了最先进的准确率。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Pedestrian Crossing Intention Prediction Using Multimodal Fusion Network",
+        "summary": "Pedestrian crossing intention prediction is essential for the deployment of autonomous vehicles (AVs) in urban environments. Ideal prediction provides AVs with critical environmental cues, thereby reducing the risk of pedestrian-related collisions. However, the prediction task is challenging due to the diverse nature of pedestrian behavior and its dependence on multiple contextual factors. This paper proposes a multimodal fusion network that leverages seven modality features from both visual and motion branches, aiming to effectively extract and integrate complementary cues across different modalities. Specifically, motion and visual features are extracted from the raw inputs using multiple Transformer-based extraction modules. Depth-guided attention module leverages depth information to guide attention towards salient regions in another modality through comprehensive spatial feature interactions. To account for the varying importance of different modalities and frames, modality attention and temporal attention are designed to selectively emphasize informative modalities and effectively capture temporal dependencies. Extensive experiments on the JAAD dataset validate the effectiveness of the proposed network, achieving superior performance compared to the baseline methods.",
+        "url": "http://arxiv.org/abs/2511.20008v1",
+        "published_date": "2025-11-25T07:18:12+00:00",
+        "updated_date": "2025-11-25T07:18:12+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Yuanzhe Li",
+            "Steffen Müller"
+        ],
+        "tldr": "This paper proposes a multimodal Transformer-based network with depth-guided, modality, and temporal attention mechanisms for pedestrian crossing intention prediction, achieving state-of-the-art results on the JAAD dataset.",
+        "tldr_zh": "本文提出了一种基于多模态Transformer的网络，该网络具有深度引导、模态和时间注意力机制，用于行人穿越意图预测，并在JAAD数据集上取得了最先进的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Redefining Radar Segmentation: Simultaneous Static-Moving Segmentation and Ego-Motion Estimation using Radar Point Clouds",
+        "summary": "Conventional radar segmentation research has typically focused on learning category labels for different moving objects. Although fundamental differences between radar and optical sensors lead to differences in the reliability of predicting accurate and consistent category labels, a review of common radar perception tasks in automotive reveals that determining whether an object is moving or static is a prerequisite for most tasks. To fill this gap, this study proposes a neural network based solution that can simultaneously segment static and moving objects from radar point clouds. Furthermore, since the measured radial velocity of static objects is correlated with the motion of the radar, this approach can also estimate the instantaneous 2D velocity of the moving platform or vehicle (ego motion). However, despite performing dual tasks, the proposed method employs very simple yet effective building blocks for feature extraction: multi layer perceptrons (MLPs) and recurrent neural networks (RNNs). In addition to being the first of its kind in the literature, the proposed method also demonstrates the feasibility of extracting the information required for the dual task directly from unprocessed point clouds, without the need for cloud aggregation, Doppler compensation, motion compensation, or any other intermediate signal processing steps. To measure its performance, this study introduces a set of novel evaluation metrics and tests the proposed method using a challenging real world radar dataset, RadarScenes. The results show that the proposed method not only performs well on the dual tasks, but also has broad application potential in other radar perception tasks.",
+        "url": "http://arxiv.org/abs/2511.20003v1",
+        "published_date": "2025-11-25T07:13:34+00:00",
+        "updated_date": "2025-11-25T07:13:34+00:00",
+        "categories": [
+            "eess.SP",
+            "cs.CV"
+        ],
+        "authors": [
+            "Simin Zhu",
+            "Satish Ravindran",
+            "Alexander Yarovoy",
+            "Francesco Fioranelli"
+        ],
+        "tldr": "This paper presents a neural network approach for simultaneously segmenting static and moving objects from raw radar point clouds and estimating ego-motion, using MLPs and RNNs, demonstrating good performance on the RadarScenes dataset.",
+        "tldr_zh": "本文提出了一种基于神经网络的方法，使用MLP和RNN从原始雷达点云中同时分割静态和移动物体，并估计自运动，并在RadarScenes数据集上表现良好。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "On-Demand Multi-Task Sparsity for Efficient Large-Model Deployment on Edge Devices",
+        "summary": "Sparsity is essential for deploying large models on resource constrained edge platforms. However, optimizing sparsity patterns for individual tasks in isolation ignores the significant I/O overhead incurred during frequent task switching. We introduce an on-demand multi-task sparsity framework specifically designed to minimize switching costs by maximizing parameter reuse. Unlike monolithic approaches, we decompose weights into reusable block-granular units and align sparse structures across tasks to maximize overlap. By dynamically loading only the small differential set of blocks required for the next task, our method effectively mitigates the cold-start latency inherent in traditional monolithic approaches.Experiments on a real-world autonomous driving platform demonstrate that our framework achieves superior switching efficiency, accelerating task switching by over 6.6X on average compared to existing sparsity methods.",
+        "url": "http://arxiv.org/abs/2511.19986v1",
+        "published_date": "2025-11-25T06:54:04+00:00",
+        "updated_date": "2025-11-25T06:54:04+00:00",
+        "categories": [
+            "cs.LG",
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Lianming Huang",
+            "Haibo Hu",
+            "Qiao Li",
+            "Nan Guan",
+            "Chun Jason Xue"
+        ],
+        "tldr": "This paper introduces an on-demand multi-task sparsity framework that optimizes parameter reuse for efficient deployment of large models on edge devices, significantly reducing task switching latency in autonomous driving.",
+        "tldr_zh": "该论文提出了一种按需多任务稀疏框架，通过优化参数重用来实现大型模型在边缘设备上的高效部署，从而显著降低自动驾驶中的任务切换延迟。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "MAPS: Preserving Vision-Language Representations via Module-Wise Proximity Scheduling for Better Vision-Language-Action Generalization",
+        "summary": "Vision-Language-Action (VLA) models inherit strong priors from pretrained Vision-Language Models (VLMs), but naive fine-tuning often disrupts these representations and harms generalization. Existing fixes -- freezing modules or applying uniform regularization -- either overconstrain adaptation or ignore the differing roles of VLA components. We present MAPS (Module-Wise Proximity Scheduling), the first robust fine-tuning framework for VLAs. Through systematic analysis, we uncover an empirical order in which proximity constraints should be relaxed to balance stability and flexibility. MAPS linearly schedules this relaxation, enabling visual encoders to stay close to their pretrained priors while action-oriented language layers adapt more freely. MAPS introduces no additional parameters or data, and can be seamlessly integrated into existing VLAs. Across MiniVLA-VQ, MiniVLA-OFT, OpenVLA-OFT, and challenging benchmarks such as SimplerEnv, CALVIN, LIBERO, as well as real-world evaluations on the Franka Emika Panda platform, MAPS consistently boosts both in-distribution and out-of-distribution performance (up to +30%). Our findings highlight empirically guided proximity to pretrained VLMs as a simple yet powerful principle for preserving broad generalization in VLM-to-VLA transfer.",
+        "url": "http://arxiv.org/abs/2511.19878v1",
+        "published_date": "2025-11-25T03:39:37+00:00",
+        "updated_date": "2025-11-25T03:39:37+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.CL",
+            "cs.LG",
+            "cs.RO"
+        ],
+        "authors": [
+            "Chengyue Huang",
+            "Mellon M. Zhang",
+            "Robert Azarcon",
+            "Glen Chou",
+            "Zsolt Kira"
+        ],
+        "tldr": "The paper introduces MAPS, a novel fine-tuning framework for Vision-Language-Action models that preserves pre-trained VLM representations by using module-wise proximity scheduling, achieving significant performance improvements across various benchmarks.",
+        "tldr_zh": "该论文介绍了MAPS，一种新颖的视觉-语言-动作模型微调框架，通过模块化邻近度调度来保留预训练的VLM表示，在各种基准测试中实现了显著的性能提升。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Mixture of Horizons in Action Chunking",
+        "summary": "Vision-language-action (VLA) models have shown remarkable capabilities in robotic manipulation, but their performance is sensitive to the $\\textbf{action chunk length}$ used during training, termed $\\textbf{horizon}$. Our empirical study reveals an inherent trade-off: longer horizons provide stronger global foresight but degrade fine-grained accuracy, while shorter ones sharpen local control yet struggle on long-term tasks, implying fixed choice of single horizons being suboptimal. To mitigate the trade-off, we propose a $\\textbf{mixture of horizons (MoH)}$ strategy. MoH rearranges the action chunk into several segments with different horizons, processes them in parallel with a shared action transformer, and fuses outputs with a light linear gate. It has three appealing benefits. 1) MoH exploits long-term foresight and short-term precision jointly within a single model, improving both performance and generalizability to complex tasks. 2) MoH is plug-and-play for full-attention action modules with minimal training or inference overhead. 3) MoH enables dynamic inference with adaptive horizons, which selects stable actions through cross-horizon consensus, achieving 2.5$\\times$ higher throughput than baselines while preserving superior performance. Extensive experiments over flow-based policies $π_0$, $π_{0.5}$, and one-step regression policy $π_{\\text{reg}}$ demonstrate that MoH yields consistent and significant gains on both simulations and real-world tasks. Notably, under mixed-task setting, $π_{0.5}$ with MoH reaches a new state-of-the-art with 99$\\%$ average success rate on LIBERO after only $30k$ training iterations. Project page: https://github.com/Timsty1/MixtureOfHorizons",
+        "url": "http://arxiv.org/abs/2511.19433v1",
+        "published_date": "2025-11-24T18:59:51+00:00",
+        "updated_date": "2025-11-24T18:59:51+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Dong Jing",
+            "Gang Wang",
+            "Jiaqi Liu",
+            "Weiliang Tang",
+            "Zelong Sun",
+            "Yunchao Yao",
+            "Zhenyu Wei",
+            "Yunhui Liu",
+            "Zhiwu Lu",
+            "Mingyu Ding"
+        ],
+        "tldr": "This paper introduces a Mixture of Horizons (MoH) strategy to improve vision-language-action models for robotic manipulation by addressing the trade-off between long-term foresight and fine-grained accuracy, achieving state-of-the-art results on LIBERO.",
+        "tldr_zh": "该论文介绍了一种混合视野（MoH）策略，通过解决长期预测和精细准确性之间的权衡，改进了用于机器人操作的视觉-语言-动作模型，并在LIBERO上实现了最先进的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Cook and Clean Together: Teaching Embodied Agents for Parallel Task Execution",
+        "summary": "Task scheduling is critical for embodied AI, enabling agents to follow natural language instructions and execute actions efficiently in 3D physical worlds. However, existing datasets often simplify task planning by ignoring operations research (OR) knowledge and 3D spatial grounding. In this work, we propose Operations Research knowledge-based 3D Grounded Task Scheduling (ORS3D), a new task that requires the synergy of language understanding, 3D grounding, and efficiency optimization. Unlike prior settings, ORS3D demands that agents minimize total completion time by leveraging parallelizable subtasks, e.g., cleaning the sink while the microwave operates. To facilitate research on ORS3D, we construct ORS3D-60K, a large-scale dataset comprising 60K composite tasks across 4K real-world scenes. Furthermore, we propose GRANT, an embodied multi-modal large language model equipped with a simple yet effective scheduling token mechanism to generate efficient task schedules and grounded actions. Extensive experiments on ORS3D-60K validate the effectiveness of GRANT across language understanding, 3D grounding, and scheduling efficiency. The code is available at https://github.com/H-EmbodVis/GRANT",
+        "url": "http://arxiv.org/abs/2511.19430v1",
+        "published_date": "2025-11-24T18:59:17+00:00",
+        "updated_date": "2025-11-24T18:59:17+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Dingkang Liang",
+            "Cheng Zhang",
+            "Xiaopeng Xu",
+            "Jianzhong Ju",
+            "Zhenbo Luo",
+            "Xiang Bai"
+        ],
+        "tldr": "This paper introduces a new embodied AI task, ORS3D, that requires agents to optimize task completion time by leveraging parallelizable subtasks in 3D environments. They also present a large-scale dataset and a multi-modal LLM, GRANT, for this task.",
+        "tldr_zh": "该论文介绍了一个新的具身AI任务ORS3D，要求智能体通过利用3D环境中可并行化的子任务来优化任务完成时间。他们还提出了一个大规模数据集和一个多模态LLM，GRANT，用于此任务。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7.8
+    },
+    {
+        "title": "SelfMOTR: Revisiting MOTR with Self-Generating Detection Priors",
+        "summary": "Despite progress toward end-to-end tracking with transformer architectures, poor detection performance and the conflict between detection and association in a joint architecture remain critical concerns. Recent approaches aim to mitigate these issues by (i) employing advanced denoising or label assignment strategies, or (ii) incorporating detection priors from external object detectors via distillation or anchor proposal techniques. Inspired by the success of integrating detection priors and by the key insight that MOTR-like models are secretly strong detection models, we introduce SelfMOTR, a novel tracking transformer that relies on self-generated detection priors. Through extensive analysis and ablation studies, we uncover and demonstrate the hidden detection capabilities of MOTR-like models, and present a practical set of tools for leveraging them effectively. On DanceTrack, SelfMOTR achieves strong performance, competing with recent state-of-the-art end-to-end tracking methods.",
+        "url": "http://arxiv.org/abs/2511.20279v1",
+        "published_date": "2025-11-25T13:08:09+00:00",
+        "updated_date": "2025-11-25T13:08:09+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Fabian Gülhan",
+            "Emil Mededovic",
+            "Yuli Wu",
+            "Johannes Stegmaier"
+        ],
+        "tldr": "SelfMOTR is a novel tracking transformer that leverages self-generated detection priors derived from the hidden detection capabilities of MOTR-like models, achieving competitive performance on DanceTrack.",
+        "tldr_zh": "SelfMOTR是一种新型的跟踪Transformer，它利用从MOTR类模型中隐藏的检测能力导出的自生成检测先验，在DanceTrack上实现了有竞争力的性能。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Motion Marionette: Rethinking Rigid Motion Transfer via Prior Guidance",
+        "summary": "We present Motion Marionette, a zero-shot framework for rigid motion transfer from monocular source videos to single-view target images. Previous works typically employ geometric, generative, or simulation priors to guide the transfer process, but these external priors introduce auxiliary constraints that lead to trade-offs between generalizability and temporal consistency. To address these limitations, we propose guiding the motion transfer process through an internal prior that exclusively captures the spatial-temporal transformations and is shared between the source video and any transferred target video. Specifically, we first lift both the source video and the target image into a unified 3D representation space. Motion trajectories are then extracted from the source video to construct a spatial-temporal (SpaT) prior that is independent of object geometry and semantics, encoding relative spatial variations over time. This prior is further integrated with the target object to synthesize a controllable velocity field, which is subsequently refined using Position-Based Dynamics to mitigate artifacts and enhance visual coherence. The resulting velocity field can be flexibly employed for efficient video production. Empirical results demonstrate that Motion Marionette generalizes across diverse objects, produces temporally consistent videos that align well with the source motion, and supports controllable video generation.",
+        "url": "http://arxiv.org/abs/2511.19909v1",
+        "published_date": "2025-11-25T04:34:42+00:00",
+        "updated_date": "2025-11-25T04:34:42+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Haoxuan Wang",
+            "Jiachen Tao",
+            "Junyi Wu",
+            "Gaowen Liu",
+            "Ramana Rao Kompella",
+            "Yan Yan"
+        ],
+        "tldr": "Motion Marionette is a zero-shot framework for transferring rigid motions from monocular source videos to single target images by extracting a spatial-temporal prior independent of object geometry and semantics, leading to temporally consistent and controllable video generation.",
+        "tldr_zh": "Motion Marionette 是一个零样本框架，通过提取独立于物体几何和语义的时空先验，将单目源视频中的刚性运动传递到单个目标图像，从而生成时间上一致且可控的视频。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
