@@ -1,0 +1,412 @@
+[
+    {
+        "title": "LaGen: Towards Autoregressive LiDAR Scene Generation",
+        "summary": "Generative world models for autonomous driving (AD) have become a trending topic. Unlike the widely studied image modality, in this work we explore generative world models for LiDAR data. Existing generation methods for LiDAR data only support single frame generation, while existing prediction approaches require multiple frames of historical input and can only deterministically predict multiple frames at once, lacking interactivity. Both paradigms fail to support long-horizon interactive generation. To this end, we introduce LaGen, which to the best of our knowledge is the first framework capable of frame-by-frame autoregressive generation of long-horizon LiDAR scenes. LaGen is able to take a single-frame LiDAR input as a starting point and effectively utilize bounding box information as conditions to generate high-fidelity 4D scene point clouds. In addition, we introduce a scene decoupling estimation module to enhance the model's interactive generation capability for object-level content, as well as a noise modulation module to mitigate error accumulation during long-horizon generation. We construct a protocol based on nuScenes for evaluating long-horizon LiDAR scene generation. Experimental results comprehensively demonstrate LaGen outperforms state-of-the-art LiDAR generation and prediction models, especially on the later frames.",
+        "url": "http://arxiv.org/abs/2511.21256v1",
+        "published_date": "2025-11-26T10:39:16+00:00",
+        "updated_date": "2025-11-26T10:39:16+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Sizhuo Zhou",
+            "Xiaosong Jia",
+            "Fanrui Zhang",
+            "Junjie Li",
+            "Juyong Zhang",
+            "Yukang Feng",
+            "Jianwen Sun",
+            "Songbur Wong",
+            "Junqi You",
+            "Junchi Yan"
+        ],
+        "tldr": "The paper introduces LaGen, a novel framework for autoregressive, long-horizon LiDAR scene generation, which addresses limitations of existing methods and allows for interactive scene creation with object-level control and mitigation of error accumulation.",
+        "tldr_zh": "本文介绍了LaGen，一种用于自回归、长程LiDAR场景生成的新框架，它解决了现有方法的局限性，并允许进行交互式场景创建，具有对象级控制和减少误差累积的能力。",
+        "relevance_score": 10,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "MODEST: Multi-Optics Depth-of-Field Stereo Dataset",
+        "summary": "Reliable depth estimation under real optical conditions remains a core challenge for camera vision in systems such as autonomous robotics and augmented reality. Despite recent progress in depth estimation and depth-of-field rendering, research remains constrained by the lack of large-scale, high-fidelity, real stereo DSLR datasets, limiting real-world generalization and evaluation of models trained on synthetic data as shown extensively in literature. We present the first high-resolution (5472$\\times$3648px) stereo DSLR dataset with 18000 images, systematically varying focal length and aperture across complex real scenes and capturing the optical realism and complexity of professional camera systems. For 9 scenes with varying scene complexity, lighting and background, images are captured with two identical camera assemblies at 10 focal lengths (28-70mm) and 5 apertures (f/2.8-f/22), spanning 50 optical configurations in 2000 images per scene. This full-range optics coverage enables controlled analysis of geometric and optical effects for monocular and stereo depth estimation, shallow depth-of-field rendering, deblurring, 3D scene reconstruction and novel view synthesis. Each focal configuration has a dedicated calibration image set, supporting evaluation of classical and learning based methods for intrinsic and extrinsic calibration. The dataset features challenging visual elements such as multi-scale optical illusions, reflective surfaces, mirrors, transparent glass walls, fine-grained details, and natural / artificial ambient light variations. This work attempts to bridge the realism gap between synthetic training data and real camera optics, and demonstrates challenges with the current state-of-the-art monocular, stereo depth and depth-of-field methods. We release the dataset, calibration files, and evaluation code to support reproducible research on real-world optical generalization.",
+        "url": "http://arxiv.org/abs/2511.20853v1",
+        "published_date": "2025-11-25T20:59:47+00:00",
+        "updated_date": "2025-11-25T20:59:47+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG",
+            "eess.IV"
+        ],
+        "authors": [
+            "Nisarg K. Trivedi",
+            "Vinayak A. Belludi",
+            "Li-Yun Wang",
+            "Pardis Taghavi",
+            "Dante Lok"
+        ],
+        "tldr": "The paper introduces MODEST, a large-scale, high-resolution stereo DSLR dataset with systematically varied focal lengths and apertures to bridge the realism gap between synthetic and real-world optical data for depth estimation and related tasks.",
+        "tldr_zh": "本文介绍了一个名为MODEST的大规模、高分辨率立体DSLR数据集，该数据集系统地改变了焦距和光圈，旨在弥合合成数据和真实光学数据之间的差距，用于深度估计及相关任务。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "LocateAnything3D: Vision-Language 3D Detection with Chain-of-Sight",
+        "summary": "To act in the world, a model must name what it sees and know where it is in 3D. Today's vision-language models (VLMs) excel at open-ended 2D description and grounding, yet multi-object 3D detection remains largely missing from the VLM toolbox. We present LocateAnything3D, a VLM-native recipe that casts 3D detection as a next-token prediction problem. The key is a short, explicit Chain-of-Sight (CoS) sequence that mirrors how human reason from images: find an object in 2D, then infer its distance, size, and pose. The decoder first emits 2D detections as a visual chain-of-thought, then predicts 3D boxes under an easy-to-hard curriculum: across objects, a near-to-far order reduces early ambiguity and matches ego-centric utility; within each object, a center-from-camera, dimensions, and rotation factorization ranks information by stability and learnability. This VLM-native interface preserves open-vocabulary and visual-prompting capability without specialized heads. On the challenging Omni3D benchmark, our model achieves state-of-the-art results, with 49.89 AP_3D, surpassing the previous best by +15.51 absolute improvement even when the baseline is given ground-truth 2D boxes. It also generalizes zero-shot to held-out categories with strong robustness. By turning 3D detection into a disciplined next-token problem, LocateAnything3D offers a practical foundation for models to perceive in 3D.",
+        "url": "http://arxiv.org/abs/2511.20648v1",
+        "published_date": "2025-11-25T18:59:45+00:00",
+        "updated_date": "2025-11-25T18:59:45+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yunze Man",
+            "Shihao Wang",
+            "Guowen Zhang",
+            "Johan Bjorck",
+            "Zhiqi Li",
+            "Liang-Yan Gui",
+            "Jim Fan",
+            "Jan Kautz",
+            "Yu-Xiong Wang",
+            "Zhiding Yu"
+        ],
+        "tldr": "LocateAnything3D is a novel vision-language model (VLM) approach that reframes 3D object detection as a next-token prediction task using a Chain-of-Sight (CoS) sequence, achieving state-of-the-art performance on Omni3D.",
+        "tldr_zh": "LocateAnything3D 是一种新的视觉语言模型（VLM）方法，它将3D物体检测重新定义为使用视觉链（CoS）序列的下一个token预测任务，并在Omni3D上实现了最先进的性能。",
+        "relevance_score": 10,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Vision-Language Memory for Spatial Reasoning",
+        "summary": "Spatial reasoning is a critical capability for intelligent robots, yet current vision-language models (VLMs) still fall short of human-level performance in video-based spatial reasoning. This gap mainly stems from two challenges: a semantic-geometric misalignment that prevents consistent 3D understanding, and the absence of persistent memory to retain 3D representation and understanding over time. To address these limitations, we present VLM$^2$, a Vision-Language Model with persistent Memory for spatial reasoning with a view-consistent, 3D-aware representation purely from 2D video. Specifically, to enhance long-horizon reasoning, we incorporate a dual-memory module, consisting of a working memory that operates as a sliding window to focus on immediate context, and an episodic memory that consolidates and stores critical long-term information. This design enables efficient and long-horizon spatial reasoning with a fixed computational cost. Extensive experiments on multiple benchmarks show that VLM$^2$ achieves state-of-the-art performance among video-only models, significantly advancing the frontier of visual-spatial intelligence.",
+        "url": "http://arxiv.org/abs/2511.20644v1",
+        "published_date": "2025-11-25T18:59:02+00:00",
+        "updated_date": "2025-11-25T18:59:02+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zuntao Liu",
+            "Yi Du",
+            "Taimeng Fu",
+            "Shaoshu Su",
+            "Cherie Ho",
+            "Chen Wang"
+        ],
+        "tldr": "The paper introduces VLM$^2$, a vision-language model with persistent memory for spatial reasoning in videos, using a dual-memory module to address semantic-geometric misalignment and enhance long-horizon reasoning. It achieves state-of-the-art performance on multiple benchmarks.",
+        "tldr_zh": "该论文介绍了VLM$^2$，一种具有持久记忆的视觉语言模型，用于视频中的空间推理，使用双重记忆模块来解决语义-几何不对齐并增强长程推理。它在多个基准测试上取得了最先进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Multimodal Robust Prompt Distillation for 3D Point Cloud Models",
+        "summary": "Adversarial attacks pose a significant threat to learning-based 3D point cloud models, critically undermining their reliability in security-sensitive applications. Existing defense methods often suffer from (1) high computational overhead and (2) poor generalization ability across diverse attack types. To bridge these gaps, we propose a novel yet efficient teacher-student framework, namely Multimodal Robust Prompt Distillation (MRPD) for distilling robust 3D point cloud model. It learns lightweight prompts by aligning student point cloud model's features with robust embeddings from three distinct teachers: a vision model processing depth projections, a high-performance 3D model, and a text encoder. To ensure a reliable knowledge transfer, this distillation is guided by a confidence-gated mechanism which dynamically balances the contribution of all input modalities. Notably, since the distillation is all during the training stage, there is no additional computational cost at inference. Extensive experiments demonstrate that MRPD substantially outperforms state-of-the-art defense methods against a wide range of white-box and black-box attacks, while even achieving better performance on clean data. Our work presents a new, practical paradigm for building robust 3D vision systems by efficiently harnessing multimodal knowledge.",
+        "url": "http://arxiv.org/abs/2511.21574v1",
+        "published_date": "2025-11-26T16:49:38+00:00",
+        "updated_date": "2025-11-26T16:49:38+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Xiang Gu",
+            "Liming Lu",
+            "Xu Zheng",
+            "Anan Du",
+            "Yongbin Zhou",
+            "Shuchao Pang"
+        ],
+        "tldr": "This paper introduces a multimodal robust prompt distillation framework (MRPD) to defend 3D point cloud models against adversarial attacks, achieving superior robustness and even improved performance on clean data without increasing inference cost.",
+        "tldr_zh": "本文提出了一种多模态鲁棒提示蒸馏框架 (MRPD)，用于防御 3D 点云模型免受对抗性攻击，在不增加推理成本的情况下，实现了卓越的鲁棒性，甚至提高了在干净数据上的性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "From Observation to Action: Latent Action-based Primitive Segmentation for VLA Pre-training in Industrial Settings",
+        "summary": "We present a novel unsupervised framework to unlock vast unlabeled human demonstration data from continuous industrial video streams for Vision-Language-Action (VLA) model pre-training. Our method first trains a lightweight motion tokenizer to encode motion dynamics, then employs an unsupervised action segmenter leveraging a novel \"Latent Action Energy\" metric to discover and segment semantically coherent action primitives. The pipeline outputs both segmented video clips and their corresponding latent action sequences, providing structured data directly suitable for VLA pre-training. Evaluations on public benchmarks and a proprietary electric motor assembly dataset demonstrate effective segmentation of key tasks performed by humans at workstations. Further clustering and quantitative assessment via a Vision-Language Model confirm the semantic coherence of the discovered action primitives. To our knowledge, this is the first fully automated end-to-end system for extracting and organizing VLA pre-training data from unstructured industrial videos, offering a scalable solution for embodied AI integration in manufacturing.",
+        "url": "http://arxiv.org/abs/2511.21428v1",
+        "published_date": "2025-11-26T14:19:44+00:00",
+        "updated_date": "2025-11-26T14:19:44+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Jiajie Zhang",
+            "Sören Schwertfeger",
+            "Alexander Kleiner"
+        ],
+        "tldr": "The paper introduces an unsupervised method to segment industrial videos into action primitives using a latent action energy metric, generating structured VLA pre-training data. It is the first fully automated end-to-end system for this purpose.",
+        "tldr_zh": "该论文提出了一种无监督方法，通过潜在动作能量度量将工业视频分割成动作原语，从而生成结构化的 VLA 预训练数据。这是第一个用于此目的的全自动端到端系统。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "When Robots Obey the Patch: Universal Transferable Patch Attacks on Vision-Language-Action Models",
+        "summary": "Vision-Language-Action (VLA) models are vulnerable to adversarial attacks, yet universal and transferable attacks remain underexplored, as most existing patches overfit to a single model and fail in black-box settings. To address this gap, we present a systematic study of universal, transferable adversarial patches against VLA-driven robots under unknown architectures, finetuned variants, and sim-to-real shifts. We introduce UPA-RFAS (Universal Patch Attack via Robust Feature, Attention, and Semantics), a unified framework that learns a single physical patch in a shared feature space while promoting cross-model transfer. UPA-RFAS combines (i) a feature-space objective with an $\\ell_1$ deviation prior and repulsive InfoNCE loss to induce transferable representation shifts, (ii) a robustness-augmented two-phase min-max procedure where an inner loop learns invisible sample-wise perturbations and an outer loop optimizes the universal patch against this hardened neighborhood, and (iii) two VLA-specific losses: Patch Attention Dominance to hijack text$\\to$vision attention and Patch Semantic Misalignment to induce image-text mismatch without labels. Experiments across diverse VLA models, manipulation suites, and physical executions show that UPA-RFAS consistently transfers across models, tasks, and viewpoints, exposing a practical patch-based attack surface and establishing a strong baseline for future defenses.",
+        "url": "http://arxiv.org/abs/2511.21192v1",
+        "published_date": "2025-11-26T09:16:32+00:00",
+        "updated_date": "2025-11-26T09:16:32+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Hui Lu",
+            "Yi Yu",
+            "Yiming Yang",
+            "Chenyu Yi",
+            "Qixin Zhang",
+            "Bingquan Shen",
+            "Alex C. Kot",
+            "Xudong Jiang"
+        ],
+        "tldr": "This paper introduces UPA-RFAS, a novel framework for generating universal, transferable adversarial patches that can effectively attack Vision-Language-Action models in robotic systems, even across different architectures and real-world conditions.",
+        "tldr_zh": "本文介绍了一种名为UPA-RFAS的新框架，用于生成通用的、可转移的对抗性补丁，这些补丁可以有效地攻击机器人系统中的视觉-语言-动作模型，即使在不同的架构和真实条件下也是如此。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Scenes as Tokens: Multi-Scale Normal Distributions Transform Tokenizer for General 3D Vision-Language Understanding",
+        "summary": "Recent advances in 3D vision-language models (VLMs) highlight a strong potential for 3D scene understanding and reasoning. However, effectively tokenizing 3D scenes into holistic scene tokens, and leveraging these tokens across diverse 3D understanding tasks, remain highly challenging. We present NDTokenizer3D, a generalist 3D VLM that performs a wide range of 3D scene understanding tasks while naturally supporting human interactions, thereby bridging language-level reasoning with 3D spatial understanding. The core of our approach is a novel three-stage scene tokenization pipeline built upon a Multi-Scale Normal Distributions Transform (NDT) representation, paired with a Multi-Scale NDT Decoder (MSDec). Specifically, NDTokenizer3D first constructs a multi-scale NDT representation from raw high-resolution point clouds, preserving both global context and fine-grained geometric details. Next, the MSDec progressively fuses cross-scale NDT features, producing holistic scene tokens consumable by LLM endpoints. Beyond tokenization, MSDec is repurposed as a general interface for human-interactive prompting (points, boxes, masks) and segmentation-mask decoding, unifying diverse 3D scene understanding tasks within a single architecture. With this compact and unified design, NDTokenizer3D offers a fine-grained, general-purpose 3D VLM, achieving remarkable improvements in 3D Referring Segmentation, 3D Visual Question Answering, and 3D Dense Captioning.",
+        "url": "http://arxiv.org/abs/2511.21191v1",
+        "published_date": "2025-11-26T09:12:17+00:00",
+        "updated_date": "2025-11-26T09:12:17+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yutao Tang",
+            "Cheng Zhao",
+            "Gaurav Mittal",
+            "Rohith Kukkala",
+            "Rama Chellappa",
+            "Cheng Peng",
+            "Mei Chen"
+        ],
+        "tldr": "The paper introduces NDTokenizer3D, a novel 3D Vision-Language Model (VLM) that uses a Multi-Scale Normal Distributions Transform (NDT) based tokenization pipeline to achieve state-of-the-art results on various 3D scene understanding tasks while also supporting human interaction.",
+        "tldr_zh": "该论文介绍了一种名为NDTokenizer3D的新型3D视觉语言模型（VLM），它使用基于多尺度正态分布变换（NDT）的令牌化流水线，在各种3D场景理解任务中取得了最先进的成果，同时还支持人机交互。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "SocialNav: Training Human-Inspired Foundation Model for Socially-Aware Embodied Navigation",
+        "summary": "Embodied navigation that adheres to social norms remains an open research challenge. Our \\textbf{SocialNav} is a foundational model for socially-aware navigation with a hierarchical \"brain-action\" architecture, capable of understanding high-level social norms and generating low-level, socially compliant trajectories. To enable such dual capabilities, we construct the SocNav Dataset, a large-scale collection of 7 million samples, comprising (1) a Cognitive Activation Dataset providing social reasoning signals such as chain-of-thought explanations and social traversability prediction, and (2) an Expert Trajectories Pyramid aggregating diverse navigation demonstrations from internet videos, simulated environments, and real-world robots. A multi-stage training pipeline is proposed to gradually inject and refine navigation intelligence: we first inject general navigation skills and social norms understanding into the model via imitation learning, and then refine such skills through a deliberately designed Socially-Aware Flow Exploration GRPO (SAFE-GRPO), the first flow-based reinforcement learning framework for embodied navigation that explicitly rewards socially compliant behaviors. SocialNav achieves +38% success rate and +46% social compliance rate compared to the state-of-the-art method, demonstrating strong gains in both navigation performance and social compliance. Our project page: https://amap-eai.github.io/SocialNav/",
+        "url": "http://arxiv.org/abs/2511.21135v1",
+        "published_date": "2025-11-26T07:36:01+00:00",
+        "updated_date": "2025-11-26T07:36:01+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Ziyi Chen",
+            "Yingnan Guo",
+            "Zedong Chu",
+            "Minghua Luo",
+            "Yanfen Shen",
+            "Mingchao Sun",
+            "Junjun Hu",
+            "Shichao Xie",
+            "Kuan Yang",
+            "Pei Shi",
+            "Zhining Gu",
+            "Lu Liu",
+            "Honglin Han",
+            "Xiaolong Wu",
+            "Mu Xu",
+            "Yu Zhang"
+        ],
+        "tldr": "The paper introduces SocialNav, a foundational model for socially-aware embodied navigation, trained on a large-scale dataset and a novel reinforcement learning framework to achieve significantly improved success and social compliance rates compared to state-of-the-art methods.",
+        "tldr_zh": "该论文介绍了SocialNav，一个用于具有社会意识的具身导航的基础模型，它在一个大规模数据集和一个新的强化学习框架上进行训练，与最先进的方法相比，显著提高了成功率和社会合规率。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "FaithFusion: Harmonizing Reconstruction and Generation via Pixel-wise Information Gain",
+        "summary": "In controllable driving-scene reconstruction and 3D scene generation, maintaining geometric fidelity while synthesizing visually plausible appearance under large viewpoint shifts is crucial. However, effective fusion of geometry-based 3DGS and appearance-driven diffusion models faces inherent challenges, as the absence of pixel-wise, 3D-consistent editing criteria often leads to over-restoration and geometric drift. To address these issues, we introduce \\textbf{FaithFusion}, a 3DGS-diffusion fusion framework driven by pixel-wise Expected Information Gain (EIG). EIG acts as a unified policy for coherent spatio-temporal synthesis: it guides diffusion as a spatial prior to refine high-uncertainty regions, while its pixel-level weighting distills the edits back into 3DGS. The resulting plug-and-play system is free from extra prior conditions and structural modifications.Extensive experiments on the Waymo dataset demonstrate that our approach attains SOTA performance across NTA-IoU, NTL-IoU, and FID, maintaining an FID of 107.47 even at 6 meters lane shift. Our code is available at https://github.com/wangyuanbiubiubiu/FaithFusion.",
+        "url": "http://arxiv.org/abs/2511.21113v1",
+        "published_date": "2025-11-26T06:58:57+00:00",
+        "updated_date": "2025-11-26T06:58:57+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "YuAn Wang",
+            "Xiaofan Li",
+            "Chi Huang",
+            "Wenhao Zhang",
+            "Hao Li",
+            "Bosheng Wang",
+            "Xun Sun",
+            "Jun Wang"
+        ],
+        "tldr": "FaithFusion introduces a novel 3DGS-diffusion fusion framework using pixel-wise Expected Information Gain (EIG) to improve geometric fidelity and visual plausibility in controllable driving-scene reconstruction and 3D scene generation, achieving SOTA results on the Waymo dataset.",
+        "tldr_zh": "FaithFusion 提出了一种新的 3DGS-扩散融合框架，利用像素级的预期信息增益（EIG）来提高可控驾驶场景重建和 3D 场景生成中的几何保真度和视觉合理性，并在 Waymo 数据集上实现了 SOTA 结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Scaling Foundation Models for Radar Scene Understanding",
+        "summary": "Radar sensors provide reliable perception across adverse weather, lighting, and long-range conditions. Recent advances in foundation models have transformed visual and language understanding, yet their integration with radar sensing remains largely underexplored. Existing radar approaches are fragmented and task-specific; each downstream task employs distinct architectures and training objectives, preventing transfer across tasks. In this work, we introduce RadarFM: a radar foundation model that learns unified scene-level representations through structured spatial language supervision. We make two key contributions: (1) a structured caption framework that encodes vehicle distributions in native radar coordinates, and (2) a hash-aware contrastive learning objective that quantifies continuous scene similarity rather than binary matching, enabling fine-grained spatial reasoning. Leveraging the CARLA simulator, we generate large-scale, well-annotated radar datasets across diverse driving scenarios. We also propose localization-aware metrics that assess spatial accuracy beyond traditional detection measures.",
+        "url": "http://arxiv.org/abs/2511.21105v1",
+        "published_date": "2025-11-26T06:41:00+00:00",
+        "updated_date": "2025-11-26T06:41:00+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Pushkal Mishra",
+            "Kshitiz Bansal",
+            "Dinesh Bharadia"
+        ],
+        "tldr": "This paper introduces RadarFM, a radar foundation model that learns unified scene-level representations through structured spatial language supervision, aiming to improve radar perception in autonomous driving, addressing the current fragmented and task-specific nature of radar approaches.",
+        "tldr_zh": "本文介绍了RadarFM，一种雷达基础模型，通过结构化的空间语言监督学习统一的场景级表示，旨在改进自动驾驶中的雷达感知，解决当前雷达方法的碎片化和任务特定性问题。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "AerialMind: Towards Referring Multi-Object Tracking in UAV Scenarios",
+        "summary": "Referring Multi-Object Tracking (RMOT) aims to achieve precise object detection and tracking through natural language instructions, representing a fundamental capability for intelligent robotic systems. However, current RMOT research remains mostly confined to ground-level scenarios, which constrains their ability to capture broad-scale scene contexts and perform comprehensive tracking and path planning. In contrast, Unmanned Aerial Vehicles (UAVs) leverage their expansive aerial perspectives and superior maneuverability to enable wide-area surveillance. Moreover, UAVs have emerged as critical platforms for Embodied Intelligence, which has given rise to an unprecedented demand for intelligent aerial systems capable of natural language interaction. To this end, we introduce AerialMind, the first large-scale RMOT benchmark in UAV scenarios, which aims to bridge this research gap. To facilitate its construction, we develop an innovative semi-automated collaborative agent-based labeling assistant (COALA) framework that significantly reduces labor costs while maintaining annotation quality. Furthermore, we propose HawkEyeTrack (HETrack), a novel method that collaboratively enhances vision-language representation learning and improves the perception of UAV scenarios. Comprehensive experiments validated the challenging nature of our dataset and the effectiveness of our method.",
+        "url": "http://arxiv.org/abs/2511.21053v1",
+        "published_date": "2025-11-26T04:44:27+00:00",
+        "updated_date": "2025-11-26T04:44:27+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Chenglizhao Chen",
+            "Shaofeng Liang",
+            "Runwei Guan",
+            "Xiaolou Sun",
+            "Haocheng Zhao",
+            "Haiyun Jiang",
+            "Tao Huang",
+            "Henghui Ding",
+            "Qing-Long Han"
+        ],
+        "tldr": "The paper introduces AerialMind, the first large-scale RMOT benchmark in UAV scenarios, along with a semi-automated annotation tool and a novel tracking method, to address the gap in language-guided object tracking in aerial environments.",
+        "tldr_zh": "该论文介绍了AerialMind，这是首个无人机场景下的大规模RMOT基准，以及一个半自动标注工具和一个新的跟踪方法，旨在解决空中环境中语言引导的目标跟踪方面的差距。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "V$^{2}$-SAM: Marrying SAM2 with Multi-Prompt Experts for Cross-View Object Correspondence",
+        "summary": "Cross-view object correspondence, exemplified by the representative task of ego-exo object correspondence, aims to establish consistent associations of the same object across different viewpoints (e.g., ego-centric and exo-centric). This task poses significant challenges due to drastic viewpoint and appearance variations, making existing segmentation models, such as SAM2, non-trivial to apply directly. To address this, we present V^2-SAM, a unified cross-view object correspondence framework that adapts SAM2 from single-view segmentation to cross-view correspondence through two complementary prompt generators. Specifically, the Cross-View Anchor Prompt Generator (V^2-Anchor), built upon DINOv3 features, establishes geometry-aware correspondences and, for the first time, unlocks coordinate-based prompting for SAM2 in cross-view scenarios, while the Cross-View Visual Prompt Generator (V^2-Visual) enhances appearance-guided cues via a novel visual prompt matcher that aligns ego-exo representations from both feature and structural perspectives. To effectively exploit the strengths of both prompts, we further adopt a multi-expert design and introduce a Post-hoc Cyclic Consistency Selector (PCCS) that adaptively selects the most reliable expert based on cyclic consistency. Extensive experiments validate the effectiveness of V^2-SAM, achieving new state-of-the-art performance on Ego-Exo4D (ego-exo object correspondence), DAVIS-2017 (video object tracking), and HANDAL-X (robotic-ready cross-view correspondence).",
+        "url": "http://arxiv.org/abs/2511.20886v1",
+        "published_date": "2025-11-25T22:06:30+00:00",
+        "updated_date": "2025-11-25T22:06:30+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jiancheng Pan",
+            "Runze Wang",
+            "Tianwen Qian",
+            "Mohammad Mahdi",
+            "Yanwei Fu",
+            "Xiangyang Xue",
+            "Xiaomeng Huang",
+            "Luc Van Gool",
+            "Danda Pani Paudel",
+            "Yuqian Fu"
+        ],
+        "tldr": "The paper introduces V^2-SAM, a framework that adapts SAM2 for cross-view object correspondence by using two novel prompt generators and a multi-expert design, achieving state-of-the-art results on multiple datasets.",
+        "tldr_zh": "该论文介绍了 V^2-SAM，一个通过使用两个新颖的 prompt 生成器和一个多专家设计，将 SAM2 适配于跨视角物体对应框架，并在多个数据集上实现了最先进的结果。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "3D-Aware Multi-Task Learning with Cross-View Correlations for Dense Scene Understanding",
+        "summary": "This paper addresses the challenge of training a single network to jointly perform multiple dense prediction tasks, such as segmentation and depth estimation, i.e., multi-task learning (MTL). Current approaches mainly capture cross-task relations in the 2D image space, often leading to unstructured features lacking 3D-awareness. We argue that 3D-awareness is vital for modeling cross-task correlations essential for comprehensive scene understanding. We propose to address this problem by integrating correlations across views, i.e., cost volume, as geometric consistency in the MTL network. Specifically, we introduce a lightweight Cross-view Module (CvM), shared across tasks, to exchange information across views and capture cross-view correlations, integrated with a feature from MTL encoder for multi-task predictions. This module is architecture-agnostic and can be applied to both single and multi-view data. Extensive results on NYUv2 and PASCAL-Context demonstrate that our method effectively injects geometric consistency into existing MTL methods to improve performance.",
+        "url": "http://arxiv.org/abs/2511.20646v1",
+        "published_date": "2025-11-25T18:59:34+00:00",
+        "updated_date": "2025-11-25T18:59:34+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Xiaoye Wang",
+            "Chen Tang",
+            "Xiangyu Yue",
+            "Wei-Hong Li"
+        ],
+        "tldr": "The paper proposes a 3D-aware multi-task learning (MTL) approach for dense scene understanding by integrating cross-view correlations using a lightweight Cross-view Module (CvM), demonstrating improved performance on NYUv2 and PASCAL-Context.",
+        "tldr_zh": "该论文提出了一种3D感知多任务学习（MTL）方法，通过集成跨视角相关性，使用轻量级的跨视角模块（CvM）进行密集场景理解，并在NYUv2和PASCAL-Context上展示了性能的提升。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Wanderland: Geometrically Grounded Simulation for Open-World Embodied AI",
+        "summary": "Reproducible closed-loop evaluation remains a major bottleneck in Embodied AI such as visual navigation. A promising path forward is high-fidelity simulation that combines photorealistic sensor rendering with geometrically grounded interaction in complex, open-world urban environments. Although recent video-3DGS methods ease open-world scene capturing, they are still unsuitable for benchmarking due to large visual and geometric sim-to-real gaps. To address these challenges, we introduce Wanderland, a real-to-sim framework that features multi-sensor capture, reliable reconstruction, accurate geometry, and robust view synthesis. Using this pipeline, we curate a diverse dataset of indoor-outdoor urban scenes and systematically demonstrate how image-only pipelines scale poorly, how geometry quality impacts novel view synthesis, and how all of these adversely affect navigation policy learning and evaluation reliability. Beyond serving as a trusted testbed for embodied navigation, Wanderland's rich raw sensor data further allows benchmarking of 3D reconstruction and novel view synthesis models. Our work establishes a new foundation for reproducible research in open-world embodied AI. Project website is at https://ai4ce.github.io/wanderland/.",
+        "url": "http://arxiv.org/abs/2511.20620v1",
+        "published_date": "2025-11-25T18:43:55+00:00",
+        "updated_date": "2025-11-25T18:43:55+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Xinhao Liu",
+            "Jiaqi Li",
+            "Youming Deng",
+            "Ruxin Chen",
+            "Yingjia Zhang",
+            "Yifei Ma",
+            "Li Guo",
+            "Yiming Li",
+            "Jing Zhang",
+            "Chen Feng"
+        ],
+        "tldr": "Wanderland is a real-to-sim framework for generating high-fidelity, geometrically accurate, open-world environments for embodied AI research, addressing the sim-to-real gap that hinders reproducible evaluation in tasks like visual navigation.",
+        "tldr_zh": "Wanderland是一个real-to-sim框架，用于生成高保真、几何精确的开放世界环境，以供具身人工智能研究使用，旨在解决模拟到现实的差距，该差距阻碍了视觉导航等任务的可复现评估。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    }
+]
