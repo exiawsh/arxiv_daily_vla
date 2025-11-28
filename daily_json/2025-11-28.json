@@ -1,0 +1,57 @@
+[
+    {
+        "title": "TraceGen: World Modeling in 3D Trace Space Enables Learning from Cross-Embodiment Videos",
+        "summary": "Learning new robot tasks on new platforms and in new scenes from only a handful of demonstrations remains challenging. While videos of other embodiments - humans and different robots - are abundant, differences in embodiment, camera, and environment hinder their direct use. We address the small-data problem by introducing a unifying, symbolic representation - a compact 3D \"trace-space\" of scene-level trajectories - that enables learning from cross-embodiment, cross-environment, and cross-task videos. We present TraceGen, a world model that predicts future motion in trace-space rather than pixel space, abstracting away appearance while retaining the geometric structure needed for manipulation. To train TraceGen at scale, we develop TraceForge, a data pipeline that transforms heterogeneous human and robot videos into consistent 3D traces, yielding a corpus of 123K videos and 1.8M observation-trace-language triplets. Pretraining on this corpus produces a transferable 3D motion prior that adapts efficiently: with just five target robot videos, TraceGen attains 80% success across four tasks while offering 50-600x faster inference than state-of-the-art video-based world models. In the more challenging case where only five uncalibrated human demonstration videos captured on a handheld phone are available, it still reaches 67.5% success on a real robot, highlighting TraceGen's ability to adapt across embodiments without relying on object detectors or heavy pixel-space generation.",
+        "url": "http://arxiv.org/abs/2511.21690v1",
+        "published_date": "2025-11-26T18:59:55+00:00",
+        "updated_date": "2025-11-26T18:59:55+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Seungjae Lee",
+            "Yoonkyo Jung",
+            "Inkook Chun",
+            "Yao-Chih Lee",
+            "Zikui Cai",
+            "Hongjia Huang",
+            "Aayush Talreja",
+            "Tan Dat Dao",
+            "Yongyuan Liang",
+            "Jia-Bin Huang",
+            "Furong Huang"
+        ],
+        "tldr": "The paper introduces TraceGen, a world model using a 3D trace-space representation for learning robot tasks from cross-embodiment videos, achieving high success rates with minimal target data and significantly faster inference.",
+        "tldr_zh": "该论文介绍了TraceGen，一个使用3D轨迹空间表示的世界模型，用于从跨具身视频中学习机器人任务，仅使用最少的目标数据即可实现高成功率和更快的推理速度。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Uncertainty Quantification for Visual Object Pose Estimation",
+        "summary": "Quantifying the uncertainty of an object's pose estimate is essential for robust control and planning. Although pose estimation is a well-studied robotics problem, attaching statistically rigorous uncertainty is not well understood without strict distributional assumptions. We develop distribution-free pose uncertainty bounds about a given pose estimate in the monocular setting. Our pose uncertainty only requires high probability noise bounds on pixel detections of 2D semantic keypoints on a known object. This noise model induces an implicit, non-convex set of pose uncertainty constraints. Our key contribution is SLUE (S-Lemma Uncertainty Estimation), a convex program to reduce this set to a single ellipsoidal uncertainty bound that is guaranteed to contain the true object pose with high probability. SLUE solves a relaxation of the minimum volume bounding ellipsoid problem inspired by the celebrated S-lemma. It requires no initial guess of the bound's shape or size and is guaranteed to contain the true object pose with high probability. For tighter uncertainty bounds at the same confidence, we extend SLUE to a sum-of-squares relaxation hierarchy which is guaranteed to converge to the minimum volume ellipsoidal uncertainty bound for a given set of keypoint constraints. We show this pose uncertainty bound can easily be projected to independent translation and axis-angle orientation bounds. We evaluate SLUE on two pose estimation datasets and a real-world drone tracking scenario. Compared to prior work, SLUE generates substantially smaller translation bounds and competitive orientation bounds. We release code at https://github.com/MIT-SPARK/PoseUncertaintySets.",
+        "url": "http://arxiv.org/abs/2511.21666v1",
+        "published_date": "2025-11-26T18:39:44+00:00",
+        "updated_date": "2025-11-26T18:39:44+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Lorenzo Shaikewitz",
+            "Charis Georgiou",
+            "Luca Carlone"
+        ],
+        "tldr": "This paper introduces SLUE, a novel convex programming approach for distribution-free pose uncertainty quantification in monocular object pose estimation, achieving tighter uncertainty bounds compared to existing methods.",
+        "tldr_zh": "本文介绍了一种新的凸规划方法SLUE，用于单目物体姿态估计中无分布的姿态不确定性量化，与现有方法相比，实现了更严格的不确定性边界。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    }
+]
