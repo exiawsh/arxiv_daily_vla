@@ -1,0 +1,550 @@
+[
+    {
+        "title": "U4D: Uncertainty-Aware 4D World Modeling from LiDAR Sequences",
+        "summary": "Modeling dynamic 3D environments from LiDAR sequences is central to building reliable 4D worlds for autonomous driving and embodied AI. Existing generative frameworks, however, often treat all spatial regions uniformly, overlooking the varying uncertainty across real-world scenes. This uniform generation leads to artifacts in complex or ambiguous regions, limiting realism and temporal stability. In this work, we present U4D, an uncertainty-aware framework for 4D LiDAR world modeling. Our approach first estimates spatial uncertainty maps from a pretrained segmentation model to localize semantically challenging regions. It then performs generation in a \"hard-to-easy\" manner through two sequential stages: (1) uncertainty-region modeling, which reconstructs high-entropy regions with fine geometric fidelity, and (2) uncertainty-conditioned completion, which synthesizes the remaining areas under learned structural priors. To further ensure temporal coherence, U4D incorporates a mixture of spatio-temporal (MoST) block that adaptively fuses spatial and temporal representations during diffusion. Extensive experiments show that U4D produces geometrically faithful and temporally consistent LiDAR sequences, advancing the reliability of 4D world modeling for autonomous perception and simulation.",
+        "url": "http://arxiv.org/abs/2512.02982v1",
+        "published_date": "2025-12-02T17:59:57+00:00",
+        "updated_date": "2025-12-02T17:59:57+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Xiang Xu",
+            "Ao Liang",
+            "Youquan Liu",
+            "Linfeng Li",
+            "Lingdong Kong",
+            "Ziwei Liu",
+            "Qingshan Liu"
+        ],
+        "tldr": "The paper introduces U4D, an uncertainty-aware framework for 4D LiDAR world modeling that focuses on improving geometric fidelity and temporal consistency by prioritizing the reconstruction of high-uncertainty regions. It advances the reliability of 4D world modeling for autonomous driving.",
+        "tldr_zh": "该论文介绍了U4D，一个不确定性感知的4D激光雷达世界建模框架，通过优先重建高不确定性区域来提高几何保真度和时间一致性，从而提高自动驾驶4D世界建模的可靠性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "TALO: Pushing 3D Vision Foundation Models Towards Globally Consistent Online Reconstruction",
+        "summary": "3D vision foundation models have shown strong generalization in reconstructing key 3D attributes from uncalibrated images through a single feed-forward pass. However, when deployed in online settings such as driving scenarios, predictions are made over temporal windows, making it non-trivial to maintain consistency across time. Recent strategies align consecutive predictions by solving global transformation, yet our analysis reveals their fundamental limitations in assumption validity, local alignment scope, and robustness under noisy geometry. In this work, we propose a higher-DOF and long-term alignment framework based on Thin Plate Spline, leveraging globally propagated control points to correct spatially varying inconsistencies. In addition, we adopt a point-agnostic submap registration design that is inherently robust to noisy geometry predictions. The proposed framework is fully plug-and-play, compatible with diverse 3D foundation models and camera configurations (e.g., monocular or surround-view). Extensive experiments demonstrate that our method consistently yields more coherent geometry and lower trajectory errors across multiple datasets, backbone models, and camera setups, highlighting its robustness and generality. Codes are publicly available at \\href{https://github.com/Xian-Bei/TALO}{https://github.com/Xian-Bei/TALO}.",
+        "url": "http://arxiv.org/abs/2512.02341v1",
+        "published_date": "2025-12-02T02:22:20+00:00",
+        "updated_date": "2025-12-02T02:22:20+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Fengyi Zhang",
+            "Tianjun Zhang",
+            "Kasra Khosoussi",
+            "Zheng Zhang",
+            "Zi Huang",
+            "Yadan Luo"
+        ],
+        "tldr": "This paper introduces TALO, a plug-and-play framework that uses Thin Plate Splines and point-agnostic submap registration to improve the temporal consistency of 3D reconstructions from 3D vision foundation models in online settings like autonomous driving.",
+        "tldr_zh": "本文介绍了一种名为TALO的即插即用框架，该框架利用薄板样条和点无关子图配准来提高在自动驾驶等在线环境中，3D视觉基础模型进行3D重建时的时间一致性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "BEVDilation: LiDAR-Centric Multi-Modal Fusion for 3D Object Detection",
+        "summary": "Integrating LiDAR and camera information in the bird's eye view (BEV) representation has demonstrated its effectiveness in 3D object detection. However, because of the fundamental disparity in geometric accuracy between these sensors, indiscriminate fusion in previous methods often leads to degraded performance. In this paper, we propose BEVDilation, a novel LiDAR-centric framework that prioritizes LiDAR information in the fusion. By formulating image BEV features as implicit guidance rather than naive concatenation, our strategy effectively alleviates the spatial misalignment caused by image depth estimation errors. Furthermore, the image guidance can effectively help the LiDAR-centric paradigm to address the sparsity and semantic limitations of point clouds. Specifically, we propose a Sparse Voxel Dilation Block that mitigates the inherent point sparsity by densifying foreground voxels through image priors. Moreover, we introduce a Semantic-Guided BEV Dilation Block to enhance the LiDAR feature diffusion processing with image semantic guidance and long-range context capture. On the challenging nuScenes benchmark, BEVDilation achieves better performance than state-of-the-art methods while maintaining competitive computational efficiency. Importantly, our LiDAR-centric strategy demonstrates greater robustness to depth noise compared to naive fusion. The source code is available at https://github.com/gwenzhang/BEVDilation.",
+        "url": "http://arxiv.org/abs/2512.02972v1",
+        "published_date": "2025-12-02T17:50:33+00:00",
+        "updated_date": "2025-12-02T17:50:33+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Guowen Zhang",
+            "Chenhang He",
+            "Liyi Chen",
+            "Lei Zhang"
+        ],
+        "tldr": "The paper proposes BEVDilation, a LiDAR-centric multi-modal fusion framework for 3D object detection that addresses misalignment issues between LiDAR and camera data by using image features as implicit guidance, improving performance and robustness, and mitigating point cloud sparsity.",
+        "tldr_zh": "该论文提出了一种名为BEVDilation的激光雷达中心的多模态融合框架，用于3D物体检测。该框架通过将图像特征作为隐式指导来解决激光雷达和相机数据之间的错位问题，从而提高性能和鲁棒性，并减轻点云的稀疏性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "EGGS: Exchangeable 2D/3D Gaussian Splatting for Geometry-Appearance Balanced Novel View Synthesis",
+        "summary": "Novel view synthesis (NVS) is crucial in computer vision and graphics, with wide applications in AR, VR, and autonomous driving. While 3D Gaussian Splatting (3DGS) enables real-time rendering with high appearance fidelity, it suffers from multi-view inconsistencies, limiting geometric accuracy. In contrast, 2D Gaussian Splatting (2DGS) enforces multi-view consistency but compromises texture details. To address these limitations, we propose Exchangeable Gaussian Splatting (EGGS), a hybrid representation that integrates 2D and 3D Gaussians to balance appearance and geometry. To achieve this, we introduce Hybrid Gaussian Rasterization for unified rendering, Adaptive Type Exchange for dynamic adaptation between 2D and 3D Gaussians, and Frequency-Decoupled Optimization that effectively exploits the strengths of each type of Gaussian representation. Our CUDA-accelerated implementation ensures efficient training and inference. Extensive experiments demonstrate that EGGS outperforms existing methods in rendering quality, geometric accuracy, and efficiency, providing a practical solution for high-quality NVS.",
+        "url": "http://arxiv.org/abs/2512.02932v1",
+        "published_date": "2025-12-02T17:01:00+00:00",
+        "updated_date": "2025-12-02T17:01:00+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Yancheng Zhang",
+            "Guangyu Sun",
+            "Chen Chen"
+        ],
+        "tldr": "The paper introduces Exchangeable Gaussian Splatting (EGGS), a novel hybrid 2D/3D Gaussian representation for novel view synthesis that balances appearance fidelity and geometric accuracy, outperforming existing methods in quality, accuracy, and efficiency.",
+        "tldr_zh": "该论文介绍了可交换高斯溅射 (EGGS)，一种用于新视角合成的混合 2D/3D 高斯表示方法，它平衡了外观保真度和几何精度，并在质量、准确性和效率方面优于现有方法。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Polar Perspectives: Evaluating 2-D LiDAR Projections for Robust Place Recognition with Visual Foundation Models",
+        "summary": "This work presents a systematic investigation into how alternative LiDAR-to-image projections affect metric place recognition when coupled with a state-of-the-art vision foundation model. We introduce a modular retrieval pipeline that controls for backbone, aggregation, and evaluation protocol, thereby isolating the influence of the 2-D projection itself. Using consistent geometric and structural channels across multiple datasets and deployment scenarios, we identify the projection characteristics that most strongly determine discriminative power, robustness to environmental variation, and suitability for real-time autonomy. Experiments with different datasets, including integration into an operational place recognition policy, validate the practical relevance of these findings and demonstrate that carefully designed projections can serve as an effective surrogate for end-to-end 3-D learning in LiDAR place recognition.",
+        "url": "http://arxiv.org/abs/2512.02897v1",
+        "published_date": "2025-12-02T16:04:17+00:00",
+        "updated_date": "2025-12-02T16:04:17+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Pierpaolo Serio",
+            "Giulio Pisaneschi",
+            "Andrea Dan Ryals",
+            "Vincenzo Infantino",
+            "Lorenzo Gentilini",
+            "Valentina Donzella",
+            "Lorenzo Pollini"
+        ],
+        "tldr": "This paper investigates the impact of different LiDAR-to-image projections on place recognition using visual foundation models, finding that carefully designed projections can serve as a substitute for end-to-end 3D learning.",
+        "tldr_zh": "本文研究了不同的激光雷达-图像投影方式对使用视觉基础模型的地点识别的影响，发现精心设计的投影可以替代端到端的三维学习。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Diagnose, Correct, and Learn from Manipulation Failures via Visual Symbols",
+        "summary": "Vision-Language-Action (VLA) models have recently achieved remarkable progress in robotic manipulation, yet they remain limited in failure diagnosis and learning from failures. Additionally, existing failure datasets are mostly generated programmatically in simulation, which limits their generalization to the real world. In light of these, we introduce ViFailback, a framework designed to diagnose robotic manipulation failures and provide both textual and visual correction guidance. Our framework utilizes explicit visual symbols to enhance annotation efficiency. We further release the ViFailback dataset, a large-scale collection of 58,126 Visual Question Answering (VQA) pairs along with their corresponding 5,202 real-world manipulation trajectories. Based on the dataset, we establish ViFailback-Bench, a benchmark of 11 fine-grained VQA tasks designed to assess the failure diagnosis and correction abilities of Vision-Language Models (VLMs), featuring ViFailback-Bench Lite for closed-ended and ViFailback-Bench Hard for open-ended evaluation. To demonstrate the effectiveness of our framework, we built the ViFailback-8B VLM, which not only achieves significant overall performance improvement on ViFailback-Bench but also generates visual symbols for corrective action guidance. Finally, by integrating ViFailback-8B with a VLA model, we conduct real-world robotic experiments demonstrating its ability to assist the VLA model in recovering from failures. Project Website: https://x1nyuzhou.github.io/vifailback.github.io/",
+        "url": "http://arxiv.org/abs/2512.02787v1",
+        "published_date": "2025-12-02T14:02:42+00:00",
+        "updated_date": "2025-12-02T14:02:42+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Xianchao Zeng",
+            "Xinyu Zhou",
+            "Youcheng Li",
+            "Jiayou Shi",
+            "Tianle Li",
+            "Liangming Chen",
+            "Lei Ren",
+            "Yong-Lu Li"
+        ],
+        "tldr": "This paper introduces ViFailback, a framework and dataset for diagnosing and correcting robotic manipulation failures using visual symbols, along with a VLM demonstrating its effectiveness in real-world robotic experiments.",
+        "tldr_zh": "本文介绍了一个名为 ViFailback 的框架和数据集，用于诊断和纠正机器人操作失败，该框架使用视觉符号，并提供了一个 VLM 来展示其在真实机器人实验中的有效性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Beyond Paired Data: Self-Supervised UAV Geo-Localization from Reference Imagery Alone",
+        "summary": "Image-based localization in GNSS-denied environments is critical for UAV autonomy. Existing state-of-the-art approaches rely on matching UAV images to geo-referenced satellite images; however, they typically require large-scale, paired UAV-satellite datasets for training. Such data are costly to acquire and often unavailable, limiting their applicability. To address this challenge, we adopt a training paradigm that removes the need for UAV imagery during training by learning directly from satellite-view reference images. This is achieved through a dedicated augmentation strategy that simulates the visual domain shift between satellite and real-world UAV views. We introduce CAEVL, an efficient model designed to exploit this paradigm, and validate it on ViLD, a new and challenging dataset of real-world UAV images that we release to the community. Our method achieves competitive performance compared to approaches trained with paired data, demonstrating its effectiveness and strong generalization capabilities.",
+        "url": "http://arxiv.org/abs/2512.02737v1",
+        "published_date": "2025-12-02T13:21:20+00:00",
+        "updated_date": "2025-12-02T13:21:20+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Tristan Amadei",
+            "Enric Meinhardt-Llopis",
+            "Benedicte Bascle",
+            "Corentin Abgrall",
+            "Gabriele Facciolo"
+        ],
+        "tldr": "This paper presents a self-supervised UAV geo-localization method, CAEVL, that eliminates the need for paired UAV-satellite training data by learning directly from satellite imagery with a novel augmentation strategy, achieving competitive performance on a new real-world UAV dataset (ViLD).",
+        "tldr_zh": "本文提出了一种自监督的无人机地理定位方法 CAEVL，通过一种新颖的增强策略直接从卫星图像中学习，无需配对的无人机-卫星训练数据，并在一个新的真实世界无人机数据集 (ViLD) 上实现了有竞争力的性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "ClimaOoD: Improving Anomaly Segmentation via Physically Realistic Synthetic Data",
+        "summary": "Anomaly segmentation seeks to detect and localize unknown or out-of-distribution (OoD) objects that fall outside predefined semantic classes a capability essential for safe autonomous driving. However, the scarcity and limited diversity of anomaly data severely constrain model generalization in open-world environments. Existing approaches mitigate this issue through synthetic data generation, either by copy-pasting external objects into driving scenes or by leveraging text-to-image diffusion models to inpaint anomalous regions. While these methods improve anomaly diversity, they often lack contextual coherence and physical realism, resulting in domain gaps between synthetic and real data. In this paper, we present ClimaDrive, a semantics-guided image-to-image framework for synthesizing semantically coherent, weather-diverse, and physically plausible OoD driving data. ClimaDrive unifies structure-guided multi-weather generation with prompt-driven anomaly inpainting, enabling the creation of visually realistic training data. Based on this framework, we construct ClimaOoD, a large-scale benchmark spanning six representative driving scenarios under both clear and adverse weather conditions. Extensive experiments on four state-of-the-art methods show that training with ClimaOoD leads to robust improvements in anomaly segmentation. Across all methods, AUROC, AP, and FPR95 show notable gains, with FPR95 dropping from 3.97 to 3.52 for RbA on Fishyscapes LAF. These results demonstrate that ClimaOoD enhances model robustness, offering valuable training data for better generalization in open-world anomaly detection.",
+        "url": "http://arxiv.org/abs/2512.02686v1",
+        "published_date": "2025-12-02T12:14:19+00:00",
+        "updated_date": "2025-12-02T12:14:19+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yuxing Liu",
+            "Yong Liu"
+        ],
+        "tldr": "The paper introduces ClimaOoD, a framework for generating physically realistic synthetic data for anomaly segmentation in autonomous driving, addressing the scarcity of real-world anomaly data and domain gaps in existing synthetic data methods. It demonstrates improvements in anomaly segmentation performance across various weather conditions.",
+        "tldr_zh": "该论文介绍了ClimaOoD，一个用于生成物理上真实的合成数据，以用于自动驾驶中异常分割的框架，解决了真实世界异常数据稀缺和现有合成数据方法中存在的领域差距问题。结果表明，该方法在各种天气条件下均能提高异常分割的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "SAM2Grasp: Resolve Multi-modal Grasping via Prompt-conditioned Temporal Action Prediction",
+        "summary": "Imitation learning for robotic grasping is often plagued by the multimodal problem: when a scene contains multiple valid targets, demonstrations of grasping different objects create conflicting training signals. Standard imitation learning policies fail by averaging these distinct actions into a single, invalid action. In this paper, we introduce SAM2Grasp, a novel framework that resolves this issue by reformulating the task as a uni-modal, prompt-conditioned prediction problem. Our method leverages the frozen SAM2 model to use its powerful visual temporal tracking capability and introduces a lightweight, trainable action head that operates in parallel with its native segmentation head. This design allows for training only the small action head on pre-computed temporal-visual features from SAM2. During inference, an initial prompt, such as a bounding box provided by an upstream object detection model, designates the specific object to be grasped. This prompt conditions the action head to predict a unique, unambiguous grasp trajectory for that object alone. In all subsequent video frames, SAM2's built-in temporal tracking capability automatically maintains stable tracking of the selected object, enabling our model to continuously predict the grasp trajectory from the video stream without further external guidance. This temporal-prompted approach effectively eliminates ambiguity from the visuomotor policy. We demonstrate through extensive experiments that SAM2Grasp achieves state-of-the-art performance in cluttered, multi-object grasping tasks.",
+        "url": "http://arxiv.org/abs/2512.02609v1",
+        "published_date": "2025-12-02T10:15:00+00:00",
+        "updated_date": "2025-12-02T10:15:00+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Shengkai Wu",
+            "Jinrong Yang",
+            "Wenqiu Luo",
+            "Linfeng Gao",
+            "Chaohui Shang",
+            "Meiyu Zhi",
+            "Mingshan Sun",
+            "Fangping Yang",
+            "Liangliang Ren",
+            "Yong Zhao"
+        ],
+        "tldr": "SAM2Grasp addresses the multimodal grasping problem by using a prompt-conditioned action head operating in parallel with the SAM2 model's segmentation head, achieving state-of-the-art performance in cluttered environments.",
+        "tldr_zh": "SAM2Grasp通过使用提示条件下的动作头与SAM2模型的分割头并行工作，解决了多模态抓取问题，并在杂乱环境中实现了最先进的性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "AVGGT: Rethinking Global Attention for Accelerating VGGT",
+        "summary": "Since DUSt3R, models such as VGGT and $π^3$ have shown strong multi-view 3D performance, but their heavy reliance on global self-attention results in high computational cost. Existing sparse-attention variants offer partial speedups, yet lack a systematic analysis of how global attention contributes to multi-view reasoning. In this paper, we first conduct an in-depth investigation of the global attention modules in VGGT and $π^3$ to better understand their roles. Our analysis reveals a clear division of roles in the alternating global-frame architecture: early global layers do not form meaningful correspondences, middle layers perform cross-view alignment, and last layers provide only minor refinements. Guided by these findings, we propose a training-free two-step acceleration scheme: (1) converting early global layers into frame attention, and (2) subsampling global attention by subsampling K/V over patch tokens with diagonal preservation and a mean-fill component. We instantiate this strategy on VGGT and $π^3$ and evaluate across standard pose and point-map benchmarks. Our method achieves up to $8$-$10\\times$ speedup in inference time while matching or slightly improving the accuracy of the original models, and remains robust even in extremely dense multi-view settings where prior sparse-attention baselines fail.",
+        "url": "http://arxiv.org/abs/2512.02541v1",
+        "published_date": "2025-12-02T09:08:18+00:00",
+        "updated_date": "2025-12-02T09:08:18+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Xianbing Sun",
+            "Zhikai Zhu",
+            "Zhengyu Lou",
+            "Bo Yang",
+            "Jinyang Tang",
+            "Liqing Zhang",
+            "He Wang",
+            "Jianfu Zhang"
+        ],
+        "tldr": "The paper proposes a training-free acceleration scheme for VGGT and related models by converting early global attention layers to frame attention and subsampling global attention, achieving significant speedups with maintained or improved accuracy.",
+        "tldr_zh": "该论文提出了一种无需训练的 VGGT 及相关模型加速方案，通过将早期全局注意力层转换为帧注意力，并对全局注意力进行子采样，实现了显著的加速，同时保持或提高了准确性。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Masking Matters: Unlocking the Spatial Reasoning Capabilities of LLMs for 3D Scene-Language Understanding",
+        "summary": "Recent advances in 3D scene-language understanding have leveraged Large Language Models (LLMs) for 3D reasoning by transferring their general reasoning ability to 3D multi-modal contexts. However, existing methods typically adopt standard decoders from language modeling, which rely on a causal attention mask. This design introduces two fundamental conflicts in 3D scene understanding: sequential bias among order-agnostic 3D objects and restricted object-instruction attention, hindering task-specific reasoning. To overcome these limitations, we propose 3D Spatial Language Instruction Mask (3D-SLIM), an effective masking strategy that replaces the causal mask with an adaptive attention mask tailored to the spatial structure of 3D scenes. Our 3D-SLIM introduces two key components: a Geometry-adaptive Mask that constrains attention based on spatial density rather than token order, and an Instruction-aware Mask that enables object tokens to directly access instruction context. This design allows the model to process objects based on their spatial relationships while being guided by the user's task. 3D-SLIM is simple, requires no architectural modifications, and adds no extra parameters, yet it yields substantial performance improvements across diverse 3D scene-language tasks. Extensive experiments across multiple benchmarks and LLM baselines validate its effectiveness and underscore the critical role of decoder design in 3D multi-modal reasoning.",
+        "url": "http://arxiv.org/abs/2512.02487v1",
+        "published_date": "2025-12-02T07:22:36+00:00",
+        "updated_date": "2025-12-02T07:22:36+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Yerim Jeon",
+            "Miso Lee",
+            "WonJun Moon",
+            "Jae-Pil Heo"
+        ],
+        "tldr": "This paper introduces 3D-SLIM, a novel masking strategy for LLMs that improves 3D scene-language understanding by addressing limitations of causal attention masks in processing order-agnostic 3D objects and instruction context, achieving significant performance gains without architectural changes or extra parameters.",
+        "tldr_zh": "本文介绍了3D-SLIM，一种新颖的LLM掩码策略，通过解决因果注意力掩码在处理与顺序无关的3D对象和指令上下文方面的局限性，从而提高了3D场景语言理解能力，并在不进行架构更改或增加额外参数的情况下实现了显著的性能提升。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Vision to Geometry: 3D Spatial Memory for Sequential Embodied MLLM Reasoning and Exploration",
+        "summary": "Existing research on indoor embodied tasks typically requires agents to actively explore unknown environments and reason about the scene to achieve a specific goal. However, when deployed in real life, agents often face sequential tasks, where each new sub-task follows the completion of the previous one, and certain sub-tasks may be infeasible, such as searching for a non-existent object. Compared with the single-task setting, the core challenge lies in reusing spatial knowledge accumulated from previous explorations to support subsequent reasoning and exploration. In this work, we investigate this underexplored yet practically significant embodied AI challenge. To evaluate this challenge, we introduce SEER-Bench, a new Sequential Embodied Exploration and Reasoning Benchmark encompassing encompassing two classic embodied tasks: Embodied Question Answering (EQA) and Embodied Multi-modal Navigation (EMN). Building on SEER-Bench, we propose 3DSPMR, a 3D SPatial Memory Reasoning approach that exploits relational, visual, and geometric cues from explored regions to augment Multi-Modal Large Language Models (MLLMs) for reasoning and exploration in sequential embodied tasks. To the best of our knowledge, this is the first work to explicitly incorporate geometric information into MLLM-based spatial understanding and reasoning. Extensive experiments verify that 3DSPMR achieves substantial performance gains on both sequential EQA and EMN tasks.",
+        "url": "http://arxiv.org/abs/2512.02458v1",
+        "published_date": "2025-12-02T06:35:30+00:00",
+        "updated_date": "2025-12-02T06:35:30+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zhongyi Cai",
+            "Yi Du",
+            "Chen Wang",
+            "Yu Kong"
+        ],
+        "tldr": "The paper introduces SEER-Bench for evaluating sequential embodied AI tasks and proposes 3DSPMR, a method incorporating geometric information into MLLMs to improve performance on sequential embodied question answering and navigation.",
+        "tldr_zh": "该论文介绍了SEER-Bench，用于评估序列式具身人工智能任务，并提出了3DSPMR，一种将几何信息融入多模态大语言模型的方法，以提高在序列式具身问答和导航任务上的表现。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "nuScenes Revisited: Progress and Challenges in Autonomous Driving",
+        "summary": "Autonomous Vehicles (AV) and Advanced Driver Assistance Systems (ADAS) have been revolutionized by Deep Learning. As a data-driven approach, Deep Learning relies on vast amounts of driving data, typically labeled in great detail. As a result, datasets, alongside hardware and algorithms, are foundational building blocks for the development of AVs. In this work we revisit one of the most widely used autonomous driving datasets: the nuScenes dataset. nuScenes exemplifies key trends in AV development, being the first dataset to include radar data, to feature diverse urban driving scenes from two continents, and to be collected using a fully autonomous vehicle operating on public roads, while also promoting multi-modal sensor fusion, standardized benchmarks, and a broad range of tasks including perception, localization \\& mapping, prediction and planning. We provide an unprecedented look into the creation of nuScenes, as well as its extensions nuImages and Panoptic nuScenes, summarizing many technical details that have hitherto not been revealed in academic publications. Furthermore, we trace how the influence of nuScenes impacted a large number of other datasets that were released later and how it defined numerous standards that are used by the community to this day. Finally, we present an overview of both official and unofficial tasks using the nuScenes dataset and review major methodological developments, thereby offering a comprehensive survey of the autonomous driving literature, with a particular focus on nuScenes.",
+        "url": "http://arxiv.org/abs/2512.02448v1",
+        "published_date": "2025-12-02T06:14:28+00:00",
+        "updated_date": "2025-12-02T06:14:28+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Whye Kit Fong",
+            "Venice Erin Liong",
+            "Kok Seang Tan",
+            "Holger Caesar"
+        ],
+        "tldr": "This paper revisits the nuScenes dataset, providing insights into its creation, impact on the autonomous driving field, and a comprehensive overview of tasks and methodological developments associated with it.",
+        "tldr_zh": "本文回顾了nuScenes数据集，深入了解了其创建过程、对自动驾驶领域的影响，并全面概述了与其相关的任务和方法论发展。",
+        "relevance_score": 9,
+        "novelty_claim_score": 6,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Multi-Domain Enhanced Map-Free Trajectory Prediction with Selective Attention",
+        "summary": "Trajectory prediction is crucial for the reliability and safety of autonomous driving systems, yet it remains a challenging task in complex interactive scenarios. Existing methods often struggle to efficiently extract valuable scene information from redundant data, thereby reducing computational efficiency and prediction accuracy, especially when dealing with intricate agent interactions. To address these challenges, we propose a novel map-free trajectory prediction algorithm that achieves trajectory prediction across the temporal, spatial, and frequency domains. Specifically, in temporal information processing, We utilize a Mixture of Experts (MoE) mechanism to adaptively select critical frequency components. Concurrently, we extract these components and integrate multi-scale temporal features. Subsequently, a selective attention module is proposed to filter out redundant information in both temporal sequences and spatial interactions. Finally, we design a multimodal decoder. Under the supervision of patch-level and point-level losses, we obtain reasonable trajectory results. Experiments on Nuscences datasets demonstrate the superiority of our algorithm, validating its effectiveness in handling complex interactive scenarios.",
+        "url": "http://arxiv.org/abs/2512.02368v1",
+        "published_date": "2025-12-02T03:20:07+00:00",
+        "updated_date": "2025-12-02T03:20:07+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Wenyi Xiong",
+            "Jian Chen"
+        ],
+        "tldr": "This paper introduces a map-free trajectory prediction algorithm using a Mixture of Experts (MoE) mechanism, selective attention, and a multimodal decoder to improve prediction accuracy and computational efficiency in complex autonomous driving scenarios. Experiments on the NuScenes dataset demonstrate its effectiveness.",
+        "tldr_zh": "该论文提出了一种无需地图的轨迹预测算法，利用混合专家机制（MoE）、选择性注意力机制和多模态解码器，以提高复杂自动驾驶场景中的预测精度和计算效率。在NuScenes数据集上的实验证明了其有效性。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "VIGS-SLAM: Visual Inertial Gaussian Splatting SLAM",
+        "summary": "We present VIGS-SLAM, a visual-inertial 3D Gaussian Splatting SLAM system that achieves robust real-time tracking and high-fidelity reconstruction. Although recent 3DGS-based SLAM methods achieve dense and photorealistic mapping, their purely visual design degrades under motion blur, low texture, and exposure variations. Our method tightly couples visual and inertial cues within a unified optimization framework, jointly refining camera poses, depths, and IMU states. It features robust IMU initialization, time-varying bias modeling, and loop closure with consistent Gaussian updates. Experiments on four challenging datasets demonstrate our superiority over state-of-the-art methods. Project page: https://vigs-slam.github.io",
+        "url": "http://arxiv.org/abs/2512.02293v1",
+        "published_date": "2025-12-02T00:19:13+00:00",
+        "updated_date": "2025-12-02T00:19:13+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Zihan Zhu",
+            "Wei Zhang",
+            "Norbert Haala",
+            "Marc Pollefeys",
+            "Daniel Barath"
+        ],
+        "tldr": "VIGS-SLAM is a novel visual-inertial SLAM system using 3D Gaussian Splatting that improves robustness and reconstruction quality in challenging conditions by tightly coupling visual and inertial data.",
+        "tldr_zh": "VIGS-SLAM是一个新颖的视觉惯性SLAM系统，它使用3D高斯溅射，通过紧密耦合视觉和惯性数据，提高了在具有挑战性的条件下的鲁棒性和重建质量。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "RoaD: Rollouts as Demonstrations for Closed-Loop Supervised Fine-Tuning of Autonomous Driving Policies",
+        "summary": "Autonomous driving policies are typically trained via open-loop behavior cloning of human demonstrations. However, such policies suffer from covariate shift when deployed in closed loop, leading to compounding errors. We introduce Rollouts as Demonstrations (RoaD), a simple and efficient method to mitigate covariate shift by leveraging the policy's own closed-loop rollouts as additional training data. During rollout generation, RoaD incorporates expert guidance to bias trajectories toward high-quality behavior, producing informative yet realistic demonstrations for fine-tuning. This approach enables robust closed-loop adaptation with orders of magnitude less data than reinforcement learning, and avoids restrictive assumptions of prior closed-loop supervised fine-tuning (CL-SFT) methods, allowing broader applications domains including end-to-end driving. We demonstrate the effectiveness of RoaD on WOSAC, a large-scale traffic simulation benchmark, where it performs similar or better than the prior CL-SFT method; and in AlpaSim, a high-fidelity neural reconstruction-based simulator for end-to-end driving, where it improves driving score by 41\\% and reduces collisions by 54\\%.",
+        "url": "http://arxiv.org/abs/2512.01993v1",
+        "published_date": "2025-12-01T18:52:03+00:00",
+        "updated_date": "2025-12-01T18:52:03+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Guillermo Garcia-Cobo",
+            "Maximilian Igl",
+            "Peter Karkus",
+            "Zhejun Zhang",
+            "Michael Watson",
+            "Yuxiao Chen",
+            "Boris Ivanovic",
+            "Marco Pavone"
+        ],
+        "tldr": "The paper introduces RoaD, a method that uses closed-loop rollouts with expert guidance to fine-tune autonomous driving policies, mitigating covariate shift and improving performance with less data than reinforcement learning.",
+        "tldr_zh": "该论文介绍了一种名为RoaD的方法，该方法使用带有专家指导的闭环rollout来微调自动驾驶策略，从而减轻了协变量偏移，并以比强化学习更少的数据提高了性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Artemis: Structured Visual Reasoning for Perception Policy Learning",
+        "summary": "Recent reinforcement-learning frameworks for visual perception policy have begun to incorporate intermediate reasoning chains expressed in natural language. Empirical observations indicate that such purely linguistic intermediate reasoning often reduces performance on perception tasks. We argue that the core issue lies not in reasoning per se but in the form of reasoning: while these chains perform semantic reasoning in an unstructured linguistic space, visual perception requires reasoning in a spatial and object-centric space. In response, we introduce Artemis, a perception-policy learning framework that performs structured proposal-based reasoning, where each intermediate step is represented as a (label, bounding-box) pair capturing a verifiable visual state. This design enables explicit tracking of intermediate states, direct supervision for proposal quality, and avoids ambiguity introduced by language-based reasoning. Artemis is built on Qwen2.5-VL-3B, achieves strong performance on grounding and detection task and exhibits substantial generalization to counting and geometric-perception tasks. The consistent improvements across these diverse settings confirm that aligning reasoning with spatial representations enhances perception-policy learning. Owing to its strengthened visual reasoning, Artemis also achieves competitive performance on general MLLM benchmarks, illustrating that spatially grounded reasoning provides a principled route toward scalable and general perception policies.",
+        "url": "http://arxiv.org/abs/2512.01988v1",
+        "published_date": "2025-12-01T18:45:30+00:00",
+        "updated_date": "2025-12-01T18:45:30+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Wei Tang",
+            "Yanpeng Sun",
+            "Shan Zhang",
+            "Xiaofan Li",
+            "Piotr Koniusz",
+            "Wei Li",
+            "Na Zhao",
+            "Zechao Li"
+        ],
+        "tldr": "Artemis introduces a perception-policy learning framework that uses structured proposal-based reasoning with (label, bounding-box) pairs for intermediate steps, improving performance on visual perception tasks by aligning reasoning with spatial representations.",
+        "tldr_zh": "Artemis 提出了一种感知策略学习框架，该框架采用基于结构化提议的推理，使用 (标签，边界框) 对作为中间步骤，通过将推理与空间表示对齐，提高了视觉感知任务的性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "GrndCtrl: Grounding World Models via Self-Supervised Reward Alignment",
+        "summary": "Recent advances in video world modeling have enabled large-scale generative models to simulate embodied environments with high visual fidelity, providing strong priors for prediction, planning, and control. Yet, despite their realism, these models often lack geometric grounding, limiting their use in navigation tasks that require spatial coherence and long-horizon stability. We introduce Reinforcement Learning with World Grounding (RLWG), a self-supervised post-training framework that aligns pretrained world models with a physically verifiable structure through geometric and perceptual rewards. Analogous to reinforcement learning from verifiable feedback (RLVR) in language models, RLWG can use multiple rewards that measure pose cycle-consistency, depth reprojection, and temporal coherence. We instantiate this framework with GrndCtrl, a reward-aligned adaptation method based on Group Relative Policy Optimization (GRPO), yielding world models that maintain stable trajectories, consistent geometry, and reliable rollouts for embodied navigation. Like post-training alignment in large language models, GrndCtrl leverages verifiable rewards to bridge generative pretraining and grounded behavior, achieving superior spatial coherence and navigation stability over supervised fine-tuning in outdoor environments.",
+        "url": "http://arxiv.org/abs/2512.01952v1",
+        "published_date": "2025-12-01T18:03:29+00:00",
+        "updated_date": "2025-12-01T18:03:29+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG",
+            "cs.RO"
+        ],
+        "authors": [
+            "Haoyang He",
+            "Jay Patrikar",
+            "Dong-Ki Kim",
+            "Max Smith",
+            "Daniel McGann",
+            "Ali-akbar Agha-mohammadi",
+            "Shayegan Omidshafiei",
+            "Sebastian Scherer"
+        ],
+        "tldr": "The paper introduces GrndCtrl, a self-supervised post-training framework for aligning pretrained video world models with geometric and perceptual rewards to improve spatial coherence and navigation stability in embodied environments.",
+        "tldr_zh": "该论文介绍了GrndCtrl，一个自监督的后训练框架，通过几何和感知奖励将预训练的视频世界模型对齐，从而提高具身环境中的空间连贯性和导航稳定性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "ReVSeg: Incentivizing the Reasoning Chain for Video Segmentation with Reinforcement Learning",
+        "summary": "Reasoning-centric video object segmentation is an inherently complex task: the query often refers to dynamics, causality, and temporal interactions, rather than static appearances. Yet existing solutions generally collapse these factors into simplified reasoning with latent embeddings, rendering the reasoning chain opaque and essentially intractable. We therefore adopt an explicit decomposition perspective and introduce ReVSeg, which executes reasoning as sequential decisions in the native interface of pretrained vision language models (VLMs). Rather than folding all reasoning into a single-step prediction, ReVSeg executes three explicit operations -- semantics interpretation, temporal evidence selection, and spatial grounding -- aligning pretrained capabilities. We further employ reinforcement learning to optimize the multi-step reasoning chain, enabling the model to self-refine its decision quality from outcome-driven signals. Experimental results demonstrate that ReVSeg attains state-of-the-art performances on standard video object segmentation benchmarks and yields interpretable reasoning trajectories. Project page is available at https://clementine24.github.io/ReVSeg/ .",
+        "url": "http://arxiv.org/abs/2512.02835v1",
+        "published_date": "2025-12-02T14:44:12+00:00",
+        "updated_date": "2025-12-02T14:44:12+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.CL"
+        ],
+        "authors": [
+            "Yifan Li",
+            "Yingda Yin",
+            "Lingting Zhu",
+            "Weikai Chen",
+            "Shengju Qian",
+            "Xin Wang",
+            "Yanwei Fu"
+        ],
+        "tldr": "ReVSeg uses reinforcement learning to optimize a decomposed, multi-step reasoning process within a vision-language model for video object segmentation, achieving state-of-the-art results and interpretable reasoning.",
+        "tldr_zh": "ReVSeg 使用强化学习优化视频对象分割中视觉-语言模型的多步骤推理过程，实现了最先进的结果和可解释的推理轨迹。",
+        "relevance_score": 6,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "Nav-$R^2$ Dual-Relation Reasoning for Generalizable Open-Vocabulary Object-Goal Navigation",
+        "summary": "Object-goal navigation in open-vocabulary settings requires agents to locate novel objects in unseen environments, yet existing approaches suffer from opaque decision-making processes and low success rate on locating unseen objects. To address these challenges, we propose Nav-$R^2$, a framework that explicitly models two critical types of relationships, target-environment modeling and environment-action planning, through structured Chain-of-Thought (CoT) reasoning coupled with a Similarity-Aware Memory. We construct a Nav$R^2$-CoT dataset that teaches the model to perceive the environment, focus on target-related objects in the surrounding context and finally make future action plans. Our SA-Mem preserves the most target-relevant and current observation-relevant features from both temporal and semantic perspectives by compressing video frames and fusing historical observations, while introducing no additional parameters. Compared to previous methods, Nav-R^2 achieves state-of-the-art performance in localizing unseen objects through a streamlined and efficient pipeline, avoiding overfitting to seen object categories while maintaining real-time inference at 2Hz. Resources will be made publicly available at \\href{https://github.com/AMAP-EAI/Nav-R2}{github link}.",
+        "url": "http://arxiv.org/abs/2512.02400v1",
+        "published_date": "2025-12-02T04:21:02+00:00",
+        "updated_date": "2025-12-02T04:21:02+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Wentao Xiang",
+            "Haokang Zhang",
+            "Tianhang Yang",
+            "Zedong Chu",
+            "Ruihang Chu",
+            "Shichao Xie",
+            "Yujian Yuan",
+            "Jian Sun",
+            "Zhining Gu",
+            "Junjie Wang",
+            "Xiaolong Wu",
+            "Mu Xu",
+            "Yujiu Yang"
+        ],
+        "tldr": "The paper introduces Nav-$R^2$, a novel framework for open-vocabulary object-goal navigation that uses Chain-of-Thought reasoning and a Similarity-Aware Memory to improve the localization of unseen objects in unseen environments, achieving state-of-the-art performance.",
+        "tldr_zh": "该论文介绍了一种名为Nav-$R^2$的新框架，用于开放词汇目标导航。该框架利用思维链推理和相似性感知记忆来提高在未见过的环境中定位未见过的物体的能力，并实现了最先进的性能。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "EfficientFlow: Efficient Equivariant Flow Policy Learning for Embodied AI",
+        "summary": "Generative modeling has recently shown remarkable promise for visuomotor policy learning, enabling flexible and expressive control across diverse embodied AI tasks. However, existing generative policies often struggle with data inefficiency, requiring large-scale demonstrations, and sampling inefficiency, incurring slow action generation during inference. We introduce EfficientFlow, a unified framework for efficient embodied AI with flow-based policy learning. To enhance data efficiency, we bring equivariance into flow matching. We theoretically prove that when using an isotropic Gaussian prior and an equivariant velocity prediction network, the resulting action distribution remains equivariant, leading to improved generalization and substantially reduced data demands. To accelerate sampling, we propose a novel acceleration regularization strategy. As direct computation of acceleration is intractable for marginal flow trajectories, we derive a novel surrogate loss that enables stable and scalable training using only conditional trajectories. Across a wide range of robotic manipulation benchmarks, the proposed algorithm achieves competitive or superior performance under limited data while offering dramatically faster inference. These results highlight EfficientFlow as a powerful and efficient paradigm for high-performance embodied AI.",
+        "url": "http://arxiv.org/abs/2512.02020v1",
+        "published_date": "2025-12-01T18:59:59+00:00",
+        "updated_date": "2025-12-01T18:59:59+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Jianlei Chang",
+            "Ruofeng Mei",
+            "Wei Ke",
+            "Xiangyu Xu"
+        ],
+        "tldr": "EfficientFlow introduces an equivariant flow-based policy learning framework for embodied AI that improves data efficiency and inference speed through equivariance and acceleration regularization, achieving strong performance on robotic manipulation tasks with limited data.",
+        "tldr_zh": "EfficientFlow 提出了一种用于具身人工智能的等变流策略学习框架，通过等变性和加速正则化提高了数据效率和推理速度，在有限数据下实现了机器人操作任务的强大性能。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
