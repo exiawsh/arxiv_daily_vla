@@ -1,0 +1,496 @@
+[
+    {
+        "title": "DIQ-H: Evaluating Hallucination Persistence in VLMs Under Temporal Visual Degradation",
+        "summary": "Vision-Language Models (VLMs) deployed in safety-critical applications such as autonomous driving must handle continuous visual streams under imperfect conditions. However, existing benchmarks focus on static, high-quality images and ignore temporal degradation and error propagation, which are critical failure modes where transient visual corruption induces hallucinations that persist across subsequent frames. We introduce DIQ-H, the first benchmark for evaluating VLM robustness under dynamic visual degradation in temporal sequences. DIQ-H applies physics-based corruptions including motion blur, sensor noise, and compression artifacts, and measures hallucination persistence, error recovery, and temporal consistency through multi-turn question-answering tasks. To enable scalable annotation, we propose Uncertainty-Guided Iterative Refinement (UIR), which generates reliable pseudo-ground-truth using lightweight VLMs with uncertainty filtering, achieving a 15.3 percent accuracy improvement. Experiments on 16 state-of-the-art VLMs reveal substantial robustness gaps: even advanced models such as GPT-4o achieve only a 78.5 percent recovery rate, while open-source models struggle with temporal consistency at less than 60 percent. DIQ-H provides a comprehensive platform for evaluating VLM reliability in real-world deployments.",
+        "url": "http://arxiv.org/abs/2512.03992v1",
+        "published_date": "2025-12-03T17:22:29+00:00",
+        "updated_date": "2025-12-03T17:22:29+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Zexin Lin",
+            "Hawen Wan",
+            "Yebin Zhong",
+            "Xiaoqiang"
+        ],
+        "tldr": "The paper introduces DIQ-H, a new benchmark for evaluating the robustness of Vision-Language Models (VLMs) under dynamic visual degradation in temporal sequences, revealing significant performance gaps in even state-of-the-art models.",
+        "tldr_zh": "该论文介绍了 DIQ-H，一个新的基准，用于评估视觉语言模型 (VLM) 在动态视觉退化序列下的鲁棒性，揭示了即使是最先进的模型也存在显著的性能差距。",
+        "relevance_score": 9,
+        "novelty_claim_score": 9,
+        "clarity_score": 10,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Motion4D: Learning 3D-Consistent Motion and Semantics for 4D Scene Understanding",
+        "summary": "Recent advancements in foundation models for 2D vision have substantially improved the analysis of dynamic scenes from monocular videos. However, despite their strong generalization capabilities, these models often lack 3D consistency, a fundamental requirement for understanding scene geometry and motion, thereby causing severe spatial misalignment and temporal flickering in complex 3D environments. In this paper, we present Motion4D, a novel framework that addresses these challenges by integrating 2D priors from foundation models into a unified 4D Gaussian Splatting representation. Our method features a two-part iterative optimization framework: 1) Sequential optimization, which updates motion and semantic fields in consecutive stages to maintain local consistency, and 2) Global optimization, which jointly refines all attributes for long-term coherence. To enhance motion accuracy, we introduce a 3D confidence map that dynamically adjusts the motion priors, and an adaptive resampling process that inserts new Gaussians into under-represented regions based on per-pixel RGB and semantic errors. Furthermore, we enhance semantic coherence through an iterative refinement process that resolves semantic inconsistencies by alternately optimizing the semantic fields and updating prompts of SAM2. Extensive evaluations demonstrate that our Motion4D significantly outperforms both 2D foundation models and existing 3D-based approaches across diverse scene understanding tasks, including point-based tracking, video object segmentation, and novel view synthesis. Our code is available at https://hrzhou2.github.io/motion4d-web/.",
+        "url": "http://arxiv.org/abs/2512.03601v1",
+        "published_date": "2025-12-03T09:32:56+00:00",
+        "updated_date": "2025-12-03T09:32:56+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Haoran Zhou",
+            "Gim Hee Lee"
+        ],
+        "tldr": "Motion4D introduces a novel framework integrating 2D foundation model priors into a 4D Gaussian Splatting representation for 3D-consistent dynamic scene understanding, outperforming existing methods in various tasks.",
+        "tldr_zh": "Motion4D 提出了一种新颖的框架，将 2D 基础模型的先验知识集成到 4D 高斯溅射表示中，以实现 3D 一致的动态场景理解，并在各种任务中优于现有方法。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "CSMapping: Scalable Crowdsourced Semantic Mapping and Topology Inference for Autonomous Driving",
+        "summary": "Crowdsourcing enables scalable autonomous driving map construction, but low-cost sensor noise hinders quality from improving with data volume. We propose CSMapping, a system that produces accurate semantic maps and topological road centerlines whose quality consistently increases with more crowdsourced data. For semantic mapping, we train a latent diffusion model on HD maps (optionally conditioned on SD maps) to learn a generative prior of real-world map structure, without requiring paired crowdsourced/HD-map supervision. This prior is incorporated via constrained MAP optimization in latent space, ensuring robustness to severe noise and plausible completion in unobserved areas. Initialization uses a robust vectorized mapping module followed by diffusion inversion; optimization employs efficient Gaussian-basis reparameterization, projected gradient descent zobracket multi-start, and latent-space factor-graph for global consistency. For topological mapping, we apply confidence-weighted k-medoids clustering and kinematic refinement to trajectories, yielding smooth, human-like centerlines robust to trajectory variation. Experiments on nuScenes, Argoverse 2, and a large proprietary dataset achieve state-of-the-art semantic and topological mapping performance, with thorough ablation and scalability studies.",
+        "url": "http://arxiv.org/abs/2512.03510v1",
+        "published_date": "2025-12-03T07:06:18+00:00",
+        "updated_date": "2025-12-03T07:06:18+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Zhijian Qiao",
+            "Zehuan Yu",
+            "Tong Li",
+            "Chih-Chung Chou",
+            "Wenchao Ding",
+            "Shaojie Shen"
+        ],
+        "tldr": "CSMapping addresses the challenge of constructing high-quality semantic and topological maps for autonomous driving from noisy, crowdsourced data using a latent diffusion model for semantic mapping and confidence-weighted k-medoids clustering for topological mapping.",
+        "tldr_zh": "CSMapping提出了一种利用潜在扩散模型进行语义地图构建，以及利用置信度加权k-medoids聚类进行拓扑地图构建的方法，解决了从嘈杂的众包数据中为自动驾驶构建高质量语义和拓扑地图的难题。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Video4Spatial: Towards Visuospatial Intelligence with Context-Guided Video Generation",
+        "summary": "We investigate whether video generative models can exhibit visuospatial intelligence, a capability central to human cognition, using only visual data. To this end, we present Video4Spatial, a framework showing that video diffusion models conditioned solely on video-based scene context can perform complex spatial tasks. We validate on two tasks: scene navigation - following camera-pose instructions while remaining consistent with 3D geometry of the scene, and object grounding - which requires semantic localization, instruction following, and planning. Both tasks use video-only inputs, without auxiliary modalities such as depth or poses. With simple yet effective design choices in the framework and data curation, Video4Spatial demonstrates strong spatial understanding from video context: it plans navigation and grounds target objects end-to-end, follows camera-pose instructions while maintaining spatial consistency, and generalizes to long contexts and out-of-domain environments. Taken together, these results advance video generative models toward general visuospatial reasoning.",
+        "url": "http://arxiv.org/abs/2512.03040v1",
+        "published_date": "2025-12-02T18:59:44+00:00",
+        "updated_date": "2025-12-02T18:59:44+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Zeqi Xiao",
+            "Yiwei Zhao",
+            "Lingxiao Li",
+            "Yushi Lan",
+            "Yu Ning",
+            "Rahul Garg",
+            "Roshni Cooper",
+            "Mohammad H. Taghavi",
+            "Xingang Pan"
+        ],
+        "tldr": "The paper introduces Video4Spatial, a video diffusion framework that demonstrates visuospatial intelligence by performing scene navigation and object grounding tasks using only video input, showcasing spatial understanding and generalization capabilities.",
+        "tldr_zh": "该论文介绍了一种名为Video4Spatial的视频扩散框架，它通过仅使用视频输入来执行场景导航和物体定位任务，展示了视觉空间智能，并具有空间理解和泛化能力。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "DGGT: Feedforward 4D Reconstruction of Dynamic Driving Scenes using Unposed Images",
+        "summary": "Autonomous driving needs fast, scalable 4D reconstruction and re-simulation for training and evaluation, yet most methods for dynamic driving scenes still rely on per-scene optimization, known camera calibration, or short frame windows, making them slow and impractical. We revisit this problem from a feedforward perspective and introduce \\textbf{Driving Gaussian Grounded Transformer (DGGT)}, a unified framework for pose-free dynamic scene reconstruction. We note that the existing formulations, treating camera pose as a required input, limit flexibility and scalability. Instead, we reformulate pose as an output of the model, enabling reconstruction directly from sparse, unposed images and supporting an arbitrary number of views for long sequences. Our approach jointly predicts per-frame 3D Gaussian maps and camera parameters, disentangles dynamics with a lightweight dynamic head, and preserves temporal consistency with a lifespan head that modulates visibility over time. A diffusion-based rendering refinement further reduces motion/interpolation artifacts and improves novel-view quality under sparse inputs. The result is a single-pass, pose-free algorithm that achieves state-of-the-art performance and speed. Trained and evaluated on large-scale driving benchmarks (Waymo, nuScenes, Argoverse2), our method outperforms prior work both when trained on each dataset and in zero-shot transfer across datasets, and it scales well as the number of input frames increases.",
+        "url": "http://arxiv.org/abs/2512.03004v1",
+        "published_date": "2025-12-02T18:29:18+00:00",
+        "updated_date": "2025-12-02T18:29:18+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Xiaoxue Chen",
+            "Ziyi Xiong",
+            "Yuantao Chen",
+            "Gen Li",
+            "Nan Wang",
+            "Hongcheng Luo",
+            "Long Chen",
+            "Haiyang Sun",
+            "Bing Wang",
+            "Guang Chen",
+            "Hangjun Ye",
+            "Hongyang Li",
+            "Ya-Qin Zhang",
+            "Hao Zhao"
+        ],
+        "tldr": "The paper presents Driving Gaussian Grounded Transformer (DGGT), a novel feedforward approach for 4D reconstruction of dynamic driving scenes from unposed images, achieving state-of-the-art performance and scalability.",
+        "tldr_zh": "该论文提出了 Driving Gaussian Grounded Transformer (DGGT)，一种新的前馈方法，用于从无位姿图像中进行动态驾驶场景的4D重建，实现了最先进的性能和可扩展性。",
+        "relevance_score": 10,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "DynamicVerse: A Physically-Aware Multimodal Framework for 4D World Modeling",
+        "summary": "Understanding the dynamic physical world, characterized by its evolving 3D structure, real-world motion, and semantic content with textual descriptions, is crucial for human-agent interaction and enables embodied agents to perceive and act within real environments with human-like capabilities. However, existing datasets are often derived from limited simulators or utilize traditional Structurefrom-Motion for up-to-scale annotation and offer limited descriptive captioning, which restricts the capacity of foundation models to accurately interpret real-world dynamics from monocular videos, commonly sourced from the internet. To bridge these gaps, we introduce DynamicVerse, a physical-scale, multimodal 4D world modeling framework for dynamic real-world video. We employ large vision, geometric, and multimodal models to interpret metric-scale static geometry, real-world dynamic motion, instance-level masks, and holistic descriptive captions. By integrating window-based Bundle Adjustment with global optimization, our method converts long real-world video sequences into a comprehensive 4D multimodal format. DynamicVerse delivers a large-scale dataset consisting of 100K+ videos with 800K+ annotated masks and 10M+ frames from internet videos. Experimental evaluations on three benchmark tasks, namely video depth estimation, camera pose estimation, and camera intrinsics estimation, demonstrate that our 4D modeling achieves superior performance in capturing physical-scale measurements with greater global accuracy than existing methods.",
+        "url": "http://arxiv.org/abs/2512.03000v2",
+        "published_date": "2025-12-02T18:24:27+00:00",
+        "updated_date": "2025-12-03T18:51:37+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Kairun Wen",
+            "Yuzhi Huang",
+            "Runyu Chen",
+            "Hui Zheng",
+            "Yunlong Lin",
+            "Panwang Pan",
+            "Chenxin Li",
+            "Wenyan Cong",
+            "Jian Zhang",
+            "Junbin Lu",
+            "Chenguo Lin",
+            "Dilin Wang",
+            "Zhicheng Yan",
+            "Hongyu Xu",
+            "Justin Theiss",
+            "Yue Huang",
+            "Xinghao Ding",
+            "Rakesh Ranjan",
+            "Zhiwen Fan"
+        ],
+        "tldr": "DynamicVerse introduces a multimodal 4D world modeling framework and a large-scale dataset (100K+ videos) to address limitations in existing datasets for understanding real-world dynamics from monocular videos, demonstrating superior performance in physical-scale measurement tasks.",
+        "tldr_zh": "DynamicVerse 提出了一个多模态的 4D 世界建模框架和一个大规模数据集（10 万+ 视频），旨在解决现有数据集在理解单目视频中的真实世界动态方面的局限性，并在物理尺度测量任务中表现出卓越的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Emergent Outlier View Rejection in Visual Geometry Grounded Transformers",
+        "summary": "Reliable 3D reconstruction from in-the-wild image collections is often hindered by \"noisy\" images-irrelevant inputs with little or no view overlap with others. While traditional Structure-from-Motion pipelines handle such cases through geometric verification and outlier rejection, feed-forward 3D reconstruction models lack these explicit mechanisms, leading to degraded performance under in-the-wild conditions. In this paper, we discover that the existing feed-forward reconstruction model, e.g., VGGT, despite lacking explicit outlier-rejection mechanisms or noise-aware training, can inherently distinguish distractor images. Through an in-depth analysis under varying proportions of synthetic distractors, we identify a specific layer that naturally exhibits outlier-suppressing behavior. Further probing reveals that this layer encodes discriminative internal representations that enable an effective noise-filtering capability, which we simply leverage to perform outlier-view rejection in feed-forward 3D reconstruction without any additional fine-tuning or supervision. Extensive experiments on both controlled and in-the-wild datasets demonstrate that this implicit filtering mechanism is consistent and generalizes well across diverse scenarios.",
+        "url": "http://arxiv.org/abs/2512.04012v1",
+        "published_date": "2025-12-03T17:48:25+00:00",
+        "updated_date": "2025-12-03T17:48:25+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jisang Han",
+            "Sunghwan Hong",
+            "Jaewoo Jung",
+            "Wooseok Jang",
+            "Honggyu An",
+            "Qianqian Wang",
+            "Seungryong Kim",
+            "Chen Feng"
+        ],
+        "tldr": "This paper discovers an emergent outlier rejection capability in existing feed-forward 3D reconstruction models like VGGT, enabling robust 3D reconstruction from noisy in-the-wild image collections without fine-tuning.",
+        "tldr_zh": "本文发现现有前馈3D重建模型（如VGGT）中存在一种新兴的异常值拒绝能力，无需微调即可从嘈杂的野外图像集合中实现稳健的3D重建。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "AdaptVision: Efficient Vision-Language Models via Adaptive Visual Acquisition",
+        "summary": "Vision-Language Models (VLMs) have achieved remarkable success in visual question answering tasks, but their reliance on large numbers of visual tokens introduces significant computational overhead. While existing efficient VLM approaches reduce visual tokens through fixed-ratio compression, they operate passively and lack the ability to adapt to varying task requirements. This motivates a fundamental question: Can VLMs autonomously determine the minimum number of visual tokens required for each sample? Inspired by human active vision mechanisms, we introduce AdaptVision, an efficient VLM paradigm that enables adaptive visual token acquisition through a coarse-to-fine approach. Our model initially processes compressed visual tokens from low-resolution images and selectively acquires additional visual information by invoking a bounding box tool to crop key regions when necessary. We train AdaptVision using a reinforcement learning framework that carefully balances accuracy and efficiency. Central to our approach is Decoupled Turn Policy Optimization (DTPO), which decouples the learning objective into two components: (1) tool learning, which optimizes correct tool utilization, and (2) accuracy improvement, which refines the generated responses to improve answer correctness. Based on this formulation, we further decouple advantage estimation by computing separate advantages for tokens associated with each objective. This formulation enables more effective optimization for AdaptVision compared to vanilla GRPO. Comprehensive experiments across multiple VQA benchmarks demonstrate that AdaptVision achieves superior performance while consuming substantially fewer visual tokens than state-of-the-art efficient VLM methods.",
+        "url": "http://arxiv.org/abs/2512.03794v1",
+        "published_date": "2025-12-03T13:43:30+00:00",
+        "updated_date": "2025-12-03T13:43:30+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.CL",
+            "cs.LG"
+        ],
+        "authors": [
+            "Zichuan Lin",
+            "Yicheng Liu",
+            "Yang Yang",
+            "Lvfang Tao",
+            "Deheng Ye"
+        ],
+        "tldr": "AdaptVision introduces an efficient vision-language model that adaptively acquires visual tokens through a coarse-to-fine approach, utilizing reinforcement learning and a decoupled turn policy optimization to balance accuracy and computational efficiency.",
+        "tldr_zh": "AdaptVision 提出了一种高效的视觉-语言模型，该模型通过粗到细的方法自适应地获取视觉 tokens，并利用强化学习和解耦的 turn policy 优化来平衡准确性和计算效率。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "PosA-VLA: Enhancing Action Generation via Pose-Conditioned Anchor Attention",
+        "summary": "The Vision-Language-Action (VLA) models have demonstrated remarkable performance on embodied tasks and shown promising potential for real-world applications. However, current VLAs still struggle to produce consistent and precise target-oriented actions, as they often generate redundant or unstable motions along trajectories, limiting their applicability in time-sensitive scenarios.In this work, we attribute these redundant actions to the spatially uniform perception field of existing VLAs, which causes them to be distracted by target-irrelevant objects, especially in complex environments.To address this issue, we propose an efficient PosA-VLA framework that anchors visual attention via pose-conditioned supervision, consistently guiding the model's perception toward task-relevant regions. The pose-conditioned anchor attention mechanism enables the model to better align instruction semantics with actionable visual cues, thereby improving action generation precision and efficiency. Moreover, our framework adopts a lightweight architecture and requires no auxiliary perception modules (e.g., segmentation or grounding networks), ensuring efficient inference. Extensive experiments verify that our method executes embodied tasks with precise and time-efficient behavior across diverse robotic manipulation benchmarks and shows robust generalization in a variety of challenging environments.",
+        "url": "http://arxiv.org/abs/2512.03724v1",
+        "published_date": "2025-12-03T12:14:29+00:00",
+        "updated_date": "2025-12-03T12:14:29+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Ziwen Li",
+            "Xin Wang",
+            "Hanlue Zhang",
+            "Runnan Chen",
+            "Runqi Lin",
+            "Xiao He",
+            "Han Huang",
+            "Yandong Guo",
+            "Fakhri Karray",
+            "Tongliang Liu",
+            "Mingming Gong"
+        ],
+        "tldr": "This paper introduces PosA-VLA, a novel Vision-Language-Action framework that enhances action generation precision and efficiency by using pose-conditioned anchor attention to focus on task-relevant regions, addressing the issue of redundant actions caused by spatially uniform perception.",
+        "tldr_zh": "该论文介绍了PosA-VLA，一种新的视觉-语言-动作框架，通过使用姿势条件锚点注意力来关注任务相关区域，从而提高动作生成的精度和效率，解决了由空间均匀感知引起的冗余动作问题。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "OpenTrack3D: Towards Accurate and Generalizable Open-Vocabulary 3D Instance Segmentation",
+        "summary": "Generalizing open-vocabulary 3D instance segmentation (OV-3DIS) to diverse, unstructured, and mesh-free environments is crucial for robotics and AR/VR, yet remains a significant challenge. We attribute this to two key limitations of existing methods: (1) proposal generation relies on dataset-specific proposal networks or mesh-based superpoints, rendering them inapplicable in mesh-free scenarios and limiting generalization to novel scenes; and (2) the weak textual reasoning of CLIP-based classifiers, which struggle to recognize compositional and functional user queries. To address these issues, we introduce OpenTrack3D, a generalizable and accurate framework. Unlike methods that rely on pre-generated proposals, OpenTrack3D employs a novel visual-spatial tracker to construct cross-view consistent object proposals online. Given an RGB-D stream, our pipeline first leverages a 2D open-vocabulary segmenter to generate masks, which are lifted to 3D point clouds using depth. Mask-guided instance features are then extracted using DINO feature maps, and our tracker fuses visual and spatial cues to maintain instance consistency. The core pipeline is entirely mesh-free, yet we also provide an optional superpoints refinement module to further enhance performance when scene mesh is available. Finally, we replace CLIP with a multi-modal large language model (MLLM), significantly enhancing compositional reasoning for complex user queries. Extensive experiments on diverse benchmarks, including ScanNet200, Replica, ScanNet++, and SceneFun3D, demonstrate state-of-the-art performance and strong generalization capabilities.",
+        "url": "http://arxiv.org/abs/2512.03532v1",
+        "published_date": "2025-12-03T07:51:03+00:00",
+        "updated_date": "2025-12-03T07:51:03+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zhishan Zhou",
+            "Siyuan Wei",
+            "Zengran Wang",
+            "Chunjie Wang",
+            "Xiaosheng Yan",
+            "Xiao Liu"
+        ],
+        "tldr": "The paper introduces OpenTrack3D, a novel mesh-free framework for open-vocabulary 3D instance segmentation using a visual-spatial tracker and MLLM to improve generalization and compositional reasoning in robotics and AR/VR applications.",
+        "tldr_zh": "该论文介绍了OpenTrack3D，一种新颖的无网格框架，用于开放词汇三维实例分割，它使用视觉空间跟踪器和MLLM来提高机器人和AR/VR应用中的泛化能力和组合推理。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "MSG-Loc: Multi-Label Likelihood-based Semantic Graph Matching for Object-Level Global Localization",
+        "summary": "Robots are often required to localize in environments with unknown object classes and semantic ambiguity. However, when performing global localization using semantic objects, high semantic ambiguity intensifies object misclassification and increases the likelihood of incorrect associations, which in turn can cause significant errors in the estimated pose. Thus, in this letter, we propose a multi-label likelihood-based semantic graph matching framework for object-level global localization. The key idea is to exploit multi-label graph representations, rather than single-label alternatives, to capture and leverage the inherent semantic context of object observations. Based on these representations, our approach enhances semantic correspondence across graphs by combining the likelihood of each node with the maximum likelihood of its neighbors via context-aware likelihood propagation. For rigorous validation, data association and pose estimation performance are evaluated under both closed-set and open-set detection configurations. In addition, we demonstrate the scalability of our approach to large-vocabulary object categories in both real-world indoor scenes and synthetic environments.",
+        "url": "http://arxiv.org/abs/2512.03522v1",
+        "published_date": "2025-12-03T07:28:01+00:00",
+        "updated_date": "2025-12-03T07:28:01+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Gihyeon Lee",
+            "Jungwoo Lee",
+            "Juwon Kim",
+            "Young-Sik Shin",
+            "Younggun Cho"
+        ],
+        "tldr": "This paper introduces a multi-label likelihood-based semantic graph matching framework (MSG-Loc) for object-level global localization, aiming to improve robustness in environments with semantic ambiguity and unknown object classes by leveraging multi-label graph representations and context-aware likelihood propagation.",
+        "tldr_zh": "本文提出了一种基于多标签似然的语义图匹配框架(MSG-Loc)，用于对象级别的全局定位。该方法旨在通过利用多标签图表示和上下文感知的似然传播，提高在语义模糊和未知对象类别的环境中定位的鲁棒性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Think Before You Drive: World Model-Inspired Multimodal Grounding for Autonomous Vehicles",
+        "summary": "Interpreting natural-language commands to localize target objects is critical for autonomous driving (AD). Existing visual grounding (VG) methods for autonomous vehicles (AVs) typically struggle with ambiguous, context-dependent instructions, as they lack reasoning over 3D spatial relations and anticipated scene evolution. Grounded in the principles of world models, we propose ThinkDeeper, a framework that reasons about future spatial states before making grounding decisions. At its core is a Spatial-Aware World Model (SA-WM) that learns to reason ahead by distilling the current scene into a command-aware latent state and rolling out a sequence of future latent states, providing forward-looking cues for disambiguation. Complementing this, a hypergraph-guided decoder then hierarchically fuses these states with the multimodal input, capturing higher-order spatial dependencies for robust localization. In addition, we present DrivePilot, a multi-source VG dataset in AD, featuring semantic annotations generated by a Retrieval-Augmented Generation (RAG) and Chain-of-Thought (CoT)-prompted LLM pipeline. Extensive evaluations on six benchmarks, ThinkDeeper ranks #1 on the Talk2Car leaderboard and surpasses state-of-the-art baselines on DrivePilot, MoCAD, and RefCOCO/+/g benchmarks. Notably, it shows strong robustness and efficiency in challenging scenes (long-text, multi-agent, ambiguity) and retains superior performance even when trained on 50% of the data.",
+        "url": "http://arxiv.org/abs/2512.03454v1",
+        "published_date": "2025-12-03T05:14:16+00:00",
+        "updated_date": "2025-12-03T05:14:16+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Haicheng Liao",
+            "Huanming Shen",
+            "Bonan Wang",
+            "Yongkang Li",
+            "Yihong Tang",
+            "Chengyue Wang",
+            "Dingyi Zhuang",
+            "Kehua Chen",
+            "Hai Yang",
+            "Chengzhong Xu",
+            "Zhenning Li"
+        ],
+        "tldr": "The paper introduces ThinkDeeper, a world model-inspired framework for visual grounding in autonomous driving that reasons about future spatial states to improve performance on ambiguous instructions. They also introduce DrivePilot, a new multi-source visual grounding dataset.",
+        "tldr_zh": "本文介绍ThinkDeeper，一个受世界模型启发的自动驾驶视觉定位框架，通过推理未来空间状态来提高对模糊指令的性能。他们还推出了DrivePilot，一个新的多源视觉定位数据集。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "What Is The Best 3D Scene Representation for Robotics? From Geometric to Foundation Models",
+        "summary": "In this paper, we provide a comprehensive overview of existing scene representation methods for robotics, covering traditional representations such as point clouds, voxels, signed distance functions (SDF), and scene graphs, as well as more recent neural representations like Neural Radiance Fields (NeRF), 3D Gaussian Splatting (3DGS), and the emerging Foundation Models. While current SLAM and localization systems predominantly rely on sparse representations like point clouds and voxels, dense scene representations are expected to play a critical role in downstream tasks such as navigation and obstacle avoidance. Moreover, neural representations such as NeRF, 3DGS, and foundation models are well-suited for integrating high-level semantic features and language-based priors, enabling more comprehensive 3D scene understanding and embodied intelligence. In this paper, we categorized the core modules of robotics into five parts (Perception, Mapping, Localization, Navigation, Manipulation). We start by presenting the standard formulation of different scene representation methods and comparing the advantages and disadvantages of scene representation across different modules. This survey is centered around the question: What is the best 3D scene representation for robotics? We then discuss the future development trends of 3D scene representations, with a particular focus on how the 3D Foundation Model could replace current methods as the unified solution for future robotic applications. The remaining challenges in fully realizing this model are also explored. We aim to offer a valuable resource for both newcomers and experienced researchers to explore the future of 3D scene representations and their application in robotics. We have published an open-source project on GitHub and will continue to add new works and technologies to this project.",
+        "url": "http://arxiv.org/abs/2512.03422v1",
+        "published_date": "2025-12-03T03:57:01+00:00",
+        "updated_date": "2025-12-03T03:57:01+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Tianchen Deng",
+            "Yue Pan",
+            "Shenghai Yuan",
+            "Dong Li",
+            "Chen Wang",
+            "Mingrui Li",
+            "Long Chen",
+            "Lihua Xie",
+            "Danwei Wang",
+            "Jingchuan Wang",
+            "Javier Civera",
+            "Hesheng Wang",
+            "Weidong Chen"
+        ],
+        "tldr": "This paper surveys 3D scene representation methods for robotics, comparing traditional and neural approaches, and discussing the potential of 3D Foundation Models as a unified solution.",
+        "tldr_zh": "本文综述了机器人技术的3D场景表示方法，比较了传统方法和神经方法，并讨论了3D基础模型作为统一解决方案的潜力。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "ShelfGaussian: Shelf-Supervised Open-Vocabulary Gaussian-based 3D Scene Understanding",
+        "summary": "We introduce ShelfGaussian, an open-vocabulary multi-modal Gaussian-based 3D scene understanding framework supervised by off-the-shelf vision foundation models (VFMs). Gaussian-based methods have demonstrated superior performance and computational efficiency across a wide range of scene understanding tasks. However, existing methods either model objects as closed-set semantic Gaussians supervised by annotated 3D labels, neglecting their rendering ability, or learn open-set Gaussian representations via purely 2D self-supervision, leading to degraded geometry and limited to camera-only settings. To fully exploit the potential of Gaussians, we propose a Multi-Modal Gaussian Transformer that enables Gaussians to query features from diverse sensor modalities, and a Shelf-Supervised Learning Paradigm that efficiently optimizes Gaussians with VFM features jointly at 2D image and 3D scene levels. We evaluate ShelfGaussian on various perception and planning tasks. Experiments on Occ3D-nuScenes demonstrate its state-of-the-art zero-shot semantic occupancy prediction performance. ShelfGaussian is further evaluated on an unmanned ground vehicle (UGV) to assess its in the-wild performance across diverse urban scenarios. Project website: https://lunarlab-gatech.github.io/ShelfGaussian/.",
+        "url": "http://arxiv.org/abs/2512.03370v1",
+        "published_date": "2025-12-03T02:06:09+00:00",
+        "updated_date": "2025-12-03T02:06:09+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Lingjun Zhao",
+            "Yandong Luo",
+            "James Hay",
+            "Lu Gan"
+        ],
+        "tldr": "ShelfGaussian introduces a new open-vocabulary, multi-modal Gaussian-based 3D scene understanding framework that leverages off-the-shelf vision foundation models for supervision, achieving state-of-the-art zero-shot semantic occupancy prediction.",
+        "tldr_zh": "ShelfGaussian 提出了一个新型的开放词汇、多模态、基于高斯分布的3D场景理解框架，该框架利用现成的视觉基础模型进行监督，实现了最先进的零样本语义占据预测。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "NavMapFusion: Diffusion-based Fusion of Navigation Maps for Online Vectorized HD Map Construction",
+        "summary": "Accurate environmental representations are essential for autonomous driving, providing the foundation for safe and efficient navigation. Traditionally, high-definition (HD) maps are providing this representation of the static road infrastructure to the autonomous system a priori. However, because the real world is constantly changing, such maps must be constructed online from on-board sensor data. Navigation-grade standard-definition (SD) maps are widely available, but their resolution is insufficient for direct deployment. Instead, they can be used as coarse prior to guide the online map construction process. We propose NavMapFusion, a diffusion-based framework that performs iterative denoising conditioned on high-fidelity sensor data and on low-fidelity navigation maps. This paper strives to answer: (1) How can coarse, potentially outdated navigation maps guide online map construction? (2) What advantages do diffusion models offer for map fusion? We demonstrate that diffusion-based map construction provides a robust framework for map fusion. Our key insight is that discrepancies between the prior map and online perception naturally correspond to noise within the diffusion process; consistent regions reinforce the map construction, whereas outdated segments are suppressed. On the nuScenes benchmark, NavMapFusion conditioned on coarse road lines from OpenStreetMap data reaches a 21.4% relative improvement on 100 m, and even stronger improvements on larger perception ranges, while maintaining real-time capabilities. By fusing low-fidelity priors with high-fidelity sensor data, the proposed method generates accurate and up-to-date environment representations, guiding towards safer and more reliable autonomous driving. The code is available at https://github.com/tmonnin/navmapfusion",
+        "url": "http://arxiv.org/abs/2512.03317v1",
+        "published_date": "2025-12-03T00:10:47+00:00",
+        "updated_date": "2025-12-03T00:10:47+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG",
+            "cs.RO"
+        ],
+        "authors": [
+            "Thomas Monninger",
+            "Zihan Zhang",
+            "Steffen Staab",
+            "Sihao Ding"
+        ],
+        "tldr": "NavMapFusion uses a diffusion-based framework to fuse low-fidelity navigation maps (like OpenStreetMap) with high-fidelity sensor data for online HD map construction, showing significant improvements in accuracy on the nuScenes dataset.",
+        "tldr_zh": "NavMapFusion使用基于扩散的框架，将低保真导航地图（如OpenStreetMap）与高保真传感器数据融合，以进行在线高清地图构建，并在nuScenes数据集上显示出显着的精度提升。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "SpatialReasoner: Active Perception for Large-Scale 3D Scene Understanding",
+        "summary": "Spatial reasoning in large-scale 3D environments remains challenging for current vision-language models, which are typically constrained to room-scale scenarios. We introduce H$^2$U3D (Holistic House Understanding in 3D), a 3D visual question answering dataset designed for house-scale scene understanding. H$^2$U3D features multi-floor environments spanning up to three floors and 10-20 rooms, covering more than 300 m$^2$. Through an automated annotation pipeline, it constructs hierarchical coarse-to-fine visual representations and generates diverse question-answer pairs with chain-of-thought annotations. We further propose SpatialReasoner, an active perception framework that autonomously invokes spatial tools to explore 3D scenes based on textual queries. SpatialReasoner is trained through a two-stage strategy: a supervised cold start followed by reinforcement learning with an adaptive exploration reward that promotes efficient exploration while discouraging redundant operations. Extensive experiments demonstrate that SpatialReasoner achieves state-of-the-art performance on H$^2$U3D, outperforming strong baselines including GPT-4o and Gemini-2.5-Pro. Notably, our method attains superior results while using only 3-4 images in total on average, compared to baselines requiring 16+ images, highlighting the effectiveness of our coarse-to-fine active exploration paradigm.",
+        "url": "http://arxiv.org/abs/2512.03284v1",
+        "published_date": "2025-12-02T22:49:01+00:00",
+        "updated_date": "2025-12-02T22:49:01+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Hongpei Zheng",
+            "Shijie Li",
+            "Yanran Li",
+            "Hujun Yin"
+        ],
+        "tldr": "The paper introduces H$^2$U3D, a new large-scale 3D visual question answering dataset, and SpatialReasoner, an active perception framework for 3D scene understanding that outperforms existing models using fewer images.",
+        "tldr_zh": "本文介绍了一个新的大型3D视觉问答数据集H$^2$U3D，以及一个用于3D场景理解的主动感知框架SpatialReasoner，该框架使用更少的图像就优于现有模型。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Flux4D: Flow-based Unsupervised 4D Reconstruction",
+        "summary": "Reconstructing large-scale dynamic scenes from visual observations is a fundamental challenge in computer vision, with critical implications for robotics and autonomous systems. While recent differentiable rendering methods such as Neural Radiance Fields (NeRF) and 3D Gaussian Splatting (3DGS) have achieved impressive photorealistic reconstruction, they suffer from scalability limitations and require annotations to decouple actor motion. Existing self-supervised methods attempt to eliminate explicit annotations by leveraging motion cues and geometric priors, yet they remain constrained by per-scene optimization and sensitivity to hyperparameter tuning. In this paper, we introduce Flux4D, a simple and scalable framework for 4D reconstruction of large-scale dynamic scenes. Flux4D directly predicts 3D Gaussians and their motion dynamics to reconstruct sensor observations in a fully unsupervised manner. By adopting only photometric losses and enforcing an \"as static as possible\" regularization, Flux4D learns to decompose dynamic elements directly from raw data without requiring pre-trained supervised models or foundational priors simply by training across many scenes. Our approach enables efficient reconstruction of dynamic scenes within seconds, scales effectively to large datasets, and generalizes well to unseen environments, including rare and unknown objects. Experiments on outdoor driving datasets show Flux4D significantly outperforms existing methods in scalability, generalization, and reconstruction quality.",
+        "url": "http://arxiv.org/abs/2512.03210v1",
+        "published_date": "2025-12-02T20:28:45+00:00",
+        "updated_date": "2025-12-02T20:28:45+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG",
+            "cs.RO"
+        ],
+        "authors": [
+            "Jingkang Wang",
+            "Henry Che",
+            "Yun Chen",
+            "Ze Yang",
+            "Lily Goli",
+            "Sivabalan Manivasagam",
+            "Raquel Urtasun"
+        ],
+        "tldr": "Flux4D is a novel unsupervised framework for 4D reconstruction of dynamic scenes using 3D Gaussians and motion dynamics, demonstrating improvements in scalability, generalization, and reconstruction quality on driving datasets.",
+        "tldr_zh": "Flux4D是一种新颖的无监督框架，用于使用3D高斯和运动动力学进行动态场景的4D重建，并在驾驶数据集上展示了可扩展性、泛化性和重建质量的改进。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Active Visual Perception: Opportunities and Challenges",
+        "summary": "Active visual perception refers to the ability of a system to dynamically engage with its environment through sensing and action, allowing it to modify its behavior in response to specific goals or uncertainties. Unlike passive systems that rely solely on visual data, active visual perception systems can direct attention, move sensors, or interact with objects to acquire more informative data. This approach is particularly powerful in complex environments where static sensing methods may not provide sufficient information. Active visual perception plays a critical role in numerous applications, including robotics, autonomous vehicles, human-computer interaction, and surveillance systems. However, despite its significant promise, there are several challenges that need to be addressed, including real-time processing of complex visual data, decision-making in dynamic environments, and integrating multimodal sensory inputs. This paper explores both the opportunities and challenges inherent in active visual perception, providing a comprehensive overview of its potential, current research, and the obstacles that must be overcome for broader adoption.",
+        "url": "http://arxiv.org/abs/2512.03687v1",
+        "published_date": "2025-12-03T11:27:37+00:00",
+        "updated_date": "2025-12-03T11:27:37+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yian Li",
+            "Xiaoyu Guo",
+            "Hao Zhang",
+            "Shuiwang Li",
+            "Xiaowei Dai"
+        ],
+        "tldr": "This paper surveys the field of active visual perception, highlighting its potential applications in robotics, autonomous vehicles, and other areas, while also addressing the significant challenges that remain in areas like real-time processing and multimodal integration.",
+        "tldr_zh": "本文概述了主动视觉感知领域，强调了其在机器人、自动驾驶和其他领域的潜在应用，同时也讨论了在实时处理和多模态融合等领域仍然存在的重大挑战。",
+        "relevance_score": 9,
+        "novelty_claim_score": 4,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 7
+    }
+]
