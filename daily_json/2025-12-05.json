@@ -1,0 +1,352 @@
+[
+    {
+        "title": "FASTer: Toward Efficient Autoregressive Vision Language Action Modeling via neural Action Tokenization",
+        "summary": "Autoregressive vision-language-action (VLA) models have recently demonstrated strong capabilities in robotic manipulation. However, their core process of action tokenization often involves a trade-off between reconstruction fidelity and inference efficiency. We introduce FASTer, a unified framework for efficient and generalizable robot learning that integrates a learnable tokenizer with an autoregressive policy built upon it. FASTerVQ encodes action chunks as single-channel images, capturing global spatio-temporal dependencies while maintaining a high compression ratio. FASTerVLA builds on this tokenizer with block-wise autoregressive decoding and a lightweight action expert, achieving both faster inference and higher task performance. Extensive experiments across simulated and real-world benchmarks show that FASTerVQ delivers superior reconstruction quality, high token utilization, and strong cross-task and cross-embodiment generalization, while FASTerVLA further improves overall capability, surpassing previous state-of-the-art VLA models in both inference speed and task performance.",
+        "url": "http://arxiv.org/abs/2512.04952v1",
+        "published_date": "2025-12-04T16:21:38+00:00",
+        "updated_date": "2025-12-04T16:21:38+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Yicheng Liu",
+            "Shiduo Zhang",
+            "Zibin Dong",
+            "Baijun Ye",
+            "Tianyuan Yuan",
+            "Xiaopeng Yu",
+            "Linqi Yin",
+            "Chenhao Lu",
+            "Junhao Shi",
+            "Luca Jiang-Tao Yu",
+            "Liangtao Zheng",
+            "Tao Jiang",
+            "Jingjing Gong",
+            "Xipeng Qiu",
+            "Hang Zhao"
+        ],
+        "tldr": "The paper introduces FASTer, a VLA framework with a learnable tokenizer and autoregressive policy, achieving faster inference and improved performance in robotic manipulation tasks through efficient action tokenization.",
+        "tldr_zh": "该论文介绍了FASTer，一个带有可学习的tokenizer和自回归策略的VLA框架，通过高效的动作标记化，在机器人操作任务中实现了更快的推理速度和更高的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "LiteVGGT: Boosting Vanilla VGGT via Geometry-aware Cached Token Merging",
+        "summary": "3D vision foundation models like Visual Geometry Grounded Transformer (VGGT) have advanced greatly in geometric perception. However, it is time-consuming and memory-intensive for long sequences, limiting application to large-scale scenes beyond hundreds of images. To address this, we propose LiteVGGT, achieving up to 10x speedup and substantial memory reduction, enabling efficient processing of 1000-image scenes. We derive two key insights for 3D reconstruction: (1) tokens from local image regions have inherent geometric correlations, leading to high similarity and computational redundancy; (2) token similarity across adjacent network layers remains stable, allowing for reusable merge decisions. Guided by these, we design a simple yet efficient strategy, dubbed geometry-aware cached token merging. We analyze each token's geometric importance, optimizing anchor token selection to better preserve key information for reconstruction. We also cache and reuse merge indices across layers, substantially reducing latency with minimal accuracy impact. This strategy retains VGGT's core performance, enabling efficient fine-tuning and FP8 quantization for further gains. Extensive experiments validate LiteVGGT's effectiveness, scalability, and robustness. Project page: https://garlicba.github.io/LiteVGGT/",
+        "url": "http://arxiv.org/abs/2512.04939v1",
+        "published_date": "2025-12-04T16:07:02+00:00",
+        "updated_date": "2025-12-04T16:07:02+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zhijian Shu",
+            "Cheng Lin",
+            "Tao Xie",
+            "Wei Yin",
+            "Ben Li",
+            "Zhiyuan Pu",
+            "Weize Li",
+            "Yao Yao",
+            "Xun Cao",
+            "Xiaoyang Guo",
+            "Xiao-Xiao Long"
+        ],
+        "tldr": "LiteVGGT introduces a geometry-aware cached token merging strategy to significantly speed up and reduce the memory footprint of Visual Geometry Grounded Transformers (VGGTs) for large-scale 3D scene reconstruction.",
+        "tldr_zh": "LiteVGGT 提出了一种几何感知缓存令牌合并策略，可显著加速并减少 Visual Geometry Grounded Transformers (VGGTs) 在大规模 3D 场景重建中的内存占用。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "FreeGen: Feed-Forward Reconstruction-Generation Co-Training for Free-Viewpoint Driving Scene Synthesis",
+        "summary": "Closed-loop simulation and scalable pre-training for autonomous driving require synthesizing free-viewpoint driving scenes. However, existing datasets and generative pipelines rarely provide consistent off-trajectory observations, limiting large-scale evaluation and training. While recent generative models demonstrate strong visual realism, they struggle to jointly achieve interpolation consistency and extrapolation realism without per-scene optimization. To address this, we propose FreeGen, a feed-forward reconstruction-generation co-training framework for free-viewpoint driving scene synthesis. The reconstruction model provides stable geometric representations to ensure interpolation consistency, while the generation model performs geometry-aware enhancement to improve realism at unseen viewpoints. Through co-training, generative priors are distilled into the reconstruction model to improve off-trajectory rendering, and the refined geometry in turn offers stronger structural guidance for generation. Experiments demonstrate that FreeGen achieves state-of-the-art performance for free-viewpoint driving scene synthesis.",
+        "url": "http://arxiv.org/abs/2512.04830v1",
+        "published_date": "2025-12-04T14:14:21+00:00",
+        "updated_date": "2025-12-04T14:14:21+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Shijie Chen",
+            "Peixi Peng"
+        ],
+        "tldr": "FreeGen is a novel feed-forward co-training framework for synthesizing realistic and consistent free-viewpoint driving scenes using reconstruction and generation models. It achieves state-of-the-art performance by distilling generative priors into the reconstruction model and using refined geometry for stronger structural guidance during generation.",
+        "tldr_zh": "FreeGen 是一种新颖的前馈协同训练框架，它使用重建和生成模型来合成逼真且一致的自由视点驾驶场景。通过将生成先验提炼到重建模型中，并使用精细的几何形状为生成提供更强的结构指导，实现了最先进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "MT-Depth: Multi-task Instance feature analysis for the Depth Completion",
+        "summary": "Depth completion plays a vital role in 3D perception systems, especially in scenarios where sparse depth data must be densified for tasks such as autonomous driving, robotics, and augmented reality. While many existing approaches rely on semantic segmentation to guide depth completion, they often overlook the benefits of object-level understanding. In this work, we introduce an instance-aware depth completion framework that explicitly integrates binary instance masks as spatial priors to refine depth predictions. Our model combines four main components: a frozen YOLO V11 instance segmentation branch, a U-Net-based depth completion backbone, a cross-attention fusion module, and an attention-guided prediction head. The instance segmentation branch generates per-image foreground masks that guide the depth branch via cross-attention, allowing the network to focus on object-centric regions during refinement. We validate our method on the Virtual KITTI 2 dataset, showing that it achieves lower RMSE compared to both a U-Net-only baseline and previous semantic-guided methods, while maintaining competitive MAE. Qualitative and quantitative results demonstrate that the proposed model effectively enhances depth accuracy near object boundaries, occlusions, and thin structures. Our findings suggest that incorporating instance-aware cues offers a promising direction for improving depth completion without relying on dense semantic labels.",
+        "url": "http://arxiv.org/abs/2512.04734v1",
+        "published_date": "2025-12-04T12:17:33+00:00",
+        "updated_date": "2025-12-04T12:17:33+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Abdul Haseeb Nizamani",
+            "Dandi Zhou",
+            "Xinhai Sun"
+        ],
+        "tldr": "This paper introduces an instance-aware depth completion framework, MT-Depth, using YOLO V11 instance segmentation to guide a U-Net-based depth completion network, demonstrating improved depth accuracy, particularly near object boundaries, in the Virtual KITTI 2 dataset.",
+        "tldr_zh": "本文介绍了一种实例感知深度补全框架MT-Depth，该框架使用YOLO V11实例分割来指导基于U-Net的深度补全网络，并在Virtual KITTI 2数据集中展示了改进的深度精度，尤其是在对象边界附近。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "E3AD: An Emotion-Aware Vision-Language-Action Model for Human-Centric End-to-End Autonomous Driving",
+        "summary": "End-to-end autonomous driving (AD) systems increasingly adopt vision-language-action (VLA) models, yet they typically ignore the passenger's emotional state, which is central to comfort and AD acceptance. We introduce Open-Domain End-to-End (OD-E2E) autonomous driving, where an autonomous vehicle (AV) must interpret free-form natural-language commands, infer the emotion, and plan a physically feasible trajectory. We propose E3AD, an emotion-aware VLA framework that augments semantic understanding with two cognitively inspired components: a continuous Valenc-Arousal-Dominance (VAD) emotion model that captures tone and urgency from language, and a dual-pathway spatial reasoning module that fuses egocentric and allocentric views for human-like spatial cognition. A consistency-oriented training scheme, combining modality pretraining with preference-based alignment, further enforces coherence between emotional intent and driving actions. Across real-world datasets, E3AD improves visual grounding and waypoint planning and achieves state-of-the-art (SOTA) VAD correlation for emotion estimation. These results show that injecting emotion into VLA-style driving yields more human-aligned grounding, planning, and human-centric feedback.",
+        "url": "http://arxiv.org/abs/2512.04733v1",
+        "published_date": "2025-12-04T12:17:25+00:00",
+        "updated_date": "2025-12-04T12:17:25+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Yihong Tang",
+            "Haicheng Liao",
+            "Tong Nie",
+            "Junlin He",
+            "Ao Qu",
+            "Kehua Chen",
+            "Wei Ma",
+            "Zhenning Li",
+            "Lijun Sun",
+            "Chengzhong Xu"
+        ],
+        "tldr": "The paper introduces E3AD, an emotion-aware vision-language-action model for autonomous driving that incorporates passenger emotion through a VAD model and improves grounding and planning with a dual-pathway spatial reasoning module.",
+        "tldr_zh": "该论文介绍了E3AD，一种情感感知型视觉-语言-动作自动驾驶模型，通过VAD模型融入乘客情感，并通过双路径空间推理模块提高定位和规划能力。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "X-Humanoid: Robotize Human Videos to Generate Humanoid Videos at Scale",
+        "summary": "The advancement of embodied AI has unlocked significant potential for intelligent humanoid robots. However, progress in both Vision-Language-Action (VLA) models and world models is severely hampered by the scarcity of large-scale, diverse training data. A promising solution is to \"robotize\" web-scale human videos, which has been proven effective for policy training. However, these solutions mainly \"overlay\" robot arms to egocentric videos, which cannot handle complex full-body motions and scene occlusions in third-person videos, making them unsuitable for robotizing humans. To bridge this gap, we introduce X-Humanoid, a generative video editing approach that adapts the powerful Wan 2.2 model into a video-to-video structure and finetunes it for the human-to-humanoid translation task. This finetuning requires paired human-humanoid videos, so we designed a scalable data creation pipeline, turning community assets into 17+ hours of paired synthetic videos using Unreal Engine. We then apply our trained model to 60 hours of the Ego-Exo4D videos, generating and releasing a new large-scale dataset of over 3.6 million \"robotized\" humanoid video frames. Quantitative analysis and user studies confirm our method's superiority over existing baselines: 69% of users rated it best for motion consistency, and 62.1% for embodiment correctness.",
+        "url": "http://arxiv.org/abs/2512.04537v1",
+        "published_date": "2025-12-04T07:34:08+00:00",
+        "updated_date": "2025-12-04T07:34:08+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Pei Yang",
+            "Hai Ci",
+            "Yiren Song",
+            "Mike Zheng Shou"
+        ],
+        "tldr": "The paper introduces X-Humanoid, a generative video editing approach for robotizing human videos at scale using a fine-tuned video-to-video model and a data creation pipeline to generate a large dataset of robotized humanoid videos.",
+        "tldr_zh": "该论文介绍了X-Humanoid，一种用于大规模机器人化人类视频的生成式视频编辑方法，它使用微调的视频到视频模型和一个数据创建流程来生成一个大型的机器人化类人视频数据集。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Auto3R: Automated 3D Reconstruction and Scanning via Data-driven Uncertainty Quantification",
+        "summary": "Traditional high-quality 3D scanning and reconstruction typically relies on human labor to plan the scanning procedure. With the rapid development of embodied systems such as drones and robots, there is a growing demand of performing accurate 3D scanning and reconstruction in an fully automated manner. We introduce Auto3R, a data-driven uncertainty quantification model that is designed to automate the 3D scanning and reconstruction of scenes and objects, including objects with non-lambertian and specular materials. Specifically, in a process of iterative 3D reconstruction and scanning, Auto3R can make efficient and accurate prediction of uncertainty distribution over potential scanning viewpoints, without knowing the ground truth geometry and appearance. Through extensive experiments, Auto3R achieves superior performance that outperforms the state-of-the-art methods by a large margin. We also deploy Auto3R on a robot arm equipped with a camera and demonstrate that Auto3R can be used to effectively digitize real-world 3D objects and delivers ready-to-use and photorealistic digital assets. Our homepage: https://tomatoma00.github.io/auto3r.github.io .",
+        "url": "http://arxiv.org/abs/2512.04528v1",
+        "published_date": "2025-12-04T07:20:51+00:00",
+        "updated_date": "2025-12-04T07:20:51+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Chentao Shen",
+            "Sizhe Zheng",
+            "Bingqian Wu",
+            "Yaohua Feng",
+            "Yuanchen Fei",
+            "Mingyu Mei",
+            "Hanwen Jiang",
+            "Xiangru Huang"
+        ],
+        "tldr": "The paper introduces Auto3R, a data-driven uncertainty quantification model for automated 3D scanning and reconstruction using robots, showing superior performance and real-world deployment.",
+        "tldr_zh": "该论文介绍了Auto3R，一种数据驱动的不确定性量化模型，用于使用机器人自动进行3D扫描和重建，展示了卓越的性能和现实世界的部署。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "dVLM-AD: Enhance Diffusion Vision-Language-Model for Driving via Controllable Reasoning",
+        "summary": "The autonomous driving community is increasingly focused on addressing the challenges posed by out-of-distribution (OOD) driving scenarios. A dominant research trend seeks to enhance end-to-end (E2E) driving systems by integrating vision-language models (VLMs), leveraging their rich world knowledge and reasoning abilities to improve generalization across diverse environments. However, most existing VLMs or vision-language agents (VLAs) are built upon autoregressive (AR) models. In this paper, we observe that existing AR-based VLMs -- limited by causal attention and sequential token generation -- often fail to maintain consistency and controllability between high-level reasoning and low-level planning. In contrast, recent discrete diffusion VLMs equipped with bidirectional attention exhibit superior controllability and reliability through iterative denoising. Building on these observations, we introduce dVLM-AD, a diffusion-based vision-language model that unifies perception, structured reasoning, and low-level planning for end-to-end driving. Evaluated on nuScenes and WOD-E2E, dVLM-AD yields more consistent reasoning-action pairs and achieves planning performance comparable to existing driving VLM/VLA systems despite a modest backbone, outperforming AR-based baselines with a 9 percent improvement in behavior-trajectory consistency and a 6 percent increase in RFS on long-tail WOD-E2E scenarios. These results suggest a controllable and reliable pathway for scalable end-to-end driving.",
+        "url": "http://arxiv.org/abs/2512.04459v1",
+        "published_date": "2025-12-04T05:05:41+00:00",
+        "updated_date": "2025-12-04T05:05:41+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yingzi Ma",
+            "Yulong Cao",
+            "Wenhao Ding",
+            "Shuibai Zhang",
+            "Yan Wang",
+            "Boris Ivanovic",
+            "Ming Jiang",
+            "Marco Pavone",
+            "Chaowei Xiao"
+        ],
+        "tldr": "This paper introduces dVLM-AD, a diffusion-based vision-language model for end-to-end autonomous driving that aims to improve consistency and controllability between reasoning and planning, demonstrating performance gains on nuScenes and WOD-E2E datasets.",
+        "tldr_zh": "本文介绍了dVLM-AD，一种基于扩散的视觉语言模型，用于端到端自动驾驶，旨在提高推理和规划之间的一致性和可控性，并在nuScenes和WOD-E2E数据集上展示了性能提升。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "MindDrive: An All-in-One Framework Bridging World Models and Vision-Language Model for End-to-End Autonomous Driving",
+        "summary": "End-to-End autonomous driving (E2E-AD) has emerged as a new paradigm, where trajectory planning plays a crucial role. Existing studies mainly follow two directions: trajectory generation oriented, which focuses on producing high-quality trajectories with simple decision mechanisms, and trajectory selection oriented, which performs multi-dimensional evaluation to select the best trajectory yet lacks sufficient generative capability. In this work, we propose MindDrive, a harmonized framework that integrates high-quality trajectory generation with comprehensive decision reasoning. It establishes a structured reasoning paradigm of \"context simulation - candidate generation - multi-objective trade-off\". In particular, the proposed Future-aware Trajectory Generator (FaTG), based on a World Action Model (WaM), performs ego-conditioned \"what-if\" simulations to predict potential future scenes and generate foresighted trajectory candidates. Building upon this, the VLM-oriented Evaluator (VLoE) leverages the reasoning capability of a large vision-language model to conduct multi-objective evaluations across safety, comfort, and efficiency dimensions, leading to reasoned and human-aligned decision making. Extensive experiments on the NAVSIM-v1 and NAVSIM-v2 benchmarks demonstrate that MindDrive achieves state-of-the-art performance across multi-dimensional driving metrics, significantly enhancing safety, compliance, and generalization. This work provides a promising path toward interpretable and cognitively guided autonomous driving.",
+        "url": "http://arxiv.org/abs/2512.04441v1",
+        "published_date": "2025-12-04T04:16:10+00:00",
+        "updated_date": "2025-12-04T04:16:10+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Bin Suna",
+            "Yaoguang Caob",
+            "Yan Wanga",
+            "Rui Wanga",
+            "Jiachen Shanga",
+            "Xiejie Fenga",
+            "Jiayi Lu",
+            "Jia Shi",
+            "Shichun Yang",
+            "Xiaoyu Yane",
+            "Ziying Song"
+        ],
+        "tldr": "MindDrive is a novel end-to-end autonomous driving framework that combines a World Action Model-based trajectory generator with a Vision-Language Model-oriented evaluator for improved safety, comfort, and efficiency.",
+        "tldr_zh": "MindDrive是一个新颖的端到端自动驾驶框架，它结合了基于世界行动模型的轨迹生成器和面向视觉-语言模型的评估器，以提高安全性、舒适性和效率。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Gamma-from-Mono: Road-Relative, Metric, Self-Supervised Monocular Geometry for Vehicular Applications",
+        "summary": "Accurate perception of the vehicle's 3D surroundings, including fine-scale road geometry, such as bumps, slopes, and surface irregularities, is essential for safe and comfortable vehicle control. However, conventional monocular depth estimation often oversmooths these features, losing critical information for motion planning and stability. To address this, we introduce Gamma-from-Mono (GfM), a lightweight monocular geometry estimation method that resolves the projective ambiguity in single-camera reconstruction by decoupling global and local structure. GfM predicts a dominant road surface plane together with residual variations expressed by gamma, a dimensionless measure of vertical deviation from the plane, defined as the ratio of a point's height above it to its depth from the camera, and grounded in established planar parallax geometry. With only the camera's height above ground, this representation deterministically recovers metric depth via a closed form, avoiding full extrinsic calibration and naturally prioritizing near-road detail. Its physically interpretable formulation makes it well suited for self-supervised learning, eliminating the need for large annotated datasets. Evaluated on KITTI and the Road Surface Reconstruction Dataset (RSRD), GfM achieves state-of-the-art near-field accuracy in both depth and gamma estimation while maintaining competitive global depth performance. Our lightweight 8.88M-parameter model adapts robustly across diverse camera setups and, to our knowledge, is the first self-supervised monocular approach evaluated on RSRD.",
+        "url": "http://arxiv.org/abs/2512.04303v1",
+        "published_date": "2025-12-03T22:37:38+00:00",
+        "updated_date": "2025-12-03T22:37:38+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Gasser Elazab",
+            "Maximilian Jansen",
+            "Michael Unterreiner",
+            "Olaf Hellwich"
+        ],
+        "tldr": "The paper introduces Gamma-from-Mono (GfM), a self-supervised monocular depth estimation method that leverages planar parallax geometry to improve near-field accuracy, particularly for road surface reconstruction, achieving state-of-the-art performance on relevant datasets.",
+        "tldr_zh": "该论文介绍了一种名为Gamma-from-Mono (GfM)的自监督单目深度估计方法，该方法利用平面视差几何来提高近场精度，尤其是在道路表面重建方面，并在相关数据集上实现了最先进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Look Around and Pay Attention: Multi-camera Point Tracking Reimagined with Transformers",
+        "summary": "This paper presents LAPA (Look Around and Pay Attention), a novel end-to-end transformer-based architecture for multi-camera point tracking that integrates appearance-based matching with geometric constraints. Traditional pipelines decouple detection, association, and tracking, leading to error propagation and temporal inconsistency in challenging scenarios. LAPA addresses these limitations by leveraging attention mechanisms to jointly reason across views and time, establishing soft correspondences through a cross-view attention mechanism enhanced with geometric priors. Instead of relying on classical triangulation, we construct 3D point representations via attention-weighted aggregation, inherently accommodating uncertainty and partial observations. Temporal consistency is further maintained through a transformer decoder that models long-range dependencies, preserving identities through extended occlusions. Extensive experiments on challenging datasets, including our newly created multi-camera (MC) versions of TAPVid-3D panoptic and PointOdyssey, demonstrate that our unified approach significantly outperforms existing methods, achieving 37.5% APD on TAPVid-3D-MC and 90.3% APD on PointOdyssey-MC, particularly excelling in scenarios with complex motions and occlusions. Code is available at https://github.com/ostadabbas/Look-Around-and-Pay-Attention-LAPA-",
+        "url": "http://arxiv.org/abs/2512.04213v1",
+        "published_date": "2025-12-03T19:34:08+00:00",
+        "updated_date": "2025-12-03T19:34:08+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Bishoy Galoaa",
+            "Xiangyu Bai",
+            "Shayda Moezzi",
+            "Utsav Nandi",
+            "Sai Siddhartha Vivek Dhir Rangoju",
+            "Somaieh Amraee",
+            "Sarah Ostadabbas"
+        ],
+        "tldr": "The paper introduces LAPA, a transformer-based architecture for multi-camera point tracking that integrates appearance and geometric cues, outperforming existing methods on new multi-camera datasets.",
+        "tldr_zh": "该论文介绍了LAPA，一种基于Transformer的多摄像头点跟踪架构，它集成了外观和几何线索，在新多摄像头数据集上优于现有方法。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "SpaceTools: Tool-Augmented Spatial Reasoning via Double Interactive RL",
+        "summary": "Vision Language Models (VLMs) demonstrate strong qualitative visual understanding, but struggle with metrically precise spatial reasoning required for embodied applications. The agentic paradigm promises that VLMs can use a wide variety of tools that could augment these capabilities, such as depth estimators, segmentation models, and pose estimators. Yet it remains an open challenge how to realize this vision without solely relying on handcrafted prompting strategies or enforcing fixed, predefined tool pipelines that limit VLMs' ability to discover optimal tool-use patterns. Reinforcement Learning could overcome this gap, but has so far been limited to reasoning with a single visual tool due to the large search space in multi-tool reasoning. We introduce Double Interactive Reinforcement Learning (DIRL), a two-phase training framework where VLMs learn to coordinate multiple tools through interactive exploration and feedback. In the teaching phase, we combine demonstrations from a single tool specialist trained via interactive RL with traces from a frontier model using all tools. In the exploration phase, the model further refines multi-tool coordination through continued RL. Our model, SpaceTools, with tool-augmented spatial reasoning ability, achieves state-of-the-art performance on spatial understanding benchmarks (RoboSpatial-Home, BLINK, BOP-ASK) and demonstrates reliable real-world manipulation using a 7-DOF robot as a tool. DIRL provides substantial improvements over the vanilla SFT (+12% on RoboSpatial) and RL (+16% on RoboSpatial) baselines. Project page: https://spacetools.github.io/.",
+        "url": "http://arxiv.org/abs/2512.04069v1",
+        "published_date": "2025-12-03T18:50:04+00:00",
+        "updated_date": "2025-12-03T18:50:04+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Siyi Chen",
+            "Mikaela Angelina Uy",
+            "Chan Hee Song",
+            "Faisal Ladhak",
+            "Adithyavairavan Murali",
+            "Qing Qu",
+            "Stan Birchfield",
+            "Valts Blukis",
+            "Jonathan Tremblay"
+        ],
+        "tldr": "The paper introduces SpaceTools, a VLM agent leveraging Double Interactive Reinforcement Learning (DIRL) to effectively coordinate multiple tools for improved spatial reasoning in embodied applications, achieving state-of-the-art results on spatial understanding benchmarks and real-world robotic manipulation.",
+        "tldr_zh": "该论文介绍了SpaceTools，一个利用双重交互强化学习（DIRL）的VLM智能体，有效地协调多个工具，以提高具身应用中的空间推理能力，并在空间理解基准测试和实际机器人操作中取得了最先进的结果。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Prompt2Craft: Generating Functional Craft Assemblies with LLMs",
+        "summary": "Inspired by traditional handmade crafts, where a person improvises assemblies based on the available objects, we formally introduce the Craft Assembly Task. It is a robotic assembly task that involves building an accurate representation of a given target object using the available objects, which do not directly correspond to its parts. In this work, we focus on selecting the subset of available objects for the final craft, when the given input is an RGB image of the target in the wild. We use a mask segmentation neural network to identify visible parts, followed by retrieving labeled template meshes. These meshes undergo pose optimization to determine the most suitable template. Then, we propose to simplify the parts of the transformed template mesh to primitive shapes like cuboids or cylinders. Finally, we design a search algorithm to find correspondences in the scene based on local and global proportions. We develop baselines for comparison that consider all possible combinations, and choose the highest scoring combination for common metrics used in foreground maps and mask accuracy. Our approach achieves comparable results to the baselines for two different scenes, and we show qualitative results for an implementation in a real-world scenario.",
+        "url": "http://arxiv.org/abs/2512.04568v1",
+        "published_date": "2025-12-04T08:32:02+00:00",
+        "updated_date": "2025-12-04T08:32:02+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Vitor Hideyo Isume",
+            "Takuya Kiyokawa",
+            "Natsuki Yamanobe",
+            "Yukiyasu Domae",
+            "Weiwei Wan",
+            "Kensuke Harada"
+        ],
+        "tldr": "The paper introduces a new robotic assembly task called 'Craft Assembly' where robots build a target object from available objects that don't directly correspond to its parts, using a combination of mask segmentation, pose optimization, primitive shape simplification, and a search algorithm. The approach achieves comparable results to baselines in simulated environments and demonstrates qualitative results in a real-world scenario.",
+        "tldr_zh": "该论文介绍了一种名为“工艺组装”的新型机器人组装任务，机器人使用掩码分割、姿态优化、原始形状简化和搜索算法，从不直接对应其零件的可用对象构建目标对象。该方法在模拟环境中取得了与基线相当的结果，并在现实环境中展示了定性结果。",
+        "relevance_score": 7,
+        "novelty_claim_score": 6,
+        "clarity_score": 8,
+        "potential_impact_score": 6,
+        "overall_priority_score": 6
+    }
+]
