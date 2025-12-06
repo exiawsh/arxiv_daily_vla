@@ -1,0 +1,110 @@
+[
+    {
+        "title": "NeuralRemaster: Phase-Preserving Diffusion for Structure-Aligned Generation",
+        "summary": "Standard diffusion corrupts data using Gaussian noise whose Fourier coefficients have random magnitudes and random phases. While effective for unconditional or text-to-image generation, corrupting phase components destroys spatial structure, making it ill-suited for tasks requiring geometric consistency, such as re-rendering, simulation enhancement, and image-to-image translation. We introduce Phase-Preserving Diffusion φ-PD, a model-agnostic reformulation of the diffusion process that preserves input phase while randomizing magnitude, enabling structure-aligned generation without architectural changes or additional parameters. We further propose Frequency-Selective Structured (FSS) noise, which provides continuous control over structural rigidity via a single frequency-cutoff parameter. φ-PD adds no inference-time cost and is compatible with any diffusion model for images or videos. Across photorealistic and stylized re-rendering, as well as sim-to-real enhancement for driving planners, φ-PD produces controllable, spatially aligned results. When applied to the CARLA simulator, φ-PD improves CARLA-to-Waymo planner performance by 50\\%. The method is complementary to existing conditioning approaches and broadly applicable to image-to-image and video-to-video generation. Videos, additional examples, and code are available on our \\href{https://yuzeng-at-tri.github.io/ppd-page/}{project page}.",
+        "url": "http://arxiv.org/abs/2512.05106v1",
+        "published_date": "2025-12-04T18:59:18+00:00",
+        "updated_date": "2025-12-04T18:59:18+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.GR",
+            "cs.LG",
+            "cs.RO"
+        ],
+        "authors": [
+            "Yu Zeng",
+            "Charles Ochoa",
+            "Mingyuan Zhou",
+            "Vishal M. Patel",
+            "Vitor Guizilini",
+            "Rowan McAllister"
+        ],
+        "tldr": "The paper introduces Phase-Preserving Diffusion (φ-PD), a diffusion model reformulation that preserves input phase while randomizing magnitude, enabling structure-aligned generation and improving sim-to-real transfer performance in autonomous driving.",
+        "tldr_zh": "该论文介绍了一种相位保持扩散（φ-PD）方法，它是一种扩散模型的重新公式化，可在随机化幅度时保持输入相位，从而实现结构对齐的生成并提高自动驾驶中从模拟到真实环境的迁移性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "From Generated Human Videos to Physically Plausible Robot Trajectories",
+        "summary": "Video generation models are rapidly improving in their ability to synthesize human actions in novel contexts, holding the potential to serve as high-level planners for contextual robot control. To realize this potential, a key research question remains open: how can a humanoid execute the human actions from generated videos in a zero-shot manner? This challenge arises because generated videos are often noisy and exhibit morphological distortions that make direct imitation difficult compared to real video. To address this, we introduce a two-stage pipeline. First, we lift video pixels into a 4D human representation and then retarget to the humanoid morphology. Second, we propose GenMimic-a physics-aware reinforcement learning policy conditioned on 3D keypoints, and trained with symmetry regularization and keypoint-weighted tracking rewards. As a result, GenMimic can mimic human actions from noisy, generated videos. We curate GenMimicBench, a synthetic human-motion dataset generated using two video generation models across a spectrum of actions and contexts, establishing a benchmark for assessing zero-shot generalization and policy robustness. Extensive experiments demonstrate improvements over strong baselines in simulation and confirm coherent, physically stable motion tracking on a Unitree G1 humanoid robot without fine-tuning. This work offers a promising path to realizing the potential of video generation models as high-level policies for robot control.",
+        "url": "http://arxiv.org/abs/2512.05094v1",
+        "published_date": "2025-12-04T18:56:03+00:00",
+        "updated_date": "2025-12-04T18:56:03+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "James Ni",
+            "Zekai Wang",
+            "Wei Lin",
+            "Amir Bar",
+            "Yann LeCun",
+            "Trevor Darrell",
+            "Jitendra Malik",
+            "Roei Herzig"
+        ],
+        "tldr": "This paper presents GenMimic, a two-stage pipeline using reinforcement learning to enable humanoids to mimic actions from noisy, generated videos, validated on a new synthetic dataset and a real robot.",
+        "tldr_zh": "本文提出了GenMimic，一个两阶段流程，使用强化学习使人形机器人能够模仿来自嘈杂生成视频的动作，并在新的合成数据集和真实机器人上进行了验证。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "4DLangVGGT: 4D Language-Visual Geometry Grounded Transformer",
+        "summary": "Constructing 4D language fields is crucial for embodied AI, augmented/virtual reality, and 4D scene understanding, as they provide enriched semantic representations of dynamic environments and enable open-vocabulary querying in complex scenarios. However, existing approaches to 4D semantic field construction primarily rely on scene-specific Gaussian splatting, which requires per-scene optimization, exhibits limited generalization, and is difficult to scale to real-world applications. To address these limitations, we propose 4DLangVGGT, the first Transformer-based feed-forward unified framework for 4D language grounding, that jointly integrates geometric perception and language alignment within a single architecture. 4DLangVGGT has two key components: the 4D Visual Geometry Transformer, StreamVGGT, which captures spatio-temporal geometric representations of dynamic scenes; and the Semantic Bridging Decoder (SBD), which projects geometry-aware features into a language-aligned semantic space, thereby enhancing semantic interpretability while preserving structural fidelity. Unlike prior methods that depend on costly per-scene optimization, 4DLangVGGT can be jointly trained across multiple dynamic scenes and directly applied during inference, achieving both deployment efficiency and strong generalization. This design significantly improves the practicality of large-scale deployment and establishes a new paradigm for open-vocabulary 4D scene understanding. Experiments on HyperNeRF and Neu3D datasets demonstrate that our approach not only generalizes effectively but also achieves state-of-the-art performance, achieving up to 2% gains under per-scene training and 1% improvements under multi-scene training. Our code released in https://github.com/hustvl/4DLangVGGT",
+        "url": "http://arxiv.org/abs/2512.05060v1",
+        "published_date": "2025-12-04T18:15:27+00:00",
+        "updated_date": "2025-12-04T18:15:27+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Xianfeng Wu",
+            "Yajing Bai",
+            "Minghan Li",
+            "Xianzu Wu",
+            "Xueqi Zhao",
+            "Zhongyuan Lai",
+            "Wenyu Liu",
+            "Xinggang Wang"
+        ],
+        "tldr": "The paper introduces 4DLangVGGT, a Transformer-based framework for 4D language grounding that integrates geometric perception and language alignment in dynamic scenes, offering improved generalization and deployment efficiency compared to per-scene optimization methods.",
+        "tldr_zh": "本文介绍了4DLangVGGT，一个基于Transformer的4D语言 grounding 框架，它将动态场景中的几何感知和语言对齐相结合，与每场景优化方法相比，提供了更好的泛化能力和部署效率。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Object Reconstruction under Occlusion with Generative Priors and Contact-induced Constraints",
+        "summary": "Object geometry is key information for robot manipulation. Yet, object reconstruction is a challenging task because cameras only capture partial observations of objects, especially when occlusion occurs. In this paper, we leverage two extra sources of information to reduce the ambiguity of vision signals. First, generative models learn priors of the shapes of commonly seen objects, allowing us to make reasonable guesses of the unseen part of geometry. Second, contact information, which can be obtained from videos and physical interactions, provides sparse constraints on the boundary of the geometry. We combine the two sources of information through contact-guided 3D generation. The guidance formulation is inspired by drag-based editing in generative models. Experiments on synthetic and real-world data show that our approach improves the reconstruction compared to pure 3D generation and contact-based optimization.",
+        "url": "http://arxiv.org/abs/2512.05079v1",
+        "published_date": "2025-12-04T18:45:14+00:00",
+        "updated_date": "2025-12-04T18:45:14+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Minghan Zhu",
+            "Zhiyi Wang",
+            "Qihang Sun",
+            "Maani Ghaffari",
+            "Michael Posa"
+        ],
+        "tldr": "This paper proposes a method for 3D object reconstruction under occlusion by combining generative shape priors with contact-induced constraints, showing improved performance over existing methods.",
+        "tldr_zh": "本文提出了一种在遮挡下进行3D物体重建的方法，该方法结合了生成式形状先验和接触诱导约束，与现有方法相比，性能有所提高。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
