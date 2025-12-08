@@ -1,0 +1,82 @@
+[
+    {
+        "title": "SIMPACT: Simulation-Enabled Action Planning using Vision-Language Models",
+        "summary": "Vision-Language Models (VLMs) exhibit remarkable common-sense and semantic reasoning capabilities. However, they lack a grounded understanding of physical dynamics. This limitation arises from training VLMs on static internet-scale visual-language data that contain no causal interactions or action-conditioned changes. Consequently, it remains challenging to leverage VLMs for fine-grained robotic manipulation tasks that require physical understanding, reasoning, and corresponding action planning. To overcome this, we present SIMPACT, a test-time, SIMulation-enabled ACTion Planning framework that equips VLMs with physical reasoning through simulation-in-the-loop world modeling, without requiring any additional training. From a single RGB-D observation, SIMPACT efficiently constructs physics simulations, enabling the VLM to propose informed actions, observe simulated rollouts, and iteratively refine its reasoning. By integrating language reasoning with physics prediction, our simulation-enabled VLM can understand contact dynamics and action outcomes in a physically grounded way. Our method demonstrates state-of-the-art performance on five challenging, real-world rigid-body and deformable manipulation tasks that require fine-grained physical reasoning, outperforming existing general-purpose robotic manipulation models. Our results demonstrate that embedding physics understanding via efficient simulation into VLM reasoning at test time offers a promising path towards generalizable embodied intelligence. Project webpage can be found at https://simpact-bot.github.io",
+        "url": "http://arxiv.org/abs/2512.05955v1",
+        "published_date": "2025-12-05T18:51:03+00:00",
+        "updated_date": "2025-12-05T18:51:03+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Haowen Liu",
+            "Shaoxiong Yao",
+            "Haonan Chen",
+            "Jiawei Gao",
+            "Jiayuan Mao",
+            "Jia-Bin Huang",
+            "Yilun Du"
+        ],
+        "tldr": "SIMPACT enhances Vision-Language Models with physical reasoning by incorporating simulation-in-the-loop world modeling at test time, improving performance on robotic manipulation tasks. It outperforms existing methods on real-world manipulation tasks by grounding VLM reasoning with physics.",
+        "tldr_zh": "SIMPACT通过在测试时引入循环模拟世界建模来增强视觉-语言模型的物理推理能力，从而提高了机器人操作任务的性能。 通过将VLM推理与物理相结合，该方法在现实操作任务中优于现有方法。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Measuring the Effect of Background on Classification and Feature Importance in Deep Learning for AV Perception",
+        "summary": "Common approaches to explainable AI (XAI) for deep learning focus on analyzing the importance of input features on the classification task in a given model: saliency methods like SHAP and GradCAM are used to measure the impact of spatial regions of the input image on the classification result. Combined with ground truth information about the location of the object in the input image (e.g., a binary mask), it is determined whether object pixels had a high impact on the classification result, or whether the classification focused on background pixels. The former is considered to be a sign of a healthy classifier, whereas the latter is assumed to suggest overfitting on spurious correlations. A major challenge, however, is that these intuitive interpretations are difficult to test quantitatively, and hence the output of such explanations lacks an explanation itself. One particular reason is that correlations in real-world data are difficult to avoid, and whether they are spurious or legitimate is debatable. Synthetic data in turn can facilitate to actively enable or disable correlations where desired but often lack a sufficient quantification of realism and stochastic properties. [...] Therefore, we systematically generate six synthetic datasets for the task of traffic sign recognition, which differ only in their degree of camera variation and background correlation [...] to quantify the isolated influence of background correlation, different levels of camera variation, and considered traffic sign shapes on the classification performance, as well as background feature importance. [...] Results include a quantification of when and how much background features gain importance to support the classification task based on changes in the training domain [...].\n  Download: synset.de/datasets/synset-signset-ger/background-effect",
+        "url": "http://arxiv.org/abs/2512.05937v1",
+        "published_date": "2025-12-05T18:25:52+00:00",
+        "updated_date": "2025-12-05T18:25:52+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.RO"
+        ],
+        "authors": [
+            "Anne Sielemann",
+            "Valentin Barner",
+            "Stefan Wolf",
+            "Masoud Roschani",
+            "Jens Ziehn",
+            "Juergen Beyerer"
+        ],
+        "tldr": "This paper investigates the impact of background correlations on deep learning models for traffic sign recognition using systematically generated synthetic datasets, quantifying how background features gain importance based on training domain changes.",
+        "tldr_zh": "本文使用系统生成的合成数据集，研究了背景相关性对交通标志识别深度学习模型的影响，量化了背景特征如何基于训练域的变化而变得重要。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "World Models That Know When They Don't Know: Controllable Video Generation with Calibrated Uncertainty",
+        "summary": "Recent advances in generative video models have led to significant breakthroughs in high-fidelity video synthesis, specifically in controllable video generation where the generated video is conditioned on text and action inputs, e.g., in instruction-guided video editing and world modeling in robotics. Despite these exceptional capabilities, controllable video models often hallucinate - generating future video frames that are misaligned with physical reality - which raises serious concerns in many tasks such as robot policy evaluation and planning. However, state-of-the-art video models lack the ability to assess and express their confidence, impeding hallucination mitigation. To rigorously address this challenge, we propose C3, an uncertainty quantification (UQ) method for training continuous-scale calibrated controllable video models for dense confidence estimation at the subpatch level, precisely localizing the uncertainty in each generated video frame. Our UQ method introduces three core innovations to empower video models to estimate their uncertainty. First, our method develops a novel framework that trains video models for correctness and calibration via strictly proper scoring rules. Second, we estimate the video model's uncertainty in latent space, avoiding training instability and prohibitive training costs associated with pixel-space approaches. Third, we map the dense latent-space uncertainty to interpretable pixel-level uncertainty in the RGB space for intuitive visualization, providing high-resolution uncertainty heatmaps that identify untrustworthy regions. Through extensive experiments on large-scale robot learning datasets (Bridge and DROID) and real-world evaluations, we demonstrate that our method not only provides calibrated uncertainty estimates within the training distribution, but also enables effective out-of-distribution detection.",
+        "url": "http://arxiv.org/abs/2512.05927v1",
+        "published_date": "2025-12-05T18:06:18+00:00",
+        "updated_date": "2025-12-05T18:06:18+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.RO"
+        ],
+        "authors": [
+            "Zhiting Mei",
+            "Tenny Yin",
+            "Micah Baker",
+            "Ola Shorinwa",
+            "Anirudha Majumdar"
+        ],
+        "tldr": "This paper introduces C3, a novel uncertainty quantification method for controllable video models that enables dense confidence estimation and identifies untrustworthy regions in generated video frames, improving the reliability of these models in applications like robot policy evaluation.",
+        "tldr_zh": "本文介绍了一种新的可控视频模型不确定性量化方法C3，该方法能够进行密集置信度估计并识别生成视频帧中不可信的区域，从而提高这些模型在机器人策略评估等应用中的可靠性。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    }
+]
