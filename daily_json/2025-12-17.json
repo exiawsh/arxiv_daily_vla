@@ -1,0 +1,497 @@
+[
+    {
+        "title": "Unified Semantic Transformer for 3D Scene Understanding",
+        "summary": "Holistic 3D scene understanding involves capturing and parsing unstructured 3D environments. Due to the inherent complexity of the real world, existing models have predominantly been developed and limited to be task-specific. We introduce UNITE, a Unified Semantic Transformer for 3D scene understanding, a novel feed-forward neural network that unifies a diverse set of 3D semantic tasks within a single model. Our model operates on unseen scenes in a fully end-to-end manner and only takes a few seconds to infer the full 3D semantic geometry. Our approach is capable of directly predicting multiple semantic attributes, including 3D scene segmentation, instance embeddings, open-vocabulary features, as well as affordance and articulations, solely from RGB images. The method is trained using a combination of 2D distillation, heavily relying on self-supervision and leverages novel multi-view losses designed to ensure 3D view consistency. We demonstrate that UNITE achieves state-of-the-art performance on several different semantic tasks and even outperforms task-specific models, in many cases, surpassing methods that operate on ground truth 3D geometry. See the project website at unite-page.github.io",
+        "url": "http://arxiv.org/abs/2512.14364v1",
+        "published_date": "2025-12-16T12:49:35+00:00",
+        "updated_date": "2025-12-16T12:49:35+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Sebastian Koch",
+            "Johanna Wald",
+            "Hide Matsuki",
+            "Pedro Hermosilla",
+            "Timo Ropinski",
+            "Federico Tombari"
+        ],
+        "tldr": "The paper introduces UNITE, a unified transformer network for 3D scene understanding that performs multiple semantic tasks (segmentation, instance embedding, affordance prediction, etc.) directly from RGB images, achieving state-of-the-art results.",
+        "tldr_zh": "本文介绍了一种名为UNITE的统一Transformer网络，用于3D场景理解。该网络可以直接从RGB图像执行多个语义任务（分割、实例嵌入、可供性预测等），并取得了最先进的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "4D-RaDiff: Latent Diffusion for 4D Radar Point Cloud Generation",
+        "summary": "Automotive radar has shown promising developments in environment perception due to its cost-effectiveness and robustness in adverse weather conditions. However, the limited availability of annotated radar data poses a significant challenge for advancing radar-based perception systems. To address this limitation, we propose a novel framework to generate 4D radar point clouds for training and evaluating object detectors. Unlike image-based diffusion, our method is designed to consider the sparsity and unique characteristics of radar point clouds by applying diffusion to a latent point cloud representation. Within this latent space, generation is controlled via conditioning at either the object or scene level. The proposed 4D-RaDiff converts unlabeled bounding boxes into high-quality radar annotations and transforms existing LiDAR point cloud data into realistic radar scenes. Experiments demonstrate that incorporating synthetic radar data of 4D-RaDiff as data augmentation method during training consistently improves object detection performance compared to training on real data only. In addition, pre-training on our synthetic data reduces the amount of required annotated radar data by up to 90% while achieving comparable object detection performance.",
+        "url": "http://arxiv.org/abs/2512.14235v1",
+        "published_date": "2025-12-16T09:43:05+00:00",
+        "updated_date": "2025-12-16T09:43:05+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jimmie Kwok",
+            "Holger Caesar",
+            "Andras Palffy"
+        ],
+        "tldr": "The paper introduces 4D-RaDiff, a latent diffusion model for generating synthetic 4D radar point clouds, which improves object detection performance and reduces the need for real annotated radar data in autonomous driving applications.",
+        "tldr_zh": "该论文介绍了4D-RaDiff，一种用于生成合成4D雷达点云的潜在扩散模型，该模型提高了目标检测性能，并减少了自动驾驶应用中对真实标注雷达数据的需求。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "OmniDrive-R1: Reinforcement-driven Interleaved Multi-modal Chain-of-Thought for Trustworthy Vision-Language Autonomous Driving",
+        "summary": "The deployment of Vision-Language Models (VLMs) in safety-critical domains like autonomous driving (AD) is critically hindered by reliability failures, most notably object hallucination. This failure stems from their reliance on ungrounded, text-based Chain-of-Thought (CoT) reasoning.While existing multi-modal CoT approaches attempt mitigation, they suffer from two fundamental flaws: (1) decoupled perception and reasoning stages that prevent end-to-end joint optimization, and (2) reliance on expensive, dense localization labels.Thus we introduce OmniDrive-R1, an end-to-end VLM framework designed for autonomous driving, which unifies perception and reasoning through an interleaved Multi-modal Chain-of-Thought (iMCoT) mechanism. Our core innovation is an Reinforcement-driven visual grounding capability, enabling the model to autonomously direct its attention and \"zoom in\" on critical regions for fine-grained analysis. This capability is enabled by our pure two-stage reinforcement learning training pipeline and Clip-GRPO algorithm. Crucially, Clip-GRPO introduces an annotation-free, process-based grounding reward. This reward not only eliminates the need for dense labels but also circumvents the instability of external tool calls by enforcing real-time cross-modal consistency between the visual focus and the textual reasoning. Extensive experiments on DriveLMM-o1 demonstrate our model's significant improvements. Compared to the baseline Qwen2.5VL-7B, OmniDrive-R1 improves the overall reasoning score from 51.77% to 80.35%, and the final answer accuracy from 37.81% to 73.62%.",
+        "url": "http://arxiv.org/abs/2512.14044v1",
+        "published_date": "2025-12-16T03:19:28+00:00",
+        "updated_date": "2025-12-16T03:19:28+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Zhenguo Zhang",
+            "Haohan Zhen",
+            "Yishen Wang",
+            "Le Xu",
+            "Tianchen Deng",
+            "Xuefeng Chen",
+            "Qu Chen",
+            "Bo Zhang",
+            "Wuxiong Huang"
+        ],
+        "tldr": "OmniDrive-R1 is a novel VLM framework for autonomous driving that uses reinforcement learning to improve visual grounding and reasoning, leading to improved performance and reliability in safety-critical scenarios by interleaving multi-modal CoT and avoiding dense localization labels.",
+        "tldr_zh": "OmniDrive-R1是一个用于自动驾驶的新型VLM框架，它通过强化学习改进视觉定位和推理，从而在安全关键场景中提高了性能和可靠性，通过交错多模态CoT并避免密集定位标签来实现。",
+        "relevance_score": 10,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "RoboTracer: Mastering Spatial Trace with Reasoning in Vision-Language Models for Robotics",
+        "summary": "Spatial tracing, as a fundamental embodied interaction ability for robots, is inherently challenging as it requires multi-step metric-grounded reasoning compounded with complex spatial referring and real-world metric measurement. However, existing methods struggle with this compositional task. To this end, we propose RoboTracer, a 3D-aware VLM that first achieves both 3D spatial referring and measuring via a universal spatial encoder and a regression-supervised decoder to enhance scale awareness during supervised fine-tuning (SFT). Moreover, RoboTracer advances multi-step metric-grounded reasoning via reinforcement fine-tuning (RFT) with metric-sensitive process rewards, supervising key intermediate perceptual cues to accurately generate spatial traces. To support SFT and RFT training, we introduce TraceSpatial, a large-scale dataset of 30M QA pairs, spanning outdoor/indoor/tabletop scenes and supporting complex reasoning processes (up to 9 steps). We further present TraceSpatial-Bench, a challenging benchmark filling the gap to evaluate spatial tracing. Experimental results show that RoboTracer surpasses baselines in spatial understanding, measuring, and referring, with an average success rate of 79.1%, and also achieves SOTA performance on TraceSpatial-Bench by a large margin, exceeding Gemini-2.5-Pro by 36% accuracy. Notably, RoboTracer can be integrated with various control policies to execute long-horizon, dynamic tasks across diverse robots (UR5, G1 humanoid) in cluttered real-world scenes.",
+        "url": "http://arxiv.org/abs/2512.13660v1",
+        "published_date": "2025-12-15T18:52:43+00:00",
+        "updated_date": "2025-12-15T18:52:43+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Enshen Zhou",
+            "Cheng Chi",
+            "Yibo Li",
+            "Jingkun An",
+            "Jiayuan Zhang",
+            "Shanyu Rong",
+            "Yi Han",
+            "Yuheng Ji",
+            "Mengzhen Liu",
+            "Pengwei Wang",
+            "Zhongyuan Wang",
+            "Lu Sheng",
+            "Shanghang Zhang"
+        ],
+        "tldr": "RoboTracer, a 3D-aware VLM, tackles spatial tracing in robotics by enhancing spatial reasoning and measurement through supervised and reinforcement fine-tuning, achieving SOTA performance and demonstrating real-world applicability.",
+        "tldr_zh": "RoboTracer是一个3D感知的VLM，通过监督和强化微调，增强了空间推理和测量能力，解决了机器人技术中的空间追踪问题，实现了SOTA性能，并展示了实际应用能力。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "MindDrive: A Vision-Language-Action Model for Autonomous Driving via Online Reinforcement Learning",
+        "summary": "Current Vision-Language-Action (VLA) paradigms in autonomous driving primarily rely on Imitation Learning (IL), which introduces inherent challenges such as distribution shift and causal confusion. Online Reinforcement Learning offers a promising pathway to address these issues through trial-and-error learning. However, applying online reinforcement learning to VLA models in autonomous driving is hindered by inefficient exploration in continuous action spaces. To overcome this limitation, we propose MindDrive, a VLA framework comprising a large language model (LLM) with two distinct sets of LoRA parameters. The one LLM serves as a Decision Expert for scenario reasoning and driving decision-making, while the other acts as an Action Expert that dynamically maps linguistic decisions into feasible trajectories. By feeding trajectory-level rewards back into the reasoning space, MindDrive enables trial-and-error learning over a finite set of discrete linguistic driving decisions, instead of operating directly in a continuous action space. This approach effectively balances optimal decision-making in complex scenarios, human-like driving behavior, and efficient exploration in online reinforcement learning. Using the lightweight Qwen-0.5B LLM, MindDrive achieves Driving Score (DS) of 78.04 and Success Rate (SR) of 55.09% on the challenging Bench2Drive benchmark. To the best of our knowledge, this is the first work to demonstrate the effectiveness of online reinforcement learning for the VLA model in autonomous driving.",
+        "url": "http://arxiv.org/abs/2512.13636v2",
+        "published_date": "2025-12-15T18:31:32+00:00",
+        "updated_date": "2025-12-16T10:16:04+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Haoyu Fu",
+            "Diankun Zhang",
+            "Zongchuang Zhao",
+            "Jianfeng Cui",
+            "Hongwei Xie",
+            "Bing Wang",
+            "Guang Chen",
+            "Dingkang Liang",
+            "Xiang Bai"
+        ],
+        "tldr": "The paper introduces MindDrive, a VLA framework for autonomous driving that uses online reinforcement learning with an LLM and two LoRA parameter sets to address distribution shift and causal confusion issues in imitation learning. It achieves promising results on the Bench2Drive benchmark.",
+        "tldr_zh": "该论文介绍了MindDrive，一个用于自动驾驶的VLA框架，它使用在线强化学习，配备LLM和两组LoRA参数，以解决模仿学习中的分布偏移和因果混淆问题。在Bench2Drive基准测试中取得了可喜的成果。",
+        "relevance_score": 10,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "DASP: Self-supervised Nighttime Monocular Depth Estimation with Domain Adaptation of Spatiotemporal Priors",
+        "summary": "Self-supervised monocular depth estimation has achieved notable success under daytime conditions. However, its performance deteriorates markedly at night due to low visibility and varying illumination, e.g., insufficient light causes textureless areas, and moving objects bring blurry regions. To this end, we propose a self-supervised framework named DASP that leverages spatiotemporal priors for nighttime depth estimation. Specifically, DASP consists of an adversarial branch for extracting spatiotemporal priors and a self-supervised branch for learning. In the adversarial branch, we first design an adversarial network where the discriminator is composed of four devised spatiotemporal priors learning blocks (SPLB) to exploit the daytime priors. In particular, the SPLB contains a spatial-based temporal learning module (STLM) that uses orthogonal differencing to extract motion-related variations along the time axis and an axial spatial learning module (ASLM) that adopts local asymmetric convolutions with global axial attention to capture the multiscale structural information. By combining STLM and ASLM, our model can acquire sufficient spatiotemporal features to restore textureless areas and estimate the blurry regions caused by dynamic objects. In the self-supervised branch, we propose a 3D consistency projection loss to bilaterally project the target frame and source frame into a shared 3D space, and calculate the 3D discrepancy between the two projected frames as a loss to optimize the 3D structural consistency and daytime priors. Extensive experiments on the Oxford RobotCar and nuScenes datasets demonstrate that our approach achieves state-of-the-art performance for nighttime depth estimation. Ablation studies further validate the effectiveness of each component.",
+        "url": "http://arxiv.org/abs/2512.14536v1",
+        "published_date": "2025-12-16T16:11:57+00:00",
+        "updated_date": "2025-12-16T16:11:57+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yiheng Huang",
+            "Junhong Chen",
+            "Anqi Ning",
+            "Zhanhong Liang",
+            "Nick Michiels",
+            "Luc Claesen",
+            "Wenyin Liu"
+        ],
+        "tldr": "This paper introduces DASP, a self-supervised framework for nighttime monocular depth estimation that leverages spatiotemporal priors through an adversarial branch and a 3D consistency projection loss, achieving state-of-the-art performance.",
+        "tldr_zh": "本文介绍了一种名为DASP的自监督框架，用于夜间单目深度估计，该框架利用时空先验知识，通过对抗分支和3D一致性投影损失，实现了最先进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "A Comprehensive Safety Metric to Evaluate Perception in Autonomous Systems",
+        "summary": "Complete perception of the environment and its correct interpretation is crucial for autonomous vehicles. Object perception is the main component of automotive surround sensing. Various metrics already exist for the evaluation of object perception. However, objects can be of different importance depending on their velocity, orientation, distance, size, or the potential damage that could be caused by a collision due to a missed detection. Thus, these additional parameters have to be considered for safety evaluation. We propose a new safety metric that incorporates all these parameters and returns a single easily interpretable safety assessment score for object perception. This new metric is evaluated with both real world and virtual data sets and compared to state of the art metrics.",
+        "url": "http://arxiv.org/abs/2512.14367v1",
+        "published_date": "2025-12-16T12:53:00+00:00",
+        "updated_date": "2025-12-16T12:53:00+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Georg Volk",
+            "Jörg Gamerdinger",
+            "Alexander von Bernuth",
+            "Oliver Bringmann"
+        ],
+        "tldr": "This paper introduces a new safety metric for evaluating object perception in autonomous vehicles, incorporating factors like object velocity, orientation, and potential collision damage to provide a single safety score. The metric is evaluated using real-world and virtual datasets.",
+        "tldr_zh": "本文提出了一种新的安全指标，用于评估自动驾驶车辆中的物体感知，该指标结合了物体速度、方向和潜在碰撞损害等因素，以提供单一的安全评分。该指标使用真实世界和虚拟数据集进行了评估。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "DriverGaze360: OmniDirectional Driver Attention with Object-Level Guidance",
+        "summary": "Predicting driver attention is a critical problem for developing explainable autonomous driving systems and understanding driver behavior in mixed human-autonomous vehicle traffic scenarios. Although significant progress has been made through large-scale driver attention datasets and deep learning architectures, existing works are constrained by narrow frontal field-of-view and limited driving diversity. Consequently, they fail to capture the full spatial context of driving environments, especially during lane changes, turns, and interactions involving peripheral objects such as pedestrians or cyclists. In this paper, we introduce DriverGaze360, a large-scale 360$^\\circ$ field of view driver attention dataset, containing $\\sim$1 million gaze-labeled frames collected from 19 human drivers, enabling comprehensive omnidirectional modeling of driver gaze behavior. Moreover, our panoramic attention prediction approach, DriverGaze360-Net, jointly learns attention maps and attended objects by employing an auxiliary semantic segmentation head. This improves spatial awareness and attention prediction across wide panoramic inputs. Extensive experiments demonstrate that DriverGaze360-Net achieves state-of-the-art attention prediction performance on multiple metrics on panoramic driving images. Dataset and method available at https://av.dfki.de/drivergaze360.",
+        "url": "http://arxiv.org/abs/2512.14266v1",
+        "published_date": "2025-12-16T10:23:00+00:00",
+        "updated_date": "2025-12-16T10:23:00+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Shreedhar Govil",
+            "Didier Stricker",
+            "Jason Rambach"
+        ],
+        "tldr": "The paper introduces DriverGaze360, a large-scale 360° driver attention dataset and a novel panoramic attention prediction network (DriverGaze360-Net) that incorporates object-level guidance through an auxiliary semantic segmentation head, achieving state-of-the-art performance.",
+        "tldr_zh": "该论文介绍了一个大型360°驾驶员注意力数据集DriverGaze360，以及一个新的全景注意力预测网络DriverGaze360-Net，该网络通过辅助语义分割头引入了对象级别的指导，实现了最先进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "OmniGen: Unified Multimodal Sensor Generation for Autonomous Driving",
+        "summary": "Autonomous driving has seen remarkable advancements, largely driven by extensive real-world data collection. However, acquiring diverse and corner-case data remains costly and inefficient. Generative models have emerged as a promising solution by synthesizing realistic sensor data. However, existing approaches primarily focus on single-modality generation, leading to inefficiencies and misalignment in multimodal sensor data. To address these challenges, we propose OminiGen, which generates aligned multimodal sensor data in a unified framework. Our approach leverages a shared Bird\\u2019s Eye View (BEV) space to unify multimodal features and designs a novel generalizable multimodal reconstruction method, UAE, to jointly decode LiDAR and multi-view camera data. UAE achieves multimodal sensor decoding through volume rendering, enabling accurate and flexible reconstruction. Furthermore, we incorporate a Diffusion Transformer (DiT) with a ControlNet branch to enable controllable multimodal sensor generation. Our comprehensive experiments demonstrate that OminiGen achieves desired performances in unified multimodal sensor data generation with multimodal consistency and flexible sensor adjustments.",
+        "url": "http://arxiv.org/abs/2512.14225v1",
+        "published_date": "2025-12-16T09:18:15+00:00",
+        "updated_date": "2025-12-16T09:18:15+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Tao Tang",
+            "Enhui Ma",
+            "xia zhou",
+            "Letian Wang",
+            "Tianyi Yan",
+            "Xueyang Zhang",
+            "Kun Zhan",
+            "Peng Jia",
+            "XianPeng Lang",
+            "Jia-Wang Bian",
+            "Kaicheng Yu",
+            "Xiaodan Liang"
+        ],
+        "tldr": "The paper introduces OmniGen, a unified framework for generating aligned multimodal sensor data (LiDAR and multi-view cameras) for autonomous driving using a shared BEV space and a novel multimodal reconstruction method, UAE, based on volume rendering and Diffusion Transformers.",
+        "tldr_zh": "该论文介绍了OmniGen，一个统一的框架，用于生成对齐的多模态传感器数据（激光雷达和多视角相机），通过共享BEV空间和一种新的多模态重建方法UAE，基于体渲染和扩散变换器，应用于自动驾驶。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "History-Enhanced Two-Stage Transformer for Aerial Vision-and-Language Navigation",
+        "summary": "Aerial Vision-and-Language Navigation (AVLN) requires Unmanned Aerial Vehicle (UAV) agents to localize targets in large-scale urban environments based on linguistic instructions. While successful navigation demands both global environmental reasoning and local scene comprehension, existing UAV agents typically adopt mono-granularity frameworks that struggle to balance these two aspects. To address this limitation, this work proposes a History-Enhanced Two-Stage Transformer (HETT) framework, which integrates the two aspects through a coarse-to-fine navigation pipeline. Specifically, HETT first predicts coarse-grained target positions by fusing spatial landmarks and historical context, then refines actions via fine-grained visual analysis. In addition, a historical grid map is designed to dynamically aggregate visual features into a structured spatial memory, enhancing comprehensive scene awareness. Additionally, the CityNav dataset annotations are manually refined to enhance data quality. Experiments on the refined CityNav dataset show that HETT delivers significant performance gains, while extensive ablation studies further verify the effectiveness of each component.",
+        "url": "http://arxiv.org/abs/2512.14222v1",
+        "published_date": "2025-12-16T09:16:07+00:00",
+        "updated_date": "2025-12-16T09:16:07+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Xichen Ding",
+            "Jianzhe Gao",
+            "Cong Pan",
+            "Wenguan Wang",
+            "Jie Qin"
+        ],
+        "tldr": "This paper introduces a History-Enhanced Two-Stage Transformer (HETT) for Aerial Vision-and-Language Navigation (AVLN), using a coarse-to-fine approach with a historical grid map for improved scene awareness, and presents results on a refined CityNav dataset.",
+        "tldr_zh": "本文提出了一种历史增强型两阶段Transformer (HETT) 用于空中视觉-语言导航 (AVLN)，采用粗到精的方法，利用历史网格地图来提高场景感知能力，并在改进的CityNav数据集上进行了实验。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "DRAW2ACT: Turning Depth-Encoded Trajectories into Robotic Demonstration Videos",
+        "summary": "Video diffusion models provide powerful real-world simulators for embodied AI but remain limited in controllability for robotic manipulation. Recent works on trajectory-conditioned video generation address this gap but often rely on 2D trajectories or single modality conditioning, which restricts their ability to produce controllable and consistent robotic demonstrations. We present DRAW2ACT, a depth-aware trajectory-conditioned video generation framework that extracts multiple orthogonal representations from the input trajectory, capturing depth, semantics, shape and motion, and injects them into the diffusion model. Moreover, we propose to jointly generate spatially aligned RGB and depth videos, leveraging cross-modality attention mechanisms and depth supervision to enhance the spatio-temporal consistency. Finally, we introduce a multimodal policy model conditioned on the generated RGB and depth sequences to regress the robot's joint angles. Experiments on Bridge V2, Berkeley Autolab, and simulation benchmarks show that DRAW2ACT achieves superior visual fidelity and consistency while yielding higher manipulation success rates compared to existing baselines.",
+        "url": "http://arxiv.org/abs/2512.14217v1",
+        "published_date": "2025-12-16T09:11:36+00:00",
+        "updated_date": "2025-12-16T09:11:36+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Yang Bai",
+            "Liudi Yang",
+            "George Eskandar",
+            "Fengyi Shen",
+            "Mohammad Altillawi",
+            "Ziyuan Liu",
+            "Gitta Kutyniok"
+        ],
+        "tldr": "DRAW2ACT is a depth-aware video generation framework that uses trajectory information to generate robotic demonstration videos with improved visual fidelity, consistency, and manipulation success rates, by injecting multiple orthogonal representations and jointly generating spatially aligned RGB and depth videos.",
+        "tldr_zh": "DRAW2ACT是一个深度感知的视频生成框架，它使用轨迹信息生成机器人演示视频，具有更高的视觉保真度、一致性和操作成功率，通过注入多个正交表示并联合生成空间对齐的RGB和深度视频。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Consistent Instance Field for Dynamic Scene Understanding",
+        "summary": "We introduce Consistent Instance Field, a continuous and probabilistic spatio-temporal representation for dynamic scene understanding. Unlike prior methods that rely on discrete tracking or view-dependent features, our approach disentangles visibility from persistent object identity by modeling each space-time point with an occupancy probability and a conditional instance distribution. To realize this, we introduce a novel instance-embedded representation based on deformable 3D Gaussians, which jointly encode radiance and semantic information and are learned directly from input RGB images and instance masks through differentiable rasterization. Furthermore, we introduce new mechanisms to calibrate per-Gaussian identities and resample Gaussians toward semantically active regions, ensuring consistent instance representations across space and time. Experiments on HyperNeRF and Neu3D datasets demonstrate that our method significantly outperforms state-of-the-art methods on novel-view panoptic segmentation and open-vocabulary 4D querying tasks.",
+        "url": "http://arxiv.org/abs/2512.14126v1",
+        "published_date": "2025-12-16T06:12:11+00:00",
+        "updated_date": "2025-12-16T06:12:11+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Junyi Wu",
+            "Van Nguyen Nguyen",
+            "Benjamin Planche",
+            "Jiachen Tao",
+            "Changchang Sun",
+            "Zhongpai Gao",
+            "Zhenghao Zhao",
+            "Anwesa Choudhuri",
+            "Gengyu Zhang",
+            "Meng Zheng",
+            "Feiran Wang",
+            "Terrence Chen",
+            "Yan Yan",
+            "Ziyan Wu"
+        ],
+        "tldr": "The paper introduces Consistent Instance Field, a novel spatio-temporal representation using deformable 3D Gaussians for dynamic scene understanding, achieving state-of-the-art results in novel-view panoptic segmentation and 4D querying.",
+        "tldr_zh": "该论文介绍了Consistent Instance Field，一种新颖的时空表示方法，使用可变形的3D高斯函数进行动态场景理解，并在新视角全景分割和4D查询任务中取得了最先进的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "ACE-SLAM: Scene Coordinate Regression for Neural Implicit Real-Time SLAM",
+        "summary": "We present a novel neural RGB-D Simultaneous Localization And Mapping (SLAM) system that learns an implicit map of the scene in real time. For the first time, we explore the use of Scene Coordinate Regression (SCR) as the core implicit map representation in a neural SLAM pipeline, a paradigm that trains a lightweight network to directly map 2D image features to 3D global coordinates. SCR networks provide efficient, low-memory 3D map representations, enable extremely fast relocalization, and inherently preserve privacy, making them particularly suitable for neural implicit SLAM.\n  Our system is the first one to achieve strict real-time in neural implicit RGB-D SLAM by relying on a SCR-based representation. We introduce a novel SCR architecture specifically tailored for this purpose and detail the critical design choices required to integrate SCR into a live SLAM pipeline. The resulting framework is simple yet flexible, seamlessly supporting both sparse and dense features, and operates reliably in dynamic environments without special adaptation. We evaluate our approach on established synthetic and real-world benchmarks, demonstrating competitive performance against the state of the art. Project Page: https://github.com/ialzugaray/ace-slam",
+        "url": "http://arxiv.org/abs/2512.14032v1",
+        "published_date": "2025-12-16T02:56:50+00:00",
+        "updated_date": "2025-12-16T02:56:50+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "eess.IV"
+        ],
+        "authors": [
+            "Ignacio Alzugaray",
+            "Marwan Taher",
+            "Andrew J. Davison"
+        ],
+        "tldr": "This paper introduces ACE-SLAM, a real-time neural RGB-D SLAM system that uses Scene Coordinate Regression (SCR) for implicit map representation, achieving efficient and privacy-preserving performance in dynamic environments.",
+        "tldr_zh": "该论文介绍了一种名为ACE-SLAM的实时神经RGB-D SLAM系统，该系统使用场景坐标回归(SCR)进行隐式地图表示，在动态环境中实现了高效和保护隐私的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Deep Learning Perspective of Scene Understanding in Autonomous Robots",
+        "summary": "This paper provides a review of deep learning applications in scene understanding in autonomous robots, including innovations in object detection, semantic and instance segmentation, depth estimation, 3D reconstruction, and visual SLAM. It emphasizes how these techniques address limitations of traditional geometric models, improve depth perception in real time despite occlusions and textureless surfaces, and enhance semantic reasoning to understand the environment better. When these perception modules are integrated into dynamic and unstructured environments, they become more effective in decisionmaking, navigation and interaction. Lastly, the review outlines the existing problems and research directions to advance learning-based scene understanding of autonomous robots.",
+        "url": "http://arxiv.org/abs/2512.14020v1",
+        "published_date": "2025-12-16T02:31:54+00:00",
+        "updated_date": "2025-12-16T02:31:54+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Afia Maham",
+            "Dur E Nayab Tashfa"
+        ],
+        "tldr": "This paper reviews deep learning applications for scene understanding in autonomous robots, covering object detection, segmentation, depth estimation, SLAM, and outlining future research directions.",
+        "tldr_zh": "本文综述了深度学习在自主机器人场景理解中的应用，包括物体检测、分割、深度估计、SLAM，并概述了未来的研究方向。",
+        "relevance_score": 9,
+        "novelty_claim_score": 6,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "CLAIM: Camera-LiDAR Alignment with Intensity and Monodepth",
+        "summary": "In this paper, we unleash the potential of the powerful monodepth model in camera-LiDAR calibration and propose CLAIM, a novel method of aligning data from the camera and LiDAR. Given the initial guess and pairs of images and LiDAR point clouds, CLAIM utilizes a coarse-to-fine searching method to find the optimal transformation minimizing a patched Pearson correlation-based structure loss and a mutual information-based texture loss. These two losses serve as good metrics for camera-LiDAR alignment results and require no complicated steps of data processing, feature extraction, or feature matching like most methods, rendering our method simple and adaptive to most scenes. We validate CLAIM on public KITTI, Waymo, and MIAS-LCEC datasets, and the experimental results demonstrate its superior performance compared with the state-of-the-art methods. The code is available at https://github.com/Tompson11/claim.",
+        "url": "http://arxiv.org/abs/2512.14001v1",
+        "published_date": "2025-12-16T01:46:24+00:00",
+        "updated_date": "2025-12-16T01:46:24+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Zhuo Zhang",
+            "Yonghui Liu",
+            "Meijie Zhang",
+            "Feiyang Tan",
+            "Yikang Ding"
+        ],
+        "tldr": "CLAIM is a new camera-LiDAR calibration method that uses monodepth, coarse-to-fine search, and intensity-based and texture-based losses, achieving SOTA results on standard datasets.",
+        "tldr_zh": "CLAIM是一种新的相机-激光雷达标定方法，该方法利用单目深度、由粗到精的搜索以及基于强度和纹理的损失函数，并在标准数据集上取得了SOTA结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "FocalComm: Hard Instance-Aware Multi-Agent Perception",
+        "summary": "Multi-agent collaborative perception (CP) is a promising paradigm for improving autonomous driving safety, particularly for vulnerable road users like pedestrians, via robust 3D perception. However, existing CP approaches often optimize for vehicle detection performance metrics, underperforming on smaller, safety-critical objects such as pedestrians, where detection failures can be catastrophic. Furthermore, previous CP methods rely on full feature exchange rather than communicating only salient features that help reduce false negatives. To this end, we present FocalComm, a novel collaborative perception framework that focuses on exchanging hard-instance-oriented features among connected collaborative agents. FocalComm consists of two key novel designs: (1) a learnable progressive hard instance mining (HIM) module to extract hard instance-oriented features per agent, and (2) a query-based feature-level (intermediate) fusion technique that dynamically weights these identified features during collaboration. We show that FocalComm outperforms state-of-the-art collaborative perception methods on two challenging real-world datasets (V2X-Real and DAIR-V2X) across both vehicle-centric and infrastructure-centric collaborative setups. FocalComm also shows a strong performance gain in pedestrian detection in V2X-Real.",
+        "url": "http://arxiv.org/abs/2512.13982v1",
+        "published_date": "2025-12-16T00:41:50+00:00",
+        "updated_date": "2025-12-16T00:41:50+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Dereje Shenkut",
+            "Vijayakumar Bhagavatula"
+        ],
+        "tldr": "FocalComm is a novel collaborative perception framework for autonomous driving that focuses on exchanging hard-instance-oriented features to improve the detection of safety-critical objects like pedestrians, outperforming state-of-the-art methods on real-world datasets.",
+        "tldr_zh": "FocalComm是一种新型的自主驾驶协作感知框架，专注于交换面向困难实例的特征，以提高对行人类安全关键物体的检测，并在真实世界数据集上优于最先进的方法。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Feedforward 3D Editing via Text-Steerable Image-to-3D",
+        "summary": "Recent progress in image-to-3D has opened up immense possibilities for design, AR/VR, and robotics. However, to use AI-generated 3D assets in real applications, a critical requirement is the capability to edit them easily. We present a feedforward method, Steer3D, to add text steerability to image-to-3D models, which enables editing of generated 3D assets with language. Our approach is inspired by ControlNet, which we adapt to image-to-3D generation to enable text steering directly in a forward pass. We build a scalable data engine for automatic data generation, and develop a two-stage training recipe based on flow-matching training and Direct Preference Optimization (DPO). Compared to competing methods, Steer3D more faithfully follows the language instruction and maintains better consistency with the original 3D asset, while being 2.4x to 28.5x faster. Steer3D demonstrates that it is possible to add a new modality (text) to steer the generation of pretrained image-to-3D generative models with 100k data. Project website: https://glab-caltech.github.io/steer3d/",
+        "url": "http://arxiv.org/abs/2512.13678v1",
+        "published_date": "2025-12-15T18:58:55+00:00",
+        "updated_date": "2025-12-15T18:58:55+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Ziqi Ma",
+            "Hongqiao Chen",
+            "Yisong Yue",
+            "Georgia Gkioxari"
+        ],
+        "tldr": "Steer3D is a feedforward method for adding text-steerability to image-to-3D models, enabling language-based editing of generated 3D assets with improved speed and consistency.",
+        "tldr_zh": "Steer3D是一种前馈方法，用于为图像到3D模型添加文本可控性，从而能够通过语言编辑生成的3D资产，并提高了速度和一致性。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "World Models Can Leverage Human Videos for Dexterous Manipulation",
+        "summary": "Dexterous manipulation is challenging because it requires understanding how subtle hand motion influences the environment through contact with objects. We introduce DexWM, a Dexterous Manipulation World Model that predicts the next latent state of the environment conditioned on past states and dexterous actions. To overcome the scarcity of dexterous manipulation datasets, DexWM is trained on over 900 hours of human and non-dexterous robot videos. To enable fine-grained dexterity, we find that predicting visual features alone is insufficient; therefore, we introduce an auxiliary hand consistency loss that enforces accurate hand configurations. DexWM outperforms prior world models conditioned on text, navigation, and full-body actions, achieving more accurate predictions of future states. DexWM also demonstrates strong zero-shot generalization to unseen manipulation skills when deployed on a Franka Panda arm equipped with an Allegro gripper, outperforming Diffusion Policy by over 50% on average in grasping, placing, and reaching tasks.",
+        "url": "http://arxiv.org/abs/2512.13644v1",
+        "published_date": "2025-12-15T18:37:12+00:00",
+        "updated_date": "2025-12-15T18:37:12+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Raktim Gautam Goswami",
+            "Amir Bar",
+            "David Fan",
+            "Tsung-Yen Yang",
+            "Gaoyue Zhou",
+            "Prashanth Krishnamurthy",
+            "Michael Rabbat",
+            "Farshad Khorrami",
+            "Yann LeCun"
+        ],
+        "tldr": "This paper introduces DexWM, a world model for dexterous manipulation trained on human and robot videos, demonstrating superior performance in predicting future states and generalizing to unseen manipulation skills compared to existing methods.",
+        "tldr_zh": "本文介绍了 DexWM，一种用于灵巧操作的世界模型，通过人类和机器人视频进行训练，在预测未来状态和泛化到未见过的操作技能方面，表现优于现有方法。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Expert Switching for Robust AAV Landing: A Dual-Detector Framework in Simulation",
+        "summary": "Reliable helipad detection is essential for Autonomous Aerial Vehicle (AAV) landing, especially under GPS-denied or visually degraded conditions. While modern detectors such as YOLOv8 offer strong baseline performance, single-model pipelines struggle to remain robust across the extreme scale transitions that occur during descent, where helipads appear small at high altitude and large near touchdown. To address this limitation, we propose a scale-adaptive dual-expert perception framework that decomposes the detection task into far-range and close-range regimes. Two YOLOv8 experts are trained on scale-specialized versions of the HelipadCat dataset, enabling one model to excel at detecting small, low-resolution helipads and the other to provide high-precision localization when the target dominates the field of view. During inference, both experts operate in parallel, and a geometric gating mechanism selects the expert whose prediction is most consistent with the AAV's viewpoint. This adaptive routing prevents the degradation commonly observed in single-detector systems when operating across wide altitude ranges. The dual-expert perception module is evaluated in a closed-loop landing environment that integrates CARLA's photorealistic rendering with NASA's GUAM flight-dynamics engine. Results show substantial improvements in alignment stability, landing accuracy, and overall robustness compared to single-detector baselines. By introducing a scale-aware expert routing strategy tailored to the landing problem, this work advances resilient vision-based perception for autonomous descent and provides a foundation for future multi-expert AAV frameworks.",
+        "url": "http://arxiv.org/abs/2512.14054v1",
+        "published_date": "2025-12-16T03:41:59+00:00",
+        "updated_date": "2025-12-16T03:41:59+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Humaira Tasnim",
+            "Ashik E Rasul",
+            "Bruce Jo",
+            "Hyung-Jin Yoon"
+        ],
+        "tldr": "This paper proposes a scale-adaptive dual-expert YOLOv8 framework for robust AAV landing in GPS-denied environments, switching between experts based on altitude to improve landing accuracy and stability.",
+        "tldr_zh": "该论文提出了一个尺度自适应的双专家YOLOv8框架，用于在GPS拒止环境中实现鲁棒的AAV着陆。该框架根据高度在专家之间切换，以提高着陆精度和稳定性。",
+        "relevance_score": 7,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
