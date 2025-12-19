@@ -1,0 +1,411 @@
+[
+    {
+        "title": "N3D-VLM: Native 3D Grounding Enables Accurate Spatial Reasoning in Vision-Language Models",
+        "summary": "While current multimodal models can answer questions based on 2D images, they lack intrinsic 3D object perception, limiting their ability to comprehend spatial relationships and depth cues in 3D scenes. In this work, we propose N3D-VLM, a novel unified framework that seamlessly integrates native 3D object perception with 3D-aware visual reasoning, enabling both precise 3D grounding and interpretable spatial understanding. Unlike conventional end-to-end models that directly predict answers from RGB/RGB-D inputs, our approach equips the model with native 3D object perception capabilities, enabling it to directly localize objects in 3D space based on textual descriptions. Building upon accurate 3D object localization, the model further performs explicit reasoning in 3D, achieving more interpretable and structured spatial understanding. To support robust training for these capabilities, we develop a scalable data construction pipeline that leverages depth estimation to lift large-scale 2D annotations into 3D space, significantly increasing the diversity and coverage for 3D object grounding data, yielding over six times larger than the largest existing single-image 3D detection dataset. Moreover, the pipeline generates spatial question-answering datasets that target chain-of-thought (CoT) reasoning in 3D, facilitating joint training for both 3D object localization and 3D spatial reasoning. Experimental results demonstrate that our unified framework not only achieves state-of-the-art performance on 3D grounding tasks, but also consistently surpasses existing methods in 3D spatial reasoning in vision-language model.",
+        "url": "http://arxiv.org/abs/2512.16561v1",
+        "published_date": "2025-12-18T14:03:44+00:00",
+        "updated_date": "2025-12-18T14:03:44+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yuxin Wang",
+            "Lei Ke",
+            "Boqiang Zhang",
+            "Tianyuan Qu",
+            "Hanxun Yu",
+            "Zhenpeng Huang",
+            "Meng Yu",
+            "Dan Xu",
+            "Dong Yu"
+        ],
+        "tldr": "The paper introduces N3D-VLM, a novel vision-language model that integrates native 3D object perception with 3D-aware visual reasoning, enabling accurate 3D grounding and interpretable spatial understanding using a newly constructed large-scale 3D dataset.",
+        "tldr_zh": "该论文介绍了一种新的视觉语言模型N3D-VLM，它将原生3D物体感知与3D感知视觉推理相结合，从而实现精确的3D定位和可解释的空间理解，并使用了一个新建的大规模3D数据集。",
+        "relevance_score": 10,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "SNOW: Spatio-Temporal Scene Understanding with World Knowledge for Open-World Embodied Reasoning",
+        "summary": "Autonomous robotic systems require spatio-temporal understanding of dynamic environments to ensure reliable navigation and interaction. While Vision-Language Models (VLMs) provide open-world semantic priors, they lack grounding in 3D geometry and temporal dynamics. Conversely, geometric perception captures structure and motion but remains semantically sparse. We propose SNOW (Scene Understanding with Open-World Knowledge), a training-free and backbone-agnostic framework for unified 4D scene understanding that integrates VLM-derived semantics with point cloud geometry and temporal consistency. SNOW processes synchronized RGB images and 3D point clouds, using HDBSCAN clustering to generate object-level proposals that guide SAM2-based segmentation. Each segmented region is encoded through our proposed Spatio-Temporal Tokenized Patch Encoding (STEP), producing multimodal tokens that capture localized semantic, geometric, and temporal attributes. These tokens are incrementally integrated into a 4D Scene Graph (4DSG), which serves as 4D prior for downstream reasoning. A lightweight SLAM backend anchors all STEP tokens spatially in the environment, providing the global reference alignment, and ensuring unambiguous spatial grounding across time. The resulting 4DSG forms a queryable, unified world model through which VLMs can directly interpret spatial scene structure and temporal dynamics. Experiments on a diverse set of benchmarks demonstrate that SNOW enables precise 4D scene understanding and spatially grounded inference, thereby setting new state-of-the-art performance in several settings, highlighting the importance of structured 4D priors for embodied reasoning and autonomous robotics.",
+        "url": "http://arxiv.org/abs/2512.16461v1",
+        "published_date": "2025-12-18T12:27:06+00:00",
+        "updated_date": "2025-12-18T12:27:06+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Tin Stribor Sohn",
+            "Maximilian Dillitzer",
+            "Jason J. Corso",
+            "Eric Sax"
+        ],
+        "tldr": "The paper introduces SNOW, a training-free framework for 4D scene understanding that integrates VLM semantics with point cloud geometry and temporal consistency, enabling improved embodied reasoning. It uses STEP to encode localized attributes into a 4DSG and achieves SOTA results.",
+        "tldr_zh": "该论文介绍了SNOW，一个无需训练的4D场景理解框架，它将VLM语义与点云几何和时间一致性相结合，从而改进了具身推理。它使用STEP将局部属性编码到4DSG中，并实现了SOTA结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Auto-Vocabulary 3D Object Detection",
+        "summary": "Open-vocabulary 3D object detection methods are able to localize 3D boxes of classes unseen during training. Despite the name, existing methods rely on user-specified classes both at training and inference. We propose to study Auto-Vocabulary 3D Object Detection (AV3DOD), where the classes are automatically generated for the detected objects without any user input. To this end, we introduce Semantic Score (SS) to evaluate the quality of the generated class names. We then develop a novel framework, AV3DOD, which leverages 2D vision-language models (VLMs) to generate rich semantic candidates through image captioning, pseudo 3D box generation, and feature-space semantics expansion. AV3DOD achieves the state-of-the-art (SOTA) performance on both localization (mAP) and semantic quality (SS) on the ScanNetV2 and SUNRGB-D datasets. Notably, it surpasses the SOTA, CoDA, by 3.48 overall mAP and attains a 24.5% relative improvement in SS on ScanNetV2.",
+        "url": "http://arxiv.org/abs/2512.16077v1",
+        "published_date": "2025-12-18T01:53:40+00:00",
+        "updated_date": "2025-12-18T01:53:40+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Haomeng Zhang",
+            "Kuan-Chuan Peng",
+            "Suhas Lohit",
+            "Raymond A. Yeh"
+        ],
+        "tldr": "The paper introduces Auto-Vocabulary 3D Object Detection (AV3DOD), a novel framework that automatically generates class names for detected 3D objects without user input, achieving state-of-the-art performance in both localization and semantic quality.",
+        "tldr_zh": "该论文介绍了自动词汇3D物体检测(AV3DOD)，这是一个新的框架，可以自动为检测到的3D物体生成类名，无需用户输入，并在定位和语义质量方面都达到了最先进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Driving in Corner Case: A Real-World Adversarial Closed-Loop Evaluation Platform for End-to-End Autonomous Driving",
+        "summary": "Safety-critical corner cases, difficult to collect in the real world, are crucial for evaluating end-to-end autonomous driving. Adversarial interaction is an effective method to generate such safety-critical corner cases. While existing adversarial evaluation methods are built for models operating in simplified simulation environments, adversarial evaluation for real-world end-to-end autonomous driving has been little explored. To address this challenge, we propose a closed-loop evaluation platform for end-to-end autonomous driving, which can generate adversarial interactions in real-world scenes. In our platform, the real-world image generator cooperates with an adversarial traffic policy to evaluate various end-to-end models trained on real-world data. The generator, based on flow matching, efficiently and stably generates real-world images according to the traffic environment information. The efficient adversarial surrounding vehicle policy is designed to model challenging interactions and create corner cases that current autonomous driving systems struggle to handle. Experimental results demonstrate that the platform can generate realistic driving images efficiently. Through evaluating the end-to-end models such as UniAD and VAD, we demonstrate that based on the adversarial policy, our platform evaluates the performance degradation of the tested model in corner cases. This result indicates that this platform can effectively detect the model's potential issues, which will facilitate the safety and robustness of end-to-end autonomous driving.",
+        "url": "http://arxiv.org/abs/2512.16055v1",
+        "published_date": "2025-12-18T00:41:31+00:00",
+        "updated_date": "2025-12-18T00:41:31+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Jiaheng Geng",
+            "Jiatong Du",
+            "Xinyu Zhang",
+            "Ye Li",
+            "Panqu Wang",
+            "Yanjun Huang"
+        ],
+        "tldr": "The paper introduces a real-world adversarial closed-loop evaluation platform for end-to-end autonomous driving, capable of generating safety-critical corner cases through adversarial interactions using a real-world image generator and adversarial traffic policy.",
+        "tldr_zh": "该论文介绍了一个真实世界对抗闭环评估平台，用于端到端自动驾驶，能够通过真实世界图像生成器和对抗交通策略，利用对抗交互生成安全关键的极端场景。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "R4: Retrieval-Augmented Reasoning for Vision-Language Models in 4D Spatio-Temporal Space",
+        "summary": "Humans perceive and reason about their surroundings in four dimensions by building persistent, structured internal representations that encode semantic meaning, spatial layout, and temporal dynamics. These multimodal memories enable them to recall past events, infer unobserved states, and integrate new information into context-dependent reasoning. Inspired by this capability, we introduce R4, a training-free framework for retrieval-augmented reasoning in 4D spatio-temporal space that equips vision-language models (VLMs) with structured, lifelong memory. R4 continuously constructs a 4D knowledge database by anchoring object-level semantic descriptions in metric space and time, yielding a persistent world model that can be shared across agents. At inference, natural language queries are decomposed into semantic, spatial, and temporal keys to retrieve relevant observations, which are integrated into the VLM's reasoning. Unlike classical retrieval-augmented generation methods, retrieval in R4 operates directly in 4D space, enabling episodic and collaborative reasoning without training. Experiments on embodied question answering and navigation benchmarks demonstrate that R4 substantially improves retrieval and reasoning over spatio-temporal information compared to baselines, advancing a new paradigm for embodied 4D reasoning in dynamic environments.",
+        "url": "http://arxiv.org/abs/2512.15940v1",
+        "published_date": "2025-12-17T20:08:32+00:00",
+        "updated_date": "2025-12-17T20:08:32+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Tin Stribor Sohn",
+            "Maximilian Dillitzer",
+            "Jason J. Corso",
+            "Eric Sax"
+        ],
+        "tldr": "The paper introduces R4, a training-free retrieval-augmented reasoning framework for vision-language models that builds a 4D spatio-temporal knowledge database to improve reasoning in dynamic environments.",
+        "tldr_zh": "该论文介绍了R4，一个免训练的检索增强推理框架，用于视觉-语言模型，通过构建4D时空知识数据库来提升动态环境中的推理能力。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Large Video Planner Enables Generalizable Robot Control",
+        "summary": "General-purpose robots require decision-making models that generalize across diverse tasks and environments. Recent works build robot foundation models by extending multimodal large language models (MLLMs) with action outputs, creating vision-language-action (VLA) systems. These efforts are motivated by the intuition that MLLMs' large-scale language and image pretraining can be effectively transferred to the action output modality. In this work, we explore an alternative paradigm of using large-scale video pretraining as a primary modality for building robot foundation models. Unlike static images and language, videos capture spatio-temporal sequences of states and actions in the physical world that are naturally aligned with robotic behavior. We curate an internet-scale video dataset of human activities and task demonstrations, and train, for the first time at a foundation-model scale, an open video model for generative robotics planning. The model produces zero-shot video plans for novel scenes and tasks, which we post-process to extract executable robot actions. We evaluate task-level generalization through third-party selected tasks in the wild and real-robot experiments, demonstrating successful physical execution. Together, these results show robust instruction following, strong generalization, and real-world feasibility. We release both the model and dataset to support open, reproducible video-based robot learning. Our website is available at https://www.boyuan.space/large-video-planner/.",
+        "url": "http://arxiv.org/abs/2512.15840v1",
+        "published_date": "2025-12-17T18:35:54+00:00",
+        "updated_date": "2025-12-17T18:35:54+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Boyuan Chen",
+            "Tianyuan Zhang",
+            "Haoran Geng",
+            "Kiwhan Song",
+            "Caiyi Zhang",
+            "Peihao Li",
+            "William T. Freeman",
+            "Jitendra Malik",
+            "Pieter Abbeel",
+            "Russ Tedrake",
+            "Vincent Sitzmann",
+            "Yilun Du"
+        ],
+        "tldr": "This paper introduces a large-scale video pretraining approach for robot control, using a curated video dataset to train a generative robotics planning model that generalizes to novel scenes and tasks.",
+        "tldr_zh": "本文介绍了一种用于机器人控制的大规模视频预训练方法，使用一个精选的视频数据集来训练一个生成式机器人规划模型，该模型可以推广到新的场景和任务。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "VERM: Leveraging Foundation Models to Create a Virtual Eye for Efficient 3D Robotic Manipulation",
+        "summary": "When performing 3D manipulation tasks, robots have to execute action planning based on perceptions from multiple fixed cameras. The multi-camera setup introduces substantial redundancy and irrelevant information, which increases computational costs and forces the model to spend extra training time extracting crucial task-relevant details. To filter out redundant information and accurately extract task-relevant features, we propose the VERM (Virtual Eye for Robotic Manipulation) method, leveraging the knowledge in foundation models to imagine a virtual task-adaptive view from the constructed 3D point cloud, which efficiently captures necessary information and mitigates occlusion. To facilitate 3D action planning and fine-grained manipulation, we further design a depth-aware module and a dynamic coarse-to-fine procedure. Extensive experimental results on both simulation benchmark RLBench and real-world evaluations demonstrate the effectiveness of our method, surpassing previous state-of-the-art methods while achieving 1.89x speedup in training time and 1.54x speedup in inference speed. More results can be found on our project website at https://verm-ral.github.io .",
+        "url": "http://arxiv.org/abs/2512.16724v1",
+        "published_date": "2025-12-18T16:26:17+00:00",
+        "updated_date": "2025-12-18T16:26:17+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Yixiang Chen",
+            "Yan Huang",
+            "Keji He",
+            "Peiyan Li",
+            "Liang Wang"
+        ],
+        "tldr": "The paper introduces VERM, a method leveraging foundation models to create a virtual task-adaptive view from a 3D point cloud for efficient robotic manipulation, demonstrating improved performance and speedup in both simulation and real-world scenarios.",
+        "tldr_zh": "该论文介绍了VERM，一种利用基础模型从3D点云创建虚拟任务自适应视图的方法，用于高效的机器人操作，并在模拟和真实场景中展示了性能提升和速度加快。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Towards Closing the Domain Gap with Event Cameras",
+        "summary": "Although traditional cameras are the primary sensor for end-to-end driving, their performance suffers greatly when the conditions of the data they were trained on does not match the deployment environment, a problem known as the domain gap. In this work, we consider the day-night lighting difference domain gap. Instead of traditional cameras we propose event cameras as a potential alternative which can maintain performance across lighting condition domain gaps without requiring additional adjustments. Our results show that event cameras maintain more consistent performance across lighting conditions, exhibiting domain-shift penalties that are generally comparable to or smaller than grayscale frames and provide superior baseline performance in cross-domain scenarios.",
+        "url": "http://arxiv.org/abs/2512.16178v1",
+        "published_date": "2025-12-18T04:57:32+00:00",
+        "updated_date": "2025-12-18T04:57:32+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.RO"
+        ],
+        "authors": [
+            "M. Oltan Sevinc",
+            "Liao Wu",
+            "Francisco Cruz"
+        ],
+        "tldr": "This paper explores using event cameras to mitigate the domain gap in autonomous driving caused by day-night lighting variations, demonstrating their more consistent performance compared to traditional cameras.",
+        "tldr_zh": "本文探讨了使用事件相机来缓解自动驾驶中由昼夜光照变化引起的领域差距，并证明了其与传统相机相比更稳定的性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "CoVAR: Co-generation of Video and Action for Robotic Manipulation via Multi-Modal Diffusion",
+        "summary": "We present a method to generate video-action pairs that follow text instructions, starting from an initial image observation and the robot's joint states. Our approach automatically provides action labels for video diffusion models, overcoming the common lack of action annotations and enabling their full use for robotic policy learning. Existing methods either adopt two-stage pipelines, which limit tightly coupled cross-modal information sharing, or rely on adapting a single-modal diffusion model for a joint distribution that cannot fully leverage pretrained video knowledge. To overcome these limitations, we (1) extend a pretrained video diffusion model with a parallel, dedicated action diffusion model that preserves pretrained knowledge, (2) introduce a Bridge Attention mechanism to enable effective cross-modal interaction, and (3) design an action refinement module to convert coarse actions into precise controls for low-resolution datasets. Extensive evaluations on multiple public benchmarks and real-world datasets demonstrate that our method generates higher-quality videos, more accurate actions, and significantly outperforms existing baselines, offering a scalable framework for leveraging large-scale video data for robotic learning.",
+        "url": "http://arxiv.org/abs/2512.16023v1",
+        "published_date": "2025-12-17T23:16:02+00:00",
+        "updated_date": "2025-12-17T23:16:02+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Liudi Yang",
+            "Yang Bai",
+            "George Eskandar",
+            "Fengyi Shen",
+            "Mohammad Altillawi",
+            "Dong Chen",
+            "Ziyuan Liu",
+            "Abhinav Valada"
+        ],
+        "tldr": "The paper introduces CoVAR, a method for co-generating video and robot actions from text instructions using multi-modal diffusion, improving upon existing approaches by preserving pre-trained knowledge and enabling effective cross-modal interaction.",
+        "tldr_zh": "该论文介绍了CoVAR，一种使用多模态扩散从文本指令共同生成视频和机器人动作的方法，通过保留预训练知识并实现有效的跨模态交互，从而改进了现有方法。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "From Words to Wavelengths: VLMs for Few-Shot Multispectral Object Detection",
+        "summary": "Multispectral object detection is critical for safety-sensitive applications such as autonomous driving and surveillance, where robust perception under diverse illumination conditions is essential. However, the limited availability of annotated multispectral data severely restricts the training of deep detectors. In such data-scarce scenarios, textual class information can serve as a valuable source of semantic supervision. Motivated by the recent success of Vision-Language Models (VLMs) in computer vision, we explore their potential for few-shot multispectral object detection. Specifically, we adapt two representative VLM-based detectors, Grounding DINO and YOLO-World, to handle multispectral inputs and propose an effective mechanism to integrate text, visual and thermal modalities. Through extensive experiments on two popular multispectral image benchmarks, FLIR and M3FD, we demonstrate that VLM-based detectors not only excel in few-shot regimes, significantly outperforming specialized multispectral models trained with comparable data, but also achieve competitive or superior results under fully supervised settings. Our findings reveal that the semantic priors learned by large-scale VLMs effectively transfer to unseen spectral modalities, ofFering a powerful pathway toward data-efficient multispectral perception.",
+        "url": "http://arxiv.org/abs/2512.15971v1",
+        "published_date": "2025-12-17T21:06:36+00:00",
+        "updated_date": "2025-12-17T21:06:36+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Manuel Nkegoum",
+            "Minh-Tan Pham",
+            "Élisa Fromont",
+            "Bruno Avignon",
+            "Sébastien Lefèvre"
+        ],
+        "tldr": "This paper explores the use of Vision-Language Models (VLMs) for few-shot multispectral object detection, demonstrating their effectiveness even with limited data and achieving competitive results compared to fully supervised methods.",
+        "tldr_zh": "本文探索了使用视觉-语言模型（VLM）进行少样本多光谱目标检测，展示了它们在数据有限情况下的有效性，并取得了与全监督方法相比具有竞争力的结果。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Seeing is Believing (and Predicting): Context-Aware Multi-Human Behavior Prediction with Vision Language Models",
+        "summary": "Accurately predicting human behaviors is crucial for mobile robots operating in human-populated environments. While prior research primarily focuses on predicting actions in single-human scenarios from an egocentric view, several robotic applications require understanding multiple human behaviors from a third-person perspective. To this end, we present CAMP-VLM (Context-Aware Multi-human behavior Prediction): a Vision Language Model (VLM)-based framework that incorporates contextual features from visual input and spatial awareness from scene graphs to enhance prediction of humans-scene interactions. Due to the lack of suitable datasets for multi-human behavior prediction from an observer view, we perform fine-tuning of CAMP-VLM with synthetic human behavior data generated by a photorealistic simulator, and evaluate the resulting models on both synthetic and real-world sequences to assess their generalization capabilities. Leveraging Supervised Fine-Tuning (SFT) and Direct Preference Optimization (DPO), CAMP-VLM outperforms the best-performing baseline by up to 66.9% in prediction accuracy.",
+        "url": "http://arxiv.org/abs/2512.15957v1",
+        "published_date": "2025-12-17T20:44:32+00:00",
+        "updated_date": "2025-12-17T20:44:32+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Utsav Panchal",
+            "Yuchen Liu",
+            "Luigi Palmieri",
+            "Ilche Georgievski",
+            "Marco Aiello"
+        ],
+        "tldr": "The paper introduces CAMP-VLM, a Vision Language Model-based framework for predicting multi-human behaviors in a scene from a third-person perspective, using visual input, scene graphs, and fine-tuning with synthetic data, achieving significant accuracy improvements.",
+        "tldr_zh": "该论文介绍了CAMP-VLM，一个基于视觉语言模型的框架，用于从第三人称视角预测场景中多人的行为，它使用视觉输入、场景图，并使用合成数据进行微调，从而显著提高了准确性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "City Navigation in the Wild: Exploring Emergent Navigation from Web-Scale Knowledge in MLLMs",
+        "summary": "Leveraging multimodal large language models (MLLMs) to develop embodied agents offers significant promise for addressing complex real-world tasks. However, current evaluation benchmarks remain predominantly language-centric or heavily reliant on simulated environments, rarely probing the nuanced, knowledge-intensive reasoning essential for practical, real-world scenarios. To bridge this critical gap, we introduce the task of Sparsely Grounded Visual Navigation, explicitly designed to evaluate the sequential decision-making abilities of MLLMs in challenging, knowledge-intensive real-world environments. We operationalize this task with CityNav, a comprehensive benchmark encompassing four diverse global cities, specifically constructed to assess raw MLLM-driven agents in city navigation. Agents are required to rely solely on visual inputs and internal multimodal reasoning to sequentially navigate 50+ decision points without additional environmental annotations or specialized architectural modifications. Crucially, agents must autonomously achieve localization through interpreting city-specific cues and recognizing landmarks, perform spatial reasoning, and strategically plan and execute routes to their destinations. Through extensive evaluations, we demonstrate that current state-of-the-art MLLMs and standard reasoning techniques (e.g., Chain-of-Thought, Reflection) significantly underperform in this challenging setting. To address this, we propose Verbalization of Path (VoP), which explicitly grounds the agent's internal reasoning by probing an explicit cognitive map (key landmarks and directions toward the destination) from the MLLMs, substantially enhancing navigation success. Project Webpage: https://dwipddalal.github.io/AgentNav/",
+        "url": "http://arxiv.org/abs/2512.15933v1",
+        "published_date": "2025-12-17T19:59:31+00:00",
+        "updated_date": "2025-12-17T19:59:31+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Dwip Dalal",
+            "Utkarsh Mishra",
+            "Narendra Ahuja",
+            "Nebojsa Jojic"
+        ],
+        "tldr": "This paper introduces CityNav, a new benchmark for evaluating MLLM-driven embodied agents in real-world city navigation, and proposes Verbalization of Path (VoP) to improve navigation success by grounding the agent's reasoning with a cognitive map.",
+        "tldr_zh": "本文介绍了 CityNav，这是一个新的基准，用于评估 MLLM 驱动的具身智能体在真实城市导航中的表现，并提出了路径口头化 (VoP)，通过使用认知地图来约束智能体的推理，从而提高导航成功率。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Spatia: Video Generation with Updatable Spatial Memory",
+        "summary": "Existing video generation models struggle to maintain long-term spatial and temporal consistency due to the dense, high-dimensional nature of video signals. To overcome this limitation, we propose Spatia, a spatial memory-aware video generation framework that explicitly preserves a 3D scene point cloud as persistent spatial memory. Spatia iteratively generates video clips conditioned on this spatial memory and continuously updates it through visual SLAM. This dynamic-static disentanglement design enhances spatial consistency throughout the generation process while preserving the model's ability to produce realistic dynamic entities. Furthermore, Spatia enables applications such as explicit camera control and 3D-aware interactive editing, providing a geometrically grounded framework for scalable, memory-driven video generation.",
+        "url": "http://arxiv.org/abs/2512.15716v1",
+        "published_date": "2025-12-17T18:59:59+00:00",
+        "updated_date": "2025-12-17T18:59:59+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Jinjing Zhao",
+            "Fangyun Wei",
+            "Zhening Liu",
+            "Hongyang Zhang",
+            "Chang Xu",
+            "Yan Lu"
+        ],
+        "tldr": "Spatia is a video generation framework that uses a dynamically updated 3D point cloud spatial memory to improve long-term spatial and temporal consistency in generated videos, enabling applications like camera control and 3D editing.",
+        "tldr_zh": "Spatia是一个视频生成框架，它使用动态更新的3D点云空间记忆来提高生成视频中的长期空间和时间一致性，从而实现相机控制和3D编辑等应用。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Multi-View Foundation Models",
+        "summary": "Foundation models are vital tools in various Computer Vision applications. They take as input a single RGB image and output a deep feature representation that is useful for various applications. However, in case we have multiple views of the same 3D scene, they operate on each image independently and do not always produce consistent features for the same 3D point. We propose a way to convert a Foundation Model into a Multi-View Foundation Model. Such a model takes as input a set of images and outputs a feature map for each image such that the features of corresponding points are as consistent as possible. This approach bypasses the need to build a consistent 3D model of the features and allows direct manipulation in the image space. Specifically, we show how to augment Transformers-based foundation models (i.e., DINO, SAM, CLIP) with intermediate 3D-aware attention layers that help match features across different views. As leading examples, we show surface normal estimation and multi-view segmentation tasks. Quantitative experiments show that our method improves feature matching considerably compared to current foundation models.",
+        "url": "http://arxiv.org/abs/2512.15708v1",
+        "published_date": "2025-12-17T18:58:03+00:00",
+        "updated_date": "2025-12-17T18:58:03+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Leo Segre",
+            "Or Hirschorn",
+            "Shai Avidan"
+        ],
+        "tldr": "The paper proposes a method to convert single-view foundation models into multi-view foundation models using 3D-aware attention layers, improving feature consistency across different views and bypassing the need for explicit 3D reconstruction. They demonstrate improvements in tasks like surface normal estimation and multi-view segmentation.",
+        "tldr_zh": "本文提出了一种将单视图基础模型转换为多视图基础模型的方法，该方法使用3D感知的注意力层来提高不同视图之间的特征一致性，从而避免了显式的3D重建。他们在表面法线估计和多视图分割等任务中展示了改进。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "mimic-video: Video-Action Models for Generalizable Robot Control Beyond VLAs",
+        "summary": "Prevailing Vision-Language-Action Models (VLAs) for robotic manipulation are built upon vision-language backbones pretrained on large-scale, but disconnected static web data. As a result, despite improved semantic generalization, the policy must implicitly infer complex physical dynamics and temporal dependencies solely from robot trajectories. This reliance creates an unsustainable data burden, necessitating continuous, large-scale expert data collection to compensate for the lack of innate physical understanding. We contend that while vision-language pretraining effectively captures semantic priors, it remains blind to physical causality. A more effective paradigm leverages video to jointly capture semantics and visual dynamics during pretraining, thereby isolating the remaining task of low-level control. To this end, we introduce \\model, a novel Video-Action Model (VAM) that pairs a pretrained Internet-scale video model with a flow matching-based action decoder conditioned on its latent representations. The decoder serves as an Inverse Dynamics Model (IDM), generating low-level robot actions from the latent representation of video-space action plans. Our extensive evaluation shows that our approach achieves state-of-the-art performance on simulated and real-world robotic manipulation tasks, improving sample efficiency by 10x and convergence speed by 2x compared to traditional VLA architectures.",
+        "url": "http://arxiv.org/abs/2512.15692v1",
+        "published_date": "2025-12-17T18:47:31+00:00",
+        "updated_date": "2025-12-17T18:47:31+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Jonas Pai",
+            "Liam Achenbach",
+            "Victoriano Montesinos",
+            "Benedek Forrai",
+            "Oier Mees",
+            "Elvis Nava"
+        ],
+        "tldr": "The paper introduces a Video-Action Model (VAM) that leverages video pretraining to capture semantics and visual dynamics for robotic manipulation, improving sample efficiency and convergence speed compared to Vision-Language-Action Models (VLAs).",
+        "tldr_zh": "该论文介绍了一种视频-动作模型 (VAM)，该模型利用视频预训练来捕获机器人操作的语义和视觉动态，与视觉-语言-动作模型 (VLA) 相比，提高了样本效率和收敛速度。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Autoencoder-based Denoising Defense against Adversarial Attacks on Object Detection",
+        "summary": "Deep learning-based object detection models play a critical role in real-world applications such as autonomous driving and security surveillance systems, yet they remain vulnerable to adversarial examples. In this work, we propose an autoencoder-based denoising defense to recover object detection performance degraded by adversarial perturbations. We conduct adversarial attacks using Perlin noise on vehicle-related images from the COCO dataset, apply a single-layer convolutional autoencoder to remove the perturbations, and evaluate detection performance using YOLOv5. Our experiments demonstrate that adversarial attacks reduce bbox mAP from 0.2890 to 0.1640, representing a 43.3% performance degradation. After applying the proposed autoencoder defense, bbox mAP improves to 0.1700 (3.7% recovery) and bbox mAP@50 increases from 0.2780 to 0.3080 (10.8% improvement). These results indicate that autoencoder-based denoising can provide partial defense against adversarial attacks without requiring model retraining.",
+        "url": "http://arxiv.org/abs/2512.16123v1",
+        "published_date": "2025-12-18T03:19:40+00:00",
+        "updated_date": "2025-12-18T03:19:40+00:00",
+        "categories": [
+            "cs.CR",
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Min Geun Song",
+            "Gang Min Kim",
+            "Woonmin Kim",
+            "Yongsik Kim",
+            "Jeonghyun Sim",
+            "Sangbeom Park",
+            "Huy Kang Kim"
+        ],
+        "tldr": "This paper explores using an autoencoder-based denoising technique as a defense against adversarial attacks on YOLOv5 object detection, showing a modest improvement in mAP after applying the defense.",
+        "tldr_zh": "本文探讨了使用基于自动编码器的去噪技术作为对抗YOLOv5目标检测的对抗攻击的防御手段，结果表明在应用防御后，mAP有适度提升。",
+        "relevance_score": 7,
+        "novelty_claim_score": 5,
+        "clarity_score": 9,
+        "potential_impact_score": 6,
+        "overall_priority_score": 6
+    }
+]
