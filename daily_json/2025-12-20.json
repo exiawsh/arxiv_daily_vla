@@ -1,0 +1,113 @@
+[
+    {
+        "title": "DVGT: Driving Visual Geometry Transformer",
+        "summary": "Perceiving and reconstructing 3D scene geometry from visual inputs is crucial for autonomous driving. However, there still lacks a driving-targeted dense geometry perception model that can adapt to different scenarios and camera configurations. To bridge this gap, we propose a Driving Visual Geometry Transformer (DVGT), which reconstructs a global dense 3D point map from a sequence of unposed multi-view visual inputs. We first extract visual features for each image using a DINO backbone, and employ alternating intra-view local attention, cross-view spatial attention, and cross-frame temporal attention to infer geometric relations across images. We then use multiple heads to decode a global point map in the ego coordinate of the first frame and the ego poses for each frame. Unlike conventional methods that rely on precise camera parameters, DVGT is free of explicit 3D geometric priors, enabling flexible processing of arbitrary camera configurations. DVGT directly predicts metric-scaled geometry from image sequences, eliminating the need for post-alignment with external sensors. Trained on a large mixture of driving datasets including nuScenes, OpenScene, Waymo, KITTI, and DDAD, DVGT significantly outperforms existing models on various scenarios. Code is available at https://github.com/wzzheng/DVGT.",
+        "url": "http://arxiv.org/abs/2512.16919v1",
+        "published_date": "2025-12-18T18:59:57+00:00",
+        "updated_date": "2025-12-18T18:59:57+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.RO"
+        ],
+        "authors": [
+            "Sicheng Zuo",
+            "Zixun Xie",
+            "Wenzhao Zheng",
+            "Shaoqing Xu",
+            "Fang Li",
+            "Shengyin Jiang",
+            "Long Chen",
+            "Zhi-Xin Yang",
+            "Jiwen Lu"
+        ],
+        "tldr": "The paper introduces DVGT, a novel transformer-based model for reconstructing dense 3D scene geometry from multi-view image sequences in autonomous driving scenarios, trained on a diverse dataset and free from reliance on explicit camera parameters.",
+        "tldr_zh": "该论文介绍了 DVGT，一种新的基于 Transformer 的模型，用于从自动驾驶场景中的多视图图像序列重建密集的 3D 场景几何体，该模型在多样化的数据集上训练，并且不依赖于显式的相机参数。",
+        "relevance_score": 10,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "MomaGraph: State-Aware Unified Scene Graphs with Vision-Language Model for Embodied Task Planning",
+        "summary": "Mobile manipulators in households must both navigate and manipulate. This requires a compact, semantically rich scene representation that captures where objects are, how they function, and which parts are actionable. Scene graphs are a natural choice, yet prior work often separates spatial and functional relations, treats scenes as static snapshots without object states or temporal updates, and overlooks information most relevant for accomplishing the current task. To address these limitations, we introduce MomaGraph, a unified scene representation for embodied agents that integrates spatial-functional relationships and part-level interactive elements. However, advancing such a representation requires both suitable data and rigorous evaluation, which have been largely missing. We thus contribute MomaGraph-Scenes, the first large-scale dataset of richly annotated, task-driven scene graphs in household environments, along with MomaGraph-Bench, a systematic evaluation suite spanning six reasoning capabilities from high-level planning to fine-grained scene understanding. Built upon this foundation, we further develop MomaGraph-R1, a 7B vision-language model trained with reinforcement learning on MomaGraph-Scenes. MomaGraph-R1 predicts task-oriented scene graphs and serves as a zero-shot task planner under a Graph-then-Plan framework. Extensive experiments demonstrate that our model achieves state-of-the-art results among open-source models, reaching 71.6% accuracy on the benchmark (+11.4% over the best baseline), while generalizing across public benchmarks and transferring effectively to real-robot experiments.",
+        "url": "http://arxiv.org/abs/2512.16909v1",
+        "published_date": "2025-12-18T18:59:03+00:00",
+        "updated_date": "2025-12-18T18:59:03+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Yuanchen Ju",
+            "Yongyuan Liang",
+            "Yen-Jen Wang",
+            "Nandiraju Gireesh",
+            "Yuanliang Ju",
+            "Seungjae Lee",
+            "Qiao Gu",
+            "Elvis Hsieh",
+            "Furong Huang",
+            "Koushil Sreenath"
+        ],
+        "tldr": "The paper introduces MomaGraph, a novel unified scene graph representation and associated dataset/benchmark for embodied agents, along with a vision-language model trained to predict task-oriented scene graphs for zero-shot task planning, achieving state-of-the-art results.",
+        "tldr_zh": "该论文介绍了MomaGraph，一种新颖的统一场景图表示以及相关的用于具身智能体的数据库/基准，并提出了一个视觉语言模型，用于预测面向任务的场景图，以实现零样本任务规划，并取得了最先进的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "SceneDiff: A Benchmark and Method for Multiview Object Change Detection",
+        "summary": "We investigate the problem of identifying objects that have been added, removed, or moved between a pair of captures (images or videos) of the same scene at different times. Detecting such changes is important for many applications, such as robotic tidying or construction progress and safety monitoring. A major challenge is that varying viewpoints can cause objects to falsely appear changed. We introduce SceneDiff Benchmark, the first multiview change detection benchmark with object instance annotations, comprising 350 diverse video pairs with thousands of changed objects. We also introduce the SceneDiff method, a new training-free approach for multiview object change detection that leverages pretrained 3D, segmentation, and image encoding models to robustly predict across multiple benchmarks. Our method aligns the captures in 3D, extracts object regions, and compares spatial and semantic region features to detect changes. Experiments on multi-view and two-view benchmarks demonstrate that our method outperforms existing approaches by large margins (94% and 37.4% relative AP improvements). The benchmark and code will be publicly released.",
+        "url": "http://arxiv.org/abs/2512.16908v1",
+        "published_date": "2025-12-18T18:59:02+00:00",
+        "updated_date": "2025-12-18T18:59:02+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yuqun Wu",
+            "Chih-hao Lin",
+            "Henry Che",
+            "Aditi Tiwari",
+            "Chuhang Zou",
+            "Shenlong Wang",
+            "Derek Hoiem"
+        ],
+        "tldr": "The paper introduces SceneDiff, a new benchmark and training-free method for multiview object change detection using 3D alignment and feature comparison, demonstrating significant performance improvements over existing methods.",
+        "tldr_zh": "该论文介绍了SceneDiff，一个新的多视角物体变化检测的基准和无需训练的方法。该方法利用3D对齐和特征比较，显著优于现有方法。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Sceniris: A Fast Procedural Scene Generation Framework",
+        "summary": "Synthetic 3D scenes are essential for developing Physical AI and generative models. Existing procedural generation methods often have low output throughput, creating a significant bottleneck in scaling up dataset creation. In this work, we introduce Sceniris, a highly efficient procedural scene generation framework for rapidly generating large-scale, collision-free scene variations. Sceniris also provides an optional robot reachability check, providing manipulation-feasible scenes for robot tasks. Sceniris is designed for maximum efficiency by addressing the primary performance limitations of the prior method, Scene Synthesizer. Leveraging batch sampling and faster collision checking in cuRobo, Sceniris achieves at least 234x speed-up over Scene Synthesizer. Sceniris also expands the object-wise spatial relationships available in prior work to support diverse scene requirements. Our code is available at https://github.com/rai-inst/sceniris",
+        "url": "http://arxiv.org/abs/2512.16896v1",
+        "published_date": "2025-12-18T18:55:03+00:00",
+        "updated_date": "2025-12-18T18:55:03+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV",
+            "cs.GR"
+        ],
+        "authors": [
+            "Jinghuan Shang",
+            "Harsh Patel",
+            "Ran Gong",
+            "Karl Schmeckpeper"
+        ],
+        "tldr": "The paper introduces Sceniris, a fast procedural scene generation framework that significantly improves upon existing methods by leveraging batch sampling and faster collision checking, offering a 234x speedup over Scene Synthesizer and providing robot reachability checks.",
+        "tldr_zh": "该论文介绍了 Sceniris，一个快速的程序化场景生成框架，通过利用批量采样和更快的碰撞检测，显著改进了现有方法，提供了比 Scene Synthesizer 快 234 倍的速度，并提供机器人可达性检查。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    }
+]
