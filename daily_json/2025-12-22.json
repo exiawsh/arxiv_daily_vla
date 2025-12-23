@@ -1,0 +1,79 @@
+[
+    {
+        "title": "Offline Reinforcement Learning for End-to-End Autonomous Driving",
+        "summary": "End-to-end (E2E) autonomous driving models that take only camera images as input and directly predict a future trajectory are appealing for their computational efficiency and potential for improved generalization via unified optimization; however, persistent failure modes remain due to reliance on imitation learning (IL). While online reinforcement learning (RL) could mitigate IL-induced issues, the computational burden of neural rendering-based simulation and large E2E networks renders iterative reward and hyperparameter tuning costly. We introduce a camera-only E2E offline RL framework that performs no additional exploration and trains solely on a fixed simulator dataset. Offline RL offers strong data efficiency and rapid experimental iteration, yet is susceptible to instability from overestimation on out-of-distribution (OOD) actions. To address this, we construct pseudo ground-truth trajectories from expert driving logs and use them as a behavior regularization signal, suppressing imitation of unsafe or suboptimal behavior while stabilizing value learning. Training and closed-loop evaluation are conducted in a neural rendering environment learned from the public nuScenes dataset. Empirically, the proposed method achieves substantial improvements in collision rate and route completion compared with IL baselines. Our code will be available at [URL].",
+        "url": "http://arxiv.org/abs/2512.18662v1",
+        "published_date": "2025-12-21T09:21:04+00:00",
+        "updated_date": "2025-12-21T09:21:04+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Chihiro Noguchi",
+            "Takaki Yamamoto"
+        ],
+        "tldr": "This paper presents an offline reinforcement learning framework for end-to-end autonomous driving using camera images, addressing instability issues through behavior regularization with pseudo ground-truth trajectories derived from expert driving logs, showing improved collision rate and route completion compared to imitation learning baselines.",
+        "tldr_zh": "本文提出了一种用于端到端自动驾驶的离线强化学习框架，该框架仅使用相机图像作为输入。通过使用从专家驾驶日志中获得的伪真值轨迹进行行为正则化来解决不稳定性问题，与模仿学习基线相比，碰撞率和路线完成度均有所提高。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "STORM: Search-Guided Generative World Models for Robotic Manipulation",
+        "summary": "We present STORM (Search-Guided Generative World Models), a novel framework for spatio-temporal reasoning in robotic manipulation that unifies diffusion-based action generation, conditional video prediction, and search-based planning. Unlike prior Vision-Language-Action (VLA) models that rely on abstract latent dynamics or delegate reasoning to language components, STORM grounds planning in explicit visual rollouts, enabling interpretable and foresight-driven decision-making. A diffusion-based VLA policy proposes diverse candidate actions, a generative video world model simulates their visual and reward outcomes, and Monte Carlo Tree Search (MCTS) selectively refines plans through lookahead evaluation. Experiments on the SimplerEnv manipulation benchmark demonstrate that STORM achieves a new state-of-the-art average success rate of 51.0 percent, outperforming strong baselines such as CogACT. Reward-augmented video prediction substantially improves spatio-temporal fidelity and task relevance, reducing Frechet Video Distance by over 75 percent. Moreover, STORM exhibits robust re-planning and failure recovery behavior, highlighting the advantages of search-guided generative world models for long-horizon robotic manipulation.",
+        "url": "http://arxiv.org/abs/2512.18477v1",
+        "published_date": "2025-12-20T19:40:25+00:00",
+        "updated_date": "2025-12-20T19:40:25+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Wenjun Lin",
+            "Jensen Zhang",
+            "Kaitong Cai",
+            "Keze Wang"
+        ],
+        "tldr": "STORM introduces a search-guided generative world model for robotic manipulation, combining diffusion-based action generation, video prediction, and MCTS planning to achieve state-of-the-art performance on a manipulation benchmark.",
+        "tldr_zh": "STORM 提出了一种用于机器人操作的搜索引导生成世界模型，结合了基于扩散的动作生成、视频预测和 MCTS 规划，在操作基准测试中取得了最先进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "ESearch-R1: Learning Cost-Aware MLLM Agents for Interactive Embodied Search via Reinforcement Learning",
+        "summary": "Multimodal Large Language Models (MLLMs) have empowered embodied agents with remarkable capabilities in planning and reasoning. However, when facing ambiguous natural language instructions (e.g., \"fetch the tool\" in a cluttered room), current agents often fail to balance the high cost of physical exploration against the cognitive cost of human interaction. They typically treat disambiguation as a passive perception problem, lacking the strategic reasoning to minimize total task execution costs. To bridge this gap, we propose ESearch-R1, a cost-aware embodied reasoning framework that unifies interactive dialogue (Ask), episodic memory retrieval (GetMemory), and physical navigation (Navigate) into a single decision process. We introduce HC-GRPO (Heterogeneous Cost-Aware Group Relative Policy Optimization). Unlike traditional PPO which relies on a separate value critic, HC-GRPO optimizes the MLLM by sampling groups of reasoning trajectories and reinforcing those that achieve the optimal trade-off between information gain and heterogeneous costs (e.g., navigate time, and human attention). Extensive experiments in AI2-THOR demonstrate that ESearch-R1 significantly outperforms standard ReAct-based agents. It improves task success rates while reducing total operational costs by approximately 50\\%, validating the effectiveness of GRPO in aligning MLLM agents with physical world constraints.",
+        "url": "http://arxiv.org/abs/2512.18571v1",
+        "published_date": "2025-12-21T02:45:08+00:00",
+        "updated_date": "2025-12-21T02:45:08+00:00",
+        "categories": [
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Weijie Zhou",
+            "Xuangtang Xiong",
+            "Ye Tian",
+            "Lijun Yue",
+            "Xinyu Wu",
+            "Wei Li",
+            "Chaoyang Zhao",
+            "Honghui Dong",
+            "Ming Tang",
+            "Jinqiao Wang",
+            "Zhengyou Zhang"
+        ],
+        "tldr": "This paper introduces ESearch-R1, a cost-aware reinforcement learning framework for MLLM agents that balances physical exploration and human interaction costs in embodied search tasks, demonstrating improved success rates and reduced operational costs compared to ReAct-based agents.",
+        "tldr_zh": "该论文介绍了ESearch-R1，一个用于MLLM代理的成本感知强化学习框架，它在具身搜索任务中平衡了物理探索和人机交互成本，与基于ReAct的代理相比，表现出更高的成功率和更低的运营成本。",
+        "relevance_score": 6,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
