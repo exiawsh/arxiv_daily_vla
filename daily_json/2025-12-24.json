@@ -1,0 +1,182 @@
+[
+    {
+        "title": "KnowVal: A Knowledge-Augmented and Value-Guided Autonomous Driving System",
+        "summary": "Visual-language reasoning, driving knowledge, and value alignment are essential for advanced autonomous driving systems. However, existing approaches largely rely on data-driven learning, making it difficult to capture the complex logic underlying decision-making through imitation or limited reinforcement rewards. To address this, we propose KnowVal, a new autonomous driving system that enables visual-language reasoning through the synergistic integration of open-world perception and knowledge retrieval. Specifically, we construct a comprehensive driving knowledge graph that encodes traffic laws, defensive driving principles, and ethical norms, complemented by an efficient LLM-based retrieval mechanism tailored for driving scenarios. Furthermore, we develop a human-preference dataset and train a Value Model to guide interpretable, value-aligned trajectory assessment. Experimental results show that our method substantially improves planning performance while remaining compatible with existing architectures. Notably, KnowVal achieves the lowest collision rate on nuScenes and state-of-the-art results on Bench2Drive.",
+        "url": "http://arxiv.org/abs/2512.20299v1",
+        "published_date": "2025-12-23T12:08:00+00:00",
+        "updated_date": "2025-12-23T12:08:00+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Zhongyu Xia",
+            "Wenhao Chen",
+            "Yongtao Wang",
+            "Ming-Hsuan Yang"
+        ],
+        "tldr": "The paper introduces KnowVal, an autonomous driving system that integrates visual-language reasoning, a driving knowledge graph, and a value model to improve planning performance and value alignment, achieving state-of-the-art results on nuScenes and Bench2Drive.",
+        "tldr_zh": "该论文介绍了一个名为KnowVal的自动驾驶系统，它集成了视觉语言推理、驾驶知识图谱和价值模型，以提高规划性能和价值对齐，并在nuScenes和Bench2Drive上取得了最先进的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "LiteFusion: Taming 3D Object Detectors from Vision-Based to Multi-Modal with Minimal Adaptation",
+        "summary": "3D object detection is fundamental for safe and robust intelligent transportation systems. Current multi-modal 3D object detectors often rely on complex architectures and training strategies to achieve higher detection accuracy. However, these methods heavily rely on the LiDAR sensor so that they suffer from large performance drops when LiDAR is absent, which compromises the robustness and safety of autonomous systems in practical scenarios. Moreover, existing multi-modal detectors face difficulties in deployment on diverse hardware platforms, such as NPUs and FPGAs, due to their reliance on 3D sparse convolution operators, which are primarily optimized for NVIDIA GPUs. To address these challenges, we reconsider the role of LiDAR in the camera-LiDAR fusion paradigm and introduce a novel multi-modal 3D detector, LiteFusion. Instead of treating LiDAR point clouds as an independent modality with a separate feature extraction backbone, LiteFusion utilizes LiDAR data as a complementary source of geometric information to enhance camera-based detection. This straightforward approach completely eliminates the reliance on a 3D backbone, making the method highly deployment-friendly. Specifically, LiteFusion integrates complementary features from LiDAR points into image features within a quaternion space, where the orthogonal constraints are well-preserved during network training. This helps model domain-specific relations across modalities, yielding a compact cross-modal embedding. Experiments on the nuScenes dataset show that LiteFusion improves the baseline vision-based detector by +20.4% mAP and +19.7% NDS with a minimal increase in parameters (1.1%) without using dedicated LiDAR encoders. Notably, even in the absence of LiDAR input, LiteFusion maintains strong results , highlighting its favorable robustness and effectiveness across diverse fusion paradigms and deployment scenarios.",
+        "url": "http://arxiv.org/abs/2512.20217v1",
+        "published_date": "2025-12-23T10:16:33+00:00",
+        "updated_date": "2025-12-23T10:16:33+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Xiangxuan Ren",
+            "Zhongdao Wang",
+            "Pin Tang",
+            "Guoqing Wang",
+            "Jilai Zheng",
+            "Chao Ma"
+        ],
+        "tldr": "LiteFusion introduces a novel multi-modal 3D object detector that enhances camera-based detection with LiDAR as a complementary geometric source, eliminating the need for a 3D backbone and improving performance with minimal parameter increase, even without LiDAR input.",
+        "tldr_zh": "LiteFusion提出了一种新的多模态3D物体检测器，它利用激光雷达作为补充几何信息源来增强基于摄像头的检测，从而消除了对3D主干网络的需求，并在参数增加最小的情况下提高了性能，即使在没有激光雷达输入的情况下也是如此。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "LiDARDraft: Generating LiDAR Point Cloud from Versatile Inputs",
+        "summary": "Generating realistic and diverse LiDAR point clouds is crucial for autonomous driving simulation. Although previous methods achieve LiDAR point cloud generation from user inputs, they struggle to attain high-quality results while enabling versatile controllability, due to the imbalance between the complex distribution of LiDAR point clouds and the simple control signals. To address the limitation, we propose LiDARDraft, which utilizes the 3D layout to build a bridge between versatile conditional signals and LiDAR point clouds. The 3D layout can be trivially generated from various user inputs such as textual descriptions and images. Specifically, we represent text, images, and point clouds as unified 3D layouts, which are further transformed into semantic and depth control signals. Then, we employ a rangemap-based ControlNet to guide LiDAR point cloud generation. This pixel-level alignment approach demonstrates excellent performance in controllable LiDAR point clouds generation, enabling \"simulation from scratch\", allowing self-driving environments to be created from arbitrary textual descriptions, images and sketches.",
+        "url": "http://arxiv.org/abs/2512.20105v1",
+        "published_date": "2025-12-23T07:03:31+00:00",
+        "updated_date": "2025-12-23T07:03:31+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Haiyun Wei",
+            "Fan Lu",
+            "Yunwei Zhu",
+            "Zehan Zheng",
+            "Weiyi Xue",
+            "Lin Shao",
+            "Xudong Zhang",
+            "Ya Wu",
+            "Rong Fu",
+            "Guang Chen"
+        ],
+        "tldr": "LiDARDraft generates realistic LiDAR point clouds from diverse inputs like text and images by using a 3D layout as an intermediate representation, improving controllability and quality compared to previous methods.",
+        "tldr_zh": "LiDARDraft 通过使用 3D 布局作为中间表示，从文本和图像等不同输入生成逼真的 LiDAR 点云，与之前的方法相比，提高了可控性和质量。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "How Much 3D Do Video Foundation Models Encode?",
+        "summary": "Videos are continuous 2D projections of 3D worlds. After training on large video data, will global 3D understanding naturally emerge? We study this by quantifying the 3D understanding of existing Video Foundation Models (VidFMs) pretrained on vast video data. We propose the first model-agnostic framework that measures the 3D awareness of various VidFMs by estimating multiple 3D properties from their features via shallow read-outs. Our study presents meaningful findings regarding the 3D awareness of VidFMs on multiple axes. In particular, we show that state-of-the-art video generation models exhibit a strong understanding of 3D objects and scenes, despite not being trained on any 3D data. Such understanding can even surpass that of large expert models specifically trained for 3D tasks. Our findings, together with the 3D benchmarking of major VidFMs, provide valuable observations for building scalable 3D models.",
+        "url": "http://arxiv.org/abs/2512.19949v1",
+        "published_date": "2025-12-23T00:38:52+00:00",
+        "updated_date": "2025-12-23T00:38:52+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Zixuan Huang",
+            "Xiang Li",
+            "Zhaoyang Lv",
+            "James M. Rehg"
+        ],
+        "tldr": "This paper introduces a model-agnostic framework to evaluate the 3D understanding capabilities of Video Foundation Models (VidFMs), revealing surprising 3D awareness even without explicit 3D training data.",
+        "tldr_zh": "本文介绍了一个模型无关的框架，用于评估视频基础模型（VidFMs）的3D理解能力，揭示了即使没有明确的3D训练数据，VidFMs也具有令人惊讶的3D感知能力。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Vehicle-centric Perception via Multimodal Structured Pre-training",
+        "summary": "Vehicle-centric perception plays a crucial role in many intelligent systems, including large-scale surveillance systems, intelligent transportation, and autonomous driving. Existing approaches lack effective learning of vehicle-related knowledge during pre-training, resulting in poor capability for modeling general vehicle perception representations. To handle this problem, we propose VehicleMAE-V2, a novel vehicle-centric pre-trained large model. By exploring and exploiting vehicle-related multimodal structured priors to guide the masked token reconstruction process, our approach can significantly enhance the model's capability to learn generalizable representations for vehicle-centric perception. Specifically, we design the Symmetry-guided Mask Module (SMM), Contour-guided Representation Module (CRM) and Semantics-guided Representation Module (SRM) to incorporate three kinds of structured priors into token reconstruction including symmetry, contour and semantics of vehicles respectively. SMM utilizes the vehicle symmetry constraints to avoid retaining symmetric patches and can thus select high-quality masked image patches and reduce information redundancy. CRM minimizes the probability distribution divergence between contour features and reconstructed features and can thus preserve holistic vehicle structure information during pixel-level reconstruction. SRM aligns image-text features through contrastive learning and cross-modal distillation to address the feature confusion caused by insufficient semantic understanding during masked reconstruction. To support the pre-training of VehicleMAE-V2, we construct Autobot4M, a large-scale dataset comprising approximately 4 million vehicle images and 12,693 text descriptions. Extensive experiments on five downstream tasks demonstrate the superior performance of VehicleMAE-V2.",
+        "url": "http://arxiv.org/abs/2512.19934v1",
+        "published_date": "2025-12-22T23:42:45+00:00",
+        "updated_date": "2025-12-22T23:42:45+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG"
+        ],
+        "authors": [
+            "Wentao Wu",
+            "Xiao Wang",
+            "Chenglong Li",
+            "Jin Tang",
+            "Bin Luo"
+        ],
+        "tldr": "The paper introduces VehicleMAE-V2, a vehicle-centric pre-trained large model leveraging multimodal structured priors (symmetry, contour, semantics) for improved vehicle perception, and supported by a new large-scale dataset, Autobot4M. It shows superior performance on downstream tasks.",
+        "tldr_zh": "该论文介绍了VehicleMAE-V2，一种车辆中心的大型预训练模型，利用多模态结构先验（对称性、轮廓、语义）来提升车辆感知能力，并使用一个新的大型数据集Autobot4M进行支持。在下游任务上表现出优越的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "HyGE-Occ: Hybrid View-Transformation with 3D Gaussian and Edge Priors for 3D Panoptic Occupancy Prediction",
+        "summary": "3D Panoptic Occupancy Prediction aims to reconstruct a dense volumetric scene map by predicting the semantic class and instance identity of every occupied region in 3D space. Achieving such fine-grained 3D understanding requires precise geometric reasoning and spatially consistent scene representation across complex environments. However, existing approaches often struggle to maintain precise geometry and capture the precise spatial range of 3D instances critical for robust panoptic separation. To overcome these limitations, we introduce HyGE-Occ, a novel framework that leverages a hybrid view-transformation branch with 3D Gaussian and edge priors to enhance both geometric consistency and boundary awareness in 3D panoptic occupancy prediction. HyGE-Occ employs a hybrid view-transformation branch that fuses a continuous Gaussian-based depth representation with a discretized depth-bin formulation, producing BEV features with improved geometric consistency and structural coherence. In parallel, we extract edge maps from BEV features and use them as auxiliary information to learn edge cues. In our extensive experiments on the Occ3D-nuScenes dataset, HyGE-Occ outperforms existing work, demonstrating superior 3D geometric reasoning.",
+        "url": "http://arxiv.org/abs/2512.19871v1",
+        "published_date": "2025-12-22T20:59:15+00:00",
+        "updated_date": "2025-12-22T20:59:15+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jong Wook Kim",
+            "Wonseok Roh",
+            "Ha Dam Baek",
+            "Pilhyeon Lee",
+            "Jonghyun Choi",
+            "Sangpil Kim"
+        ],
+        "tldr": "The paper introduces HyGE-Occ, a novel framework for 3D Panoptic Occupancy Prediction, which utilizes a hybrid view-transformation branch with 3D Gaussian and edge priors to improve geometric consistency and boundary awareness. It demonstrates superior performance on the Occ3D-nuScenes dataset.",
+        "tldr_zh": "该论文介绍了一种名为HyGE-Occ的新框架，用于3D全景占据预测，该框架利用混合视图变换分支与3D高斯和边缘先验，以提高几何一致性和边界感知能力。它在Occ3D-nuScenes数据集上表现出卓越的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "LoGoPlanner: Localization Grounded Navigation Policy with Metric-aware Visual Geometry",
+        "summary": "Trajectory planning in unstructured environments is a fundamental and challenging capability for mobile robots. Traditional modular pipelines suffer from latency and cascading errors across perception, localization, mapping, and planning modules. Recent end-to-end learning methods map raw visual observations directly to control signals or trajectories, promising greater performance and efficiency in open-world settings. However, most prior end-to-end approaches still rely on separate localization modules that depend on accurate sensor extrinsic calibration for self-state estimation, thereby limiting generalization across embodiments and environments. We introduce LoGoPlanner, a localization-grounded, end-to-end navigation framework that addresses these limitations by: (1) finetuning a long-horizon visual-geometry backbone to ground predictions with absolute metric scale, thereby providing implicit state estimation for accurate localization; (2) reconstructing surrounding scene geometry from historical observations to supply dense, fine-grained environmental awareness for reliable obstacle avoidance; and (3) conditioning the policy on implicit geometry bootstrapped by the aforementioned auxiliary tasks, thereby reducing error propagation. We evaluate LoGoPlanner in both simulation and real-world settings, where its fully end-to-end design reduces cumulative error while metric-aware geometry memory enhances planning consistency and obstacle avoidance, leading to more than a 27.3\\% improvement over oracle-localization baselines and strong generalization across embodiments and environments. The code and models have been made publicly available on the https://steinate.github.io/logoplanner.github.io.",
+        "url": "http://arxiv.org/abs/2512.19629v2",
+        "published_date": "2025-12-22T18:03:08+00:00",
+        "updated_date": "2025-12-23T05:37:16+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Jiaqi Peng",
+            "Wenzhe Cai",
+            "Yuqiang Yang",
+            "Tai Wang",
+            "Yuan Shen",
+            "Jiangmiao Pang"
+        ],
+        "tldr": "LoGoPlanner is an end-to-end navigation framework that uses a visual-geometry backbone to perform localization and planning, improving upon traditional modular pipelines and existing end-to-end methods by grounding predictions with absolute metric scale and reconstructing scene geometry. It demonstrates improved performance and generalization in both simulation and real-world settings.",
+        "tldr_zh": "LoGoPlanner是一个端到端导航框架，它使用视觉几何骨干网络进行定位和规划。通过使用绝对尺度来定位，并重建场景几何，LoGoPlanner 改进了传统的模块化流程和现有的端到端方法。该方法在模拟和真实环境中都表现出更好的性能和泛化能力。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    }
+]
