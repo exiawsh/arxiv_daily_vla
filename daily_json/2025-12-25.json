@@ -1,0 +1,216 @@
+[
+    {
+        "title": "XGrid-Mapping: Explicit Implicit Hybrid Grid Submaps for Efficient Incremental Neural LiDAR Mapping",
+        "summary": "Large-scale incremental mapping is fundamental to the development of robust and reliable autonomous systems, as it underpins incremental environmental understanding with sequential inputs for navigation and decision-making. LiDAR is widely used for this purpose due to its accuracy and robustness. Recently, neural LiDAR mapping has shown impressive performance; however, most approaches rely on dense implicit representations and underutilize geometric structure, while existing voxel-guided methods struggle to achieve real-time performance. To address these challenges, we propose XGrid-Mapping, a hybrid grid framework that jointly exploits explicit and implicit representations for efficient neural LiDAR mapping. Specifically, the strategy combines a sparse grid, providing geometric priors and structural guidance, with an implicit dense grid that enriches scene representation. By coupling the VDB structure with a submap-based organization, the framework reduces computational load and enables efficient incremental mapping on a large scale. To mitigate discontinuities across submaps, we introduce a distillation-based overlap alignment strategy, in which preceding submaps supervise subsequent ones to ensure consistency in overlapping regions. To further enhance robustness and sampling efficiency, we incorporate a dynamic removal module. Extensive experiments show that our approach delivers superior mapping quality while overcoming the efficiency limitations of voxel-guided methods, thereby outperforming existing state-of-the-art mapping methods.",
+        "url": "http://arxiv.org/abs/2512.20976v1",
+        "published_date": "2025-12-24T06:08:50+00:00",
+        "updated_date": "2025-12-24T06:08:50+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zeqing Song",
+            "Zhongmiao Yan",
+            "Junyuan Deng",
+            "Songpengcheng Xia",
+            "Xiang Mu",
+            "Jingyi Xu",
+            "Qi Wu",
+            "Ling Pei"
+        ],
+        "tldr": "The paper introduces XGrid-Mapping, a hybrid explicit-implicit grid framework for efficient and accurate large-scale LiDAR mapping, leveraging both sparse and dense grid representations with a submap-based organization and distillation-based overlap alignment.",
+        "tldr_zh": "该论文介绍了XGrid-Mapping，一种混合显式-隐式网格框架，用于高效且准确的大规模LiDAR地图构建，利用稀疏和密集网格表示，并结合基于子地图的组织和基于蒸馏的重叠对齐。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "PanoGrounder: Bridging 2D and 3D with Panoramic Scene Representations for VLM-based 3D Visual Grounding",
+        "summary": "3D Visual Grounding (3DVG) is a critical bridge from vision-language perception to robotics, requiring both language understanding and 3D scene reasoning. Traditional supervised models leverage explicit 3D geometry but exhibit limited generalization, owing to the scarcity of 3D vision-language datasets and the limited reasoning capabilities compared to modern vision-language models (VLMs). We propose PanoGrounder, a generalizable 3DVG framework that couples multi-modal panoramic representation with pretrained 2D VLMs for strong vision-language reasoning. Panoramic renderings, augmented with 3D semantic and geometric features, serve as an intermediate representation between 2D and 3D, and offer two major benefits: (i) they can be directly fed to VLMs with minimal adaptation and (ii) they retain long-range object-to-object relations thanks to their 360-degree field of view. We devise a three-stage pipeline that places a compact set of panoramic viewpoints considering the scene layout and geometry, grounds a text query on each panoramic rendering with a VLM, and fuses per-view predictions into a single 3D bounding box via lifting. Our approach achieves state-of-the-art results on ScanRefer and Nr3D, and demonstrates superior generalization to unseen 3D datasets and text rephrasings.",
+        "url": "http://arxiv.org/abs/2512.20907v1",
+        "published_date": "2025-12-24T03:18:51+00:00",
+        "updated_date": "2025-12-24T03:18:51+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Seongmin Jung",
+            "Seongho Choi",
+            "Gunwoo Jeon",
+            "Minsu Cho",
+            "Jongwoo Lim"
+        ],
+        "tldr": "PanoGrounder leverages panoramic scene representations and 2D VLMs to achieve state-of-the-art 3D Visual Grounding, demonstrating strong generalization capabilities on existing and unseen datasets.",
+        "tldr_zh": "PanoGrounder利用全景场景表示和2D VLMs实现了最先进的3D视觉定位，并在现有和未见数据集上展示了强大的泛化能力。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "LEAD: Minimizing Learner-Expert Asymmetry in End-to-End Driving",
+        "summary": "Simulators can generate virtually unlimited driving data, yet imitation learning policies in simulation still struggle to achieve robust closed-loop performance. Motivated by this gap, we empirically study how misalignment between privileged expert demonstrations and sensor-based student observations can limit the effectiveness of imitation learning. More precisely, experts have significantly higher visibility (e.g., ignoring occlusions) and far lower uncertainty (e.g., knowing other vehicles' actions), making them difficult to imitate reliably. Furthermore, navigational intent (i.e., the route to follow) is under-specified in student models at test time via only a single target point. We demonstrate that these asymmetries can measurably limit driving performance in CARLA and offer practical interventions to address them. After careful modifications to narrow the gaps between expert and student, our TransFuser v6 (TFv6) student policy achieves a new state of the art on all major publicly available CARLA closed-loop benchmarks, reaching 95 DS on Bench2Drive and more than doubling prior performances on Longest6~v2 and Town13. Additionally, by integrating perception supervision from our dataset into a shared sim-to-real pipeline, we show consistent gains on the NAVSIM and Waymo Vision-Based End-to-End driving benchmarks. Our code, data, and models are publicly available at https://github.com/autonomousvision/lead.",
+        "url": "http://arxiv.org/abs/2512.20563v1",
+        "published_date": "2025-12-23T18:07:43+00:00",
+        "updated_date": "2025-12-23T18:07:43+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG",
+            "cs.RO"
+        ],
+        "authors": [
+            "Long Nguyen",
+            "Micha Fauth",
+            "Bernhard Jaeger",
+            "Daniel Dauner",
+            "Maximilian Igl",
+            "Andreas Geiger",
+            "Kashyap Chitta"
+        ],
+        "tldr": "This paper addresses the performance gap between expert and student policies in end-to-end driving by mitigating asymmetries in visibility, uncertainty, and navigational intent. The proposed modifications achieve state-of-the-art results on CARLA benchmarks and demonstrate sim-to-real transferability.",
+        "tldr_zh": "本文通过减少专家策略和学生策略在端到端驾驶中的不对称性（例如可见性、不确定性和导航意图）来解决性能差距。提出的改进在CARLA基准测试中取得了最先进的结果，并展示了从模拟到现实的迁移能力。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "RoboSafe: Safeguarding Embodied Agents via Executable Safety Logic",
+        "summary": "Embodied agents powered by vision-language models (VLMs) are increasingly capable of executing complex real-world tasks, yet they remain vulnerable to hazardous instructions that may trigger unsafe behaviors. Runtime safety guardrails, which intercept hazardous actions during task execution, offer a promising solution due to their flexibility. However, existing defenses often rely on static rule filters or prompt-level control, which struggle to address implicit risks arising in dynamic, temporally dependent, and context-rich environments. To address this, we propose RoboSafe, a hybrid reasoning runtime safeguard for embodied agents through executable predicate-based safety logic. RoboSafe integrates two complementary reasoning processes on a Hybrid Long-Short Safety Memory. We first propose a Backward Reflective Reasoning module that continuously revisits recent trajectories in short-term memory to infer temporal safety predicates and proactively triggers replanning when violations are detected. We then propose a Forward Predictive Reasoning module that anticipates upcoming risks by generating context-aware safety predicates from the long-term safety memory and the agent's multimodal observations. Together, these components form an adaptive, verifiable safety logic that is both interpretable and executable as code. Extensive experiments across multiple agents demonstrate that RoboSafe substantially reduces hazardous actions (-36.8% risk occurrence) compared with leading baselines, while maintaining near-original task performance. Real-world evaluations on physical robotic arms further confirm its practicality. Code will be released upon acceptance.",
+        "url": "http://arxiv.org/abs/2512.21220v1",
+        "published_date": "2025-12-24T15:01:26+00:00",
+        "updated_date": "2025-12-24T15:01:26+00:00",
+        "categories": [
+            "cs.AI",
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Le Wang",
+            "Zonghao Ying",
+            "Xiao Yang",
+            "Quanchen Zou",
+            "Zhenfei Yin",
+            "Tianlin Li",
+            "Jian Yang",
+            "Yaodong Yang",
+            "Aishan Liu",
+            "Xianglong Liu"
+        ],
+        "tldr": "RoboSafe is a novel runtime safety guardrail for embodied agents that uses hybrid reasoning and memory to prevent hazardous actions, demonstrating significant risk reduction and practical applicability.",
+        "tldr_zh": "RoboSafe 是一种新型的具身智能体运行时安全防护栏，它利用混合推理和记忆来防止危险行为，并展示了显著的风险降低和实际应用价值。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Schrödinger's Navigator: Imagining an Ensemble of Futures for Zero-Shot Object Navigation",
+        "summary": "Zero-shot object navigation (ZSON) requires a robot to locate a target object in a previously unseen environment without relying on pre-built maps or task-specific training. However, existing ZSON methods often struggle in realistic and cluttered environments, particularly when the scene contains heavy occlusions, unknown risks, or dynamically moving target objects. To address these challenges, we propose \\textbf{Schrödinger's Navigator}, a navigation framework inspired by Schrödinger's thought experiment on uncertainty. The framework treats unobserved space as a set of plausible future worlds and reasons over them before acting. Conditioned on egocentric visual inputs and three candidate trajectories, a trajectory-conditioned 3D world model imagines future observations along each path. This enables the agent to see beyond occlusions and anticipate risks in unseen regions without requiring extra detours or dense global mapping. The imagined 3D observations are fused into the navigation map and used to update a value map. These updates guide the policy toward trajectories that avoid occlusions, reduce exposure to uncertain space, and better track moving targets. Experiments on a Go2 quadruped robot across three challenging scenarios, including severe static occlusions, unknown risks, and dynamically moving targets, show that Schrödinger's Navigator consistently outperforms strong ZSON baselines in self-localization, object localization, and overall Success Rate in occlusion-heavy environments. These results demonstrate the effectiveness of trajectory-conditioned 3D imagination in enabling robust zero-shot object navigation.",
+        "url": "http://arxiv.org/abs/2512.21201v1",
+        "published_date": "2025-12-24T14:28:17+00:00",
+        "updated_date": "2025-12-24T14:28:17+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Yu He",
+            "Da Huang",
+            "Zhenyang Liu",
+            "Zixiao Gu",
+            "Qiang Sun",
+            "Guangnan Ye",
+            "Yanwei Fu"
+        ],
+        "tldr": "The paper introduces Schrödinger's Navigator, a novel framework for zero-shot object navigation that uses trajectory-conditioned 3D imagination to handle occlusions, risks, and dynamic targets, demonstrating improved performance on a quadruped robot in challenging environments.",
+        "tldr_zh": "该论文介绍了薛定谔导航器，一种用于零样本物体导航的新框架，它使用轨迹条件3D想象来处理遮挡、风险和动态目标，并在四足机器人在具有挑战性的环境中展示了改进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Learning to Sense for Driving: Joint Optics-Sensor-Model Co-Design for Semantic Segmentation",
+        "summary": "Traditional autonomous driving pipelines decouple camera design from downstream perception, relying on fixed optics and handcrafted ISPs that prioritize human viewable imagery rather than machine semantics. This separation discards information during demosaicing, denoising, or quantization, while forcing models to adapt to sensor artifacts. We present a task-driven co-design framework that unifies optics, sensor modeling, and lightweight semantic segmentation networks into a single end-to-end RAW-to-task pipeline. Building on DeepLens[19], our system integrates realistic cellphone-scale lens models, learnable color filter arrays, Poisson-Gaussian noise processes, and quantization, all optimized directly for segmentation objectives. Evaluations on KITTI-360 show consistent mIoU improvements over fixed pipelines, with optics modeling and CFA learning providing the largest gains, especially for thin or low-light-sensitive classes. Importantly, these robustness gains are achieved with a compact ~1M-parameter model running at ~28 FPS, demonstrating edge deployability. Visual and quantitative analyses further highlight how co-designed sensors adapt acquisition to semantic structure, sharpening boundaries and maintaining accuracy under blur, noise, and low bit-depth. Together, these findings establish full-stack co-optimization of optics, sensors, and networks as a principled path toward efficient, reliable, and deployable perception in autonomous systems.",
+        "url": "http://arxiv.org/abs/2512.20815v1",
+        "published_date": "2025-12-23T22:28:30+00:00",
+        "updated_date": "2025-12-23T22:28:30+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Reeshad Khan amd John Gauch"
+        ],
+        "tldr": "This paper presents a co-design framework for autonomous driving that jointly optimizes optics, sensor modeling, and semantic segmentation networks, demonstrating improved mIoU and robustness, particularly in challenging conditions, while maintaining edge deployability.",
+        "tldr_zh": "本文提出了一种用于自动驾驶的协同设计框架，该框架联合优化光学器件、传感器建模和语义分割网络，展示了改进的mIoU和鲁棒性，尤其是在具有挑战性的条件下，同时保持边缘可部署性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "OccuFly: A 3D Vision Benchmark for Semantic Scene Completion from the Aerial Perspective",
+        "summary": "Semantic Scene Completion (SSC) is crucial for 3D perception in mobile robotics, as it enables holistic scene understanding by jointly estimating dense volumetric occupancy and per-voxel semantics. Although SSC has been widely studied in terrestrial domains such as autonomous driving, aerial scenarios like autonomous flying remain largely unexplored, thereby limiting progress on downstream applications. Furthermore, LiDAR sensors represent the primary modality for SSC data generation, which poses challenges for most uncrewed aerial vehicles (UAVs) due to flight regulations, mass and energy constraints, and the sparsity of LiDAR-based point clouds from elevated viewpoints. To address these limitations, we introduce OccuFly, the first real-world, camera-based aerial SSC benchmark, captured at altitudes of 50m, 40m, and 30m during spring, summer, fall, and winter. OccuFly covers urban, industrial, and rural scenarios, provides 22 semantic classes, and the data format adheres to established conventions to facilitate seamless integration with existing research. Crucially, we propose a LiDAR-free data generation framework based on camera modality, which is ubiquitous on modern UAVs. By utilizing traditional 3D reconstruction, our framework automates label transfer by lifting a subset of annotated 2D masks into the reconstructed point cloud, thereby substantially minimizing manual 3D annotation effort. Finally, we benchmark the state-of-the-art on OccuFly and highlight challenges specific to elevated viewpoints, yielding a comprehensive vision benchmark for holistic aerial 3D scene understanding.",
+        "url": "http://arxiv.org/abs/2512.20770v1",
+        "published_date": "2025-12-23T21:14:55+00:00",
+        "updated_date": "2025-12-23T21:14:55+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Markus Gross",
+            "Sai B. Matha",
+            "Aya Fahmy",
+            "Rui Song",
+            "Daniel Cremers",
+            "Henri Meess"
+        ],
+        "tldr": "The paper introduces OccuFly, a novel camera-based aerial Semantic Scene Completion (SSC) benchmark, addressing the lack of aerial SSC datasets and the limitations of LiDAR-based approaches for UAVs. It presents a LiDAR-free data generation framework and benchmarks state-of-the-art methods, highlighting challenges specific to elevated viewpoints.",
+        "tldr_zh": "该论文介绍了OccuFly，这是一个新的基于相机的空中语义场景补全（SSC）基准，旨在解决空中SSC数据集的缺乏以及基于激光雷达的方法对无人机的限制。它提出了一个无激光雷达的数据生成框架，并对最先进的方法进行了基准测试，突出了特定于高架视角的挑战。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Repurposing Video Diffusion Transformers for Robust Point Tracking",
+        "summary": "Point tracking aims to localize corresponding points across video frames, serving as a fundamental task for 4D reconstruction, robotics, and video editing. Existing methods commonly rely on shallow convolutional backbones such as ResNet that process frames independently, lacking temporal coherence and producing unreliable matching costs under challenging conditions. Through systematic analysis, we find that video Diffusion Transformers (DiTs), pre-trained on large-scale real-world videos with spatio-temporal attention, inherently exhibit strong point tracking capability and robustly handle dynamic motions and frequent occlusions. We propose DiTracker, which adapts video DiTs through: (1) query-key attention matching, (2) lightweight LoRA tuning, and (3) cost fusion with a ResNet backbone. Despite training with 8 times smaller batch size, DiTracker achieves state-of-the-art performance on challenging ITTO benchmark and matches or outperforms state-of-the-art models on TAP-Vid benchmarks. Our work validates video DiT features as an effective and efficient foundation for point tracking.",
+        "url": "http://arxiv.org/abs/2512.20606v1",
+        "published_date": "2025-12-23T18:54:10+00:00",
+        "updated_date": "2025-12-23T18:54:10+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Soowon Son",
+            "Honggyu An",
+            "Chaehyun Kim",
+            "Hyunah Ko",
+            "Jisu Nam",
+            "Dahyun Chung",
+            "Siyoon Jin",
+            "Jung Yi",
+            "Jaewon Min",
+            "Junhwa Hur",
+            "Seungryong Kim"
+        ],
+        "tldr": "This paper introduces DiTracker, a novel point tracking method that leverages video Diffusion Transformers (DiTs) with spatio-temporal attention, achieving state-of-the-art performance on challenging benchmarks by adapting DiTs through query-key attention matching, LoRA tuning, and cost fusion.",
+        "tldr_zh": "该论文介绍了一种新的点跟踪方法DiTracker，它利用具有时空注意力的视频扩散变换器（DiT），通过查询-键注意力匹配、LoRA调优和成本融合来调整DiT，从而在具有挑战性的基准测试中实现了最先进的性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    }
+]
