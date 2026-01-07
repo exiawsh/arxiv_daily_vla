@@ -1,0 +1,100 @@
+[
+    {
+        "title": "Towards Efficient 3D Object Detection for Vehicle-Infrastructure Collaboration via Risk-Intent Selection",
+        "summary": "Vehicle-Infrastructure Collaborative Perception (VICP) is pivotal for resolving occlusion in autonomous driving, yet the trade-off between communication bandwidth and feature redundancy remains a critical bottleneck. While intermediate fusion mitigates data volume compared to raw sharing, existing frameworks typically rely on spatial compression or static confidence maps, which inefficiently transmit spatially redundant features from non-critical background regions. To address this, we propose Risk-intent Selective detection (RiSe), an interaction-aware framework that shifts the paradigm from identifying visible regions to prioritizing risk-critical ones. Specifically, we introduce a Potential Field-Trajectory Correlation Model (PTCM) grounded in potential field theory to quantitatively assess kinematic risks. Complementing this, an Intention-Driven Area Prediction Module (IDAPM) leverages ego-motion priors to proactively predict and filter key Bird's-Eye-View (BEV) areas essential for decision-making. By integrating these components, RiSe implements a semantic-selective fusion scheme that transmits high-fidelity features only from high-interaction regions, effectively acting as a feature denoiser. Extensive experiments on the DeepAccident dataset demonstrate that our method reduces communication volume to 0.71\\% of full feature sharing while maintaining state-of-the-art detection accuracy, establishing a competitive Pareto frontier between bandwidth efficiency and perception performance.",
+        "url": "http://arxiv.org/abs/2601.03001v1",
+        "published_date": "2026-01-06T13:25:23+00:00",
+        "updated_date": "2026-01-06T13:25:23+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Li Wang",
+            "Boqi Li",
+            "Hang Chen",
+            "Xingjian Wu",
+            "Yichen Wang",
+            "Jiewen Tan",
+            "Xinyu Zhang",
+            "Huaping Liu"
+        ],
+        "tldr": "The paper introduces Risk-intent Selective detection (RiSe), a novel VICP framework using potential field theory and ego-motion priors to transmit only risk-critical features, achieving state-of-the-art 3D object detection accuracy with significantly reduced communication volume.",
+        "tldr_zh": "本文介绍了一种名为Risk-intent Selective detection (RiSe) 的新型VICP框架，该框架利用势场理论和自运动先验，仅传输风险关键特征，在显著降低通信量的同时，实现了最先进的3D目标检测精度。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Towards Zero-Shot Point Cloud Registration Across Diverse Scales, Scenes, and Sensor Setups",
+        "summary": "Some deep learning-based point cloud registration methods struggle with zero-shot generalization, often requiring dataset-specific hyperparameter tuning or retraining for new environments. We identify three critical limitations: (a) fixed user-defined parameters (e.g., voxel size, search radius) that fail to generalize across varying scales, (b) learned keypoint detectors exhibit poor cross-domain transferability, and (c) absolute coordinates amplify scale mismatches between datasets. To address these three issues, we present BUFFER-X, a training-free registration framework that achieves zero-shot generalization through: (a) geometric bootstrapping for automatic hyperparameter estimation, (b) distribution-aware farthest point sampling to replace learned detectors, and (c) patch-level coordinate normalization to ensure scale consistency. Our approach employs hierarchical multi-scale matching to extract correspondences across local, middle, and global receptive fields, enabling robust registration in diverse environments. For efficiency-critical applications, we introduce BUFFER-X-Lite, which reduces total computation time by 43% (relative to BUFFER-X) through early exit strategies and fast pose solvers while preserving accuracy. We evaluate on a comprehensive benchmark comprising 12 datasets spanning object-scale, indoor, and outdoor scenes, including cross-sensor registration between heterogeneous LiDAR configurations. Results demonstrate that our approach generalizes effectively without manual tuning or prior knowledge of test domains. Code: https://github.com/MIT-SPARK/BUFFER-X.",
+        "url": "http://arxiv.org/abs/2601.02759v1",
+        "published_date": "2026-01-06T06:51:24+00:00",
+        "updated_date": "2026-01-06T06:51:24+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Hyungtae Lim",
+            "Minkyun Seo",
+            "Luca Carlone",
+            "Jaesik Park"
+        ],
+        "tldr": "This paper introduces BUFFER-X, a training-free point cloud registration framework designed for zero-shot generalization across diverse scales, scenes, and sensor setups, and BUFFER-X-Lite, a faster version for efficiency-critical applications. It addresses limitations of existing deep learning methods by automatic hyperparameter estimation, distribution-aware sampling, and coordinate normalization.",
+        "tldr_zh": "本文介绍了BUFFER-X，一个无需训练的点云配准框架，旨在实现跨不同尺度、场景和传感器设置的零样本泛化；以及BUFFER-X-Lite，一个为对效率要求较高的应用设计的更快版本。它通过自动超参数估计、分布感知采样和坐标归一化来解决现有深度学习方法的局限性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "HOLO: Homography-Guided Pose Estimator Network for Fine-Grained Visual Localization on SD Maps",
+        "summary": "Visual localization on standard-definition (SD) maps has emerged as a promising low-cost and scalable solution for autonomous driving. However, existing regression-based approaches often overlook inherent geometric priors, resulting in suboptimal training efficiency and limited localization accuracy. In this paper, we propose a novel homography-guided pose estimator network for fine-grained visual localization between multi-view images and standard-definition (SD) maps. We construct input pairs that satisfy a homography constraint by projecting ground-view features into the BEV domain and enforcing semantic alignment with map features. Then we leverage homography relationships to guide feature fusion and restrict the pose outputs to a valid feasible region, which significantly improves training efficiency and localization accuracy compared to prior methods relying on attention-based fusion and direct 3-DoF pose regression. To the best of our knowledge, this is the first work to unify BEV semantic reasoning with homography learning for image-to-map localization. Furthermore, by explicitly modeling homography transformations, the proposed framework naturally supports cross-resolution inputs, enhancing model flexibility. Extensive experiments on the nuScenes dataset demonstrate that our approach significantly outperforms existing state-of-the-art visual localization methods. Code and pretrained models will be publicly released to foster future research.",
+        "url": "http://arxiv.org/abs/2601.02730v1",
+        "published_date": "2026-01-06T05:48:47+00:00",
+        "updated_date": "2026-01-06T05:48:47+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Xuchang Zhong",
+            "Xu Cao",
+            "Jinke Feng",
+            "Hao Fang"
+        ],
+        "tldr": "The paper introduces a homography-guided pose estimator network (HOLO) for fine-grained visual localization on SD maps, leveraging homography constraints for improved training efficiency and localization accuracy in autonomous driving.",
+        "tldr_zh": "该论文介绍了一种基于单应性引导的姿态估计网络（HOLO），用于在SD地图上进行精细的视觉定位，利用单应性约束来提高自动驾驶中训练效率和定位精度。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Loop Closure using AnyLoc Visual Place Recognition in DPV-SLAM",
+        "summary": "Loop closure is crucial for maintaining the accuracy and consistency of visual SLAM. We propose a method to improve loop closure performance in DPV-SLAM. Our approach integrates AnyLoc, a learning-based visual place recognition technique, as a replacement for the classical Bag of Visual Words (BoVW) loop detection method. In contrast to BoVW, which relies on handcrafted features, AnyLoc utilizes deep feature representations, enabling more robust image retrieval across diverse viewpoints and lighting conditions. Furthermore, we propose an adaptive mechanism that dynamically adjusts similarity threshold based on environmental conditions, removing the need for manual tuning. Experiments on both indoor and outdoor datasets demonstrate that our method significantly outperforms the original DPV-SLAM in terms of loop closure accuracy and robustness. The proposed method offers a practical and scalable solution for enhancing loop closure performance in modern SLAM systems.",
+        "url": "http://arxiv.org/abs/2601.02723v1",
+        "published_date": "2026-01-06T05:32:08+00:00",
+        "updated_date": "2026-01-06T05:32:08+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Wenzheng Zhang",
+            "Kazuki Adachi",
+            "Yoshitaka Hara",
+            "Sousuke Nakamura"
+        ],
+        "tldr": "This paper improves loop closure in DPV-SLAM by replacing the BoVW method with the learning-based visual place recognition technique AnyLoc and introducing an adaptive similarity threshold, resulting in improved accuracy and robustness.",
+        "tldr_zh": "该论文通过使用基于学习的视觉场景识别技术AnyLoc替换BoVW方法，并引入自适应相似度阈值，从而改进了DPV-SLAM中的闭环，从而提高了准确性和鲁棒性。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    }
+]
