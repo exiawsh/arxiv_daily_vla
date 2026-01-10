@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Autonomous Driving, VLA, 3D Understanding, Robotics) - January 07, 2026</title>
+    <title>ArXiv CS.CV Papers (Autonomous Driving, VLA, 3D Understanding, Robotics) - January 10, 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>VLM Daily Papers</h1>
         <p>Daily papers related to VLA/AV/3D Understanding from cs.CV</p>
         
-            <p>January 07, 2026</p>
+            <p>January 10, 2026</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,14 +215,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Towards Efficient 3D Object Detection for Vehicle-Infrastructure Collaboration via Risk-Intent Selection</h2>
+            <h2 class="paper-title">Pixel-Perfect Visual Geometry Estimation</h2>
             
-            <p class="paper-summary">Vehicle-Infrastructure Collaborative Perception (VICP) is pivotal for resolving occlusion in autonomous driving, yet the trade-off between communication bandwidth and feature redundancy remains a critical bottleneck. While intermediate fusion mitigates data volume compared to raw sharing, existing frameworks typically rely on spatial compression or static confidence maps, which inefficiently transmit spatially redundant features from non-critical background regions. To address this, we propose Risk-intent Selective detection (RiSe), an interaction-aware framework that shifts the paradigm from identifying visible regions to prioritizing risk-critical ones. Specifically, we introduce a Potential Field-Trajectory Correlation Model (PTCM) grounded in potential field theory to quantitatively assess kinematic risks. Complementing this, an Intention-Driven Area Prediction Module (IDAPM) leverages ego-motion priors to proactively predict and filter key Bird's-Eye-View (BEV) areas essential for decision-making. By integrating these components, RiSe implements a semantic-selective fusion scheme that transmits high-fidelity features only from high-interaction regions, effectively acting as a feature denoiser. Extensive experiments on the DeepAccident dataset demonstrate that our method reduces communication volume to 0.71\% of full feature sharing while maintaining state-of-the-art detection accuracy, establishing a competitive Pareto frontier between bandwidth efficiency and perception performance.</p>
+            <p class="paper-summary">Recovering clean and accurate geometry from images is essential for robotics and augmented reality. However, existing geometry foundation models still suffer severely from flying pixels and the loss of fine details. In this paper, we present pixel-perfect visual geometry models that can predict high-quality, flying-pixel-free point clouds by leveraging generative modeling in the pixel space. We first introduce Pixel-Perfect Depth (PPD), a monocular depth foundation model built upon pixel-space diffusion transformers (DiT). To address the high computational complexity associated with pixel-space diffusion, we propose two key designs: 1) Semantics-Prompted DiT, which incorporates semantic representations from vision foundation models to prompt the diffusion process, preserving global semantics while enhancing fine-grained visual details; and 2) Cascade DiT architecture that progressively increases the number of image tokens, improving both efficiency and accuracy. To further extend PPD to video (PPVD), we introduce a new Semantics-Consistent DiT, which extracts temporally consistent semantics from a multi-view geometry foundation model. We then perform reference-guided token propagation within the DiT to maintain temporal coherence with minimal computational and memory overhead. Our models achieve the best performance among all generative monocular and video depth estimation models and produce significantly cleaner point clouds than all other models.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces Risk-intent Selective detection (RiSe), a novel VICP framework using potential field theory and ego-motion priors to transmit only risk-critical features, achieving state-of-the-art 3D object detection accuracy with significantly reduced communication volume.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces pixel-perfect monocular and video depth estimation models (PPD and PPVD) using diffusion transformers and semantic prompting to generate high-quality, detailed, and temporally consistent point clouds.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种名为Risk-intent Selective detection (RiSe) 的新型VICP框架，该框架利用势场理论和自运动先验，仅传输风险关键特征，在显著降低通信量的同时，实现了最先进的3D目标检测精度。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了像素级完美的单目和视频深度估计模型（PPD 和 PPVD），该模型使用扩散变换器和语义提示来生成高质量、细节丰富且时间上一致的点云。</p>
             
 
             
@@ -293,11 +293,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2601.03001v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2601.05246v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Li Wang, Boqi Li, Hang Chen, Xingjian Wu, Yichen Wang, Jiewen Tan, Xinyu Zhang, Huaping Liu</p>
+            <p class="paper-authors">Authors: Gangwei Xu, Haotong Lin, Hongcheng Luo, Haiyang Sun, Bing Wang, Guang Chen, Sida Peng, Hangjun Ye, Xin Yang</p>
             
         </motion.div>
         
@@ -309,14 +309,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Towards Zero-Shot Point Cloud Registration Across Diverse Scales, Scenes, and Sensor Setups</h2>
+            <h2 class="paper-title">ObjectForesight: Predicting Future 3D Object Trajectories from Human Videos</h2>
             
-            <p class="paper-summary">Some deep learning-based point cloud registration methods struggle with zero-shot generalization, often requiring dataset-specific hyperparameter tuning or retraining for new environments. We identify three critical limitations: (a) fixed user-defined parameters (e.g., voxel size, search radius) that fail to generalize across varying scales, (b) learned keypoint detectors exhibit poor cross-domain transferability, and (c) absolute coordinates amplify scale mismatches between datasets. To address these three issues, we present BUFFER-X, a training-free registration framework that achieves zero-shot generalization through: (a) geometric bootstrapping for automatic hyperparameter estimation, (b) distribution-aware farthest point sampling to replace learned detectors, and (c) patch-level coordinate normalization to ensure scale consistency. Our approach employs hierarchical multi-scale matching to extract correspondences across local, middle, and global receptive fields, enabling robust registration in diverse environments. For efficiency-critical applications, we introduce BUFFER-X-Lite, which reduces total computation time by 43% (relative to BUFFER-X) through early exit strategies and fast pose solvers while preserving accuracy. We evaluate on a comprehensive benchmark comprising 12 datasets spanning object-scale, indoor, and outdoor scenes, including cross-sensor registration between heterogeneous LiDAR configurations. Results demonstrate that our approach generalizes effectively without manual tuning or prior knowledge of test domains. Code: https://github.com/MIT-SPARK/BUFFER-X.</p>
+            <p class="paper-summary">Humans can effortlessly anticipate how objects might move or change through interaction--imagining a cup being lifted, a knife slicing, or a lid being closed. We aim to endow computational systems with a similar ability to predict plausible future object motions directly from passive visual observation. We introduce ObjectForesight, a 3D object-centric dynamics model that predicts future 6-DoF poses and trajectories of rigid objects from short egocentric video sequences. Unlike conventional world or dynamics models that operate in pixel or latent space, ObjectForesight represents the world explicitly in 3D at the object level, enabling geometrically grounded and temporally coherent predictions that capture object affordances and trajectories. To train such a model at scale, we leverage recent advances in segmentation, mesh reconstruction, and 3D pose estimation to curate a dataset of 2 million plus short clips with pseudo-ground-truth 3D object trajectories. Through extensive experiments, we show that ObjectForesight achieves significant gains in accuracy, geometric consistency, and generalization to unseen objects and scenes, establishing a scalable framework for learning physically grounded, object-centric dynamics models directly from observation. objectforesight.github.io</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces BUFFER-X, a training-free point cloud registration framework designed for zero-shot generalization across diverse scales, scenes, and sensor setups, and BUFFER-X-Lite, a faster version for efficiency-critical applications. It addresses limitations of existing deep learning methods by automatic hyperparameter estimation, distribution-aware sampling, and coordinate normalization.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: ObjectForesight predicts future 3D object trajectories from egocentric videos using an object-centric dynamics model trained on a large-scale dataset of pseudo-ground-truth 3D object trajectories.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了BUFFER-X，一个无需训练的点云配准框架，旨在实现跨不同尺度、场景和传感器设置的零样本泛化；以及BUFFER-X-Lite，一个为对效率要求较高的应用设计的更快版本。它通过自动超参数估计、分布感知采样和坐标归一化来解决现有深度学习方法的局限性。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: ObjectForesight 使用基于大规模伪真值3D物体轨迹数据集训练的、以物体为中心的动力学模型，从自我中心视频中预测未来3D物体的轨迹。</p>
             
 
             
@@ -380,18 +380,18 @@
                     
                 
                     
-                        <i class="far fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(9/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2601.02759v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2601.05237v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Hyungtae Lim, Minkyun Seo, Luca Carlone, Jaesik Park</p>
+            <p class="paper-authors">Authors: Rustin Soraki, Homanga Bharadhwaj, Ali Farhadi, Roozbeh Mottaghi</p>
             
         </motion.div>
         
@@ -403,14 +403,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">HOLO: Homography-Guided Pose Estimator Network for Fine-Grained Visual Localization on SD Maps</h2>
+            <h2 class="paper-title">RoboVIP: Multi-View Video Generation with Visual Identity Prompting Augments Robot Manipulation</h2>
             
-            <p class="paper-summary">Visual localization on standard-definition (SD) maps has emerged as a promising low-cost and scalable solution for autonomous driving. However, existing regression-based approaches often overlook inherent geometric priors, resulting in suboptimal training efficiency and limited localization accuracy. In this paper, we propose a novel homography-guided pose estimator network for fine-grained visual localization between multi-view images and standard-definition (SD) maps. We construct input pairs that satisfy a homography constraint by projecting ground-view features into the BEV domain and enforcing semantic alignment with map features. Then we leverage homography relationships to guide feature fusion and restrict the pose outputs to a valid feasible region, which significantly improves training efficiency and localization accuracy compared to prior methods relying on attention-based fusion and direct 3-DoF pose regression. To the best of our knowledge, this is the first work to unify BEV semantic reasoning with homography learning for image-to-map localization. Furthermore, by explicitly modeling homography transformations, the proposed framework naturally supports cross-resolution inputs, enhancing model flexibility. Extensive experiments on the nuScenes dataset demonstrate that our approach significantly outperforms existing state-of-the-art visual localization methods. Code and pretrained models will be publicly released to foster future research.</p>
+            <p class="paper-summary">The diversity, quantity, and quality of manipulation data are critical for training effective robot policies. However, due to hardware and physical setup constraints, collecting large-scale real-world manipulation data remains difficult to scale across diverse environments. Recent work uses text-prompt conditioned image diffusion models to augment manipulation data by altering the backgrounds and tabletop objects in the visual observations. However, these approaches often overlook the practical need for multi-view and temporally coherent observations required by state-of-the-art policy models. Further, text prompts alone cannot reliably specify the scene setup. To provide the diffusion model with explicit visual guidance, we introduce visual identity prompting, which supplies exemplar images as conditioning inputs to guide the generation of the desired scene setup. To this end, we also build a scalable pipeline to curate a visual identity pool from large robotics datasets. Using our augmented manipulation data to train downstream vision-language-action and visuomotor policy models yields consistent performance gains in both simulation and real-robot settings.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces a homography-guided pose estimator network (HOLO) for fine-grained visual localization on SD maps, leveraging homography constraints for improved training efficiency and localization accuracy in autonomous driving.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces RoboVIP, a method using multi-view video generation with visual identity prompting to augment robot manipulation data, improving performance of vision-language-action and visuomotor policies in both simulation and real-robot settings.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了一种基于单应性引导的姿态估计网络（HOLO），用于在SD地图上进行精细的视觉定位，利用单应性约束来提高自动驾驶中训练效率和定位精度。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了RoboVIP，一种利用多视角视频生成和视觉身份提示来增强机器人操作数据的方法，从而提高了视觉-语言-动作和视觉运动策略在模拟和真实机器人环境中的性能。</p>
             
 
             
@@ -481,11 +481,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2601.02730v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2601.05241v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Xuchang Zhong, Xu Cao, Jinke Feng, Hao Fang</p>
+            <p class="paper-authors">Authors: Boyang Wang, Haoran Zhang, Shujie Zhang, Jinkun Hao, Mingda Jia, Qi Lv, Yucheng Mao, Zhaoyang Lyu, Jia Zeng, Xudong Xu, Jiangmiao Pang</p>
             
         </motion.div>
         
@@ -497,14 +497,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Loop Closure using AnyLoc Visual Place Recognition in DPV-SLAM</h2>
+            <h2 class="paper-title">Learning Latent Action World Models In The Wild</h2>
             
-            <p class="paper-summary">Loop closure is crucial for maintaining the accuracy and consistency of visual SLAM. We propose a method to improve loop closure performance in DPV-SLAM. Our approach integrates AnyLoc, a learning-based visual place recognition technique, as a replacement for the classical Bag of Visual Words (BoVW) loop detection method. In contrast to BoVW, which relies on handcrafted features, AnyLoc utilizes deep feature representations, enabling more robust image retrieval across diverse viewpoints and lighting conditions. Furthermore, we propose an adaptive mechanism that dynamically adjusts similarity threshold based on environmental conditions, removing the need for manual tuning. Experiments on both indoor and outdoor datasets demonstrate that our method significantly outperforms the original DPV-SLAM in terms of loop closure accuracy and robustness. The proposed method offers a practical and scalable solution for enhancing loop closure performance in modern SLAM systems.</p>
+            <p class="paper-summary">Agents capable of reasoning and planning in the real world require the ability of predicting the consequences of their actions. While world models possess this capability, they most often require action labels, that can be complex to obtain at scale. This motivates the learning of latent action models, that can learn an action space from videos alone. Our work addresses the problem of learning latent actions world models on in-the-wild videos, expanding the scope of existing works that focus on simple robotics simulations, video games, or manipulation data. While this allows us to capture richer actions, it also introduces challenges stemming from the video diversity, such as environmental noise, or the lack of a common embodiment across videos. To address some of the challenges, we discuss properties that actions should follow as well as relevant architectural choices and evaluations. We find that continuous, but constrained, latent actions are able to capture the complexity of actions from in-the-wild videos, something that the common vector quantization does not. We for example find that changes in the environment coming from agents, such as humans entering the room, can be transferred across videos. This highlights the capability of learning actions that are specific to in-the-wild videos. In the absence of a common embodiment across videos, we are mainly able to learn latent actions that become localized in space, relative to the camera. Nonetheless, we are able to train a controller that maps known actions to latent ones, allowing us to use latent actions as a universal interface and solve planning tasks with our world model with similar performance as action-conditioned baselines. Our analyses and experiments provide a step towards scaling latent action models to the real world.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper improves loop closure in DPV-SLAM by replacing the BoVW method with the learning-based visual place recognition technique AnyLoc and introducing an adaptive similarity threshold, resulting in improved accuracy and robustness.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper explores learning latent action world models from in-the-wild videos without action labels, addressing challenges like environmental noise and lack of a common embodiment, and demonstrating the potential of the learned latent actions for planning tasks.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 该论文通过使用基于学习的视觉场景识别技术AnyLoc替换BoVW方法，并引入自适应相似度阈值，从而改进了DPV-SLAM中的闭环，从而提高了准确性和鲁棒性。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 本文研究了如何从无动作标签的真实视频中学习潜在动作世界模型，解决了环境噪声和缺乏通用embodiment等挑战，并展示了学习到的潜在动作在规划任务中的潜力。</p>
             
 
             
@@ -514,16 +514,16 @@
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
                 </div>
                 
                 
                 <div class="rating-item">
                     <span class="rating-label">Novelty:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -564,29 +564,29 @@
                     
                 
                     
-                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
                     
                 
                     
                         <i class="far fa-star"></i>
                     
                 
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                <span class="text-xs text-gray-500 ml-1">(7/10)</span>
             </div>
             
 
-            <a href="http://arxiv.org/abs/2601.02723v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2601.05230v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Wenzheng Zhang, Kazuki Adachi, Yoshitaka Hara, Sousuke Nakamura</p>
+            <p class="paper-authors">Authors: Quentin Garrido, Tushar Nagarajan, Basile Terver, Nicolas Ballas, Yann LeCun, Michael Rabbat</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2026-01-10 02:52:03 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2026-01-10 02:52:36 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>

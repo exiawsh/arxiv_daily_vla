@@ -1,0 +1,111 @@
+[
+    {
+        "title": "Pixel-Perfect Visual Geometry Estimation",
+        "summary": "Recovering clean and accurate geometry from images is essential for robotics and augmented reality. However, existing geometry foundation models still suffer severely from flying pixels and the loss of fine details. In this paper, we present pixel-perfect visual geometry models that can predict high-quality, flying-pixel-free point clouds by leveraging generative modeling in the pixel space. We first introduce Pixel-Perfect Depth (PPD), a monocular depth foundation model built upon pixel-space diffusion transformers (DiT). To address the high computational complexity associated with pixel-space diffusion, we propose two key designs: 1) Semantics-Prompted DiT, which incorporates semantic representations from vision foundation models to prompt the diffusion process, preserving global semantics while enhancing fine-grained visual details; and 2) Cascade DiT architecture that progressively increases the number of image tokens, improving both efficiency and accuracy. To further extend PPD to video (PPVD), we introduce a new Semantics-Consistent DiT, which extracts temporally consistent semantics from a multi-view geometry foundation model. We then perform reference-guided token propagation within the DiT to maintain temporal coherence with minimal computational and memory overhead. Our models achieve the best performance among all generative monocular and video depth estimation models and produce significantly cleaner point clouds than all other models.",
+        "url": "http://arxiv.org/abs/2601.05246v1",
+        "published_date": "2026-01-08T18:59:49+00:00",
+        "updated_date": "2026-01-08T18:59:49+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Gangwei Xu",
+            "Haotong Lin",
+            "Hongcheng Luo",
+            "Haiyang Sun",
+            "Bing Wang",
+            "Guang Chen",
+            "Sida Peng",
+            "Hangjun Ye",
+            "Xin Yang"
+        ],
+        "tldr": "This paper introduces pixel-perfect monocular and video depth estimation models (PPD and PPVD) using diffusion transformers and semantic prompting to generate high-quality, detailed, and temporally consistent point clouds.",
+        "tldr_zh": "本文介绍了像素级完美的单目和视频深度估计模型（PPD 和 PPVD），该模型使用扩散变换器和语义提示来生成高质量、细节丰富且时间上一致的点云。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "ObjectForesight: Predicting Future 3D Object Trajectories from Human Videos",
+        "summary": "Humans can effortlessly anticipate how objects might move or change through interaction--imagining a cup being lifted, a knife slicing, or a lid being closed. We aim to endow computational systems with a similar ability to predict plausible future object motions directly from passive visual observation. We introduce ObjectForesight, a 3D object-centric dynamics model that predicts future 6-DoF poses and trajectories of rigid objects from short egocentric video sequences. Unlike conventional world or dynamics models that operate in pixel or latent space, ObjectForesight represents the world explicitly in 3D at the object level, enabling geometrically grounded and temporally coherent predictions that capture object affordances and trajectories. To train such a model at scale, we leverage recent advances in segmentation, mesh reconstruction, and 3D pose estimation to curate a dataset of 2 million plus short clips with pseudo-ground-truth 3D object trajectories. Through extensive experiments, we show that ObjectForesight achieves significant gains in accuracy, geometric consistency, and generalization to unseen objects and scenes, establishing a scalable framework for learning physically grounded, object-centric dynamics models directly from observation. objectforesight.github.io",
+        "url": "http://arxiv.org/abs/2601.05237v1",
+        "published_date": "2026-01-08T18:58:08+00:00",
+        "updated_date": "2026-01-08T18:58:08+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Rustin Soraki",
+            "Homanga Bharadhwaj",
+            "Ali Farhadi",
+            "Roozbeh Mottaghi"
+        ],
+        "tldr": "ObjectForesight predicts future 3D object trajectories from egocentric videos using an object-centric dynamics model trained on a large-scale dataset of pseudo-ground-truth 3D object trajectories.",
+        "tldr_zh": "ObjectForesight 使用基于大规模伪真值3D物体轨迹数据集训练的、以物体为中心的动力学模型，从自我中心视频中预测未来3D物体的轨迹。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "RoboVIP: Multi-View Video Generation with Visual Identity Prompting Augments Robot Manipulation",
+        "summary": "The diversity, quantity, and quality of manipulation data are critical for training effective robot policies. However, due to hardware and physical setup constraints, collecting large-scale real-world manipulation data remains difficult to scale across diverse environments. Recent work uses text-prompt conditioned image diffusion models to augment manipulation data by altering the backgrounds and tabletop objects in the visual observations. However, these approaches often overlook the practical need for multi-view and temporally coherent observations required by state-of-the-art policy models. Further, text prompts alone cannot reliably specify the scene setup. To provide the diffusion model with explicit visual guidance, we introduce visual identity prompting, which supplies exemplar images as conditioning inputs to guide the generation of the desired scene setup. To this end, we also build a scalable pipeline to curate a visual identity pool from large robotics datasets. Using our augmented manipulation data to train downstream vision-language-action and visuomotor policy models yields consistent performance gains in both simulation and real-robot settings.",
+        "url": "http://arxiv.org/abs/2601.05241v1",
+        "published_date": "2026-01-08T18:59:22+00:00",
+        "updated_date": "2026-01-08T18:59:22+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.RO"
+        ],
+        "authors": [
+            "Boyang Wang",
+            "Haoran Zhang",
+            "Shujie Zhang",
+            "Jinkun Hao",
+            "Mingda Jia",
+            "Qi Lv",
+            "Yucheng Mao",
+            "Zhaoyang Lyu",
+            "Jia Zeng",
+            "Xudong Xu",
+            "Jiangmiao Pang"
+        ],
+        "tldr": "This paper introduces RoboVIP, a method using multi-view video generation with visual identity prompting to augment robot manipulation data, improving performance of vision-language-action and visuomotor policies in both simulation and real-robot settings.",
+        "tldr_zh": "该论文介绍了RoboVIP，一种利用多视角视频生成和视觉身份提示来增强机器人操作数据的方法，从而提高了视觉-语言-动作和视觉运动策略在模拟和真实机器人环境中的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Learning Latent Action World Models In The Wild",
+        "summary": "Agents capable of reasoning and planning in the real world require the ability of predicting the consequences of their actions. While world models possess this capability, they most often require action labels, that can be complex to obtain at scale. This motivates the learning of latent action models, that can learn an action space from videos alone. Our work addresses the problem of learning latent actions world models on in-the-wild videos, expanding the scope of existing works that focus on simple robotics simulations, video games, or manipulation data. While this allows us to capture richer actions, it also introduces challenges stemming from the video diversity, such as environmental noise, or the lack of a common embodiment across videos. To address some of the challenges, we discuss properties that actions should follow as well as relevant architectural choices and evaluations. We find that continuous, but constrained, latent actions are able to capture the complexity of actions from in-the-wild videos, something that the common vector quantization does not. We for example find that changes in the environment coming from agents, such as humans entering the room, can be transferred across videos. This highlights the capability of learning actions that are specific to in-the-wild videos. In the absence of a common embodiment across videos, we are mainly able to learn latent actions that become localized in space, relative to the camera. Nonetheless, we are able to train a controller that maps known actions to latent ones, allowing us to use latent actions as a universal interface and solve planning tasks with our world model with similar performance as action-conditioned baselines. Our analyses and experiments provide a step towards scaling latent action models to the real world.",
+        "url": "http://arxiv.org/abs/2601.05230v1",
+        "published_date": "2026-01-08T18:55:39+00:00",
+        "updated_date": "2026-01-08T18:55:39+00:00",
+        "categories": [
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Quentin Garrido",
+            "Tushar Nagarajan",
+            "Basile Terver",
+            "Nicolas Ballas",
+            "Yann LeCun",
+            "Michael Rabbat"
+        ],
+        "tldr": "This paper explores learning latent action world models from in-the-wild videos without action labels, addressing challenges like environmental noise and lack of a common embodiment, and demonstrating the potential of the learned latent actions for planning tasks.",
+        "tldr_zh": "本文研究了如何从无动作标签的真实视频中学习潜在动作世界模型，解决了环境噪声和缺乏通用embodiment等挑战，并展示了学习到的潜在动作在规划任务中的潜力。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
