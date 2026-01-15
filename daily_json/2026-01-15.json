@@ -1,0 +1,248 @@
+[
+    {
+        "title": "SCE-SLAM: Scale-Consistent Monocular SLAM via Scene Coordinate Embeddings",
+        "summary": "Monocular visual SLAM enables 3D reconstruction from internet video and autonomous navigation on resource-constrained platforms, yet suffers from scale drift, i.e., the gradual divergence of estimated scale over long sequences. Existing frame-to-frame methods achieve real-time performance through local optimization but accumulate scale drift due to the lack of global constraints among independent windows. To address this, we propose SCE-SLAM, an end-to-end SLAM system that maintains scale consistency through scene coordinate embeddings, which are learned patch-level representations encoding 3D geometric relationships under a canonical scale reference. The framework consists of two key modules: geometry-guided aggregation that leverages 3D spatial proximity to propagate scale information from historical observations through geometry-modulated attention, and scene coordinate bundle adjustment that anchors current estimates to the reference scale through explicit 3D coordinate constraints decoded from the scene coordinate embeddings. Experiments on KITTI, Waymo, and vKITTI demonstrate substantial improvements: our method reduces absolute trajectory error by 8.36m on KITTI compared to the best prior approach, while maintaining 36 FPS and achieving scale consistency across large-scale scenes.",
+        "url": "http://arxiv.org/abs/2601.09665v1",
+        "published_date": "2026-01-14T17:57:08+00:00",
+        "updated_date": "2026-01-14T17:57:08+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yuchen Wu",
+            "Jiahe Li",
+            "Xiaohan Yu",
+            "Lina Yu",
+            "Jin Zheng",
+            "Xiao Bai"
+        ],
+        "tldr": "SCE-SLAM addresses the scale drift problem in monocular SLAM by learning scene coordinate embeddings and using geometry-guided aggregation and scene coordinate bundle adjustment to maintain scale consistency, achieving significant improvements in accuracy and scale consistency while maintaining real-time performance.",
+        "tldr_zh": "SCE-SLAM通过学习场景坐标嵌入，并使用几何引导的聚合和场景坐标捆绑调整来解决单目SLAM中的尺度漂移问题，从而保持尺度一致性，在精度和尺度一致性方面取得了显著提高，同时保持了实时性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "OpenVoxel: Training-Free Grouping and Captioning Voxels for Open-Vocabulary 3D Scene Understanding",
+        "summary": "We propose OpenVoxel, a training-free algorithm for grouping and captioning sparse voxels for the open-vocabulary 3D scene understanding tasks. Given the sparse voxel rasterization (SVR) model obtained from multi-view images of a 3D scene, our OpenVoxel is able to produce meaningful groups that describe different objects in the scene. Also, by leveraging powerful Vision Language Models (VLMs) and Multi-modal Large Language Models (MLLMs), our OpenVoxel successfully build an informative scene map by captioning each group, enabling further 3D scene understanding tasks such as open-vocabulary segmentation (OVS) or referring expression segmentation (RES). Unlike previous methods, our method is training-free and does not introduce embeddings from a CLIP/BERT text encoder. Instead, we directly proceed with text-to-text search using MLLMs. Through extensive experiments, our method demonstrates superior performance compared to recent studies, particularly in complex referring expression segmentation (RES) tasks. The code will be open.",
+        "url": "http://arxiv.org/abs/2601.09575v1",
+        "published_date": "2026-01-14T15:45:57+00:00",
+        "updated_date": "2026-01-14T15:45:57+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Sheng-Yu Huang",
+            "Jaesung Choe",
+            "Yu-Chiang Frank Wang",
+            "Cheng Sun"
+        ],
+        "tldr": "OpenVoxel is a training-free method for grouping and captioning voxels in 3D scenes using VLMs/MLLMs, enabling open-vocabulary 3D scene understanding tasks like segmentation, outperforming previous methods, especially in referring expression segmentation.",
+        "tldr_zh": "OpenVoxel 是一种无需训练的方法，它使用 VLMs/MLLMs 对 3D 场景中的体素进行分组和标注，从而实现开放词汇 3D 场景理解任务（如分割），优于以往的方法，尤其是在指代表达式分割方面。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "MAD: Motion Appearance Decoupling for efficient Driving World Models",
+        "summary": "Recent video diffusion models generate photorealistic, temporally coherent videos, yet they fall short as reliable world models for autonomous driving, where structured motion and physically consistent interactions are essential. Adapting these generalist video models to driving domains has shown promise but typically requires massive domain-specific data and costly fine-tuning. We propose an efficient adaptation framework that converts generalist video diffusion models into controllable driving world models with minimal supervision. The key idea is to decouple motion learning from appearance synthesis. First, the model is adapted to predict structured motion in a simplified form: videos of skeletonized agents and scene elements, focusing learning on physical and social plausibility. Then, the same backbone is reused to synthesize realistic RGB videos conditioned on these motion sequences, effectively \"dressing\" the motion with texture and lighting. This two-stage process mirrors a reasoning-rendering paradigm: first infer dynamics, then render appearance. Our experiments show this decoupled approach is exceptionally efficient: adapting SVD, we match prior SOTA models with less than 6% of their compute. Scaling to LTX, our MAD-LTX model outperforms all open-source competitors, and supports a comprehensive suite of text, ego, and object controls. Project page: https://vita-epfl.github.io/MAD-World-Model/",
+        "url": "http://arxiv.org/abs/2601.09452v1",
+        "published_date": "2026-01-14T12:52:23+00:00",
+        "updated_date": "2026-01-14T12:52:23+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ahmad Rahimi",
+            "Valentin Gerard",
+            "Eloi Zablocki",
+            "Matthieu Cord",
+            "Alexandre Alahi"
+        ],
+        "tldr": "The paper presents an efficient framework called MAD for adapting generalist video diffusion models to autonomous driving world models by decoupling motion learning from appearance synthesis, achieving state-of-the-art performance with significantly less computation.",
+        "tldr_zh": "本文提出了一个名为MAD的框架，通过将运动学习与外观合成分离，使通用视频扩散模型能够高效地适应自动驾驶世界模型，以明显更少的计算量实现了最先进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "CLIDD: Cross-Layer Independent Deformable Description for Efficient and Discriminative Local Feature Representation",
+        "summary": "Robust local feature representations are essential for spatial intelligence tasks such as robot navigation and augmented reality. Establishing reliable correspondences requires descriptors that provide both high discriminative power and computational efficiency. To address this, we introduce Cross-Layer Independent Deformable Description (CLIDD), a method that achieves superior distinctiveness by sampling directly from independent feature hierarchies. This approach utilizes learnable offsets to capture fine-grained structural details across scales while bypassing the computational burden of unified dense representations. To ensure real-time performance, we implement a hardware-aware kernel fusion strategy that maximizes inference throughput. Furthermore, we develop a scalable framework that integrates lightweight architectures with a training protocol leveraging both metric learning and knowledge distillation. This scheme generates a wide spectrum of model variants optimized for diverse deployment constraints. Extensive evaluations demonstrate that our approach achieves superior matching accuracy and exceptional computational efficiency simultaneously. Specifically, the ultra-compact variant matches the precision of SuperPoint while utilizing only 0.004M parameters, achieving a 99.7% reduction in model size. Furthermore, our high-performance configuration outperforms all current state-of-the-art methods, including high-capacity DINOv2-based frameworks, while exceeding 200 FPS on edge devices. These results demonstrate that CLIDD delivers high-precision local feature matching with minimal computational overhead, providing a robust and scalable solution for real-time spatial intelligence tasks.",
+        "url": "http://arxiv.org/abs/2601.09230v1",
+        "published_date": "2026-01-14T07:03:01+00:00",
+        "updated_date": "2026-01-14T07:03:01+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Haodi Yao",
+            "Fenghua He",
+            "Ning Hao",
+            "Yao Su"
+        ],
+        "tldr": "The paper introduces CLIDD, a novel local feature descriptor that achieves state-of-the-art matching accuracy and real-time performance through cross-layer independent deformable descriptions and hardware-aware optimization, making it suitable for spatial intelligence tasks.",
+        "tldr_zh": "该论文介绍了一种名为CLIDD的新型局部特征描述符，它通过跨层独立可变形描述和硬件感知优化实现了最先进的匹配精度和实时性能，使其适用于空间智能任务。",
+        "relevance_score": 9,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Reasoning Matters for 3D Visual Grounding",
+        "summary": "The recent development of Large Language Models (LLMs) with strong reasoning ability has driven research in various domains such as mathematics, coding, and scientific discovery. Meanwhile, 3D visual grounding, as a fundamental task in 3D understanding, still remains challenging due to the limited reasoning ability of recent 3D visual grounding models. Most of the current methods incorporate a text encoder and visual feature encoder to generate cross-modal fuse features and predict the referring object. These models often require supervised training on extensive 3D annotation data. On the other hand, recent research also focus on scaling synthetic data to train stronger 3D visual grounding LLM, however, the performance gain remains limited and non-proportional to the data collection cost. In this work, we propose a 3D visual grounding data pipeline, which is capable of automatically synthesizing 3D visual grounding data along with corresponding reasoning process. Additionally, we leverage the generated data for LLM fine-tuning and introduce Reason3DVG-8B, a strong 3D visual grounding LLM that outperforms previous LLM-based method 3D-GRAND using only 1.6% of their training data, demonstrating the effectiveness of our data and the importance of reasoning in 3D visual grounding.",
+        "url": "http://arxiv.org/abs/2601.08811v1",
+        "published_date": "2026-01-13T18:48:41+00:00",
+        "updated_date": "2026-01-13T18:48:41+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Hsiang-Wei Huang",
+            "Kuang-Ming Chen",
+            "Wenhao Chai",
+            "Cheng-Yen Yang",
+            "Jen-Hao Cheng",
+            "Jenq-Neng Hwang"
+        ],
+        "tldr": "This paper introduces a data pipeline for automatically synthesizing 3D visual grounding data with reasoning processes and uses it to fine-tune an LLM, achieving strong performance with significantly less data than previous methods, highlighting the importance of reasoning in 3D visual grounding.",
+        "tldr_zh": "本文提出了一种自动合成包含推理过程的3D视觉定位数据的数据管道，并用该数据微调LLM，以远低于先前方法的数据量实现了强大的性能，突出了推理在3D视觉定位中的重要性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Sim2real Image Translation Enables Viewpoint-Robust Policies from Fixed-Camera Datasets",
+        "summary": "Vision-based policies for robot manipulation have achieved significant recent success, but are still brittle to distribution shifts such as camera viewpoint variations. Robot demonstration data is scarce and often lacks appropriate variation in camera viewpoints. Simulation offers a way to collect robot demonstrations at scale with comprehensive coverage of different viewpoints, but presents a visual sim2real challenge. To bridge this gap, we propose MANGO -- an unpaired image translation method with a novel segmentation-conditioned InfoNCE loss, a highly-regularized discriminator design, and a modified PatchNCE loss. We find that these elements are crucial for maintaining viewpoint consistency during sim2real translation. When training MANGO, we only require a small amount of fixed-camera data from the real world, but show that our method can generate diverse unseen viewpoints by translating simulated observations. In this domain, MANGO outperforms all other image translation methods we tested. Imitation-learning policies trained on data augmented by MANGO are able to achieve success rates as high as 60\\% on views that the non-augmented policy fails completely on.",
+        "url": "http://arxiv.org/abs/2601.09605v1",
+        "published_date": "2026-01-14T16:25:13+00:00",
+        "updated_date": "2026-01-14T16:25:13+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.RO"
+        ],
+        "authors": [
+            "Jeremiah Coholich",
+            "Justin Wit",
+            "Robert Azarcon",
+            "Zsolt Kira"
+        ],
+        "tldr": "The paper presents MANGO, a sim2real image translation method for robot manipulation that maintains viewpoint consistency, enabling training of more robust vision-based policies from augmented simulation data.",
+        "tldr_zh": "该论文提出了MANGO，一种用于机器人操作的sim2real图像转换方法，该方法保持视点一致性，从而能够从增强的仿真数据中训练更鲁棒的基于视觉的策略。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Multimodal Signal Processing For Thermo-Visible-Lidar Fusion In Real-time 3D Semantic Mapping",
+        "summary": "In complex environments, autonomous robot navigation and environmental perception pose higher requirements for SLAM technology. This paper presents a novel method for semantically enhancing 3D point cloud maps with thermal information. By first performing pixel-level fusion of visible and infrared images, the system projects real-time LiDAR point clouds onto this fused image stream. It then segments heat source features in the thermal channel to instantly identify high temperature targets and applies this temperature information as a semantic layer on the final 3D map. This approach generates maps that not only have accurate geometry but also possess a critical semantic understanding of the environment, making it highly valuable for specific applications like rapid disaster assessment and industrial preventive maintenance.",
+        "url": "http://arxiv.org/abs/2601.09578v1",
+        "published_date": "2026-01-14T15:46:57+00:00",
+        "updated_date": "2026-01-14T15:46:57+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Jiajun Sun",
+            "Yangyi Ou",
+            "Haoyuan Zheng",
+            "Chao yang",
+            "Yue Ma"
+        ],
+        "tldr": "This paper proposes a real-time method for enhancing 3D point cloud maps with thermal information by fusing visible, infrared, and LiDAR data, enabling semantic understanding for applications like disaster assessment.",
+        "tldr_zh": "本文提出了一种实时方法，通过融合可见光、红外和激光雷达数据，利用热信息增强3D点云地图，从而实现语义理解，适用于灾害评估等应用。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Hybrid guided variational autoencoder for visual place recognition",
+        "summary": "Autonomous agents such as cars, robots and drones need to precisely localize themselves in diverse environments, including in GPS-denied indoor environments. One approach for precise localization is visual place recognition (VPR), which estimates the place of an image based on previously seen places. State-of-the-art VPR models require high amounts of memory, making them unwieldy for mobile deployment, while more compact models lack robustness and generalization capabilities. This work overcomes these limitations for robotics using a combination of event-based vision sensors and an event-based novel guided variational autoencoder (VAE). The encoder part of our model is based on a spiking neural network model which is compatible with power-efficient low latency neuromorphic hardware. The VAE successfully disentangles the visual features of 16 distinct places in our new indoor VPR dataset with a classification performance comparable to other state-of-the-art approaches while, showing robust performance also under various illumination conditions. When tested with novel visual inputs from unknown scenes, our model can distinguish between these places, which demonstrates a high generalization capability by learning the essential features of location. Our compact and robust guided VAE with generalization capabilities poses a promising model for visual place recognition that can significantly enhance mobile robot navigation in known and unknown indoor environments.",
+        "url": "http://arxiv.org/abs/2601.09248v1",
+        "published_date": "2026-01-14T07:33:53+00:00",
+        "updated_date": "2026-01-14T07:33:53+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Ni Wang",
+            "Zihan You",
+            "Emre Neftci",
+            "Thorben Schoepe"
+        ],
+        "tldr": "This paper introduces a hybrid guided variational autoencoder (VAE) utilizing event-based vision and spiking neural networks for robust and memory-efficient visual place recognition (VPR), demonstrating generalization to new environments and robustness to illumination changes.",
+        "tldr_zh": "本文介绍了一种混合引导变分自编码器（VAE），它利用基于事件的视觉和脉冲神经网络，实现了鲁棒且内存高效的视觉位置识别（VPR），展示了对新环境的泛化能力以及对光照变化的鲁棒性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Vision Foundation Models for Domain Generalisable Cross-View Localisation in Planetary Ground-Aerial Robotic Teams",
+        "summary": "Accurate localisation in planetary robotics enables the advanced autonomy required to support the increased scale and scope of future missions. The successes of the Ingenuity helicopter and multiple planetary orbiters lay the groundwork for future missions that use ground-aerial robotic teams. In this paper, we consider rovers using machine learning to localise themselves in a local aerial map using limited field-of-view monocular ground-view RGB images as input. A key consideration for machine learning methods is that real space data with ground-truth position labels suitable for training is scarce. In this work, we propose a novel method of localising rovers in an aerial map using cross-view-localising dual-encoder deep neural networks. We leverage semantic segmentation with vision foundation models and high volume synthetic data to bridge the domain gap to real images. We also contribute a new cross-view dataset of real-world rover trajectories with corresponding ground-truth localisation data captured in a planetary analogue facility, plus a high volume dataset of analogous synthetic image pairs. Using particle filters for state estimation with the cross-view networks allows accurate position estimation over simple and complex trajectories based on sequences of ground-view images.",
+        "url": "http://arxiv.org/abs/2601.09107v1",
+        "published_date": "2026-01-14T03:11:05+00:00",
+        "updated_date": "2026-01-14T03:11:05+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Lachlan Holden",
+            "Feras Dayoub",
+            "Alberto Candela",
+            "David Harvey",
+            "Tat-Jun Chin"
+        ],
+        "tldr": "This paper introduces a cross-view localization method for planetary rovers using vision foundation models and synthetic data to address the lack of real-world training data. It also contributes a new real-world dataset and a large synthetic dataset for cross-view localization.",
+        "tldr_zh": "本文提出了一种用于行星漫游车跨视角定位的方法，该方法利用视觉基础模型和合成数据来解决真实世界训练数据不足的问题。此外，它还贡献了一个新的真实世界数据集和一个大型合成数据集，用于跨视角定位。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "3AM: Segment Anything with Geometric Consistency in Videos",
+        "summary": "Video object segmentation methods like SAM2 achieve strong performance through memory-based architectures but struggle under large viewpoint changes due to reliance on appearance features. Traditional 3D instance segmentation methods address viewpoint consistency but require camera poses, depth maps, and expensive preprocessing. We introduce 3AM, a training-time enhancement that integrates 3D-aware features from MUSt3R into SAM2. Our lightweight Feature Merger fuses multi-level MUSt3R features that encode implicit geometric correspondence. Combined with SAM2's appearance features, the model achieves geometry-consistent recognition grounded in both spatial position and visual similarity. We propose a field-of-view aware sampling strategy ensuring frames observe spatially consistent object regions for reliable 3D correspondence learning. Critically, our method requires only RGB input at inference, with no camera poses or preprocessing. On challenging datasets with wide-baseline motion (ScanNet++, Replica), 3AM substantially outperforms SAM2 and extensions, achieving 90.6% IoU and 71.7% Positive IoU on ScanNet++'s Selected Subset, improving over state-of-the-art VOS methods by +15.9 and +30.4 points. Project page: https://jayisaking.github.io/3AM-Page/",
+        "url": "http://arxiv.org/abs/2601.08831v1",
+        "published_date": "2026-01-13T18:59:54+00:00",
+        "updated_date": "2026-01-13T18:59:54+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yang-Che Sun",
+            "Cheng Sun",
+            "Chin-Yang Lin",
+            "Fu-En Yang",
+            "Min-Hung Chen",
+            "Yen-Yu Lin",
+            "Yu-Lun Liu"
+        ],
+        "tldr": "The paper presents 3AM, a method that enhances video object segmentation by integrating 3D-aware features into SAM2, achieving geometric consistency without requiring camera poses or depth maps. It significantly outperforms SAM2 on datasets with large viewpoint changes.",
+        "tldr_zh": "该论文提出了3AM，一种通过将3D感知特征整合到SAM2中来增强视频对象分割的方法，实现了几何一致性，且不需要相机姿势或深度图。 在具有大视点变化的数据集上，其性能显著优于SAM2。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    }
+]
