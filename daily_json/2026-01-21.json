@@ -1,0 +1,221 @@
+[
+    {
+        "title": "Correcting and Quantifying Systematic Errors in 3D Box Annotations for Autonomous Driving",
+        "summary": "Accurate ground truth annotations are critical to supervised learning and evaluating the performance of autonomous vehicle systems. These vehicles are typically equipped with active sensors, such as LiDAR, which scan the environment in predefined patterns. 3D box annotation based on data from such sensors is challenging in dynamic scenarios, where objects are observed at different timestamps, hence different positions. Without proper handling of this phenomenon, systematic errors are prone to being introduced in the box annotations. Our work is the first to discover such annotation errors in widely used, publicly available datasets. Through our novel offline estimation method, we correct the annotations so that they follow physically feasible trajectories and achieve spatial and temporal consistency with the sensor data. For the first time, we define metrics for this problem; and we evaluate our method on the Argoverse 2, MAN TruckScenes, and our proprietary datasets. Our approach increases the quality of box annotations by more than 17% in these datasets. Furthermore, we quantify the annotation errors in them and find that the original annotations are misplaced by up to 2.5 m, with highly dynamic objects being the most affected. Finally, we test the impact of the errors in benchmarking and find that the impact is larger than the improvements that state-of-the-art methods typically achieve with respect to the previous state-of-the-art methods; showing that accurate annotations are essential for correct interpretation of performance. Our code is available at https://github.com/alexandre-justo-miro/annotation-correction-3D-boxes.",
+        "url": "http://arxiv.org/abs/2601.14038v1",
+        "published_date": "2026-01-20T14:57:48+00:00",
+        "updated_date": "2026-01-20T14:57:48+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Alexandre Justo Miro",
+            "Ludvig af Klinteberg",
+            "Bogdan Timus",
+            "Aron Asefaw",
+            "Ajinkya Khoche",
+            "Thomas Gustafsson",
+            "Sina Sharif Mansouri",
+            "Masoud Daneshtalab"
+        ],
+        "tldr": "This paper addresses the problem of systematic errors in 3D box annotations for autonomous driving, introduces a correction method, and quantifies the errors in existing datasets, demonstrating their significant impact on benchmarking.",
+        "tldr_zh": "本文解决了自动驾驶中3D框注释的系统性误差问题，提出了一种校正方法，并量化了现有数据集中的误差，证明了其对基准测试的重大影响。",
+        "relevance_score": 10,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 10,
+        "overall_priority_score": 10
+    },
+    {
+        "title": "ParkingTwin: Training-Free Streaming 3D Reconstruction for Parking-Lot Digital Twins",
+        "summary": "High-fidelity parking-lot digital twins provide essential priors for path planning, collision checking, and perception validation in Automated Valet Parking (AVP). Yet robot-oriented reconstruction faces a trilemma: sparse forward-facing views cause weak parallax and ill-posed geometry; dynamic occlusions and extreme lighting hinder stable texture fusion; and neural rendering typically needs expensive offline optimization, violating edge-side streaming constraints. We propose ParkingTwin, a training-free, lightweight system for online streaming 3D reconstruction. First, OSM-prior-driven geometric construction uses OpenStreetMap semantic topology to directly generate a metric-consistent TSDF, replacing blind geometric search with deterministic mapping and avoiding costly optimization. Second, geometry-aware dynamic filtering employs a quad-modal constraint field (normal/height/depth consistency) to reject moving vehicles and transient occlusions in real time. Third, illumination-robust fusion in CIELAB decouples luminance and chromaticity via adaptive L-channel weighting and depth-gradient suppression, reducing seams under abrupt lighting changes. ParkingTwin runs at 30+ FPS on an entry-level GTX 1660. On a 68,000 m^2 real-world dataset, it achieves SSIM 0.87 (+16.0%), delivers about 15x end-to-end speedup, and reduces GPU memory by 83.3% compared with state-of-the-art 3D Gaussian Splatting (3DGS) that typically requires high-end GPUs (RTX 4090D). The system outputs explicit triangle meshes compatible with Unity/Unreal digital-twin pipelines. Project page: https://mihoutao-liu.github.io/ParkingTwin/",
+        "url": "http://arxiv.org/abs/2601.13706v1",
+        "published_date": "2026-01-20T08:03:58+00:00",
+        "updated_date": "2026-01-20T08:03:58+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Xinhao Liu",
+            "Yu Wang",
+            "Xiansheng Guo",
+            "Gordon Owusu Boateng",
+            "Yu Cao",
+            "Haonan Si",
+            "Xingchen Guo",
+            "Nirwan Ansari"
+        ],
+        "tldr": "ParkingTwin is a training-free, lightweight system for online streaming 3D reconstruction of parking lots, utilizing OSM priors and geometry-aware filtering to achieve real-time performance and high accuracy on entry-level hardware.",
+        "tldr_zh": "ParkingTwin是一个无需训练、轻量级的系统，用于在线流式3D重建停车场。它利用OSM先验知识和几何感知滤波，在入门级硬件上实现了实时性能和高精度。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "CausalSpatial: A Benchmark for Object-Centric Causal Spatial Reasoning",
+        "summary": "Humans can look at a static scene and instantly predict what happens next -- will moving this object cause a collision? We call this ability Causal Spatial Reasoning. However, current multimodal large language models (MLLMs) cannot do this, as they remain largely restricted to static spatial perception, struggling to answer \"what-if\" questions in a 3D scene. We introduce CausalSpatial, a diagnostic benchmark evaluating whether models can anticipate consequences of object motions across four tasks: Collision, Compatibility, Occlusion, and Trajectory. Results expose a severe gap: humans score 84% while GPT-5 achieves only 54%. Why do MLLMs fail? Our analysis uncovers a fundamental deficiency: models over-rely on textual chain-of-thought reasoning that drifts from visual evidence, producing fluent but spatially ungrounded hallucinations. To address this, we propose the Causal Object World model (COW), a framework that externalizes the simulation process by generating videos of hypothetical dynamics. With explicit visual cues of causality, COW enables models to ground their reasoning in physical reality rather than linguistic priors. We make the dataset and code publicly available here: https://github.com/CausalSpatial/CausalSpatial",
+        "url": "http://arxiv.org/abs/2601.13304v1",
+        "published_date": "2026-01-19T18:59:44+00:00",
+        "updated_date": "2026-01-19T18:59:44+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Wenxin Ma",
+            "Chenlong Wang",
+            "Ruisheng Yuan",
+            "Hao Chen",
+            "Nanru Dai",
+            "S. Kevin Zhou",
+            "Yijun Yang",
+            "Alan Yuille",
+            "Jieneng Chen"
+        ],
+        "tldr": "The paper introduces CausalSpatial, a benchmark for evaluating causal spatial reasoning in MLLMs, revealing their deficiency in grounding reasoning in visual evidence. They propose Causal Object World (COW) to address this limitation.",
+        "tldr_zh": "该论文介绍了CausalSpatial，一个用于评估MLLM中因果空间推理的基准，揭示了它们在将推理建立在视觉证据上的不足。他们提出了Causal Object World (COW) 来解决这个局限性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "TwinBrainVLA: Unleashing the Potential of Generalist VLMs for Embodied Tasks via Asymmetric Mixture-of-Transformers",
+        "summary": "Standard Vision-Language-Action (VLA) models typically fine-tune a monolithic Vision-Language Model (VLM) backbone explicitly for robotic control. However, this approach creates a critical tension between maintaining high-level general semantic understanding and learning low-level, fine-grained sensorimotor skills, often leading to \"catastrophic forgetting\" of the model's open-world capabilities. To resolve this conflict, we introduce TwinBrainVLA, a novel architecture that coordinates a generalist VLM retaining universal semantic understanding and a specialist VLM dedicated to embodied proprioception for joint robotic control. TwinBrainVLA synergizes a frozen \"Left Brain\", which retains robust general visual reasoning, with a trainable \"Right Brain\", specialized for embodied perception, via a novel Asymmetric Mixture-of-Transformers (AsyMoT) mechanism. This design allows the Right Brain to dynamically query semantic knowledge from the frozen Left Brain and fuse it with proprioceptive states, providing rich conditioning for a Flow-Matching Action Expert to generate precise continuous controls. Extensive experiments on SimplerEnv and RoboCasa benchmarks demonstrate that TwinBrainVLA achieves superior manipulation performance compared to state-of-the-art baselines while explicitly preserving the comprehensive visual understanding capabilities of the pre-trained VLM, offering a promising direction for building general-purpose robots that simultaneously achieve high-level semantic understanding and low-level physical dexterity.",
+        "url": "http://arxiv.org/abs/2601.14133v1",
+        "published_date": "2026-01-20T16:30:07+00:00",
+        "updated_date": "2026-01-20T16:30:07+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Bin Yu",
+            "Shijie Lian",
+            "Xiaopeng Lin",
+            "Yuliang Wei",
+            "Zhaolong Shen",
+            "Changti Wu",
+            "Yuzhuo Miao",
+            "Xinming Wang",
+            "Bailing Wang",
+            "Cong Huang",
+            "Kai Chen"
+        ],
+        "tldr": "The paper introduces TwinBrainVLA, a novel VLA architecture that combines a frozen generalist VLM with a trainable specialist VLM for robotic control, using an Asymmetric Mixture-of-Transformers to improve performance and prevent catastrophic forgetting.",
+        "tldr_zh": "该论文介绍了TwinBrainVLA，一种新颖的VLA架构，它结合了冻结的通用VLM和可训练的专用VLM用于机器人控制，使用非对称混合转换器来提高性能并防止灾难性遗忘。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "VIAFormer: Voxel-Image Alignment Transformer for High-Fidelity Voxel Refinement",
+        "summary": "We propose VIAFormer, a Voxel-Image Alignment Transformer model designed for Multi-view Conditioned Voxel Refinement--the task of repairing incomplete noisy voxels using calibrated multi-view images as guidance. Its effectiveness stems from a synergistic design: an Image Index that provides explicit 3D spatial grounding for 2D image tokens, a Correctional Flow objective that learns a direct voxel-refinement trajectory, and a Hybrid Stream Transformer that enables robust cross-modal fusion. Experiments show that VIAFormer establishes a new state of the art in correcting both severe synthetic corruptions and realistic artifacts on the voxel shape obtained from powerful Vision Foundation Models. Beyond benchmarking, we demonstrate VIAFormer as a practical and reliable bridge in real-world 3D creation pipelines, paving the way for voxel-based methods to thrive in large-model, big-data wave.",
+        "url": "http://arxiv.org/abs/2601.13664v1",
+        "published_date": "2026-01-20T07:03:35+00:00",
+        "updated_date": "2026-01-20T07:03:35+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Tiancheng Fang",
+            "Bowen Pan",
+            "Lingxi Chen",
+            "Jiangjing Lyu",
+            "Chengfei Lyu",
+            "Chaoyue Niu",
+            "Fan Wu"
+        ],
+        "tldr": "The paper introduces VIAFormer, a novel transformer-based model for refining noisy voxel representations using multi-view images, achieving state-of-the-art performance and demonstrating practical applications in 3D creation pipelines.",
+        "tldr_zh": "该论文介绍了VIAFormer，一种新颖的基于Transformer的模型，用于使用多视角图像细化嘈杂的体素表示，实现了最先进的性能，并在3D创建流程中展示了实际应用。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Learning Fine-Grained Correspondence with Cross-Perspective Perception for Open-Vocabulary 6D Object Pose Estimation",
+        "summary": "Open-vocabulary 6D object pose estimation empowers robots to manipulate arbitrary unseen objects guided solely by natural language. However, a critical limitation of existing approaches is their reliance on unconstrained global matching strategies. In open-world scenarios, trying to match anchor features against the entire query image space introduces excessive ambiguity, as target features are easily confused with background distractors. To resolve this, we propose Fine-grained Correspondence Pose Estimation (FiCoP), a framework that transitions from noise-prone global matching to spatially-constrained patch-level correspondence. Our core innovation lies in leveraging a patch-to-patch correlation matrix as a structural prior to narrowing the matching scope, effectively filtering out irrelevant clutter to prevent it from degrading pose estimation. Firstly, we introduce an object-centric disentanglement preprocessing to isolate the semantic target from environmental noise. Secondly, a Cross-Perspective Global Perception (CPGP) module is proposed to fuse dual-view features, establishing structural consensus through explicit context reasoning. Finally, we design a Patch Correlation Predictor (PCP) that generates a precise block-wise association map, acting as a spatial filter to enforce fine-grained, noise-resilient matching. Experiments on the REAL275 and Toyota-Light datasets demonstrate that FiCoP improves Average Recall by 8.0% and 6.1%, respectively, compared to the state-of-the-art method, highlighting its capability to deliver robust and generalized perception for robotic agents operating in complex, unconstrained open-world environments. The source code will be made publicly available at https://github.com/zjjqinyu/FiCoP.",
+        "url": "http://arxiv.org/abs/2601.13565v1",
+        "published_date": "2026-01-20T03:48:54+00:00",
+        "updated_date": "2026-01-20T03:48:54+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO",
+            "eess.IV"
+        ],
+        "authors": [
+            "Yu Qin",
+            "Shimeng Fan",
+            "Fan Yang",
+            "Zixuan Xue",
+            "Zijie Mai",
+            "Wenrui Chen",
+            "Kailun Yang",
+            "Zhiyong Li"
+        ],
+        "tldr": "The paper introduces FiCoP, a novel framework for open-vocabulary 6D object pose estimation that uses spatially-constrained patch-level correspondence and cross-perspective perception to improve robustness and accuracy in cluttered environments.",
+        "tldr_zh": "该论文介绍了一种名为FiCoP 的新型框架，用于开放词汇的 6D 物体姿态估计，它使用空间约束的块级对应和跨视角感知来提高在杂乱环境中的鲁棒性和准确性。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Event-based Heterogeneous Information Processing for Online Vision-based Obstacle Detection and Localization",
+        "summary": "This paper introduces a novel framework for robotic vision-based navigation that integrates Hybrid Neural Networks (HNNs) with Spiking Neural Network (SNN)-based filtering to enhance situational awareness for unmodeled obstacle detection and localization. By leveraging the complementary strengths of Artificial Neural Networks (ANNs) and SNNs, the system achieves both accurate environmental understanding and fast, energy-efficient processing. The proposed architecture employs a dual-pathway approach: an ANN component processes static spatial features at low frequency, while an SNN component handles dynamic, event-based sensor data in real time. Unlike conventional hybrid architectures that rely on domain conversion mechanisms, our system incorporates a pre-developed SNN-based filter that directly utilizes spike-encoded inputs for localization and state estimation. Detected anomalies are validated using contextual information from the ANN pathway and continuously tracked to support anticipatory navigation strategies. Simulation results demonstrate that the proposed method offers acceptable detection accuracy while maintaining computational efficiency close to SNN-only implementations, which operate at a fraction of the resource cost. This framework represents a significant advancement in neuromorphic navigation systems for robots operating in unpredictable and dynamic environments.",
+        "url": "http://arxiv.org/abs/2601.13451v1",
+        "published_date": "2026-01-19T23:09:23+00:00",
+        "updated_date": "2026-01-19T23:09:23+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Reza Ahmadvand",
+            "Sarah Safura Sharif",
+            "Yaser Mike Banad"
+        ],
+        "tldr": "This paper presents a novel hybrid neural network (HNN) framework combining ANNs and SNNs for real-time, energy-efficient obstacle detection and localization in robotic navigation, demonstrating acceptable accuracy and computational efficiency.",
+        "tldr_zh": "本文提出了一种新颖的混合神经网络（HNN）框架，结合了ANN和SNN，用于机器人导航中实时、节能的障碍物检测和定位，并展示了可接受的精度和计算效率。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Leveraging Transformer Decoder for Automotive Radar Object Detection",
+        "summary": "In this paper, we present a Transformer-based architecture for 3D radar object detection that uses a novel Transformer Decoder as the prediction head to directly regress 3D bounding boxes and class scores from radar feature representations. To bridge multi-scale radar features and the decoder, we propose Pyramid Token Fusion (PTF), a lightweight module that converts a feature pyramid into a unified, scale-aware token sequence. By formulating detection as a set prediction problem with learnable object queries and positional encodings, our design models long-range spatial-temporal correlations and cross-feature interactions. This approach eliminates dense proposal generation and heuristic post-processing such as extensive non-maximum suppression (NMS) tuning. We evaluate the proposed framework on the RADDet, where it achieves significant improvements over state-of-the-art radar-only baselines.",
+        "url": "http://arxiv.org/abs/2601.13386v1",
+        "published_date": "2026-01-19T20:44:24+00:00",
+        "updated_date": "2026-01-19T20:44:24+00:00",
+        "categories": [
+            "cs.CV",
+            "eess.SP"
+        ],
+        "authors": [
+            "Changxu Zhang",
+            "Zhaoze Wang",
+            "Tai Fei",
+            "Christopher Grimm",
+            "Yi Jin",
+            "Claas Tebruegge",
+            "Ernst Warsitz",
+            "Markus Gardill"
+        ],
+        "tldr": "This paper introduces a Transformer Decoder-based architecture for 3D radar object detection, utilizing Pyramid Token Fusion to bridge multi-scale features and achieving state-of-the-art performance on the RADDet dataset without relying on NMS.",
+        "tldr_zh": "本文提出了一种基于Transformer Decoder的3D雷达目标检测架构，利用金字塔令牌融合（Pyramid Token Fusion）桥接多尺度特征，并在RADDet数据集上实现了最先进的性能，且不依赖于非极大值抑制（NMS）。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    }
+]
