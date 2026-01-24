@@ -1,0 +1,29 @@
+[
+    {
+        "title": "CamPilot: Improving Camera Control in Video Diffusion Model with Efficient Camera Reward Feedback",
+        "summary": "Recent advances in camera-controlled video diffusion models have significantly improved video-camera alignment. However, the camera controllability still remains limited. In this work, we build upon Reward Feedback Learning and aim to further improve camera controllability. However, directly borrowing existing ReFL approaches faces several challenges. First, current reward models lack the capacity to assess video-camera alignment. Second, decoding latent into RGB videos for reward computation introduces substantial computational overhead. Third, 3D geometric information is typically neglected during video decoding. To address these limitations, we introduce an efficient camera-aware 3D decoder that decodes video latent into 3D representations for reward quantization. Specifically, video latent along with the camera pose are decoded into 3D Gaussians. In this process, the camera pose not only acts as input, but also serves as a projection parameter. Misalignment between the video latent and camera pose will cause geometric distortions in the 3D structure, resulting in blurry renderings. Based on this property, we explicitly optimize pixel-level consistency between the rendered novel views and ground-truth ones as reward. To accommodate the stochastic nature, we further introduce a visibility term that selectively supervises only deterministic regions derived via geometric warping. Extensive experiments conducted on RealEstate10K and WorldScore benchmarks demonstrate the effectiveness of our proposed method. Project page: \\href{https://a-bigbao.github.io/CamPilot/}{CamPilot Page}.",
+        "url": "http://arxiv.org/abs/2601.16214v1",
+        "published_date": "2026-01-22T18:59:56+00:00",
+        "updated_date": "2026-01-22T18:59:56+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Wenhang Ge",
+            "Guibao Shen",
+            "Jiawei Feng",
+            "Luozhou Wang",
+            "Hao Lu",
+            "Xingye Tian",
+            "Xin Tao",
+            "Ying-Cong Chen"
+        ],
+        "tldr": "The paper introduces CamPilot, a method for improving camera control in video diffusion models by using an efficient camera-aware 3D decoder and reward feedback learning based on pixel-level consistency between rendered novel views and ground truth. This approach addresses limitations of existing reward models and computational overhead.",
+        "tldr_zh": "本文介绍了 CamPilot，一种通过使用高效的相机感知 3D 解码器和基于渲染的新视角和真实视角之间像素级一致性的奖励反馈学习来改进视频扩散模型中相机控制的方法。这种方法解决了现有奖励模型的局限性和计算开销。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    }
+]
