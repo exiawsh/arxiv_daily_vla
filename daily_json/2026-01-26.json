@@ -1,0 +1,79 @@
+[
+    {
+        "title": "SPACE-CLIP: Spatial Perception via Adaptive CLIP Embeddings for Monocular Depth Estimation",
+        "summary": "Contrastive Language-Image Pre-training (CLIP) has accomplished extraordinary success for semantic understanding but inherently struggles to perceive geometric structure. Existing methods attempt to bridge this gap by querying CLIP with textual prompts, a process that is often indirect and inefficient. This paper introduces a fundamentally different approach using a dual-pathway decoder. We present SPACE-CLIP, an architecture that unlocks and interprets latent geometric knowledge directly from a frozen CLIP vision encoder, completely bypassing the text encoder and its associated textual prompts. A semantic pathway interprets high-level features, dynamically conditioned on global context using feature-wise linear modulation (FiLM). In addition, a structural pathway extracts fine-grained spatial details from early layers. These complementary streams are hierarchically fused, enabling a robust synthesis of semantic context and precise geometry. Extensive experiments on the KITTI benchmark show that SPACE-CLIP dramatically outperforms previous CLIP-based methods. Our ablation studies validate that the synergistic fusion of our dual pathways is critical to this success. SPACE-CLIP offers a new, efficient, and architecturally elegant blueprint for repurposing large-scale vision models. The proposed method is not just a standalone depth estimator, but a readily integrable spatial perception module for the next generation of embodied AI systems, such as vision-language-action (VLA) models. Our model is available at https://github.com/taewan2002/space-clip",
+        "url": "http://arxiv.org/abs/2601.17657v1",
+        "published_date": "2026-01-25T02:32:01+00:00",
+        "updated_date": "2026-01-25T02:32:01+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Taewan Cho",
+            "Taeryang Kim",
+            "Andrew Jaeyong Choi"
+        ],
+        "tldr": "The paper presents SPACE-CLIP, a novel monocular depth estimation architecture that directly extracts geometric knowledge from a frozen CLIP vision encoder using a dual-pathway decoder, achieving state-of-the-art performance on KITTI.",
+        "tldr_zh": "该论文提出了SPACE-CLIP，一种新颖的单目深度估计架构，它使用双路径解码器直接从冻结的CLIP视觉编码器中提取几何知识，并在KITTI上实现了最先进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Masked Depth Modeling for Spatial Perception",
+        "summary": "Spatial visual perception is a fundamental requirement in physical-world applications like autonomous driving and robotic manipulation, driven by the need to interact with 3D environments. Capturing pixel-aligned metric depth using RGB-D cameras would be the most viable way, yet it usually faces obstacles posed by hardware limitations and challenging imaging conditions, especially in the presence of specular or texture-less surfaces. In this work, we argue that the inaccuracies from depth sensors can be viewed as \"masked\" signals that inherently reflect underlying geometric ambiguities. Building on this motivation, we present LingBot-Depth, a depth completion model which leverages visual context to refine depth maps through masked depth modeling and incorporates an automated data curation pipeline for scalable training. It is encouraging to see that our model outperforms top-tier RGB-D cameras in terms of both depth precision and pixel coverage. Experimental results on a range of downstream tasks further suggest that LingBot-Depth offers an aligned latent representation across RGB and depth modalities. We release the code, checkpoint, and 3M RGB-depth pairs (including 2M real data and 1M simulated data) to the community of spatial perception.",
+        "url": "http://arxiv.org/abs/2601.17895v1",
+        "published_date": "2026-01-25T16:13:49+00:00",
+        "updated_date": "2026-01-25T16:13:49+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Bin Tan",
+            "Changjiang Sun",
+            "Xiage Qin",
+            "Hanat Adai",
+            "Zelin Fu",
+            "Tianxiang Zhou",
+            "Han Zhang",
+            "Yinghao Xu",
+            "Xing Zhu",
+            "Yujun Shen",
+            "Nan Xue"
+        ],
+        "tldr": "This paper introduces LingBot-Depth, a depth completion model that uses masked depth modeling and a data curation pipeline to improve depth map accuracy, even surpassing high-end RGB-D cameras. They also release code, checkpoints, and a large RGB-depth dataset.",
+        "tldr_zh": "本文介绍了LingBot-Depth，一种深度补全模型，它使用掩码深度建模和数据整理流程来提高深度图的准确性，甚至超过了高端RGB-D相机。他们还发布了代码、检查点和一个大型RGB-深度数据集。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "MV-SAM: Multi-view Promptable Segmentation using Pointmap Guidance",
+        "summary": "Promptable segmentation has emerged as a powerful paradigm in computer vision, enabling users to guide models in parsing complex scenes with prompts such as clicks, boxes, or textual cues. Recent advances, exemplified by the Segment Anything Model (SAM), have extended this paradigm to videos and multi-view images. However, the lack of 3D awareness often leads to inconsistent results, necessitating costly per-scene optimization to enforce 3D consistency. In this work, we introduce MV-SAM, a framework for multi-view segmentation that achieves 3D consistency using pointmaps -- 3D points reconstructed from unposed images by recent visual geometry models. Leveraging the pixel-point one-to-one correspondence of pointmaps, MV-SAM lifts images and prompts into 3D space, eliminating the need for explicit 3D networks or annotated 3D data. Specifically, MV-SAM extends SAM by lifting image embeddings from its pretrained encoder into 3D point embeddings, which are decoded by a transformer using cross-attention with 3D prompt embeddings. This design aligns 2D interactions with 3D geometry, enabling the model to implicitly learn consistent masks across views through 3D positional embeddings. Trained on the SA-1B dataset, our method generalizes well across domains, outperforming SAM2-Video and achieving comparable performance with per-scene optimization baselines on NVOS, SPIn-NeRF, ScanNet++, uCo3D, and DL3DV benchmarks. Code will be released.",
+        "url": "http://arxiv.org/abs/2601.17866v1",
+        "published_date": "2026-01-25T15:00:37+00:00",
+        "updated_date": "2026-01-25T15:00:37+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yoonwoo Jeong",
+            "Cheng Sun",
+            "Yu-Chiang Frank Wang",
+            "Minsu Cho",
+            "Jaesung Choe"
+        ],
+        "tldr": "MV-SAM enhances the Segment Anything Model for multi-view images by leveraging pointmaps to enforce 3D consistency without explicit 3D networks, achieving state-of-the-art performance on several benchmarks.",
+        "tldr_zh": "MV-SAM通过利用点云图来增强Segment Anything模型在多视角图像上的性能，强制实现3D一致性，无需显式的3D网络，并在多个基准测试中实现了最先进的性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    }
+]
