@@ -1,0 +1,211 @@
+[
+    {
+        "title": "MetricAnything: Scaling Metric Depth Pretraining with Noisy Heterogeneous Sources",
+        "summary": "Scaling has powered recent advances in vision foundation models, yet extending this paradigm to metric depth estimation remains challenging due to heterogeneous sensor noise, camera-dependent biases, and metric ambiguity in noisy cross-source 3D data. We introduce Metric Anything, a simple and scalable pretraining framework that learns metric depth from noisy, diverse 3D sources without manually engineered prompts, camera-specific modeling, or task-specific architectures. Central to our approach is the Sparse Metric Prompt, created by randomly masking depth maps, which serves as a universal interface that decouples spatial reasoning from sensor and camera biases. Using about 20M image-depth pairs spanning reconstructed, captured, and rendered 3D data across 10000 camera models, we demonstrate-for the first time-a clear scaling trend in the metric depth track. The pretrained model excels at prompt-driven tasks such as depth completion, super-resolution and Radar-camera fusion, while its distilled prompt-free student achieves state-of-the-art results on monocular depth estimation, camera intrinsics recovery, single/multi-view metric 3D reconstruction, and VLA planning. We also show that using pretrained ViT of Metric Anything as a visual encoder significantly boosts Multimodal Large Language Model capabilities in spatial intelligence. These results show that metric depth estimation can benefit from the same scaling laws that drive modern foundation models, establishing a new path toward scalable and efficient real-world metric perception. We open-source MetricAnything at http://metric-anything.github.io/metric-anything-io/ to support community research.",
+        "url": "http://arxiv.org/abs/2601.22054v1",
+        "published_date": "2026-01-29T17:52:41+00:00",
+        "updated_date": "2026-01-29T17:52:41+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Baorui Ma",
+            "Jiahui Yang",
+            "Donglin Di",
+            "Xuancheng Zhang",
+            "Jianxun Cui",
+            "Hao Li",
+            "Yan Xie",
+            "Wei Chen"
+        ],
+        "tldr": "The paper introduces MetricAnything, a pretraining framework for metric depth estimation using noisy, diverse 3D data. It demonstrates a scaling trend in metric depth estimation and improves performance across various tasks, including monocular depth estimation, 3D reconstruction, and VLA planning.",
+        "tldr_zh": "该论文介绍了MetricAnything，一个使用嘈杂、多样化的3D数据进行度量深度估计的预训练框架。它展示了度量深度估计中的一种扩展趋势，并提高了各种任务的性能，包括单目深度估计、3D重建和VLA规划。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Drive-KD: Multi-Teacher Distillation for VLMs in Autonomous Driving",
+        "summary": "Autonomous driving is an important and safety-critical task, and recent advances in LLMs/VLMs have opened new possibilities for reasoning and planning in this domain. However, large models demand substantial GPU memory and exhibit high inference latency, while conventional supervised fine-tuning (SFT) often struggles to bridge the capability gaps of small models. To address these limitations, we propose Drive-KD, a framework that decomposes autonomous driving into a \"perception-reasoning-planning\" triad and transfers these capabilities via knowledge distillation. We identify layer-specific attention as the distillation signal to construct capability-specific single-teacher models that outperform baselines. Moreover, we unify these single-teacher settings into a multi-teacher distillation framework and introduce asymmetric gradient projection to mitigate cross-capability gradient conflicts. Extensive evaluations validate the generalization of our method across diverse model families and scales. Experiments show that our distilled InternVL3-1B model, with ~42 times less GPU memory and ~11.4 times higher throughput, achieves better overall performance than the pretrained 78B model from the same family on DriveBench, and surpasses GPT-5.1 on the planning dimension, providing insights toward efficient autonomous driving VLMs.",
+        "url": "http://arxiv.org/abs/2601.21288v1",
+        "published_date": "2026-01-29T05:41:24+00:00",
+        "updated_date": "2026-01-29T05:41:24+00:00",
+        "categories": [
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Weitong Lian",
+            "Zecong Tang",
+            "Haoran Li",
+            "Tianjian Gao",
+            "Yifei Wang",
+            "Zixu Wang",
+            "Lingyi Meng",
+            "Tengju Ru",
+            "Zhejun Cui",
+            "Yichen Zhu",
+            "Hangshuo Cao",
+            "Qi Kang",
+            "Tianxing Chen",
+            "Yusen Qin",
+            "Kaixuan Wang",
+            "Yu Zhang"
+        ],
+        "tldr": "Drive-KD proposes a multi-teacher knowledge distillation framework for VLMs in autonomous driving, achieving state-of-the-art performance with significantly reduced GPU memory and increased throughput compared to larger models, even surpassing GPT-5.1 in planning.",
+        "tldr_zh": "Drive-KD 提出了一个用于自动驾驶中 VLMs 的多教师知识蒸馏框架，与更大的模型相比，它以显著减少的 GPU 内存和更高的吞吐量实现了最先进的性能，甚至在规划方面超过了 GPT-5.1。",
+        "relevance_score": 10,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Drive-JEPA: Video JEPA Meets Multimodal Trajectory Distillation for End-to-End Driving",
+        "summary": "End-to-end autonomous driving increasingly leverages self-supervised video pretraining to learn transferable planning representations. However, pretraining video world models for scene understanding has so far brought only limited improvements. This limitation is compounded by the inherent ambiguity of driving: each scene typically provides only a single human trajectory, making it difficult to learn multimodal behaviors. In this work, we propose Drive-JEPA, a framework that integrates Video Joint-Embedding Predictive Architecture (V-JEPA) with multimodal trajectory distillation for end-to-end driving. First, we adapt V-JEPA for end-to-end driving, pretraining a ViT encoder on large-scale driving videos to produce predictive representations aligned with trajectory planning. Second, we introduce a proposal-centric planner that distills diverse simulator-generated trajectories alongside human trajectories, with a momentum-aware selection mechanism to promote stable and safe behavior. When evaluated on NAVSIM, the V-JEPA representation combined with a simple transformer-based decoder outperforms prior methods by 3 PDMS in the perception-free setting. The complete Drive-JEPA framework achieves 93.3 PDMS on v1 and 87.8 EPDMS on v2, setting a new state-of-the-art.",
+        "url": "http://arxiv.org/abs/2601.22032v1",
+        "published_date": "2026-01-29T17:39:20+00:00",
+        "updated_date": "2026-01-29T17:39:20+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Linhan Wang",
+            "Zichong Yang",
+            "Chen Bai",
+            "Guoxiang Zhang",
+            "Xiaotong Liu",
+            "Xiaoyin Zheng",
+            "Xiao-Xiao Long",
+            "Chang-Tien Lu",
+            "Cheng Lu"
+        ],
+        "tldr": "The paper introduces Drive-JEPA, a framework combining Video Joint-Embedding Predictive Architecture (V-JEPA) with multimodal trajectory distillation for end-to-end autonomous driving, achieving state-of-the-art performance on NAVSIM.",
+        "tldr_zh": "该论文介绍了Drive-JEPA，一个结合视频联合嵌入预测架构（V-JEPA）与多模态轨迹蒸馏的端到端自动驾驶框架，在NAVSIM上实现了最先进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Causal World Modeling for Robot Control",
+        "summary": "This work highlights that video world modeling, alongside vision-language pre-training, establishes a fresh and independent foundation for robot learning. Intuitively, video world models provide the ability to imagine the near future by understanding the causality between actions and visual dynamics. Inspired by this, we introduce LingBot-VA, an autoregressive diffusion framework that learns frame prediction and policy execution simultaneously. Our model features three carefully crafted designs: (1) a shared latent space, integrating vision and action tokens, driven by a Mixture-of-Transformers (MoT) architecture, (2) a closed-loop rollout mechanism, allowing for ongoing acquisition of environmental feedback with ground-truth observations, (3) an asynchronous inference pipeline, parallelizing action prediction and motor execution to support efficient control. We evaluate our model on both simulation benchmarks and real-world scenarios, where it shows significant promise in long-horizon manipulation, data efficiency in post-training, and strong generalizability to novel configurations. The code and model are made publicly available to facilitate the community.",
+        "url": "http://arxiv.org/abs/2601.21998v1",
+        "published_date": "2026-01-29T17:07:43+00:00",
+        "updated_date": "2026-01-29T17:07:43+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Lin Li",
+            "Qihang Zhang",
+            "Yiming Luo",
+            "Shuai Yang",
+            "Ruilin Wang",
+            "Fei Han",
+            "Mingrui Yu",
+            "Zelin Gao",
+            "Nan Xue",
+            "Xing Zhu",
+            "Yujun Shen",
+            "Yinghao Xu"
+        ],
+        "tldr": "The paper introduces LingBot-VA, an autoregressive diffusion model for robot control that learns frame prediction and policy execution simultaneously, demonstrating strong performance in long-horizon manipulation and generalization.",
+        "tldr_zh": "该论文介绍了LingBot-VA，一个用于机器人控制的自回归扩散模型，可以同时学习帧预测和策略执行，并在长时程操作和泛化方面表现出强大的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "4D-CAAL: 4D Radar-Camera Calibration and Auto-Labeling for Autonomous Driving",
+        "summary": "4D radar has emerged as a critical sensor for autonomous driving, primarily due to its enhanced capabilities in elevation measurement and higher resolution compared to traditional 3D radar. Effective integration of 4D radar with cameras requires accurate extrinsic calibration, and the development of radar-based perception algorithms demands large-scale annotated datasets. However, existing calibration methods often employ separate targets optimized for either visual or radar modalities, complicating correspondence establishment. Furthermore, manually labeling sparse radar data is labor-intensive and unreliable. To address these challenges, we propose 4D-CAAL, a unified framework for 4D radar-camera calibration and auto-labeling. Our approach introduces a novel dual-purpose calibration target design, integrating a checkerboard pattern on the front surface for camera detection and a corner reflector at the center of the back surface for radar detection. We develop a robust correspondence matching algorithm that aligns the checkerboard center with the strongest radar reflection point, enabling accurate extrinsic calibration. Subsequently, we present an auto-labeling pipeline that leverages the calibrated sensor relationship to transfer annotations from camera-based segmentations to radar point clouds through geometric projection and multi-feature optimization. Extensive experiments demonstrate that our method achieves high calibration accuracy while significantly reducing manual annotation effort, thereby accelerating the development of robust multi-modal perception systems for autonomous driving.",
+        "url": "http://arxiv.org/abs/2601.21454v1",
+        "published_date": "2026-01-29T09:30:41+00:00",
+        "updated_date": "2026-01-29T09:30:41+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Shanliang Yao",
+            "Zhuoxiao Li",
+            "Runwei Guan",
+            "Kebin Cao",
+            "Meng Xia",
+            "Fuping Hu",
+            "Sen Xu",
+            "Yong Yue",
+            "Xiaohui Zhu",
+            "Weiping Ding",
+            "Ryan Wen Liu"
+        ],
+        "tldr": "This paper introduces 4D-CAAL, a unified framework for 4D radar-camera calibration and auto-labeling using a novel dual-purpose target, aimed at accelerating the development of multi-modal perception systems for autonomous driving.",
+        "tldr_zh": "本文介绍了4D-CAAL，一个统一的4D雷达相机校准和自动标注框架，它使用一种新型的双用途目标，旨在加速自动驾驶多模态感知系统的开发。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Thinker: A vision-language foundation model for embodied intelligence",
+        "summary": "When large vision-language models are applied to the field of robotics, they encounter problems that are simple for humans yet error-prone for models. Such issues include confusion between third-person and first-person perspectives and a tendency to overlook information in video endings during temporal reasoning. To address these challenges, we propose Thinker, a large vision-language foundation model designed for embodied intelligence. We tackle the aforementioned issues from two perspectives. Firstly, we construct a large-scale dataset tailored for robotic perception and reasoning, encompassing ego-view videos, visual grounding, spatial understanding, and chain-of-thought data. Secondly, we introduce a simple yet effective approach that substantially enhances the model's capacity for video comprehension by jointly incorporating key frames and full video sequences as inputs. Our model achieves state-of-the-art results on two of the most commonly used benchmark datasets in the field of task planning.",
+        "url": "http://arxiv.org/abs/2601.21199v1",
+        "published_date": "2026-01-29T02:52:08+00:00",
+        "updated_date": "2026-01-29T02:52:08+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Baiyu Pan",
+            "Daqin Luo",
+            "Junpeng Yang",
+            "Jiyuan Wang",
+            "Yixuan Zhang",
+            "Hailin Shi",
+            "Jichao Jiao"
+        ],
+        "tldr": "The paper introduces Thinker, a vision-language foundation model designed for embodied intelligence, which addresses issues of perspective confusion and temporal reasoning in robotics by using a large-scale robotic perception dataset and a novel video comprehension approach. The model achieves SOTA results on task planning benchmarks.",
+        "tldr_zh": "该论文介绍了Thinker，一个为具身智能设计的视觉-语言基础模型。它通过使用大规模机器人感知数据集和一种新的视频理解方法，解决了机器人学中透视混淆和时间推理问题。该模型在任务规划基准测试中取得了最先进的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Open-Vocabulary Functional 3D Human-Scene Interaction Generation",
+        "summary": "Generating 3D humans that functionally interact with 3D scenes remains an open problem with applications in embodied AI, robotics, and interactive content creation. The key challenge involves reasoning about both the semantics of functional elements in 3D scenes and the 3D human poses required to achieve functionality-aware interaction. Unfortunately, existing methods typically lack explicit reasoning over object functionality and the corresponding human-scene contact, resulting in implausible or functionally incorrect interactions. In this work, we propose FunHSI, a training-free, functionality-driven framework that enables functionally correct human-scene interactions from open-vocabulary task prompts. Given a task prompt, FunHSI performs functionality-aware contact reasoning to identify functional scene elements, reconstruct their 3D geometry, and model high-level interactions via a contact graph. We then leverage vision-language models to synthesize a human performing the task in the image and estimate proposed 3D body and hand poses. Finally, the proposed 3D body configuration is refined via stage-wise optimization to ensure physical plausibility and functional correctness. In contrast to existing methods, FunHSI not only synthesizes more plausible general 3D interactions, such as \"sitting on a sofa'', while supporting fine-grained functional human-scene interactions, e.g., \"increasing the room temperature''. Extensive experiments demonstrate that FunHSI consistently generates functionally correct and physically plausible human-scene interactions across diverse indoor and outdoor scenes.",
+        "url": "http://arxiv.org/abs/2601.20835v1",
+        "published_date": "2026-01-28T18:34:25+00:00",
+        "updated_date": "2026-01-28T18:34:25+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Jie Liu",
+            "Yu Sun",
+            "Alpar Cseke",
+            "Yao Feng",
+            "Nicolas Heron",
+            "Michael J. Black",
+            "Yan Zhang"
+        ],
+        "tldr": "This paper introduces FunHSI, a training-free framework for generating plausible 3D human-scene interactions from open-vocabulary task prompts, addressing the challenge of functionally correct interactions in embodied AI and robotics.",
+        "tldr_zh": "本文介绍FunHSI，一个无需训练的框架，用于从开放词汇任务提示中生成合理的3D人-场景互动，旨在解决具身人工智能和机器人技术中功能正确的互动难题。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    }
+]
