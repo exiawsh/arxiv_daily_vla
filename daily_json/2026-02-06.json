@@ -1,0 +1,399 @@
+[
+    {
+        "title": "Sparse Video Generation Propels Real-World Beyond-the-View Vision-Language Navigation",
+        "summary": "Why must vision-language navigation be bound to detailed and verbose language instructions? While such details ease decision-making, they fundamentally contradict the goal for navigation in the real-world. Ideally, agents should possess the autonomy to navigate in unknown environments guided solely by simple and high-level intents. Realizing this ambition introduces a formidable challenge: Beyond-the-View Navigation (BVN), where agents must locate distant, unseen targets without dense and step-by-step guidance. Existing large language model (LLM)-based methods, though adept at following dense instructions, often suffer from short-sighted behaviors due to their reliance on short-horimzon supervision. Simply extending the supervision horizon, however, destabilizes LLM training. In this work, we identify that video generation models inherently benefit from long-horizon supervision to align with language instructions, rendering them uniquely suitable for BVN tasks. Capitalizing on this insight, we propose introducing the video generation model into this field for the first time. Yet, the prohibitive latency for generating videos spanning tens of seconds makes real-world deployment impractical. To bridge this gap, we propose SparseVideoNav, achieving sub-second trajectory inference guided by a generated sparse future spanning a 20-second horizon. This yields a remarkable 27x speed-up compared to the unoptimized counterpart. Extensive real-world zero-shot experiments demonstrate that SparseVideoNav achieves 2.5x the success rate of state-of-the-art LLM baselines on BVN tasks and marks the first realization of such capability in challenging night scenes.",
+        "url": "http://arxiv.org/abs/2602.05827v1",
+        "published_date": "2026-02-05T16:16:13+00:00",
+        "updated_date": "2026-02-05T16:16:13+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Hai Zhang",
+            "Siqi Liang",
+            "Li Chen",
+            "Yuxian Li",
+            "Yukuan Xu",
+            "Yichao Zhong",
+            "Fu Zhang",
+            "Hongyang Li"
+        ],
+        "tldr": "This paper introduces SparseVideoNav, a novel approach for Beyond-the-View Navigation (BVN) that uses a video generation model to guide an agent in real-world environments with only high-level instructions, achieving significant speedup and improved success rates compared to LLM baselines.",
+        "tldr_zh": "该论文介绍了SparseVideoNav，一种新颖的超视距导航(BVN)方法，它使用视频生成模型来引导智能体在真实环境中仅通过高级指令进行导航，与LLM基线相比，实现了显著的加速和更高的成功率。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "VISTA: Enhancing Visual Conditioning via Track-Following Preference Optimization in Vision-Language-Action Models",
+        "summary": "Vision-Language-Action (VLA) models have demonstrated strong performance across a wide range of robotic manipulation tasks. Despite the success, extending large pretrained Vision-Language Models (VLMs) to the action space can induce vision-action misalignment, where action predictions exhibit weak dependence on the current visual state, leading to unreliable action outputs. In this work, we study VLA models through the lens of visual conditioning and empirically show that successful rollouts consistently exhibit stronger visual dependence than failed ones. Motivated by this observation, we propose a training framework that explicitly strengthens visual conditioning in VLA models. Our approach first aligns action prediction with visual input via preference optimization on a track-following surrogate task, and then transfers the enhanced alignment to instruction-following task through latent-space distillation during supervised finetuning. Without introducing architectural modifications or additional data collection, our method improves both visual conditioning and task performance for discrete OpenVLA, and further yields consistent gains when extended to the continuous OpenVLA-OFT setting. Project website: https://vista-vla.github.io/ .",
+        "url": "http://arxiv.org/abs/2602.05049v1",
+        "published_date": "2026-02-04T20:59:29+00:00",
+        "updated_date": "2026-02-04T20:59:29+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG",
+            "cs.RO"
+        ],
+        "authors": [
+            "Yiye Chen",
+            "Yanan Jian",
+            "Xiaoyi Dong",
+            "Shuxin Cao",
+            "Jing Wu",
+            "Patricio Vela",
+            "Benjamin E. Lundell",
+            "Dongdong Chen"
+        ],
+        "tldr": "The paper introduces VISTA, a training framework that enhances visual conditioning in Vision-Language-Action (VLA) models by using track-following preference optimization and latent-space distillation, leading to improved task performance without architectural changes or data collection.",
+        "tldr_zh": "该论文介绍了VISTA，一个通过使用轨迹跟踪偏好优化和潜在空间蒸馏来增强视觉-语言-动作（VLA）模型中视觉条件反射的训练框架，从而在不进行架构更改或数据收集的情况下提高任务性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Allocentric Perceiver: Disentangling Allocentric Reasoning from Egocentric Visual Priors via Frame Instantiation",
+        "summary": "With the rising need for spatially grounded tasks such as Vision-Language Navigation/Action, allocentric perception capabilities in Vision-Language Models (VLMs) are receiving growing focus. However, VLMs remain brittle on allocentric spatial queries that require explicit perspective shifts, where the answer depends on reasoning in a target-centric frame rather than the observed camera view. Thus, we introduce Allocentric Perceiver, a training-free strategy that recovers metric 3D states from one or more images with off-the-shelf geometric experts, and then instantiates a query-conditioned allocentric reference frame aligned with the instruction's semantic intent. By deterministically transforming reconstructed geometry into the target frame and prompting the backbone VLM with structured, geometry-grounded representations, Allocentric Perceriver offloads mental rotation from implicit reasoning to explicit computation. We evaluate Allocentric Perciver across multiple backbone families on spatial reasoning benchmarks, observing consistent and substantial gains ($\\sim$10%) on allocentric tasks while maintaining strong egocentric performance, and surpassing both spatial-perception-finetuned models and state-of-the-art open-source and proprietary models.",
+        "url": "http://arxiv.org/abs/2602.05789v1",
+        "published_date": "2026-02-05T15:45:39+00:00",
+        "updated_date": "2026-02-05T15:45:39+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Hengyi Wang",
+            "Ruiqiang Zhang",
+            "Chang Liu",
+            "Guanjie Wang",
+            "Zehua Ma",
+            "Han Fang",
+            "Weiming Zhang"
+        ],
+        "tldr": "The paper introduces Allocentric Perceiver, a training-free method that uses geometric experts to reconstruct 3D states from images and aligns them with semantic intents for improved allocentric spatial reasoning in VLMs, achieving significant gains on relevant benchmarks.",
+        "tldr_zh": "该论文介绍了Allocentric Perceiver，一种无需训练的方法，它利用几何专家从图像中重建3D状态，并将其与语义意图对齐，从而提高VLM中的本位空间推理能力，并在相关基准测试中取得了显著进展。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Depth as Prior Knowledge for Object Detection",
+        "summary": "Detecting small and distant objects remains challenging for object detectors due to scale variation, low resolution, and background clutter. Safety-critical applications require reliable detection of these objects for safe planning. Depth information can improve detection, but existing approaches require complex, model-specific architectural modifications. We provide a theoretical analysis followed by an empirical investigation of the depth-detection relationship. Together, they explain how depth causes systematic performance degradation and why depth-informed supervision mitigates it. We introduce DepthPrior, a framework that uses depth as prior knowledge rather than as a fused feature, providing comparable benefits without modifying detector architectures. DepthPrior consists of Depth-Based Loss Weighting (DLW) and Depth-Based Loss Stratification (DLS) during training, and Depth-Aware Confidence Thresholding (DCT) during inference. The only overhead is the initial cost of depth estimation. Experiments across four benchmarks (KITTI, MS COCO, VisDrone, SUN RGB-D) and two detectors (YOLOv11, EfficientDet) demonstrate the effectiveness of DepthPrior, achieving up to +9% mAP$_S$ and +7% mAR$_S$ for small objects, with inference recovery rates as high as 95:1 (true vs. false detections). DepthPrior offers these benefits without additional sensors, architectural changes, or performance costs. Code is available at https://github.com/mos-ks/DepthPrior.",
+        "url": "http://arxiv.org/abs/2602.05730v1",
+        "published_date": "2026-02-05T14:52:39+00:00",
+        "updated_date": "2026-02-05T14:52:39+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Moussa Kassem Sbeyti",
+            "Nadja Klein"
+        ],
+        "tldr": "The paper introduces DepthPrior, a depth-aware training and inference framework that improves small object detection without modifying detector architectures, achieving significant performance gains across multiple datasets and detectors by using depth as prior knowledge.",
+        "tldr_zh": "该论文介绍了DepthPrior，一种深度感知的训练和推理框架，通过将深度作为先验知识，在不修改检测器架构的情况下提高了小目标检测性能，并在多个数据集和检测器上实现了显著的性能提升。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "ROMAN: Reward-Orchestrated Multi-Head Attention Network for Autonomous Driving System Testing",
+        "summary": "Automated Driving System (ADS) acts as the brain of autonomous vehicles, responsible for their safety and efficiency. Safe deployment requires thorough testing in diverse real-world scenarios and compliance with traffic laws like speed limits, signal obedience, and right-of-way rules. Violations like running red lights or speeding pose severe safety risks. However, current testing approaches face significant challenges: limited ability to generate complex and high-risk law-breaking scenarios, and failing to account for complex interactions involving multiple vehicles and critical situations. To address these challenges, we propose ROMAN, a novel scenario generation approach for ADS testing that combines a multi-head attention network with a traffic law weighting mechanism. ROMAN is designed to generate high-risk violation scenarios to enable more thorough and targeted ADS evaluation. The multi-head attention mechanism models interactions among vehicles, traffic signals, and other factors. The traffic law weighting mechanism implements a workflow that leverages an LLM-based risk weighting module to evaluate violations based on the two dimensions of severity and occurrence. We have evaluated ROMAN by testing the Baidu Apollo ADS within the CARLA simulation platform and conducting extensive experiments to measure its performance. Experimental results demonstrate that ROMAN surpassed state-of-the-art tools ABLE and LawBreaker by achieving 7.91% higher average violation count than ABLE and 55.96% higher than LawBreaker, while also maintaining greater scenario diversity. In addition, only ROMAN successfully generated violation scenarios for every clause of the input traffic laws, enabling it to identify more high-risk violations than existing approaches.",
+        "url": "http://arxiv.org/abs/2602.05629v1",
+        "published_date": "2026-02-05T13:09:58+00:00",
+        "updated_date": "2026-02-05T13:09:58+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jianlei Chi",
+            "Yuzhen Wu",
+            "Jiaxuan Hou",
+            "Xiaodong Zhang",
+            "Ming Fan",
+            "Suhui Sun",
+            "Weijun Dai",
+            "Bo Li",
+            "Jianguo Sun",
+            "Jun Sun"
+        ],
+        "tldr": "The paper introduces ROMAN, a novel scenario generation approach for Autonomous Driving System (ADS) testing using a multi-head attention network and an LLM-based risk weighting module to generate complex, high-risk traffic law violation scenarios, outperforming existing methods.",
+        "tldr_zh": "该论文介绍了ROMAN，一种新颖的自动驾驶系统（ADS）测试场景生成方法，它使用多头注意力网络和基于LLM的风险加权模块来生成复杂、高风险的交通违法场景，其性能优于现有方法。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Unified Sensor Simulation for Autonomous Driving",
+        "summary": "In this work, we introduce \\textbf{XSIM}, a sensor simulation framework for autonomous driving. XSIM extends 3DGUT splatting with a generalized rolling-shutter modeling tailored for autonomous driving applications. Our framework provides a unified and flexible formulation for appearance and geometric sensor modeling, enabling rendering of complex sensor distortions in dynamic environments. We identify spherical cameras, such as LiDARs, as a critical edge case for existing 3DGUT splatting due to cyclic projection and time discontinuities at azimuth boundaries leading to incorrect particle projection. To address this issue, we propose a phase modeling mechanism that explicitly accounts temporal and shape discontinuities of Gaussians projected by the Unscented Transform at azimuth borders. In addition, we introduce an extended 3D Gaussian representation that incorporates two distinct opacity parameters to resolve mismatches between geometry and color distributions. As a result, our framework provides enhanced scene representations with improved geometric consistency and photorealistic appearance. We evaluate our framework extensively on multiple autonomous driving datasets, including Waymo Open Dataset, Argoverse 2, and PandaSet. Our framework consistently outperforms strong recent baselines and achieves state-of-the-art performance across all datasets. The source code is publicly available at \\href{https://github.com/whesense/XSIM}{https://github.com/whesense/XSIM}.",
+        "url": "http://arxiv.org/abs/2602.05617v1",
+        "published_date": "2026-02-05T12:52:46+00:00",
+        "updated_date": "2026-02-05T12:52:46+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.GR"
+        ],
+        "authors": [
+            "Nikolay Patakin",
+            "Arsenii Shirokov",
+            "Anton Konushin",
+            "Dmitry Senushkin"
+        ],
+        "tldr": "The paper introduces XSIM, a novel sensor simulation framework for autonomous driving that addresses limitations of existing methods by using a generalized rolling-shutter model and a phase modeling mechanism, achieving state-of-the-art performance on multiple datasets.",
+        "tldr_zh": "本文介绍了一个名为XSIM的新型自动驾驶传感器仿真框架。该框架通过使用广义卷帘快门模型和相位建模机制解决了现有方法的局限性，并在多个数据集上实现了最先进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Visual Implicit Geometry Transformer for Autonomous Driving",
+        "summary": "We introduce the Visual Implicit Geometry Transformer (ViGT), an autonomous driving geometric model that estimates continuous 3D occupancy fields from surround-view camera rigs. ViGT represents a step towards foundational geometric models for autonomous driving, prioritizing scalability, architectural simplicity, and generalization across diverse sensor configurations. Our approach achieves this through a calibration-free architecture, enabling a single model to adapt to different sensor setups. Unlike general-purpose geometric foundational models that focus on pixel-aligned predictions, ViGT estimates a continuous 3D occupancy field in a birds-eye-view (BEV) addressing domain-specific requirements. ViGT naturally infers geometry from multiple camera views into a single metric coordinate frame, providing a common representation for multiple geometric tasks. Unlike most existing occupancy models, we adopt a self-supervised training procedure that leverages synchronized image-LiDAR pairs, eliminating the need for costly manual annotations. We validate the scalability and generalizability of our approach by training our model on a mixture of five large-scale autonomous driving datasets (NuScenes, Waymo, NuPlan, ONCE, and Argoverse) and achieving state-of-the-art performance on the pointmap estimation task, with the best average rank across all evaluated baselines. We further evaluate ViGT on the Occ3D-nuScenes benchmark, where ViGT achieves comparable performance with supervised methods. The source code is publicly available at \\href{https://github.com/whesense/ViGT}{https://github.com/whesense/ViGT}.",
+        "url": "http://arxiv.org/abs/2602.05573v1",
+        "published_date": "2026-02-05T11:54:38+00:00",
+        "updated_date": "2026-02-05T11:54:38+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Arsenii Shirokov",
+            "Mikhail Kuznetsov",
+            "Danila Stepochkin",
+            "Egor Evdokimov",
+            "Daniil Glazkov",
+            "Nikolay Patakin",
+            "Anton Konushin",
+            "Dmitry Senushkin"
+        ],
+        "tldr": "The paper introduces Visual Implicit Geometry Transformer (ViGT), a calibration-free, self-supervised geometric model for autonomous driving that estimates continuous 3D occupancy fields from surround-view cameras and achieves state-of-the-art performance on pointmap estimation using multiple datasets.",
+        "tldr_zh": "该论文介绍了视觉隐式几何变换器 (ViGT)，一种用于自动驾驶的免校准、自监督几何模型，它可以从环视摄像头估计连续的 3D 占用场，并使用多个数据集在点云地图估计方面取得了最先进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "PIRATR: Parametric Object Inference for Robotic Applications with Transformers in 3D Point Clouds",
+        "summary": "We present PIRATR, an end-to-end 3D object detection framework for robotic use cases in point clouds. Extending PI3DETR, our method streamlines parametric 3D object detection by jointly estimating multi-class 6-DoF poses and class-specific parametric attributes directly from occlusion-affected point cloud data. This formulation enables not only geometric localization but also the estimation of task-relevant properties for parametric objects, such as a gripper's opening, where the 3D model is adjusted according to simple, predefined rules. The architecture employs modular, class-specific heads, making it straightforward to extend to novel object types without re-designing the pipeline. We validate PIRATR on an automated forklift platform, focusing on three structurally and functionally diverse categories: crane grippers, loading platforms, and pallets. Trained entirely in a synthetic environment, PIRATR generalizes effectively to real outdoor LiDAR scans, achieving a detection mAP of 0.919 without additional fine-tuning. PIRATR establishes a new paradigm of pose-aware, parameterized perception. This bridges the gap between low-level geometric reasoning and actionable world models, paving the way for scalable, simulation-trained perception systems that can be deployed in dynamic robotic environments. Code available at https://github.com/swingaxe/piratr.",
+        "url": "http://arxiv.org/abs/2602.05557v1",
+        "published_date": "2026-02-05T11:29:09+00:00",
+        "updated_date": "2026-02-05T11:29:09+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Michael Schwingshackl",
+            "Fabio F. Oberweger",
+            "Mario Niedermeyer",
+            "Huemer Johannes",
+            "Markus Murschitz"
+        ],
+        "tldr": "PIRATR is a novel end-to-end 3D object detection framework using transformers that jointly estimates 6-DoF poses and class-specific parametric attributes from point clouds, achieving high accuracy on real-world robotic data after synthetic training.",
+        "tldr_zh": "PIRATR是一个新颖的端到端3D物体检测框架，它使用Transformer从点云中联合估计6自由度姿势和特定类别的参数属性，在合成训练后在真实机器人数据上实现了高精度。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "IndustryShapes: An RGB-D Benchmark dataset for 6D object pose estimation of industrial assembly components and tools",
+        "summary": "We introduce IndustryShapes, a new RGB-D benchmark dataset of industrial tools and components, designed for both instance-level and novel object 6D pose estimation approaches. The dataset provides a realistic and application-relevant testbed for benchmarking these methods in the context of industrial robotics bridging the gap between lab-based research and deployment in real-world manufacturing scenarios. Unlike many previous datasets that focus on household or consumer products or use synthetic, clean tabletop datasets, or objects captured solely in controlled lab environments, IndustryShapes introduces five new object types with challenging properties, also captured in realistic industrial assembly settings. The dataset has diverse complexity, from simple to more challenging scenes, with single and multiple objects, including scenes with multiple instances of the same object and it is organized in two parts: the classic set and the extended set. The classic set includes a total of 4,6k images and 6k annotated poses. The extended set introduces additional data modalities to support the evaluation of model-free and sequence-based approaches. To the best of our knowledge, IndustryShapes is the first dataset to offer RGB-D static onboarding sequences. We further evaluate the dataset on a representative set of state-of-the art methods for instance-based and novel object 6D pose estimation, including also object detection, segmentation, showing that there is room for improvement in this domain. The dataset page can be found in https://pose-lab.github.io/IndustryShapes.",
+        "url": "http://arxiv.org/abs/2602.05555v1",
+        "published_date": "2026-02-05T11:28:57+00:00",
+        "updated_date": "2026-02-05T11:28:57+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Panagiotis Sapoutzoglou",
+            "Orestis Vaggelis",
+            "Athina Zacharia",
+            "Evangelos Sartinas",
+            "Maria Pateraki"
+        ],
+        "tldr": "The paper introduces IndustryShapes, a new RGB-D dataset for 6D object pose estimation of industrial components and tools in realistic assembly settings, designed to bridge the gap between lab research and real-world manufacturing.",
+        "tldr_zh": "该论文介绍了 IndustryShapes，一个新的 RGB-D 数据集，用于在真实的装配环境中对工业组件和工具进行 6D 物体姿态估计，旨在弥合实验室研究和实际制造之间的差距。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "VLN-Pilot: Large Vision-Language Model as an Autonomous Indoor Drone Operator",
+        "summary": "This paper introduces VLN-Pilot, a novel framework in which a large Vision-and-Language Model (VLLM) assumes the role of a human pilot for indoor drone navigation. By leveraging the multimodal reasoning abilities of VLLMs, VLN-Pilot interprets free-form natural language instructions and grounds them in visual observations to plan and execute drone trajectories in GPS-denied indoor environments. Unlike traditional rule-based or geometric path-planning approaches, our framework integrates language-driven semantic understanding with visual perception, enabling context-aware, high-level flight behaviors with minimal task-specific engineering. VLN-Pilot supports fully autonomous instruction-following for drones by reasoning about spatial relationships, obstacle avoidance, and dynamic reactivity to unforeseen events. We validate our framework on a custom photorealistic indoor simulation benchmark and demonstrate the ability of the VLLM-driven agent to achieve high success rates on complex instruction-following tasks, including long-horizon navigation with multiple semantic targets. Experimental results highlight the promise of replacing remote drone pilots with a language-guided autonomous agent, opening avenues for scalable, human-friendly control of indoor UAVs in tasks such as inspection, search-and-rescue, and facility monitoring. Our results suggest that VLLM-based pilots may dramatically reduce operator workload while improving safety and mission flexibility in constrained indoor environments.",
+        "url": "http://arxiv.org/abs/2602.05552v1",
+        "published_date": "2026-02-05T11:23:11+00:00",
+        "updated_date": "2026-02-05T11:23:11+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Bessie Dominguez-Dager",
+            "Sergio Suescun-Ferrandiz",
+            "Felix Escalona",
+            "Francisco Gomez-Donoso",
+            "Miguel Cazorla"
+        ],
+        "tldr": "The paper introduces VLN-Pilot, a framework using a large Vision-Language Model (VLLM) to autonomously navigate indoor drones based on natural language instructions, demonstrating its effectiveness in complex simulated environments.",
+        "tldr_zh": "该论文介绍了VLN-Pilot，一个利用大型视觉语言模型（VLLM）的框架，使室内无人机能够根据自然语言指令自主导航，并在复杂的模拟环境中展示了其有效性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "VGGT-Motion: Motion-Aware Calibration-Free Monocular SLAM for Long-Range Consistency",
+        "summary": "Despite recent progress in calibration-free monocular SLAM via 3D vision foundation models, scale drift remains severe on long sequences. Motion-agnostic partitioning breaks contextual coherence and causes zero-motion drift, while conventional geometric alignment is computationally expensive. To address these issues, we propose VGGT-Motion, a calibration-free SLAM system for efficient and robust global consistency over kilometer-scale trajectories. Specifically, we first propose a motion-aware submap construction mechanism that uses optical flow to guide adaptive partitioning, prune static redundancy, and encapsulate turns for stable local geometry. We then design an anchor-driven direct Sim(3) registration strategy. By exploiting context-balanced anchors, it achieves search-free, pixel-wise dense alignment and efficient loop closure without costly feature matching. Finally, a lightweight submap-level pose graph optimization enforces global consistency with linear complexity, enabling scalable long-range operation. Experiments show that VGGT-Motion markedly improves trajectory accuracy and efficiency, achieving state-of-the-art performance in zero-shot, long-range calibration-free monocular SLAM.",
+        "url": "http://arxiv.org/abs/2602.05508v1",
+        "published_date": "2026-02-05T10:07:11+00:00",
+        "updated_date": "2026-02-05T10:07:11+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zhuang Xiong",
+            "Chen Zhang",
+            "Qingshan Xu",
+            "Wenbing Tao"
+        ],
+        "tldr": "VGGT-Motion is a calibration-free monocular SLAM system that uses motion-aware submap construction and anchor-driven direct Sim(3) registration to achieve long-range consistency and efficiency, demonstrating state-of-the-art performance.",
+        "tldr_zh": "VGGT-Motion是一个无需标定的单目SLAM系统，它利用运动感知的子地图构建和锚点驱动的直接Sim(3)配准来实现远距离一致性和效率，并展示了最先进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Imagine a City: CityGenAgent for Procedural 3D City Generation",
+        "summary": "The automated generation of interactive 3D cities is a critical challenge with broad applications in autonomous driving, virtual reality, and embodied intelligence. While recent advances in generative models and procedural techniques have improved the realism of city generation, existing methods often struggle with high-fidelity asset creation, controllability, and manipulation. In this work, we introduce CityGenAgent, a natural language-driven framework for hierarchical procedural generation of high-quality 3D cities. Our approach decomposes city generation into two interpretable components, Block Program and Building Program. To ensure structural correctness and semantic alignment, we adopt a two-stage learning strategy: (1) Supervised Fine-Tuning (SFT). We train BlockGen and BuildingGen to generate valid programs that adhere to schema constraints, including non-self-intersecting polygons and complete fields; (2) Reinforcement Learning (RL). We design Spatial Alignment Reward to enhance spatial reasoning ability and Visual Consistency Reward to bridge the gap between textual descriptions and the visual modality. Benefiting from the programs and the models' generalization, CityGenAgent supports natural language editing and manipulation. Comprehensive evaluations demonstrate superior semantic alignment, visual quality, and controllability compared to existing methods, establishing a robust foundation for scalable 3D city generation.",
+        "url": "http://arxiv.org/abs/2602.05362v1",
+        "published_date": "2026-02-05T06:36:03+00:00",
+        "updated_date": "2026-02-05T06:36:03+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zishan Liu",
+            "Zecong Tang",
+            "RuoCheng Wu",
+            "Xinzhe Zheng",
+            "Jingyu Hu",
+            "Ka-Hei Hui",
+            "Haoran Xie",
+            "Bo Dai",
+            "Zhengzhe Liu"
+        ],
+        "tldr": "CityGenAgent is a natural language-driven framework for procedurally generating high-quality 3D cities using a hierarchical program-based approach, achieving superior semantic alignment, visual quality, and controllability.",
+        "tldr_zh": "CityGenAgent是一个自然语言驱动的框架，用于程序化生成高质量的3D城市，采用分层程序方法，并在语义对齐、视觉质量和可控性方面表现出色。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Wid3R: Wide Field-of-View 3D Reconstruction via Camera Model Conditioning",
+        "summary": "We present Wid3R, a feed-forward neural network for visual geometry reconstruction that supports wide field-of-view camera models. Prior methods typically assume that input images are rectified or captured with pinhole cameras, since both their architectures and training datasets are tailored to perspective images only. These assumptions limit their applicability in real-world scenarios that use fisheye or panoramic cameras and often require careful calibration and undistortion. In contrast, Wid3R is a generalizable multi-view 3D estimation method that can model wide field-of-view camera types. Our approach leverages a ray representation with spherical harmonics and a novel camera model token within the network, enabling distortion-aware 3D reconstruction. Furthermore, Wid3R is the first multi-view foundation model to support feed-forward 3D reconstruction directly from 360 imagery. It demonstrates strong zero-shot robustness and consistently outperforms prior methods, achieving improvements of up to +77.33 on Stanford2D3D.",
+        "url": "http://arxiv.org/abs/2602.05321v1",
+        "published_date": "2026-02-05T05:42:03+00:00",
+        "updated_date": "2026-02-05T05:42:03+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Dongki Jung",
+            "Jaehoon Choi",
+            "Adil Qureshi",
+            "Somi Jeong",
+            "Dinesh Manocha",
+            "Suyong Yeon"
+        ],
+        "tldr": "Wid3R is a novel neural network that directly reconstructs 3D scenes from multi-view images captured with wide field-of-view cameras, including fisheye and panoramic cameras, without requiring prior rectification or pinhole camera assumptions. It demonstrates strong zero-shot robustness and outperforms existing methods.",
+        "tldr_zh": "Wid3R是一种新颖的神经网络，可以直接从使用广角相机（包括鱼眼相机和全景相机）拍摄的多视图图像重建3D场景，而无需事先进行校正或假设针孔相机模型。 它展示了强大的零样本鲁棒性，并且优于现有方法。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Fast-SAM3D: 3Dfy Anything in Images but Faster",
+        "summary": "SAM3D enables scalable, open-world 3D reconstruction from complex scenes, yet its deployment is hindered by prohibitive inference latency. In this work, we conduct the \\textbf{first systematic investigation} into its inference dynamics, revealing that generic acceleration strategies are brittle in this context. We demonstrate that these failures stem from neglecting the pipeline's inherent multi-level \\textbf{heterogeneity}: the kinematic distinctiveness between shape and layout, the intrinsic sparsity of texture refinement, and the spectral variance across geometries. To address this, we present \\textbf{Fast-SAM3D}, a training-free framework that dynamically aligns computation with instantaneous generation complexity. Our approach integrates three heterogeneity-aware mechanisms: (1) \\textit{Modality-Aware Step Caching} to decouple structural evolution from sensitive layout updates; (2) \\textit{Joint Spatiotemporal Token Carving} to concentrate refinement on high-entropy regions; and (3) \\textit{Spectral-Aware Token Aggregation} to adapt decoding resolution. Extensive experiments demonstrate that Fast-SAM3D delivers up to \\textbf{2.67$\\times$} end-to-end speedup with negligible fidelity loss, establishing a new Pareto frontier for efficient single-view 3D generation. Our code is released in https://github.com/wlfeng0509/Fast-SAM3D.",
+        "url": "http://arxiv.org/abs/2602.05293v1",
+        "published_date": "2026-02-05T04:27:59+00:00",
+        "updated_date": "2026-02-05T04:27:59+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Weilun Feng",
+            "Mingqiang Wu",
+            "Zhiliang Chen",
+            "Chuanguang Yang",
+            "Haotong Qin",
+            "Yuqi Li",
+            "Xiaokun Liu",
+            "Guoxin Fan",
+            "Zhulin An",
+            "Libo Huang",
+            "Yulun Zhang",
+            "Michele Magno",
+            "Yongjun Xu"
+        ],
+        "tldr": "Fast-SAM3D introduces a training-free framework to accelerate SAM3D for efficient single-view 3D generation by addressing multi-level heterogeneity in the pipeline, achieving significant speedups with minimal fidelity loss.",
+        "tldr_zh": "Fast-SAM3D 提出了一个无需训练的框架，通过解决管道中的多层次异构性来加速 SAM3D，从而实现高效的单视图 3D 生成，并在保真度损失最小的情况下显著提高速度。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Differentiable Inverse Graphics for Zero-shot Scene Reconstruction and Robot Grasping",
+        "summary": "Operating effectively in novel real-world environments requires robotic systems to estimate and interact with previously unseen objects. Current state-of-the-art models address this challenge by using large amounts of training data and test-time samples to build black-box scene representations. In this work, we introduce a differentiable neuro-graphics model that combines neural foundation models with physics-based differentiable rendering to perform zero-shot scene reconstruction and robot grasping without relying on any additional 3D data or test-time samples. Our model solves a series of constrained optimization problems to estimate physically consistent scene parameters, such as meshes, lighting conditions, material properties, and 6D poses of previously unseen objects from a single RGBD image and bounding boxes. We evaluated our approach on standard model-free few-shot benchmarks and demonstrated that it outperforms existing algorithms for model-free few-shot pose estimation. Furthermore, we validated the accuracy of our scene reconstructions by applying our algorithm to a zero-shot grasping task. By enabling zero-shot, physically-consistent scene reconstruction and grasping without reliance on extensive datasets or test-time sampling, our approach offers a pathway towards more data efficient, interpretable and generalizable robot autonomy in novel environments.",
+        "url": "http://arxiv.org/abs/2602.05029v1",
+        "published_date": "2026-02-04T20:33:50+00:00",
+        "updated_date": "2026-02-04T20:33:50+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Octavio Arriaga",
+            "Proneet Sharma",
+            "Jichen Guo",
+            "Marc Otto",
+            "Siddhant Kadwe",
+            "Rebecca Adam"
+        ],
+        "tldr": "This paper presents a differentiable neuro-graphics model for zero-shot scene reconstruction and robot grasping using a single RGBD image, outperforming existing methods on model-free few-shot benchmarks without requiring additional 3D data or test-time samples.",
+        "tldr_zh": "本文提出了一种可微分神经图形模型，用于单张RGBD图像的零样本场景重建和机器人抓取。该模型在无模型少样本基准测试中优于现有方法，且不需要额外的3D数据或测试时采样。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    }
+]
