@@ -1,0 +1,131 @@
+[
+    {
+        "title": "Thinking with Geometry: Active Geometry Integration for Spatial Reasoning",
+        "summary": "Recent progress in spatial reasoning with Multimodal Large Language Models (MLLMs) increasingly leverages geometric priors from 3D encoders. However, most existing integration strategies remain passive: geometry is exposed as a global stream and fused in an indiscriminate manner, which often induces semantic-geometry misalignment and redundant signals. We propose GeoThinker, a framework that shifts the paradigm from passive fusion to active perception. Instead of feature mixing, GeoThinker enables the model to selectively retrieve geometric evidence conditioned on its internal reasoning demands. GeoThinker achieves this through Spatial-Grounded Fusion applied at carefully selected VLM layers, where semantic visual priors selectively query and integrate task-relevant geometry via frame-strict cross-attention, further calibrated by Importance Gating that biases per-frame attention toward task-relevant structures. Comprehensive evaluation results show that GeoThinker sets a new state-of-the-art in spatial intelligence, achieving a peak score of 72.6 on the VSI-Bench. Furthermore, GeoThinker demonstrates robust generalization and significantly improved spatial perception across complex downstream scenarios, including embodied referring and autonomous driving. Our results indicate that the ability to actively integrate spatial structures is essential for next-generation spatial intelligence. Code can be found at https://github.com/Li-Hao-yuan/GeoThinker.",
+        "url": "http://arxiv.org/abs/2602.06037v1",
+        "published_date": "2026-02-05T18:59:32+00:00",
+        "updated_date": "2026-02-05T18:59:32+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Haoyuan Li",
+            "Qihang Cao",
+            "Tao Tang",
+            "Kun Xiang",
+            "Zihan Guo",
+            "Jianhua Han",
+            "Hang Xu",
+            "Xiaodan Liang"
+        ],
+        "tldr": "The paper introduces GeoThinker, a framework for actively integrating geometric information into MLLMs for improved spatial reasoning, achieving state-of-the-art results on VSI-Bench and demonstrating strong generalization in embodied referring and autonomous driving scenarios.",
+        "tldr_zh": "该论文介绍了GeoThinker，一个用于将几何信息主动集成到MLLM中以改进空间推理的框架，在VSI-Bench上取得了最先进的结果，并在具身指代和自动驾驶场景中展示了强大的泛化能力。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Splat and Distill: Augmenting Teachers with Feed-Forward 3D Reconstruction For 3D-Aware Distillation",
+        "summary": "Vision Foundation Models (VFMs) have achieved remarkable success when applied to various downstream 2D tasks. Despite their effectiveness, they often exhibit a critical lack of 3D awareness. To this end, we introduce Splat and Distill, a framework that instills robust 3D awareness into 2D VFMs by augmenting the teacher model with a fast, feed-forward 3D reconstruction pipeline. Given 2D features produced by a teacher model, our method first lifts these features into an explicit 3D Gaussian representation, in a feedforward manner. These 3D features are then ``splatted\" onto novel viewpoints, producing a set of novel 2D feature maps used to supervise the student model, ``distilling\" geometrically grounded knowledge. By replacing slow per-scene optimization of prior work with our feed-forward lifting approach, our framework avoids feature-averaging artifacts, creating a dynamic learning process where the teacher's consistency improves alongside that of the student. We conduct a comprehensive evaluation on a suite of downstream tasks, including monocular depth estimation, surface normal estimation, multi-view correspondence, and semantic segmentation. Our method significantly outperforms prior works, not only achieving substantial gains in 3D awareness but also enhancing the underlying semantic richness of 2D features. Project page is available at https://davidshavin4.github.io/Splat-and-Distill/",
+        "url": "http://arxiv.org/abs/2602.06032v1",
+        "published_date": "2026-02-05T18:59:05+00:00",
+        "updated_date": "2026-02-05T18:59:05+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "David Shavin",
+            "Sagie Benaim"
+        ],
+        "tldr": "The paper introduces \"Splat and Distill,\" a framework to enhance 2D Vision Foundation Models' 3D awareness by augmenting the teacher model with a fast, feed-forward 3D reconstruction pipeline using 3D Gaussians for knowledge distillation, achieving state-of-the-art results on various downstream tasks.",
+        "tldr_zh": "该论文介绍了 \"Splat and Distill\"，一个通过使用快速前馈3D重建流水线（基于3D高斯表示）增强教师模型来提高2D视觉基础模型3D感知能力的框架，并在各种下游任务上取得了最先进的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "LSA: Localized Semantic Alignment for Enhancing Temporal Consistency in Traffic Video Generation",
+        "summary": "Controllable video generation has emerged as a versatile tool for autonomous driving, enabling realistic synthesis of traffic scenarios. However, existing methods depend on control signals at inference time to guide the generative model towards temporally consistent generation of dynamic objects, limiting their utility as scalable and generalizable data engines. In this work, we propose Localized Semantic Alignment (LSA), a simple yet effective framework for fine-tuning pre-trained video generation models. LSA enhances temporal consistency by aligning semantic features between ground-truth and generated video clips. Specifically, we compare the output of an off-the-shelf feature extraction model between the ground-truth and generated video clips localized around dynamic objects inducing a semantic feature consistency loss. We fine-tune the base model by combining this loss with the standard diffusion loss. The model fine-tuned for a single epoch with our novel loss outperforms the baselines in common video generation evaluation metrics. To further test the temporal consistency in generated videos we adapt two additional metrics from object detection task, namely mAP and mIoU. Extensive experiments on nuScenes and KITTI datasets show the effectiveness of our approach in enhancing temporal consistency in video generation without the need for external control signals during inference and any computational overheads.",
+        "url": "http://arxiv.org/abs/2602.05966v1",
+        "published_date": "2026-02-05T18:21:02+00:00",
+        "updated_date": "2026-02-05T18:21:02+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Mirlan Karimov",
+            "Teodora Spasojevic",
+            "Markus Braun",
+            "Julian Wiederer",
+            "Vasileios Belagiannis",
+            "Marc Pollefeys"
+        ],
+        "tldr": "The paper introduces Localized Semantic Alignment (LSA), a fine-tuning framework for pre-trained video generation models, enhancing temporal consistency in traffic videos without relying on inference-time control signals.",
+        "tldr_zh": "该论文介绍了局部语义对齐（LSA），一个用于微调预训练视频生成模型的框架，可在不依赖推理时控制信号的情况下，增强交通视频中的时间一致性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "SwimBird: Eliciting Switchable Reasoning Mode in Hybrid Autoregressive MLLMs",
+        "summary": "Multimodal Large Language Models (MLLMs) have made remarkable progress in multimodal perception and reasoning by bridging vision and language. However, most existing MLLMs perform reasoning primarily with textual CoT, which limits their effectiveness on vision-intensive tasks. Recent approaches inject a fixed number of continuous hidden states as \"visual thoughts\" into the reasoning process and improve visual performance, but often at the cost of degraded text-based logical reasoning. We argue that the core limitation lies in a rigid, pre-defined reasoning pattern that cannot adaptively choose the most suitable thinking modality for different user queries. We introduce SwimBird, a reasoning-switchable MLLM that dynamically switches among three reasoning modes conditioned on the input: (1) text-only reasoning, (2) vision-only reasoning (continuous hidden states as visual thoughts), and (3) interleaved vision-text reasoning. To enable this capability, we adopt a hybrid autoregressive formulation that unifies next-token prediction for textual thoughts with next-embedding prediction for visual thoughts, and design a systematic reasoning-mode curation strategy to construct SwimBird-SFT-92K, a diverse supervised fine-tuning dataset covering all three reasoning patterns. By enabling flexible, query-adaptive mode selection, SwimBird preserves strong textual logic while substantially improving performance on vision-dense tasks. Experiments across diverse benchmarks covering textual reasoning and challenging visual understanding demonstrate that SwimBird achieves state-of-the-art results and robust gains over prior fixed-pattern multimodal reasoning methods.",
+        "url": "http://arxiv.org/abs/2602.06040v1",
+        "published_date": "2026-02-05T18:59:51+00:00",
+        "updated_date": "2026-02-05T18:59:51+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jintao Tong",
+            "Shilin Yan",
+            "Hongwei Xue",
+            "Xiaojun Tang",
+            "Kunyu Shi",
+            "Guannan Zhang",
+            "Ruixuan Li",
+            "Yixiong Zou"
+        ],
+        "tldr": "SwimBird introduces a multimodal large language model (MLLM) that dynamically switches between text-only, vision-only, and interleaved vision-text reasoning modes, improving performance on both text and vision-intensive tasks by adapting to the query.",
+        "tldr_zh": "SwimBird 提出了一种多模态大型语言模型（MLLM），可以在纯文本、纯视觉以及混合视觉-文本的推理模式之间动态切换，通过适应用户查询，从而在文本和视觉密集型任务上都提高了性能。",
+        "relevance_score": 6,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "CommCP: Efficient Multi-Agent Coordination via LLM-Based Communication with Conformal Prediction",
+        "summary": "To complete assignments provided by humans in natural language, robots must interpret commands, generate and answer relevant questions for scene understanding, and manipulate target objects. Real-world deployments often require multiple heterogeneous robots with different manipulation capabilities to handle different assignments cooperatively. Beyond the need for specialized manipulation skills, effective information gathering is important in completing these assignments. To address this component of the problem, we formalize the information-gathering process in a fully cooperative setting as an underexplored multi-agent multi-task Embodied Question Answering (MM-EQA) problem, which is a novel extension of canonical Embodied Question Answering (EQA), where effective communication is crucial for coordinating efforts without redundancy. To address this problem, we propose CommCP, a novel LLM-based decentralized communication framework designed for MM-EQA. Our framework employs conformal prediction to calibrate the generated messages, thereby minimizing receiver distractions and enhancing communication reliability. To evaluate our framework, we introduce an MM-EQA benchmark featuring diverse, photo-realistic household scenarios with embodied questions. Experimental results demonstrate that CommCP significantly enhances the task success rate and exploration efficiency over baselines. The experiment videos, code, and dataset are available on our project website: https://comm-cp.github.io.",
+        "url": "http://arxiv.org/abs/2602.06038v1",
+        "published_date": "2026-02-05T18:59:45+00:00",
+        "updated_date": "2026-02-05T18:59:45+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV",
+            "cs.LG",
+            "cs.MA"
+        ],
+        "authors": [
+            "Xiaopan Zhang",
+            "Zejin Wang",
+            "Zhixu Li",
+            "Jianpeng Yao",
+            "Jiachen Li"
+        ],
+        "tldr": "The paper introduces CommCP, an LLM-based decentralized communication framework with conformal prediction for multi-agent multi-task Embodied Question Answering (MM-EQA), showing improved task success and exploration efficiency. They also release a new benchmark.",
+        "tldr_zh": "该论文介绍了CommCP，一个基于LLM的去中心化通信框架，结合了保角预测，用于多智能体多任务的具身问答（MM-EQA），实验结果表明其提高了任务成功率和探索效率。他们还发布了一个新的基准数据集。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
