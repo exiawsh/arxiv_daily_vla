@@ -1,0 +1,130 @@
+[
+    {
+        "title": "ForecastOcc: Vision-based Semantic Occupancy Forecasting",
+        "summary": "Autonomous driving requires forecasting both geometry and semantics over time to effectively reason about future environment states. Existing vision-based occupancy forecasting methods focus on motion-related categories such as static and dynamic objects, while semantic information remains largely absent. Recent semantic occupancy forecasting approaches address this gap but rely on past occupancy predictions obtained from separate networks. This makes current methods sensitive to error accumulation and prevents learning spatio-temporal features directly from images. In this work, we present ForecastOcc, the first framework for vision-based semantic occupancy forecasting that jointly predicts future occupancy states and semantic categories. Our framework yields semantic occupancy forecasts for multiple horizons directly from past camera images, without relying on externally estimated maps. We evaluate ForecastOcc in two complementary settings: multi-view forecasting on the Occ3D-nuScenes dataset and monocular forecasting on SemanticKITTI, where we establish the first benchmark for this task. We introduce the first baselines by adapting two 2D forecasting modules within our framework. Importantly, we propose a novel architecture that incorporates a temporal cross-attention forecasting module, a 2D-to-3D view transformer, a 3D encoder for occupancy prediction, and a semantic occupancy head for voxel-level forecasts across multiple horizons. Extensive experiments on both datasets show that ForecastOcc consistently outperforms baselines, yielding semantically rich, future-aware predictions that capture scene dynamics and semantics critical for autonomous driving.",
+        "url": "http://arxiv.org/abs/2602.08006v1",
+        "published_date": "2026-02-08T15:16:06+00:00",
+        "updated_date": "2026-02-08T15:16:06+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG",
+            "cs.RO"
+        ],
+        "authors": [
+            "Riya Mohan",
+            "Juana Valeria Hurtado",
+            "Rohit Mohan",
+            "Abhinav Valada"
+        ],
+        "tldr": "ForecastOcc is a novel vision-based framework for jointly predicting future occupancy states and semantic categories in autonomous driving scenarios, outperforming existing methods by directly learning spatio-temporal features from images and avoiding error accumulation.",
+        "tldr_zh": "ForecastOcc是一个新颖的基于视觉的框架，用于联合预测自动驾驶场景中未来的占用状态和语义类别，它通过直接从图像中学习时空特征并避免误差累积，优于现有方法。",
+        "relevance_score": 10,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Picasso: Holistic Scene Reconstruction with Physics-Constrained Sampling",
+        "summary": "In the presence of occlusions and measurement noise, geometrically accurate scene reconstructions -- which fit the sensor data -- can still be physically incorrect. For instance, when estimating the poses and shapes of objects in the scene and importing the resulting estimates into a simulator, small errors might translate to implausible configurations including object interpenetration or unstable equilibrium. This makes it difficult to predict the dynamic behavior of the scene using a digital twin, an important step in simulation-based planning and control of contact-rich behaviors. In this paper, we posit that object pose and shape estimation requires reasoning holistically over the scene (instead of reasoning about each object in isolation), accounting for object interactions and physical plausibility. Towards this goal, our first contribution is Picasso, a physics-constrained reconstruction pipeline that builds multi-object scene reconstructions by considering geometry, non-penetration, and physics. Picasso relies on a fast rejection sampling method that reasons over multi-object interactions, leveraging an inferred object contact graph to guide samples. Second, we propose the Picasso dataset, a collection of 10 contact-rich real-world scenes with ground truth annotations, as well as a metric to quantify physical plausibility, which we open-source as part of our benchmark. Finally, we provide an extensive evaluation of Picasso on our newly introduced dataset and on the YCB-V dataset, and show it largely outperforms the state of the art while providing reconstructions that are both physically plausible and more aligned with human intuition.",
+        "url": "http://arxiv.org/abs/2602.08058v1",
+        "published_date": "2026-02-08T17:04:54+00:00",
+        "updated_date": "2026-02-08T17:04:54+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.RO",
+            "eess.SY"
+        ],
+        "authors": [
+            "Xihang Yu",
+            "Rajat Talak",
+            "Lorenzo Shaikewitz",
+            "Luca Carlone"
+        ],
+        "tldr": "The paper introduces Picasso, a physics-constrained scene reconstruction pipeline that reasons holistically about object interactions to create geometrically accurate and physically plausible 3D scene reconstructions. It also presents a new dataset for contact-rich scenes and a metric for physical plausibility.",
+        "tldr_zh": "该论文介绍了Picasso，一种受物理约束的场景重建流程，可以全面推理对象交互，从而创建几何上精确且物理上合理的3D场景重建。它还提出了一个新的接触丰富的场景数据集和一个物理合理性指标。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Integrating Specialized and Generic Agent Motion Prediction with Dynamic Occupancy Grid Maps",
+        "summary": "Accurate prediction of driving scene is a challenging task due to uncertainty in sensor data, the complex behaviors of agents, and the possibility of multiple feasible futures. Existing prediction methods using occupancy grid maps primarily focus on agent-agnostic scene predictions, while agent-specific predictions provide specialized behavior insights with the help of semantic information. However, both paradigms face distinct limitations: agent-agnostic models struggle to capture the behavioral complexities of dynamic actors, whereas agent-specific approaches fail to generalize to poorly perceived or unrecognized agents; combining both enables robust and safer motion forecasting. To address this, we propose a unified framework by leveraging Dynamic Occupancy Grid Maps within a streamlined temporal decoding pipeline to simultaneously predict future occupancy state grids, vehicle grids, and scene flow grids. Relying on a lightweight spatiotemporal backbone, our approach is centered on a tailored, interdependent loss function that captures inter-grid dependencies and enables diverse future predictions. By using occupancy state information to enforce flow-guided transitions, the loss function acts as a regularizer that directs occupancy evolution while accounting for obstacles and occlusions. Consequently, the model not only predicts the specific behaviors of vehicle agents, but also identifies other dynamic entities and anticipates their evolution within the complex scene. Evaluations on real-world nuScenes and Woven Planet datasets demonstrate superior prediction performances for dynamic vehicles and generic dynamic scene elements compared to baseline methods.",
+        "url": "http://arxiv.org/abs/2602.07938v1",
+        "published_date": "2026-02-08T12:13:06+00:00",
+        "updated_date": "2026-02-08T12:13:06+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Rabbia Asghar",
+            "Lukas Rummelhard",
+            "Wenqian Liu",
+            "Anne Spalanzani",
+            "Christian Laugier"
+        ],
+        "tldr": "This paper proposes a unified framework that combines agent-specific and agent-agnostic motion prediction using Dynamic Occupancy Grid Maps for improved and robust autonomous driving scene forecasting, outperforming baseline methods on nuScenes and Woven Planet datasets.",
+        "tldr_zh": "本文提出了一种统一的框架，该框架结合了基于动态占用栅格地图的特定于智能体和与智能体无关的运动预测，以实现改进和稳健的自动驾驶场景预测，并在 nuScenes 和 Woven Planet 数据集上优于基线方法。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "All-Optical Segmentation via Diffractive Neural Networks for Autonomous Driving",
+        "summary": "Semantic segmentation and lane detection are crucial tasks in autonomous driving systems. Conventional approaches predominantly rely on deep neural networks (DNNs), which incur high energy costs due to extensive analog-to-digital conversions and large-scale image computations required for low-latency, real-time responses. Diffractive optical neural networks (DONNs) have shown promising advantages over conventional DNNs on digital or optoelectronic computing platforms in energy efficiency. By performing all-optical image processing via light diffraction at the speed of light, DONNs save computation energy costs while reducing the overhead associated with analog-to-digital conversions by all-optical encoding and computing. In this work, we propose a novel all-optical computing framework for RGB image segmentation and lane detection in autonomous driving applications. Our experimental results demonstrate the effectiveness of the DONN system for image segmentation on the CityScapes dataset. Additionally, we conduct case studies on lane detection using a customized indoor track dataset and simulated driving scenarios in CARLA, where we further evaluate the model's generalizability under diverse environmental conditions.",
+        "url": "http://arxiv.org/abs/2602.07717v1",
+        "published_date": "2026-02-07T21:47:37+00:00",
+        "updated_date": "2026-02-07T21:47:37+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.ET"
+        ],
+        "authors": [
+            "Yingjie Li",
+            "Daniel Robinson",
+            "Cunxi Yu"
+        ],
+        "tldr": "This paper proposes an all-optical computing framework using diffractive neural networks (DONNs) for image segmentation and lane detection in autonomous driving, demonstrating energy efficiency and effectiveness on CityScapes, a customized indoor track dataset, and simulated CARLA environments.",
+        "tldr_zh": "该论文提出了一种基于衍射神经网络（DONNs）的全光学计算框架，用于自动驾驶中的图像分割和车道线检测，并在CityScapes、定制的室内轨道数据集和CARLA模拟环境中展示了其能效和有效性。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Vision and language: Novel Representations and Artificial intelligence for Driving Scene Safety Assessment and Autonomous Vehicle Planning",
+        "summary": "Vision-language models (VLMs) have recently emerged as powerful representation learning systems that align visual observations with natural language concepts, offering new opportunities for semantic reasoning in safety-critical autonomous driving. This paper investigates how vision-language representations support driving scene safety assessment and decision-making when integrated into perception, prediction, and planning pipelines. We study three complementary system-level use cases. First, we introduce a lightweight, category-agnostic hazard screening approach leveraging CLIP-based image-text similarity to produce a low-latency semantic hazard signal. This enables robust detection of diverse and out-of-distribution road hazards without explicit object detection or visual question answering. Second, we examine the integration of scene-level vision-language embeddings into a transformer-based trajectory planning framework using the Waymo Open Dataset. Our results show that naively conditioning planners on global embeddings does not improve trajectory accuracy, highlighting the importance of representation-task alignment and motivating the development of task-informed extraction methods for safety-critical planning. Third, we investigate natural language as an explicit behavioral constraint on motion planning using the doScenes dataset. In this setting, passenger-style instructions grounded in visual scene elements suppress rare but severe planning failures and improve safety-aligned behavior in ambiguous scenarios. Taken together, these findings demonstrate that vision-language representations hold significant promise for autonomous driving safety when used to express semantic risk, intent, and behavioral constraints. Realizing this potential is fundamentally an engineering problem requiring careful system design and structured grounding rather than direct feature injection.",
+        "url": "http://arxiv.org/abs/2602.07680v1",
+        "published_date": "2026-02-07T20:04:21+00:00",
+        "updated_date": "2026-02-07T20:04:21+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG",
+            "cs.RO"
+        ],
+        "authors": [
+            "Ross Greer",
+            "Maitrayee Keskar",
+            "Angel Martinez-Sanchez",
+            "Parthib Roy",
+            "Shashank Shriram",
+            "Mohan Trivedi"
+        ],
+        "tldr": "This paper explores the integration of vision-language models (VLMs) into autonomous driving pipelines for safety assessment and planning, demonstrating the potential of VLMs to express semantic risk, intent, and behavioral constraints.",
+        "tldr_zh": "本文探讨了将视觉-语言模型 (VLM) 集成到自动驾驶管道中，用于安全评估和规划，展示了 VLM 在表达语义风险、意图和行为约束方面的潜力。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    }
+]
