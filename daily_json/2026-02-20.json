@@ -1,0 +1,147 @@
+[
+    {
+        "title": "HiMAP: History-aware Map-occupancy Prediction with Fallback",
+        "summary": "Accurate motion forecasting is critical for autonomous driving, yet most predictors rely on multi-object tracking (MOT) with identity association, assuming that objects are correctly and continuously tracked. When tracking fails due to, e.g., occlusion, identity switches, or missed detections, prediction quality degrades and safety risks increase. We present \\textbf{HiMAP}, a tracking-free, trajectory prediction framework that remains reliable under MOT failures. HiMAP converts past detections into spatiotemporally invariant historical occupancy maps and introduces a historical query module that conditions on the current agent state to iteratively retrieve agent-specific history from unlabeled occupancy representations. The retrieved history is summarized by a temporal map embedding and, together with the final query and map context, drives a DETR-style decoder to produce multi-modal future trajectories. This design lifts identity reliance, supports streaming inference via reusable encodings, and serves as a robust fallback when tracking is unavailable. On Argoverse~2, HiMAP achieves performance comparable to tracking-based methods while operating without IDs, and it substantially outperforms strong baselines in the no-tracking setting, yielding relative gains of 11\\% in FDE, 12\\% in ADE, and a 4\\% reduction in MR over a fine-tuned QCNet. Beyond aggregate metrics, HiMAP delivers stable forecasts for all agents simultaneously without waiting for tracking to recover, highlighting its practical value for safety-critical autonomy. The code is available under: https://github.com/XuYiMing83/HiMAP.",
+        "url": "http://arxiv.org/abs/2602.17231v1",
+        "published_date": "2026-02-19T10:24:02+00:00",
+        "updated_date": "2026-02-19T10:24:02+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yiming Xu",
+            "Yi Yang",
+            "Hao Cheng",
+            "Monika Sester"
+        ],
+        "tldr": "HiMAP is a tracking-free trajectory prediction framework for autonomous driving that uses historical occupancy maps to provide robust and reliable forecasts, even when multi-object tracking fails, demonstrating strong performance on Argoverse 2.",
+        "tldr_zh": "HiMAP是一个用于自动驾驶的无跟踪轨迹预测框架，它使用历史占用地图来提供稳健可靠的预测，即使在多目标跟踪失败时也能正常工作，并在Argoverse 2上表现出强大的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "3D Scene Rendering with Multimodal Gaussian Splatting",
+        "summary": "3D scene reconstruction and rendering are core tasks in computer vision, with applications spanning industrial monitoring, robotics, and autonomous driving. Recent advances in 3D Gaussian Splatting (GS) and its variants have achieved impressive rendering fidelity while maintaining high computational and memory efficiency. However, conventional vision-based GS pipelines typically rely on a sufficient number of camera views to initialize the Gaussian primitives and train their parameters, typically incurring additional processing cost during initialization while falling short in conditions where visual cues are unreliable, such as adverse weather, low illumination, or partial occlusions. To cope with these challenges, and motivated by the robustness of radio-frequency (RF) signals to weather, lighting, and occlusions, we introduce a multimodal framework that integrates RF sensing, such as automotive radar, with GS-based rendering as a more efficient and robust alternative to vision-only GS rendering. The proposed approach enables efficient depth prediction from only sparse RF-based depth measurements, yielding a high-quality 3D point cloud for initializing Gaussian functions across diverse GS architectures. Numerical tests demonstrate the merits of judiciously incorporating RF sensing into GS pipelines, achieving high-fidelity 3D scene rendering driven by RF-informed structural accuracy.",
+        "url": "http://arxiv.org/abs/2602.17124v1",
+        "published_date": "2026-02-19T06:49:53+00:00",
+        "updated_date": "2026-02-19T06:49:53+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.RO"
+        ],
+        "authors": [
+            "Chi-Shiang Gau",
+            "Konstantinos D. Polyzos",
+            "Athanasios Bacharis",
+            "Saketh Madhuvarasu",
+            "Tara Javidi"
+        ],
+        "tldr": "This paper introduces a multimodal 3D scene rendering framework that integrates RF sensing (e.g., radar) with Gaussian Splatting to improve robustness and efficiency, particularly in challenging visual conditions. The method uses RF data for initializing Gaussian primitives, leading to high-fidelity rendering.",
+        "tldr_zh": "本文介绍了一种多模态3D场景渲染框架，该框架将射频（RF）传感（如雷达）与高斯溅射相结合，以提高鲁棒性和效率，尤其是在具有挑战性的视觉条件下。该方法使用RF数据来初始化高斯基元，从而实现高保真渲染。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Benchmarking the Effects of Object Pose Estimation and Reconstruction on Robotic Grasping Success",
+        "summary": "3D reconstruction serves as the foundational layer for numerous robotic perception tasks, including 6D object pose estimation and grasp pose generation. Modern 3D reconstruction methods for objects can produce visually and geometrically impressive meshes from multi-view images, yet standard geometric evaluations do not reflect how reconstruction quality influences downstream tasks such as robotic manipulation performance. This paper addresses this gap by introducing a large-scale, physics-based benchmark that evaluates 6D pose estimators and 3D mesh models based on their functional efficacy in grasping. We analyze the impact of model fidelity by generating grasps on various reconstructed 3D meshes and executing them on the ground-truth model, simulating how grasp poses generated with an imperfect model affect interaction with the real object. This assesses the combined impact of pose error, grasp robustness, and geometric inaccuracies from 3D reconstruction. Our results show that reconstruction artifacts significantly decrease the number of grasp pose candidates but have a negligible effect on grasping performance given an accurately estimated pose. Our results also reveal that the relationship between grasp success and pose error is dominated by spatial error, and even a simple translation error provides insight into the success of the grasping pose of symmetric objects. This work provides insight into how perception systems relate to object manipulation using robots.",
+        "url": "http://arxiv.org/abs/2602.17101v1",
+        "published_date": "2026-02-19T05:55:01+00:00",
+        "updated_date": "2026-02-19T05:55:01+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Varun Burde",
+            "Pavel Burget",
+            "Torsten Sattler"
+        ],
+        "tldr": "This paper benchmarks the impact of 3D reconstruction quality and 6D pose estimation accuracy on robotic grasping success, finding that reconstruction artifacts primarily reduce grasp candidates and that translational pose error significantly impacts grasping of symmetric objects.",
+        "tldr_zh": "本文评估了3D重建质量和6D位姿估计精度对机器人抓取成功率的影响，发现重建伪影主要减少了抓取候选姿势的数量，并且平移位姿误差显著影响对称物体的抓取。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "StereoAdapter-2: Globally Structure-Consistent Underwater Stereo Depth Estimation",
+        "summary": "Stereo depth estimation is fundamental to underwater robotic perception, yet suffers from severe domain shifts caused by wavelength-dependent light attenuation, scattering, and refraction. Recent approaches leverage monocular foundation models with GRU-based iterative refinement for underwater adaptation; however, the sequential gating and local convolutional kernels in GRUs necessitate multiple iterations for long-range disparity propagation, limiting performance in large-disparity and textureless underwater regions. In this paper, we propose StereoAdapter-2, which replaces the conventional ConvGRU updater with a novel ConvSS2D operator based on selective state space models. The proposed operator employs a four-directional scanning strategy that naturally aligns with epipolar geometry while capturing vertical structural consistency, enabling efficient long-range spatial propagation within a single update step at linear computational complexity. Furthermore, we construct UW-StereoDepth-80K, a large-scale synthetic underwater stereo dataset featuring diverse baselines, attenuation coefficients, and scattering parameters through a two-stage generative pipeline combining semantic-aware style transfer and geometry-consistent novel view synthesis. Combined with dynamic LoRA adaptation inherited from StereoAdapter, our framework achieves state-of-the-art zero-shot performance on underwater benchmarks with 17% improvement on TartanAir-UW and 7.2% improvment on SQUID, with real-world validation on the BlueROV2 platform demonstrates the robustness of our approach. Code: https://github.com/AIGeeksGroup/StereoAdapter-2. Website: https://aigeeksgroup.github.io/StereoAdapter-2.",
+        "url": "http://arxiv.org/abs/2602.16915v1",
+        "published_date": "2026-02-18T22:12:08+00:00",
+        "updated_date": "2026-02-18T22:12:08+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zeyu Ren",
+            "Xiang Li",
+            "Yiran Wang",
+            "Zeyu Zhang",
+            "Hao Tang"
+        ],
+        "tldr": "StereoAdapter-2 introduces a novel ConvSS2D operator for underwater stereo depth estimation, improving long-range disparity propagation and achieving state-of-the-art zero-shot performance on underwater benchmarks. They also introduce a large-scale synthetic underwater stereo dataset UW-StereoDepth-80K.",
+        "tldr_zh": "StereoAdapter-2 引入了一种新颖的 ConvSS2D 算子，用于水下立体深度估计，改善了长程视差传播，并在水下基准测试中实现了最先进的零样本性能。他们还引入了一个大型合成水下立体数据集 UW-StereoDepth-80K。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Learning Humanoid End-Effector Control for Open-Vocabulary Visual Loco-Manipulation",
+        "summary": "Visual loco-manipulation of arbitrary objects in the wild with humanoid robots requires accurate end-effector (EE) control and a generalizable understanding of the scene via visual inputs (e.g., RGB-D images). Existing approaches are based on real-world imitation learning and exhibit limited generalization due to the difficulty in collecting large-scale training datasets. This paper presents a new paradigm, HERO, for object loco-manipulation with humanoid robots that combines the strong generalization and open-vocabulary understanding of large vision models with strong control performance from simulated training. We achieve this by designing an accurate residual-aware EE tracking policy. This EE tracking policy combines classical robotics with machine learning. It uses a) inverse kinematics to convert residual end-effector targets into reference trajectories, b) a learned neural forward model for accurate forward kinematics, c) goal adjustment, and d) replanning. Together, these innovations help us cut down the end-effector tracking error by 3.2x. We use this accurate end-effector tracker to build a modular system for loco-manipulation, where we use open-vocabulary large vision models for strong visual generalization. Our system is able to operate in diverse real-world environments, from offices to coffee shops, where the robot is able to reliably manipulate various everyday objects (e.g., mugs, apples, toys) on surfaces ranging from 43cm to 92cm in height. Systematic modular and end-to-end tests in simulation and the real world demonstrate the effectiveness of our proposed design. We believe the advances in this paper can open up new ways of training humanoid robots to interact with daily objects.",
+        "url": "http://arxiv.org/abs/2602.16705v1",
+        "published_date": "2026-02-18T18:55:02+00:00",
+        "updated_date": "2026-02-18T18:55:02+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Runpei Dong",
+            "Ziyan Li",
+            "Xialin He",
+            "Saurabh Gupta"
+        ],
+        "tldr": "This paper introduces HERO, a new paradigm for humanoid robot loco-manipulation that leverages large vision models and a novel residual-aware end-effector tracking policy for improved generalization and control in real-world environments.",
+        "tldr_zh": "本文介绍了一种名为 HERO 的新人形机器人移动操作范例，该范例利用大型视觉模型和一种新型残差感知末端执行器跟踪策略，从而在现实环境中提高了泛化性和控制能力。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "PredMapNet: Future and Historical Reasoning for Consistent Online HD Vectorized Map Construction",
+        "summary": "High-definition (HD) maps are crucial to autonomous driving, providing structured representations of road elements to support navigation and planning. However, existing query-based methods often employ random query initialization and depend on implicit temporal modeling, which lead to temporal inconsistencies and instabilities during the construction of a global map. To overcome these challenges, we introduce a novel end-to-end framework for consistent online HD vectorized map construction, which jointly performs map instance tracking and short-term prediction. First, we propose a Semantic-Aware Query Generator that initializes queries with spatially aligned semantic masks to capture scene-level context globally. Next, we design a History Rasterized Map Memory to store fine-grained instance-level maps for each tracked instance, enabling explicit historical priors. A History-Map Guidance Module then integrates rasterized map information into track queries, improving temporal continuity. Finally, we propose a Short-Term Future Guidance module to forecast the immediate motion of map instances based on the stored history trajectories. These predicted future locations serve as hints for tracked instances to further avoid implausible predictions and keep temporal consistency. Extensive experiments on the nuScenes and Argoverse2 datasets demonstrate that our proposed method outperforms state-of-the-art (SOTA) methods with good efficiency.",
+        "url": "http://arxiv.org/abs/2602.16669v1",
+        "published_date": "2026-02-18T18:08:26+00:00",
+        "updated_date": "2026-02-18T18:08:26+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Bo Lang",
+            "Nirav Savaliya",
+            "Zhihao Zheng",
+            "Jinglun Feng",
+            "Zheng-Hang Yeh",
+            "Mooi Choo Chuah"
+        ],
+        "tldr": "The paper introduces PredMapNet, a novel end-to-end framework for consistent online HD vectorized map construction that uses semantic-aware query generation, a history rasterized map memory, and short-term future guidance to improve temporal consistency and outperform SOTA methods.",
+        "tldr_zh": "本文介绍PredMapNet，一种用于一致在线高清矢量地图构建的新型端到端框架，该框架使用语义感知的查询生成、历史栅格化地图内存和短期未来指导来提高时间一致性并优于SOTA方法。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    }
+]
