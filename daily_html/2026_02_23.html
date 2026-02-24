@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArXiv CS.CV Papers (Autonomous Driving, VLA, 3D Understanding, Robotics) - February 20, 2026</title>
+    <title>ArXiv CS.CV Papers (Autonomous Driving, VLA, 3D Understanding, Robotics) - February 23, 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.dev.js"></script>
     <!-- Example using Font Awesome (replace with your preferred icon library if needed) -->
@@ -200,7 +200,7 @@
         <h1>VLM Daily Papers</h1>
         <p>Daily papers related to VLA/AV/3D Understanding from cs.CV</p>
         
-            <p>February 20, 2026</p>
+            <p>February 23, 2026</p>
         
         <div class="line-graphic mt-4 mb-8 mx-auto w-1/4"></div> <!-- Added line graphic -->
     </motion.div>
@@ -215,14 +215,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">HiMAP: History-aware Map-occupancy Prediction with Fallback</h2>
+            <h2 class="paper-title">TeFlow: Enabling Multi-frame Supervision for Self-Supervised Feed-forward Scene Flow Estimation</h2>
             
-            <p class="paper-summary">Accurate motion forecasting is critical for autonomous driving, yet most predictors rely on multi-object tracking (MOT) with identity association, assuming that objects are correctly and continuously tracked. When tracking fails due to, e.g., occlusion, identity switches, or missed detections, prediction quality degrades and safety risks increase. We present \textbf{HiMAP}, a tracking-free, trajectory prediction framework that remains reliable under MOT failures. HiMAP converts past detections into spatiotemporally invariant historical occupancy maps and introduces a historical query module that conditions on the current agent state to iteratively retrieve agent-specific history from unlabeled occupancy representations. The retrieved history is summarized by a temporal map embedding and, together with the final query and map context, drives a DETR-style decoder to produce multi-modal future trajectories. This design lifts identity reliance, supports streaming inference via reusable encodings, and serves as a robust fallback when tracking is unavailable. On Argoverse~2, HiMAP achieves performance comparable to tracking-based methods while operating without IDs, and it substantially outperforms strong baselines in the no-tracking setting, yielding relative gains of 11\% in FDE, 12\% in ADE, and a 4\% reduction in MR over a fine-tuned QCNet. Beyond aggregate metrics, HiMAP delivers stable forecasts for all agents simultaneously without waiting for tracking to recover, highlighting its practical value for safety-critical autonomy. The code is available under: https://github.com/XuYiMing83/HiMAP.</p>
+            <p class="paper-summary">Self-supervised feed-forward methods for scene flow estimation offer real-time efficiency, but their supervision from two-frame point correspondences is unreliable and often breaks down under occlusions. Multi-frame supervision has the potential to provide more stable guidance by incorporating motion cues from past frames, yet naive extensions of two-frame objectives are ineffective because point correspondences vary abruptly across frames, producing inconsistent signals. In the paper, we present TeFlow, enabling multi-frame supervision for feed-forward models by mining temporally consistent supervision. TeFlow introduces a temporal ensembling strategy that forms reliable supervisory signals by aggregating the most temporally consistent motion cues from a candidate pool built across multiple frames. Extensive evaluations demonstrate that TeFlow establishes a new state-of-the-art for self-supervised feed-forward methods, achieving performance gains of up to 33\% on the challenging Argoverse 2 and nuScenes datasets. Our method performs on par with leading optimization-based methods, yet speeds up 150 times. The code is open-sourced at https://github.com/KTH-RPL/OpenSceneFlow along with trained model weights.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: HiMAP is a tracking-free trajectory prediction framework for autonomous driving that uses historical occupancy maps to provide robust and reliable forecasts, even when multi-object tracking fails, demonstrating strong performance on Argoverse 2.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper presents TeFlow, a novel self-supervised feed-forward method for scene flow estimation that leverages multi-frame supervision by mining temporally consistent motion cues, achieving state-of-the-art performance with significant speedups.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: HiMAP是一个用于自动驾驶的无跟踪轨迹预测框架，它使用历史占用地图来提供稳健可靠的预测，即使在多目标跟踪失败时也能正常工作，并在Argoverse 2上表现出强大的性能。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出TeFlow，一种新的自监督前馈场景流估计方法，通过挖掘时间一致的运动线索来利用多帧监督，实现了最先进的性能并显著提高了速度。</p>
             
 
             
@@ -256,8 +256,8 @@
                 <div class="rating-item">
                     <span class="rating-label">Potential Impact:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
             </div>
@@ -293,11 +293,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2602.17231v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2602.19053v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Yiming Xu, Yi Yang, Hao Cheng, Monika Sester</p>
+            <p class="paper-authors">Authors: Qingwen Zhang, Chenhan Jiang, Xiaomeng Zhu, Yunqi Miao, Yushan Zhang, Olov Andersson, Patric Jensfelt</p>
             
         </motion.div>
         
@@ -309,14 +309,108 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">3D Scene Rendering with Multimodal Gaussian Splatting</h2>
+            <h2 class="paper-title">GS-CLIP: Zero-shot 3D Anomaly Detection by Geometry-Aware Prompt and Synergistic View Representation Learning</h2>
             
-            <p class="paper-summary">3D scene reconstruction and rendering are core tasks in computer vision, with applications spanning industrial monitoring, robotics, and autonomous driving. Recent advances in 3D Gaussian Splatting (GS) and its variants have achieved impressive rendering fidelity while maintaining high computational and memory efficiency. However, conventional vision-based GS pipelines typically rely on a sufficient number of camera views to initialize the Gaussian primitives and train their parameters, typically incurring additional processing cost during initialization while falling short in conditions where visual cues are unreliable, such as adverse weather, low illumination, or partial occlusions. To cope with these challenges, and motivated by the robustness of radio-frequency (RF) signals to weather, lighting, and occlusions, we introduce a multimodal framework that integrates RF sensing, such as automotive radar, with GS-based rendering as a more efficient and robust alternative to vision-only GS rendering. The proposed approach enables efficient depth prediction from only sparse RF-based depth measurements, yielding a high-quality 3D point cloud for initializing Gaussian functions across diverse GS architectures. Numerical tests demonstrate the merits of judiciously incorporating RF sensing into GS pipelines, achieving high-fidelity 3D scene rendering driven by RF-informed structural accuracy.</p>
+            <p class="paper-summary">Zero-shot 3D Anomaly Detection is an emerging task that aims to detect anomalies in a target dataset without any target training data, which is particularly important in scenarios constrained by sample scarcity and data privacy concerns. While current methods adapt CLIP by projecting 3D point clouds into 2D representations, they face challenges. The projection inherently loses some geometric details, and the reliance on a single 2D modality provides an incomplete visual understanding, limiting their ability to detect diverse anomaly types. To address these limitations, we propose the Geometry-Aware Prompt and Synergistic View Representation Learning (GS-CLIP) framework, which enables the model to identify geometric anomalies through a two-stage learning process. In stage 1, we dynamically generate text prompts embedded with 3D geometric priors. These prompts contain global shape context and local defect information distilled by our Geometric Defect Distillation Module (GDDM). In stage 2, we introduce Synergistic View Representation Learning architecture that processes rendered and depth images in parallel. A Synergistic Refinement Module (SRM) subsequently fuses the features of both streams, capitalizing on their complementary strengths. Comprehensive experimental results on four large-scale public datasets show that GS-CLIP achieves superior performance in detection. Code can be available at https://github.com/zhushengxinyue/GS-CLIP.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a multimodal 3D scene rendering framework that integrates RF sensing (e.g., radar) with Gaussian Splatting to improve robustness and efficiency, particularly in challenging visual conditions. The method uses RF data for initializing Gaussian primitives, leading to high-fidelity rendering.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces GS-CLIP, a novel zero-shot 3D anomaly detection framework leveraging geometry-aware prompts and synergistic view representation learning to overcome limitations of existing CLIP-based methods in capturing geometric details and diverse anomaly types.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种多模态3D场景渲染框架，该框架将射频（RF）传感（如雷达）与高斯溅射相结合，以提高鲁棒性和效率，尤其是在具有挑战性的视觉条件下。该方法使用RF数据来初始化高斯基元，从而实现高保真渲染。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文介绍了GS-CLIP，一种新颖的零样本3D异常检测框架，它利用几何感知提示和协同视图表示学习来克服现有基于CLIP方法在捕获几何细节和各种异常类型方面的局限性。</p>
+            
+
+            
+            
+            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
+                
+                <div class="rating-item">
+                    <span class="rating-label">Relevance:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Novelty:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Clarity:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                </div>
+                
+                
+                <div class="rating-item">
+                    <span class="rating-label">Potential Impact:</span>
+                    
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(7/10)</span>
+                </div>
+                
+            </div>
+            
+            
+
+            
+            <div class="paper-rating">
+                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
+                
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="fas fa-star"></i>
+                    
+                
+                    
+                        <i class="far fa-star"></i>
+                    
+                
+                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
+            </div>
+            
+
+            <a href="http://arxiv.org/abs/2602.19206v1" target="_blank" class="paper-link">
+                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
+            </a>
+            
+            <p class="paper-authors">Authors: Zehao Deng, An Liu, Yan Wang</p>
+            
+        </motion.div>
+        
+        <motion.div
+            initial="{ opacity: 0, y: 50, scale: 0.9 }"
+            whileInView="{ opacity: 1, y: 0, scale: 1 }"
+            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
+            transition="{ duration: 0.5, delay: 0.1, ease: 'easeOut' }"  
+            class="bento-item"
+            data-motion-element
+        >
+            <h2 class="paper-title">L3DR: 3D-aware LiDAR Diffusion and Rectification</h2>
+            
+            <p class="paper-summary">Range-view (RV) based LiDAR diffusion has recently made huge strides towards 2D photo-realism. However, it neglects 3D geometry realism and often generates various RV artifacts such as depth bleeding and wavy surfaces. We design L3DR, a 3D-aware LiDAR Diffusion and Rectification framework that can regress and cancel RV artifacts in 3D space and restore local geometry accurately. Our theoretical and empirical analysis reveals that 3D models are inherently superior to 2D models in generating sharp and authentic boundaries. Leveraging such analysis, we design a 3D residual regression network that rectifies RV artifacts and achieves superb geometry realism by predicting point-level offsets in 3D space. On top of that, we design a Welsch Loss that helps focus on local geometry and ignore anomalous regions effectively. Extensive experiments over multiple benchmarks including KITTI, KITTI360, nuScenes and Waymo show that the proposed L3DR achieves state-of-the-art generation and superior geometry-realism consistently. In addition, L3DR is generally applicable to different LiDAR diffusion models with little computational overhead.</p>
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: L3DR is a 3D-aware LiDAR diffusion framework that rectifies range-view artifacts by regressing point-level offsets in 3D space, achieving state-of-the-art generation and geometry realism on multiple benchmarks with minimal overhead.</p>
+            
+            
+            <p class="paper-tldr"><strong>TLDR</strong>: L3DR是一个3D感知的激光雷达扩散框架，通过在3D空间中回归点级偏移来纠正range-view伪影，在多个基准测试中实现了最先进的生成和几何真实感，且计算开销很小。</p>
             
 
             
@@ -387,11 +481,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2602.17124v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2602.19064v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Chi-Shiang Gau, Konstantinos D. Polyzos, Athanasios Bacharis, Saketh Madhuvarasu, Tara Javidi</p>
+            <p class="paper-authors">Authors: Quan Liu, Xiaoqin Zhang, Ling Shao, Shijian Lu</p>
             
         </motion.div>
         
@@ -399,18 +493,18 @@
             initial="{ opacity: 0, y: 50, scale: 0.9 }"
             whileInView="{ opacity: 1, y: 0, scale: 1 }"
             viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.1, ease: 'easeOut' }"  
+            transition="{ duration: 0.5, delay: 0.15000000000000002, ease: 'easeOut' }"  
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Benchmarking the Effects of Object Pose Estimation and Reconstruction on Robotic Grasping Success</h2>
+            <h2 class="paper-title">Direction-aware 3D Large Multimodal Models</h2>
             
-            <p class="paper-summary">3D reconstruction serves as the foundational layer for numerous robotic perception tasks, including 6D object pose estimation and grasp pose generation. Modern 3D reconstruction methods for objects can produce visually and geometrically impressive meshes from multi-view images, yet standard geometric evaluations do not reflect how reconstruction quality influences downstream tasks such as robotic manipulation performance. This paper addresses this gap by introducing a large-scale, physics-based benchmark that evaluates 6D pose estimators and 3D mesh models based on their functional efficacy in grasping. We analyze the impact of model fidelity by generating grasps on various reconstructed 3D meshes and executing them on the ground-truth model, simulating how grasp poses generated with an imperfect model affect interaction with the real object. This assesses the combined impact of pose error, grasp robustness, and geometric inaccuracies from 3D reconstruction. Our results show that reconstruction artifacts significantly decrease the number of grasp pose candidates but have a negligible effect on grasping performance given an accurately estimated pose. Our results also reveal that the relationship between grasp success and pose error is dominated by spatial error, and even a simple translation error provides insight into the success of the grasping pose of symmetric objects. This work provides insight into how perception systems relate to object manipulation using robots.</p>
+            <p class="paper-summary">3D large multimodal models (3D LMMs) rely heavily on ego poses for enabling directional question-answering and spatial reasoning. However, most existing point cloud benchmarks contain rich directional queries but lack the corresponding ego poses, making them inherently ill-posed in 3D large multimodal modelling. In this work, we redefine a new and rigorous paradigm that enables direction-aware 3D LMMs by identifying and supplementing ego poses into point cloud benchmarks and transforming the corresponding point cloud data according to the identified ego poses. We enable direction-aware 3D LMMs with two novel designs. The first is PoseRecover, a fully automatic pose recovery pipeline that matches questions with ego poses from RGB-D video extrinsics via object-frustum intersection and visibility check with Z-buffers. The second is PoseAlign that transforms the point cloud data to be aligned with the identified ego poses instead of either injecting ego poses into textual prompts or introducing pose-encoded features in the projection layers. Extensive experiments show that our designs yield consistent improvements across multiple 3D LMM backbones such as LL3DA, LL3DA-SONATA, Chat-Scene, and 3D-LLAVA, improving ScanRefer mIoU by 30.0% and Scan2Cap LLM-as-judge accuracy by 11.7%. In addition, our approach is simple, generic, and training-efficient, requiring only instruction tuning while establishing a strong baseline for direction-aware 3D-LMMs.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper benchmarks the impact of 3D reconstruction quality and 6D pose estimation accuracy on robotic grasping success, finding that reconstruction artifacts primarily reduce grasp candidates and that translational pose error significantly impacts grasping of symmetric objects.</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces a method to improve 3D Large Multimodal Models (LMMs) by automatically recovering and aligning ego poses in point cloud benchmarks, leading to significant improvements in directional understanding and spatial reasoning.</p>
             
             
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文评估了3D重建质量和6D位姿估计精度对机器人抓取成功率的影响，发现重建伪影主要减少了抓取候选姿势的数量，并且平移位姿误差显著影响对称物体的抓取。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: 该论文提出了一种通过自动恢复和对齐点云基准中的自我姿态来改进3D大型多模态模型(LMMs)的方法，从而显著提高了方向理解和空间推理能力。</p>
             
 
             
@@ -420,8 +514,8 @@
                 <div class="rating-item">
                     <span class="rating-label">Relevance:</span>
                     
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
                 </div>
                 
                 
@@ -481,105 +575,11 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2602.17101v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2602.19063v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Varun Burde, Pavel Burget, Torsten Sattler</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.15000000000000002, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">StereoAdapter-2: Globally Structure-Consistent Underwater Stereo Depth Estimation</h2>
-            
-            <p class="paper-summary">Stereo depth estimation is fundamental to underwater robotic perception, yet suffers from severe domain shifts caused by wavelength-dependent light attenuation, scattering, and refraction. Recent approaches leverage monocular foundation models with GRU-based iterative refinement for underwater adaptation; however, the sequential gating and local convolutional kernels in GRUs necessitate multiple iterations for long-range disparity propagation, limiting performance in large-disparity and textureless underwater regions. In this paper, we propose StereoAdapter-2, which replaces the conventional ConvGRU updater with a novel ConvSS2D operator based on selective state space models. The proposed operator employs a four-directional scanning strategy that naturally aligns with epipolar geometry while capturing vertical structural consistency, enabling efficient long-range spatial propagation within a single update step at linear computational complexity. Furthermore, we construct UW-StereoDepth-80K, a large-scale synthetic underwater stereo dataset featuring diverse baselines, attenuation coefficients, and scattering parameters through a two-stage generative pipeline combining semantic-aware style transfer and geometry-consistent novel view synthesis. Combined with dynamic LoRA adaptation inherited from StereoAdapter, our framework achieves state-of-the-art zero-shot performance on underwater benchmarks with 17% improvement on TartanAir-UW and 7.2% improvment on SQUID, with real-world validation on the BlueROV2 platform demonstrates the robustness of our approach. Code: https://github.com/AIGeeksGroup/StereoAdapter-2. Website: https://aigeeksgroup.github.io/StereoAdapter-2.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: StereoAdapter-2 introduces a novel ConvSS2D operator for underwater stereo depth estimation, improving long-range disparity propagation and achieving state-of-the-art zero-shot performance on underwater benchmarks. They also introduce a large-scale synthetic underwater stereo dataset UW-StereoDepth-80K.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: StereoAdapter-2 引入了一种新颖的 ConvSS2D 算子，用于水下立体深度估计，改善了长程视差传播，并在水下基准测试中实现了最先进的零样本性能。他们还引入了一个大型合成水下立体数据集 UW-StereoDepth-80K。</p>
-            
-
-            
-            
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2602.16915v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Zeyu Ren, Xiang Li, Yiran Wang, Zeyu Zhang, Hao Tang</p>
+            <p class="paper-authors">Authors: Quan Liu, Weihao Xuan, Junjue Wang, Naoto Yokoya, Ling Shao, Shijian Lu</p>
             
         </motion.div>
         
@@ -591,108 +591,14 @@
             class="bento-item"
             data-motion-element
         >
-            <h2 class="paper-title">Learning Humanoid End-Effector Control for Open-Vocabulary Visual Loco-Manipulation</h2>
+            <h2 class="paper-title">OpenVO: Open-World Visual Odometry with Temporal Dynamics Awareness</h2>
             
-            <p class="paper-summary">Visual loco-manipulation of arbitrary objects in the wild with humanoid robots requires accurate end-effector (EE) control and a generalizable understanding of the scene via visual inputs (e.g., RGB-D images). Existing approaches are based on real-world imitation learning and exhibit limited generalization due to the difficulty in collecting large-scale training datasets. This paper presents a new paradigm, HERO, for object loco-manipulation with humanoid robots that combines the strong generalization and open-vocabulary understanding of large vision models with strong control performance from simulated training. We achieve this by designing an accurate residual-aware EE tracking policy. This EE tracking policy combines classical robotics with machine learning. It uses a) inverse kinematics to convert residual end-effector targets into reference trajectories, b) a learned neural forward model for accurate forward kinematics, c) goal adjustment, and d) replanning. Together, these innovations help us cut down the end-effector tracking error by 3.2x. We use this accurate end-effector tracker to build a modular system for loco-manipulation, where we use open-vocabulary large vision models for strong visual generalization. Our system is able to operate in diverse real-world environments, from offices to coffee shops, where the robot is able to reliably manipulate various everyday objects (e.g., mugs, apples, toys) on surfaces ranging from 43cm to 92cm in height. Systematic modular and end-to-end tests in simulation and the real world demonstrate the effectiveness of our proposed design. We believe the advances in this paper can open up new ways of training humanoid robots to interact with daily objects.</p>
+            <p class="paper-summary">We introduce OpenVO, a novel framework for Open-world Visual Odometry (VO) with temporal awareness under limited input conditions. OpenVO effectively estimates real-world-scale ego-motion from monocular dashcam footage with varying observation rates and uncalibrated cameras, enabling robust trajectory dataset construction from rare driving events recorded in dashcam. Existing VO methods are trained on fixed observation frequency (e.g., 10Hz or 12Hz), completely overlooking temporal dynamics information. Many prior methods also require calibrated cameras with known intrinsic parameters. Consequently, their performance degrades when (1) deployed under unseen observation frequencies or (2) applied to uncalibrated cameras. These significantly limit their generalizability to many downstream tasks, such as extracting trajectories from dashcam footage. To address these challenges, OpenVO (1) explicitly encodes temporal dynamics information within a two-frame pose regression framework and (2) leverages 3D geometric priors derived from foundation models. We validate our method on three major autonomous-driving benchmarks - KITTI, nuScenes, and Argoverse 2 - achieving more than 20 performance improvement over state-of-the-art approaches. Under varying observation rate settings, our method is significantly more robust, achieving 46%-92% lower errors across all metrics. These results demonstrate the versatility of OpenVO for real-world 3D reconstruction and diverse downstream applications.</p>
             
-            <p class="paper-tldr"><strong>TLDR</strong>: This paper introduces HERO, a new paradigm for humanoid robot loco-manipulation that leverages large vision models and a novel residual-aware end-effector tracking policy for improved generalization and control in real-world environments.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍了一种名为 HERO 的新人形机器人移动操作范例，该范例利用大型视觉模型和一种新型残差感知末端执行器跟踪策略，从而在现实环境中提高了泛化性和控制能力。</p>
-            
-
+            <p class="paper-tldr"><strong>TLDR</strong>: OpenVO is a new visual odometry framework designed for monocular dashcam footage with varying observation rates and uncalibrated cameras, using temporal dynamics and 3D geometric priors from foundation models to achieve improved robustness and performance.</p>
             
             
-            <div class="paper-sub-ratings" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 5px; font-size: 0.8em;">
-                
-                <div class="rating-item">
-                    <span class="rating-label">Relevance:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Novelty:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Clarity:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    <span class="text-xs text-gray-500 ml-1">(9/10)</span>
-                </div>
-                
-                
-                <div class="rating-item">
-                    <span class="rating-label">Potential Impact:</span>
-                    
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
-                    <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-                </div>
-                
-            </div>
-            
-            
-
-            
-            <div class="paper-rating">
-                <span class="rating-label" style="color: #000; font-weight: bold;">Overall:</span>
-                
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="fas fa-star"></i>
-                    
-                
-                    
-                        <i class="far fa-star"></i>
-                    
-                
-                <span class="text-xs text-gray-500 ml-1">(8/10)</span>
-            </div>
-            
-
-            <a href="http://arxiv.org/abs/2602.16705v1" target="_blank" class="paper-link">
-                <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
-            </a>
-            
-            <p class="paper-authors">Authors: Runpei Dong, Ziyan Li, Xialin He, Saurabh Gupta</p>
-            
-        </motion.div>
-        
-        <motion.div
-            initial="{ opacity: 0, y: 50, scale: 0.9 }"
-            whileInView="{ opacity: 1, y: 0, scale: 1 }"
-            viewport="{ once: true, amount: 0.2 }" /* Trigger when 20% is visible */
-            transition="{ duration: 0.5, delay: 0.25, ease: 'easeOut' }"  
-            class="bento-item"
-            data-motion-element
-        >
-            <h2 class="paper-title">PredMapNet: Future and Historical Reasoning for Consistent Online HD Vectorized Map Construction</h2>
-            
-            <p class="paper-summary">High-definition (HD) maps are crucial to autonomous driving, providing structured representations of road elements to support navigation and planning. However, existing query-based methods often employ random query initialization and depend on implicit temporal modeling, which lead to temporal inconsistencies and instabilities during the construction of a global map. To overcome these challenges, we introduce a novel end-to-end framework for consistent online HD vectorized map construction, which jointly performs map instance tracking and short-term prediction. First, we propose a Semantic-Aware Query Generator that initializes queries with spatially aligned semantic masks to capture scene-level context globally. Next, we design a History Rasterized Map Memory to store fine-grained instance-level maps for each tracked instance, enabling explicit historical priors. A History-Map Guidance Module then integrates rasterized map information into track queries, improving temporal continuity. Finally, we propose a Short-Term Future Guidance module to forecast the immediate motion of map instances based on the stored history trajectories. These predicted future locations serve as hints for tracked instances to further avoid implausible predictions and keep temporal consistency. Extensive experiments on the nuScenes and Argoverse2 datasets demonstrate that our proposed method outperforms state-of-the-art (SOTA) methods with good efficiency.</p>
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: The paper introduces PredMapNet, a novel end-to-end framework for consistent online HD vectorized map construction that uses semantic-aware query generation, a history rasterized map memory, and short-term future guidance to improve temporal consistency and outperform SOTA methods.</p>
-            
-            
-            <p class="paper-tldr"><strong>TLDR</strong>: 本文介绍PredMapNet，一种用于一致在线高清矢量地图构建的新型端到端框架，该框架使用语义感知的查询生成、历史栅格化地图内存和短期未来指导来提高时间一致性并优于SOTA方法。</p>
+            <p class="paper-tldr"><strong>TLDR</strong>: OpenVO是一个新的视觉里程计框架，专为具有不同观察速率和未校准相机的单目行车记录仪视频设计，它利用时间动态和来自基础模型的3D几何先验，以实现更高的鲁棒性和性能。</p>
             
 
             
@@ -763,18 +669,18 @@
             </div>
             
 
-            <a href="http://arxiv.org/abs/2602.16669v1" target="_blank" class="paper-link">
+            <a href="http://arxiv.org/abs/2602.19035v1" target="_blank" class="paper-link">
                 <i class="fas fa-file-pdf mr-1"></i> Read Paper (PDF)
             </a>
             
-            <p class="paper-authors">Authors: Bo Lang, Nirav Savaliya, Zhihao Zheng, Jinglun Feng, Zheng-Hang Yeh, Mooi Choo Chuah</p>
+            <p class="paper-authors">Authors: Phuc D. A. Nguyen, Anh N. Nhu, Ming C. Lin</p>
             
         </motion.div>
         
     </div>
 
     <footer class="footer">
-        Generated on 2026-02-24 03:35:53 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
+        Generated on 2026-02-24 03:37:36 UTC. Powered by <a href="https://github.com/onion-liu" target="_blank">onion-liu</a>.
     </footer>
 
 </body>

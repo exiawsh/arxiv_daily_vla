@@ -1,0 +1,121 @@
+[
+    {
+        "title": "TeFlow: Enabling Multi-frame Supervision for Self-Supervised Feed-forward Scene Flow Estimation",
+        "summary": "Self-supervised feed-forward methods for scene flow estimation offer real-time efficiency, but their supervision from two-frame point correspondences is unreliable and often breaks down under occlusions. Multi-frame supervision has the potential to provide more stable guidance by incorporating motion cues from past frames, yet naive extensions of two-frame objectives are ineffective because point correspondences vary abruptly across frames, producing inconsistent signals. In the paper, we present TeFlow, enabling multi-frame supervision for feed-forward models by mining temporally consistent supervision. TeFlow introduces a temporal ensembling strategy that forms reliable supervisory signals by aggregating the most temporally consistent motion cues from a candidate pool built across multiple frames. Extensive evaluations demonstrate that TeFlow establishes a new state-of-the-art for self-supervised feed-forward methods, achieving performance gains of up to 33\\% on the challenging Argoverse 2 and nuScenes datasets. Our method performs on par with leading optimization-based methods, yet speeds up 150 times. The code is open-sourced at https://github.com/KTH-RPL/OpenSceneFlow along with trained model weights.",
+        "url": "http://arxiv.org/abs/2602.19053v1",
+        "published_date": "2026-02-22T05:50:16+00:00",
+        "updated_date": "2026-02-22T05:50:16+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Qingwen Zhang",
+            "Chenhan Jiang",
+            "Xiaomeng Zhu",
+            "Yunqi Miao",
+            "Yushan Zhang",
+            "Olov Andersson",
+            "Patric Jensfelt"
+        ],
+        "tldr": "The paper presents TeFlow, a novel self-supervised feed-forward method for scene flow estimation that leverages multi-frame supervision by mining temporally consistent motion cues, achieving state-of-the-art performance with significant speedups.",
+        "tldr_zh": "该论文提出TeFlow，一种新的自监督前馈场景流估计方法，通过挖掘时间一致的运动线索来利用多帧监督，实现了最先进的性能并显著提高了速度。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "GS-CLIP: Zero-shot 3D Anomaly Detection by Geometry-Aware Prompt and Synergistic View Representation Learning",
+        "summary": "Zero-shot 3D Anomaly Detection is an emerging task that aims to detect anomalies in a target dataset without any target training data, which is particularly important in scenarios constrained by sample scarcity and data privacy concerns. While current methods adapt CLIP by projecting 3D point clouds into 2D representations, they face challenges. The projection inherently loses some geometric details, and the reliance on a single 2D modality provides an incomplete visual understanding, limiting their ability to detect diverse anomaly types. To address these limitations, we propose the Geometry-Aware Prompt and Synergistic View Representation Learning (GS-CLIP) framework, which enables the model to identify geometric anomalies through a two-stage learning process. In stage 1, we dynamically generate text prompts embedded with 3D geometric priors. These prompts contain global shape context and local defect information distilled by our Geometric Defect Distillation Module (GDDM). In stage 2, we introduce Synergistic View Representation Learning architecture that processes rendered and depth images in parallel. A Synergistic Refinement Module (SRM) subsequently fuses the features of both streams, capitalizing on their complementary strengths. Comprehensive experimental results on four large-scale public datasets show that GS-CLIP achieves superior performance in detection. Code can be available at https://github.com/zhushengxinyue/GS-CLIP.",
+        "url": "http://arxiv.org/abs/2602.19206v1",
+        "published_date": "2026-02-22T14:30:41+00:00",
+        "updated_date": "2026-02-22T14:30:41+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zehao Deng",
+            "An Liu",
+            "Yan Wang"
+        ],
+        "tldr": "The paper introduces GS-CLIP, a novel zero-shot 3D anomaly detection framework leveraging geometry-aware prompts and synergistic view representation learning to overcome limitations of existing CLIP-based methods in capturing geometric details and diverse anomaly types.",
+        "tldr_zh": "该论文介绍了GS-CLIP，一种新颖的零样本3D异常检测框架，它利用几何感知提示和协同视图表示学习来克服现有基于CLIP方法在捕获几何细节和各种异常类型方面的局限性。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "L3DR: 3D-aware LiDAR Diffusion and Rectification",
+        "summary": "Range-view (RV) based LiDAR diffusion has recently made huge strides towards 2D photo-realism. However, it neglects 3D geometry realism and often generates various RV artifacts such as depth bleeding and wavy surfaces. We design L3DR, a 3D-aware LiDAR Diffusion and Rectification framework that can regress and cancel RV artifacts in 3D space and restore local geometry accurately. Our theoretical and empirical analysis reveals that 3D models are inherently superior to 2D models in generating sharp and authentic boundaries. Leveraging such analysis, we design a 3D residual regression network that rectifies RV artifacts and achieves superb geometry realism by predicting point-level offsets in 3D space. On top of that, we design a Welsch Loss that helps focus on local geometry and ignore anomalous regions effectively. Extensive experiments over multiple benchmarks including KITTI, KITTI360, nuScenes and Waymo show that the proposed L3DR achieves state-of-the-art generation and superior geometry-realism consistently. In addition, L3DR is generally applicable to different LiDAR diffusion models with little computational overhead.",
+        "url": "http://arxiv.org/abs/2602.19064v1",
+        "published_date": "2026-02-22T06:31:58+00:00",
+        "updated_date": "2026-02-22T06:31:58+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Quan Liu",
+            "Xiaoqin Zhang",
+            "Ling Shao",
+            "Shijian Lu"
+        ],
+        "tldr": "L3DR is a 3D-aware LiDAR diffusion framework that rectifies range-view artifacts by regressing point-level offsets in 3D space, achieving state-of-the-art generation and geometry realism on multiple benchmarks with minimal overhead.",
+        "tldr_zh": "L3DR是一个3D感知的激光雷达扩散框架，通过在3D空间中回归点级偏移来纠正range-view伪影，在多个基准测试中实现了最先进的生成和几何真实感，且计算开销很小。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Direction-aware 3D Large Multimodal Models",
+        "summary": "3D large multimodal models (3D LMMs) rely heavily on ego poses for enabling directional question-answering and spatial reasoning. However, most existing point cloud benchmarks contain rich directional queries but lack the corresponding ego poses, making them inherently ill-posed in 3D large multimodal modelling. In this work, we redefine a new and rigorous paradigm that enables direction-aware 3D LMMs by identifying and supplementing ego poses into point cloud benchmarks and transforming the corresponding point cloud data according to the identified ego poses. We enable direction-aware 3D LMMs with two novel designs. The first is PoseRecover, a fully automatic pose recovery pipeline that matches questions with ego poses from RGB-D video extrinsics via object-frustum intersection and visibility check with Z-buffers. The second is PoseAlign that transforms the point cloud data to be aligned with the identified ego poses instead of either injecting ego poses into textual prompts or introducing pose-encoded features in the projection layers. Extensive experiments show that our designs yield consistent improvements across multiple 3D LMM backbones such as LL3DA, LL3DA-SONATA, Chat-Scene, and 3D-LLAVA, improving ScanRefer mIoU by 30.0% and Scan2Cap LLM-as-judge accuracy by 11.7%. In addition, our approach is simple, generic, and training-efficient, requiring only instruction tuning while establishing a strong baseline for direction-aware 3D-LMMs.",
+        "url": "http://arxiv.org/abs/2602.19063v1",
+        "published_date": "2026-02-22T06:31:28+00:00",
+        "updated_date": "2026-02-22T06:31:28+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Quan Liu",
+            "Weihao Xuan",
+            "Junjue Wang",
+            "Naoto Yokoya",
+            "Ling Shao",
+            "Shijian Lu"
+        ],
+        "tldr": "This paper introduces a method to improve 3D Large Multimodal Models (LMMs) by automatically recovering and aligning ego poses in point cloud benchmarks, leading to significant improvements in directional understanding and spatial reasoning.",
+        "tldr_zh": "该论文提出了一种通过自动恢复和对齐点云基准中的自我姿态来改进3D大型多模态模型(LMMs)的方法，从而显著提高了方向理解和空间推理能力。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "OpenVO: Open-World Visual Odometry with Temporal Dynamics Awareness",
+        "summary": "We introduce OpenVO, a novel framework for Open-world Visual Odometry (VO) with temporal awareness under limited input conditions. OpenVO effectively estimates real-world-scale ego-motion from monocular dashcam footage with varying observation rates and uncalibrated cameras, enabling robust trajectory dataset construction from rare driving events recorded in dashcam. Existing VO methods are trained on fixed observation frequency (e.g., 10Hz or 12Hz), completely overlooking temporal dynamics information. Many prior methods also require calibrated cameras with known intrinsic parameters. Consequently, their performance degrades when (1) deployed under unseen observation frequencies or (2) applied to uncalibrated cameras. These significantly limit their generalizability to many downstream tasks, such as extracting trajectories from dashcam footage. To address these challenges, OpenVO (1) explicitly encodes temporal dynamics information within a two-frame pose regression framework and (2) leverages 3D geometric priors derived from foundation models. We validate our method on three major autonomous-driving benchmarks - KITTI, nuScenes, and Argoverse 2 - achieving more than 20 performance improvement over state-of-the-art approaches. Under varying observation rate settings, our method is significantly more robust, achieving 46%-92% lower errors across all metrics. These results demonstrate the versatility of OpenVO for real-world 3D reconstruction and diverse downstream applications.",
+        "url": "http://arxiv.org/abs/2602.19035v1",
+        "published_date": "2026-02-22T04:18:29+00:00",
+        "updated_date": "2026-02-22T04:18:29+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Phuc D. A. Nguyen",
+            "Anh N. Nhu",
+            "Ming C. Lin"
+        ],
+        "tldr": "OpenVO is a new visual odometry framework designed for monocular dashcam footage with varying observation rates and uncalibrated cameras, using temporal dynamics and 3D geometric priors from foundation models to achieve improved robustness and performance.",
+        "tldr_zh": "OpenVO是一个新的视觉里程计框架，专为具有不同观察速率和未校准相机的单目行车记录仪视频设计，它利用时间动态和来自基础模型的3D几何先验，以实现更高的鲁棒性和性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    }
+]

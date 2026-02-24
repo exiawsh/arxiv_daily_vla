@@ -1,0 +1,295 @@
+[
+    {
+        "title": "RADE-Net: Robust Attention Network for Radar-Only Object Detection in Adverse Weather",
+        "summary": "Automotive perception systems are obligated to meet high requirements. While optical sensors such as Camera and Lidar struggle in adverse weather conditions, Radar provides a more robust perception performance, effectively penetrating fog, rain, and snow. Since full Radar tensors have large data sizes and very few datasets provide them, most Radar-based approaches work with sparse point clouds or 2D projections, which can result in information loss. Additionally, deep learning methods show potential to extract richer and more dense features from low level Radar data and therefore significantly increase the perception performance. Therefore, we propose a 3D projection method for fast-Fourier-transformed 4D Range-Azimuth-Doppler-Elevation (RADE) tensors. Our method preserves rich Doppler and Elevation features while reducing the required data size for a single frame by 91.9% compared to a full tensor, thus achieving higher training and inference speed as well as lower model complexity. We introduce RADE-Net, a lightweight model tailored to 3D projections of the RADE tensor. The backbone enables exploitation of low-level and high-level cues of Radar tensors with spatial and channel-attention. The decoupled detection heads predict object center-points directly in the Range-Azimuth domain and regress rotated 3D bounding boxes from rich feature maps in the cartesian scene. We evaluate the model on scenes with multiple different road users and under various weather conditions on the large-scale K-Radar dataset and achieve a 16.7% improvement compared to their baseline, as well as 6.5% improvement over current Radar-only models. Additionally, we outperform several Lidar approaches in scenarios with adverse weather conditions. The code is available under https://github.com/chr-is-tof/RADE-Net.",
+        "url": "http://arxiv.org/abs/2602.19994v1",
+        "published_date": "2026-02-23T16:01:31+00:00",
+        "updated_date": "2026-02-23T16:01:31+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Christof Leitgeb",
+            "Thomas Puchleitner",
+            "Max Peter Ronecker",
+            "Daniel Watzenig"
+        ],
+        "tldr": "The paper introduces RADE-Net, a novel and lightweight radar-only object detection network that uses a 3D projection of 4D Range-Azimuth-Doppler-Elevation (RADE) tensors, achieving state-of-the-art results, particularly in adverse weather conditions, and outperforming even LiDAR-based approaches in such scenarios.",
+        "tldr_zh": "该论文介绍了RADE-Net，一种新颖且轻量级的纯雷达目标检测网络，它使用4D距离-方位角-多普勒-仰角（RADE）张量的3D投影，实现了最先进的结果，尤其是在恶劣天气条件下，并且在这种情况下甚至优于基于激光雷达的方法。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "WildOS: Open-Vocabulary Object Search in the Wild",
+        "summary": "Autonomous navigation in complex, unstructured outdoor environments requires robots to operate over long ranges without prior maps and limited depth sensing. In such settings, relying solely on geometric frontiers for exploration is often insufficient. In such settings, the ability to reason semantically about where to go and what is safe to traverse is crucial for robust, efficient exploration. This work presents WildOS, a unified system for long-range, open-vocabulary object search that combines safe geometric exploration with semantic visual reasoning. WildOS builds a sparse navigation graph to maintain spatial memory, while utilizing a foundation-model-based vision module, ExploRFM, to score frontier nodes of the graph. ExploRFM simultaneously predicts traversability, visual frontiers, and object similarity in image space, enabling real-time, onboard semantic navigation tasks. The resulting vision-scored graph enables the robot to explore semantically meaningful directions while ensuring geometric safety. Furthermore, we introduce a particle-filter-based method for coarse localization of the open-vocabulary target query, that estimates candidate goal positions beyond the robot's immediate depth horizon, enabling effective planning toward distant goals. Extensive closed-loop field experiments across diverse off-road and urban terrains demonstrate that WildOS enables robust navigation, significantly outperforming purely geometric and purely vision-based baselines in both efficiency and autonomy. Our results highlight the potential of vision foundation models to drive open-world robotic behaviors that are both semantically informed and geometrically grounded. Project Page: https://leggedrobotics.github.io/wildos/",
+        "url": "http://arxiv.org/abs/2602.19308v1",
+        "published_date": "2026-02-22T19:14:00+00:00",
+        "updated_date": "2026-02-22T19:14:00+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Hardik Shah",
+            "Erica Tevere",
+            "Deegan Atha",
+            "Marcel Kaufmann",
+            "Shehryar Khattak",
+            "Manthan Patel",
+            "Marco Hutter",
+            "Jonas Frey",
+            "Patrick Spieler"
+        ],
+        "tldr": "WildOS is a system for autonomous navigation in unstructured outdoor environments that combines geometric exploration with semantic visual reasoning using foundation models for traversability, visual frontier, and object similarity prediction, outperforming geometric and vision-based baselines.",
+        "tldr_zh": "WildOS是一个自主导航系统，适用于非结构化户外环境，结合了几何探索和语义视觉推理，利用基础模型进行可穿越性、视觉前沿和物体相似性预测，性能优于几何和视觉基线。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "MeanFuser: Fast One-Step Multi-Modal Trajectory Generation and Adaptive Reconstruction via MeanFlow for End-to-End Autonomous Driving",
+        "summary": "Generative models have shown great potential in trajectory planning. Recent studies demonstrate that anchor-guided generative models are effective in modeling the uncertainty of driving behaviors and improving overall performance. However, these methods rely on discrete anchor vocabularies that must sufficiently cover the trajectory distribution during testing to ensure robustness, inducing an inherent trade-off between vocabulary size and model performance. To overcome this limitation, we propose MeanFuser, an end-to-end autonomous driving method that enhances both efficiency and robustness through three key designs. (1) We introduce Gaussian Mixture Noise (GMN) to guide generative sampling, enabling a continuous representation of the trajectory space and eliminating the dependency on discrete anchor vocabularies. (2) We adapt ``MeanFlow Identity\" to end-to-end planning, which models the mean velocity field between GMN and trajectory distribution instead of the instantaneous velocity field used in vanilla flow matching methods, effectively eliminating numerical errors from ODE solvers and significantly accelerating inference. (3) We design a lightweight Adaptive Reconstruction Module (ARM) that enables the model to implicitly select from all sampled proposals or reconstruct a new trajectory when none is satisfactory via attention weights. Experiments on the NAVSIM closed-loop benchmark demonstrate that MeanFuser achieves outstanding performance without the supervision of the PDM Score. and exceptional inference efficiency, offering a robust and efficient solution for end-to-end autonomous driving. Our code and model are available at https://github.com/wjl2244/MeanFuser.",
+        "url": "http://arxiv.org/abs/2602.20060v1",
+        "published_date": "2026-02-23T17:17:26+00:00",
+        "updated_date": "2026-02-23T17:17:26+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Junli Wang",
+            "Xueyi Liu",
+            "Yinan Zheng",
+            "Zebing Xing",
+            "Pengfei Li",
+            "Guang Li",
+            "Kun Ma",
+            "Guang Chen",
+            "Hangjun Ye",
+            "Zhongpu Xia",
+            "Long Chen",
+            "Qichao Zhang"
+        ],
+        "tldr": "MeanFuser introduces a novel end-to-end autonomous driving method using Gaussian Mixture Noise, MeanFlow, and an Adaptive Reconstruction Module to improve trajectory generation efficiency and robustness, eliminating the need for discrete anchor vocabularies.",
+        "tldr_zh": "MeanFuser 提出了一种新的端到端自动驾驶方法，该方法使用高斯混合噪声、MeanFlow 和自适应重建模块，以提高轨迹生成的效率和鲁棒性，消除了对离散锚词汇的依赖。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Open-vocabulary 3D scene perception in industrial environments",
+        "summary": "Autonomous vision applications in production, intralogistics, or manufacturing environments require perception capabilities beyond a small, fixed set of classes. Recent open-vocabulary methods, leveraging 2D Vision-Language Foundation Models (VLFMs), target this task but often rely on class-agnostic segmentation models pre-trained on non-industrial datasets (e.g., household scenes). In this work, we first demonstrate that such models fail to generalize, performing poorly on common industrial objects. Therefore, we propose a training-free, open-vocabulary 3D perception pipeline that overcomes this limitation. Instead of using a pre-trained model to generate instance proposals, our method simply generates masks by merging pre-computed superpoints based on their semantic features. Following, we evaluate the domain-adapted VLFM \"IndustrialCLIP\" on a representative 3D industrial workshop scene for open-vocabulary querying. Our qualitative results demonstrate successful segmentation of industrial objects.",
+        "url": "http://arxiv.org/abs/2602.19823v1",
+        "published_date": "2026-02-23T13:22:51+00:00",
+        "updated_date": "2026-02-23T13:22:51+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Keno Moenck",
+            "Adrian Philip Florea",
+            "Julian Koch",
+            "Thorsten Schüppstuhl"
+        ],
+        "tldr": "This paper addresses the challenge of open-vocabulary 3D scene perception in industrial environments by proposing a training-free pipeline that combines superpoint merging with a domain-adapted VLFM, achieving successful segmentation of industrial objects.",
+        "tldr_zh": "本文提出了一种无需训练的流水线，通过结合超点合并和领域自适应的视觉语言基础模型，解决了工业环境中开放词汇三维场景感知的挑战，实现了工业物体的成功分割。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "VGGT-MPR: VGGT-Enhanced Multimodal Place Recognition in Autonomous Driving Environments",
+        "summary": "In autonomous driving, robust place recognition is critical for global localization and loop closure detection. While inter-modality fusion of camera and LiDAR data in multimodal place recognition (MPR) has shown promise in overcoming the limitations of unimodal counterparts, existing MPR methods basically attend to hand-crafted fusion strategies and heavily parameterized backbones that require costly retraining. To address this, we propose VGGT-MPR, a multimodal place recognition framework that adopts the Visual Geometry Grounded Transformer (VGGT) as a unified geometric engine for both global retrieval and re-ranking. In the global retrieval stage, VGGT extracts geometrically-rich visual embeddings through prior depth-aware and point map supervision, and densifies sparse LiDAR point clouds with predicted depth maps to improve structural representation. This enhances the discriminative ability of fused multimodal features and produces global descriptors for fast retrieval. Beyond global retrieval, we design a training-free re-ranking mechanism that exploits VGGT's cross-view keypoint-tracking capability. By combining mask-guided keypoint extraction with confidence-aware correspondence scoring, our proposed re-ranking mechanism effectively refines retrieval results without additional parameter optimization. Extensive experiments on large-scale autonomous driving benchmarks and our self-collected data demonstrate that VGGT-MPR achieves state-of-the-art performance, exhibiting strong robustness to severe environmental changes, viewpoint shifts, and occlusions. Our code and data will be made publicly available.",
+        "url": "http://arxiv.org/abs/2602.19735v1",
+        "published_date": "2026-02-23T11:33:56+00:00",
+        "updated_date": "2026-02-23T11:33:56+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jingyi Xu",
+            "Zhangshuo Qi",
+            "Zhongmiao Yan",
+            "Xuyu Gao",
+            "Qianyun Jiao",
+            "Songpengcheng Xia",
+            "Xieyuanli Chen",
+            "Ling Pei"
+        ],
+        "tldr": "The paper introduces VGGT-MPR, a novel multimodal place recognition framework for autonomous driving that utilizes a Visual Geometry Grounded Transformer (VGGT) to enhance global retrieval and re-ranking, achieving state-of-the-art performance and robustness.",
+        "tldr_zh": "该论文介绍了一种新的用于自动驾驶的多模态地点识别框架VGGT-MPR，该框架利用视觉几何接地变换器（VGGT）来增强全局检索和重新排序，实现了最先进的性能和鲁棒性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Generative 6D Pose Estimation via Conditional Flow Matching",
+        "summary": "Existing methods for instance-level 6D pose estimation typically rely on neural networks that either directly regress the pose in $\\mathrm{SE}(3)$ or estimate it indirectly via local feature matching. The former struggle with object symmetries, while the latter fail in the absence of distinctive local features. To overcome these limitations, we propose a novel formulation of 6D pose estimation as a conditional flow matching problem in $\\mathbb{R}^3$. We introduce Flose, a generative method that infers object poses via a denoising process conditioned on local features. While prior approaches based on conditional flow matching perform denoising solely based on geometric guidance, Flose integrates appearance-based semantic features to mitigate ambiguities caused by object symmetries. We further incorporate RANSAC-based registration to handle outliers. We validate Flose on five datasets from the established BOP benchmark. Flose outperforms prior methods with an average improvement of +4.5 Average Recall. Project Website : https://tev-fbk.github.io/Flose/",
+        "url": "http://arxiv.org/abs/2602.19719v1",
+        "published_date": "2026-02-23T11:15:12+00:00",
+        "updated_date": "2026-02-23T11:15:12+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Amir Hamza",
+            "Davide Boscaini",
+            "Weihang Li",
+            "Benjamin Busam",
+            "Fabio Poiesi"
+        ],
+        "tldr": "The paper introduces Flose, a generative method for 6D pose estimation using conditional flow matching, which incorporates both geometric and appearance-based semantic features to overcome limitations of existing methods, showing improved performance on the BOP benchmark.",
+        "tldr_zh": "该论文介绍了一种名为Flose的生成式方法，用于6D姿态估计，它使用条件流匹配，结合了几何和基于外观的语义特征，克服了现有方法的局限性，并在BOP基准测试中表现出更好的性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Universal Pose Pretraining for Generalizable Vision-Language-Action Policies",
+        "summary": "Existing Vision-Language-Action (VLA) models often suffer from feature collapse and low training efficiency because they entangle high-level perception with sparse, embodiment-specific action supervision. Since these models typically rely on VLM backbones optimized for Visual Question Answering (VQA), they excel at semantic identification but often overlook subtle 3D state variations that dictate distinct action patterns.\n  To resolve these misalignments, we propose Pose-VLA, a decoupled paradigm that separates VLA training into a pre-training phase for extracting universal 3D spatial priors in a unified camera-centric space, and a post-training phase for efficient embodiment alignment within robot-specific action space. By introducing discrete pose tokens as a universal representation, Pose-VLA seamlessly integrates spatial grounding from diverse 3D datasets with geometry-level trajectories from robotic demonstrations. Our framework follows a two-stage pre-training pipeline, establishing fundamental spatial grounding via poses followed by motion alignment through trajectory supervision.\n  Extensive evaluations demonstrate that Pose-VLA achieves state-of-the-art results on RoboTwin 2.0 with a 79.5% average success rate and competitive performance on LIBERO at 96.0%. Real-world experiments further showcase robust generalization across diverse objects using only 100 demonstrations per task, validating the efficiency of our pre-training paradigm.",
+        "url": "http://arxiv.org/abs/2602.19710v1",
+        "published_date": "2026-02-23T11:00:08+00:00",
+        "updated_date": "2026-02-23T11:00:08+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG",
+            "cs.RO"
+        ],
+        "authors": [
+            "Haitao Lin",
+            "Hanyang Yu",
+            "Jingshun Huang",
+            "He Zhang",
+            "Yonggen Ling",
+            "Ping Tan",
+            "Xiangyang Xue",
+            "Yanwei Fu"
+        ],
+        "tldr": "The paper introduces Pose-VLA, a decoupled Vision-Language-Action model pre-trained on 3D spatial priors and robot-specific action spaces, achieving SOTA results on RoboTwin 2.0 and competitive performance on LIBERO with efficient real-world generalization.",
+        "tldr_zh": "该论文介绍了 Pose-VLA，一种解耦的视觉-语言-动作模型，它在 3D 空间先验和特定于机器人的动作空间上进行预训练，在 RoboTwin 2.0 上实现了 SOTA 结果，并在 LIBERO 上实现了具有竞争力的性能，同时具有高效的真实世界泛化能力。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Fore-Mamba3D: Mamba-based Foreground-Enhanced Encoding for 3D Object Detection",
+        "summary": "Linear modeling methods like Mamba have been merged as the effective backbone for the 3D object detection task. However, previous Mamba-based methods utilize the bidirectional encoding for the whole non-empty voxel sequence, which contains abundant useless background information in the scenes. Though directly encoding foreground voxels appears to be a plausible solution, it tends to degrade detection performance. We attribute this to the response attenuation and restricted context representation in the linear modeling for fore-only sequences. To address this problem, we propose a novel backbone, termed Fore-Mamba3D, to focus on the foreground enhancement by modifying Mamba-based encoder. The foreground voxels are first sampled according to the predicted scores. Considering the response attenuation existing in the interaction of foreground voxels across different instances, we design a regional-to-global slide window (RGSW) to propagate the information from regional split to the entire sequence. Furthermore, a semantic-assisted and state spatial fusion module (SASFMamba) is proposed to enrich contextual representation by enhancing semantic and geometric awareness within the Mamba model. Our method emphasizes foreground-only encoding and alleviates the distance-based and causal dependencies in the linear autoregression model. The superior performance across various benchmarks demonstrates the effectiveness of Fore-Mamba3D in the 3D object detection task.",
+        "url": "http://arxiv.org/abs/2602.19536v1",
+        "published_date": "2026-02-23T06:03:07+00:00",
+        "updated_date": "2026-02-23T06:03:07+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Zhiwei Ning",
+            "Xuanang Gao",
+            "Jiaxi Cao",
+            "Runze Yang",
+            "Huiying Xu",
+            "Xinzhong Zhu",
+            "Jie Yang",
+            "Wei Liu"
+        ],
+        "tldr": "The paper introduces Fore-Mamba3D, a novel Mamba-based backbone for 3D object detection that focuses on foreground enhancement using a regional-to-global slide window and a semantic-assisted fusion module to address limitations of previous Mamba-based methods.",
+        "tldr_zh": "该论文介绍了一种名为 Fore-Mamba3D 的新型基于 Mamba 的 3D 目标检测骨干网络，该网络通过区域到全局滑动窗口和语义辅助融合模块来增强前景，以解决先前基于 Mamba 的方法的局限性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Seeing Farther and Smarter: Value-Guided Multi-Path Reflection for VLM Policy Optimization",
+        "summary": "Solving complex, long-horizon robotic manipulation tasks requires a deep understanding of physical interactions, reasoning about their long-term consequences, and precise high-level planning. Vision-Language Models (VLMs) offer a general perceive-reason-act framework for this goal. However, previous approaches using reflective planning to guide VLMs in correcting actions encounter significant limitations. These methods rely on inefficient and often inaccurate implicit learning of state-values from noisy foresight predictions, evaluate only a single greedy future, and suffer from substantial inference latency. To address these limitations, we propose a novel test-time computation framework that decouples state evaluation from action generation. This provides a more direct and fine-grained supervisory signal for robust decision-making. Our method explicitly models the advantage of an action plan, quantified by its reduction in distance to the goal, and uses a scalable critic to estimate. To address the stochastic nature of single-trajectory evaluation, we employ beam search to explore multiple future paths and aggregate them during decoding to model their expected long-term returns, leading to more robust action generation. Additionally, we introduce a lightweight, confidence-based trigger that allows for early exit when direct predictions are reliable, invoking reflection only when necessary. Extensive experiments on diverse, unseen multi-stage robotic manipulation tasks demonstrate a 24.6% improvement in success rate over state-of-the-art baselines, while significantly reducing inference time by 56.5%.",
+        "url": "http://arxiv.org/abs/2602.19372v1",
+        "published_date": "2026-02-22T22:53:16+00:00",
+        "updated_date": "2026-02-22T22:53:16+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Yanting Yang",
+            "Shenyuan Gao",
+            "Qingwen Bu",
+            "Li Chen",
+            "Dimitris N. Metaxas"
+        ],
+        "tldr": "This paper introduces a novel framework that improves VLM policy optimization for robotic manipulation by decoupling state evaluation from action generation, employing multi-path beam search, and using a confidence-based trigger for reflection, achieving significant improvements in success rate and inference time.",
+        "tldr_zh": "本文提出了一种新颖的框架，通过解耦状态评估和动作生成，采用多路径束搜索，并使用基于置信度的触发器进行反思，从而改进了用于机器人操作的VLM策略优化，并在成功率和推理时间方面取得了显著提升。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "UP-Fuse: Uncertainty-guided LiDAR-Camera Fusion for 3D Panoptic Segmentation",
+        "summary": "LiDAR-camera fusion enhances 3D panoptic segmentation by leveraging camera images to complement sparse LiDAR scans, but it also introduces a critical failure mode. Under adverse conditions, degradation or failure of the camera sensor can significantly compromise the reliability of the perception system. To address this problem, we introduce UP-Fuse, a novel uncertainty-aware fusion framework in the 2D range-view that remains robust under camera sensor degradation, calibration drift, and sensor failure. Raw LiDAR data is first projected into the range-view and encoded by a LiDAR encoder, while camera features are simultaneously extracted and projected into the same shared space. At its core, UP-Fuse employs an uncertainty-guided fusion module that dynamically modulates cross-modal interaction using predicted uncertainty maps. These maps are learned by quantifying representational divergence under diverse visual degradations, ensuring that only reliable visual cues influence the fused representation. The fused range-view features are decoded by a novel hybrid 2D-3D transformer that mitigates spatial ambiguities inherent to the 2D projection and directly predicts 3D panoptic segmentation masks. Extensive experiments on Panoptic nuScenes, SemanticKITTI, and our introduced Panoptic Waymo benchmark demonstrate the efficacy and robustness of UP-Fuse, which maintains strong performance even under severe visual corruption or misalignment, making it well suited for robotic perception in safety-critical settings.",
+        "url": "http://arxiv.org/abs/2602.19349v1",
+        "published_date": "2026-02-22T21:34:29+00:00",
+        "updated_date": "2026-02-22T21:34:29+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Rohit Mohan",
+            "Florian Drews",
+            "Yakov Miron",
+            "Daniele Cattaneo",
+            "Abhinav Valada"
+        ],
+        "tldr": "The paper introduces UP-Fuse, an uncertainty-aware LiDAR-camera fusion framework for robust 3D panoptic segmentation that handles camera sensor degradation, calibration drift, and sensor failure by using uncertainty maps to modulate cross-modal interaction.",
+        "tldr_zh": "该论文介绍了一种名为UP-Fuse的不确定性感知LiDAR-相机融合框架，用于鲁棒的3D全景分割，通过使用不确定性图来调节跨模态交互，从而处理相机传感器退化、校准漂移和传感器故障。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "To Move or Not to Move: Constraint-based Planning Enables Zero-Shot Generalization for Interactive Navigation",
+        "summary": "Visual navigation typically assumes the existence of at least one obstacle-free path between start and goal, which must be discovered/planned by the robot. However, in real-world scenarios, such as home environments and warehouses, clutter can block all routes. Targeted at such cases, we introduce the Lifelong Interactive Navigation problem, where a mobile robot with manipulation abilities can move clutter to forge its own path to complete sequential object- placement tasks - each involving placing an given object (eg. Alarm clock, Pillow) onto a target object (eg. Dining table, Desk, Bed). To address this lifelong setting - where effects of environment changes accumulate and have long-term effects - we propose an LLM-driven, constraint-based planning framework with active perception. Our framework allows the LLM to reason over a structured scene graph of discovered objects and obstacles, deciding which object to move, where to place it, and where to look next to discover task-relevant information. This coupling of reasoning and active perception allows the agent to explore the regions expected to contribute to task completion rather than exhaustively mapping the environment. A standard motion planner then executes the corresponding navigate-pick-place, or detour sequence, ensuring reliable low-level control. Evaluated in physics-enabled ProcTHOR-10k simulator, our approach outperforms non-learning and learning-based baselines. We further demonstrate our approach qualitatively on real-world hardware.",
+        "url": "http://arxiv.org/abs/2602.20055v1",
+        "published_date": "2026-02-23T17:10:00+00:00",
+        "updated_date": "2026-02-23T17:10:00+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Apoorva Vashisth",
+            "Manav Kulshrestha",
+            "Pranav Bakshi",
+            "Damon Conover",
+            "Guillaume Sartoretti",
+            "Aniket Bera"
+        ],
+        "tldr": "This paper introduces a constraint-based planning framework using LLMs for a novel \"Lifelong Interactive Navigation\" problem, where a robot must move obstacles to create paths for object placement, demonstrating zero-shot generalization in simulation and real-world settings.",
+        "tldr_zh": "本文介绍了一个基于约束的规划框架，该框架使用LLM解决了一个名为“终身交互导航”的新问题，其中机器人必须移动障碍物来为物体放置创建路径，并在模拟和现实环境中展示了零样本泛化能力。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
