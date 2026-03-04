@@ -1,0 +1,371 @@
+[
+    {
+        "title": "ACE-Brain-0: Spatial Intelligence as a Shared Scaffold for Universal Embodiments",
+        "summary": "Universal embodied intelligence demands robust generalization across heterogeneous embodiments, such as autonomous driving, robotics, and unmanned aerial vehicles (UAVs). However, existing embodied brain in training a unified model over diverse embodiments frequently triggers long-tail data, gradient interference, and catastrophic forgetting, making it notoriously difficult to balance universal generalization with domain-specific proficiency. In this report, we introduce ACE-Brain-0, a generalist foundation brain that unifies spatial reasoning, autonomous driving, and embodied manipulation within a single multimodal large language model~(MLLM). Our key insight is that spatial intelligence serves as a universal scaffold across diverse physical embodiments: although vehicles, robots, and UAVs differ drastically in morphology, they share a common need for modeling 3D mental space, making spatial cognition a natural, domain-agnostic foundation for cross-embodiment transfer. Building on this insight, we propose the Scaffold-Specialize-Reconcile~(SSR) paradigm, which first establishes a shared spatial foundation, then cultivates domain-specialized experts, and finally harmonizes them through data-free model merging. Furthermore, we adopt Group Relative Policy Optimization~(GRPO) to strengthen the model's comprehensive capability. Extensive experiments demonstrate that ACE-Brain-0 achieves competitive and even state-of-the-art performance across 24 spatial and embodiment-related benchmarks.",
+        "url": "http://arxiv.org/abs/2603.03198v1",
+        "published_date": "2026-03-03T17:53:45+00:00",
+        "updated_date": "2026-03-03T17:53:45+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CL",
+            "cs.CV"
+        ],
+        "authors": [
+            "Ziyang Gong",
+            "Zehang Luo",
+            "Anke Tang",
+            "Zhe Liu",
+            "Shi Fu",
+            "Zhi Hou",
+            "Ganlin Yang",
+            "Weiyun Wang",
+            "Xiaofeng Wang",
+            "Jianbo Liu",
+            "Gen Luo",
+            "Haolan Kang",
+            "Shuang Luo",
+            "Yue Zhou",
+            "Yong Luo",
+            "Li Shen",
+            "Xiaosong Jia",
+            "Yao Mu",
+            "Xue Yang",
+            "Chunxiao Liu",
+            "Junchi Yan",
+            "Hengshuang Zhao",
+            "Dacheng Tao",
+            "Xiaogang Wang"
+        ],
+        "tldr": "ACE-Brain-0 is a multimodal large language model that leverages spatial intelligence as a shared foundation for universal embodied intelligence, achieving strong performance across diverse spatial and embodiment benchmarks using a Scaffold-Specialize-Reconcile paradigm.",
+        "tldr_zh": "ACE-Brain-0是一个多模态大型语言模型，它利用空间智能作为通用具身智能的共享基础，通过一个支架-专业化-协调范式在不同的空间和具身基准测试中实现了强大的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "EIMC: Efficient Instance-aware Multi-modal Collaborative Perception",
+        "summary": "Multi-modal collaborative perception calls for great attention to enhancing the safety of autonomous driving. However, current multi-modal approaches remain a ``local fusion to communication'' sequence, which fuses multi-modal data locally and needs high bandwidth to transmit an individual's feature data before collaborative fusion. EIMC innovatively proposes an early collaborative paradigm. It injects lightweight collaborative voxels, transmitted by neighbor agents, into the ego's local modality-fusion step, yielding compact yet informative 3D collaborative priors that tighten cross-modal alignment. Next, a heatmap-driven consensus protocol identifies exactly where cooperation is needed by computing per-pixel confidence heatmaps. Only the Top-K instance vectors located in these low-confidence, high-discrepancy regions are queried from peers, then fused via cross-attention for completion. Afterwards, we apply a refinement fusion that involves collecting the top-K most confident instances from each agent and enhancing their features using self-attention. The above instance-centric messaging reduces redundancy while guaranteeing that critical occluded objects are recovered. Evaluated on OPV2V and DAIR-V2X, EIMC attains 73.01\\% AP@0.5 while reducing byte bandwidth usage by 87.98\\% compared with the best published multi-modal collaborative detector. Code publicly released at https://github.com/sidiangongyuan/EIMC.",
+        "url": "http://arxiv.org/abs/2603.02532v1",
+        "published_date": "2026-03-03T02:44:36+00:00",
+        "updated_date": "2026-03-03T02:44:36+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Kang Yang",
+            "Peng Wang",
+            "Lantao Li",
+            "Tianci Bu",
+            "Chen Sun",
+            "Deying Li",
+            "Yongcai Wang"
+        ],
+        "tldr": "EIMC proposes an efficient instance-aware multi-modal collaborative perception method for autonomous driving that reduces bandwidth usage by prioritizing communication of crucial, occluded objects based on confidence heatmaps and instance vectors.",
+        "tldr_zh": "EIMC提出了一种高效的、实例感知的多模态协同感知方法，用于自动驾驶。该方法通过基于置信度热图和实例向量，优先传输关键的、被遮挡的对象，从而降低带宽使用。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "ModalPatch: A Plug-and-Play Module for Robust Multi-Modal 3D Object Detection under Modality Drop",
+        "summary": "Multi-modal 3D object detection is pivotal for autonomous driving, integrating complementary sensors like LiDAR and cameras. However, its real-world reliability is challenged by transient data interruptions and missing, where modalities can momentarily drop due to hardware glitches, adverse weather, or occlusions. This poses a critical risk, especially during a simultaneous modality drop, where the vehicle is momentarily blind. To address this problem, we introduce ModalPatch, the first plug-and-play module designed to enable robust detection under arbitrary modality-drop scenarios. Without requiring architectural changes or retraining, ModalPatch can be seamlessly integrated into diverse detection frameworks. Technically, ModalPatch leverages the temporal nature of sensor data for perceptual continuity, using a history-based module to predict and compensate for transiently unavailable features. To improve the fidelity of the predicted features, we further introduce an uncertainty-guided cross-modality fusion strategy that dynamically estimates the reliability of compensated features, suppressing biased signals while reinforcing informative ones. Extensive experiments show that ModalPatch consistently enhances both robustness and accuracy of state-of-the-art 3D object detectors under diverse modality-drop conditions.",
+        "url": "http://arxiv.org/abs/2603.02481v1",
+        "published_date": "2026-03-03T00:09:00+00:00",
+        "updated_date": "2026-03-03T00:09:00+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Shuangzhi Li",
+            "Lei Ma",
+            "Xingyu Li"
+        ],
+        "tldr": "The paper introduces ModalPatch, a plug-and-play module for robust multi-modal 3D object detection in autonomous driving scenarios, addressing the challenge of modality drop by predicting and compensating for missing features using a history-based approach and uncertainty-guided fusion.",
+        "tldr_zh": "本文介绍了一种名为ModalPatch的即插即用模块，用于自动驾驶场景中鲁棒的多模态3D目标检测。该模块通过使用基于历史的方法和不确定性引导的融合来预测和补偿丢失的特征，从而解决了模态缺失的挑战。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "TruckDrive: Long-Range Autonomous Highway Driving Dataset",
+        "summary": "Safe highway autonomy for heavy trucks remains an open and unsolved challenge: due to long braking distances, scene understanding of hundreds of meters is required for anticipatory planning and to allow safe braking margins. However, existing driving datasets primarily cover urban scenes, with perception effectively limited to short ranges of only up to 100 meters. To address this gap, we introduce TruckDrive, a highway-scale multimodal driving dataset, captured with a sensor suite purpose-built for long range sensing: seven long-range FMCW LiDARs measuring range and radial velocity, three high-resolution short-range LiDARs, eleven 8MP surround cameras with varying focal lengths and ten 4D FMCW radars. The dataset offers 475 thousands samples with 165 thousands densely annotated frames for driving perception benchmarking up to 1,000 meters for 2D detection and 400 meters for 3D detection, depth estimation, tracking, planning and end to end driving over 20 seconds sequences at highway speeds. We find that state-of-the-art autonomous driving models do not generalize to ranges beyond 150 meters, with drops between 31% and 99% in 3D perception tasks, exposing a systematic long-range gap that current architectures and training signals cannot close.",
+        "url": "http://arxiv.org/abs/2603.02413v1",
+        "published_date": "2026-03-02T21:50:34+00:00",
+        "updated_date": "2026-03-02T21:50:34+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Filippo Ghilotti",
+            "Edoardo Palladin",
+            "Samuel Brucker",
+            "Adam Sigal",
+            "Mario Bijelic",
+            "Felix Heide"
+        ],
+        "tldr": "The paper introduces TruckDrive, a new highway driving dataset with long-range sensor data and annotations, revealing a significant performance gap for existing autonomous driving models at distances beyond 150 meters.",
+        "tldr_zh": "该论文介绍了 TruckDrive，一个包含长距离传感器数据和标注的新高速公路驾驶数据集，揭示了现有自动驾驶模型在超过 150 米距离上的显著性能差距。",
+        "relevance_score": 10,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Chain of World: World Model Thinking in Latent Motion",
+        "summary": "Vision-Language-Action (VLA) models are a promising path toward embodied intelligence, yet they often overlook the predictive and temporal-causal structure underlying visual dynamics. World-model VLAs address this by predicting future frames, but waste capacity reconstructing redundant backgrounds. Latent-action VLAs encode frame-to-frame transitions compactly, but lack temporally continuous dynamic modeling and world knowledge. To overcome these limitations, we introduce CoWVLA (Chain-of-World VLA), a new \"Chain of World\" paradigm that unifies world-model temporal reasoning with a disentangled latent motion representation. First, a pretrained video VAE serves as a latent motion extractor, explicitly factorizing video segments into structure and motion latents. Then, during pre-training, the VLA learns from an instruction and an initial frame to infer a continuous latent motion chain and predict the segment's terminal frame. Finally, during co-fine-tuning, this latent dynamic is aligned with discrete action prediction by jointly modeling sparse keyframes and action sequences in a unified autoregressive decoder. This design preserves the world-model benefits of temporal reasoning and world knowledge while retaining the compactness and interpretability of latent actions, enabling efficient visuomotor learning. Extensive experiments on robotic simulation benchmarks show that CoWVLA outperforms existing world-model and latent-action approaches and achieves moderate computational efficiency, highlighting its potential as a more effective VLA pretraining paradigm. The project website can be found at https://fx-hit.github.io/cowvla-io.",
+        "url": "http://arxiv.org/abs/2603.03195v1",
+        "published_date": "2026-03-03T17:52:06+00:00",
+        "updated_date": "2026-03-03T17:52:06+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.RO"
+        ],
+        "authors": [
+            "Fuxiang Yang",
+            "Donglin Di",
+            "Lulu Tang",
+            "Xuancheng Zhang",
+            "Lei Fan",
+            "Hao Li",
+            "Chen Wei",
+            "Tonghua Su",
+            "Baorui Ma"
+        ],
+        "tldr": "The paper introduces Chain-of-World VLA (CoWVLA), a new VLA paradigm that combines world-model temporal reasoning with a disentangled latent motion representation for improved visuomotor learning and performance on robotic simulation benchmarks.",
+        "tldr_zh": "该论文介绍了Chain-of-World VLA (CoWVLA)，一种新的VLA范式，它结合了世界模型的时序推理和解耦的潜在运动表示，以提高机器人仿真基准上的视觉运动学习和性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "TagaVLM: Topology-Aware Global Action Reasoning for Vision-Language Navigation",
+        "summary": "Vision-Language Navigation (VLN) presents a unique challenge for Large Vision-Language Models (VLMs) due to their inherent architectural mismatch: VLMs are primarily pretrained on static, disembodied vision-language tasks, which fundamentally clash with the dynamic, embodied, and spatially-structured nature of navigation. Existing large-model-based methods often resort to converting rich visual and spatial information into text, forcing models to implicitly infer complex visual-topological relationships or limiting their global action capabilities. To bridge this gap, we propose TagaVLM (Topology-Aware Global Action reasoning), an end-to-end framework that explicitly injects topological structures into the VLM backbone. To introduce topological edge information, Spatial Topology Aware Residual Attention (STAR-Att) directly integrates it into the VLM's self-attention mechanism, enabling intrinsic spatial reasoning while preserving pretrained knowledge. To enhance topological node information, an Interleaved Navigation Prompt strengthens node-level visual-text alignment. Finally, with the embedded topological graph, the model is capable of global action reasoning, allowing for robust path correction. On the R2R benchmark, TagaVLM achieves state-of-the-art performance among large-model-based methods, with a Success Rate (SR) of 51.09% and SPL of 47.18 in unseen environments, outperforming prior work by 3.39% in SR and 9.08 in SPL. This demonstrates that, for embodied spatial reasoning, targeted enhancements on smaller open-source VLMs can be more effective than brute-force model scaling. The code will be released upon publication.Project page: https://apex-bjut.github.io/Taga-VLM",
+        "url": "http://arxiv.org/abs/2603.02972v1",
+        "published_date": "2026-03-03T13:28:07+00:00",
+        "updated_date": "2026-03-03T13:28:07+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Jiaxing Liu",
+            "Zexi Zhang",
+            "Xiaoyan Li",
+            "Boyue Wang",
+            "Yongli Hu",
+            "Baocai Yin"
+        ],
+        "tldr": "TagaVLM explicitly incorporates topological structures into VLMs for Vision-Language Navigation, achieving state-of-the-art performance by enhancing spatial reasoning and global action capabilities without relying on brute-force model scaling.",
+        "tldr_zh": "TagaVLM通过将拓扑结构显式地融入视觉-语言模型中，用于视觉-语言导航，通过增强空间推理和全局动作能力实现了最先进的性能，而无需依赖于蛮力模型缩放。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "3D-DRES: Detailed 3D Referring Expression Segmentation",
+        "summary": "Current 3D visual grounding tasks only process sentence level detection or segmentation, which critically fails to leverage the rich compositional contextual reasonings within natural language expressions. To address this challenge, we introduce Detailed 3D Referring Expression Segmentation (3D-DRES), a new task that provides a phrase to 3D instance mapping, aiming at enhancing fine-grained 3D vision language understanding. To support 3D-DRES, we present DetailRefer, a new dataset comprising 54,432 descriptions spanning 11,054 distinct objects. Unlike previous datasets, DetailRefer implements a pioneering phrase-instance annotation paradigm where each referenced noun phrase is explicitly mapped to its corresponding 3D elements. Additionally, we introduce DetailBase, a purposefully streamlined yet effective baseline architecture that supports dual-mode segmentation at both sentence and phrase levels. Our experimental results demonstrate that models trained on DetailRefer not only excel at phrase-level segmentation but also show surprising improvements on traditional 3D-RES benchmarks.",
+        "url": "http://arxiv.org/abs/2603.02896v1",
+        "published_date": "2026-03-03T11:45:54+00:00",
+        "updated_date": "2026-03-03T11:45:54+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Qi Chen",
+            "Changli Wu",
+            "Jiayi Ji",
+            "Yiwei Ma",
+            "Liujuan Cao"
+        ],
+        "tldr": "The paper introduces a new task, 3D-DRES, for detailed 3D referring expression segmentation and a corresponding dataset, DetailRefer, with phrase-instance annotations, along with a baseline architecture, DetailBase, showing improvements on both phrase-level and sentence-level segmentation.",
+        "tldr_zh": "该论文提出了一个新的任务 3D-DRES，用于详细的 3D 指代表达式分割，并提供了一个相应的数据集 DetailRefer，其中包含短语-实例注释，以及一个基线架构 DetailBase，该架构在短语级别和句子级别的分割上都显示出改进。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "ShareVerse: Multi-Agent Consistent Video Generation for Shared World Modeling",
+        "summary": "This paper presents ShareVerse, a video generation framework enabling multi-agent shared world modeling, addressing the gap in existing works that lack support for unified shared world construction with multi-agent interaction. ShareVerse leverages the generation capability of large video models and integrates three key innovations: 1) A dataset for large-scale multi-agent interactive world modeling is built on the CARLA simulation platform, featuring diverse scenes, weather conditions, and interactive trajectories with paired multi-view videos (front/ rear/ left/ right views per agent) and camera data. 2) We propose a spatial concatenation strategy for four-view videos of independent agents to model a broader environment and to ensure internal multi-view geometric consistency. 3) We integrate cross-agent attention blocks into the pretrained video model, which enable interactive transmission of spatial-temporal information across agents, guaranteeing shared world consistency in overlapping regions and reasonable generation in non-overlapping regions. ShareVerse, which supports 49-frame large-scale video generation, accurately perceives the position of dynamic agents and achieves consistent shared world modeling.",
+        "url": "http://arxiv.org/abs/2603.02697v1",
+        "published_date": "2026-03-03T07:41:12+00:00",
+        "updated_date": "2026-03-03T07:41:12+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Jiayi Zhu",
+            "Jianing Zhang",
+            "Yiying Yang",
+            "Wei Cheng",
+            "Xiaoyun Yuan"
+        ],
+        "tldr": "ShareVerse is a video generation framework for multi-agent shared world modeling, using a new dataset, spatial concatenation, and cross-agent attention to generate consistent multi-agent videos within a shared environment.",
+        "tldr_zh": "ShareVerse是一个用于多智能体共享世界建模的视频生成框架，它使用新的数据集、空间连接和跨智能体注意力机制，以在共享环境中生成一致的多智能体视频。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "VLMFusionOcc3D: VLM Assisted Multi-Modal 3D Semantic Occupancy Prediction",
+        "summary": "This paper introduces VLMFusionOcc3D, a robust multimodal framework for dense 3D semantic occupancy prediction in autonomous driving. Current voxel-based occupancy models often struggle with semantic ambiguity in sparse geometric grids and performance degradation under adverse weather conditions. To address these challenges, we leverage the rich linguistic priors of Vision-Language Models (VLMs) to anchor ambiguous voxel features to stable semantic concepts. Our framework initiates with a dual-branch feature extraction pipeline that projects multi-view images and LiDAR point clouds into a unified voxel space. We propose Instance-driven VLM Attention (InstVLM), which utilizes gated cross-attention and LoRA-adapted CLIP embeddings to inject high-level semantic and geographic priors directly into the 3D voxels. Furthermore, we introduce Weather-Aware Adaptive Fusion (WeathFusion), a dynamic gating mechanism that utilizes vehicle metadata and weather-conditioned prompts to re-weight sensor contributions based on real-time environmental reliability. To ensure structural consistency, a Depth-Aware Geometric Alignment (DAGA) loss is employed to align dense camera-derived geometry with sparse, spatially accurate LiDAR returns. Extensive experiments on the nuScenes and SemanticKITTI datasets demonstrate that our plug-and-play modules consistently enhance the performance of state-of-the-art voxel-based baselines. Notably, our approach achieves significant improvements in challenging weather scenarios, offering a scalable and robust solution for complex urban navigation.",
+        "url": "http://arxiv.org/abs/2603.02609v1",
+        "published_date": "2026-03-03T05:22:28+00:00",
+        "updated_date": "2026-03-03T05:22:28+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "A. Enes Doruk",
+            "Hasan F. Ates"
+        ],
+        "tldr": "VLMFusionOcc3D leverages Vision-Language Models (VLMs) to enhance 3D semantic occupancy prediction in autonomous driving by addressing semantic ambiguity and weather-related performance degradation through novel attention and fusion mechanisms, demonstrating improvements on nuScenes and SemanticKITTI.",
+        "tldr_zh": "VLMFusionOcc3D 利用视觉-语言模型 (VLM) 增强自动驾驶中的 3D 语义占用预测，通过新颖的注意力和融合机制来解决语义模糊和天气相关性能下降的问题，并在 nuScenes 和 SemanticKITTI 上展示了改进。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Track4World: Feedforward World-centric Dense 3D Tracking of All Pixels",
+        "summary": "Estimating the 3D trajectory of every pixel from a monocular video is crucial and promising for a comprehensive understanding of the 3D dynamics of videos. Recent monocular 3D tracking works demonstrate impressive performance, but are limited to either tracking sparse points on the first frame or a slow optimization-based framework for dense tracking. In this paper, we propose a feedforward model, called Track4World, enabling an efficient holistic 3D tracking of every pixel in the world-centric coordinate system. Built on the global 3D scene representation encoded by a VGGT-style ViT, Track4World applies a novel 3D correlation scheme to simultaneously estimate the pixel-wise 2D and 3D dense flow between arbitrary frame pairs. The estimated scene flow, along with the reconstructed 3D geometry, enables subsequent efficient 3D tracking of every pixel of this video. Extensive experiments on multiple benchmarks demonstrate that our approach consistently outperforms existing methods in 2D/3D flow estimation and 3D tracking, highlighting its robustness and scalability for real-world 4D reconstruction tasks.",
+        "url": "http://arxiv.org/abs/2603.02573v1",
+        "published_date": "2026-03-03T03:45:43+00:00",
+        "updated_date": "2026-03-03T03:45:43+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jiahao Lu",
+            "Jiayi Xu",
+            "Wenbo Hu",
+            "Ruijie Zhu",
+            "Chengfeng Zhao",
+            "Sai-Kit Yeung",
+            "Ying Shan",
+            "Yuan Liu"
+        ],
+        "tldr": "Track4World presents a novel feedforward model for efficient, dense 3D tracking of every pixel in a monocular video using a 3D correlation scheme and a VGGT-style ViT, demonstrating superior performance on benchmark datasets.",
+        "tldr_zh": "Track4World提出了一种新颖的前馈模型，利用3D相关方案和VGGT风格的ViT，可以高效地对单目视频中每个像素进行密集的3D跟踪，并在基准数据集上表现出优越的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "CAWM-Mamba: A unified model for infrared-visible image fusion and compound adverse weather restoration",
+        "summary": "Multimodal Image Fusion (MMIF) integrates complementary information from various modalities to produce clearer and more informative fused images. MMIF under adverse weather is particularly crucial in autonomous driving and UAV monitoring applications. However, existing adverse weather fusion methods generally only tackle single types of degradation such as haze, rain, or snow, and fail when multiple degradations coexist (e.g., haze+rain, rain+snow). To address this challenge, we propose Compound Adverse Weather Mamba (CAWM-Mamba), the first end-to-end framework that jointly performs image fusion and compound weather restoration with unified shared weights. Our network contains three key components: (1) a Weather-Aware Preprocess Module (WAPM) to enhance degraded visible features and extracts global weather embeddings; (2) a Cross-modal Feature Interaction Module (CFIM) to facilitate the alignment of heterogeneous modalities and exchange of complementary features across modalities; and (3) a Wavelet Space State Block (WSSB) that leverages wavelet-domain decomposition to decouple multi-frequency degradations. WSSB includes Freq-SSM, a module that models anisotropic high-frequency degradation without redundancy, and a unified degradation representation mechanism to further improve generalization across complex compound weather conditions. Extensive experiments on the AWMM-100K benchmark and three standard fusion datasets demonstrate that CAWM-Mamba consistently outperforms state-of-the-art methods in both compound and single-weather scenarios. In addition, our fusion results excel in downstream tasks covering semantic segmentation and object detection, confirming the practical value in real-world adverse weather perception. The source code will be available at https://github.com/Feecuin/CAWM-Mamba.",
+        "url": "http://arxiv.org/abs/2603.02560v1",
+        "published_date": "2026-03-03T03:27:05+00:00",
+        "updated_date": "2026-03-03T03:27:05+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Huichun Liu",
+            "Xiaosong Li",
+            "Zhuangfan Huang",
+            "Tao Ye",
+            "Yang Liu",
+            "Haishu Tan"
+        ],
+        "tldr": "The paper introduces CAWM-Mamba, a novel Mamba-based framework for infrared-visible image fusion and restoration under compound adverse weather conditions, demonstrating superior performance on various datasets and downstream tasks.",
+        "tldr_zh": "该论文介绍了一种名为CAWM-Mamba 的新型 Mamba 框架，用于在复合恶劣天气条件下进行红外-可见光图像融合和修复，并在各种数据集和下游任务中表现出卓越的性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "SemGS: Feed-Forward Semantic 3D Gaussian Splatting from Sparse Views for Generalizable Scene Understanding",
+        "summary": "Semantic understanding of 3D scenes is essential for robots to operate effectively and safely in complex environments. Existing methods for semantic scene reconstruction and semantic-aware novel view synthesis often rely on dense multi-view inputs and require scene-specific optimization, limiting their practicality and scalability in real-world applications. To address these challenges, we propose SemGS, a feed-forward framework for reconstructing generalizable semantic fields from sparse image inputs. SemGS uses a dual-branch architecture to extract color and semantic features, where the two branches share shallow CNN layers, allowing semantic reasoning to leverage textural and structural cues in color appearance. We also incorporate a camera-aware attention mechanism into the feature extractor to explicitly model geometric relationships between camera viewpoints. The extracted features are decoded into dual-Gaussians that share geometric consistency while preserving branch-specific attributes, and further rasterized to synthesize semantic maps under novel viewpoints. Additionally, we introduce a regional smoothness loss to enhance semantic coherence. Experiments show that SemGS achieves state-of-the-art performance on benchmark datasets, while providing rapid inference and strong generalization capabilities across diverse synthetic and real-world scenarios.",
+        "url": "http://arxiv.org/abs/2603.02548v1",
+        "published_date": "2026-03-03T03:06:37+00:00",
+        "updated_date": "2026-03-03T03:06:37+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Sheng Ye",
+            "Zhen-Hui Dong",
+            "Ruoyu Fan",
+            "Tian Lv",
+            "Yong-Jin Liu"
+        ],
+        "tldr": "SemGS is a feed-forward framework reconstructing generalizable semantic fields from sparse image inputs using dual-branch Gaussian Splatting, achieving state-of-the-art performance and strong generalization for semantic scene understanding.",
+        "tldr_zh": "SemGS是一个前馈框架，它使用双分支高斯溅射从稀疏图像输入重建可泛化的语义场，从而在语义场景理解方面实现了最先进的性能和强大的泛化能力。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "From Leaderboard to Deployment: Code Quality Challenges in AV Perception Repositories",
+        "summary": "Autonomous vehicle (AV) perception models are typically evaluated solely on benchmark performance metrics, with limited attention to code quality, production readiness and long-term maintainability. This creates a significant gap between research excellence and real-world deployment in safety-critical systems subject to international safety standards. To address this gap, we present the first large-scale empirical study of software quality in AV perception repositories, systematically analyzing 178 unique models from the KITTI and NuScenes 3D Object Detection leaderboards. Using static analysis tools (Pylint, Bandit, and Radon), we evaluated code errors, security vulnerabilities, maintainability, and development practices. Our findings revealed that only 7.3% of the studied repositories meet basic production-readiness criteria, defined as having zero critical errors and no high-severity security vulnerabilities. Security issues are highly concentrated, with the top five issues responsible for almost 80% of occurrences, which prompted us to develop a set of actionable guidelines to prevent them. Additionally, the adoption of Continuous Integration/Continuous Deployment pipelines was correlated with better code maintainability. Our findings highlight that leaderboard performance does not reflect production readiness and that targeted interventions could substantially improve the quality and safety of AV perception code.",
+        "url": "http://arxiv.org/abs/2603.02194v1",
+        "published_date": "2026-03-02T18:54:28+00:00",
+        "updated_date": "2026-03-02T18:54:28+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG",
+            "cs.RO",
+            "cs.SE"
+        ],
+        "authors": [
+            "Mateus Karvat",
+            "Bram Adams",
+            "Sidney Givigi"
+        ],
+        "tldr": "This paper performs a large-scale analysis of code quality in AV perception repositories, revealing a significant gap between leaderboard performance and production readiness, highlighting security vulnerabilities and maintainability issues.",
+        "tldr_zh": "本文对自动驾驶感知代码仓库进行了大规模的代码质量分析，揭示了排行榜性能与生产就绪状态之间的巨大差距，并强调了安全漏洞和可维护性问题。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "DINOv3 Visual Representations for Blueberry Perception Toward Robotic Harvesting",
+        "summary": "Vision Foundation Models trained via large-scale self-supervised learning have demonstrated strong generalization in visual perception; however, their practical role and performance limits in agricultural settings remain insufficiently understood. This work evaluates DINOv3 as a frozen backbone for blueberry robotic harvesting-related visual tasks, including fruit and bruise segmentation, as well as fruit and cluster detection. Under a unified protocol with lightweight decoders, segmentation benefits consistently from stable patch-level representations and scales with backbone size. In contrast, detection is constrained by target scale variation, patch discretization, and localization compatibility. The failure of cluster detection highlights limitations in modeling relational targets defined by spatial aggregation. Overall, DINOv3 is best viewed not as an end-to-end task model, but as a semantic backbone whose effectiveness depends on downstream spatial modeling aligned with fruit-scale and aggregation structures, providing guidance for blueberry robotic harvesting. Code and dataset will be available upon acceptance.",
+        "url": "http://arxiv.org/abs/2603.02419v1",
+        "published_date": "2026-03-02T22:01:25+00:00",
+        "updated_date": "2026-03-02T22:01:25+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Rui-Feng Wang",
+            "Daniel Petti",
+            "Yue Chen",
+            "Changying Li"
+        ],
+        "tldr": "This paper evaluates DINOv3 as a frozen backbone for blueberry robotic harvesting, showing good performance on segmentation but limitations in detection due to scale variations and spatial aggregation modeling.",
+        "tldr_zh": "本文评估了 DINOv3 作为蓝莓机器人采摘的冻结骨干网络，在分割方面表现良好，但在检测方面由于尺度变化和空间聚合建模而存在局限性。",
+        "relevance_score": 7,
+        "novelty_claim_score": 5,
+        "clarity_score": 9,
+        "potential_impact_score": 6,
+        "overall_priority_score": 6
+    }
+]
