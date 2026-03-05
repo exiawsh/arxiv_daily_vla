@@ -1,0 +1,321 @@
+[
+    {
+        "title": "LiDAR Prompted Spatio-Temporal Multi-View Stereo for Autonomous Driving",
+        "summary": "Accurate metric depth is critical for autonomous driving perception and simulation, yet current approaches struggle to achieve high metric accuracy, multi-view and temporal consistency, and cross-domain generalization. To address these challenges, we present DriveMVS, a novel multi-view stereo framework that reconciles these competing objectives through two key insights:\n  (1) Sparse but metrically accurate LiDAR observations can serve as geometric prompts to anchor depth estimation in absolute scale, and (2) deep fusion of diverse cues is essential for resolving ambiguities and enhancing robustness, while a spatio-temporal decoder ensures consistency across frames. Built upon these principles, DriveMVS embeds the LiDAR prompt in two ways: as a hard geometric prior that anchors the cost volume, and as soft feature-wise guidance fused by a triple-cue combiner. Regarding temporal consistency, DriveMVS employs a spatio-temporal decoder that jointly leverages geometric cues from the MVS cost volume and temporal context from neighboring frames. Experiments show that DriveMVS achieves state-of-the-art performance on multiple benchmarks, excelling in metric accuracy, temporal stability, and zero-shot cross-domain transfer, demonstrating its practical value for scalable, reliable autonomous driving systems.",
+        "url": "http://arxiv.org/abs/2603.03765v1",
+        "published_date": "2026-03-04T06:22:01+00:00",
+        "updated_date": "2026-03-04T06:22:01+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Qihao Sun",
+            "Jiarun Liu",
+            "Ziqian Ni",
+            "Jianyun Xu",
+            "Tao Xie",
+            "Lijun Zhao",
+            "Ruifeng Li",
+            "Sheng Yang"
+        ],
+        "tldr": "DriveMVS uses LiDAR prompts to improve metric accuracy and temporal consistency in multi-view stereo for autonomous driving, achieving state-of-the-art performance and cross-domain transfer.",
+        "tldr_zh": "DriveMVS利用激光雷达提示来提高自动驾驶中多视图立体的度量精度和时间一致性，实现了最先进的性能和跨域迁移。",
+        "relevance_score": 10,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Utonia: Toward One Encoder for All Point Clouds",
+        "summary": "We dream of a future where point clouds from all domains can come together to shape a single model that benefits them all. Toward this goal, we present Utonia, a first step toward training a single self-supervised point transformer encoder across diverse domains, spanning remote sensing, outdoor LiDAR, indoor RGB-D sequences, object-centric CAD models, and point clouds lifted from RGB-only videos. Despite their distinct sensing geometries, densities, and priors, Utonia learns a consistent representation space that transfers across domains. This unification improves perception capability while revealing intriguing emergent behaviors that arise only when domains are trained jointly. Beyond perception, we observe that Utonia representations can also benefit embodied and multimodal reasoning: conditioning vision-language-action policies on Utonia features improves robotic manipulation, and integrating them into vision-language models yields gains on spatial reasoning. We hope Utonia can serve as a step toward foundation models for sparse 3D data, and support downstream applications in AR/VR, robotics, and autonomous driving.",
+        "url": "http://arxiv.org/abs/2603.03283v1",
+        "published_date": "2026-03-03T18:59:58+00:00",
+        "updated_date": "2026-03-03T18:59:58+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yujia Zhang",
+            "Xiaoyang Wu",
+            "Yunhan Yang",
+            "Xianzhe Fan",
+            "Han Li",
+            "Yuechen Zhang",
+            "Zehao Huang",
+            "Naiyan Wang",
+            "Hengshuang Zhao"
+        ],
+        "tldr": "This paper introduces Utonia, a self-supervised point transformer encoder trained across diverse 3D domains to learn a unified representation space, improving perception, embodied reasoning, and spatial reasoning tasks.",
+        "tldr_zh": "本文介绍了 Utonia，一个跨多种 3D 领域训练的自监督点变换器编码器，旨在学习统一的表示空间，从而提高感知、具身推理和空间推理任务的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "LoGeR: Long-Context Geometric Reconstruction with Hybrid Memory",
+        "summary": "Feedforward geometric foundation models achieve strong short-window reconstruction, yet scaling them to minutes-long videos is bottlenecked by quadratic attention complexity or limited effective memory in recurrent designs. We present LoGeR (Long-context Geometric Reconstruction), a novel architecture that scales dense 3D reconstruction to extremely long sequences without post-optimization. LoGeR processes video streams in chunks, leveraging strong bidirectional priors for high-fidelity intra-chunk reasoning. To manage the critical challenge of coherence across chunk boundaries, we propose a learning-based hybrid memory module. This dual-component system combines a parametric Test-Time Training (TTT) memory to anchor the global coordinate frame and prevent scale drift, alongside a non-parametric Sliding Window Attention (SWA) mechanism to preserve uncompressed context for high-precision adjacent alignment. Remarkably, this memory architecture enables LoGeR to be trained on sequences of 128 frames, and generalize up to thousands of frames during inference. Evaluated across standard benchmarks and a newly repurposed VBR dataset with sequences of up to 19k frames, LoGeR substantially outperforms prior state-of-the-art feedforward methods--reducing ATE on KITTI by over 74%--and achieves robust, globally consistent reconstruction over unprecedented horizons.",
+        "url": "http://arxiv.org/abs/2603.03269v1",
+        "published_date": "2026-03-03T18:55:37+00:00",
+        "updated_date": "2026-03-03T18:55:37+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Junyi Zhang",
+            "Charles Herrmann",
+            "Junhwa Hur",
+            "Chen Sun",
+            "Ming-Hsuan Yang",
+            "Forrester Cole",
+            "Trevor Darrell",
+            "Deqing Sun"
+        ],
+        "tldr": "LoGeR introduces a novel architecture for long-context 3D reconstruction, combining parametric and non-parametric memory to achieve globally consistent reconstruction over thousands of frames, outperforming prior methods significantly.",
+        "tldr_zh": "LoGeR 提出了一种用于长上下文 3D 重建的新架构，结合了参数化和非参数化存储器，可在数千帧上实现全局一致的重建，显著优于先前的方法。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "EmbodiedSplat: Online Feed-Forward Semantic 3DGS for Open-Vocabulary 3D Scene Understanding",
+        "summary": "Understanding a 3D scene immediately with its exploration is essential for embodied tasks, where an agent must construct and comprehend the 3D scene in an online and nearly real-time manner. In this study, we propose EmbodiedSplat, an online feed-forward 3DGS for open-vocabulary scene understanding that enables simultaneous online 3D reconstruction and 3D semantic understanding from the streaming images. Unlike existing open-vocabulary 3DGS methods which are typically restricted to either offline or per-scene optimization setting, our objectives are two-fold: 1) Reconstructs the semantic-embedded 3DGS of the entire scene from over 300 streaming images in an online manner. 2) Highly generalizable to novel scenes with feed-forward design and supports nearly real-time 3D semantic reconstruction when combined with real-time 2D models. To achieve these objectives, we propose an Online Sparse Coefficients Field with a CLIP Global Codebook where it binds the 2D CLIP embeddings to each 3D Gaussian while minimizing memory consumption and preserving the full semantic generalizability of CLIP. Furthermore, we generate 3D geometric-aware CLIP features by aggregating the partial point cloud of 3DGS through 3D U-Net to compensate the 3D geometric prior to 2D-oriented language embeddings. Extensive experiments on diverse indoor datasets, including ScanNet, ScanNet++, and Replica, demonstrate both the effectiveness and efficiency of our method. Check out our project page in https://0nandon.github.io/EmbodiedSplat/.",
+        "url": "http://arxiv.org/abs/2603.04254v1",
+        "published_date": "2026-03-04T16:40:41+00:00",
+        "updated_date": "2026-03-04T16:40:41+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Seungjun Lee",
+            "Zihan Wang",
+            "Yunsong Wang",
+            "Gim Hee Lee"
+        ],
+        "tldr": "EmbodiedSplat introduces an online feed-forward 3D Gaussian Splatting (3DGS) method for open-vocabulary 3D scene understanding, enabling simultaneous 3D reconstruction and semantic understanding from streaming images in nearly real-time, addressing limitations of existing offline or per-scene optimization approaches.",
+        "tldr_zh": "EmbodiedSplat 提出了一种在线前馈的 3D 高斯溅射 (3DGS) 方法，用于开放词汇的 3D 场景理解，能够从流式图像中同时进行 3D 重建和语义理解，并接近实时，解决了现有离线或单场景优化方法的局限性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Spatial Causal Prediction in Video",
+        "summary": "Spatial reasoning, the ability to understand spatial relations, causality, and dynamic evolution, is central to human intelligence and essential for real-world applications such as autonomous driving and robotics. Existing studies, however, primarily assess models on visible spatio-temporal understanding, overlooking their ability to infer unseen past or future spatial states. In this work, we introduce Spatial Causal Prediction (SCP), a new task paradigm that challenges models to reason beyond observation and predict spatial causal outcomes. We further construct SCP-Bench, a benchmark comprising 2,500 QA pairs across 1,181 videos spanning diverse viewpoints, scenes, and causal directions, to support systematic evaluation. Through comprehensive experiments on {23} state-of-the-art models, we reveal substantial gaps between human and model performance, limited temporal extrapolation, and weak causal grounding. We further analyze key factors influencing performance and propose perception-enhancement and reasoning-guided strategies toward advancing spatial causal intelligence. The project page is https://guangstrip.github.io/SCP-Bench.",
+        "url": "http://arxiv.org/abs/2603.03944v1",
+        "published_date": "2026-03-04T11:09:39+00:00",
+        "updated_date": "2026-03-04T11:09:39+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yanguang Zhao",
+            "Jie Yang",
+            "Shengqiong Wu",
+            "Shutong Hu",
+            "Hongbo Qiu",
+            "Yu Wang",
+            "Guijia Zhang",
+            "Tan Kai Ze",
+            "Hao Fei",
+            "Chia-Wen Lin",
+            "Mong-Li Lee",
+            "Wynne Hsu"
+        ],
+        "tldr": "The paper introduces Spatial Causal Prediction (SCP), a new task and benchmark (SCP-Bench) for evaluating models' ability to infer unseen spatial states in videos, revealing limitations in current state-of-the-art models.",
+        "tldr_zh": "该论文介绍了空间因果预测(SCP)任务和基准测试(SCP-Bench)，用于评估模型在视频中推断未见空间状态的能力，揭示了当前最先进模型的局限性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "DISC: Dense Integrated Semantic Context for Large-Scale Open-Set Semantic Mapping",
+        "summary": "Open-set semantic mapping enables language-driven robotic perception, but current instance-centric approaches are bottlenecked by context-depriving and computationally expensive crop-based feature extraction. To overcome this fundamental limitation, we introduce DISC (Dense Integrated Semantic Context), featuring a novel single-pass, distance-weighted extraction mechanism. By deriving high-fidelity CLIP embeddings directly from the vision transformer's intermediate layers, our approach eliminates the latency and domain-shift artifacts of traditional image cropping, yielding pure, mask-aligned semantic representations. To fully leverage these features in large-scale continuous mapping, DISC is built upon a fully GPU-accelerated architecture that replaces periodic offline processing with precise, on-the-fly voxel-level instance refinement. We evaluate our approach on standard benchmarks (Replica, ScanNet) and a newly generated large-scale-mapping dataset based on Habitat-Matterport 3D (HM3DSEM) to assess scalability across complex scenes in multi-story buildings. Extensive evaluations demonstrate that DISC significantly surpasses current state-of-the-art zero-shot methods in both semantic accuracy and query retrieval, providing a robust, real-time capable framework for robotic deployment. The full source code, data generation and evaluation pipelines will be made available at https://github.com/DFKI-NI/DISC.",
+        "url": "http://arxiv.org/abs/2603.03935v1",
+        "published_date": "2026-03-04T10:47:06+00:00",
+        "updated_date": "2026-03-04T10:47:06+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Felix Igelbrink",
+            "Lennart Niecksch",
+            "Martin Atzmueller",
+            "Joachim Hertzberg"
+        ],
+        "tldr": "The paper introduces DISC, a novel method for open-set semantic mapping that uses a single-pass, distance-weighted extraction mechanism with CLIP embeddings derived from a vision transformer to achieve real-time performance and improved accuracy in large-scale environments. It surpasses state-of-the-art zero-shot methods.",
+        "tldr_zh": "该论文介绍了一种名为DISC的新型开放集语义地图构建方法，它采用单程、距离加权提取机制，并使用从视觉Transformer导出的CLIP嵌入，从而在大型环境中实现实时性能和更高的精度。该方法超越了最先进的零样本方法。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Yolo-Key-6D: Single Stage Monocular 6D Pose Estimation with Keypoint Enhancements",
+        "summary": "Estimating the 6D pose of objects from a single RGB image is a critical task for robotics and extended reality applications. However, state-of-the-art multi stage methods often suffer from high latency, making them unsuitable for real time use. In this paper, we present Yolo-Key-6D, a novel single stage, end-to-end framework for monocular 6D pose estimation designed for both speed and accuracy. Our approach enhances a YOLO based architecture by integrating an auxiliary head that regresses the 2D projections of an object's 3D bounding box corners. This keypoint detection task significantly improves the network's understanding of 3D geometry. For stable end-to-end training, we directly regress rotation using a continuous 9D representation projected to SO(3) via singular value decomposition. On the LINEMOD and LINEMOD-Occluded benchmarks, YOLO-Key-6D achieves competitive accuracy scores of 96.24% and 69.41%, respectively, with the ADD(-S) 0.1d metric, while proving itself to operate in real time. Our results demonstrate that a carefully designed single stage method can provide a practical and effective balance of performance and efficiency for real world deployment.",
+        "url": "http://arxiv.org/abs/2603.03879v1",
+        "published_date": "2026-03-04T09:31:07+00:00",
+        "updated_date": "2026-03-04T09:31:07+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Kemal Alperen Çetiner",
+            "Hazım Kemal Ekenel"
+        ],
+        "tldr": "Yolo-Key-6D is a novel single-stage monocular 6D pose estimation framework that enhances YOLO with keypoint regression and a continuous 9D rotation representation, achieving real-time performance with competitive accuracy on standard benchmarks.",
+        "tldr_zh": "Yolo-Key-6D 是一种新颖的单阶段单目6D姿态估计框架，它通过关键点回归和连续9D旋转表示来增强YOLO，在标准基准测试中实现了实时性能和具有竞争力的精度。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "PROSPECT: Unified Streaming Vision-Language Navigation via Semantic--Spatial Fusion and Latent Predictive Representation",
+        "summary": "Multimodal large language models (MLLMs) have advanced zero-shot end-to-end Vision-Language Navigation (VLN), yet robust navigation requires not only semantic understanding but also predictive modeling of environment dynamics and spatial structure. We propose PROSPECT, a unified streaming navigation agent that couples a streaming Vision-Language-Action (VLA) policy with latent predictive representation learning. PROSPECT uses CUT3R as a streaming 3D foundation spatial encoder to produce long-context, absolute-scale spatial features, and fuses them with SigLIP semantic features via cross-attention. During training, we introduce learnable stream query tokens that query the streaming context and predict next-step 2D and 3D latent features (rather than pixels or explicit modalities), supervised in the latent spaces of frozen SigLIP and CUT3R teachers. The predictive branch shapes internal representations without inference overhead. Experiments on VLN-CE benchmarks and real-robot deployment demonstrate state-of-the-art performance and improved long-horizon robustness under diverse lighting. We will release code for the community soon.",
+        "url": "http://arxiv.org/abs/2603.03739v1",
+        "published_date": "2026-03-04T05:19:20+00:00",
+        "updated_date": "2026-03-04T05:19:20+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Zehua Fan",
+            "Wenqi Lyu",
+            "Wenxuan Song",
+            "Linge Zhao",
+            "Yifei Yang",
+            "Xi Wang",
+            "Junjie He",
+            "Lida Huang",
+            "Haiyan Liu",
+            "Bingchuan Sun",
+            "Guangjun Bao",
+            "Xuanyao Mao",
+            "Liang Xu",
+            "Yan Wang",
+            "Feng Gao"
+        ],
+        "tldr": "The paper introduces PROSPECT, a novel Vision-Language Navigation agent that combines semantic and spatial understanding with latent predictive representation learning to achieve state-of-the-art performance and robustness in VLN tasks, including real-robot deployment.",
+        "tldr_zh": "该论文介绍了PROSPECT，一种新颖的视觉-语言导航代理，它结合了语义和空间理解以及潜在的预测表征学习，从而在VLN任务（包括真实机器人部署）中实现了最先进的性能和鲁棒性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Hazard-Aware Traffic Scene Graph Generation",
+        "summary": "Maintaining situational awareness in complex driving scenarios is challenging. It requires continuously prioritizing attention among extensive scene entities and understanding how prominent hazards might affect the ego vehicle. While existing studies excel at detecting specific semantic categories and visually salient regions, they lack the ability to assess safety-relevance. Meanwhile, the generic spatial predicates either for foreground objects only or for all scene entities modeled by existing scene graphs are inadequate for driving scenarios. To bridge this gap, we introduce a novel task, Traffic Scene Graph Generation, which captures traffic-specific relations between prominent hazards and the ego vehicle. We propose a novel framework that explicitly uses traffic accident data and depth cues to supplement visual features and semantic information for reasoning. The output traffic scene graphs provide intuitive guidelines that stress prominent hazards by color-coding their severity and notating their effect mechanism and relative location to the ego vehicle. We create relational annotations on Cityscapes dataset and evaluate our model on 10 tasks from 5 perspectives. The results in comparative experiments and ablation studies demonstrate our capacity in ego-centric reasoning for hazard-aware traffic scene understanding.",
+        "url": "http://arxiv.org/abs/2603.03584v1",
+        "published_date": "2026-03-03T23:29:11+00:00",
+        "updated_date": "2026-03-03T23:29:11+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yaoqi Huang",
+            "Julie Stephany Berrio",
+            "Mao Shan",
+            "Stewart Worrall"
+        ],
+        "tldr": "This paper introduces a novel traffic scene graph generation framework that uses accident data and depth information to identify and represent prominent hazards in relation to the ego vehicle, improving situational awareness in autonomous driving.",
+        "tldr_zh": "本文介绍了一种新的交通场景图生成框架，该框架利用事故数据和深度信息来识别和表示与自我车辆相关的突出危险，从而提高自动驾驶中的情境感知能力。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "From Local Matches to Global Masks: Novel Instance Detection in Open-World Scenes",
+        "summary": "Detecting and segmenting novel object instances in open-world environments is a fundamental problem in robotic perception. Given only a small set of template images, a robot must locate and segment a specific object instance in a cluttered, previously unseen scene. Existing proposal-based approaches are highly sensitive to proposal quality and often fail under occlusion and background clutter. We propose L2G-Det, a local-to-global instance detection framework that bypasses explicit object proposals by leveraging dense patch-level matching between templates and the query image. Locally matched patches generate candidate points, which are refined through a candidate selection module to suppress false positives. The filtered points are then used to prompt an augmented Segment Anything Model (SAM) with instance-specific object tokens, enabling reliable reconstruction of complete instance masks. Experiments demonstrate improved performance over proposal-based methods in challenging open-world settings.",
+        "url": "http://arxiv.org/abs/2603.03577v1",
+        "published_date": "2026-03-03T23:11:17+00:00",
+        "updated_date": "2026-03-03T23:11:17+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Qifan Zhang",
+            "Sai Haneesh Allu",
+            "Jikai Wang",
+            "Yangxiao Lu",
+            "Yu Xiang"
+        ],
+        "tldr": "The paper introduces L2G-Det, a novel instance detection framework for open-world robotic perception that uses dense patch matching and an augmented SAM to segment novel object instances from a small set of template images, outperforming proposal-based methods.",
+        "tldr_zh": "该论文介绍了一种名为L2G-Det的新型实例检测框架，用于开放世界机器人感知。该框架使用密集patch匹配和增强的SAM，从一小部分模板图像中分割出新的物体实例，性能优于基于proposal的方法。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Impact of Localization Errors on Label Quality for Online HD Map Construction",
+        "summary": "High-definition (HD) maps are crucial for autonomous vehicles, but their creation and maintenance is very costly. This motivates the idea of online HD map construction. To provide a continuous large-scale stream of training data, existing HD maps can be used as labels for onboard sensor data from consumer vehicle fleets. However, compared to current, well curated HD map perception datasets, this fleet data suffers from localization errors, resulting in distorted map labels. We introduce three kinds of localization errors, Ramp, Gaussian, and Perlin noise, to examine their influence on generated map labels. We train a variant of MapTRv2, a state-of-the-art online HD map construction model, on the Argoverse 2 dataset with various levels of localization errors and assess the degradation of model performance. Since localization errors affect distant labels more severely, but are also less significant to driving performance, we introduce a distance-based map construction metric. Our experiments reveal that localization noise affects the model performance significantly. We demonstrate that errors in heading angle exert a more substantial influence than position errors, as angle errors result in a greater distortion of labels as distance to the vehicle increases. Furthermore, we can demonstrate that the model benefits from non-distorted ground truth (GT) data and that the performance decreases more than linearly with the increase in noisy data. Our study additionally provides a qualitative evaluation of the extent to which localization errors influence the construction of HD maps.",
+        "url": "http://arxiv.org/abs/2603.03452v1",
+        "published_date": "2026-03-03T19:08:14+00:00",
+        "updated_date": "2026-03-03T19:08:14+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Alexander Blumberg",
+            "Jonas Merkert",
+            "Richard Fehler",
+            "Fabian Immel",
+            "Frank Bieder",
+            "Jan-Hendrik Pauls",
+            "Christoph Stiller"
+        ],
+        "tldr": "This paper investigates the impact of localization errors on the performance of online HD map construction models, showing that heading angle errors are more detrimental than position errors and that the model benefits from clean ground truth data.",
+        "tldr_zh": "本文研究了定位误差对在线高清地图构建模型性能的影响，表明航向角误差比位置误差更有害，并且模型受益于干净的真实数据。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Tether: Autonomous Functional Play with Correspondence-Driven Trajectory Warping",
+        "summary": "The ability to conduct and learn from interaction and experience is a central challenge in robotics, offering a scalable alternative to labor-intensive human demonstrations. However, realizing such \"play\" requires (1) a policy robust to diverse, potentially out-of-distribution environment states, and (2) a procedure that continuously produces useful robot experience. To address these challenges, we introduce Tether, a method for autonomous functional play involving structured, task-directed interactions. First, we design a novel open-loop policy that warps actions from a small set of source demonstrations (<=10) by anchoring them to semantic keypoint correspondences in the target scene. We show that this design is extremely data-efficient and robust even under significant spatial and semantic variations. Second, we deploy this policy for autonomous functional play in the real world via a continuous cycle of task selection, execution, evaluation, and improvement, guided by the visual understanding capabilities of vision-language models. This procedure generates diverse, high-quality datasets with minimal human intervention. In a household-like multi-object setup, our method is the first to perform many hours of autonomous multi-task play in the real world starting from only a handful of demonstrations. This produces a stream of data that consistently improves the performance of closed-loop imitation policies over time, ultimately yielding over 1000 expert-level trajectories and training policies competitive with those learned from human-collected demonstrations.",
+        "url": "http://arxiv.org/abs/2603.03278v1",
+        "published_date": "2026-03-03T18:59:07+00:00",
+        "updated_date": "2026-03-03T18:59:07+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "William Liang",
+            "Sam Wang",
+            "Hung-Ju Wang",
+            "Osbert Bastani",
+            "Yecheng Jason Ma",
+            "Dinesh Jayaraman"
+        ],
+        "tldr": "The paper introduces Tether, a method for autonomous robot play using correspondence-driven trajectory warping from a few demonstrations, enabling continuous self-improvement through real-world interaction and vision-language model guidance, and achieving performance competitive with human-collected data.",
+        "tldr_zh": "该论文介绍了一种名为Tether的自主机器人玩耍方法，该方法使用基于对应关系的轨迹变形，从少量演示中学习，并通过真实世界的互动和视觉-语言模型的指导实现持续的自我改进，并达到与人工收集数据相媲美的性能。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    }
+]
