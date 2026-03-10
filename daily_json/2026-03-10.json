@@ -1,0 +1,619 @@
+[
+    {
+        "title": "Interactive World Simulator for Robot Policy Training and Evaluation",
+        "summary": "Action-conditioned video prediction models (often referred to as world models) have shown strong potential for robotics applications, but existing approaches are often slow and struggle to capture physically consistent interactions over long horizons, limiting their usefulness for scalable robot policy training and evaluation. We present Interactive World Simulator, a framework for building interactive world models from a moderate-sized robot interaction dataset. Our approach leverages consistency models for both image decoding and latent-space dynamics prediction, enabling fast and stable simulation of physical interactions. In our experiments, the learned world models produce interaction-consistent pixel-level predictions and support stable long-horizon interactions for more than 10 minutes at 15 FPS on a single RTX 4090 GPU. Our framework enables scalable demonstration collection solely within the world models to train state-of-the-art imitation policies. Through extensive real-world evaluation across diverse tasks involving rigid objects, deformable objects, object piles, and their interactions, we find that policies trained on world-model-generated data perform comparably to those trained on the same amount of real-world data. Additionally, we evaluate policies both within the world models and in the real world across diverse tasks, and observe a strong correlation between simulated and real-world performance. Together, these results establish the Interactive World Simulator as a stable and physically consistent surrogate for scalable robotic data generation and faithful, reproducible policy evaluation.",
+        "url": "http://arxiv.org/abs/2603.08546v1",
+        "published_date": "2026-03-09T16:13:32+00:00",
+        "updated_date": "2026-03-09T16:13:32+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Yixuan Wang",
+            "Rhythm Syed",
+            "Fangyu Wu",
+            "Mengchao Zhang",
+            "Aykut Onol",
+            "Jose Barreiros",
+            "Hooshang Nayyeri",
+            "Tony Dear",
+            "Huan Zhang",
+            "Yunzhu Li"
+        ],
+        "tldr": "The paper introduces Interactive World Simulator, a framework for creating fast and stable world models for robotics using consistency models, demonstrating performance comparable to real-world data for policy training and evaluation across diverse tasks.",
+        "tldr_zh": "该论文介绍了一种交互式世界模拟器框架，该框架使用一致性模型为机器人创建快速稳定的世界模型，并在各种任务中展示了与真实世界数据相当的策略训练和评估性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "DynamicVGGT: Learning Dynamic Point Maps for 4D Scene Reconstruction in Autonomous Driving",
+        "summary": "Dynamic scene reconstruction in autonomous driving remains a fundamental challenge due to significant temporal variations, moving objects, and complex scene dynamics. Existing feed-forward 3D models have demonstrated strong performance in static reconstruction but still struggle to capture dynamic motion. To address these limitations, we propose DynamicVGGT, a unified feed-forward framework that extends VGGT from static 3D perception to dynamic 4D reconstruction. Our goal is to model point motion within feed-forward 3D models in a dynamic and temporally coherent manner. To this end, we jointly predict the current and future point maps within a shared reference coordinate system, allowing the model to implicitly learn dynamic point representations through temporal correspondence. To efficiently capture temporal dependencies, we introduce a Motion-aware Temporal Attention (MTA) module that learns motion continuity. Furthermore, we design a Dynamic 3D Gaussian Splatting Head that explicitly models point motion by predicting Gaussian velocities using learnable motion tokens under scene flow supervision. It refines dynamic geometry through continuous 3D Gaussian optimization. Extensive experiments on autonomous driving datasets demonstrate that DynamicVGGT significantly outperforms existing methods in reconstruction accuracy, achieving robust feed-forward 4D dynamic scene reconstruction under complex driving scenarios.",
+        "url": "http://arxiv.org/abs/2603.08254v1",
+        "published_date": "2026-03-09T11:24:14+00:00",
+        "updated_date": "2026-03-09T11:24:14+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zhuolin He",
+            "Jing Li",
+            "Guanghao Li",
+            "Xiaolei Chen",
+            "Jiacheng Tang",
+            "Siyang Zhang",
+            "Zhounan Jin",
+            "Feipeng Cai",
+            "Bin Li",
+            "Jian Pu",
+            "Jia Cai",
+            "Xiangyang Xue"
+        ],
+        "tldr": "DynamicVGGT is a feed-forward framework for 4D dynamic scene reconstruction in autonomous driving that jointly predicts current and future point maps, uses motion-aware temporal attention, and a dynamic 3D Gaussian splatting head to model point motion and refine dynamic geometry.",
+        "tldr_zh": "DynamicVGGT 是一个用于自动驾驶中 4D 动态场景重建的前馈框架，它联合预测当前和未来的点云图，使用运动感知的时序注意力机制，以及动态 3D 高斯溅射头来建模点运动并优化动态几何。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "UniGround: Universal 3D Visual Grounding via Training-Free Scene Parsing",
+        "summary": "Understanding and localizing objects in complex 3D environments from natural language descriptions, known as 3D Visual Grounding (3DVG), is a foundational challenge in embodied AI, with broad implications for robotics, augmented reality, and human-machine interaction. Large-scale pre-trained foundation models have driven significant progress on this front, enabling open-vocabulary 3DVG that allows systems to locate arbitrary objects in a given scene. However, their reliance on pre-trained models constrains 3D perception and reasoning within the inherited knowledge boundaries, resulting in limited generalization to unseen spatial relationships and poor robustness to out-of-distribution scenes. In this paper, we replace this constrained perception with training-free visual and geometric reasoning, thereby unlocking open-world 3DVG that enables the localization of any object in any scene beyond the training data. Specifically, the proposed UniGround operates in two stages: a Global Candidate Filtering stage that constructs scene candidates through training-free 3D topology and multi-view semantic encoding, and a Local Precision Grounding stage that leverages multi-scale visual prompting and structured reasoning to precisely identify the target object. Experiments on ScanRefer and EmbodiedScan show that UniGround achieves 46.1\\%/34.1\\% Acc@0.25/0.5 on ScanRefer and 28.7\\% Acc@0.25 on EmbodiedScan, establishing a new state-of-the-art among zero-shot methods on EmbodiedScan without any 3D supervision. We further evaluate UniGround in real-world environments under uncontrolled reconstruction conditions and substantial domain shift, showing training-free reasoning generalizes robustly beyond curated benchmarks.",
+        "url": "http://arxiv.org/abs/2603.08131v1",
+        "published_date": "2026-03-09T09:10:01+00:00",
+        "updated_date": "2026-03-09T09:10:01+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Jiaxi Zhang",
+            "Yunheng Wang",
+            "Wei Lu",
+            "Taowen Wang",
+            "Weisheng Xu",
+            "Shuning Zhang",
+            "Yixiao Feng",
+            "Yuetong Fang",
+            "Renjing Xu"
+        ],
+        "tldr": "This paper introduces UniGround, a training-free approach for 3D visual grounding that achieves state-of-the-art zero-shot performance on EmbodiedScan and demonstrates robustness in real-world environments, addressing limitations of pre-trained models in open-world scenarios.",
+        "tldr_zh": "本文介绍了 UniGround，一种无需训练的 3D 视觉定位方法，在 EmbodiedScan 上实现了最先进的零样本性能，并在现实环境中展示了稳健性，解决了预训练模型在开放世界场景中的局限性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "SAMoE-VLA: A Scene Adaptive Mixture-of-Experts Vision-Language-Action Model for Autonomous Driving",
+        "summary": "Recent advances in Vision-Language-Action (VLA) models have shown promising capabilities in autonomous driving by leveraging the understanding and reasoning strengths of Large Language Models(LLMs).However, our empirical analysis reveals that directly applying existing token-level MoE mechanisms--which are inherited from LLM architectures--to VLA models results in unstable performance and safety degradation in autonomous driving, highlighting a misalignment between token-based expert specialization and scene-level decision-making.To address this, we propose SAMoE-VLA, a scene-adaptive Vision-Language-Action framework that conditions expert selection on structured scene representations instead of token embeddings. Our key idea is to derive the MoE routing signal from bird's-eye-view (BEV) features that encapsulates traffic scene context, enabling scenario-dependent expert weighting and merging tailored to distinct driving conditions. Furthermore, to support temporally consistent reasoning across world-knowledge, perception, language, and action, we introduce a Conditional Cross-Modal Causal Attention mechanism that integrates world state, linguistic intent, and action history into a unified causal reasoning process. Extensive experiments on the nuScenes open loop planning dataset and LangAuto closed-loop benchmark demonstrate that SAMoE-VLA achieves state-of-the-art performance, outperforming prior VLA-based and world-model-based approaches with fewer parameters.Our code will be released soon.",
+        "url": "http://arxiv.org/abs/2603.08113v1",
+        "published_date": "2026-03-09T08:54:03+00:00",
+        "updated_date": "2026-03-09T08:54:03+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zihan You",
+            "Hongwei Liu",
+            "Chenxu Dang",
+            "Zhe Wang",
+            "Sining Ang",
+            "Aoqi Wang",
+            "Yan Wang"
+        ],
+        "tldr": "The paper introduces SAMoE-VLA, a novel VLA framework for autonomous driving that uses scene-adaptive mixture-of-experts based on BEV features and conditional cross-modal causal attention for improved performance and temporal reasoning, outperforming state-of-the-art methods with fewer parameters.",
+        "tldr_zh": "该论文介绍了SAMoE-VLA，一种新颖的VLA框架，用于自动驾驶，它使用基于BEV特征的场景自适应混合专家系统和条件跨模态因果注意力，以提高性能和时间推理，并以更少的参数优于最先进的方法。",
+        "relevance_score": 10,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "FOMO-3D: Using Vision Foundation Models for Long-Tailed 3D Object Detection",
+        "summary": "In order to navigate complex traffic environments, self-driving vehicles must recognize many semantic classes pertaining to vulnerable road users or traffic control devices. However, many safety-critical objects (e.g., construction worker) appear infrequently in nominal traffic conditions, leading to a severe shortage of training examples from driving data alone. Recent vision foundation models, which are trained on a large corpus of data, can serve as a good source of external prior knowledge to improve generalization. We propose FOMO-3D, the first multi-modal 3D detector to leverage vision foundation models for long-tailed 3D detection. Specifically, FOMO-3D exploits rich semantic and depth priors from OWLv2 and Metric3Dv2 within a two-stage detection paradigm that first generates proposals with a LiDAR-based branch and a novel camera-based branch, and refines them with attention especially to image features from OWL. Evaluations on real-world driving data show that using rich priors from vision foundation models with careful multi-modal fusion designs leads to large gains for long-tailed 3D detection. Project website is at https://waabi.ai/fomo3d/.",
+        "url": "http://arxiv.org/abs/2603.08611v1",
+        "published_date": "2026-03-09T16:57:23+00:00",
+        "updated_date": "2026-03-09T16:57:23+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Anqi Joyce Yang",
+            "James Tu",
+            "Nikita Dvornik",
+            "Enxu Li",
+            "Raquel Urtasun"
+        ],
+        "tldr": "The paper introduces FOMO-3D, a multi-modal 3D object detector that leverages vision foundation models (OWLv2 and Metric3Dv2) to improve long-tailed 3D detection in autonomous driving, demonstrating significant performance gains on real-world data.",
+        "tldr_zh": "本文介绍了FOMO-3D，一种多模态3D目标检测器，利用视觉基础模型 (OWLv2 和 Metric3Dv2) 来改善自动驾驶中的长尾3D目标检测，并在真实世界数据上展示了显著的性能提升。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Boosting MLLM Spatial Reasoning with Geometrically Referenced 3D Scene Representations",
+        "summary": "While Multimodal Large Language Models (MLLMs) have achieved remarkable success in 2D visual understanding, their ability to reason about 3D space remains limited. To address this gap, we introduce geometrically referenced 3D scene representations (GR3D). Given a set of input images, GR3D annotates objects in the images with unique IDs and encodes their 3D geometric attributes as textual references indexed by these IDs. This representation enables MLLMs to interpret 3D cues using their advanced language-based skills in mathematical reasoning, while concurrently analyzing 2D visual features in a tightly coupled way. We present a simple yet effective approach based on GR3D, which requires no additional training and is readily applicable to different MLLMs. Implemented in a zero-shot setting, our approach boosts GPT-5's performance on VSI-Bench by 8% overall and more than 11% on tasks that rely heavily on spatial layout understanding. Qualitative studies further demonstrate that GR3D empowers MLLMs to perform complex spatial reasoning with highly sparse input views.",
+        "url": "http://arxiv.org/abs/2603.08592v1",
+        "published_date": "2026-03-09T16:42:43+00:00",
+        "updated_date": "2026-03-09T16:42:43+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jiangye Yuan",
+            "Gowri Kumar",
+            "Baoyuan Wang"
+        ],
+        "tldr": "The paper introduces GR3D, a novel 3D scene representation that enhances MLLMs' spatial reasoning abilities by encoding 3D geometric attributes as textual references. Implemented in a zero-shot setting, it significantly improves performance on spatial understanding tasks.",
+        "tldr_zh": "该论文介绍了GR3D，一种新的3D场景表示方法，通过将3D几何属性编码为文本引用，增强了MLLM的空间推理能力。在零样本设置中，该方法显著提高了空间理解任务的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "OccTrack360: 4D Panoptic Occupancy Tracking from Surround-View Fisheye Cameras",
+        "summary": "Understanding dynamic 3D environments in a spatially continuous and temporally consistent manner is fundamental for robotics and autonomous driving. While recent advances in occupancy prediction provide a unified representation of scene geometry and semantics, progress in 4D panoptic occupancy tracking remains limited by the lack of benchmarks that support surround-view fisheye sensing, long temporal sequences, and instance-level voxel tracking. To address this gap, we present OccTrack360, a new benchmark for 4D panoptic occupancy tracking from surround-view fisheye cameras. OccTrack360 provides substantially longer and more diverse sequences (174~2234 frames) than prior benchmarks, together with principled voxel visibility annotations, including an all-direction occlusion mask and an MEI-based fisheye field-of-view mask. To establish a strong fisheye-oriented baseline, we further propose Focus on Sphere Occ (FoSOcc), a framework that addresses two core challenges in fisheye occupancy tracking: distorted spherical projection and inaccurate voxel-space localization. FoSOcc includes a Center Focusing Module (CFM) to enhance instance-aware spatial localization through supervised focus guidance, and a Spherical Lift Module (SLM) that extends perspective lifting to fisheye imaging under the Unified Projection Model. Extensive experiments on Occ3D-Waymo and OccTrack360 show that our method improves occupancy tracking quality with notable gains on geometrically regular categories, and establishes a strong baseline for future research on surround-view fisheye 4D occupancy tracking. The benchmark and source code will be made publicly available at https://github.com/YouthZest-Lin/OccTrack360.",
+        "url": "http://arxiv.org/abs/2603.08521v1",
+        "published_date": "2026-03-09T15:55:26+00:00",
+        "updated_date": "2026-03-09T15:55:26+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO",
+            "eess.IV"
+        ],
+        "authors": [
+            "Yongzhi Lin",
+            "Kai Luo",
+            "Yuanfan Zheng",
+            "Hao Shi",
+            "Mengfei Duan",
+            "Yang Liu",
+            "Kailun Yang"
+        ],
+        "tldr": "The paper introduces OccTrack360, a new benchmark for 4D panoptic occupancy tracking using surround-view fisheye cameras, along with FoSOcc, a novel baseline method addressing challenges specific to fisheye occupancy tracking.",
+        "tldr_zh": "该论文介绍了OccTrack360，这是一个新的基准，用于使用环视鱼眼相机进行4D全景占据跟踪，以及FoSOcc，一种新的基线方法，旨在解决鱼眼占据跟踪的特定挑战。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Improving Continual Learning for Gaussian Splatting based Environments Reconstruction on Commercial Off-the-Shelf Edge Devices",
+        "summary": "Novel view synthesis (NVS) is increasingly relevant for edge robotics, where compact and incrementally updatable 3D scene models are needed for SLAM, navigation, and inspection under tight memory and latency budgets. Variational Bayesian Gaussian Splatting (VBGS) enables replay-free continual updates for the 3DGS algorithm by maintaining a probabilistic scene model, but its high-precision computations and large intermediate tensors make on-device training impractical. We present a precision-adaptive optimization framework that enables VBGS training on resource-constrained hardware without altering its variational formulation. We (i) profile VBGS to identify memory/latency hotspots, (ii) fuse memory-dominant kernels to reduce materialized intermediate tensors, and (iii) automatically assign operation-level precisions via a mixed-precision search with bounded relative error. Across the Blender, Habitat, and Replica datasets, our optimised pipeline reduces peak memory from 9.44 GB to 1.11 GB and training time from ~234 min to ~61 min on an A5000 GPU, while preserving (and in some cases improving) reconstruction quality of the state-of-the-art VBGS baseline. We also enable for the first time NVS training on a commercial embedded platform, the Jetson Orin Nano, reducing per-frame latency by 19x compared to 3DGS.",
+        "url": "http://arxiv.org/abs/2603.08499v1",
+        "published_date": "2026-03-09T15:32:41+00:00",
+        "updated_date": "2026-03-09T15:32:41+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ivan Zaino",
+            "Matteo Risso",
+            "Daniele Jahier Pagliari",
+            "Miguel de Prado",
+            "Toon Van de Maele",
+            "Alessio Burrello"
+        ],
+        "tldr": "This paper presents a precision-adaptive optimization framework to enable variational Bayesian Gaussian Splatting (VBGS) training on resource-constrained edge devices, demonstrating significant memory and latency reductions while maintaining or improving reconstruction quality.",
+        "tldr_zh": "本文提出了一种精度自适应优化框架，可在资源受限的边缘设备上进行变分贝叶斯高斯溅射（VBGS）训练，并在保持或提高重建质量的同时，显着降低内存和延迟。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "$Δ$VLA: Prior-Guided Vision-Language-Action Models via World Knowledge Variation",
+        "summary": "Recent vision-language-action (VLA) models have significantly advanced robotic manipulation by unifying perception, reasoning, and control. To achieve such integration, recent studies adopt a predictive paradigm that models future visual states or world knowledge to guide action generation. However, these models emphasize forecasting outcomes rather than reasoning about the underlying process of change, which is essential for determining how to act. To address this, we propose $Δ$VLA, a prior-guided framework that models world-knowledge variations relative to an explicit current-world knowledge prior for action generation, rather than regressing absolute future world states. Specifically, 1) to construct the current world knowledge prior, we propose the Prior-Guided WorldKnowledge Extractor (PWKE). It extracts manipulable regions, spatial relations, and semantic cues from the visual input, guided by auxiliary heads and prior pseudo labels, thus reducing redundancy. 2) Building upon this, to represent how world knowledge evolves under actions, we introduce the Latent World Variation Quantization (LWVQ). It learns a discrete latent space via a VQ-VAE objective to encode world knowledge variations, shifting prediction from full modalities to compact latent. 3)Moreover, to mitigate interference during variation modeling, we design the Conditional Variation Attention (CV-Atten), whichpromotes disentangled learning and preserves the independence of knowledge representations. Extensive experiments on both simulated benchmarks and real-world robotic tasks demonstrate $Δ$VLA achieves state-of-the-art performance while improving efficiency. Code and real-world execution videos are available at https://github.com/JiuTian-VL/DeltaVLA.",
+        "url": "http://arxiv.org/abs/2603.08361v1",
+        "published_date": "2026-03-09T13:26:05+00:00",
+        "updated_date": "2026-03-09T13:26:05+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yijie Zhu",
+            "Jie He",
+            "Rui Shao",
+            "Kaishen Yuan",
+            "Tao Tan",
+            "Xiaochen Yuan",
+            "Zitong Yu"
+        ],
+        "tldr": "The paper introduces $Δ$VLA, a prior-guided VLA framework that models world-knowledge variations relative to a current-world knowledge prior, enhancing robotic manipulation by focusing on reasoning about the process of change instead of directly predicting future states. It demonstrates state-of-the-art performance in simulated and real-world robotic tasks.",
+        "tldr_zh": "该论文介绍了$Δ$VLA，一种先验引导的VLA框架，它通过对相对于当前世界知识先验的世界知识变化进行建模，从而增强了机器人操作能力，重点关注对变化过程的推理而不是直接预测未来状态。该方法在模拟和真实世界的机器人任务中均表现出最先进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Event-based Motion & Appearance Fusion for 6D Object Pose Tracking",
+        "summary": "Object pose tracking is a fundamental and essential task for robotics to perform tasks in the home and industrial settings. The most commonly used sensors to do so are RGB-D cameras, which can hit limitations in highly dynamic environments due to motion blur and frame-rate constraints. Event cameras have remarkable features such as high temporal resolution and low latency, which make them a potentially ideal vision sensors for object pose tracking at high speed. Even so, there are still only few works on 6D pose tracking with event cameras. In this work, we take advantage of the high temporal resolution and propose a method that uses both a propagation step fused with a pose correction strategy. Specifically, we use 6D object velocity obtained from event-based optical flow for pose propagation, after which, a template-based local pose correction module is utilized for pose correction. Our learning-free method has comparable performance to the state-of-the-art algorithms, and in some cases out performs them for fast-moving objects. The results indicate the potential for using event cameras in highly-dynamic scenarios where the use of deep network approaches are limited by low update rates.",
+        "url": "http://arxiv.org/abs/2603.08264v1",
+        "published_date": "2026-03-09T11:34:50+00:00",
+        "updated_date": "2026-03-09T11:34:50+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zhichao Li",
+            "Chiara Bartolozzi",
+            "Lorenzo Natale",
+            "Arren Glover"
+        ],
+        "tldr": "This paper presents a learning-free method for 6D object pose tracking that fuses event-based motion with appearance information to achieve comparable or better performance than state-of-the-art algorithms, especially for fast-moving objects, demonstrating the potential of event cameras in dynamic scenarios.",
+        "tldr_zh": "本文提出了一种无需学习的6D物体姿态跟踪方法，该方法融合了基于事件的运动信息和外观信息，实现了与最先进算法相当或更好的性能，特别是在快速移动的物体上，展示了事件相机在动态场景中的潜力。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "SiMO: Single-Modality-Operable Multimodal Collaborative Perception",
+        "summary": "Collaborative perception integrates multi-agent perspectives to enhance the sensing range and overcome occlusion issues. While existing multimodal approaches leverage complementary sensors to improve performance, they are highly prone to failure--especially when a key sensor like LiDAR is unavailable. The root cause is that feature fusion leads to semantic mismatches between single-modality features and the downstream modules. This paper addresses this challenge for the first time in the field of collaborative perception, introducing Single-Modality-Operable Multimodal Collaborative Perception (SiMO). By adopting the proposed Length-Adaptive Multi-Modal Fusion (LAMMA), SiMO can adaptively handle remaining modal features during modal failures while maintaining consistency of the semantic space. Additionally, leveraging the innovative \"Pretrain-Align-Fuse-RD\" training strategy, SiMO addresses the issue of modality competition--generally overlooked by existing methods--ensuring the independence of each individual modality branch. Experiments demonstrate that SiMO effectively aligns multimodal features while simultaneously preserving modality-specific features, enabling it to maintain optimal performance across all individual modalities. The implementation details can be found in https://github.com/dempsey-wen/SiMO.",
+        "url": "http://arxiv.org/abs/2603.08240v1",
+        "published_date": "2026-03-09T11:09:53+00:00",
+        "updated_date": "2026-03-09T11:09:53+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jiageng Wen",
+            "Shengjie Zhao",
+            "Bing Li",
+            "Jiafeng Huang",
+            "Kenan Ye",
+            "Hao Deng"
+        ],
+        "tldr": "This paper introduces SiMO, a collaborative perception method that addresses the issue of performance degradation in multimodal systems when one or more modalities (e.g., LiDAR) fail, by using a length-adaptive fusion and a pretrain-align-fuse strategy.",
+        "tldr_zh": "本文介绍了SiMO，一种协同感知方法，通过使用长度自适应融合和预训练-对齐-融合策略，解决了多模态系统中当一个或多个模态（例如，激光雷达）失效时性能下降的问题。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Fusion-Poly: A Polyhedral Framework Based on Spatial-Temporal Fusion for 3D Multi-Object Tracking",
+        "summary": "LiDAR-camera 3D multi-object tracking (MOT) combines rich visual semantics with accurate depth cues to improve trajectory consistency and tracking reliability. In practice, however, LiDAR and cameras operate at different sampling rates. To maintain temporal alignment, existing data pipelines usually synchronize heterogeneous sensor streams and annotate them at a reduced shared frequency, forcing most prior methods to perform spatial fusion only at synchronized timestamps through projection-based or learnable cross-sensor association. As a result, abundant asynchronous observations remain underexploited, despite their potential to support more frequent association and more robust trajectory estimation over short temporal intervals.\n  To address this limitation, we propose Fusion-Poly, a spatial-temporal fusion framework for 3D MOT that integrates asynchronous LiDAR and camera data. Fusion-Poly associates trajectories with multi-modal observations at synchronized timestamps and with single-modal observations at asynchronous timestamps, enabling higher-frequency updates of motion and existence states. The framework contains three key components: a frequency-aware cascade matching module that adapts to synchronized and asynchronous frames according to available detection modalities; a frequency-aware trajectory estimation module that maintains trajectories through high-frequency motion prediction, differential updates, and confidence-calibrated lifecycle management; and a full-state observation alignment module that improves cross-modal consistency at synchronized timestamps by optimizing image-projection errors.\n  On the nuScenes test set, Fusion-Poly achieves 76.5% AMOTA, establishing a new state of the art among tracking-by-detection 3D MOT methods. Extensive ablation studies further validate the effectiveness of each component. Code will be released.",
+        "url": "http://arxiv.org/abs/2603.08199v1",
+        "published_date": "2026-03-09T10:26:44+00:00",
+        "updated_date": "2026-03-09T10:26:44+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Xian Wu",
+            "Yitao Wu",
+            "Xiaoyu Li",
+            "Zijia Li",
+            "Lijun Zhao",
+            "Lining Sun"
+        ],
+        "tldr": "The paper introduces Fusion-Poly, a spatial-temporal fusion framework for 3D multi-object tracking that leverages asynchronous LiDAR and camera data to improve tracking accuracy and robustness, achieving state-of-the-art results on the nuScenes dataset.",
+        "tldr_zh": "本文介绍了一种名为Fusion-Poly的时空融合框架，用于3D多目标跟踪，该框架利用异步LiDAR和相机数据来提高跟踪精度和鲁棒性，并在nuScenes数据集上取得了最先进的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "ALOOD: Exploiting Language Representations for LiDAR-based Out-of-Distribution Object Detection",
+        "summary": "LiDAR-based 3D object detection plays a critical role for reliable and safe autonomous driving systems. However, existing detectors often produce overly confident predictions for objects not belonging to known categories, posing significant safety risks. This is caused by so-called out-of-distribution (OOD) objects, which were not part of the training data, resulting in incorrect predictions. To address this challenge, we propose ALOOD (Aligned LiDAR representations for Out-Of-Distribution Detection), a novel approach that incorporates language representations from a vision-language model (VLM). By aligning the object features from the object detector to the feature space of the VLM, we can treat the detection of OOD objects as a zero-shot classification task. We demonstrate competitive performance on the nuScenes OOD benchmark, establishing a novel approach to OOD object detection in LiDAR using language representations. The source code is available at https://github.com/uulm-mrm/mmood3d.",
+        "url": "http://arxiv.org/abs/2603.08180v1",
+        "published_date": "2026-03-09T10:02:45+00:00",
+        "updated_date": "2026-03-09T10:02:45+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Michael Kösel",
+            "Marcel Schreiber",
+            "Michael Ulrich",
+            "Claudius Gläser",
+            "Klaus Dietmayer"
+        ],
+        "tldr": "The paper introduces ALOOD, a novel method for LiDAR-based out-of-distribution object detection that leverages language representations from a vision-language model to improve the safety of autonomous driving systems by reducing overly confident incorrect predictions on unknown objects.",
+        "tldr_zh": "该论文介绍了一种名为ALOOD的新方法，用于基于激光雷达的分布外物体检测，该方法利用视觉-语言模型的语言表征，通过减少对未知物体的过度自信的错误预测，来提高自动驾驶系统的安全性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Edged USLAM: Edge-Aware Event-Based SLAM with Learning-Based Depth Priors",
+        "summary": "Conventional visual simultaneous localization and mapping (SLAM) algorithms often fail under rapid motion, low illumination, or abrupt lighting transitions due to motion blur and limited dynamic range. Event cameras mitigate these issues with high temporal resolution and high dynamic range (HDR), but their sparse, asynchronous outputs complicate feature extraction and integration with other sensors; e.g. inertial measurement units (IMUs) and standard cameras. We present Edged USLAM, a hybrid visual-inertial system that extends Ultimate SLAM (USLAM) with an edge-aware front-end and a lightweight depth module. The frontend enhances event frames for robust feature tracking and nonlinear motion compensation, while the depth module provides coarse, region-of-interest (ROI)-based scene depth to improve motion compensation and scale consistency. Evaluations across public benchmarks and real-world unmanned air vehicle (UAV) flights demonstrate that performance varies significantly by scenario. For instance, event-only methods like point-line event-based visual-inertial odometry (PL-EVIO) or learning-based pipelines such as deep event-based visual odometry (DEVO) excel in highly aggressive or extreme HDR conditions. In contrast, Edged USLAM provides superior stability and minimal drift in slow or structured trajectories, ensuring consistently accurate localization on real flights under challenging illumination. These findings highlight the complementary strengths of event-only, learning-based, and hybrid approaches, while positioning Edged USLAM as a robust solution for diverse aerial navigation tasks.",
+        "url": "http://arxiv.org/abs/2603.08150v1",
+        "published_date": "2026-03-09T09:28:52+00:00",
+        "updated_date": "2026-03-09T09:28:52+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Şebnem Sarıözkan",
+            "Hürkan Şahin",
+            "Olaya Álvarez-Tuñón",
+            "Erdal Kayacan"
+        ],
+        "tldr": "Edged USLAM, a hybrid visual-inertial SLAM system using event cameras and learning-based depth priors, offers robust localization in challenging illumination and outperforms existing methods in specific scenarios like slow or structured trajectories, making it suitable for diverse aerial navigation tasks.",
+        "tldr_zh": "Edged USLAM是一种混合视觉惯性SLAM系统，它利用事件相机和基于学习的深度先验，在具有挑战性的光照条件下提供鲁棒的定位。在缓慢或结构化轨迹等特定场景中，它的性能优于现有方法，使其适用于各种空中导航任务。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "TrianguLang: Geometry-Aware Semantic Consensus for Pose-Free 3D Localization",
+        "summary": "Localizing objects and parts from natural language in 3D space is essential for robotics, AR, and embodied AI, yet existing methods face a trade-off between the accuracy and geometric consistency of per-scene optimization and the efficiency of feed-forward inference. We present TrianguLang, a feed-forward framework for 3D localization that requires no camera calibration at inference. Unlike prior methods that treat views independently, we introduce Geometry-Aware Semantic Attention (GASA), which utilizes predicted geometry to gate cross-view feature correspondence, suppressing semantically plausible but geometrically inconsistent matches without requiring ground-truth poses. Validated on five benchmarks including ScanNet++ and uCO3D, TrianguLang achieves state-of-the-art feed-forward text-guided segmentation and localization, reducing user effort from $O(N)$ clicks to a single text query. The model processes each frame at 1008x1008 resolution in $\\sim$57ms ($\\sim$18 FPS) without optimization, enabling practical deployment for interactive robotics and AR applications. Code and checkpoints are available at https://cwru-aism.github.io/triangulang/.",
+        "url": "http://arxiv.org/abs/2603.08096v1",
+        "published_date": "2026-03-09T08:37:05+00:00",
+        "updated_date": "2026-03-09T08:37:05+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Bryce Grant",
+            "Aryeh Rothenberg",
+            "Atri Banerjee",
+            "Peng Wang"
+        ],
+        "tldr": "The paper introduces TrianguLang, a novel feed-forward framework for pose-free 3D object localization from natural language using geometry-aware semantic attention, achieving state-of-the-art performance on multiple benchmarks and enabling real-time interactive applications.",
+        "tldr_zh": "该论文介绍了一种名为TrianguLang的新型前馈框架，它使用几何感知语义注意力，通过自然语言进行无姿态的3D物体定位，在多个基准测试中实现了最先进的性能，并支持实时的交互应用。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "From Reactive to Map-Based AI: Tuned Local LLMs for Semantic Zone Inference in Object-Goal Navigation",
+        "summary": "Object-Goal Navigation (ObjectNav) requires an agent to find and navigate to a target object category in unknown environments. While recent Large Language Model (LLM)-based agents exhibit zero-shot reasoning, they often rely on a \"reactive\" paradigm that lacks explicit spatial memory, leading to redundant exploration and myopic behaviors. To address these limitations, we propose a transition from reactive AI to \"Map-Based AI\" by integrating LLM-based semantic inference with a hybrid topological-grid mapping system. Our framework employs a fine-tuned Llama-2 model via Low-Rank Adaptation (LoRA) to infer semantic zone categories and target existence probabilities from verbalized object observations. In this study, a \"zone\" is defined as a functional area described by the set of observed objects, providing crucial semantic co-occurrence cues for finding the target. This semantic information is integrated into a topological graph, enabling the agent to prioritize high-probability areas and perform systematic exploration via Traveling Salesman Problem (TSP) optimization. Evaluations in the AI2-THOR simulator demonstrate that our approach significantly outperforms traditional frontier exploration and reactive LLM baselines, achieving a superior Success Rate (SR) and Success weighted by Path Length (SPL).",
+        "url": "http://arxiv.org/abs/2603.08086v1",
+        "published_date": "2026-03-09T08:27:28+00:00",
+        "updated_date": "2026-03-09T08:27:28+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yudai Noda",
+            "Kanji Tanaka"
+        ],
+        "tldr": "This paper proposes a map-based AI approach for object-goal navigation, integrating a fine-tuned LLM for semantic zone inference with a topological-grid mapping system, leading to improved performance compared to reactive methods.",
+        "tldr_zh": "本文提出了一种基于地图的AI方法，用于目标导向导航，集成了微调的LLM用于语义区域推断与拓扑网格映射系统，与反应式方法相比，性能得到了提升。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Speed3R: Sparse Feed-forward 3D Reconstruction Models",
+        "summary": "While recent feed-forward 3D reconstruction models accelerate 3D reconstruction by jointly inferring dense geometry and camera poses in a single pass, their reliance on dense attention imposes a quadratic complexity, creating a prohibitive computational bottleneck that severely limits inference speed. To resolve this, we introduce Speed3R, an end-to-end trainable model inspired by the core principle of Structure-from-Motion: that a sparse set of keypoints is sufficient for robust pose estimation. Speed3R features a dual-branch attention mechanism where a compression branch creates a coarse contextual prior to guide a selection branch, which performs fine-grained attention only on the most informative image tokens. This strategy mimics the efficiency of traditional keypoint matching, achieving a remarkable 12.4x inference speedup on 1000-view sequences, while introducing a minimal, controlled trade-off in geometric accuracy. Validated on standard benchmarks with both VGGT and $π^3$ backbones, our method delivers high-quality reconstructions at a fraction of computational cost, paving the way for efficient large-scale scene modeling.",
+        "url": "http://arxiv.org/abs/2603.08055v1",
+        "published_date": "2026-03-09T07:46:51+00:00",
+        "updated_date": "2026-03-09T07:46:51+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Weining Ren",
+            "Xiao Tan",
+            "Kai Han"
+        ],
+        "tldr": "Speed3R introduces a sparse attention mechanism for feed-forward 3D reconstruction, achieving significant speedups with minimal accuracy loss, making it suitable for large-scale scene modeling.",
+        "tldr_zh": "Speed3R 提出了一种用于前馈3D重建的稀疏注意力机制，在最小化精度损失的同时实现了显著的速度提升，使其适用于大规模场景建模。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "AutoTraces: Autoregressive Trajectory Forecasting via Multimodal Large Language Models",
+        "summary": "We present AutoTraces, an autoregressive vision-language-trajectory model for robot trajectory forecasting in humam-populated environments, which harnesses the inherent reasoning capabilities of large language models (LLMs) to model complex human behaviors. In contrast to prior works that rely solely on textual representations, our key innovation lies in a novel trajectory tokenization scheme, which represents waypoints with point tokens as categorical and positional markers while encoding waypoint numerical values as corresponding point embeddings, seamlessly integrated into the LLM's space through a lightweight encoder-decoder architecture. This design preserves the LLM's native autoregressive generation mechanism while extending it to physical coordinate spaces, facilitates modeling of long-term interactions in trajectory data. We further introduce an automated chain-of-thought (CoT) generation mechanism that leverages a multimodal LLM to infer spatio-temporal relationships from visual observations and trajectory data, eliminating reliance on manual annotation. Through a two-stage training strategy, our AutoTraces achieves SOTA forecasting accuracy, particularly in long-horizon prediction, while exhibiting strong cross-scene generalization and supporting flexible-length forecasting.",
+        "url": "http://arxiv.org/abs/2603.07989v1",
+        "published_date": "2026-03-09T05:53:06+00:00",
+        "updated_date": "2026-03-09T05:53:06+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Teng Wang",
+            "Yanting Lu",
+            "Ruize Wang"
+        ],
+        "tldr": "AutoTraces is a novel vision-language-trajectory model using LLMs and a new trajectory tokenization scheme for improved robot trajectory forecasting in human-populated environments, achieving SOTA accuracy, especially in long-horizon prediction.",
+        "tldr_zh": "AutoTraces 是一种新颖的视觉-语言-轨迹模型，它利用大型语言模型（LLM）和一种新的轨迹标记方案来改进在有人环境中机器人轨迹的预测，尤其是在长程预测中，实现了最先进的精度。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "On the Feasibility and Opportunity of Autoregressive 3D Object Detection",
+        "summary": "LiDAR-based 3D object detectors typically rely on proposal heads with hand-crafted components like anchor assignment and non-maximum suppression (NMS), complicating training and limiting extensibility. We present AutoReg3D, an autoregressive 3D detector that casts detection as sequence generation. Given point-cloud features, AutoReg3D emits objects in a range-causal (near-to-far) order and encodes each object as a short, discrete-token sequence consisting of its center, size, orientation, velocity, and class. This near-to-far ordering mirrors LiDAR geometry--near objects occlude far ones but not vice versa--enabling straightforward teacher forcing during training and autoregressive decoding at test time. AutoReg3D is compatible across diverse point-cloud or backbones and attains competitive nuScenes performance without anchors or NMS. Beyond parity, the sequential formulation unlocks language-model advances for 3D perception, including GRPO-style reinforcement learning for task-aligned objectives. These results position autoregressive decoding as a viable, flexible alternative for LiDAR-based detection and open a path to importing modern sequence-modeling tools into 3D perception.",
+        "url": "http://arxiv.org/abs/2603.07985v1",
+        "published_date": "2026-03-09T05:46:53+00:00",
+        "updated_date": "2026-03-09T05:46:53+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zanming Huang",
+            "Jinsu Yoo",
+            "Sooyoung Jeon",
+            "Zhenzhen Liu",
+            "Mark Campbell",
+            "Kilian Q Weinberger",
+            "Bharath Hariharan",
+            "Wei-Lun Chao",
+            "Katie Z Luo"
+        ],
+        "tldr": "The paper introduces AutoReg3D, an autoregressive 3D object detector that formulates detection as sequence generation, achieving competitive performance without anchors or NMS and opening avenues for applying language model advances in 3D perception.",
+        "tldr_zh": "该论文介绍了一种名为AutoReg3D的自回归3D目标检测器，它将检测任务建模为序列生成，在无需锚框或NMS的情况下实现了有竞争力的性能，并为在3D感知中应用语言模型的发展开辟了道路。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "$L^3$:Scene-agnostic Visual Localization in the Wild",
+        "summary": "Standard visual localization methods typically require offline pre-processing of scenes to obtain 3D structural information for better performance. This inevitably introduces additional computational and time costs, as well as the overhead of storing scene representations. Can we visually localize in a wild scene without any off-line preprocessing step? In this paper, we leverage the online inference capabilities of feed-forward 3D reconstruction networks to propose a novel map-free visual localization framework $L^3$. Specifically, by performing direct online 3D reconstruction on RGB images, followed by two-stage metric scale recovery and pose refinement based on 2D-3D correspondences, $L^3$ achieves high accuracy without the need to pre-build or store any offline scene representations. Extensive experiments demonstrate $L^3$ not only that the performance is comparable to state-of-the-art solutions on various benchmarks, but also that it exhibits significantly superior robustness in sparse scenes (fewer reference images per scene).",
+        "url": "http://arxiv.org/abs/2603.07937v1",
+        "published_date": "2026-03-09T04:04:24+00:00",
+        "updated_date": "2026-03-09T04:04:24+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yu Zhang",
+            "Muhua Zhu",
+            "Yifei Xue",
+            "Tie Ji",
+            "Yizhen Lao"
+        ],
+        "tldr": "The paper presents $L^3$, a novel visual localization framework that performs scene-agnostic localization in the wild without any offline pre-processing by leveraging online 3D reconstruction from RGB images.",
+        "tldr_zh": "该论文提出了一种名为$L^3$的新型视觉定位框架，该框架利用RGB图像的在线3D重建，在没有任何离线预处理的情况下，在野外执行场景无关的定位。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "RLPR: Radar-to-LiDAR Place Recognition via Two-Stage Asymmetric Cross-Modal Alignment for Autonomous Driving",
+        "summary": "All-weather autonomy is critical for autonomous driving, which necessitates reliable localization across diverse scenarios. While LiDAR place recognition is widely deployed for this task, its performance degrades in adverse weather. Conversely, radar-based methods, though weather-resilient, are hindered by the general unavailability of radar maps. To bridge this gap, radar-to-LiDAR place recognition, which localizes radar scans within existing LiDAR maps, has garnered increasing interest. However, extracting discriminative and generalizable features shared between modalities remains challenging, compounded by the scarcity of large-scale paired training data and the signal heterogeneity across radar types. In this work, we propose RLPR, a robust radar-to-LiDAR place recognition framework compatible with single-chip, scanning, and 4D radars. We first design a dual-stream network to extract structural features that abstract away from sensor-specific signal properties (e.g., Doppler or RCS). Subsequently, motivated by our task-specific asymmetry observation between radar and LiDAR, we introduce a two-stage asymmetric cross-modal alignment (TACMA) strategy, which leverages the pre-trained radar branch as a discriminative anchor to guide the alignment process. Experiments on four datasets demonstrate that RLPR achieves state-of-the-art recognition accuracy with strong zero-shot generalization capabilities.",
+        "url": "http://arxiv.org/abs/2603.07920v1",
+        "published_date": "2026-03-09T03:28:44+00:00",
+        "updated_date": "2026-03-09T03:28:44+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zhangshuo Qi",
+            "Jingyi Xu",
+            "Luqi Cheng",
+            "Shichen Wen",
+            "Guangming Xiong"
+        ],
+        "tldr": "This paper introduces RLPR, a novel radar-to-LiDAR place recognition framework that utilizes a two-stage asymmetric cross-modal alignment strategy to improve localization accuracy and generalization in autonomous driving, even with different radar types.",
+        "tldr_zh": "本文介绍了RLPR，一种新颖的雷达到激光雷达的位置识别框架，该框架利用两阶段非对称跨模态对齐策略来提高自动驾驶中的定位精度和泛化能力，即使使用不同类型的雷达。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Toward Unified Multimodal Representation Learning for Autonomous Driving",
+        "summary": "Contrastive Language-Image Pre-training (CLIP) has shown impressive performance in aligning visual and textual representations. Recent studies have extended this paradigm to 3D vision to improve scene understanding for autonomous driving. A common strategy is to employ pairwise cosine similarity between modalities to guide the training of a 3D encoder. However, considering the similarity between individual modality pairs rather than all modalities jointly fails to ensure consistent and unified alignment across the entire multimodal space. In this paper, we propose a Contrastive Tensor Pre-training (CTP) framework that simultaneously aligns multiple modalities in a unified embedding space to enhance end-to-end autonomous driving. Compared with pairwise cosine similarity alignment, our method extends the 2D similarity matrix into a multimodal similarity tensor. Furthermore, we introduce a tensor loss to enable joint contrastive learning across all modalities. For experimental validation of our framework, we construct a text-image-point cloud triplet dataset derived from existing autonomous driving datasets. The results show that our proposed unified multimodal alignment framework achieves favorable performance for both scenarios: (i) aligning a 3D encoder with pretrained CLIP encoders, and (ii) pretraining all encoders from scratch.",
+        "url": "http://arxiv.org/abs/2603.07874v1",
+        "published_date": "2026-03-09T01:18:50+00:00",
+        "updated_date": "2026-03-09T01:18:50+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Ximeng Tao",
+            "Dimitar Filev",
+            "Gaurav Pandey"
+        ],
+        "tldr": "This paper introduces Contrastive Tensor Pre-training (CTP), a framework for unified multimodal representation learning in autonomous driving, addressing the limitations of pairwise similarity methods by using a tensor-based approach and a joint contrastive learning loss.",
+        "tldr_zh": "本文介绍了一种对比张量预训练（CTP）框架，用于自动驾驶中统一的多模态表征学习，通过使用基于张量的方法和联合对比学习损失，解决了成对相似性方法的局限性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "4DRC-OCC: Robust Semantic Occupancy Prediction Through Fusion of 4D Radar and Camera",
+        "summary": "Autonomous driving requires robust perception across diverse environmental conditions, yet 3D semantic occupancy prediction remains challenging under adverse weather and lighting. In this work, we present the first study combining 4D radar and camera data for 3D semantic occupancy prediction. Our fusion leverages the complementary strengths of both modalities: 4D radar provides reliable range, velocity, and angle measurements in challenging conditions, while cameras contribute rich semantic and texture information. We further show that integrating depth cues from camera pixels enables lifting 2D images to 3D, improving scene reconstruction accuracy. Additionally, we introduce a fully automatically labeled dataset for training semantic occupancy models, substantially reducing reliance on costly manual annotation. Experiments demonstrate the robustness of 4D radar across diverse scenarios, highlighting its potential to advance autonomous vehicle perception.",
+        "url": "http://arxiv.org/abs/2603.07794v1",
+        "published_date": "2026-03-08T20:28:25+00:00",
+        "updated_date": "2026-03-08T20:28:25+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "David Ninfa",
+            "Andras Palffy",
+            "Holger Caesar"
+        ],
+        "tldr": "This paper introduces a 4D radar and camera fusion approach for robust 3D semantic occupancy prediction in autonomous driving, especially in adverse conditions, and provides a automatically labeled dataset.",
+        "tldr_zh": "本文提出了一种4D雷达和相机融合方法，用于在自动驾驶中实现鲁棒的3D语义占用预测，尤其是在不利条件下，并提供了一个自动标注的数据集。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "See and Switch: Vision-Based Branching for Interactive Robot-Skill Programming",
+        "summary": "Programming robots by demonstration (PbD) is an intuitive concept, but scaling it to real-world variability remains a challenge for most current teaching frameworks. Conditional task graphs are very expressive and can be defined incrementally, which fits very well with the PbD idea. However, acting using conditional task graphs requires reliable perception-grounded online branch selection. In this paper, we present See & Switch, an interactive teaching-and-execution framework that represents tasks as user-extendable graphs of skill parts connected via decision states (DS), enabling conditional branching during replay. Unlike prior approaches that rely on manual branching or low-dimensional signals (e.g., proprioception), our vision-based Switcher uses eye-in-hand images (high-dimensional) to select among competing successor skill parts and to detect out-of-distribution contexts that require new demonstrations. We integrate kinesthetic teaching, joystick control, and hand gestures via an input-modality-abstraction layer and demonstrate that our proposed method is teaching modality-independent, enabling efficient in-situ recovery demonstrations. The system is validated in experiments on three challenging dexterous manipulation tasks. We evaluate our method under diverse conditions and furthermore conduct user studies with 8 participants. We show that the proposed method reliably performs branch selection and anomaly detection for novice users, achieving 90.7 % and 87.9 % accuracy, respectively, across 576 real-robot rollouts. We provide all code and data required to reproduce our experiments at http://imitrob.ciirc.cvut.cz/publications/seeandswitch.",
+        "url": "http://arxiv.org/abs/2603.08057v1",
+        "published_date": "2026-03-09T07:47:47+00:00",
+        "updated_date": "2026-03-09T07:47:47+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Petr Vanc",
+            "Jan Kristof Behrens",
+            "Václav Hlaváč",
+            "Karla Stepanova"
+        ],
+        "tldr": "The paper presents See & Switch, an interactive robot teaching framework that uses vision-based branching via eye-in-hand images to enable conditional branching and anomaly detection in robot skill execution, validated on dexterous manipulation tasks.",
+        "tldr_zh": "该论文提出了See & Switch，一个交互式机器人教学框架，该框架使用基于视觉的分支，通过手眼图像来实现机器人技能执行中的条件分支和异常检测，并在灵巧操作任务中进行了验证。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    },
+    {
+        "title": "MWM: Mobile World Models for Action-Conditioned Consistent Prediction",
+        "summary": "World models enable planning in imagined future predicted space, offering a promising framework for embodied navigation. However, existing navigation world models often lack action-conditioned consistency, so visually plausible predictions can still drift under multi-step rollout and degrade planning. Moreover, efficient deployment requires few-step diffusion inference, but existing distillation methods do not explicitly preserve rollout consistency, creating a training-inference mismatch. To address these challenges, we propose MWM, a mobile world model for planning-based image-goal navigation. Specifically, we introduce a two-stage training framework that combines structure pretraining with Action-Conditioned Consistency (ACC) post-training to improve action-conditioned rollout consistency. We further introduce Inference-Consistent State Distillation (ICSD) for few-step diffusion distillation with improved rollout consistency. Our experiments on benchmark and real-world tasks demonstrate consistent gains in visual fidelity, trajectory accuracy, planning success, and inference efficiency. Code: https://github.com/AIGeeksGroup/MWM. Website: https://aigeeksgroup.github.io/MWM.",
+        "url": "http://arxiv.org/abs/2603.07799v1",
+        "published_date": "2026-03-08T20:54:50+00:00",
+        "updated_date": "2026-03-08T20:54:50+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Han Yan",
+            "Zishang Xiang",
+            "Zeyu Zhang",
+            "Hao Tang"
+        ]
+    }
+]

@@ -1,0 +1,286 @@
+[
+    {
+        "title": "ReconDrive: Fast Feed-Forward 4D Gaussian Splatting for Autonomous Driving Scene Reconstruction",
+        "summary": "High-fidelity visual reconstruction and novel-view synthesis are essential for realistic closed-loop evaluation in autonomous driving. While 4D Gaussian Splatting (4DGS) offers a promising balance of accuracy and efficiency, existing per-scene optimization methods require costly iterative refinement, rendering them unscalable for extensive urban environments. Conversely, current feed-forward approaches often suffer from degraded photometric quality. To address these limitations, we propose ReconDrive, a feed-forward framework that leverages and extends the 3D foundation model VGGT for rapid, high-fidelity 4DGS generation. Our architecture introduces two core adaptations to tailor the foundation model to dynamic driving scenes: (1) Hybrid Gaussian Prediction Heads, which decouple the regression of spatial coordinates and appearance attributes to overcome the photometric deficiencies inherent in generalized foundation features; and (2) a Static-Dynamic 4D Composition strategy that explicitly captures temporal motion via velocity modeling to represent complex dynamic environments. Benchmarked on nuScenes, ReconDrive significantly outperforms existing feed-forward baselines in reconstruction, novel-view synthesis, and 3D perception. It achieves performance competitive with per-scene optimization while being orders of magnitude faster, providing a scalable and practical solution for realistic driving simulation.",
+        "url": "http://arxiv.org/abs/2603.07552v1",
+        "published_date": "2026-03-08T09:31:15+00:00",
+        "updated_date": "2026-03-08T09:31:15+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Haibao Yu",
+            "Kuntao Xiao",
+            "Jiahang Wang",
+            "Ruiyang Hao",
+            "Yuxin Huang",
+            "Guoran Hu",
+            "Haifang Qin",
+            "Bowen Jing",
+            "Yuntian Bo",
+            "Ping Luo"
+        ],
+        "tldr": "ReconDrive is a feed-forward framework that leverages a 3D foundation model for fast and high-fidelity 4D Gaussian Splatting in autonomous driving scenes, outperforming existing feed-forward methods and approaching per-scene optimization performance with significantly improved speed.",
+        "tldr_zh": "ReconDrive是一个前馈框架，利用3D基础模型在自动驾驶场景中实现快速、高保真的4D高斯溅射，优于现有的前馈方法，并以显著提高的速度接近于场景优化性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "RayD3D: Distilling Depth Knowledge Along the Ray for Robust Multi-View 3D Object Detection",
+        "summary": "Multi-view 3D detection with bird's eye view (BEV) is crucial for autonomous driving and robotics, but its robustness in real-world is limited as it struggles to predict accurate depth values. A mainstream solution, cross-modal distillation, transfers depth information from LiDAR to camera models but also unintentionally transfers depth-irrelevant information (e.g. LiDAR density). To mitigate this issue, we propose RayD3D, which transfers crucial depth knowledge along the ray: a line projecting from the camera to true location of an object. It is based on the fundamental imaging principle that predicted location of this object can only vary along this ray, which is finally determined by predicted depth value. Therefore, distilling along the ray enables more effective depth information transfer. More specifically, we design two ray-based distillation modules. Ray-based Contrastive Distillation (RCD) incorporates contrastive learning into distillation by sampling along the ray to learn how LiDAR accurately locates objects. Ray-based Weighted Distillation (RWD) adaptively adjusts distillation weight based on the ray to minimize the interference of depth-irrelevant information in LiDAR. For validation, we widely apply RayD3D into three representative types of BEV-based models, including BEVDet, BEVDepth4D, and BEVFormer. Our method is trained on clean NuScenes, and tested on both clean NuScenes and RoboBEV with a variety types of data corruptions. Our method significantly improves the robustness of all the three base models in all scenarios without increasing inference costs, and achieves the best when compared to recently released multi-view and distillation models.",
+        "url": "http://arxiv.org/abs/2603.07493v1",
+        "published_date": "2026-03-08T06:27:21+00:00",
+        "updated_date": "2026-03-08T06:27:21+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Rui Ding",
+            "Zhaonian Kuang",
+            "Zongwei Zhou",
+            "Meng Yang",
+            "Xinhu Zheng",
+            "Gang Hua"
+        ],
+        "tldr": "RayD3D improves multi-view 3D object detection robustness by distilling depth knowledge along the ray from LiDAR to camera models, mitigating the transfer of depth-irrelevant information and significantly enhancing performance on corrupted datasets.",
+        "tldr_zh": "RayD3D通过将深度知识沿射线从激光雷达提炼到相机模型，提高了多视图3D目标检测的鲁棒性，减轻了与深度无关的信息的转移，并显著提高了在损坏数据集上的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "FrameVGGT: Frame Evidence Rolling Memory for streaming VGGT",
+        "summary": "Streaming Visual Geometry Transformers such as StreamVGGT enable strong online 3D perception but suffer from unbounded KV-cache growth, which limits deployment over long streams. We revisit bounded-memory streaming from the perspective of geometric support. In geometry-driven reasoning, memory quality depends not only on how many tokens are retained, but also on whether the retained memory still preserves sufficiently coherent local support. This suggests that token-level retention may become less suitable under fixed budgets, as it can thin the evidence available within each contributing frame and make subsequent fusion more sensitive to weakly aligned history. Motivated by this observation, we propose FrameVGGT, a frame-driven rolling explicit-memory framework that treats each frame's incremental KV contribution as a coherent evidence block. FrameVGGT summarizes each block into a compact prototype and maintains a fixed-capacity mid-term bank of complementary frame blocks under strict budgets, with an optional lightweight anchor tier for rare prolonged degradation. Across long-sequence 3D reconstruction, video depth estimation, and camera pose benchmarks, FrameVGGT achieves favorable accuracy--memory trade-offs under bounded memory, while maintaining more stable geometry over long streams.",
+        "url": "http://arxiv.org/abs/2603.07690v1",
+        "published_date": "2026-03-08T15:46:03+00:00",
+        "updated_date": "2026-03-08T15:46:03+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zhisong Xu",
+            "Takeshi Oishi"
+        ],
+        "tldr": "FrameVGGT introduces a frame-driven rolling memory framework for streaming Visual Geometry Transformers to address the unbounded KV-cache growth problem, improving long-sequence 3D perception under bounded memory constraints.",
+        "tldr_zh": "FrameVGGT提出了一种帧驱动的滚动内存框架，用于流式视觉几何变换器，以解决无界KV缓存增长问题，从而在有限内存约束下改进长序列3D感知。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "UniUncer: Unified Dynamic Static Uncertainty for End to End Driving",
+        "summary": "End-to-end (E2E) driving has become a cornerstone of both industry deployment and academic research, offering a single learnable pipeline that maps multi-sensor inputs to actions while avoiding hand-engineered modules. However, the reliability of such pipelines strongly depends on how well they handle uncertainty: sensors are noisy, semantics can be ambiguous, and interaction with other road users is inherently stochastic. Uncertainty also appears in multiple forms: classification vs. localization, and, crucially, in both static map elements and dynamic agents. Existing E2E approaches model only static-map uncertainty, leaving planning vulnerable to overconfident and unreliable inputs. We present UniUncer, the first lightweight, unified uncertainty framework that jointly estimates and uses uncertainty for both static and dynamic scene elements inside an E2E planner. Concretely: (1) we convert deterministic heads to probabilistic Laplace regressors that output per-vertex location and scale for vectorized static and dynamic entities; (2) we introduce an uncertainty-fusion module that encodes these parameters and injects them into object/map queries to form uncertainty-aware queries; and (3) we design an uncertainty-aware gate that adaptively modulates reliance on historical inputs (ego status or temporal perception queries) based on current uncertainty levels. The design adds minimal overhead and drops throughput by only $\\sim$0.5 FPS while remaining plug-and-play for common E2E backbones. On nuScenes (open-loop), UniUncer reduces average L2 trajectory error by 7\\%. On NavsimV2 (pseudo closed-loop), it improves overall EPDMS by 10.8\\% and notable stage two gains in challenging, interaction-heavy scenes. Ablations confirm that dynamic-agent uncertainty and the uncertainty-aware gate are both necessary.",
+        "url": "http://arxiv.org/abs/2603.07686v1",
+        "published_date": "2026-03-08T15:43:02+00:00",
+        "updated_date": "2026-03-08T15:43:02+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Yu Gao",
+            "Jijun Wang",
+            "Zongzheng Zhang",
+            "Anqing Jiang",
+            "Yiru Wang",
+            "Yuwen Heng",
+            "Shuo Wang",
+            "Hao Sun",
+            "Zhangfeng Hu",
+            "Hao Zhao"
+        ],
+        "tldr": "The paper introduces UniUncer, a unified framework for end-to-end driving that jointly estimates and uses uncertainty for both static and dynamic scene elements, improving performance in both open-loop and closed-loop driving scenarios.",
+        "tldr_zh": "该论文介绍了UniUncer，一个用于端到端驾驶的统一框架，它联合估计并使用静态和动态场景元素的不确定性，从而提高了在开放循环和闭环驾驶场景中的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "AtomicVLA: Unlocking the Potential of Atomic Skill Learning in Robots",
+        "summary": "Recent advances in Visual-Language-Action (VLA) models have shown promising potential for robotic manipulation tasks. However, real-world robotic tasks often involve long-horizon, multi-step problem-solving and require generalization for continual skill acquisition, extending beyond single actions or skills. These challenges present significant barriers for existing VLA models, which use monolithic action decoders trained on aggregated data, resulting in poor scalability. To address these challenges, we propose AtomicVLA, a unified planning-and-execution framework that jointly generates task-level plans, atomic skill abstractions, and fine-grained actions. AtomicVLA constructs a scalable atomic skill library through a Skill-Guided Mixture-of-Experts (SG-MoE), where each expert specializes in mastering generic yet precise atomic skills. Furthermore, we introduce a flexible routing encoder that automatically assigns dedicated atomic experts to new skills, enabling continual learning. We validate our approach through extensive experiments. In simulation, AtomicVLA outperforms $π_{0}$ by 2.4\\% on LIBERO, 10\\% on LIBERO-LONG, and outperforms $π_{0}$ and $π_{0.5}$ by 0.22 and 0.25 in average task length on CALVIN. Additionally, our AtomicVLA consistently surpasses baselines by 18.3\\% and 21\\% in real-world long-horizon tasks and continual learning. These results highlight the effectiveness of atomic skill abstraction and dynamic expert composition for long-horizon and lifelong robotic tasks. The project page is \\href{https://zhanglk9.github.io/atomicvla-web/}{here}.",
+        "url": "http://arxiv.org/abs/2603.07648v1",
+        "published_date": "2026-03-08T14:18:56+00:00",
+        "updated_date": "2026-03-08T14:18:56+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Likui Zhang",
+            "Tao Tang",
+            "Zhihao Zhan",
+            "Xiuwei Chen",
+            "Zisheng Chen",
+            "Jianhua Han",
+            "Jiangtong Zhu",
+            "Pei Xu",
+            "Hang Xu",
+            "Hefeng Wu",
+            "Liang Lin",
+            "Xiaodan Liang"
+        ],
+        "tldr": "The paper introduces AtomicVLA, a novel framework for robotic manipulation that uses atomic skill abstraction and dynamic expert composition to address the challenges of long-horizon tasks and continual learning in VLA models, showing significant performance improvements in both simulation and real-world experiments.",
+        "tldr_zh": "该论文介绍了AtomicVLA，一种用于机器人操作的新框架，它利用原子技能抽象和动态专家组合来解决VLA模型中长程任务和持续学习的挑战，并在仿真和真实世界实验中显示出显著的性能改进。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Fast Attention-Based Simplification of LiDAR Point Clouds for Object Detection and Classification",
+        "summary": "LiDAR point clouds are widely used in autonomous driving and consist of large numbers of 3D points captured at high frequency to represent surrounding objects such as vehicles, pedestrians, and traffic signs. While this dense data enables accurate perception, it also increases computational cost and power consumption, which can limit real-time deployment. Existing point cloud sampling methods typically face a trade-off: very fast approaches tend to reduce accuracy, while more accurate methods are computationally expensive. To address this limitation, we propose an efficient learned point cloud simplification method for LiDAR data. The method combines a feature embedding module with an attention-based sampling module to prioritize task-relevant regions and is trained end-to-end. We evaluate the method against farthest point sampling (FPS) and random sampling (RS) on 3D object detection on the KITTI dataset and on object classification across four datasets. The method was consistently faster than FPS and achieved similar, and in some settings better, accuracy, with the largest gains under aggressive downsampling. It was slower than RS, but it typically preserved accuracy more reliably at high sampling ratios.",
+        "url": "http://arxiv.org/abs/2603.07593v1",
+        "published_date": "2026-03-08T11:38:34+00:00",
+        "updated_date": "2026-03-08T11:38:34+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Z. Rozsa",
+            "Á. Madaras",
+            "Q. Wei",
+            "X. Lu",
+            "M. Golarits",
+            "H. Yuan",
+            "T. Sziranyi",
+            "R. Hamzaoui"
+        ],
+        "tldr": "This paper proposes a fast, learned LiDAR point cloud simplification method using attention mechanisms for improved object detection and classification, balancing speed and accuracy compared to existing sampling techniques.",
+        "tldr_zh": "该论文提出了一种快速的、基于学习的激光雷达点云简化方法，使用注意力机制来改进物体检测和分类，相比于现有的采样技术，该方法在速度和精度之间取得了平衡。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Efficient RGB-D Scene Understanding via Multi-task Adaptive Learning and Cross-dimensional Feature Guidance",
+        "summary": "Scene understanding plays a critical role in enabling intelligence and autonomy in robotic systems. Traditional approaches often face challenges, including occlusions, ambiguous boundaries, and the inability to adapt attention based on task-specific requirements and sample variations. To address these limitations, this paper presents an efficient RGB-D scene understanding model that performs a range of tasks, including semantic segmentation, instance segmentation, orientation estimation, panoptic segmentation, and scene classification. The proposed model incorporates an enhanced fusion encoder, which effectively leverages redundant information from both RGB and depth inputs. For semantic segmentation, we introduce normalized focus channel layers and a context feature interaction layer, designed to mitigate issues such as shallow feature misguidance and insufficient local-global feature representation. The instance segmentation task benefits from a non-bottleneck 1D structure, which achieves superior contour representation with fewer parameters. Additionally, we propose a multi-task adaptive loss function that dynamically adjusts the learning strategy for different tasks based on scene variations. Extensive experiments on the NYUv2, SUN RGB-D, and Cityscapes datasets demonstrate that our approach outperforms existing methods in both segmentation accuracy and processing speed.",
+        "url": "http://arxiv.org/abs/2603.07570v1",
+        "published_date": "2026-03-08T10:09:26+00:00",
+        "updated_date": "2026-03-08T10:09:26+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Guodong Sun",
+            "Junjie Liu",
+            "Gaoyang Zhang",
+            "Bo Wu",
+            "Yang Zhang"
+        ],
+        "tldr": "This paper presents an efficient RGB-D scene understanding model using multi-task adaptive learning and cross-dimensional feature guidance, achieving improved performance in various scene understanding tasks.",
+        "tldr_zh": "本文提出了一种高效的RGB-D场景理解模型，该模型利用多任务自适应学习和跨维度特征引导，在各种场景理解任务中实现了更好的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Multi-Modal Decouple and Recouple Network for Robust 3D Object Detection",
+        "summary": "Multi-modal 3D object detection with bird's eye view (BEV) has achieved desired advances on benchmarks. Nonetheless, the accuracy may drop significantly in the real world due to data corruption such as sensor configurations for LiDAR and scene conditions for camera. One design bottleneck of previous models resides in the tightly coupling of multi-modal BEV features during fusion, which may degrade the overall system performance if one modality or both is corrupted. To mitigate, we propose a Multi-Modal Decouple and Recouple Network for robust 3D object detection under data corruption. Different modalities commonly share some high-level invariant features. We observe that these invariant features across modalities do not always fail simultaneously, because different types of data corruption affect each modality in distinct ways.These invariant features can be recovered across modalities for robust fusion under data corruption.To this end, we explicitly decouple Camera/LiDAR BEV features into modality-invariant and modality-specific parts. It allows invariant features to compensate each other while mitigates the negative impact of a corrupted modality on the other.We then recouple these features into three experts to handle different types of data corruption, respectively, i.e., LiDAR, camera, and both.For each expert, we use modality-invariant features as robust information, while modality-specific features serve as a complement.Finally, we adaptively fuse the three experts to exact robust features for 3D object detection. For validation, we collect a benchmark with a large quantity of data corruption for LiDAR, camera, and both based on nuScenes. Our model is trained on clean nuScenes and tested on all types of data corruption. Our model consistently achieves the best accuracy on both corrupted and clean data compared to recent models.",
+        "url": "http://arxiv.org/abs/2603.07486v1",
+        "published_date": "2026-03-08T06:10:25+00:00",
+        "updated_date": "2026-03-08T06:10:25+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Rui Ding",
+            "Zhaonian Kuang",
+            "Yuzhe Ji",
+            "Meng Yang",
+            "Xinhu Zheng",
+            "Gang Hua"
+        ],
+        "tldr": "This paper proposes a Multi-Modal Decouple and Recouple Network to improve the robustness of 3D object detection under data corruption in LiDAR and camera sensors by decoupling and recoupling modality-invariant and modality-specific features. They also create a corrupted nuScenes dataset for evaluation.",
+        "tldr_zh": "本文提出了一种多模态解耦和重耦合网络，通过解耦和重耦合模态不变和模态特定特征，提高了在LiDAR和摄像头传感器数据损坏情况下3D目标检测的鲁棒性。他们还创建了一个损坏的nuScenes数据集用于评估。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Selective Transfer Learning of Cross-Modality Distillation for Monocular 3D Object Detection",
+        "summary": "Monocular 3D object detection is a promising yet ill-posed task for autonomous vehicles due to the lack of accurate depth information. Cross-modality knowledge distillation could effectively transfer depth information from LiDAR to image-based network. However, modality gap between image and LiDAR seriously limits its accuracy. In this paper, we systematically investigate the negative transfer problem induced by modality gap in cross-modality distillation for the first time, including not only the architecture inconsistency issue but more importantly the feature overfitting issue. We propose a selective learning approach named MonoSTL to overcome these issues, which encourages positive transfer of depth information from LiDAR while alleviates the negative transfer on image-based network. On the one hand, we utilize similar architectures to ensure spatial alignment of features between image-based and LiDAR-based networks. On the other hand, we develop two novel distillation modules, namely Depth-Aware Selective Feature Distillation (DASFD) and Depth-Aware Selective Relation Distillation (DASRD), which selectively learn positive features and relationships of objects by integrating depth uncertainty into feature and relation distillations, respectively. Our approach can be seamlessly integrated into various CNN-based and DETR-based models, where we take three recent models on KITTI and a recent model on NuScenes for validation. Extensive experiments show that our approach considerably improves the accuracy of the base models and thereby achieves the best accuracy compared with all recently released SOTA models.",
+        "url": "http://arxiv.org/abs/2603.07464v1",
+        "published_date": "2026-03-08T05:05:07+00:00",
+        "updated_date": "2026-03-08T05:05:07+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Rui Ding",
+            "Meng Yang",
+            "Nanning Zheng"
+        ],
+        "tldr": "This paper introduces MonoSTL, a selective transfer learning approach for monocular 3D object detection that addresses negative transfer in cross-modality distillation by selectively learning positive depth information from LiDAR while mitigating feature overfitting. It achieves SOTA results on KITTI and NuScenes datasets.",
+        "tldr_zh": "本文介绍了一种名为MonoSTL的选择性迁移学习方法，用于单目3D目标检测。该方法通过选择性地学习来自激光雷达的正向深度信息，同时减轻特征过拟合，从而解决跨模态蒸馏中的负迁移问题。该方法在KITTI和NuScenes数据集上取得了SOTA结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "QdaVPR: A novel query-based domain-agnostic model for visual place recognition",
+        "summary": "Visual place recognition (VPR) aiming at predicting the location of an image based solely on its visual features is a fundamental task in robotics and autonomous systems. Domain variation remains one of the main challenges in VPR and is relatively unexplored. Existing VPR models attempt to achieve domain agnosticism either by training on large-scale datasets that inherently contain some domain variations, or by being specifically adapted to particular target domains. In practice, the former lacks explicit domain supervision, while the latter generalizes poorly to unseen domain shifts. This paper proposes a novel query-based domain-agnostic VPR model called QdaVPR. First, a dual-level adversarial learning framework is designed to encourage domain invariance for both the query features forming the global descriptor and the image features from which these query features are derived. Then, a triplet supervision based on query combinations is designed to enhance the discriminative power of the global descriptors. To support the learning process, we augment a large-scale VPR dataset using style transfer methods, generating various synthetic domains with corresponding domain labels as auxiliary supervision. Extensive experiments show that QdaVPR achieves state-of-the-art performance on multiple VPR benchmarks with significant domain variations. Specifically, it attains the best Recall@1 and Recall@10 on nearly all test scenarios: 93.5%/98.6% on Nordland (seasonal changes), 97.5%/99.0% on Tokyo24/7 (day-night transitions), and the highest Recall@1 across almost all weather conditions on the SVOX dataset. Our code will be released at https://github.com/shuimushan/QdaVPR.",
+        "url": "http://arxiv.org/abs/2603.07414v1",
+        "published_date": "2026-03-08T02:01:20+00:00",
+        "updated_date": "2026-03-08T02:01:20+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Shanshan Wan",
+            "Lai Kang",
+            "Yingmei Wei",
+            "Tianrui Shen",
+            "Haixuan Wang",
+            "Chao Zuo"
+        ],
+        "tldr": "This paper introduces QdaVPR, a novel query-based, domain-agnostic visual place recognition model using dual-level adversarial learning and triplet supervision, achieving state-of-the-art results on benchmarks with domain variations.",
+        "tldr_zh": "本文介绍了一种新的基于查询的领域无关视觉位置识别模型 QdaVPR，该模型采用双层对抗学习和三重监督，在具有领域差异的基准测试中取得了最先进的结果。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Faster-HEAL: An Efficient and Privacy-Preserving Collaborative Perception Framework for Heterogeneous Autonomous Vehicles",
+        "summary": "Collaborative perception (CP) is a promising paradigm for improving situational awareness in autonomous vehicles by overcoming the limitations of single-agent perception. However, most existing approaches assume homogeneous agents, which restricts their applicability in real-world scenarios where vehicles use diverse sensors and perception models. This heterogeneity introduces a feature domain gap that degrades detection performance. Prior works address this issue by retraining entire models/major components, or using feature interpreters for each new agent type, which is computationally expensive, compromises privacy, and may reduce single-agent accuracy. We propose Faster-HEAL, a lightweight and privacy-preserving CP framework that fine-tunes a low-rank visual prompt to align heterogeneous features with a unified feature space while leveraging pyramid fusion for robust feature aggregation. This approach reduces the trainable parameters by 94%, enabling efficient adaptation to new agents without retraining large models. Experiments on the OPV2V-H dataset show that Faster-HEAL improves detection performance by 2% over state-of-the-art methods with significantly lower computational overhead, offering a practical solution for scalable heterogeneous CP.",
+        "url": "http://arxiv.org/abs/2603.07314v1",
+        "published_date": "2026-03-07T19:18:25+00:00",
+        "updated_date": "2026-03-07T19:18:25+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Armin Maleki",
+            "Hayder Radha"
+        ],
+        "tldr": "Faster-HEAL is a lightweight, privacy-preserving collaborative perception framework that uses low-rank visual prompt fine-tuning to align heterogeneous agent features, improving detection performance with reduced computational cost and privacy risks.",
+        "tldr_zh": "Faster-HEAL是一个轻量级、保护隐私的协同感知框架，它通过低秩视觉提示微调来对齐异构代理的特征，在降低计算成本和隐私风险的同时，提高了检测性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    }
+]
