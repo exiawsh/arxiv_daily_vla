@@ -1,0 +1,179 @@
+[
+    {
+        "title": "Overcoming Visual Clutter in Vision Language Action Models via Concept-Gated Visual Distillation",
+        "summary": "Vision-Language-Action (VLA) models demonstrate impressive zero-shot generalization but frequently suffer from a \"Precision-Reasoning Gap\" in cluttered environments. This failure is driven by background-induced feature dilution, where high-frequency semantic noise corrupts the geometric grounding required for precise manipulation. To bridge this gap, we propose Concept-Gated Visual Distillation (CGVD), a training-free, model-agnostic inference framework that stabilizes VLA policies. CGVD operates by parsing instructions into safe and distractor sets, utilizing a two-layer target refinement process--combining cross-validation and spatial disambiguation--to explicitly penalize false positives and isolate genuine manipulation targets. We then process the scene via Fourier-based inpainting, generating a clean observation that actively suppresses semantic distractors while preserving critical spatial geometry and visual proprioception. Extensive evaluations in highly cluttered manipulation tasks demonstrate that CGVD prevents performance collapse. In environments with dense semantic distractors, our method significantly outperforms state-of-the-art baselines, achieving a 77.5% success rate compared to the baseline's 43.0%. By enforcing strict attribute adherence, CGVD establishes inference-time visual distillation as a critical prerequisite for robust robotic manipulation in the clutter.",
+        "url": "http://arxiv.org/abs/2603.10340v1",
+        "published_date": "2026-03-11T02:21:02+00:00",
+        "updated_date": "2026-03-11T02:21:02+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.RO",
+            "eess.SY"
+        ],
+        "authors": [
+            "Sangmim Song",
+            "Sarath Kodagoda",
+            "Marc Carmichael",
+            "Karthick Thiyagarajan"
+        ],
+        "tldr": "This paper introduces Concept-Gated Visual Distillation (CGVD), a training-free inference framework, to address the \"Precision-Reasoning Gap\" in Vision-Language-Action models caused by visual clutter, showing significant performance improvements in robotic manipulation tasks with semantic distractors.",
+        "tldr_zh": "本文介绍了一种名为概念门控视觉蒸馏 (CGVD) 的免训练推理框架，旨在解决视觉语言动作模型中由视觉杂乱引起的“精确推理差距”，并在具有语义干扰物的机器人操作任务中显示出显著的性能提升。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Splat2Real: Novel-view Scaling for Physical AI with 3D Gaussian Splatting",
+        "summary": "Physical AI faces viewpoint shift between training and deployment, and novel-view robustness is essential for monocular RGB-to-3D perception. We cast Real2Render2Real monocular depth pretraining as imitation-learning-style supervision from a digital twin oracle: a student depth network imitates expert metric depth/visibility rendered from a scene mesh, while 3DGS supplies scalable novel-view observations. We present Splat2Real, centered on novel-view scaling: performance depends more on which views are added than on raw view count. We introduce CN-Coverage, a coverage+novelty curriculum that greedily selects views by geometry gain and an extrapolation penalty, plus a quality-aware guardrail fallback for low-reliability teachers. Across 20 TUM RGB-D sequences with step-matched budgets (N=0 to 2000 additional rendered views, with N unique <= 500 and resampling for larger budgets), naive scaling is unstable; CN-Coverage mitigates worst-case regressions relative to Robot/Coverage policies, and GOL-Gated CN-Coverage provides the strongest medium-high-budget stability with the lowest high-novelty tail error. Downstream control-proxy results versus N provides embodied-relevance evidence by shifting safety/progress trade-offs under viewpoint shift.",
+        "url": "http://arxiv.org/abs/2603.10638v1",
+        "published_date": "2026-03-11T10:52:09+00:00",
+        "updated_date": "2026-03-11T10:52:09+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Hansol Lim",
+            "Jongseong Brad Choi"
+        ],
+        "tldr": "The paper introduces Splat2Real, a novel-view scaling method using 3D Gaussian Splatting for monocular depth pretraining in physical AI, focusing on intelligently selecting informative views for improved performance and robustness under viewpoint shifts.",
+        "tldr_zh": "该论文介绍了Splat2Real，一种使用3D高斯溅射的新视角缩放方法，用于物理人工智能中的单目深度预训练，重点在于智能选择信息丰富的视角，以提高性能和在视角变化下的鲁棒性。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 7,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "AsyncMDE: Real-Time Monocular Depth Estimation via Asynchronous Spatial Memory",
+        "summary": "Foundation-model-based monocular depth estimation offers a viable alternative to active sensors for robot perception, yet its computational cost often prohibits deployment on edge platforms. Existing methods perform independent per-frame inference, wasting the substantial computational redundancy between adjacent viewpoints in continuous robot operation. This paper presents AsyncMDE, an asynchronous depth perception system consisting of a foundation model and a lightweight model that amortizes the foundation model's computational cost over time. The foundation model produces high-quality spatial features in the background, while the lightweight model runs asynchronously in the foreground, fusing cached memory with current observations through complementary fusion, outputting depth estimates, and autoregressively updating the memory. This enables cross-frame feature reuse with bounded accuracy degradation. At a mere 3.83M parameters, it operates at 237 FPS on an RTX 4090, recovering 77% of the accuracy gap to the foundation model while achieving a 25X parameter reduction. Validated across indoor static, dynamic, and synthetic extreme-motion benchmarks, AsyncMDE degrades gracefully between refreshes and achieves 161FPS on a Jetson AGX Orin with TensorRT, clearly demonstrating its feasibility for real-time edge deployment.",
+        "url": "http://arxiv.org/abs/2603.10438v1",
+        "published_date": "2026-03-11T05:40:25+00:00",
+        "updated_date": "2026-03-11T05:40:25+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Lianjie Ma",
+            "Yuquan Li",
+            "Bingzheng Jiang",
+            "Ziming Zhong",
+            "Han Ding",
+            "Lijun Zhu"
+        ],
+        "tldr": "The paper introduces AsyncMDE, a system for real-time monocular depth estimation that leverages a lightweight model and asynchronous memory to reduce computational cost while maintaining acceptable accuracy compared to foundation models, demonstrating feasibility for edge deployment.",
+        "tldr_zh": "该论文介绍了AsyncMDE，一种用于实时单目深度估计的系统，它利用轻量级模型和异步内存来降低计算成本，同时保持与基础模型相比可接受的准确度，并展示了边缘部署的可行性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "World2Act: Latent Action Post-Training via Skill-Compositional World Models",
+        "summary": "World Models (WMs) have emerged as a promising approach for post-training Vision-Language-Action (VLA) policies to improve robustness and generalization under environmental changes. However, most WM-based post-training methods rely on pixel-space supervision, making policies sensitive to pixel-level artifacts and hallucination from imperfect WM rollouts. We introduce World2Act, a post-training framework that aligns VLA actions directly with WM video-dynamics latents using a contrastive matching objective, reducing dependence on pixels. Post-training performance is tied to rollout quality, yet current WMs struggle with arbitrary-length video generation as they are mostly trained on fixed-length clips while robotic execution durations vary widely. To address this, we propose an automatic LLM-based skill-decomposition pipeline that segments high-level instructions into low-level prompts. Our pipeline produces RoboCasa-Skill and LIBERO-Skill, supporting skill-compositional WMs that remain temporally consistent across diverse task horizons. Empirically, applying World2Act to VLAs like GR00T-N1.6 and Cosmos Policy achieves state-of-the-art results on RoboCasa and LIBERO, and improves real-world performance by 6.7%, enhancing embodied agent generalization.",
+        "url": "http://arxiv.org/abs/2603.10422v1",
+        "published_date": "2026-03-11T05:11:44+00:00",
+        "updated_date": "2026-03-11T05:11:44+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "An Dinh Vuong",
+            "Tuan Van Vo",
+            "Abdullah Sohail",
+            "Haoran Ding",
+            "Liang Ma",
+            "Xiaodan Liang",
+            "Anqing Duan",
+            "Ivan Laptev",
+            "Ian Reid"
+        ],
+        "tldr": "The paper introduces World2Act, a post-training framework for Vision-Language-Action (VLA) policies that aligns actions with World Model latents, and uses LLM-based skill decomposition to improve temporal consistency and generalization, achieving state-of-the-art results on robotic manipulation benchmarks and real-world performance gains.",
+        "tldr_zh": "该论文介绍了World2Act，一个用于视觉-语言-动作（VLA）策略的后训练框架，该框架将动作与世界模型潜在空间对齐，并利用基于LLM的技能分解来提高时间一致性和泛化能力，在机器人操作基准测试中取得了最先进的结果，并提高了实际性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "GeoSense: Internalizing Geometric Necessity Perception for Multimodal Reasoning",
+        "summary": "Advancing towards artificial superintelligence requires rich and intelligent perceptual capabilities. A critical frontier in this pursuit is overcoming the limited spatial understanding of Multimodal Large Language Models (MLLMs), where geometry information is essential. Existing methods often address this by rigidly injecting geometric signals into every input, while ignoring their necessity and adding computation overhead. Contrary to this paradigm, our framework endows the model with an awareness of perceptual insufficiency, empowering it to autonomously engage geometric features in reasoning when 2D cues are deemed insufficient. To achieve this, we first introduce an independent geometry input channel to the model architecture and conduct alignment training, enabling the effective utilization of geometric features. Subsequently, to endow the model with perceptual awareness, we curate a dedicated spatial-aware supervised fine-tuning dataset. This serves to activate the model's latent internal cues, empowering it to autonomously determine the necessity of geometric information. Experiments across multiple spatial reasoning benchmarks validate this approach, demonstrating significant spatial gains without compromising 2D visual reasoning capabilities, offering a path toward more robust, efficient and self-aware multi-modal intelligence.",
+        "url": "http://arxiv.org/abs/2603.10370v1",
+        "published_date": "2026-03-11T03:32:12+00:00",
+        "updated_date": "2026-03-11T03:32:12+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Ruiheng Liu",
+            "Haihong Hao",
+            "Mingfei Han",
+            "Xin Gu",
+            "Kecheng Zhang",
+            "Changlin Li",
+            "Xiaojun Chang"
+        ],
+        "tldr": "The paper introduces a framework, GeoSense, that enables MLLMs to autonomously determine when geometric information is necessary for reasoning, improving spatial understanding without sacrificing 2D visual reasoning.",
+        "tldr_zh": "该论文介绍了一个名为GeoSense的框架，使MLLMs能够自主判断何时需要几何信息进行推理，从而提高空间理解能力，同时不牺牲2D视觉推理能力。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "HG-Lane: High-Fidelity Generation of Lane Scenes under Adverse Weather and Lighting Conditions without Re-annotation",
+        "summary": "Lane detection is a crucial task in autonomous driving, as it helps ensure the safe operation of vehicles. However, existing datasets such as CULane and TuSimple contain relatively limited data under extreme weather conditions, including rain, snow, and fog. As a result, detection models trained on these datasets often become unreliable in such environments, which may lead to serious safety-critical failures on the road. To address this issue, we propose HG-Lane, a High-fidelity Generation framework for Lane Scenes under adverse weather and lighting conditions without requiring re-annotation. Based on this framework, we further construct a benchmark that includes adverse weather and lighting scenarios, containing 30,000 images. Experimental results demonstrate that our method consistently and significantly improves the performance of existing lane detection networks. For example, using the state-of-the-art CLRNet, the overall mF1 score on our benchmark increases by 20.87 percent. The F1@50 score for the overall, normal, snow, rain, fog, night, and dusk categories increases by 19.75 percent, 8.63 percent, 38.8 percent, 14.96 percent, 26.84 percent, 21.5 percent, and 12.04 percent, respectively. The code and dataset are available at: https://github.com/zdc233/HG-Lane.",
+        "url": "http://arxiv.org/abs/2603.10128v1",
+        "published_date": "2026-03-10T18:04:35+00:00",
+        "updated_date": "2026-03-10T18:04:35+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Daichao Zhao",
+            "Qiupu Chen",
+            "Feng He",
+            "Xin Ning",
+            "Qiankun Li"
+        ],
+        "tldr": "The paper introduces HG-Lane, a framework for generating lane scene data under adverse weather and lighting conditions, and constructs a benchmark dataset that improves the performance of lane detection networks, particularly in challenging environments.",
+        "tldr_zh": "该论文介绍了HG-Lane，一个用于生成恶劣天气和光照条件下的车道场景数据的框架，并构建了一个基准数据集，可以提高车道检测网络的性能，尤其是在具有挑战性的环境中。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Robotic Ultrasound Makes CBCT Alive",
+        "summary": "Intraoperative Cone Beam Computed Tomography (CBCT) provides a reliable 3D anatomical context essential for interventional planning. However, its static nature fails to provide continuous monitoring of soft-tissue deformations induced by respiration, probe pressure, and surgical manipulation, leading to navigation discrepancies. We propose a deformation-aware CBCT updating framework that leverages robotic ultrasound as a dynamic proxy to infer tissue motion and update static CBCT slices in real time. Starting from calibration-initialized alignment with linear correlation of linear combination (LC2)-based rigid refinement, our method establishes accurate multimodal correspondence. To capture intraoperative dynamics, we introduce the ultrasound correlation UNet (USCorUNet), a lightweight network trained with optical flow-guided supervision to learn deformation-aware correlation representations, enabling accurate, real-time dense deformation field estimation from ultrasound streams. The inferred deformation is spatially regularized and transferred to the CBCT reference to produce deformation-consistent visualizations without repeated radiation exposure. We validate the proposed approach through deformation estimation and ultrasound-guided CBCT updating experiments. Results demonstrate real-time end-to-end CBCT slice updating and physically plausible deformation estimation, enabling dynamic refinement of static CBCT guidance during robotic ultrasound-assisted interventions. The source code is publicly available at https://github.com/anonymous-codebase/us-cbct-demo.",
+        "url": "http://arxiv.org/abs/2603.10220v1",
+        "published_date": "2026-03-10T20:37:24+00:00",
+        "updated_date": "2026-03-10T20:37:24+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.RO"
+        ],
+        "authors": [
+            "Feng Li",
+            "Ziyuan Li",
+            "Zhongliang Jiang",
+            "Nassir Navab",
+            "Yuan Bi"
+        ],
+        "tldr": "The paper presents a method to update static CBCT scans in real-time using robotic ultrasound to track soft tissue deformations, improving guidance during interventions by avoiding repeated radiation exposure. They propose USCorUNet to estimate dense deformation fields.",
+        "tldr_zh": "该论文提出了一种利用机器人超声实时更新静态 CBCT 扫描的方法，以跟踪软组织变形，通过避免重复辐射暴露来改进干预期间的引导。他们提出了 USCorUNet 来估计密集变形场。",
+        "relevance_score": 6,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 7
+    }
+]
