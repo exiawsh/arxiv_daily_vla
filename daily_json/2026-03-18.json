@@ -1,0 +1,137 @@
+[
+    {
+        "title": "When the City Teaches the Car: Label-Free 3D Perception from Infrastructure",
+        "summary": "Building robust 3D perception for self-driving still relies heavily on large-scale data collection and manual annotation, yet this paradigm becomes impractical as deployment expands across diverse cities and regions. Meanwhile, modern cities are increasingly instrumented with roadside units (RSUs), static sensors deployed along roads and at intersections to monitor traffic. This raises a natural question: can the city itself help train the vehicle? We propose infrastructure-taught, label-free 3D perception, a paradigm in which RSUs act as stationary, unsupervised teachers for ego vehicles. Leveraging their fixed viewpoints and repeated observations, RSUs learn local 3D detectors from unlabeled data and broadcast predictions to passing vehicles, which are aggregated as pseudo-label supervision for training a standalone ego detector. The resulting model requires no infrastructure or communication at test time. We instantiate this idea as a fully label-free three-stage pipeline and conduct a concept-and-feasibility study in a CARLA-based multi-agent environment. With CenterPoint, our pipeline achieves 82.3% AP for detecting vehicles, compared to a fully supervised ego upper bound of 94.4%. We further systematically analyze each stage, evaluate its scalability, and demonstrate complementarity with existing ego-centric label-free methods. Together, these results suggest that city infrastructure itself can potentially provide a scalable supervisory signal for autonomous vehicles, positioning infrastructure-taught learning as a promising orthogonal paradigm for reducing annotation cost in 3D perception.",
+        "url": "http://arxiv.org/abs/2603.16742v1",
+        "published_date": "2026-03-17T16:21:06+00:00",
+        "updated_date": "2026-03-17T16:21:06+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zhen Xu",
+            "Jinsu Yoo",
+            "Cristian Bautista",
+            "Zanming Huang",
+            "Tai-Yu Pan",
+            "Zhenzhen Liu",
+            "Katie Z Luo",
+            "Mark Campbell",
+            "Bharath Hariharan",
+            "Wei-Lun Chao"
+        ],
+        "tldr": "This paper proposes a novel \"infrastructure-taught\" paradigm where roadside units (RSUs) act as unsupervised teachers for ego vehicles, generating pseudo-labels for training 3D perception models without requiring manual annotation or communication at test time. This approach aims to reduce the significant annotation costs in autonomous driving.",
+        "tldr_zh": "本文提出了一种新颖的“基础设施教学”范式，其中路边单元（RSUs）充当自动驾驶车辆的无监督教师，生成伪标签以训练3D感知模型，而无需人工标注或测试时通信。该方法旨在降低自动驾驶领域昂贵的标注成本。",
+        "relevance_score": 9,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Structured prototype regularization for synthetic-to-real driving scene parsing",
+        "summary": "Driving scene parsing is critical for autonomous vehicles to operate reliably in complex real-world traffic environments. To reduce the reliance on costly pixel-level annotations, synthetic datasets with automatically generated labels have become a popular alternative. However, models trained on synthetic data often perform poorly when applied to real-world scenes due to the synthetic-to-real domain gap. Despite the success of unsupervised domain adaptation in narrowing this gap, most existing methods mainly focus on global feature alignment while overlooking the semantic structure of the feature space. As a result, semantic relations among classes are insufficiently modeled, limiting the model's ability to generalize. To address these challenges, this study introduces a novel unsupervised domain adaptation framework that explicitly regularizes semantic feature structures to significantly enhance driving scene parsing performance in real-world scenarios. Specifically, the proposed method enforces inter-class separation and intra-class compactness by leveraging class-specific prototypes, thereby enhancing the discriminability and structural coherence of feature clusters. An entropy-based noise filtering strategy improves the reliability of pseudo labels, while a pixel-level attention mechanism further refines feature alignment. Extensive experiments on representative benchmarks demonstrate that the proposed method consistently outperforms recent state-of-the-art methods. These results underscore the importance of preserving semantic structure for robust synthetic-to-real adaptation in driving scene parsing tasks.",
+        "url": "http://arxiv.org/abs/2603.16083v1",
+        "published_date": "2026-03-17T03:05:28+00:00",
+        "updated_date": "2026-03-17T03:05:28+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jiahe Fan",
+            "Xiao Ma",
+            "Sergey Vityazev",
+            "George Giakos",
+            "Shaolong Shu",
+            "Rui Fan"
+        ],
+        "tldr": "This paper proposes a novel unsupervised domain adaptation framework for driving scene parsing. It addresses the synthetic-to-real gap by explicitly regularizing semantic feature structures, enforcing inter-class separation and intra-class compactness using prototypes, along with noise filtering and attention mechanisms. The method claims to significantly improve performance on real-world driving scenes.",
+        "tldr_zh": "本文提出了一种新颖的无监督域适应框架，用于驾驶场景解析。它通过显式地正则化语义特征结构来解决合成到真实数据的域间隙，利用类别原型强制执行类别间分离和类别内紧凑性，并结合噪声过滤和注意力机制。该方法声称能显著提高在真实世界驾驶场景中的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Fast-WAM: Do World Action Models Need Test-time Future Imagination?",
+        "summary": "World Action Models (WAMs) have emerged as a promising alternative to Vision-Language-Action (VLA) models for embodied control because they explicitly model how visual observations may evolve under action. Most existing WAMs follow an imagine-then-execute paradigm, incurring substantial test-time latency from iterative video denoising, yet it remains unclear whether explicit future imagination is actually necessary for strong action performance. In this paper, we ask whether WAMs need explicit future imagination at test time, or whether their benefit comes primarily from video modeling during training. We disentangle the role of video modeling during training from explicit future generation during inference by proposing \\textbf{Fast-WAM}, a WAM architecture that retains video co-training during training but skips future prediction at test time. We further instantiate several Fast-WAM variants to enable a controlled comparison of these two factors. Across these variants, we find that Fast-WAM remains competitive with imagine-then-execute variants, while removing video co-training causes a much larger performance drop. Empirically, Fast-WAM achieves competitive results with state-of-the-art methods both on simulation benchmarks (LIBERO and RoboTwin) and real-world tasks, without embodied pretraining. It runs in real time with 190ms latency, over 4$\\times$ faster than existing imagine-then-execute WAMs. These results suggest that the main value of video prediction in WAMs may lie in improving world representations during training rather than generating future observations at test time. Project page: https://yuantianyuan01.github.io/FastWAM/",
+        "url": "http://arxiv.org/abs/2603.16666v1",
+        "published_date": "2026-03-17T15:33:43+00:00",
+        "updated_date": "2026-03-17T15:33:43+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Tianyuan Yuan",
+            "Zibin Dong",
+            "Yicheng Liu",
+            "Hang Zhao"
+        ],
+        "tldr": "This paper proposes Fast-WAM, a World Action Model that removes the computationally expensive test-time future imagination step, demonstrating competitive performance with existing methods while being significantly faster. The findings suggest that the benefit of video prediction in WAMs is primarily from training, not inference.",
+        "tldr_zh": "本文提出了Fast-WAM，一种世界动作模型（WAM），它消除了计算量大的测试时未来想象步骤，同时保持了与现有方法相当的性能且速度显著提升。研究结果表明，WAM中视频预测的主要优势在于训练阶段，而非测试时生成未来观察。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "GAP-MLLM: Geometry-Aligned Pre-training for Activating 3D Spatial Perception in Multimodal Large Language Models",
+        "summary": "Multimodal Large Language Models (MLLMs) demonstrate exceptional semantic reasoning but struggle with 3D spatial perception when restricted to pure RGB inputs. Despite leveraging implicit geometric priors from 3D reconstruction models, image-based methods still exhibit a notable performance gap compared to methods using explicit 3D data. We argue that this gap does not arise from insufficient geometric priors, but from a misalignment in the training paradigm: text-dominated fine-tuning fails to activate geometric representations within MLLMs. Existing approaches typically resort to naive feature concatenation and optimize directly for downstream tasks without geometry-specific supervision, leading to suboptimal structural utilization. To address this limitation, we propose GAP-MLLM, a Geometry-Aligned Pre-training paradigm that explicitly activates structural perception before downstream adaptation. Specifically, we introduce a visual-prompted joint task that compels the MLLMs to predict sparse pointmaps alongside semantic labels, thereby enforcing geometric awareness. Furthermore, we design a multi-level progressive fusion module with a token-level gating mechanism, enabling adaptive integration of geometric priors without suppressing semantic reasoning. Extensive experiments demonstrate that GAP-MLLM significantly enhances geometric feature fusion and consistently enhances performance across 3D visual grounding, 3D dense captioning, and 3D video object detection tasks.",
+        "url": "http://arxiv.org/abs/2603.16461v1",
+        "published_date": "2026-03-17T12:43:48+00:00",
+        "updated_date": "2026-03-17T12:43:48+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jiaxin Zhang",
+            "Junjun Jiang",
+            "Haijie Li",
+            "Youyu Chen",
+            "Kui Jiang",
+            "Dave Zhenyu Chen"
+        ]
+    },
+    {
+        "title": "Learning Human-Object Interaction for 3D Human Pose Estimation from LiDAR Point Clouds",
+        "summary": "Understanding humans from LiDAR point clouds is one of the most critical tasks in autonomous driving due to its close relationships with pedestrian safety, yet it remains challenging in the presence of diverse human-object interactions and cluttered backgrounds. Nevertheless, existing methods largely overlook the potential of leveraging human-object interactions to build robust 3D human pose estimation frameworks. There are two major challenges that motivate the incorporation of human-object interaction. First, human-object interactions introduce spatial ambiguity between human and object points, which often leads to erroneous 3D human keypoint predictions in interaction regions. Second, there exists severe class imbalance in the number of points between interacting and non-interacting body parts, with the interaction-frequent regions such as hand and foot being sparsely observed in LiDAR data. To address these challenges, we propose a Human-Object Interaction Learning (HOIL) framework for robust 3D human pose estimation from LiDAR point clouds. To mitigate the spatial ambiguity issue, we present human-object interaction-aware contrastive learning (HOICL) that effectively enhances feature discrimination between human and object points, particularly in interaction regions. To alleviate the class imbalance issue, we introduce contact-aware part-guided pooling (CPPool) that adaptively reallocates representational capacity by compressing overrepresented points while preserving informative points from interacting body parts. In addition, we present an optional contact-based temporal refinement that refines erroneous per-frame keypoint estimates using contact cues over time. As a result, our HOIL effectively leverages human-object interaction to resolve spatial ambiguity and class imbalance in interaction regions. Codes will be released.",
+        "url": "http://arxiv.org/abs/2603.16343v1",
+        "published_date": "2026-03-17T10:20:29+00:00",
+        "updated_date": "2026-03-17T10:20:29+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Daniel Sungho Jung",
+            "Dohee Cho",
+            "Kyoung Mu Lee"
+        ]
+    },
+    {
+        "title": "DriveFix: Spatio-Temporally Coherent Driving Scene Restoration",
+        "summary": "Recent advancements in 4D scene reconstruction, particularly those leveraging diffusion priors, have shown promise for novel view synthesis in autonomous driving. However, these methods often process frames independently or in a view-by-view manner, leading to a critical lack of spatio-temporal synergy. This results in spatial misalignment across cameras and temporal drift in sequences. We propose DriveFix, a novel multi-view restoration framework that ensures spatio-temporal coherence for driving scenes. Our approach employs an interleaved diffusion transformer architecture with specialized blocks to explicitly model both temporal dependencies and cross-camera spatial consistency. By conditioning the generation on historical context and integrating geometry-aware training losses, DriveFix enforces that the restored views adhere to a unified 3D geometry. This enables the consistent propagation of high-fidelity textures and significantly reduces artifacts. Extensive evaluations on the Waymo, nuScenes, and PandaSet datasets demonstrate that DriveFix achieves state-of-the-art performance in both reconstruction and novel view synthesis, marking a substantial step toward robust 4D world modeling for real-world deployment.",
+        "url": "http://arxiv.org/abs/2603.16306v1",
+        "published_date": "2026-03-17T09:41:14+00:00",
+        "updated_date": "2026-03-17T09:41:14+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Heyu Si",
+            "Brandon James Denis",
+            "Muyang Sun",
+            "Dragos Datcu",
+            "Yaoru Li",
+            "Xin Jin",
+            "Ruiju Fu",
+            "Yuliia Tatarinova",
+            "Federico Landi",
+            "Jie Song",
+            "Mingli Song",
+            "Qi Guo"
+        ]
+    }
+]
