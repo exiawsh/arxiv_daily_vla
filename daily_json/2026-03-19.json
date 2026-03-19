@@ -1,0 +1,195 @@
+[
+    {
+        "title": "Loc3R-VLM: Language-based Localization and 3D Reasoning with Vision-Language Models",
+        "summary": "Multimodal Large Language Models (MLLMs) have made impressive progress in connecting vision and language, but they still struggle with spatial understanding and viewpoint-aware reasoning. Recent efforts aim to augment the input representations with geometric cues rather than explicitly teaching models to reason in 3D space. We introduce Loc3R-VLM, a framework that equips 2D Vision-Language Models with advanced 3D understanding capabilities from monocular video input. Inspired by human spatial cognition, Loc3R-VLM relies on two joint objectives: global layout reconstruction to build a holistic representation of the scene structure, and explicit situation modeling to anchor egocentric perspective. These objectives provide direct spatial supervision that grounds both perception and language in a 3D context. To ensure geometric consistency and metric-scale alignment, we leverage lightweight camera pose priors extracted from a pre-trained 3D foundation model. Loc3R-VLM achieves state-of-the-art performance in language-based localization and outperforms existing 2D- and video-based approaches on situated and general 3D question-answering benchmarks, demonstrating that our spatial supervision framework enables strong 3D understanding. Project page: https://kevinqu7.github.io/loc3r-vlm",
+        "url": "http://arxiv.org/abs/2603.18002v1",
+        "published_date": "2026-03-18T17:59:10+00:00",
+        "updated_date": "2026-03-18T17:59:10+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.CL"
+        ],
+        "authors": [
+            "Kevin Qu",
+            "Haozhe Qi",
+            "Mihai Dusmanu",
+            "Mahdi Rad",
+            "Rui Wang",
+            "Marc Pollefeys"
+        ],
+        "tldr": "Loc3R-VLM is a framework that enhances 2D Vision-Language Models with 3D understanding from monocular video by jointly reconstructing scene layout and modeling explicit situations, grounded by lightweight camera pose priors from a 3D foundation model. It achieves state-of-the-art results in language-based localization and 3D question answering.",
+        "tldr_zh": "Loc3R-VLM是一个框架，通过从单目视频中进行联合场景布局重建和显式情况建模，并结合来自3D基础模型的轻量级相机姿态先验，来增强2D视觉-语言模型的3D理解能力。该框架在基于语言的定位以及3D问答方面取得了最先进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "VectorWorld: Efficient Streaming World Model via Diffusion Flow on Vector Graphs",
+        "summary": "Closed-loop evaluation of autonomous-driving policies requires interactive simulation beyond log replay. However, existing generative world models often degrade in closed loop due to (i) history-free initialization that mismatches policy inputs, (ii) multi-step sampling latency that violates real-time budgets, and (iii) compounding kinematic infeasibility over long horizons. We propose VectorWorld, a streaming world model that incrementally generates ego-centric $64 \\mathrm{m}\\times 64\\mathrm{m}$ lane--agent vector-graph tiles during rollout. VectorWorld aligns initialization with history-conditioned policies by producing a policy-compatible interaction state via a motion-aware gated VAE. It enables real-time outpainting via solver-free one-step masked completion with an edge-gated relational DiT trained with interval-conditioned MeanFlow and JVP-based large-step supervision. To stabilize long-horizon rollouts, we introduce $Δ$Sim, a physics-aligned non-ego (NPC) policy with hybrid discrete--continuous actions and differentiable kinematic logit shaping. On Waymo open motion and nuPlan, VectorWorld improves map-structure fidelity and initialization validity, and supports stable, real-time $1\\mathrm{km}+$ closed-loop rollouts (\\href{https://github.com/jiangchaokang/VectorWorld}{code}).",
+        "url": "http://arxiv.org/abs/2603.17652v1",
+        "published_date": "2026-03-18T12:13:30+00:00",
+        "updated_date": "2026-03-18T12:13:30+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Chaokang Jiang",
+            "Desen Zhou",
+            "Jiuming Liu",
+            "Kevin Li Sun"
+        ],
+        "tldr": "VectorWorld is a novel streaming world model for autonomous driving simulation that uses diffusion flow on vector graphs to generate interactive environments in real-time. It addresses challenges like initialization mismatch, sampling latency, and long-horizon kinematic infeasibility, enabling stable, kilometer-scale closed-loop rollouts.",
+        "tldr_zh": "VectorWorld是一个新颖的、用于自动驾驶模拟的流式世界模型，它使用向量图上的扩散流来实时生成交互式环境。它解决了初始化不匹配、采样延迟和长期运动学不可行性等挑战，实现了稳定、公里级闭环滚出。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Feeling the Space: Egomotion-Aware Video Representation for Efficient and Accurate 3D Scene Understanding",
+        "summary": "Recent Multimodal Large Language Models (MLLMs) have shown high potential for spatial reasoning within 3D scenes. However, they typically rely on computationally expensive 3D representations like point clouds or reconstructed Bird's-Eye View (BEV) maps, or lack physical grounding to resolve ambiguities in scale and size. This paper significantly enhances MLLMs with egomotion modality data, captured by Inertial Measurement Units (IMUs) concurrently with the video. In particular, we propose a novel framework, called Motion-MLLM, introducing two key components: (1) a cascaded motion-visual keyframe filtering module that leverages both IMU data and visual features to efficiently select a sparse yet representative set of keyframes, and (2) an asymmetric cross-modal fusion module where motion tokens serve as intermediaries that channel egomotion cues and cross-frame visual context into the visual representation. By grounding visual content in physical egomotion trajectories, Motion-MLLM can reason about absolute scale and spatial relationships across the scene. Our extensive evaluation shows that Motion-MLLM makes significant improvements in various tasks related to 3D scene understanding and spatial reasoning. Compared to state-of-the-art (SOTA) methods based on video frames and explicit 3D data, Motion-MLLM exhibits similar or even higher accuracy with significantly less overhead (i.e., 1.40$\\times$ and 1.63$\\times$ higher cost-effectiveness, respectively).",
+        "url": "http://arxiv.org/abs/2603.17980v1",
+        "published_date": "2026-03-18T17:42:49+00:00",
+        "updated_date": "2026-03-18T17:42:49+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Shuyao Shi",
+            "Kang G. Shin"
+        ],
+        "tldr": "This paper proposes Motion-MLLM, a framework that enhances Multimodal Large Language Models (MLLMs) for 3D scene understanding by incorporating egomotion data from IMUs alongside video. It uses a novel keyframe filtering and asymmetric cross-modal fusion approach to efficiently ground visual reasoning in physical trajectories, enabling accurate scale and spatial relationship estimation with improved cost-effectiveness.",
+        "tldr_zh": "本文提出了Motion-MLLM框架，通过将惯性测量单元（IMU）的自运动数据与视频相结合，增强了多模态大语言模型（MLLMs）的3D场景理解能力。该框架采用新颖的关键帧过滤和非对称跨模态融合方法，能够高效地将视觉推理与物理轨迹相结合，从而实现对场景绝对尺度和空间关系的准确估计，并提高了成本效益。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "PanoVGGT: Feed-Forward 3D Reconstruction from Panoramic Imagery",
+        "summary": "Panoramic imagery offers a full 360° field of view and is increasingly common in consumer devices. However, it introduces non-pinhole distortions that challenge joint pose estimation and 3D reconstruction. Existing feed-forward models, built for perspective cameras, generalize poorly to this setting. We propose PanoVGGT, a permutation-equivariant Transformer framework that jointly predicts camera poses, depth maps, and 3D point clouds from one or multiple panoramas in a single forward pass. The model incorporates spherical-aware positional embeddings and a panorama-specific three-axis SO(3) rotation augmentation, enabling effective geometric reasoning in the spherical domain. To resolve inherent global-frame ambiguity, we further introduce a stochastic anchoring strategy during training. In addition, we contribute PanoCity, a large-scale outdoor panoramic dataset with dense depth and 6-DoF pose annotations. Extensive experiments on PanoCity and standard benchmarks demonstrate that PanoVGGT achieves competitive accuracy, strong robustness, and improved cross-domain generalization. Code and dataset will be released.",
+        "url": "http://arxiv.org/abs/2603.17571v1",
+        "published_date": "2026-03-18T10:24:06+00:00",
+        "updated_date": "2026-03-18T10:24:06+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yijing Guo",
+            "Mengjun Chao",
+            "Luo Wang",
+            "Tianyang Zhao",
+            "Haizhao Dai",
+            "Yingliang Zhang",
+            "Jingyi Yu",
+            "Yujiao Shi"
+        ],
+        "tldr": "PanoVGGT is a novel feed-forward Transformer framework for 3D reconstruction and pose estimation from panoramic imagery. It addresses the challenges of non-pinhole distortions by using spherical-aware embeddings and rotation augmentation, and introduces a stochastic anchoring strategy to resolve global-frame ambiguity. The paper also presents PanoCity, a new large-scale dataset for this task.",
+        "tldr_zh": "PanoVGGT 是一个新颖的前馈 Transformer 框架，用于全景图像的 3D 重建和姿态估计。它通过使用球形感知嵌入和旋转增强来解决非针孔畸变带来的挑战，并引入了一种随机锚定策略来解决全局帧模糊性。该论文还提出了 PanoCity，一个用于此任务的大型新全景数据集。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Neural Radiance Maps for Extraterrestrial Navigation and Path Planning",
+        "summary": "Autonomous vehicles such as the Mars rovers currently lead the vanguard of surface exploration on extraterrestrial planets and moons. In order to accelerate the pace of exploration and science objectives, it is critical to plan safe and efficient paths for these vehicles. However, current rover autonomy is limited by a lack of global maps which can be easily constructed and stored for onboard re-planning. Recently, Neural Radiance Fields (NeRFs) have been introduced as a detailed 3D scene representation which can be trained from sparse 2D images and efficiently stored. We propose to use NeRFs to construct maps for online use in autonomous navigation, and present a planning framework which leverages the NeRF map to integrate local and global information. Our approach interpolates local cost observations across global regions using kernel ridge regression over terrain features extracted from the NeRF map, allowing the rover to re-route itself around untraversable areas discovered during online operation. We validate our approach in high-fidelity simulation and demonstrate lower cost and higher percentage success rate path planning compared to various baselines.",
+        "url": "http://arxiv.org/abs/2603.17236v1",
+        "published_date": "2026-03-18T00:39:20+00:00",
+        "updated_date": "2026-03-18T00:39:20+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Adam Dai",
+            "Shubh Gupta",
+            "Grace Gao"
+        ],
+        "tldr": "This paper proposes using Neural Radiance Fields (NeRFs) to create detailed 3D maps for extraterrestrial rovers, enabling safer and more efficient path planning by integrating local observations with global terrain information. The approach demonstrated improved path planning success rates and lower costs in simulations compared to existing methods.",
+        "tldr_zh": "本文提出使用神经辐射场（NeRF）为地外探测器创建详细的3D地图，通过整合局部观测和全局地形信息，实现更安全、更高效的路径规划。该方法在仿真中证明比现有基线方法具有更高的路径规划成功率和更低的成本。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "BEV-SLD: Self-Supervised Scene Landmark Detection for Global Localization with LiDAR Bird's-Eye View Images",
+        "summary": "We present BEV-SLD, a LiDAR global localization method building on the Scene Landmark Detection (SLD) concept. Unlike scene-agnostic pipelines, our self-supervised approach leverages bird's-eye-view (BEV) images to discover scene-specific patterns at a prescribed spatial density and treat them as landmarks. A consistency loss aligns learnable global landmark coordinates with per-frame heatmaps, yielding consistent landmark detections across the scene. Across campus, industrial, and forest environments, BEV-SLD delivers robust localization and achieves strong performance compared to state-of-the-art methods.",
+        "url": "http://arxiv.org/abs/2603.17159v1",
+        "published_date": "2026-03-17T21:44:16+00:00",
+        "updated_date": "2026-03-17T21:44:16+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "David Skuddis",
+            "Vincent Ress",
+            "Wei Zhang",
+            "Vincent Ofosu Nyako",
+            "Norbert Haala"
+        ],
+        "tldr": "BEV-SLD is a self-supervised global localization method for LiDAR data that uses Bird's-Eye View images to detect scene-specific landmarks. It achieves robust localization by aligning learned landmark coordinates with per-frame heatmaps, outperforming existing methods in various environments.",
+        "tldr_zh": "BEV-SLD 是一种基于鸟瞰图（BEV）的激光雷达（LiDAR）全局定位方法，它利用场景地标检测（SLD）的概念，通过自监督学习发现场景特定的地标。该方法通过一致性损失将学习到的全局地标坐标与每帧热力图对齐，实现了在不同环境中鲁棒的定位，并取得了优于现有最先进方法的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "TrackDeform3D: Markerless and Autonomous 3D Keypoint Tracking and Dataset Collection for Deformable Objects",
+        "summary": "Structured 3D representations such as keypoints and meshes offer compact, expressive descriptions of deformable objects, jointly capturing geometric and topological information useful for downstream tasks such as dynamics modeling and motion planning. However, robustly extracting such representations remains challenging, as current perception methods struggle to handle complex deformations. Moreover, large-scale 3D data collection remains a bottleneck: existing approaches either require prohibitive data collection efforts, such as labor-intensive annotation or expensive motion capture setups, or rely on simplifying assumptions that break down in unstructured environments. As a result, large-scale 3D datasets and benchmarks for deformable objects remain scarce. To address these challenges, this paper presents an affordable and autonomous framework for collecting 3D datasets of deformable objects using only RGB-D cameras. The proposed method identifies 3D keypoints and robustly tracks their trajectories, incorporating motion consistency constraints to produce temporally smooth and geometrically coherent data. TrackDeform3D is evaluated against several state-of-the-art tracking methods across diverse object categories and demonstrates consistent improvements in both geometric and tracking accuracy. Using this framework, this paper presents a high-quality, large-scale dataset consisting of 6 deformable objects, totaling 110 minutes of trajectory data.",
+        "url": "http://arxiv.org/abs/2603.17068v1",
+        "published_date": "2026-03-17T18:53:04+00:00",
+        "updated_date": "2026-03-17T18:53:04+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Yeheng Zong",
+            "Yizhou Chen",
+            "Alexander Bowler",
+            "Chia-Tung Yang",
+            "Ram Vasudevan"
+        ],
+        "tldr": "TrackDeform3D is an autonomous framework using RGB-D cameras to track 3D keypoints of deformable objects without markers, enabling large-scale dataset collection for challenging deformation scenarios and demonstrating superior accuracy over existing methods.",
+        "tldr_zh": "TrackDeform3D 是一个使用 RGB-D 相机自主追踪可变形物体三维关键点的框架，无需标记，能够收集大规模数据集，应对复杂的变形场景，并在准确性上优于现有方法。",
+        "relevance_score": 8,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "DesertFormer: Transformer-Based Semantic Segmentation for Off-Road Desert Terrain Classification in Autonomous Navigation Systems",
+        "summary": "Reliable terrain perception is a fundamental requirement for autonomous navigation in unstructured, off-road environments. Desert landscapes present unique challenges due to low chromatic contrast between terrain categories, extreme lighting variability, and sparse vegetation that defy the assumptions of standard road-scene segmentation models. We present DesertFormer, a semantic segmentation pipeline for off-road desert terrain analysis based on SegFormer B2 with a hierarchical Mix Transformer (MiT-B2) backbone. The system classifies terrain into ten ecologically meaningful categories -- Trees, Lush Bushes, Dry Grass, Dry Bushes, Ground Clutter, Flowers, Logs, Rocks, Landscape, and Sky -- enabling safety-aware path planning for ground robots and autonomous vehicles. Trained on a purpose-built dataset of 4,176 annotated off-road images at 512x512 resolution, DesertFormer achieves a mean Intersection-over-Union (mIoU) of 64.4% and pixel accuracy of 86.1%, representing a +24.2% absolute improvement over a DeepLabV3 MobileNetV2 baseline (41.0% mIoU). We further contribute a systematic failure analysis identifying the primary confusion patterns -- Ground Clutter to Landscape and Dry Grass to Landscape -- and propose class-weighted training and copy-paste augmentation for rare terrain categories. Code, checkpoints, and an interactive inference dashboard are released at https://github.com/Yasaswini-ch/Vision-based-Desert-Terrain-Segmentation-using-SegFormer.",
+        "url": "http://arxiv.org/abs/2603.17056v1",
+        "published_date": "2026-03-17T18:42:21+00:00",
+        "updated_date": "2026-03-17T18:42:21+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Yasaswini Chebolu"
+        ],
+        "tldr": "DesertFormer is a Transformer-based semantic segmentation model designed for off-road desert terrain classification, outperforming existing baselines by a significant margin and addressing challenges unique to desert environments. The paper also contributes a dataset, failure analysis, and mitigation strategies for rare classes.",
+        "tldr_zh": "DesertFormer是一个基于Transformer的语义分割模型，用于越野沙漠地形分类，其性能显著优于现有基线模型，并解决了沙漠环境特有的挑战。该论文还贡献了一个数据集、失败分析以及针对稀有类别的缓解策略。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    }
+]
