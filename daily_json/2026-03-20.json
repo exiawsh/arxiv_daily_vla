@@ -1,0 +1,401 @@
+[
+    {
+        "title": "Generation Models Know Space: Unleashing Implicit 3D Priors for Scene Understanding",
+        "summary": "While Multimodal Large Language Models demonstrate impressive semantic capabilities, they often suffer from spatial blindness, struggling with fine-grained geometric reasoning and physical dynamics. Existing solutions typically rely on explicit 3D modalities or complex geometric scaffolding, which are limited by data scarcity and generalization challenges. In this work, we propose a paradigm shift by leveraging the implicit spatial prior within large-scale video generation models. We posit that to synthesize temporally coherent videos, these models inherently learn robust 3D structural priors and physical laws. We introduce VEGA-3D (Video Extracted Generative Awareness), a plug-and-play framework that repurposes a pre-trained video diffusion model as a Latent World Simulator. By extracting spatiotemporal features from intermediate noise levels and integrating them with semantic representations via a token-level adaptive gated fusion mechanism, we enrich MLLMs with dense geometric cues without explicit 3D supervision. Extensive experiments across 3D scene understanding, spatial reasoning, and embodied manipulation benchmarks demonstrate that our method outperforms state-of-the-art baselines, validating that generative priors provide a scalable foundation for physical-world understanding. Code is publicly available at https://github.com/H-EmbodVis/VEGA-3D.",
+        "url": "http://arxiv.org/abs/2603.19235v1",
+        "published_date": "2026-03-19T17:59:58+00:00",
+        "updated_date": "2026-03-19T17:59:58+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Xianjin Wu",
+            "Dingkang Liang",
+            "Tianrui Feng",
+            "Kui Xia",
+            "Yumeng Zhang",
+            "Xiaofan Li",
+            "Xiao Tan",
+            "Xiang Bai"
+        ],
+        "tldr": "This paper proposes VEGA-3D, a framework that leverages implicit 3D priors learned by video generation models to enhance the spatial reasoning capabilities of Multimodal Large Language Models (MLLMs) without requiring explicit 3D supervision. It extracts spatiotemporal features from video generation processes and fuses them with semantic information, demonstrating improved performance on 3D scene understanding and embodied manipulation tasks.",
+        "tldr_zh": "本文提出了VEGA-3D框架，该框架利用视频生成模型学习到的隐式3D先验来增强多模态大语言模型（MLLMs）的空间推理能力，而无需显式的3D监督。它从视频生成过程中提取时空特征，并将其与语义信息融合，在3D场景理解和具身操作任务上展示了改进的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "DriveTok: 3D Driving Scene Tokenization for Unified Multi-View Reconstruction and Understanding",
+        "summary": "With the growing adoption of vision-language-action models and world models in autonomous driving systems, scalable image tokenization becomes crucial as the interface for the visual modality. However, most existing tokenizers are designed for monocular and 2D scenes, leading to inefficiency and inter-view inconsistency when applied to high-resolution multi-view driving scenes. To address this, we propose DriveTok, an efficient 3D driving scene tokenizer for unified multi-view reconstruction and understanding. DriveTok first obtains semantically rich visual features from vision foundation models and then transforms them into the scene tokens with 3D deformable cross-attention. For decoding, we employ a multi-view transformer to reconstruct multi-view features from the scene tokens and use multiple heads to obtain RGB, depth, and semantic reconstructions. We also add a 3D head directly on the scene tokens for 3D semantic occupancy prediction for better spatial awareness. With the multiple training objectives, DriveTok learns unified scene tokens that integrate semantic, geometric, and textural information for efficient multi-view tokenization. Extensive experiments on the widely used nuScenes dataset demonstrate that the scene tokens from DriveTok perform well on image reconstruction, semantic segmentation, depth prediction, and 3D occupancy prediction tasks.",
+        "url": "http://arxiv.org/abs/2603.19219v1",
+        "published_date": "2026-03-19T17:58:22+00:00",
+        "updated_date": "2026-03-19T17:58:22+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Dong Zhuo",
+            "Wenzhao Zheng",
+            "Sicheng Zuo",
+            "Siming Yan",
+            "Lu Hou",
+            "Jie Zhou",
+            "Jiwen Lu"
+        ],
+        "tldr": "DriveTok is a novel 3D scene tokenizer for autonomous driving that efficiently unifies multi-view reconstruction and understanding tasks by converting semantically rich visual features into 3D scene tokens, enabling tasks like RGB, depth, semantic reconstruction, and 3D occupancy prediction.",
+        "tldr_zh": "DriveTok 是一种新颖的自动驾驶三维场景标记器，通过将语义丰富的视觉特征转换为三维场景标记，高效地统一了多视图重建和理解任务，能够实现RGB、深度、语义重建以及三维占用预测等任务。",
+        "relevance_score": 10,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "FASTER: Rethinking Real-Time Flow VLAs",
+        "summary": "Real-time execution is crucial for deploying Vision-Language-Action (VLA) models in the physical world. Existing asynchronous inference methods primarily optimize trajectory smoothness, but neglect the critical latency in reacting to environmental changes. By rethinking the notion of reaction in action chunking policies, this paper presents a systematic analysis of the factors governing reaction time. We show that reaction time follows a uniform distribution determined jointly by the Time to First Action (TTFA) and the execution horizon. Moreover, we reveal that the standard practice of applying a constant schedule in flow-based VLAs can be inefficient and forces the system to complete all sampling steps before any movement can start, forming the bottleneck in reaction latency. To overcome this issue, we propose Fast Action Sampling for ImmediaTE Reaction (FASTER). By introducing a Horizon-Aware Schedule, FASTER adaptively prioritizes near-term actions during flow sampling, compressing the denoising of the immediate reaction by tenfold (e.g., in $π_{0.5}$ and X-VLA) into a single step, while preserving the quality of long-horizon trajectory. Coupled with a streaming client-server pipeline, FASTER substantially reduces the effective reaction latency on real robots, especially when deployed on consumer-grade GPUs. Real-world experiments, including a highly dynamic table tennis task, prove that FASTER unlocks unprecedented real-time responsiveness for generalist policies, enabling rapid generation of accurate and smooth trajectories.",
+        "url": "http://arxiv.org/abs/2603.19199v1",
+        "published_date": "2026-03-19T17:51:37+00:00",
+        "updated_date": "2026-03-19T17:51:37+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.CV"
+        ],
+        "authors": [
+            "Yuxiang Lu",
+            "Zhe Liu",
+            "Xianzhe Fan",
+            "Zhenya Yang",
+            "Jinghua Hou",
+            "Junyi Li",
+            "Kaixin Ding",
+            "Hengshuang Zhao"
+        ],
+        "tldr": "This paper addresses the critical latency issue in real-time Vision-Language-Action (VLA) models by proposing FASTER. FASTER introduces a Horizon-Aware Schedule that prioritizes near-term actions during flow sampling, significantly reducing reaction time without sacrificing trajectory quality, and demonstrates substantial real-time responsiveness improvements on physical robots.",
+        "tldr_zh": "本文提出了一种名为FASTER的方法，以解决实时视觉-语言-动作（VLA）模型中至关重要的延迟问题。FASTER引入了一种面向时期的调度机制，在流采样过程中优先处理近期动作，从而在不牺牲轨迹质量的情况下显著减少了反应时间，并在实际机器人上展示了实时响应能力的显著提升。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "GSMem: 3D Gaussian Splatting as Persistent Spatial Memory for Zero-Shot Embodied Exploration and Reasoning",
+        "summary": "Effective embodied exploration requires agents to accumulate and retain spatial knowledge over time. However, existing scene representations, such as discrete scene graphs or static view-based snapshots, lack \\textit{post-hoc re-observability}. If an initial observation misses a target, the resulting memory omission is often irrecoverable. To bridge this gap, we propose \\textbf{GSMem}, a zero-shot embodied exploration and reasoning framework built upon 3D Gaussian Splatting (3DGS). By explicitly parameterizing continuous geometry and dense appearance, 3DGS serves as a persistent spatial memory that endows the agent with \\textit{Spatial Recollection}: the ability to render photorealistic novel views from optimal, previously unoccupied viewpoints. To operationalize this, GSMem employs a retrieval mechanism that simultaneously leverages parallel object-level scene graphs and semantic-level language fields. This complementary design robustly localizes target regions, enabling the agent to ``hallucinate'' optimal views for high-fidelity Vision-Language Model (VLM) reasoning. Furthermore, we introduce a hybrid exploration strategy that combines VLM-driven semantic scoring with a 3DGS-based coverage objective, balancing task-aware exploration with geometric coverage. Extensive experiments on embodied question answering and lifelong navigation demonstrate the robustness and effectiveness of our framework",
+        "url": "http://arxiv.org/abs/2603.19137v1",
+        "published_date": "2026-03-19T16:55:54+00:00",
+        "updated_date": "2026-03-19T16:55:54+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Yiren Lu",
+            "Yi Du",
+            "Disheng Liu",
+            "Yunlai Zhou",
+            "Chen Wang",
+            "Yu Yin"
+        ],
+        "tldr": "GSMem is a zero-shot embodied exploration and reasoning framework that uses 3D Gaussian Splatting as a persistent spatial memory. It allows agents to 'recollect' optimal views for high-fidelity VLM reasoning by combining scene graphs, language fields, and a hybrid exploration strategy.",
+        "tldr_zh": "GSMem 是一个零样本的具身探索与推理框架，它利用 3D 高斯泼溅作为持久化空间记忆。该框架使智能体能够通过结合场景图、语言场和混合探索策略来“回忆”最佳视角，以实现高保真度视觉语言模型（VLM）的推理。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "OnlinePG: Online Open-Vocabulary Panoptic Mapping with 3D Gaussian Splatting",
+        "summary": "Open-vocabulary scene understanding with online panoptic mapping is essential for embodied applications to perceive and interact with environments. However, existing methods are predominantly offline or lack instance-level understanding, limiting their applicability to real-world robotic tasks. In this paper, we propose OnlinePG, a novel and effective system that integrates geometric reconstruction and open-vocabulary perception using 3D Gaussian Splatting in an online setting. Technically, to achieve online panoptic mapping, we employ an efficient local-to-global paradigm with a sliding window. To build local consistency map, we construct a 3D segment clustering graph that jointly leverages geometric and semantic cues, fusing inconsistent segments within sliding window into complete instances. Subsequently, to update the global map, we construct explicit grids with spatial attributes for the local 3D Gaussian map and fuse them into the global map via robust bidirectional bipartite 3D Gaussian instance matching. Finally, we utilize the fused VLM features inside the 3D spatial attribute grids to achieve open-vocabulary scene understanding. Extensive experiments on widely used datasets demonstrate that our method achieves better performance among online approaches, while maintaining real-time efficiency.",
+        "url": "http://arxiv.org/abs/2603.18510v1",
+        "published_date": "2026-03-19T05:37:55+00:00",
+        "updated_date": "2026-03-19T05:37:55+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Hongjia Zhai",
+            "Qi Zhang",
+            "Xiaokun Pan",
+            "Xiyu Zhang",
+            "Yitong Dong",
+            "Huaqi Zhang",
+            "Dan Xu",
+            "Guofeng Zhang"
+        ],
+        "tldr": "OnlinePG is a novel system that enables real-time open-vocabulary panoptic mapping using 3D Gaussian Splatting. It achieves this through an efficient local-to-global paradigm with a sliding window, a 3D segment clustering graph for local consistency, and robust fusion of local Gaussian maps into a global representation for instance-level understanding and open-vocabulary scene interpretation.",
+        "tldr_zh": "OnlinePG 是一个新颖的系统，它使用 3D 高斯溅射实现实时开放词汇全景地图构建。它通过一个高效的局部到全局范式、滑动窗口、用于局部一致性的 3D 分段聚类图，以及将局部高斯地图可靠地融合到全局表示中，从而实现实例级理解和开放词汇场景解释。",
+        "relevance_score": 10,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "DriveVLM-RL: Neuroscience-Inspired Reinforcement Learning with Vision-Language Models for Safe and Deployable Autonomous Driving",
+        "summary": "Ensuring safe decision-making in autonomous vehicles remains a fundamental challenge despite rapid advances in end-to-end learning approaches. Traditional reinforcement learning (RL) methods rely on manually engineered rewards or sparse collision signals, which fail to capture the rich contextual understanding required for safe driving and make unsafe exploration unavoidable in real-world settings. Recent vision-language models (VLMs) offer promising semantic understanding capabilities; however, their high inference latency and susceptibility to hallucination hinder direct application to real-time vehicle control. To address these limitations, this paper proposes DriveVLM-RL, a neuroscience-inspired framework that integrates VLMs into RL through a dual-pathway architecture for safe and deployable autonomous driving. The framework decomposes semantic reward learning into a Static Pathway for continuous spatial safety assessment using CLIP-based contrasting language goals, and a Dynamic Pathway for attention-gated multi-frame semantic risk reasoning using a lightweight detector and a large VLM. A hierarchical reward synthesis mechanism fuses semantic signals with vehicle states, while an asynchronous training pipeline decouples expensive VLM inference from environment interaction. All VLM components are used only during offline training and are removed at deployment, ensuring real-time feasibility. Experiments in the CARLA simulator show significant improvements in collision avoidance, task success, and generalization across diverse traffic scenarios, including strong robustness under settings without explicit collision penalties. These results demonstrate that DriveVLM-RL provides a practical paradigm for integrating foundation models into autonomous driving without compromising real-time feasibility. Demo video and code are available at: https://zilin-huang.github.io/DriveVLM-RL-website/",
+        "url": "http://arxiv.org/abs/2603.18315v1",
+        "published_date": "2026-03-18T21:55:29+00:00",
+        "updated_date": "2026-03-18T21:55:29+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Zilin Huang",
+            "Zihao Sheng",
+            "Zhengyang Wan",
+            "Yansong Qu",
+            "Junwei You",
+            "Sicong Jiang",
+            "Sikai Chen"
+        ],
+        "tldr": "DriveVLM-RL is a neuroscience-inspired reinforcement learning framework for autonomous driving that integrates Vision-Language Models (VLMs) through a dual-pathway architecture to improve safety and deployability. It uses a static pathway for spatial safety and a dynamic pathway for risk reasoning, with VLMs only used during offline training to ensure real-time performance.",
+        "tldr_zh": "DriveVLM-RL 是一个受神经科学启发的强化学习框架，用于自动驾驶。它通过一个双通路架构集成视觉语言模型（VLMs），以提高安全性和可部署性。该框架使用静态通路进行空间安全评估，动态通路进行风险推理，并且 VLMs 仅在离线训练中使用，以确保实时性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Sparse3DTrack: Monocular 3D Object Tracking Using Sparse Supervision",
+        "summary": "Monocular 3D object tracking aims to estimate temporally consistent 3D object poses across video frames, enabling autonomous agents to reason about scene dynamics. However, existing state-of-the-art approaches are fully supervised and rely on dense 3D annotations over long video sequences, which are expensive to obtain and difficult to scale. In this work, we address this fundamental limitation by proposing the first sparsely supervised framework for monocular 3D object tracking. Our approach decomposes the task into two sequential sub-problems: 2D query matching and 3D geometry estimation. Both components leverage the spatio-temporal consistency of image sequences to augment a sparse set of labeled samples and learn rich 2D and 3D representations of the scene. Leveraging these learned cues, our model automatically generates high-quality 3D pseudolabels across entire videos, effectively transforming sparse supervision into dense 3D track annotations. This enables existing fully-supervised trackers to effectively operate under extreme label sparsity. Extensive experiments on the KITTI and nuScenes datasets demonstrate that our method significantly improves tracking performance, achieving an improvement of up to 15.50 p.p. while using at most four ground truth annotations per track.",
+        "url": "http://arxiv.org/abs/2603.18298v1",
+        "published_date": "2026-03-18T21:36:41+00:00",
+        "updated_date": "2026-03-18T21:36:41+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Nikhil Gosala",
+            "B. Ravi Kiran",
+            "Senthil Yogamani",
+            "Abhinav Valada"
+        ],
+        "tldr": "This paper introduces Sparse3DTrack, the first framework for monocular 3D object tracking that uses only sparse supervision. It achieves this by decoupling the task into 2D query matching and 3D geometry estimation, which learn rich representations from spatio-temporal consistency to generate dense 3D pseudo-labels for existing trackers, significantly improving performance with minimal annotations.",
+        "tldr_zh": "本文提出了Sparse3DTrack，这是首个仅使用稀疏监督的单目3D物体跟踪框架。该方法将任务分解为2D查询匹配和3D几何估计，利用时空一致性从稀疏标注样本中学习丰富的2D和3D场景表示，并自动生成高质量的3D伪标签，从而使现有全监督跟踪器能在极度稀疏的标注下有效工作，显著提升了性能。",
+        "relevance_score": 10,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "VLM-AutoDrive: Post-Training Vision-Language Models for Safety-Critical Autonomous Driving Events",
+        "summary": "The rapid growth of ego-centric dashcam footage presents a major challenge for detecting safety-critical events such as collisions and near-collisions, scenarios that are brief, rare, and difficult for generic vision models to capture. While multimodal large language models (MLLMs) demonstrate strong general reasoning ability, they underperform in driving contexts due to domain and temporal misalignment.\n  We introduce VLM-AutoDrive, a modular post-training framework for adapting pretrained Vision-Language Models (VLMs) to high-fidelity anomaly detection. The framework integrates metadata-derived captions, LLM-generated descriptions, visual question answering (VQA) pairs, and chain-of-thought (CoT) reasoning supervision to enable domain-aligned and interpretable learning. Off-the-shelf VLMs such as NVIDIA's Cosmos-Reason1 7B (CR1) exhibit near-zero Collision recall in zero-shot settings; fine-tuning with VLM-AutoDrive improves Collision F1 from 0.00 to 0.69 and overall accuracy from 35.35% to 77.27%.\n  VLM-AutoDrive offers a scalable recipe for adapting general-purpose VLMs to safety-critical, temporally localized perception tasks. Evaluated on real-world Nexar dashcam videos, it achieves substantial gains in Collision and Near-Collision detection while producing interpretable reasoning traces, bridging the gap between perception, causality, and decision reasoning in autonomous driving.",
+        "url": "http://arxiv.org/abs/2603.18178v1",
+        "published_date": "2026-03-18T18:23:34+00:00",
+        "updated_date": "2026-03-18T18:23:34+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Mohammad Qazim Bhat",
+            "Yufan Huang",
+            "Niket Agarwal",
+            "Hao Wang",
+            "Michael Woods",
+            "John Kenyon",
+            "Tsung-Yi Lin",
+            "Xiaodong Yang",
+            "Ming-Yu Liu",
+            "Kevin Xie"
+        ],
+        "tldr": "This paper presents VLM-AutoDrive, a post-training framework to adapt Vision-Language Models (VLMs) for detecting safety-critical events in autonomous driving. By integrating diverse textual supervision like metadata captions, LLM descriptions, VQA, and CoT reasoning, it significantly improves collision and near-collision detection from near-zero recall to a F1 score of 0.69, offering a scalable and interpretable solution.",
+        "tldr_zh": "本文提出了VLM-AutoDrive框架，一种用于安全关键自动驾驶事件的后训练视觉-语言模型（VLMs）适配方法。通过整合元数据字幕、LLM描述、VQA和CoT推理等多样化文本监督，该框架显著提高了碰撞和近碰撞事件的检测能力，将零样本的召回率提升至0.69的F1分数，提供了一种可扩展且可解释的解决方案。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Reconstruction Matters: Learning Geometry-Aligned BEV Representation through 3D Gaussian Splatting",
+        "summary": "Bird's-Eye-View (BEV) perception serves as a cornerstone for autonomous driving, offering a unified spatial representation that fuses surrounding-view images to enable reasoning for various downstream tasks, such as semantic segmentation, 3D object detection, and motion prediction. However, most existing BEV perception frameworks adopt an end-to-end training paradigm, where image features are directly transformed into the BEV space and optimized solely through downstream task supervision. This formulation treats the entire perception process as a black box, often lacking explicit 3D geometric understanding and interpretability, leading to suboptimal performance. In this paper, we claim that an explicit 3D representation matters for accurate BEV perception, and we propose Splat2BEV, a Gaussian Splatting-assisted framework for BEV tasks. Splat2BEV aims to learn BEV feature representations that are both semantically rich and geometrically precise. We first pre-train a Gaussian generator that explicitly reconstructs 3D scenes from multi-view inputs, enabling the generation of geometry-aligned feature representations. These representations are then projected into the BEV space to serve as inputs for downstream tasks. Extensive experiments on nuScenes and argoverse dataset demonstrate that Splat2BEV achieves state-of-the-art performance and validate the effectiveness of incorporating explicit 3D reconstruction into BEV perception.",
+        "url": "http://arxiv.org/abs/2603.19193v1",
+        "published_date": "2026-03-19T17:49:43+00:00",
+        "updated_date": "2026-03-19T17:49:43+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Yiren Lu",
+            "Xin Ye",
+            "Burhaneddin Yaman",
+            "Jingru Luo",
+            "Zhexiao Xiong",
+            "Liu Ren",
+            "Yu Yin"
+        ],
+        "tldr": "This paper proposes Splat2BEV, a framework that leverages 3D Gaussian Splatting for explicit 3D scene reconstruction to improve Bird's-Eye-View (BEV) perception in autonomous driving. By generating geometry-aligned feature representations from reconstructed 3D scenes and projecting them to BEV, the method aims to achieve more accurate and interpretable perception.",
+        "tldr_zh": "本文提出Splat2BEV框架，利用3D高斯溅射进行显式3D场景重建，以改进自动驾驶中的鸟瞰图（BEV）感知。通过生成来自重建3D场景的几何对齐特征表示并将其投影到BEV，该方法旨在实现更准确和可解释的感知。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 9,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Meanings and Measurements: Multi-Agent Probabilistic Grounding for Vision-Language Navigation",
+        "summary": "Robots collaborating with humans must convert natural language goals into actionable, physically grounded decisions. For example, executing a command such as \"go two meters to the right of the fridge\" requires grounding semantic references, spatial relations, and metric constraints within a 3D scene. While recent vision language models (VLMs) demonstrate strong semantic grounding capabilities, they are not explicitly designed to reason about metric constraints in physically defined spaces. In this work, we empirically demonstrate that state-of-the-art VLM-based grounding approaches struggle with complex metric-semantic language queries. To address this limitation, we propose MAPG (Multi-Agent Probabilistic Grounding), an agentic framework that decomposes language queries into structured subcomponents and queries a VLM to ground each component. MAPG then probabilistically composes these grounded outputs to produce metrically consistent, actionable decisions in 3D space. We evaluate MAPG on the HM-EQA benchmark and show consistent performance improvements over strong baselines. Furthermore, we introduce a new benchmark, MAPG-Bench, specifically designed to evaluate metric-semantic goal grounding, addressing a gap in existing language grounding evaluations. We also present a real-world robot demonstration showing that MAPG transfers beyond simulation when a structured scene representation is available.",
+        "url": "http://arxiv.org/abs/2603.19166v1",
+        "published_date": "2026-03-19T17:20:56+00:00",
+        "updated_date": "2026-03-19T17:20:56+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CL",
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Swagat Padhan",
+            "Lakshya Jain",
+            "Bhavya Minesh Shah",
+            "Omkar Patil",
+            "Thao Nguyen",
+            "Nakul Gopalan"
+        ],
+        "tldr": "This paper introduces MAPG, a multi-agent probabilistic grounding framework for vision-language navigation. It addresses the limitations of current VLMs in handling metric constraints in natural language commands by decomposing queries, grounding components, and probabilistically composing results for metrically consistent 3D actions. The work also introduces a new benchmark for metric-semantic grounding.",
+        "tldr_zh": "本文提出了MAPG（Multi-Agent Probabilistic Grounding）框架，用于视觉-语言导航中的多智能体概率式场景理解。该框架解决了现有视觉语言模型在处理自然语言指令中的度量约束方面的局限性，通过分解查询、理解各组件并在3D空间中概率性地组合结果，从而实现度量一致的行动。研究还引入了一个新的基准来评估度量-语义的场景理解能力。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "MultihopSpatial: Multi-hop Compositional Spatial Reasoning Benchmark for Vision-Language Model",
+        "summary": "Spatial reasoning is foundational for Vision-Language Models (VLMs), particularly when deployed as Vision-Language-Action (VLA) agents in physical environments. However, existing benchmarks predominantly focus on elementary, single-hop relations, neglecting the multi-hop compositional reasoning and precise visual grounding essential for real-world scenarios. To address this, we introduce MultihopSpatial, offering three key contributions: (1) A comprehensive benchmark designed for multi-hop and compositional spatial reasoning, featuring 1- to 3-hop complex queries across diverse spatial perspectives. (2) Acc@50IoU, a complementary metric that simultaneously evaluates reasoning and visual grounding by requiring both answer selection and precise bounding box prediction - capabilities vital for robust VLA deployment. (3) MultihopSpatial-Train, a dedicated large-scale training corpus to foster spatial intelligence. Extensive evaluation of 37 state-of-the-art VLMs yields eight key insights, revealing that compositional spatial reasoning remains a formidable challenge. Finally, we demonstrate that reinforcement learning post-training on our corpus enhances both intrinsic VLM spatial reasoning and downstream embodied manipulation performance.",
+        "url": "http://arxiv.org/abs/2603.18892v1",
+        "published_date": "2026-03-19T13:33:26+00:00",
+        "updated_date": "2026-03-19T13:33:26+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Youngwan Lee",
+            "Soojin Jang",
+            "Yoorhim Cho",
+            "Seunghwan Lee",
+            "Yong-Ju Lee",
+            "Sung Ju Hwang"
+        ],
+        "tldr": "This paper introduces MultihopSpatial, a new benchmark and training corpus for evaluating multi-hop compositional spatial reasoning in Vision-Language Models (VLMs), crucial for VLA agents. It also proposes a new metric (Acc@50IoU) and demonstrates that training on their corpus improves VLM spatial reasoning and downstream embodied task performance.",
+        "tldr_zh": "本文提出MultihopSpatial，一个用于评估视觉语言模型（VLMs）多跳组合空间推理能力的新基准和训练语料库，这对VLA代理至关重要。它还提出了一个新的度量标准（Acc@50IoU），并证明在该语料库上进行训练可以改善VLM的空间推理能力和下游具身任务的性能。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "Perceptio: Perception Enhanced Vision Language Models via Spatial Token Generation",
+        "summary": "Large Vision Language Models (LVLMs) excel at semantic understanding but struggle with fine grained spatial grounding, as the model must implicitly infer complex geometry without ever producing a spatial interpretation. We present Perceptio, a perception enhanced LVLM with 2D and 3D spatial reasoning abilities, enabled via explicit semantic segmentation tokens and depth tokens generated directly within the autoregressive sequence. Concretely, we (i) distill a VQVAE depth codebook from a strong monocular teacher to tokenize dense depth into compact sequences, and (ii) integrate SAM2 based semantic segmentation tokens and VQ-VAE depth tokens inside the LLM so the model first emits spatial tokens and then answers. To stabilize depth token generation, we introduce novel composite depth-token objectives (marker, token, and count losses) and a soft-merging technique for differentiable reconstruction. We adopt a multi-task co-training strategy across diverse datasets, letting the model learn perception tokens to tackle multiple downstream tasks. Building on InternVL, Perceptio achieves state-of-the-art performance across benchmarks: improving referring expression segmentation by +0.8/+1.4/+1.1 cIoU on RefCOCO/+/g HardBLINK spatial understanding accuracy by 10.3%, and MMBench accuracy by 1.0%, demonstrating that explicit spatial chain-of-thought materially strengthens spatial grounding in LVLMs.",
+        "url": "http://arxiv.org/abs/2603.18795v1",
+        "published_date": "2026-03-19T11:46:01+00:00",
+        "updated_date": "2026-03-19T11:46:01+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Yuchen Li",
+            "Amanmeet Garg",
+            "Shalini Chaudhuri",
+            "Rui Zhao",
+            "Garin Kessler"
+        ],
+        "tldr": "Perceptio enhances Vision-Language Models (VLMs) by explicitly generating spatial tokens (semantic segmentation and depth) within the autoregressive sequence, improving fine-grained spatial grounding and achieving state-of-the-art results on various benchmarks.",
+        "tldr_zh": "Perceptio通过在自回归序列中显式生成空间令牌（语义分割和深度），增强了视觉语言模型（VLMs）的空间理解能力，从而提高了细粒度的空间定位能力，并在多个基准测试中取得了最先进的成果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 7,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "REST: Receding Horizon Explorative Steiner Tree for Zero-Shot Object-Goal Navigation",
+        "summary": "Zero-shot object-goal navigation (ZSON) requires navigating unknown environments to find a target object without task-specific training. Prior hierarchical training-free solutions invest in scene understanding (\\textit{belief}) and high-level decision-making (\\textit{policy}), yet overlook the design of \\textit{option}, i.e., a subgoal candidate proposed from evolving belief and presented to policy for selection. In practice, options are reduced to isolated waypoints scored independently: single destinations hide the value gathered along the journey; an unstructured collection obscures the relationships among candidates. Our insight is that the option space should be a \\textit{tree of paths}. Full paths expose en-route information gain that destination-only scoring systematically neglects; a tree of shared segments enables coarse-to-fine LLM reasoning that dismisses or pursues entire branches before examining individual leaves, compressing the combinatorial path space into an efficient hierarchy. We instantiate this insight in \\textbf{REST} (Receding Horizon Explorative Steiner Tree), a training-free framework that (1) builds an explicit open-vocabulary 3D map from online RGB-D streams; (2) grows an agent-centric tree of safe and informative paths as the option space via sampling-based planning; and (3) textualizes each branch into a spatial narrative and selects the next-best path through chain-of-thought LLM reasoning. Across the Gibson, HM3D, and HSSD benchmarks, REST consistently ranks among the top methods in success rate while achieving the best or second-best path efficiency, demonstrating a favorable efficiency-success balance.",
+        "url": "http://arxiv.org/abs/2603.18624v1",
+        "published_date": "2026-03-19T08:43:40+00:00",
+        "updated_date": "2026-03-19T08:43:40+00:00",
+        "categories": [
+            "cs.RO",
+            "cs.AI",
+            "cs.CV"
+        ],
+        "authors": [
+            "Shuqi Xiao",
+            "Maani Ghaffari",
+            "Chengzhong Xu",
+            "Hui Kong"
+        ],
+        "tldr": "REST is a training-free framework for zero-shot object-goal navigation that addresses limitations in how subgoals (options) are represented. It constructs an agent-centric tree of paths, enabling LLMs to reason about en-route information gain and select the most efficient path, demonstrating strong performance in success rate and path efficiency.",
+        "tldr_zh": "REST是一个用于零样本目标导航的无训练框架，它解决了子目标（选项）表示方式的局限性。它构建了一个以代理为中心的路径树，使LLM能够推理沿途的信息增益并选择最高效的路径，在成功率和路径效率方面均表现出色。",
+        "relevance_score": 8,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "CausalVAD: De-confounding End-to-End Autonomous Driving via Causal Intervention",
+        "summary": "Planning-oriented end-to-end driving models show great promise, yet they fundamentally learn statistical correlations instead of true causal relationships. This vulnerability leads to causal confusion, where models exploit dataset biases as shortcuts, critically harming their reliability and safety in complex scenarios. To address this, we introduce CausalVAD, a de-confounding training framework that leverages causal intervention. At its core, we design the sparse causal intervention scheme (SCIS), a lightweight, plug-and-play module to instantiate the backdoor adjustment theory in neural networks. SCIS constructs a dictionary of prototypes representing latent driving contexts. It then uses this dictionary to intervene on the model's sparse vectorized queries. This step actively eliminates spurious associations induced by confounders, thereby eliminating spurious factors from the representations for downstream tasks. Extensive experiments on benchmarks like nuScenes show CausalVAD achieves state-of-the-art planning accuracy and safety. Furthermore, our method demonstrates superior robustness against both data bias and noisy scenarios configured to induce causal confusion.",
+        "url": "http://arxiv.org/abs/2603.18561v1",
+        "published_date": "2026-03-19T07:21:01+00:00",
+        "updated_date": "2026-03-19T07:21:01+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.LG"
+        ],
+        "authors": [
+            "Jiacheng Tang",
+            "Zhiyuan Zhou",
+            "Zhuolin He",
+            "Jia Zhang",
+            "Kai Zhang",
+            "Jian Pu"
+        ],
+        "tldr": "CausalVAD is a novel end-to-end autonomous driving framework that uses causal intervention to de-confound learned correlations, preventing models from relying on dataset biases and improving safety and planning accuracy, demonstrated by state-of-the-art results on benchmarks.",
+        "tldr_zh": "CausalVAD 是一个新颖的端到端自动驾驶框架，它利用因果干预来解耦学习到的相关性，防止模型依赖数据集偏差，提高安全性和规划准确性，并在基准测试中取得了最先进的结果。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 7,
+        "potential_impact_score": 9,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "SR-Nav: Spatial Relationships Matter for Zero-shot Object Goal Navigation",
+        "summary": "Zero-shot object-goal navigation aims to find target objects in unseen environments using only egocentric observation. Recent methods leverage foundation models' comprehension and reasoning capabilities to enhance navigation performance. However, when faced with poor viewpoints or weak semantic cues, foundation models often fail to support reliable reasoning in both perception and planning, resulting in inefficient or failed navigation. We observe that inherent relationships among objects and regions encode structured scene priors, which help agents infer plausible target locations even under partial observations. Motivated by this insight, we propose Spatial Relation-aware Navigation (SR-Nav), a framework that models both observed and experience-based spatial relationships to enhance both perception and planning. Specifically, SR-Nav first constructs a Dynamic Spatial Relationship Graph (DSRG) that encodes the target-centered spatial relationships through the foundation models and updates dynamically with real-time observations. We then introduce a Relation-aware Matching Module. It utilizes relationship matching instead of naive detection, leveraging diverse relationships in the DSRG to verify and correct errors, enhancing visual perception robustness. Finally, we design a Dynamic Relationship Planning Module to reduce the planning search space by dynamically computing the optimal paths based on the DSRG from the current position, thereby guiding planning and reducing exploration redundancy. Experiments on HM3D show that our method achieves state-of-the-art performance in both success rate and navigation efficiency. The code will be publicly available at https://github.com/Mzyw-1314/SR-Nav",
+        "url": "http://arxiv.org/abs/2603.18443v1",
+        "published_date": "2026-03-19T03:09:32+00:00",
+        "updated_date": "2026-03-19T03:09:32+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Leyuan Fang",
+            "Zan Mao",
+            "Zijing Wang",
+            "Yinlong Yan"
+        ],
+        "tldr": "This paper proposes SR-Nav, a framework for zero-shot object-goal navigation that leverages spatial relationships between objects and regions to improve perception and planning, particularly in challenging scenarios with poor viewpoints or weak semantic cues. It introduces a Dynamic Spatial Relationship Graph and a Relation-aware Matching Module to enhance visual perception and a Dynamic Relationship Planning Module to optimize navigation paths.",
+        "tldr_zh": "本文提出SR-Nav框架，用于零样本目标导航。该框架利用物体和区域之间的空间关系来改善感知和规划，尤其是在视角不佳或语义线索较弱的挑战性场景下。它引入了动态空间关系图和关系感知匹配模块来增强视觉感知，并设计了动态关系规划模块来优化导航路径。",
+        "relevance_score": 8,
+        "novelty_claim_score": 7,
+        "clarity_score": 8,
+        "potential_impact_score": 7,
+        "overall_priority_score": 8
+    }
+]
