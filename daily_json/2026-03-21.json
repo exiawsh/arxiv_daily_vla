@@ -1,0 +1,292 @@
+[
+    {
+        "title": "2K Retrofit: Entropy-Guided Efficient Sparse Refinement for High-Resolution 3D Geometry Prediction",
+        "summary": "High-resolution geometric prediction is essential for robust perception in autonomous driving, robotics, and AR/MR, but current foundation models are fundamentally limited by their scalability to real-world, high-resolution scenarios. Direct inference on 2K images with these models incurs prohibitive computational and memory demands, making practical deployment challenging. To tackle the issue, we present 2K Retrofit, a novel framework that enables efficient 2K-resolution inference for any geometric foundation model, without modifying or retraining the backbone. Our approach leverages fast coarse predictions and an entropy-based sparse refinement to selectively enhance high-uncertainty regions, achieving precise and high-fidelity 2K outputs with minimal overhead. Extensive experiments on widely used benchmark demonstrate that 2K Retrofit consistently achieves state-of-the-art accuracy and speed, bridging the gap between research advances and scalable deployment in high-resolution 3D vision applications. Code will be released upon acceptance.",
+        "url": "http://arxiv.org/abs/2603.19964v1",
+        "published_date": "2026-03-20T14:05:44+00:00",
+        "updated_date": "2026-03-20T14:05:44+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Tianbao Zhang",
+            "Zhenyu Liang",
+            "Zhenbo Song",
+            "Nana Wang",
+            "Xiaomei Zhang",
+            "Xudong Cai",
+            "Zheng Zhu",
+            "Kejian Wu",
+            "Gang Wang",
+            "Zhaoxin Fan"
+        ],
+        "tldr": "2K Retrofit is a novel framework that enables efficient 2K-resolution geometric prediction from high-resolution images for foundation models. It uses fast coarse predictions and entropy-guided sparse refinement to selectively enhance uncertain regions, achieving high-fidelity 3D geometry outputs with minimal computational overhead, thus bridging the gap between research and practical deployment in applications like autonomous driving.",
+        "tldr_zh": "2K Retrofit 是一个新颖的框架，能够为基础模型实现高效的 2K 分辨率几何预测。它利用快速粗略预测和基于熵的稀疏精炼，选择性地增强不确定区域，从而以最小的计算开销实现高保真度的 3D 几何输出，缩小了研究与自动驾驶等高分辨率 3D 视觉应用实际部署之间的差距。",
+        "relevance_score": 10,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "LIORNet: Self-Supervised LiDAR Snow Removal Framework for Autonomous Driving under Adverse Weather Conditions",
+        "summary": "LiDAR sensors provide high-resolution 3D perception and long-range detection, making them indispensable for autonomous driving and robotics. However, their performance significantly degrades under adverse weather conditions such as snow, rain, and fog, where spurious noise points dominate the point cloud and lead to false perception. To address this problem, various approaches have been proposed: distance-based filters exploiting spatial sparsity, intensity-based filters leveraging reflectance distributions, and learning-based methods that adapt to complex environments. Nevertheless, distance-based methods struggle to distinguish valid object points from noise, intensity-based methods often rely on fixed thresholds that lack adaptability to changing conditions, and learning-based methods suffer from the high cost of annotation, limited generalization, and computational overhead. In this study, we propose LIORNet, which eliminates these drawbacks and integrates the strengths of all three paradigms. LIORNet is built upon a U-Net++ backbone and employs a self-supervised learning strategy guided by pseudo-labels generated from multiple physical and statistical cues, including range-dependent intensity thresholds, snow reflectivity, point sparsity, and sensing range constraints. This design enables LIORNet to distinguish noise points from environmental structures without requiring manual annotations, thereby overcoming the difficulty of snow labeling and the limitations of single-principle approaches. Extensive experiments on the WADS and CADC datasets demonstrate that LIORNet outperforms state-of-the-art filtering algorithms in both accuracy and runtime while preserving critical environmental features. These results highlight LIORNet as a practical and robust solution for LiDAR perception in extreme weather, with strong potential for real-time deployment in autonomous driving systems.",
+        "url": "http://arxiv.org/abs/2603.19936v1",
+        "published_date": "2026-03-20T13:30:16+00:00",
+        "updated_date": "2026-03-20T13:30:16+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Ji-il Park",
+            "Inwook Shim"
+        ],
+        "tldr": "LIORNet is a self-supervised LiDAR snow removal framework for autonomous driving that combines distance, intensity, and learning-based methods. It uses pseudo-labels generated from physical and statistical cues to distinguish noise from valid points without manual annotation, achieving high accuracy and runtime performance.",
+        "tldr_zh": "LIORNet是一个用于自动驾驶的自监督LiDAR除雪框架，结合了距离、强度和学习方法。它使用从物理和统计线索生成的伪标签来区分噪声点和有效点，无需手动标注，并在准确性和运行时间方面取得了高性能。",
+        "relevance_score": 10,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "Failure Modes for Deep Learning-Based Online Mapping: How to Measure and Address Them",
+        "summary": "Deep learning-based online mapping has emerged as a cornerstone of autonomous driving, yet these models frequently fail to generalize beyond familiar environments. We propose a framework to identify and measure the underlying failure modes by disentangling two effects: Memorization of input features and overfitting to known map geometries. We propose measures based on evaluation subsets that control for geographical proximity and geometric similarity between training and validation scenes. We introduce Fréchet distance-based reconstruction statistics that capture per-element shape fidelity without threshold tuning, and define complementary failure-mode scores: a localization overfitting score quantifying the performance drop when geographic cues disappear, and a map geometry overfitting score measuring degradation as scenes become geometrically novel. Beyond models, we analyze dataset biases and contribute map geometry-aware diagnostics: A minimum-spanning-tree (MST) diversity measure for training sets and a symmetric coverage measure to quantify geometric similarity between splits. Leveraging these, we formulate an MST-based sparsification strategy that reduces redundancy and improves balancing and performance while shrinking training size. Experiments on nuScenes and Argoverse 2 across multiple state-of-the-art models yield more trustworthy assessment of generalization and show that map geometry-diverse and balanced training sets lead to improved performance. Our results motivate failure-mode-aware protocols and map geometry-centric dataset design for deployable online mapping.",
+        "url": "http://arxiv.org/abs/2603.19852v1",
+        "published_date": "2026-03-20T11:09:11+00:00",
+        "updated_date": "2026-03-20T11:09:11+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI",
+            "cs.LG"
+        ],
+        "authors": [
+            "Michael Hubbertz",
+            "Qi Han",
+            "Tobias Meisen"
+        ],
+        "tldr": "This paper proposes a framework to identify and measure failure modes in deep learning-based online mapping for autonomous driving by disentangling input memorization and map geometry overfitting. It introduces new metrics and dataset analysis tools (like MST diversity and symmetric coverage) to create more balanced and robust training sets, leading to improved generalization.",
+        "tldr_zh": "本文提出了一种框架，通过解耦输入特征记忆和地图几何过拟合来识别和衡量自动驾驶中深度学习在线地图构建的故障模式。它引入了新的度量指标和数据集分析工具（如最小生成树多样性、对称覆盖度），以创建更均衡、鲁棒的训练集，从而提高泛化能力。",
+        "relevance_score": 10,
+        "novelty_claim_score": 9,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "HUGE-Bench: A Benchmark for High-Level UAV Vision-Language-Action Tasks",
+        "summary": "Existing UAV vision-language navigation (VLN) benchmarks have enabled language-guided flight, but they largely focus on long, step-wise route descriptions with goal-centric evaluation, making them less diagnostic for real operations where brief, high-level commands must be grounded into safe multi-stage behaviors. We present HUGE-Bench, a benchmark for High-Level UAV Vision-Language-Action (HL-VLA) tasks that tests whether an agent can interpret concise language and execute complex, process-oriented trajectories with safety awareness. HUGE-Bench comprises 4 real-world digital twin scenes, 8 high-level tasks, and 2.56M meters of trajectories, and is built on an aligned 3D Gaussian Splatting (3DGS)-Mesh representation that combines photorealistic rendering with collision-capable geometry for scalable generation and collision-aware evaluation. We introduce process-oriented and collision-aware metrics to assess process fidelity, terminal accuracy, and safety. Experiments on representative state-of-the-art VLA models reveal significant gaps in high-level semantic completion and safe execution, highlighting HUGE-Bench as a diagnostic testbed for high-level UAV autonomy.",
+        "url": "http://arxiv.org/abs/2603.19822v1",
+        "published_date": "2026-03-20T10:08:42+00:00",
+        "updated_date": "2026-03-20T10:08:42+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Jingyu Guo",
+            "Ziye Chen",
+            "Ziwen Li",
+            "Zhengqing Gao",
+            "Jiaxin Huang",
+            "Hanlue Zhang",
+            "Fengming Huang",
+            "Yu Yao",
+            "Tongliang Liu",
+            "Mingming Gong"
+        ],
+        "tldr": "HUGE-Bench is a new benchmark for Unmanned Aerial Vehicle (UAV) vision-language-action tasks, designed to evaluate the interpretation of concise, high-level commands and the execution of complex, safe, multi-stage trajectories in real-world digital twin environments. It features a novel 3DGS-Mesh representation and process-oriented, collision-aware metrics, revealing significant gaps in current state-of-the-art models.",
+        "tldr_zh": "HUGE-Bench 是一个用于无人机（UAV）视觉-语言-动作任务的新基准，旨在评估对简洁、高级指令的解释以及在真实世界数字孪生环境中执行复杂、安全的多阶段轨迹的能力。它采用新颖的 3DGS-Mesh 表示和面向过程、考虑碰撞的度量标准，揭示了当前最先进模型存在的显著差距。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "UniPR: Unified Object-level Real-to-Sim Perception and Reconstruction from a Single Stereo Pair",
+        "summary": "Perceiving and reconstructing objects from images are critical for real-to-sim transfer tasks, which are widely used in the robotics community. Existing methods rely on multiple submodules such as detection, segmentation, shape reconstruction, and pose estimation to complete the pipeline. However, such modular pipelines suffer from inefficiency and cumulative error, as each stage operates on only partial or locally refined information while discarding global context. To address these limitations, we propose UniPR, the first end-to-end object-level real-to-sim perception and reconstruction framework. Operating directly on a single stereo image pair, UniPR leverages geometric constraints to resolve the scale ambiguity. We introduce Pose-Aware Shape Representation to eliminate the need for per-category canonical definitions and to bridge the gap between reconstruction and pose estimation tasks. Furthermore, we construct a large-vocabulary stereo dataset, LVS6D, comprising over 6,300 objects, to facilitate large-scale research in this area. Extensive experiments demonstrate that UniPR reconstructs all objects in a scene in parallel within a single forward pass, achieving significant efficiency gains and preserves true physical proportions across diverse object types, highlighting its potential for practical robotic applications.",
+        "url": "http://arxiv.org/abs/2603.19616v1",
+        "published_date": "2026-03-20T03:47:48+00:00",
+        "updated_date": "2026-03-20T03:47:48+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Chuanrui Zhang",
+            "Yingshuang Zou",
+            "ZhengXian Wu",
+            "Yonggen Ling",
+            "Yuxiao Yang",
+            "Ziwei Wang"
+        ],
+        "tldr": "UniPR is an end-to-end framework for unified object-level perception and reconstruction from a single stereo image pair, addressing inefficiencies and cumulative errors of modular pipelines. It leverages geometric constraints for scale ambiguity resolution and a novel Pose-Aware Shape Representation for seamless integration of reconstruction and pose estimation, supported by a large-vocabulary stereo dataset.",
+        "tldr_zh": "UniPR是一个端到端的框架，能够从单个立体图像对中进行统一的对象级感知和重建，解决了模块化流水线中的效率低下和累积误差问题。它利用几何约束解决尺度模糊问题，并采用新颖的姿态感知形状表示来无缝集成重建和姿态估计任务，并提供了一个大型词汇量的立体数据集。",
+        "relevance_score": 9,
+        "novelty_claim_score": 9,
+        "clarity_score": 8,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "StreetForward: Perceiving Dynamic Street with Feedforward Causal Attention",
+        "summary": "Feedforward reconstruction is crucial for autonomous driving applications, where rapid scene reconstruction enables efficient utilization of large-scale driving datasets in closed-loop simulation and other downstream tasks, eliminating the need for time-consuming per-scene optimization. We present StreetForward, a pose-free and tracker-free feedforward framework for dynamic street reconstruction. Building upon the alternating attention mechanism from Visual Geometry Grounded Transformer (VGGT), we propose a simple yet effective temporal mask attention module that captures dynamic motion information from image sequences and produces motion-aware latent representations. Static content and dynamic instances are represented uniformly with 3D Gaussian Splatting, and are optimized jointly by cross-frame rendering with spatio-temporal consistency, allowing the model to infer per-pixel velocities and produce high-fidelity novel views at new poses and times. We train and evaluate our model on the Waymo Open Dataset, demonstrating superior performance on novel view synthesis and depth estimation compared to existing methods. Furthermore, zero-shot inference on CARLA and other datasets validates the generalization capability of our approach. More visualizations are available on our project page: https://streetforward.github.io.",
+        "url": "http://arxiv.org/abs/2603.19552v1",
+        "published_date": "2026-03-20T01:31:05+00:00",
+        "updated_date": "2026-03-20T01:31:05+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Zhongrui Yu",
+            "Zhao Wang",
+            "Yijia Xie",
+            "Yida Wang",
+            "Xueyang Zhang",
+            "Yifei Zhan",
+            "Kun Zhan"
+        ],
+        "tldr": "StreetForward is a pose-free and tracker-free feedforward framework for dynamic street scene reconstruction in autonomous driving. It uses a temporal mask attention module and 3D Gaussian Splatting to achieve high-fidelity novel view synthesis and per-pixel velocity estimation from image sequences, demonstrating strong generalization capabilities.",
+        "tldr_zh": "StreetForward是一个无姿态、无追踪器的前馈框架，用于自动驾驶中的动态街道场景重建。它利用时间掩码注意力模块和3D高斯泼溅技术，从图像序列中实现高保真新视图合成和每像素速度估计，并展现出强大的泛化能力。",
+        "relevance_score": 10,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 9,
+        "overall_priority_score": 9
+    },
+    {
+        "title": "EgoForge: Goal-Directed Egocentric World Simulator",
+        "summary": "Generative world models have shown promise for simulating dynamic environments, yet egocentric video remains challenging due to rapid viewpoint changes, frequent hand-object interactions, and goal-directed procedures whose evolution depends on latent human intent. Existing approaches either focus on hand-centric instructional synthesis with limited scene evolution, perform static view translation without modeling action dynamics, or rely on dense supervision, such as camera trajectories, long video prefixes, synchronized multicamera capture, etc. In this work, we introduce EgoForge, an egocentric goal-directed world simulator that generates coherent, first-person video rollouts from minimal static inputs: a single egocentric image, a high-level instruction, and an optional auxiliary exocentric view. To improve intent alignment and temporal consistency, we propose VideoDiffusionNFT, a trajectory-level reward-guided refinement that optimizes goal completion, temporal causality, scene consistency, and perceptual fidelity during diffusion sampling. Extensive experiments show EgoForge achieves consistent gains in semantic alignment, geometric stability, and motion fidelity over strong baselines, and robust performance in real-world smart-glasses experiments.",
+        "url": "http://arxiv.org/abs/2603.20169v1",
+        "published_date": "2026-03-20T17:46:55+00:00",
+        "updated_date": "2026-03-20T17:46:55+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.MM"
+        ],
+        "authors": [
+            "Yifan Shen",
+            "Jiateng Liu",
+            "Xinzhuo Li",
+            "Yuanzhe Liu",
+            "Bingxuan Li",
+            "Houze Yang",
+            "Wenqi Jia",
+            "Yijiang Li",
+            "Tianjiao Yu",
+            "James Matthew Rehg",
+            "Xu Cao",
+            "Ismini Lourentzou"
+        ],
+        "tldr": "EgoForge is a novel egocentric world simulator that generates coherent first-person videos from minimal static inputs and a high-level instruction. It utilizes a reward-guided refinement technique to improve temporal consistency and goal alignment, showing promising results in various experiments.",
+        "tldr_zh": "EgoForge是一个新颖的以自我为中心的世界模拟器，它能从最小的静态输入和高级指令生成连贯的第一人称视频。它采用一种奖励引导的精炼技术来提高时间一致性和目标对齐，并在各种实验中取得了令人鼓舞的结果。",
+        "relevance_score": 7,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "X-World: Controllable Ego-Centric Multi-Camera World Models for Scalable End-to-End Driving",
+        "summary": "Scalable and reliable evaluation is increasingly critical in the end-to-end era of autonomous driving, where vision--language--action (VLA) policies directly map raw sensor streams to driving actions. Yet, current evaluation pipelines still rely heavily on real-world road testing, which is costly, biased toward limited scenario coverage, and difficult to reproduce. These challenges motivate a real-world simulator that can generate realistic future observations under proposed actions, while remaining controllable and stable over long horizons. We present X-World, an action-conditioned multi-camera generative world model that simulates future observations directly in video space. Given synchronized multi-view camera history and a future action sequence, X-World generates future multi-camera video streams that follow the commanded actions. To ensure reproducible and editable scene rollouts, X-World further supports optional controls over dynamic traffic agents and static road elements, and retains a text-prompt interface for appearance-level control (e.g., weather and time of day). Beyond world simulation, X-World also enables video style transfer by conditioning on appearance prompts while preserving the underlying action and scene dynamics. At the core of X-World is a multi-view latent video generator designed to explicitly encourage cross-view geometric consistency and temporal coherence under diverse control signals. Experiments show that X-World achieves high-quality multi-view video generation with (i) strong view consistency across cameras, (ii) stable temporal dynamics over long rollouts, and (iii) high controllability with strict action following and faithful adherence to optional scene controls. These properties make X-World a practical foundation for scalable and reproducible evaluation.",
+        "url": "http://arxiv.org/abs/2603.19979v1",
+        "published_date": "2026-03-20T14:23:32+00:00",
+        "updated_date": "2026-03-20T14:23:32+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.AI"
+        ],
+        "authors": [
+            "Chaoda Zheng",
+            "Sean Li",
+            "Jinhao Deng",
+            "Zhennan Wang",
+            "Shijia Chen",
+            "Liqiang Xiao",
+            "Ziheng Chi",
+            "Hongbin Lin",
+            "Kangjie Chen",
+            "Boyang Wang",
+            "Yu Zhang",
+            "Xianming Liu"
+        ],
+        "tldr": "X-World is an action-conditioned multi-camera world model that generates realistic future driving scenarios in video space for scalable and reproducible evaluation of end-to-end autonomous driving systems. It offers controllable traffic agents, road elements, and appearance settings, while maintaining temporal and view consistency.",
+        "tldr_zh": "X-World 是一个条件化了动作的多视角世界模型，能在视频空间生成逼真的未来驾驶场景，用于可扩展和可复现的端到端自动驾驶系统评估。它提供了对交通参与者、道路元素和外观的可控性，同时保持了时域和视角的一致性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 9,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "PCSTracker: Long-Term Scene Flow Estimation for Point Cloud Sequences",
+        "summary": "Point cloud scene flow estimation is fundamental to long-term and fine-grained 3D motion analysis. However, existing methods are typically limited to pairwise settings and struggle to maintain temporal consistency over long sequences as geometry evolves, occlusions emerge, and errors accumulate. In this work, we propose PCSTracker, the first end-to-end framework specifically designed for consistent scene flow estimation in point cloud sequences. Specifically, we introduce an iterative geometry motion joint optimization module (IGMO) that explicitly models the temporal evolution of point features to alleviate correspondence inconsistencies caused by dynamic geometric changes. In addition, a spatio-temporal point trajectory update module (STTU) is proposed to leverage broad temporal context to infer plausible positions for occluded points, ensuring coherent motion estimation. To further handle long sequences, we employ an overlapping sliding-window inference strategy that alternates cross-window propagation and in-window refinement, effectively suppressing error accumulation and maintaining stable long-term motion consistency. Extensive experiments on the synthetic PointOdyssey3D and real-world ADT3D datasets show that PCSTracker achieves the best accuracy in long-term scene flow estimation and maintains real-time performance at 32.5 FPS, while demonstrating superior 3D motion understanding compared to RGB-D-based approaches.",
+        "url": "http://arxiv.org/abs/2603.19762v1",
+        "published_date": "2026-03-20T08:45:27+00:00",
+        "updated_date": "2026-03-20T08:45:27+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Min Lin",
+            "Gangwei Xu",
+            "Xianqi Wang",
+            "Yuyi Peng",
+            "Xin Yang"
+        ],
+        "tldr": "PCSTracker is the first end-to-end framework for consistent long-term scene flow estimation in point cloud sequences. It uses novel modules for joint geometry-motion optimization and spatio-temporal trajectory updating, along with a sliding-window strategy to combat error accumulation and occlusion, achieving state-of-the-art accuracy and real-time performance.",
+        "tldr_zh": "PCSTracker 是首个用于点云序列一致性长期场景流估计的端到端框架。它采用了新颖的联合几何运动优化和时空轨迹更新模块，以及一个滑动窗口策略来对抗误差累积和遮挡，在保持实时性能的同时达到了最先进的精度。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "DynFlowDrive: Flow-Based Dynamic World Modeling for Autonomous Driving",
+        "summary": "Recently, world models have been incorporated into the autonomous driving systems to improve the planning reliability. Existing approaches typically predict future states through appearance generation or deterministic regression, which limits their ability to capture trajectory-conditioned scene evolution and leads to unreliable action planning. To address this, we propose DynFlowDrive, a latent world model that leverages flow-based dynamics to model the transition of world states under different driving actions. By adopting the rectifiedflow formulation, the model learns a velocity field that describes how the scene state changes under different driving actions, enabling progressive prediction of future latent states. Building upon this, we further introduce a stability-aware multi-mode trajectory selection strategy that evaluates candidate trajectories according to the stability of the induced scene transitions. Extensive experiments on the nuScenes and NavSim benchmarks demonstrate consistent improvements across diverse driving frameworks without introducing additional inference overhead. Source code will be abaliable at https://github.com/xiaolul2/DynFlowDrive.",
+        "url": "http://arxiv.org/abs/2603.19675v1",
+        "published_date": "2026-03-20T06:19:31+00:00",
+        "updated_date": "2026-03-20T06:19:31+00:00",
+        "categories": [
+            "cs.CV",
+            "cs.RO"
+        ],
+        "authors": [
+            "Xiaolu Liu",
+            "Yicong Li",
+            "Song Wang",
+            "Junbo Chen",
+            "Angela Yao",
+            "Jianke Zhu"
+        ],
+        "tldr": "DynFlowDrive introduces a flow-based latent world model for autonomous driving that uses a velocity field to predict future scene states and incorporates a stability-aware trajectory selection strategy, demonstrating improved planning reliability without increased inference overhead.",
+        "tldr_zh": "DynFlowDrive提出了一种基于流的潜在世界模型，用于自动驾驶，该模型使用速度场来预测未来场景状态，并结合了稳定性感知轨迹选择策略，在不增加推理开销的情况下提高了规划可靠性。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 8,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    },
+    {
+        "title": "GravCal: Single-Image Calibration of IMU Gravity Priors with Per-Sample Confidence",
+        "summary": "Gravity estimation is fundamental to visual-inertial perception, augmented reality, and robotics, yet gravity priors from IMUs are often unreliable under linear acceleration, vibration, and transient motion. Existing methods often estimate gravity directly from images or assume reasonably accurate inertial input, leaving the practical problem of correcting a noisy gravity prior from a single image largely unaddressed.\n  We present GravCal, a feedforward model for single-image gravity prior calibration. Given one RGB image and a noisy gravity prior, GravCal predicts a corrected gravity direction and a per-sample confidence score. The model combines two complementary predictions, including a residual correction of the input prior and a prior-independent image estimate, and uses a learned gate to fuse them adaptively.\n  Extensive experiments show strong gains over raw inertial priors: GravCal reduces mean angular error from 22.02° (IMU prior) to 14.24°, with larger improvements when the prior is severely corrupted. We also introduce a novel dataset of over 148K frames with paired VIO-derived ground-truth gravity and Mahony-filter IMU priors across diverse scenes and arbitrary camera orientations. The learned gate also correlates with prior quality, making it a useful confidence signal for downstream systems.",
+        "url": "http://arxiv.org/abs/2603.19654v1",
+        "published_date": "2026-03-20T05:37:43+00:00",
+        "updated_date": "2026-03-20T05:37:43+00:00",
+        "categories": [
+            "cs.CV"
+        ],
+        "authors": [
+            "Haichao Zhu",
+            "Qian Zhang"
+        ],
+        "tldr": "GravCal is a new feedforward model that calibrates noisy IMU gravity priors using a single RGB image, predicting both a corrected gravity direction and a per-sample confidence score. It achieves significant improvements over raw IMU priors, especially when they are corrupted, and introduces a novel dataset.",
+        "tldr_zh": "GravCal是一个新的前馈模型，它使用单个RGB图像来校准嘈杂的IMU重力先验，并预测校正后的重力方向和每个样本的置信度分数。与原始IMU先验相比，它取得了显著的改进，尤其是在先验受损时，并引入了一个新的数据集。",
+        "relevance_score": 9,
+        "novelty_claim_score": 8,
+        "clarity_score": 9,
+        "potential_impact_score": 8,
+        "overall_priority_score": 8
+    }
+]
